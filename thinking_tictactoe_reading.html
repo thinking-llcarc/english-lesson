@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>論理読解 実践授業｜三目並べ｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface2:#f0ede6;
+  --border:#ddd9d0;--text:#1a1814;--text2:#6b6760;--text3:#9b9892;
+  --accent:#2c5f8a;--accent-light:#e8f1f8;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --amber:#854f0b;--amber-light:#faeeda;
+  --purple:#534ab7;--purple-light:#eeedfe;
+  --green:#3b6d11;--green-light:#eaf3de;
+  --red:#a32d2d;--red-light:#fcebeb;
+  --coral:#993c1d;--coral-light:#faece7;
+  --pink:#993556;--pink-light:#fbeaf0;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;min-height:100vh;}
+.page-header{background:var(--surface);border-bottom:0.5px solid var(--border);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.brand-logo{width:36px;height:36px;border-radius:9px;background:var(--accent);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-name{font-size:13px;font-weight:700;}
+.brand-tagline{font-size:10px;color:var(--text3);margin-top:1px;}
+.phase-indicator{display:flex;gap:6px;align-items:center;}
+.pi-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:all 0.3s;}
+.pi-dot.active{background:var(--accent);transform:scale(1.3);}
+.pi-dot.done{background:var(--teal);}
+.pi-label{font-size:12px;font-weight:700;color:var(--text2);margin-left:4px;}
+.container{max-width:940px;margin:0 auto;padding:24px 16px 80px;}
+.phase-panel{display:none;}
+.phase-panel.active{display:block;animation:fadeIn 0.3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.phase-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;}
+.pb-num{width:44px;height:44px;border-radius:12px;color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pb-text{font-size:20px;font-weight:700;color:var(--text);line-height:1.2;}
+.pb-sub{font-size:12px;color:var(--text2);margin-top:2px;}
+.card{background:var(--surface);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:22px;margin-bottom:14px;}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;}
+.divider{height:0.5px;background:var(--border);margin:18px 0;}
+
+/* PASSAGE */
+.passage-text{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.05;color:var(--text);}
+.passage-text p{margin-bottom:0.9em;}
+.blank-slot{display:inline-block;background:var(--accent);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;padding:2px 12px;border-radius:5px;vertical-align:middle;transition:all 0.3s;}
+.blank-slot.revealed{background:var(--teal);}
+.hl-key{background:#fff3cd;border-radius:2px;padding:0 2px;}
+.hl-ans{background:var(--teal-light);border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-trap{background:var(--red-light);border-radius:2px;padding:0 2px;}
+.hl-signal{background:var(--coral-light);border-radius:2px;padding:0 2px;font-weight:700;}
+
+/* TIC TAC TOE BOARD */
+.ttt-board{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;width:150px;margin:0 auto;}
+.ttt-cell{width:46px;height:46px;border:2px solid #555;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:700;border-radius:4px;background:var(--surface);}
+.ttt-x{color:var(--accent);}
+.ttt-o{color:var(--coral);}
+.ttt-win{background:var(--teal-light);border-color:var(--teal);}
+.ttt-empty{color:var(--text3);font-size:12px;}
+
+/* RULE CARDS */
+.rule-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:12px 0;}
+@media(max-width:500px){.rule-grid{grid-template-columns:1fr;}}
+.rule-card{border-radius:var(--radius);padding:12px 14px;border:0.5px solid var(--border);}
+
+/* IMAGE BOX */
+.image-box{background:var(--surface2);border-radius:var(--radius-lg);padding:16px;border:0.5px solid var(--border);margin:12px 0;}
+
+/* QUESTION */
+.q-block{background:var(--surface2);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:16px 18px;margin-bottom:12px;}
+.q-num-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;flex-shrink:0;vertical-align:middle;margin-right:8px;}
+.q-stem{font-family:'Source Serif 4',serif;font-size:14px;font-weight:600;color:var(--text);display:inline;vertical-align:middle;}
+.choices{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
+.choice-btn{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);cursor:pointer;font-size:13px;font-family:'Source Serif 4',serif;line-height:1.65;transition:all 0.15s;text-align:left;width:100%;}
+.choice-btn:hover{border-color:var(--accent);background:var(--accent-light);}
+.choice-btn.selected{border-color:var(--accent);background:var(--accent-light);}
+.choice-btn.correct-mark{background:var(--teal-light);border-color:var(--teal);font-weight:700;color:var(--teal);}
+.choice-btn.wrong-mark{background:var(--red-light);border-color:var(--red-light);color:var(--red);opacity:0.65;}
+.cn{font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0;margin-top:2px;font-family:'Noto Sans JP',sans-serif;min-width:18px;}
+
+/* CHECKBOX Q2 */
+.check-row{display:flex;align-items:flex-start;gap:10px;padding:8px 12px;background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);margin-bottom:5px;cursor:pointer;font-size:13px;font-family:'Source Serif 4',serif;line-height:1.65;transition:all 0.15s;}
+.check-row:hover{border-color:var(--accent);background:var(--accent-light);}
+.check-row.checked-yes{border-color:var(--accent);background:var(--accent-light);}
+.check-row.correct-mark{background:var(--teal-light);border-color:var(--teal);color:var(--teal);}
+.check-row.wrong-mark{background:var(--red-light);border-color:var(--red-light);color:var(--red);opacity:0.65;}
+.check-box{width:18px;height:18px;border-radius:4px;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:11px;transition:all 0.15s;}
+.check-row.checked-yes .check-box{background:var(--accent);border-color:var(--accent);color:#fff;}
+.row-letter{font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0;margin-top:2px;font-family:'Noto Sans JP',sans-serif;min-width:16px;}
+
+.reason-input{width:100%;padding:10px 13px;font-size:13px;font-family:'Noto Sans JP',sans-serif;background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);color:var(--text);resize:none;transition:border 0.2s;line-height:1.6;margin-top:8px;}
+.reason-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(44,95,138,0.1);}
+.reason-label{font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-top:10px;margin-bottom:3px;display:block;}
+
+/* ANSWER BLOCKS */
+.ans-block{border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;border:0.5px solid var(--border);}
+.ans-hdr{padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;background:var(--surface);}
+.ans-hdr:hover{background:var(--surface2);}
+.ans-arrow{font-size:11px;transition:transform 0.2s;margin-left:auto;color:var(--text3);}
+.ans-body{display:none;padding:16px;border-top:0.5px solid var(--border);}
+.ans-body.open{display:block;}
+
+.ca-grid{display:flex;flex-direction:column;gap:7px;margin-top:10px;}
+.ca-row{border-radius:var(--radius);overflow:hidden;border:0.5px solid var(--border);}
+.ca-hdr{padding:8px 12px;display:flex;align-items:flex-start;gap:8px;font-size:13px;font-family:'Source Serif 4',serif;line-height:1.6;cursor:pointer;}
+.ca-hdr.ca-correct{background:var(--teal-light);border-bottom:0.5px solid #9fe1cb;}
+.ca-hdr.ca-wrong{background:var(--red-light);}
+.ca-detail{padding:9px 12px 10px 34px;font-size:12px;line-height:1.8;background:var(--surface);display:none;}
+.ca-detail.open{display:block;}
+.ca-num-s{font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;font-family:'Noto Sans JP',sans-serif;}
+.ca-correct .ca-num-s{color:var(--teal);}
+.ca-wrong .ca-num-s{color:var(--red);}
+
+.tag-ok{display:inline-block;background:var(--teal-light);color:var(--teal);border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;font-family:'Noto Sans JP',sans-serif;}
+.tag-ng{display:inline-block;background:var(--red-light);color:var(--red);border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;font-family:'Noto Sans JP',sans-serif;}
+.tag-trap{display:inline-block;background:var(--amber-light);color:var(--amber);border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;font-family:'Noto Sans JP',sans-serif;}
+
+.maker-box{border-radius:var(--radius);padding:11px 14px;background:var(--purple-light);border:0.5px solid #afa9ec;margin-top:10px;font-size:13px;line-height:1.75;}
+.maker-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:4px;}
+
+/* CALLOUT */
+.callout{border-radius:var(--radius);padding:12px 15px;margin:10px 0;font-size:14px;line-height:1.75;}
+.callout-yellow{background:#fffbea;border-left:3px solid #e6c200;}
+.callout-blue{background:var(--accent-light);border-left:3px solid var(--accent);}
+.callout-teal{background:var(--teal-light);border-left:3px solid var(--teal);}
+.callout-purple{background:var(--purple-light);border-left:3px solid var(--purple);}
+.cl-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.callout-yellow .cl-label{color:#7a6600;}
+.callout-blue .cl-label{color:var(--accent);}
+.callout-teal .cl-label{color:var(--teal);}
+.callout-purple .cl-label{color:var(--purple);}
+
+/* SCORE */
+.score-card{background:var(--surface2);border-radius:var(--radius-lg);padding:15px 18px;border:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.score-num{font-size:28px;font-weight:700;color:var(--accent);}
+
+/* TRANSLATION */
+.trans-line{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:0.5px solid var(--border);font-size:13px;line-height:1.75;}
+.trans-line:last-child{border-bottom:none;}
+.trans-en{font-family:'Source Serif 4',serif;flex:1;}
+.trans-ja{flex:1;color:var(--text2);}
+.trans-divider{width:1px;background:var(--border);flex-shrink:0;align-self:stretch;}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s;}
+.btn-primary:hover{background:#1e4a70;}.btn-primary:active{transform:scale(0.98);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--surface);color:var(--text);border:0.5px solid var(--border);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--surface2);}
+.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:18px;border-top:0.5px solid var(--border);flex-wrap:wrap;gap:10px;}
+
+/* THEME BANNER */
+.theme-banner{background:linear-gradient(135deg,#1a3a5c 0%,#2c5f8a 100%);border-radius:var(--radius-lg);padding:18px 22px;margin-bottom:16px;color:#fff;}
+.tb-month{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;opacity:0.6;margin-bottom:5px;}
+.tb-title{font-size:16px;font-weight:700;margin-bottom:10px;}
+.tb-rules{display:flex;flex-direction:column;gap:6px;}
+.tb-rule{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.65;}
+.tb-rule-num{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+
+.detail-toggle-btn{font-size:11px;color:var(--accent);cursor:pointer;font-weight:700;margin-left:6px;text-decoration:underline;font-family:'Noto Sans JP',sans-serif;}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">説明文読解 — Tic-Tac-Toe（三目並べ）完全解析</div>
+    </div>
+  </div>
+  <div class="phase-indicator">
+    <div class="pi-dot active" id="dot1"></div>
+    <div class="pi-dot" id="dot2"></div>
+    <div class="pi-dot" id="dot3"></div>
+    <div class="pi-dot" id="dot4"></div>
+    <div class="pi-label" id="phase-label">PHASE 1 / 4</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════
+     PHASE 1 — 読むフェーズ
+══════════════════════ -->
+<div class="phase-panel active" id="phase1">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:var(--accent);">1</div>
+    <div>
+      <div class="pb-text">読むフェーズ</div>
+      <div class="pb-sub">「頭の中でゲームを動かしながら」読む</div>
+    </div>
+  </div>
+
+  <div class="theme-banner">
+    <div class="tb-month">April Theme — 今月の鉄則</div>
+    <div class="tb-title">単語は読めるのにイメージできていない — それが失点の本当の原因</div>
+    <div class="tb-rules">
+      <div class="tb-rule"><div class="tb-rule-num">①</div><div>この問題の単語は難しくない。失点する人は「内容が具体的に頭の中で動いていない」。読みながら盤面を頭の中に作れているかが全て。</div></div>
+      <div class="tb-rule"><div class="tb-rule-num">②</div><div>不正解選択肢の「どこが・どう・なぜ違うか」を本文の具体的な記述で言い切る。「なんとなく違う」は失点と同じ。</div></div>
+      <div class="tb-rule"><div class="tb-rule-num">③</div><div>作問者が「どんなミスをする人を引っ掛けようとしているか」を見抜く。問題は単純に見えるほど罠が精巧。</div></div>
+    </div>
+  </div>
+
+  <!-- ゲーム理解セクション -->
+  <div class="card">
+    <div class="section-label">まず「ゲームを頭の中で動かす」— これが読解の前提</div>
+    <div class="callout callout-yellow">
+      <div class="cl-label">このフェーズの目的</div>
+      三目並べを「実際にやったことがない人でも頭の中で動かせる状態」にしてから本文を読む。ゲームのイメージがないまま読むと「それっぽい理解」で止まり、問2の内容一致で確実に失点する。
+    </div>
+
+    <!-- ゲームルール視覚化 -->
+    <div style="margin-top:14px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">三目並べ（Tic-Tac-Toe）を頭の中で動かす</div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;">
+
+        <!-- 盤面 -->
+        <div class="image-box" style="text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.07em;">ルール1：3×3の盤面</div>
+          <div class="ttt-board">
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-empty">　</div>
+          </div>
+          <div style="font-size:11px;color:var(--text2);margin-top:8px;">X（あなた）vs O（相手）<br>交互にマス目に印をつける</div>
+        </div>
+
+        <!-- 勝利 -->
+        <div class="image-box" style="text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.07em;">ルール3：3つ並んだら勝ち</div>
+          <div class="ttt-board">
+            <div class="ttt-cell ttt-x ttt-win">X</div>
+            <div class="ttt-cell ttt-x ttt-win">X</div>
+            <div class="ttt-cell ttt-x ttt-win">X</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-empty">　</div>
+            <div class="ttt-cell ttt-empty">　</div>
+          </div>
+          <div style="font-size:11px;color:var(--teal);font-weight:700;margin-top:8px;">X が横一列 → Xの勝ち<br>縦・斜め も同じ</div>
+        </div>
+
+        <!-- 引き分け -->
+        <div class="image-box" style="text-align:center;">
+          <div style="font-size:11px;font-weight:700;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.07em;">ルール4：引き分けの盤面</div>
+          <div class="ttt-board">
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-o">O</div>
+            <div class="ttt-cell ttt-x">X</div>
+            <div class="ttt-cell ttt-o">O</div>
+          </div>
+          <div style="font-size:11px;color:var(--amber);font-weight:700;margin-top:8px;">9マス全部埋まった<br>でも3つ並んでいない → 引き分け</div>
+        </div>
+      </div>
+
+      <!-- 引き分け時のX数の確認 -->
+      <div class="callout callout-blue" style="margin-bottom:10px;">
+        <div class="cl-label">問2-h の核心（引き分け時のXの数）</div>
+        上の引き分け盤面を数えてみよう：X = 5個、O = 4個。先手（X）は5回打ち、後手（O）は4回打つ。<br>
+        → 引き分けのとき、先手のXは常に<strong>5個</strong>。h「Xは4個」→ ×
+      </div>
+
+      <!-- unless の視覚化 -->
+      <div class="callout callout-purple">
+        <div class="cl-label">空所3「unless」の核心 — これを頭でイメージできているか</div>
+        <strong>unless = if … not（〜しなければ）</strong><br>
+        "you have to put your next X in the last empty square in that row, <span style="font-weight:700;color:var(--purple);">unless</span> your opponent will win."<br><br>
+        頭の中で動かす：<br>
+        相手がOを2つ並べた → 残り1マスが空いている → <strong>そこに入れなければ</strong>（unless = if you don't） → 相手が次にそこを取って勝つ<br>
+        → unless = 「さもなければ」「そうしなければ〜してしまう」
+      </div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="card">
+    <div class="section-label">本文 — Tic-Tac-Toe</div>
+    <div class="passage-text">
+      <p>You probably already know how to play Tic-Tac-Toe. It's a really simple game, right? That's what most people think. But if you really wrap your brain around it, you'll discover that Tic-Tac-Toe isn't quite as simple as you think! Tic-Tac-Toe (<span class="blank-slot" id="bk1">　1　</span> a lot of other games) involves looking ahead and trying to figure out what the person playing against you might do next.</p>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:12px 14px;margin:10px 0;border:0.5px solid var(--border);">
+        <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">RULES FOR TIC-TAC-TOE</div>
+        <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:2;">
+          <div>1. The game is played on a grid that's 3 squares by 3 squares.</div>
+          <div>2. You are X, your friend (or opponent) is O. Players take turns putting their marks in empty squares.</div>
+          <div>3. The first player to get 3 of his/her marks in a row (up, down, across, or diagonally) is the winner.</div>
+          <div>4. <span class="hl-key">When all 9 squares are full, the game is over.</span> <span class="hl-ans">If no player has 3 marks in a row, the game ends in a tie.</span></div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:12px 14px;margin:10px 0;border:0.5px solid var(--border);">
+        <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">HOW CAN I WIN AT TIC-TAC-TOE?</div>
+        <div class="passage-text">
+          <p>To beat your opponent (or at least tie), you need to <span class="blank-slot" id="bk2">　2　</span> a little bit of strategy. Strategy means figuring out what you need to do to win. <span class="hl-key">Part of your strategy is trying to figure out how to get three Xs in a row.</span> <span class="hl-ans">The other part is trying to figure out how to stop your opponent from getting three Os in a row.</span> After you put an X in a square, you start looking ahead. Where's the best place for your next X? You look at the empty squares and decide which ones are good choices — which ones might let you make three Xs in a row. <span class="hl-key">You also have to watch where your opponent puts his/her O. That could change what you do next.</span> If your opponent gets two Os in a row, you have to put your next X in the last empty square in that row, <span class="blank-slot" id="bk3">　3　</span> your opponent will win. You are forced to play in a particular square or lose the game. <span class="hl-ans">If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe.</span> You may not win, but at least you'll tie.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 読み解きチェック -->
+  <div class="card">
+    <div class="section-label">読み解きチェック — 解く前に言えるか</div>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>空所1：</strong>「Tic-Tac-Toeは他の多くのゲームと<span class="blank-slot" style="font-size:11px;padding:1px 8px;">1</span>、先を読む必要がある」— 前後の関係は？<br>
+        <span style="color:var(--text2);">→ 他のゲームと「並んで・同様に」先を読む必要がある = along with</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>空所2：</strong>「勝つには戦略を少し<span class="blank-slot" style="font-size:11px;padding:1px 8px;">2</span>必要がある」— その後に"Strategy means..."と続く<br>
+        <span style="color:var(--text2);">→ 戦略を「使う・活用する」= make use of</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>空所3：</strong>相手がOを2つ並べた → そこに打たなければいけない → <span class="blank-slot" style="font-size:11px;padding:1px 8px;">3</span>相手が勝つ<br>
+        <span style="color:var(--text2);">→「さもなければ（そうしないと）」= unless（if … not）</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--teal-light);border-radius:var(--radius);border:0.5px solid #9fe1cb;">
+        <strong>問2のポイント（先に把握）：</strong><br>
+        ① 9マス全部埋まっても、誰も3つ並んでいなければ引き分け<br>
+        ② 戦略の2つの柱：自分のXを3つ並べる + 相手のOを3つ並ばせないように止める<br>
+        ③ 注意を払い続ければ「負けることはない」（ただし勝てるとは限らない、引き分けはある）<br>
+        ④ 先手のXは引き分け時5個（9マスを先手・後手で交互に = 先手5回、後手4回）
+      </div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <span style="font-size:12px;color:var(--text3);">ゲームを頭で動かせたら次へ</span>
+    <button class="btn-primary" onclick="goPhase(2)">読み完了 → PHASE 2 で問題を解く</button>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PHASE 2 — 解くフェーズ
+══════════════════════ -->
+<div class="phase-panel" id="phase2">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:var(--teal);">2</div>
+    <div>
+      <div class="pb-text">解くフェーズ</div>
+      <div class="pb-sub">選んだ根拠 + 他の選択肢が違う具体的な理由を書く</div>
+    </div>
+  </div>
+
+  <div class="callout callout-yellow" style="margin-bottom:16px;">
+    <div class="cl-label">解くフェーズのルール</div>
+    問1は4択から1つ選ぶ。問2はa〜hの8文から「本文と合っている3つ」を選ぶ。どちらも<strong>本文のどこが根拠か・他はなぜ違うか</strong>を言語化すること。「ありそう」「なんとなく」は禁止。
+  </div>
+
+  <!-- 問1-1 -->
+  <div class="q-block">
+    <span class="q-num-badge">1</span>
+    <span class="q-stem">空所 <strong>1</strong> に入る最も適切な語（句）</span>
+    <div style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--text2);margin-top:6px;padding:7px 12px;background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);">
+      "Tic-Tac-Toe ( <strong>1</strong> a lot of other games) involves looking ahead..."
+    </div>
+    <div class="choices" id="q1">
+      <button class="choice-btn" onclick="sel('q1','a')"><span class="cn">a</span>given</button>
+      <button class="choice-btn" onclick="sel('q1','b')"><span class="cn">b</span>along with</button>
+      <button class="choice-btn" onclick="sel('q1','c')"><span class="cn">c</span>more than</button>
+      <button class="choice-btn" onclick="sel('q1','d')"><span class="cn">d</span>by</button>
+    </div>
+    <span class="reason-label">選んだ根拠 + 他3つが×の具体的な理由</span>
+    <textarea class="reason-input" id="r1" rows="2" placeholder="空所に入れると文全体がどういう意味になるかを確認しながら..."></textarea>
+  </div>
+
+  <!-- 問1-2 -->
+  <div class="q-block">
+    <span class="q-num-badge">2</span>
+    <span class="q-stem">空所 <strong>2</strong> に入る最も適切な語（句）</span>
+    <div style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--text2);margin-top:6px;padding:7px 12px;background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);">
+      "you need to ( <strong>2</strong> ) a little bit of strategy."
+    </div>
+    <div class="choices" id="q2">
+      <button class="choice-btn" onclick="sel('q2','a')"><span class="cn">a</span>make up for</button>
+      <button class="choice-btn" onclick="sel('q2','b')"><span class="cn">b</span>make believe</button>
+      <button class="choice-btn" onclick="sel('q2','c')"><span class="cn">c</span>make sure</button>
+      <button class="choice-btn" onclick="sel('q2','d')"><span class="cn">d</span>make use of</button>
+    </div>
+    <span class="reason-label">make ○○ の意味を確認 — 入れたときに文が成立するか</span>
+    <textarea class="reason-input" id="r2" rows="2" placeholder="make use of = 〜を利用する。make up for = 〜を補う..."></textarea>
+  </div>
+
+  <!-- 問1-3 -->
+  <div class="q-block">
+    <span class="q-num-badge">3</span>
+    <span class="q-stem">空所 <strong>3</strong> に入る最も適切な語（句）</span>
+    <div style="font-family:'Source Serif 4',serif;font-size:13px;color:var(--text2);margin-top:6px;padding:7px 12px;background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);">
+      "you have to put your next X in the last empty square in that row, ( <strong>3</strong> ) your opponent will win."
+    </div>
+    <div class="choices" id="q3">
+      <button class="choice-btn" onclick="sel('q3','a')"><span class="cn">a</span>if</button>
+      <button class="choice-btn" onclick="sel('q3','b')"><span class="cn">b</span>unless</button>
+      <button class="choice-btn" onclick="sel('q3','c')"><span class="cn">c</span>or</button>
+      <button class="choice-btn" onclick="sel('q3','d')"><span class="cn">d</span>then</button>
+    </div>
+    <span class="reason-label">盤面を頭で動かして — 「何をしなければどうなるか」の関係</span>
+    <textarea class="reason-input" id="r3" rows="2" placeholder="相手が2つ並べた → そこに打たなければ → 相手が次に勝つ。この関係を接続詞で表すと..."></textarea>
+  </div>
+
+  <!-- 問2 -->
+  <div class="q-block">
+    <span class="q-num-badge">問2</span>
+    <span class="q-stem">本文の内容と合っているものを3つ選びなさい</span>
+    <div class="callout callout-yellow" style="margin-top:10px;margin-bottom:10px;font-size:13px;">
+      <div class="cl-label">問2の戦略</div>
+      8文それぞれについて「本文のどこに根拠があるか」を確認してから選ぶ。「ありそう」は全部罠。本文に書いていないことは全て×。
+    </div>
+    <div id="q2checks">
+      <div class="check-row" onclick="toggleCheck('ca','check-ca')">
+        <div class="check-box" id="check-ca"></div>
+        <span class="row-letter">a.</span>
+        <span>When all 9 squares are full, either one of the two players is the winner.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('cb','check-cb')">
+        <div class="check-box" id="check-cb"></div>
+        <span class="row-letter">b.</span>
+        <span>To win the game, you need to figure out not only how to get three Xs in a row, but also how to stop your opponent from getting three Os in a row.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('cc','check-cc')">
+        <div class="check-box" id="check-cc"></div>
+        <span class="row-letter">c.</span>
+        <span>Both of the players could win at the same time.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('cd','check-cd')">
+        <div class="check-box" id="check-cd"></div>
+        <span class="row-letter">d.</span>
+        <span>If you play carefully, you will never lose in this game.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('ce','check-ce')">
+        <div class="check-box" id="check-ce"></div>
+        <span class="row-letter">e.</span>
+        <span>Players don't need to mark three Xs or Os to win in some cases.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('cf','check-cf')">
+        <div class="check-box" id="check-cf"></div>
+        <span class="row-letter">f.</span>
+        <span>If all 9 squares are filled and no player has three marks in a row, the game is a tie.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('cg','check-cg')">
+        <div class="check-box" id="check-cg"></div>
+        <span class="row-letter">g.</span>
+        <span>Your strategy is completely dependent on where your opponent places his/her O.</span>
+      </div>
+      <div class="check-row" onclick="toggleCheck('ch','check-ch')">
+        <div class="check-box" id="check-ch"></div>
+        <span class="row-letter">h.</span>
+        <span>When you are the first to play and the game ends in a tie, the number of Xs is four.</span>
+      </div>
+    </div>
+    <span class="reason-label">3つ選んだ根拠 + 選ばなかった5つが×の理由を書く</span>
+    <textarea class="reason-input" id="r2q" rows="4" placeholder="b: 本文の『Part of your strategy...The other part...』に対応。d: 『you'll never lose』と一致。f: ルール4の記述と完全一致..."></textarea>
+  </div>
+
+  <div style="text-align:center;margin-top:16px;">
+    <button class="btn-primary" onclick="goPhase(3)">解答完了 → PHASE 3 で答え合わせ</button>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PHASE 3 — 答え合わせ
+══════════════════════ -->
+<div class="phase-panel" id="phase3">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:var(--purple);">3</div>
+    <div>
+      <div class="pb-text">答え合わせ — 全選択肢の解剖</div>
+      <div class="pb-sub">正解根拠 + 罠の構造 + 作問者の意図まで</div>
+    </div>
+  </div>
+
+  <div class="score-card">
+    <div>
+      <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">得点</div>
+      <div class="score-num" id="score-display">— / 4</div>
+    </div>
+    <div style="font-size:13px;color:var(--text2);text-align:right;line-height:1.7;">
+      問2は3つ全部正解で1点<br>
+      <strong style="color:var(--text);">全選択肢の○×理由を言えるかが本番の力</strong>
+    </div>
+  </div>
+
+  <!-- 空所1解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('a1')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">1</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">空所1 — "along with"　正解：b</div><div style="font-size:11px;color:var(--text2);">〜と並んで / 〜と一緒に</div></div>
+      <div class="ans-arrow" id="a1-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="a1-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">正解の根拠</div>
+        "Tic-Tac-Toe (<strong>along with</strong> a lot of other games) involves looking ahead..."<br>
+        = 三目並べは（他の多くのゲームと並んで）先を読むことを必要とするゲームだ。<br>
+        → 三目並べを「他の多くのゲームの仲間」として位置付けている。
+      </div>
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d1a')"><span class="ca-num-s">a</span><span>given（〜を考えると / 与えられた）</span><span class="tag-ng">×</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d1a"><strong>なぜ×：</strong>"Tic-Tac-Toe (given a lot of other games) involves..." → 「他の多くのゲームを考えると」という意味になり不自然。givenは「条件として与えられた何か」に使う。<br><strong>作問者の意図：</strong>givenを「〜と並んで」に似た意味だと思い込む人への罠。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d1b')"><span class="ca-num-s">b</span><span>along with（〜と一緒に / 〜と並んで）</span><span class="tag-ok">正解</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d1b"><strong>なぜ正解：</strong>"along with a lot of other games" = 他の多くのゲームと同様に・一緒に。三目並べが「先を読むゲームのカテゴリーに属する」という文脈と完全一致。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d1c')"><span class="ca-num-s">c</span><span>more than（〜より多く / 〜以上に）</span><span class="tag-ng">×</span><span class="tag-trap">比較の意味ずらし</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d1c"><strong>なぜ×：</strong>"more than a lot of other games" → 「他の多くのゲームより多く先を読む必要がある」という比較の意味になる。しかし文の主旨は「三目並べも他のゲームと同様に先読みが必要」であり、他より優れているという話ではない。<br><strong>作問者の意図：</strong>「三目並べは複雑」という文の雰囲気から「他のゲームより難しい」と読み間違えた人が選ぶ罠。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d1d')"><span class="ca-num-s">d</span><span>by（〜によって / 〜のそばに）</span><span class="tag-ng">×</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d1d"><strong>なぜ×：</strong>"by a lot of other games" → 「他の多くのゲームによって」または「他のゲームのそばで」という意味になり、文として成立しない。</div>
+        </div>
+      </div>
+      <div class="maker-box">
+        <div class="maker-label">作問者の意図まとめ</div>
+        "along with" を知っているかを試している問題。cの"more than"は文の雰囲気（三目並べは複雑）から引っかかりやすい最大の罠。「比較」ではなく「並列・仲間として」という関係を正確に読めているかが問われている。
+      </div>
+    </div>
+  </div>
+
+  <!-- 空所2解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('a2')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">空所2 — "make use of"　正解：d</div><div style="font-size:11px;color:var(--text2);">〜を利用する / 〜を活用する</div></div>
+      <div class="ans-arrow" id="a2-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="a2-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">正解の根拠</div>
+        "you need to <strong>make use of</strong> a little bit of strategy."<br>
+        直後："Strategy means figuring out what you need to do to win."<br>
+        → 戦略を「活用する・使う」という意味が文脈に合う。
+      </div>
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d2a')"><span class="ca-num-s">a</span><span>make up for（〜を補う / 〜の埋め合わせをする）</span><span class="tag-ng">×</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d2a"><strong>なぜ×（具体的に）：</strong>"make up for a little bit of strategy" → 「少しの戦略の埋め合わせをする」という意味になる。「戦略が不足している部分を補う」という文脈は本文にない。戦略は「使う」ものとして書かれている。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d2b')"><span class="ca-num-s">b</span><span>make believe（〜のふりをする / 信じさせる）</span><span class="tag-ng">×</span><span class="tag-trap">意味が完全にズレ</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d2b"><strong>なぜ×（具体的に）：</strong>"make believe a little bit of strategy" → 「少しの戦略があるふりをする」という意味になり、文として成立しない。ゲームで戦略を「実際に使う」話をしているのに「ふりをする」は文脈と完全に矛盾。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d2c')"><span class="ca-num-s">c</span><span>make sure（確認する / 確実にする）</span><span class="tag-ng">×</span><span class="tag-trap">意味は近いが文法的に×</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d2c"><strong>なぜ×（具体的に）：</strong>"make sure a little bit of strategy" → make sure は "make sure (that) SV" か "make sure of 名詞" の形で使う。"make sure a little bit of strategy"は文法的に不自然。<br><strong>作問者の意図：</strong>意味的には「確実に戦略を使う」とも解釈できそうで、最も引っかかりやすい選択肢。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d2d')"><span class="ca-num-s">d</span><span>make use of（〜を利用する / 活用する）</span><span class="tag-ok">正解</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d2d"><strong>なぜ正解：</strong>"make use of a little bit of strategy" = 少しの戦略を活用する。直後で「戦略とは何か」の説明が続き、文脈と完全一致。</div>
+        </div>
+      </div>
+      <div class="maker-box">
+        <div class="maker-label">作問者の意図まとめ</div>
+        全選択肢が "make ○○" の形。make系熟語の正確な意味を知っているかを試している。cの"make sure"は意味が近そうで最も迷わせる選択肢だが、文法的に後ろに名詞句が直接続かない。熟語の意味だけでなく用法まで把握しているかが問われている。
+      </div>
+    </div>
+  </div>
+
+  <!-- 空所3解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('a3')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">3</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">空所3 — "or"　正解：c</div><div style="font-size:11px;color:var(--text2);">さもなければ / そうしないと</div></div>
+      <div class="ans-arrow" id="a3-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="a3-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">正解の根拠 — 盤面をイメージしながら読む</div>
+        "you have to put your next X in the last empty square in that row, <strong>or</strong> your opponent will win."<br><br>
+        構造：〔命令・義務〕, or 〔結果（悪い方）〕<br>
+        = そのマスに打て、さもなければ（打たなければ）相手が勝つ。<br>
+        "or" = "otherwise"（さもなければ）の用法。
+      </div>
+
+      <!-- unless との対比 -->
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:12px 14px;margin-bottom:12px;font-size:13px;border:0.5px solid var(--border);">
+        <div style="font-size:11px;font-weight:700;color:var(--text2);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.07em;">「unless」との違いを整理する</div>
+        <div style="font-family:'Source Serif 4',serif;margin-bottom:6px;padding:7px 10px;background:var(--teal-light);border-radius:6px;"><strong>b. unless（さもなければ）を使うと：</strong><br>"you have to put X..., unless your opponent will win."<br>→ 「相手が勝つのでなければXを打たなければならない」→ 日本語として不自然で意味が通じない</div>
+        <div style="font-family:'Source Serif 4',serif;padding:7px 10px;background:var(--red-light);border-radius:6px;"><strong>unless の正しい用法：</strong>unless = if ... not<br>"Don't go out, <em>unless</em> it stops raining." = 雨が止まない限り外に出るな<br>→ unlessの後には「条件」が来る。「相手が勝つ」は条件ではなく「結果」。</div>
+      </div>
+
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d3a')"><span class="ca-num-s">a</span><span>if（もし〜なら）</span><span class="tag-ng">×</span><span class="tag-trap">意味が逆になる</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d3a"><strong>なぜ×（具体的に）：</strong>"you have to put X..., if your opponent will win." → 「相手が勝つのなら、そのマスにXを打たなければならない」。これでは「相手が勝つことが条件でXを打つ」という意味になり、ゲームの論理と逆。打つ理由は「相手が勝たないようにするため」。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d3b')"><span class="ca-num-s">b</span><span>unless（〜でない限り / さもなければ）</span><span class="tag-ng">×</span><span class="tag-trap">最大の引っかけ — 意味は近いが構造が違う</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d3b"><strong>なぜ×（具体的に）：</strong>"you have to put X..., unless your opponent will win." = "you have to put X... if your opponent will not win" → 「相手が勝たないのであれば、そこにXを打たなければならない」→ 意味が逆になる。<br><strong>作問者の意図：</strong>「unless = さもなければ」だから正解に見える最精巧な罠。しかしunlessの後は「条件」（相手が勝たない状況）であって「結果」（相手が勝つ）ではない。unlessとorの用法の違いを正確に知っているかが問われている。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d3c')"><span class="ca-num-s">c</span><span>or（さもなければ / そうしないと）</span><span class="tag-ok">正解</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d3c"><strong>なぜ正解：</strong>「命令・義務, or 結果」の構文。"Do this, or that will happen." = 「これをしろ、さもなければ〜になる」。Xを打て（義務）, or 相手が勝つ（悪い結果）。ゲームの論理と完全一致。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d3d')"><span class="ca-num-s">d</span><span>then（そうすれば / その場合は）</span><span class="tag-ng">×</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="d3d"><strong>なぜ×（具体的に）：</strong>"you have to put X..., then your opponent will win." → 「そのマスにXを打て、そうすれば相手が勝つ」という意味になり、論理が逆。Xを打つ目的は相手に勝たせないため。thenは「そうすれば（良い結果）」の文脈で使う。</div>
+        </div>
+      </div>
+      <div class="maker-box">
+        <div class="maker-label">作問者の意図まとめ</div>
+        bの"unless"は「さもなければ」という訳だけを覚えている人が必ず選ぶ精巧な罠。<strong>unlessは「条件」を表し、orは「結果」を表す</strong>という構造の違いを理解していないと正解できない。盤面をイメージできていれば「or（さもなければ）」しか入らないと直感的にわかる。
+      </div>
+    </div>
+  </div>
+
+  <!-- 問2解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('aq2')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--purple);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">2</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問2 — 内容一致　正解：b, d, f</div><div style="font-size:11px;color:var(--text2);">8文全ての○×根拠を確認する</div></div>
+      <div class="ans-arrow" id="aq2-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="aq2-body">
+      <div class="ca-grid">
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('dqa')"><span class="ca-num-s">a</span><span>When all 9 squares are full, either one of the two players is the winner.</span><span class="tag-ng">×</span><span class="tag-trap">引き分けを無視</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqa"><strong>なぜ×：</strong>ルール4：「9マスが全部埋まったとき、誰も3つ並んでいなければ引き分け（tie）になる」。「どちらかが必ず勝者になる」は引き分けの可能性を無視しており本文と矛盾。<br><strong>作問者の意図：</strong>「全部埋まったら終わり = 勝者が決まる」という思い込みを利用した罠。引き分けの存在を見落とした人が選ぶ。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('dqb')"><span class="ca-num-s">b</span><span>To win the game, you need to figure out not only how to get three Xs in a row, but also how to stop your opponent from getting three Os in a row.</span><span class="tag-ok">○</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqb"><strong>なぜ○：</strong>"Part of your strategy is trying to figure out how to get three Xs in a row. The other part is trying to figure out how to stop your opponent from getting three Os in a row." → bはこの2文の「not only A but also B」の言い換え。完全一致。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('dqc')"><span class="ca-num-s">c</span><span>Both of the players could win at the same time.</span><span class="tag-ng">×</span><span class="tag-trap">ゲームの論理と矛盾</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqc"><strong>なぜ×：</strong>ゲームの構造上、両者が同時に3つ並べることは不可能（交互に打つため、片方が3つ並べた時点でゲーム終了）。本文にも「どちらも同時に勝てる」という記述は一切ない。<br><strong>作問者の意図：</strong>本文に書いていないことを「ありそう」と思って選ぶ人への罠。ゲームを頭で動かせていれば即×とわかる。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('dqd')"><span class="ca-num-s">d</span><span>If you play carefully, you will never lose in this game.</span><span class="tag-ok">○</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqd"><strong>なぜ○：</strong>"If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe." → 「注意を払い続ける」= carefully。「負けることはない」と完全一致。言い換えの確認が必要だが、内容は本文と一致。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('dqe')"><span class="ca-num-s">e</span><span>Players don't need to mark three Xs or Os to win in some cases.</span><span class="tag-ng">×</span><span class="tag-trap">ルール3と矛盾</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqe"><strong>なぜ×：</strong>ルール3：「最初に3つ並べた人が勝者」。3つ並べる以外の勝ち方は本文のどこにも書かれていない。「場合によっては3つ並べなくても勝てる」は本文と矛盾。<br><strong>作問者の意図：</strong>本文に書いていない話を「場合によっては…」という曖昧な表現でありそうに見せた罠。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('dqf')"><span class="ca-num-s">f</span><span>If all 9 squares are filled and no player has three marks in a row, the game is a tie.</span><span class="tag-ok">○</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqf"><strong>なぜ○：</strong>ルール4："When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie." → fはこの2文を1文にまとめた言い換え。内容完全一致。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('dqg')"><span class="ca-num-s">g</span><span>Your strategy is completely dependent on where your opponent places his/her O.</span><span class="tag-ng">×</span><span class="tag-trap">"completely"が言い過ぎ</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqg"><strong>なぜ×：</strong>本文では「相手のOの位置も見る」ことは述べているが、戦略が「完全に（completely）相手の動きに依存している」とは書いていない。戦略の一部（自分のXを並べること）は相手に関係なく行う。"completely dependent" = 「完全に依存している」は言い過ぎ。<br><strong>作問者の意図：</strong>"completely"という強い副詞を使って「言い過ぎ」のパターン。こういう副詞の強さに敏感になる練習。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('dqh')"><span class="ca-num-s">h</span><span>When you are the first to play and the game ends in a tie, the number of Xs is four.</span><span class="tag-ng">×</span><span class="tag-trap">数の計算ミスを誘う</span><span class="detail-toggle-btn">詳細</span></div>
+          <div class="ca-detail" id="dqh"><strong>なぜ×（具体的に）：</strong>9マスを先手（X）・後手（O）が交互に打つ。先手が1・3・5・7・9番目 = 5回打つ。後手が2・4・6・8番目 = 4回打つ。引き分け時のXは<strong>5個</strong>であり、4個ではない。<br><strong>作問者の意図：</strong>「引き分けだから両者が同じ数 → 4個か5個か」で迷わせる。実際に盤面を数えればわかるが、頭で動かせていない人が「4個」を選ぶ。</div>
+        </div>
+      </div>
+
+      <div class="maker-box">
+        <div class="maker-label">問2全体の作問者の意図まとめ</div>
+        <strong>a：</strong>引き分けを無視した「結論の単純化」<br>
+        <strong>c：</strong>ゲームの論理を頭で動かせばわかる「会話にない話」<br>
+        <strong>e：</strong>本文に書いていない「例外」を捏造<br>
+        <strong>g：</strong>"completely"という副詞で「言い過ぎ」<br>
+        <strong>h：</strong>先手・後手の計算をしていない人を狙った「数の罠」<br>
+        → 5問全てに「ゲームを頭で動かせていない人」か「副詞・数字を流し読みする人」を引っかける設計がある。
+      </div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <button class="btn-secondary" onclick="goPhase(2)">← PHASE 2 に戻る</button>
+    <button class="btn-primary" onclick="goPhase(4)">PHASE 4 → 全文和訳 + 本質まとめ</button>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PHASE 4 — 全文和訳 + 本質
+══════════════════════ -->
+<div class="phase-panel" id="phase4">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:#1a3a5c;">4</div>
+    <div>
+      <div class="pb-text">全文和訳 + 論理的な読み方の本質</div>
+      <div class="pb-sub">自然な日本語訳で内容を完全に確認する</div>
+    </div>
+  </div>
+
+  <!-- 全文和訳 -->
+  <div class="card">
+    <div class="section-label">全文和訳 — 自然な日本語で内容を完全確認</div>
+    <div class="callout callout-teal" style="margin-bottom:12px;">
+      <div class="cl-label">和訳の使い方</div>
+      英文を見て意味が「ぼんやりしていた部分」を和訳で確認する。和訳を先に読んで英語に戻すのが最も効果的。
+    </div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:10px;">導入部</div>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:16px;">
+      <div class="trans-line">
+        <div class="trans-en">You probably already know how to play Tic-Tac-Toe.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">あなたはおそらく三目並べのやり方をすでに知っているだろう。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">It's a really simple game, right? That's what most people think.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">本当に簡単なゲームだよね？ほとんどの人はそう思っている。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">But if you really wrap your brain around it, you'll discover that Tic-Tac-Toe isn't quite as simple as you think!</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">しかし本当によく考えてみると、三目並べは思っているほど単純ではないと気づくはずだ！</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">Tic-Tac-Toe (<strong>along with</strong> a lot of other games) involves looking ahead and trying to figure out what the person playing against you might do next.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">三目並べは（他の多くのゲームと同様に）先を読み、対戦相手が次に何をするかを予測しようとすることを必要とするゲームだ。</div>
+      </div>
+    </div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:10px;">ルール説明</div>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:16px;">
+      <div class="trans-line">
+        <div class="trans-en">1. The game is played on a grid that's 3 squares by 3 squares.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">1. ゲームは3×3のマス目の上で行う。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">2. You are X, your friend (or opponent) is O. Players take turns putting their marks in empty squares.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">2. あなたはX、友人（または相手）はO。プレイヤーは交互に空いているマスに印をつける。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">3. The first player to get 3 of his/her marks in a row (up, down, across, or diagonally) is the winner.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">3. 自分の印を縦・横・斜めのいずれかに3つ並べた最初のプレイヤーが勝者となる。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">4. 9マス全てが埋まったらゲーム終了。どのプレイヤーも3つ並んでいなければ、引き分けで終わる。</div>
+      </div>
+    </div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--amber);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:10px;">勝ち方の解説</div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <div class="trans-line">
+        <div class="trans-en">To beat your opponent (or at least tie), you need to <strong>make use of</strong> a little bit of strategy.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">相手に勝つ（または少なくとも引き分ける）ためには、少しの戦略を活用する必要がある。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">Strategy means figuring out what you need to do to win.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">戦略とは、勝つために何をすべきかを考え出すことだ。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">Part of your strategy is trying to figure out how to get three Xs in a row. The other part is trying to figure out how to stop your opponent from getting three Os in a row.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">戦略の一つの柱は、Xを3つ一列に並べる方法を考えることだ。もう一つの柱は、相手がOを3つ並べるのを阻止する方法を考えることだ。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">After you put an X in a square, you start looking ahead. Where's the best place for your next X?</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">マスにXを置いたら、次の手を先読みし始める。次のXを置く最善の場所はどこか？</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">You look at the empty squares and decide which ones are good choices — which ones might let you make three Xs in a row.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">空いているマスを見て、どれが良い選択肢かを判断する — どこに置けばXを3つ並べられるかを。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">You also have to watch where your opponent puts his/her O. That could change what you do next.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">また、相手がOをどこに置くかも注視しなければならない。それによって次の自分の行動が変わることがあるからだ。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">If your opponent gets two Os in a row, you have to put your next X in the last empty square in that row, <strong>or</strong> your opponent will win.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">もし相手がOを2つ一列に並べたら、その列の最後の空きマスにXを置かなければならない。さもなければ相手が勝ってしまう。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">You are forced to play in a particular square or lose the game.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">特定のマスに打つことを強いられるか、ゲームを失うかのどちらかだ。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">常に注意を払い先を読み続ければ、三目並べで負けることは決してない。</div>
+      </div>
+      <div class="trans-line">
+        <div class="trans-en">You may not win, but at least you'll tie.</div>
+        <div class="trans-divider"></div>
+        <div class="trans-ja">勝てないかもしれないが、少なくとも引き分けにはなれる。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 本質まとめ -->
+  <div class="card">
+    <div class="section-label">この問題から学ぶ — 「イメージで読む力」</div>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+      <div style="padding:10px 13px;background:var(--red-light);border-radius:var(--radius);border-left:3px solid var(--red);">
+        <strong style="color:var(--red);">この問題で失点する人のパターン</strong><br>
+        単語は読める → でも「9マス・先手後手・引き分け時の枚数」を頭の中で動かしていない → h で「4個」を選ぶ・a で「どちらかが勝者」を選ぶ
+      </div>
+      <div style="padding:10px 13px;background:var(--amber-light);border-radius:var(--radius);border-left:3px solid var(--amber);">
+        <strong style="color:var(--amber);">接続詞は「ゲームの論理」と一致させる</strong><br>
+        空所3の unless vs or — 「さもなければ」という訳だけ覚えていると unless を選ぶ。しかしゲームの論理を頭で動かせば「打て、さもなければ（or）負ける」という命令＋結果の構造が見える。
+      </div>
+      <div style="padding:10px 13px;background:var(--purple-light);border-radius:var(--radius);border-left:3px solid var(--purple);">
+        <strong style="color:var(--purple);">「言い過ぎ」と「話題外」を見分ける目を鍛える</strong><br>
+        g の "completely dependent" = 言い過ぎ。本文は「相手の動きも見る」だが「完全に依存」とは書いていない。e・c = 本文に書いていない話を「ありそう」で選ぶパターン。
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#1a3a5c;border-radius:var(--radius-lg);padding:26px;color:#fff;margin-bottom:14px;">
+    <div style="font-size:17px;font-weight:700;margin-bottom:14px;">4月の鉄則 — この問題でできたか</div>
+    <div style="display:flex;flex-direction:column;gap:11px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:rgba(255,255,255,0.08);border-radius:var(--radius);">
+        <div style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">①</div>
+        <div style="font-size:14px;line-height:1.75;"><strong>単語が読めることと内容が頭で動くことは別。</strong><br><span style="opacity:0.8;font-size:13px;">「9マス・先手5回・後手4回」は本文に直接書いていないが論理的に導ける。ゲームを頭でシミュレートできれば即答できる問題。</span></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:rgba(255,255,255,0.08);border-radius:var(--radius);">
+        <div style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">②</div>
+        <div style="font-size:14px;line-height:1.75;"><strong>訳だけで接続詞を選ぶな。構造で選べ。</strong><br><span style="opacity:0.8;font-size:13px;">unless も or も「さもなければ」と訳せる場面がある。しかし構造が違う。「命令, or 結果」vs「unless = if not 条件」。構造を理解していれば迷わない。</span></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:rgba(255,255,255,0.15);border-radius:var(--radius);border:1px solid rgba(255,255,255,0.2);">
+        <div style="width:24px;height:24px;border-radius:50%;background:#fff;color:#1a3a5c;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">✓</div>
+        <div style="font-size:14px;line-height:1.75;"><strong>「わかった気」と「頭で動かせる」は全く違う。これが基礎固めの時期に鍛えるべき力。</strong><br><span style="opacity:0.85;font-size:13px;">問題が難しくなってから「なんとなく読む癖」を直すのは困難。今のうちに「根拠まで言い切る読み方」を体に染み込ませる。</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <button class="btn-secondary" onclick="goPhase(3)">← PHASE 3 に戻る</button>
+    <button class="btn-primary" onclick="goPhase(1)">最初からやり直す</button>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<script>
+var answers1={q1:'b',q2:'d',q3:'c'};
+var selected1={};
+var checked2={ca:false,cb:false,cc:false,cd:false,ce:false,cf:false,cg:false,ch:false};
+var correct2=['cb','cd','cf'];
+
+function sel(qid,val){
+  selected1[qid]=val;
+  var btns=document.querySelectorAll('#'+qid+' .choice-btn');
+  btns.forEach(function(b){b.classList.remove('selected');});
+  var labels=['a','b','c','d'];
+  var idx=labels.indexOf(val);
+  if(idx>=0)btns[idx].classList.add('selected');
+}
+
+function toggleCheck(id,boxId){
+  checked2[id]=!checked2[id];
+  var row=document.querySelector('[onclick="toggleCheck(\''+id+'\',\''+boxId+'\')"]');
+  var box=document.getElementById(boxId);
+  if(checked2[id]){
+    row.classList.add('checked-yes');
+    box.textContent='✓';
+  } else {
+    row.classList.remove('checked-yes');
+    box.textContent='';
+  }
+}
+
+function goPhase(n){
+  document.querySelectorAll('.phase-panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('phase'+n).classList.add('active');
+  for(var i=1;i<=4;i++){
+    var d=document.getElementById('dot'+i);
+    if(!d)continue;
+    d.className='pi-dot';
+    if(i<n)d.classList.add('done');
+    else if(i===n)d.classList.add('active');
+  }
+  document.getElementById('phase-label').textContent='PHASE '+n+' / 4';
+  if(n===3){buildScore();markChoices();openAllAns();}
+  window.scrollTo(0,0);
+}
+
+function buildScore(){
+  var score=0;
+  // Q1-3
+  ['q1','q2','q3'].forEach(function(q){
+    if(selected1[q]===answers1[q])score++;
+  });
+  // Q2
+  var userChecked=Object.keys(checked2).filter(function(k){return checked2[k];}).sort();
+  var correctSorted=correct2.slice().sort();
+  if(JSON.stringify(userChecked)===JSON.stringify(correctSorted))score++;
+  var sd=document.getElementById('score-display');
+  if(sd){
+    sd.textContent=score+' / 4';
+    sd.style.color=score===4?'var(--teal)':score>=2?'var(--amber)':'var(--red)';
+  }
+}
+
+function markChoices(){
+  ['q1','q2','q3'].forEach(function(qid){
+    var btns=document.querySelectorAll('#'+qid+' .choice-btn');
+    var correct=answers1[qid];
+    var my=selected1[qid];
+    var labels=['a','b','c','d'];
+    btns.forEach(function(b,i){
+      b.classList.remove('selected','correct-mark','wrong-mark');
+      if(labels[i]===correct)b.classList.add('correct-mark');
+      if(my&&labels[i]===my&&my!==correct)b.classList.add('wrong-mark');
+    });
+  });
+  // Q2 checks
+  var rows=document.querySelectorAll('#q2checks .check-row');
+  var ids=['ca','cb','cc','cd','ce','cf','cg','ch'];
+  rows.forEach(function(row,i){
+    var id=ids[i];
+    row.classList.remove('correct-mark','wrong-mark');
+    var isCorrect=correct2.indexOf('c'+ids[i].slice(1))>=0;
+    var isChecked=checked2[id];
+    if(isCorrect&&isChecked)row.classList.add('correct-mark');
+    else if(!isCorrect&&isChecked)row.classList.add('wrong-mark');
+    else if(isCorrect&&!isChecked)row.classList.add('correct-mark');
+  });
+}
+
+function openAllAns(){
+  ['a1','a2','a3','aq2'].forEach(function(id){
+    var body=document.getElementById(id+'-body');
+    var arrow=document.getElementById(id+'-arrow');
+    if(body)body.classList.add('open');
+    if(arrow)arrow.style.transform='rotate(180deg)';
+  });
+  // reveal blanks
+  var bmap={bk1:'along with',bk2:'make use of',bk3:'or'};
+  Object.keys(bmap).forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){el.classList.add('revealed');el.textContent=bmap[id];}
+  });
+}
+
+function toggleAns(id){
+  var body=document.getElementById(id+'-body');
+  var arrow=document.getElementById(id+'-arrow');
+  if(!body)return;
+  var isOpen=body.classList.contains('open');
+  body.classList.toggle('open',!isOpen);
+  if(arrow)arrow.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
+}
+
+function toggleDetail(id){
+  var el=document.getElementById(id);
+  if(el)el.classList.toggle('open');
+}
+</script>
+</body>
+</html>
