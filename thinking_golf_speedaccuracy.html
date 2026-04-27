@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>論理読解 実践授業｜ゴルフと無意識｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface2:#f0ede6;
+  --border:#ddd9d0;--text:#1a1814;--text2:#6b6760;--text3:#9b9892;
+  --accent:#2c5f8a;--accent-light:#e8f1f8;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --amber:#854f0b;--amber-light:#faeeda;
+  --purple:#534ab7;--purple-light:#eeedfe;
+  --green:#3b6d11;--green-light:#eaf3de;
+  --red:#a32d2d;--red-light:#fcebeb;
+  --coral:#993c1d;--coral-light:#faece7;
+  --pink:#993556;--pink-light:#fbeaf0;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;min-height:100vh;}
+.page-header{background:var(--surface);border-bottom:0.5px solid var(--border);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.brand-logo{width:36px;height:36px;border-radius:9px;background:var(--accent);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-name{font-size:13px;font-weight:700;}
+.brand-tagline{font-size:10px;color:var(--text3);margin-top:1px;}
+.phase-indicator{display:flex;gap:6px;align-items:center;}
+.pi-dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:all 0.3s;}
+.pi-dot.active{background:var(--accent);transform:scale(1.3);}
+.pi-dot.done{background:var(--teal);}
+.pi-label{font-size:12px;font-weight:700;color:var(--text2);margin-left:4px;}
+.container{max-width:940px;margin:0 auto;padding:24px 16px 80px;}
+.phase-panel{display:none;}
+.phase-panel.active{display:block;animation:fadeIn 0.3s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.phase-badge{display:inline-flex;align-items:center;gap:10px;margin-bottom:20px;}
+.pb-num{width:44px;height:44px;border-radius:12px;color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pb-text{font-size:20px;font-weight:700;color:var(--text);line-height:1.2;}
+.pb-sub{font-size:12px;color:var(--text2);margin-top:2px;}
+.card{background:var(--surface);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:22px;margin-bottom:14px;}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;}
+.divider{height:0.5px;background:var(--border);margin:18px 0;}
+
+/* PASSAGE */
+.passage-text{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.05;color:var(--text);}
+.passage-text p{margin-bottom:0.9em;}
+.hl-key{background:#fff3cd;border-radius:2px;padding:0 2px;}
+.hl-ans{background:var(--teal-light);border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-signal{background:var(--coral-light);border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-trap{background:var(--red-light);border-radius:2px;padding:0 2px;}
+.ul1{border-bottom:2px solid var(--coral);padding-bottom:1px;}
+.ul2{border-bottom:2px solid var(--purple);padding-bottom:1px;}
+.ul3{border-bottom:2px solid var(--teal);padding-bottom:1px;}
+.ul4{border-bottom:2px solid var(--accent);padding-bottom:1px;}
+.ul5{border-bottom:2px solid var(--amber);padding-bottom:1px;}
+.ul6{border-bottom:2px solid var(--green);padding-bottom:1px;}
+
+/* VISUAL BOXES */
+.exp-box{border-radius:var(--radius-lg);overflow:hidden;border:0.5px solid var(--border);margin:12px 0;}
+.exp-hdr{padding:10px 14px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.exp-body{padding:12px 14px;font-size:13px;line-height:1.8;}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;}
+@media(max-width:480px){.result-grid{grid-template-columns:1fr;}}
+.res-cell{border-radius:var(--radius);padding:9px 12px;font-size:12px;line-height:1.7;border:0.5px solid var(--border);}
+
+/* TABLE */
+.perf-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+.perf-table th{padding:8px 10px;border:0.5px solid var(--border);background:var(--surface2);font-size:11px;font-weight:700;color:var(--text2);text-align:center;}
+.perf-table td{padding:8px 10px;border:0.5px solid var(--border);text-align:center;font-weight:700;}
+.td-up{background:var(--teal-light);color:var(--teal);}
+.td-down{background:var(--red-light);color:var(--red);}
+
+/* QUESTION */
+.q-block{background:var(--surface2);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:16px 18px;margin-bottom:12px;}
+.q-num-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;flex-shrink:0;vertical-align:middle;margin-right:8px;}
+.q-stem{font-family:'Source Serif 4',serif;font-size:14px;font-weight:600;color:var(--text);display:inline;vertical-align:middle;}
+.choices{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
+.choice-btn{display:flex;align-items:flex-start;gap:10px;padding:9px 12px;background:var(--surface);border-radius:var(--radius);border:0.5px solid var(--border);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.65;transition:all 0.15s;text-align:left;width:100%;}
+.choice-btn:hover{border-color:var(--accent);background:var(--accent-light);}
+.choice-btn.selected{border-color:var(--accent);background:var(--accent-light);}
+.choice-btn.correct-mark{background:var(--teal-light);border-color:var(--teal);font-weight:700;color:var(--teal);}
+.choice-btn.wrong-mark{background:var(--red-light);border-color:var(--red-light);color:var(--red);opacity:0.65;}
+.cn{font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0;margin-top:2px;font-family:'Noto Sans JP',sans-serif;min-width:18px;}
+
+/* TABLE Q6 */
+.q6-table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;}
+.q6-table th{padding:8px 10px;border:0.5px solid var(--border);background:var(--surface2);font-size:12px;font-weight:700;text-align:center;}
+.q6-table td{padding:10px 10px;border:0.5px solid var(--border);text-align:center;}
+.q6-select{padding:5px 8px;font-size:13px;font-family:'Noto Sans JP',sans-serif;border:0.5px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);cursor:pointer;}
+.q6-select.correct-sel{background:var(--teal-light);border-color:var(--teal);color:var(--teal);font-weight:700;}
+.q6-select.wrong-sel{background:var(--red-light);border-color:var(--red);color:var(--red);}
+
+.reason-input{width:100%;padding:10px 13px;font-size:13px;font-family:'Noto Sans JP',sans-serif;background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);color:var(--text);resize:none;transition:border 0.2s;line-height:1.6;margin-top:8px;}
+.reason-input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(44,95,138,0.1);}
+.reason-label{font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-top:10px;margin-bottom:3px;display:block;}
+
+/* ANSWER BLOCKS */
+.ans-block{border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;border:0.5px solid var(--border);}
+.ans-hdr{padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;background:var(--surface);}
+.ans-hdr:hover{background:var(--surface2);}
+.ans-arrow{font-size:11px;transition:transform 0.2s;margin-left:auto;color:var(--text3);}
+.ans-body{display:none;padding:16px;border-top:0.5px solid var(--border);}
+.ans-body.open{display:block;}
+.ca-grid{display:flex;flex-direction:column;gap:7px;margin-top:10px;}
+.ca-row{border-radius:var(--radius);overflow:hidden;border:0.5px solid var(--border);}
+.ca-hdr{padding:8px 12px;display:flex;align-items:flex-start;gap:8px;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;cursor:pointer;}
+.ca-hdr.ca-correct{background:var(--teal-light);}
+.ca-hdr.ca-wrong{background:var(--red-light);}
+.ca-detail{padding:9px 12px 10px 32px;font-size:12px;line-height:1.8;background:var(--surface);display:none;}
+.ca-detail.open{display:block;}
+.ca-n{font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;font-family:'Noto Sans JP',sans-serif;}
+.ca-correct .ca-n{color:var(--teal);}
+.ca-wrong .ca-n{color:var(--red);}
+.tag-ok{display:inline-block;background:var(--teal-light);color:var(--teal);border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;font-family:'Noto Sans JP',sans-serif;}
+.tag-ng{display:inline-block;background:var(--red-light);color:var(--red);border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;font-family:'Noto Sans JP',sans-serif;}
+.tag-trap{display:inline-block;background:var(--amber-light);color:var(--amber);border-radius:3px;padding:1px 6px;font-size:10px;font-weight:700;margin-left:5px;font-family:'Noto Sans JP',sans-serif;}
+.maker-box{border-radius:var(--radius);padding:11px 14px;background:var(--purple-light);border:0.5px solid #afa9ec;margin-top:10px;font-size:13px;line-height:1.75;}
+.maker-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:4px;}
+.det-btn{font-size:11px;color:var(--accent);cursor:pointer;font-weight:700;margin-left:6px;text-decoration:underline;font-family:'Noto Sans JP',sans-serif;}
+
+/* CALLOUT */
+.callout{border-radius:var(--radius);padding:12px 15px;margin:10px 0;font-size:14px;line-height:1.75;}
+.callout-yellow{background:#fffbea;border-left:3px solid #e6c200;}
+.callout-blue{background:var(--accent-light);border-left:3px solid var(--accent);}
+.callout-teal{background:var(--teal-light);border-left:3px solid var(--teal);}
+.callout-purple{background:var(--purple-light);border-left:3px solid var(--purple);}
+.callout-coral{background:var(--coral-light);border-left:3px solid var(--coral);}
+.cl-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;}
+.callout-yellow .cl-label{color:#7a6600;}
+.callout-blue .cl-label{color:var(--accent);}
+.callout-teal .cl-label{color:var(--teal);}
+.callout-purple .cl-label{color:var(--purple);}
+.callout-coral .cl-label{color:var(--coral);}
+
+/* SCORE */
+.score-card{background:var(--surface2);border-radius:var(--radius-lg);padding:15px 18px;border:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.score-num{font-size:28px;font-weight:700;color:var(--accent);}
+
+/* TRANS */
+.trans-line{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:0.5px solid var(--border);font-size:13px;line-height:1.75;}
+.trans-line:last-child{border-bottom:none;}
+.trans-en{font-family:'Source Serif 4',serif;flex:1;}
+.trans-ja{flex:1;color:var(--text2);}
+.trans-div{width:1px;background:var(--border);flex-shrink:0;align-self:stretch;}
+
+/* THEME BANNER */
+.theme-banner{background:linear-gradient(135deg,#1a3a5c 0%,#2c5f8a 100%);border-radius:var(--radius-lg);padding:18px 22px;margin-bottom:16px;color:#fff;}
+.tb-month{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;opacity:0.6;margin-bottom:5px;}
+.tb-title{font-size:16px;font-weight:700;margin-bottom:10px;}
+.tb-rules{display:flex;flex-direction:column;gap:6px;}
+.tb-rule{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.65;}
+.tb-rn{width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+
+/* BUTTONS */
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:12px 24px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s;}
+.btn-primary:hover{background:#1e4a70;}.btn-primary:active{transform:scale(0.98);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--surface);color:var(--text);border:0.5px solid var(--border);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--surface2);}
+.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:18px;border-top:0.5px solid var(--border);flex-wrap:wrap;gap:10px;}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">説明文読解 — ゴルフと「速度・正確性のトレードオフ」完全解析</div>
+    </div>
+  </div>
+  <div class="phase-indicator">
+    <div class="pi-dot active" id="dot1"></div>
+    <div class="pi-dot" id="dot2"></div>
+    <div class="pi-dot" id="dot3"></div>
+    <div class="pi-dot" id="dot4"></div>
+    <div class="pi-label" id="phase-label">PHASE 1 / 4</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ══════════════════════
+     PHASE 1 — 読むフェーズ
+══════════════════════ -->
+<div class="phase-panel active" id="phase1">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:var(--accent);">1</div>
+    <div>
+      <div class="pb-text">読むフェーズ</div>
+      <div class="pb-sub">実験の構造と「逆説」を頭の中で動かしながら読む</div>
+    </div>
+  </div>
+
+  <div class="theme-banner">
+    <div class="tb-month">April Theme — 今月の鉄則</div>
+    <div class="tb-title">「なんとなくわかった」が一番危険 — 実験結果を頭で整理できているか</div>
+    <div class="tb-rules">
+      <div class="tb-rule"><div class="tb-rn">①</div><div>この文章は「初心者 vs プロ」の結果が逆になるという逆説が核心。実験1と実験2の結果を4マスの表に整理できているかが全ての問題の鍵になる。</div></div>
+      <div class="tb-rule"><div class="tb-rn">②</div><div>各下線部が「本文のどこに根拠があるか」を指差せること。「それっぽい」で選ぶのと「本文のここに書いてある」は全く違う。</div></div>
+      <div class="tb-rule"><div class="tb-rn">③</div><div>作問者が「どんな読み間違いをする人を引っ掛けているか」まで言語化する。特に問1・問4・問7は「丁寧に読んでいれば避けられる罠」がある。</div></div>
+    </div>
+  </div>
+
+  <!-- 文章の核心を先に整理 -->
+  <div class="card">
+    <div class="section-label">解く前に「逆説の構造」を頭に入れる — これが全問の土台</div>
+
+    <div class="callout callout-yellow" style="margin-bottom:12px;">
+      <div class="cl-label">このフェーズの目的</div>
+      この文章の核心は<strong>「プロと初心者では、同じ条件に対して結果が逆になる」</strong>という逆説。この構造を先に頭に入れてから本文を読む。そうしないと実験1と実験2の結果が混乱する。
+    </div>
+
+    <!-- 逆説の視覚化 -->
+    <div style="font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;">実験結果の4マス（これが文章全体の骨格）</div>
+    <div style="overflow-x:auto;margin-bottom:14px;">
+      <table class="perf-table">
+        <tr>
+          <th style="width:180px;">条件</th>
+          <th>初心者</th>
+          <th>プロのゴルファー</th>
+        </tr>
+        <tr>
+          <td style="font-weight:700;font-size:12px;padding:8px 10px;background:var(--surface2);">実験1<br>時間制約あり（3秒）</td>
+          <td class="td-down">↓ パフォーマンスが下がる</td>
+          <td class="td-up">↑ パフォーマンスが上がる</td>
+        </tr>
+        <tr>
+          <td style="font-weight:700;font-size:12px;padding:8px 10px;background:var(--surface2);">実験2<br>無関係タスクあり</td>
+          <td class="td-down">↓ パフォーマンスが下がる</td>
+          <td class="td-up">↑ パフォーマンスが上がる</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="callout callout-coral" style="margin-bottom:12px;">
+      <div class="cl-label">なぜこの逆説が起きるのか（第3段落の核心）</div>
+      <strong>プロの運動スキルは「無意識」で実行される。</strong><br>
+      → 意識を向けると逆に邪魔になる。<br>
+      → 時間制約や無関係タスクで意識が他に向く → 無意識がフル稼働できる → 成績が上がる。<br>
+      → 初心者はまだ「意識で動作を制御」しているので、時間がなくなったり気が散ると成績が下がる。
+    </div>
+
+    <!-- 実験の構造図 -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px;">
+      <div class="exp-box">
+        <div class="exp-hdr" style="background:var(--accent-light);color:var(--accent);">実験1 — 時間制約</div>
+        <div class="exp-body">
+          条件A：<strong>3秒以内</strong>にパットを打つ<br>
+          条件B：<strong>時間制限なし</strong><br>
+          <div class="result-grid" style="margin-top:8px;">
+            <div class="res-cell" style="background:var(--red-light);">初心者<br>時間制約あり → <strong style="color:var(--red);">成績悪化</strong></div>
+            <div class="res-cell" style="background:var(--teal-light);">プロ<br>時間制約あり → <strong style="color:var(--teal);">的中率向上</strong><br><span style="font-size:11px;">（驚くべき逆説）</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="exp-box">
+        <div class="exp-hdr" style="background:var(--purple-light);color:var(--purple);">実験2 — 無関係タスク</div>
+        <div class="exp-body">
+          条件A：自分のスイングに<strong>注意を向ける</strong><br>
+          条件B：<strong>録音されたトーンを数える</strong><br>
+          <div class="result-grid" style="margin-top:8px;">
+            <div class="res-cell" style="background:var(--accent-light);">初心者<br>スイング注意 → <strong style="color:var(--accent);">成績向上</strong><br>（予想通り）</div>
+            <div class="res-cell" style="background:var(--teal-light);">プロ<br>スイング注意 → <strong style="color:var(--red);">成績低下</strong><br>気が散ると → <strong style="color:var(--teal);">成績向上</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-blue">
+      <div class="cl-label">speed-accuracy trade-off（速度・正確性のトレードオフ）とは</div>
+      「タスクを速くやるほど不正確になる」という一般的な法則。<br>
+      → 通常：速さ ↑ = 正確さ ↓（トレードオフ）<br>
+      → この法則が「初心者には当てはまるが、プロには逆のことが起きる」というのがこの実験の衝撃的な結果。
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="card">
+    <div class="section-label">本文（下線部の番号付き）</div>
+    <div class="passage-text">
+      <p><strong>[1]</strong> A golfer has to go through <span class="ul1">⑴a long list of steps when putting</span>: judge the line of the ball, the grain of the turf, and the distance and angle to the hole; position the ball; align shoulders, hips, and feet to the left of the hole; prepare for backswing. What advice should a coach give to a golfer? How about "Take your time, concentrate on what you are doing, and don't get distracted by anything around you." That seems like clever consulting to some, and patently obvious to others; in any case, it is backed by research on <span class="ul2">⑵the so-called <em>speed-accuracy trade-off</em></span>; the faster a task is performed, the less accurate it becomes. And in fact, when beginners are advised to take their time, concentrate on their movements, and focus their attention, they perform better. <span class="ul3">⑶Should we give expert golfers the same advice?</span></p>
+
+      <p><strong>[2]</strong> In an experiment, beginners and expert golfers were studied under two conditions: they had either only up to three seconds for each putt or all the time they wanted. Under <span class="ul4">⑷time pressure</span>, as mentioned, beginners performed worse and had fewer target hits. <span class="hl-signal">Yet surprisingly</span>, experts hit the target more often when they had less time than when they had no time limit. In a second experiment, players were either instructed to pay attention to their swing or distracted by <span class="ul5">⑸an unrelated, second task</span> (counting tape-recorded tones). When they were asked to pay attention to their swing, as one might expect, beginners did better than when they were distracted. <span class="hl-signal">Yet with experts, it was again the opposite.</span> When experts concentrated on their swings, their performance decreased; when experts' attention was distracted, their performance actually improved.</p>
+
+      <p><strong>[3]</strong> How can we account for this apparent paradox? Expert motor skills are executed by unconscious parts of our brains, and conscious thinking about the sequence of behaviors interferes with performance. Setting a time limit is one method to make thinking about the swing difficult; providing a distracting task is <span class="ul6">⑹another</span>. Since our conscious attention can focus on only one thing at a time, it is fixed on the distracting task and cannot interfere with the swing.</p>
+    </div>
+    <div style="font-size:11px;color:var(--text3);margin-top:8px;line-height:1.7;">
+      <span style="border-bottom:2px solid var(--coral);padding:0 3px;">⑴</span>問1の根拠　
+      <span style="border-bottom:2px solid var(--purple);padding:0 3px;">⑵</span>問2の核心　
+      <span style="border-bottom:2px solid var(--teal);padding:0 3px;">⑶</span>問3（Yes/No/Not given）　
+      <span style="border-bottom:2px solid var(--accent);padding:0 3px;">⑷</span>問4の核心　
+      <span style="border-bottom:2px solid var(--amber);padding:0 3px;">⑸</span>問5の核心　
+      <span style="border-bottom:2px solid var(--green);padding:0 3px;">⑹</span>問8の核心
+    </div>
+  </div>
+
+  <!-- 読み解きチェック -->
+  <div class="card">
+    <div class="section-label">読み解きチェック — 解く前に答えられるか</div>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:13px;">
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>問1：</strong>下線部⑴「パッティングで行う多くの手順」— 本文に列挙されていない手順はどれか？<br>
+        <span style="color:var(--text2);">列挙：ボールの線を読む・芝の密度・ホールまでの距離と角度・ボールを置く・肩腰足を整える・バックスイングの準備。「コーチにアドバイスを求める」は列挙に含まれない。</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>問2：</strong>speed-accuracy trade-off とは何か？<br>
+        <span style="color:var(--text2);">「タスクを速く行うほど不正確になる」= タスクにかける時間が短いほど不正確になる → 選択肢3</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>問3：</strong>「プロにも同じアドバイスを与えるべきか？」— 本文はYes/No/どちらでもないか？<br>
+        <span style="color:var(--text2);">⑶は問いかけ文。直後に実験結果が続きプロには逆の結果が出ている。しかし本文は直接「Yes/No」と答えていない → No（実験の答えがNoを示唆）</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <strong>問4：</strong>time pressure（時間制約）の実験条件は具体的に何か？<br>
+        <span style="color:var(--text2);">「each putt に3秒以内」vs「制限なし」。3秒はそれぞれのパットに与えられる時間 = 選択肢4「それぞれのパットを打つまでの時間が3秒まで」</span>
+      </div>
+      <div style="padding:9px 14px;background:var(--teal-light);border-radius:var(--radius);border:0.5px solid #9fe1cb;">
+        <strong>問6・問7の前提：</strong>4マス表と逆説の理由を言えるか？<br>
+        <span style="color:var(--text2);">初心者：時間制約→悪化 / 無関係タスク→悪化。プロ：時間制約→向上 / 無関係タスク→向上。理由：プロのスキルは無意識で動く。意識が他に向くと無意識がフル稼働できる。</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <span style="font-size:12px;color:var(--text3);">実験の構造を頭に入れたら次へ</span>
+    <button class="btn-primary" onclick="goPhase(2)">読み完了 → PHASE 2 で問題を解く</button>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PHASE 2 — 解くフェーズ
+══════════════════════ -->
+<div class="phase-panel" id="phase2">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:var(--teal);">2</div>
+    <div>
+      <div class="pb-text">解くフェーズ</div>
+      <div class="pb-sub">選んだ根拠 + 他の選択肢が違う具体的な理由を書く</div>
+    </div>
+  </div>
+
+  <div class="callout callout-yellow" style="margin-bottom:16px;">
+    <div class="cl-label">解くフェーズのルール</div>
+    各問で選んだ後、<strong>「本文のどの文・どの箇所が根拠か」「他の選択肢が×になる具体的な理由」</strong>を書く。「なんとなく合う」は本番では通用しない。実験の4マス表を参照しながら解くこと。
+  </div>
+
+  <!-- 問1 -->
+  <div class="q-block">
+    <span class="q-num-badge">問1</span>
+    <span class="q-stem">下線部⑴の内容として本文に書かれていないものを選びなさい</span>
+    <div class="callout callout-blue" style="margin-top:8px;font-size:13px;">
+      <div class="cl-label">攻略のポイント</div>
+      NOT問題。本文の列挙をひとつずつ照合する。「それっぽい内容」ではなく「本文に書いてあるかどうか」だけを基準にする。
+    </div>
+    <div class="choices" id="qm1">
+      <button class="choice-btn" onclick="sel('qm1',1)"><span class="cn">1</span>コーチにアドバイスを求める。</button>
+      <button class="choice-btn" onclick="sel('qm1',2)"><span class="cn">2</span>ゴルフボールが入るホールまでの角度や距離を確認する。</button>
+      <button class="choice-btn" onclick="sel('qm1',3)"><span class="cn">3</span>バックスイングの準備をする。</button>
+      <button class="choice-btn" onclick="sel('qm1',4)"><span class="cn">4</span>ボールを置く。</button>
+    </div>
+    <span class="reason-label">本文の列挙と照合した結果を書く</span>
+    <textarea class="reason-input" id="rm1" rows="2" placeholder="本文には judge the line / grain of turf / distance and angle / position the ball / align... / prepare for backswing が列挙されている..."></textarea>
+  </div>
+
+  <!-- 問2 -->
+  <div class="q-block">
+    <span class="q-num-badge">問2</span>
+    <span class="q-stem">下線部⑵の内容として最も適当なものを選びなさい</span>
+    <div class="callout callout-blue" style="margin-top:8px;font-size:13px;">
+      <div class="cl-label">攻略のポイント</div>
+      "the faster a task is performed, the less accurate it becomes" を日本語に正確に言い換えているものはどれか。「速く行う＝時間が短い」「不正確＝正確ではなくなる」の言い換えに注目。
+    </div>
+    <div class="choices" id="qm2">
+      <button class="choice-btn" onclick="sel('qm2',1)"><span class="cn">1</span>タスクが簡単であればあるほど，成功する確率が高くなること</button>
+      <button class="choice-btn" onclick="sel('qm2',2)"><span class="cn">2</span>タスクにかける時間が長ければ長いほど，正確ではなくなること</button>
+      <button class="choice-btn" onclick="sel('qm2',3)"><span class="cn">3</span>タスクにかける時間が短ければ短いほど，正確ではなくなること</button>
+      <button class="choice-btn" onclick="sel('qm2',4)"><span class="cn">4</span>タスクの内容が重要であればあるほど，失敗する確率が高くなること</button>
+    </div>
+    <span class="reason-label">英文の構造と選択肢の対応を書く</span>
+    <textarea class="reason-input" id="rm2" rows="2" placeholder="the faster = 短い時間 / the less accurate = 正確ではなくなる。どの選択肢がこれに対応するか..."></textarea>
+  </div>
+
+  <!-- 問3 -->
+  <div class="q-block">
+    <span class="q-num-badge">問3</span>
+    <span class="q-stem">下線部⑶に対する筆者の答えとして想定されるものを選びなさい</span>
+    <div class="choices" id="qm3">
+      <button class="choice-btn" onclick="sel('qm3',1)"><span class="cn">1</span>Yes</button>
+      <button class="choice-btn" onclick="sel('qm3',2)"><span class="cn">2</span>No</button>
+      <button class="choice-btn" onclick="sel('qm3',3)"><span class="cn">3</span>Not given in this passage</button>
+    </div>
+    <span class="reason-label">⑶は問いかけ文。その後の本文がどう展開しているかを確認する</span>
+    <textarea class="reason-input" id="rm3" rows="2" placeholder="⑶の直後から実験結果が展開される。プロには逆の結果が出ている = 同じアドバイスは..."></textarea>
+  </div>
+
+  <!-- 問4 -->
+  <div class="q-block">
+    <span class="q-num-badge">問4</span>
+    <span class="q-stem">下線部⑷の内容として最も適当なものを選びなさい</span>
+    <div class="callout callout-blue" style="margin-top:8px;font-size:13px;">
+      <div class="cl-label">攻略のポイント — 数字を正確に読む</div>
+      "only up to three seconds for each putt" を正確に日本語に変換する。「each putt（それぞれのパット）」「up to three seconds（3秒まで）」「only（わずか・しか）」に注目。
+    </div>
+    <div class="choices" id="qm4">
+      <button class="choice-btn" onclick="sel('qm4',1)"><span class="cn">1</span>1回目と2回目のパットの間の時間が3秒しか与えられない。</button>
+      <button class="choice-btn" onclick="sel('qm4',2)"><span class="cn">2</span>3秒以内にパットを2回打たなければならない。</button>
+      <button class="choice-btn" onclick="sel('qm4',3)"><span class="cn">3</span>それぞれのパットを打つまで，好きなだけ時間をかけることができる。</button>
+      <button class="choice-btn" onclick="sel('qm4',4)"><span class="cn">4</span>それぞれのパットを打つまでの時間が3秒までしか与えられない。</button>
+    </div>
+    <span class="reason-label">each putt / up to three seconds の意味を本文と照合する</span>
+    <textarea class="reason-input" id="rm4" rows="2" placeholder="each putt = それぞれのパット。up to three seconds = 最大3秒。つまり..."></textarea>
+  </div>
+
+  <!-- 問5 -->
+  <div class="q-block">
+    <span class="q-num-badge">問5</span>
+    <span class="q-stem">下線部⑸の内容として最も適当なものを選びなさい</span>
+    <div class="callout callout-blue" style="margin-top:8px;font-size:13px;">
+      <div class="cl-label">攻略のポイント</div>
+      下線部⑸の直後に括弧で具体的な説明がある：(counting tape-recorded tones)。これが答えの直接の根拠。
+    </div>
+    <div class="choices" id="qm5">
+      <button class="choice-btn" onclick="sel('qm5',1)"><span class="cn">1</span>ハミングする。</button>
+      <button class="choice-btn" onclick="sel('qm5',2)"><span class="cn">2</span>録音された計算問題を解く。</button>
+      <button class="choice-btn" onclick="sel('qm5',3)"><span class="cn">3</span>録音されたコーチのアドバイスを聞く。</button>
+      <button class="choice-btn" onclick="sel('qm5',4)"><span class="cn">4</span>録音された信号音の数を数える。</button>
+    </div>
+    <span class="reason-label">括弧内の説明 "counting tape-recorded tones" を正確に訳す</span>
+    <textarea class="reason-input" id="rm5" rows="2" placeholder="counting = 数える / tape-recorded = 録音された / tones = 音・信号音。つまり..."></textarea>
+  </div>
+
+  <!-- 問6 -->
+  <div class="q-block">
+    <span class="q-num-badge">問6</span>
+    <span class="q-stem">空欄(A)〜(D)に入る最も適当なものを選びなさい（同じ番号を2度使用してもよい）</span>
+    <div style="font-size:12px;font-weight:700;color:var(--text2);margin-top:8px;margin-bottom:6px;">1.パフォーマンスが上がる　2.パフォーマンスが下がる　3.パフォーマンスは変わらない</div>
+    <div style="overflow-x:auto;">
+      <table class="q6-table">
+        <tr>
+          <th style="width:200px;text-align:left;padding:8px 12px;"></th>
+          <th>初心者</th>
+          <th>プロのゴルファー</th>
+        </tr>
+        <tr>
+          <td style="font-size:12px;padding:8px 12px;background:var(--surface2);font-weight:700;">実験1<br>条件：〈時間的制約あり〉</td>
+          <td style="text-align:center;padding:8px;">
+            <select class="q6-select" id="selA">
+              <option value="">選択</option>
+              <option value="1">1. 上がる</option>
+              <option value="2">2. 下がる</option>
+              <option value="3">3. 変わらない</option>
+            </select>
+          </td>
+          <td style="text-align:center;padding:8px;">
+            <select class="q6-select" id="selB">
+              <option value="">選択</option>
+              <option value="1">1. 上がる</option>
+              <option value="2">2. 下がる</option>
+              <option value="3">3. 変わらない</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size:12px;padding:8px 12px;background:var(--surface2);font-weight:700;">実験2<br>条件：〈ゴルフと無関係なタスクあり〉</td>
+          <td style="text-align:center;padding:8px;">
+            <select class="q6-select" id="selC">
+              <option value="">選択</option>
+              <option value="1">1. 上がる</option>
+              <option value="2">2. 下がる</option>
+              <option value="3">3. 変わらない</option>
+            </select>
+          </td>
+          <td style="text-align:center;padding:8px;">
+            <select class="q6-select" id="selD">
+              <option value="">選択</option>
+              <option value="1">1. 上がる</option>
+              <option value="2">2. 下がる</option>
+              <option value="3">3. 変わらない</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <span class="reason-label">PHASE 1の4マス表を参照しながら根拠を書く</span>
+    <textarea class="reason-input" id="rm6" rows="2" placeholder="第2段落の実験結果を直接参照。初心者の結果は... プロの結果は..."></textarea>
+  </div>
+
+  <!-- 問7 -->
+  <div class="q-block">
+    <span class="q-num-badge">問7</span>
+    <span class="q-stem">実験1と実験2で問6のような結果が得られた理由として当てはまらないものを選びなさい</span>
+    <div class="callout callout-blue" style="margin-top:8px;font-size:13px;">
+      <div class="cl-label">攻略のポイント</div>
+      NOT問題。第3段落（How can we account for...）が根拠段落。「プロの運動スキルは無意識で実行される」「意識は一度に一つのことしかできない」が理由の核心。
+    </div>
+    <div class="choices" id="qm7">
+      <button class="choice-btn" onclick="sel('qm7',1)"><span class="cn">1</span>ゴルフと無関係なタスクを課されることで，スイングに関わる一つ一つの動きを考えなくなるから</button>
+      <button class="choice-btn" onclick="sel('qm7',2)"><span class="cn">2</span>時間的制約を課されることで，スイングに関わる一つ一つの動きを意識しなくなるから</button>
+      <button class="choice-btn" onclick="sel('qm7',3)"><span class="cn">3</span>（問題文に記載あり）</button>
+    </div>
+    <span class="reason-label">第3段落の説明と各選択肢を照合する</span>
+    <textarea class="reason-input" id="rm7" rows="2" placeholder="第3段落：プロのスキルは無意識で実行される。意識が他に向くと... 当てはまらない理由は..."></textarea>
+  </div>
+
+  <div style="text-align:center;margin-top:16px;">
+    <button class="btn-primary" onclick="goPhase(3)">解答完了 → PHASE 3 で答え合わせ</button>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PHASE 3 — 答え合わせ
+══════════════════════ -->
+<div class="phase-panel" id="phase3">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:var(--purple);">3</div>
+    <div>
+      <div class="pb-text">答え合わせ — 全選択肢の解剖</div>
+      <div class="pb-sub">正解根拠 + 罠の構造 + 作問者の意図まで</div>
+    </div>
+  </div>
+
+  <div class="score-card">
+    <div>
+      <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">得点</div>
+      <div class="score-num" id="score-display">— / 7</div>
+    </div>
+    <div style="font-size:13px;color:var(--text2);text-align:right;line-height:1.7;">問6は(A)〜(D)全て正解で1点<br><strong style="color:var(--text);">全選択肢の○×根拠を言えるかが本番の力</strong></div>
+  </div>
+
+  <!-- 問1解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am1')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--coral);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問1</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問1 — 書かれていない内容　正解：1</div><div style="font-size:11px;color:var(--text2);">本文の列挙を全て照合する</div></div>
+      <div class="ans-arrow" id="am1-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am1-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">本文の列挙（全6項目）</div>
+        ① judge the line of the ball → ボールの線を読む<br>
+        ② the grain of the turf → 芝の密度<br>
+        ③ the distance and angle to the hole → ホールまでの距離と角度（=選択肢2）<br>
+        ④ position the ball → ボールを置く（=選択肢4）<br>
+        ⑤ align shoulders, hips, and feet to the left of the hole → 体を整える<br>
+        ⑥ prepare for backswing → バックスイングの準備（=選択肢3）<br>
+        → <strong>「コーチにアドバイスを求める」は一切記載なし</strong>
+      </div>
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d1_1')"><span class="ca-n">1</span><span>コーチにアドバイスを求める。</span><span class="tag-ok">NOT（正解）</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d1_1"><strong>なぜ正解（書かれていない）：</strong>本文にはコーチへのアドバイスを求める行動の記載なし。コーチは「アドバイスを与える側」として登場しているが、ゴルファーが「コーチに求める」とは書かれていない。<br><strong>作問者の意図：</strong>文章にコーチという単語が出てくるので「なんとなく関連している」と思わせる罠。「求める」か「与える」かの主体の違いを見落とした人が選ばない。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d1_2')"><span class="ca-n">2</span><span>ゴルフボールが入るホールまでの角度や距離を確認する。</span><span class="tag-ng">本文にある（×）</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d1_2"><strong>"the distance and angle to the hole"</strong> と直接対応。本文にある内容なので選ばない。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d1_3')"><span class="ca-n">3</span><span>バックスイングの準備をする。</span><span class="tag-ng">本文にある（×）</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d1_3"><strong>"prepare for backswing"</strong> と直接対応。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d1_4')"><span class="ca-n">4</span><span>ボールを置く。</span><span class="tag-ng">本文にある（×）</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d1_4"><strong>"position the ball"</strong> と直接対応。</div>
+        </div>
+      </div>
+      <div class="maker-box"><div class="maker-label">作問者の意図まとめ</div>列挙を全部確認せず「ゴルフっぽい内容」で直感的に選ぶ人が1を選ばない（見落とす）ことを狙っている。「コーチ」という単語が文章に登場するため1は「ありそう」に見える。</div>
+    </div>
+  </div>
+
+  <!-- 問2解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am2')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--purple);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問2</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問2 — speed-accuracy trade-off の説明　正解：3</div><div style="font-size:11px;color:var(--text2);">"the faster... the less accurate..." の正確な言い換え</div></div>
+      <div class="ans-arrow" id="am2-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am2-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">英文の分解</div>
+        "the <strong>faster</strong> a task is performed（速く行うほど = 時間が短いほど）, the <strong>less accurate</strong> it becomes（不正確になる）"<br>
+        → 時間が短い ↑ → 正確さ ↓ = 「時間が短いほど不正確になる」
+      </div>
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d2_1')"><span class="ca-n">1</span><span>タスクが簡単であればあるほど，成功する確率が高くなること</span><span class="tag-ng">×</span><span class="tag-trap">タスクの難易度の話にすり替え</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d2_1"><strong>なぜ×：</strong>本文は「速さと正確さの関係」の話。タスクの「簡単さ（difficulty）」については一切触れていない。<br><strong>作問者の意図：</strong>"easier task → higher success rate"は直感的に「ありそう」な話。本文にない内容を「それっぽく」見せた罠。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d2_2')"><span class="ca-n">2</span><span>タスクにかける時間が長ければ長いほど，正確ではなくなること</span><span class="tag-ng">×</span><span class="tag-trap">「長い」と「短い」の逆転</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d2_2"><strong>なぜ×：</strong>"faster（速い = 時間が短い）→ less accurate"なのに、2は「時間が長い → 不正確」と逆になっている。<br><strong>作問者の意図：</strong>「速い」と「時間が短い」の対応関係を正確に把握していない人を引っ掛ける。最も多く選ばれる罠。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d2_3')"><span class="ca-n">3</span><span>タスクにかける時間が短ければ短いほど，正確ではなくなること</span><span class="tag-ok">正解</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d2_3"><strong>なぜ正解：</strong>"faster（速い = 時間が短い）→ less accurate（不正確）"と完全に対応。"the 比較級, the 比較級" 構文を正確に日本語に変換している。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d2_4')"><span class="ca-n">4</span><span>タスクの内容が重要であればあるほど，失敗する確率が高くなること</span><span class="tag-ng">×</span><span class="tag-trap">完全に話題外</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d2_4"><strong>なぜ×：</strong>「タスクの重要性」という話は本文に一切出てこない。速さと正確さのトレードオフの話。</div>
+        </div>
+      </div>
+      <div class="maker-box"><div class="maker-label">作問者の意図まとめ</div>"faster = 速い"を"時間が短い"に変換できるかを試している。2と3は「長い/短い」だけが違う。"the 比較級, the 比較級"構文を正確に訳せているかが分水嶺。</div>
+    </div>
+  </div>
+
+  <!-- 問3解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am3')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--teal);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問3</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問3 — 筆者の答え　正解：2（No）</div><div style="font-size:11px;color:var(--text2);">下線部⑶は問いかけ文 — その後の展開が答え</div></div>
+      <div class="ans-arrow" id="am3-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am3-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">根拠の構造</div>
+        ⑶「プロにも同じアドバイスを与えるべきか？」<br>
+        → 直後から実験結果が展開される<br>
+        → 実験の結果：プロは時間制約があると的中率が<strong>上がった</strong>（同じアドバイス = 時間をかけろ の逆）<br>
+        → つまり筆者の答えは <strong>No</strong>（同じアドバイスは適切ではない）
+      </div>
+      <div style="font-size:13px;line-height:1.75;padding:10px 14px;background:var(--surface2);border-radius:var(--radius);">
+        <strong>なぜ Not given ではないか：</strong><br>
+        本文は直接「No」とは書いていないが、実験結果全体が「プロへの同じアドバイスは逆効果」を示している。筆者の意図は明確に読み取れるため Not given ではなく No が正解。
+      </div>
+    </div>
+  </div>
+
+  <!-- 問4解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am4')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問4</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問4 — time pressure の内容　正解：4</div><div style="font-size:11px;color:var(--text2);">"only up to three seconds for each putt" の正確な読み取り</div></div>
+      <div class="ans-arrow" id="am4-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am4-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">英文の分解</div>
+        "only up to <strong>three seconds</strong> for <strong>each putt</strong>"<br>
+        each putt = それぞれのパット（1打ごとに）<br>
+        only up to three seconds = わずか3秒まで（最大3秒しか与えられない）
+      </div>
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d4_1')"><span class="ca-n">1</span><span>1回目と2回目のパットの間の時間が3秒しか与えられない。</span><span class="tag-ng">×</span><span class="tag-trap">「各パット間の時間」にすり替え</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d4_1"><strong>なぜ×（具体的に）：</strong>"for each putt"は「各パットを打つための時間」。1打目と2打目の「間の時間」の話ではない。<br><strong>作問者の意図：</strong>"each putt"を「パットとパットの間」と読み間違えた人を引っ掛ける。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d4_2')"><span class="ca-n">2</span><span>3秒以内にパットを2回打たなければならない。</span><span class="tag-ng">×</span><span class="tag-trap">「2回」が捏造</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d4_2"><strong>なぜ×（具体的に）：</strong>「2回打つ」という記述は一切ない。3秒は1回のパットに与えられる時間。<br><strong>作問者の意図：</strong>"each"を無視して「3秒 = 2回打つ時間」と誤解させる罠。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d4_3')"><span class="ca-n">3</span><span>それぞれのパットを打つまで，好きなだけ時間をかけることができる。</span><span class="tag-ng">×</span><span class="tag-trap">「制限なし」条件との混同</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d4_3"><strong>なぜ×（具体的に）：</strong>"or all the time they wanted"（好きなだけ時間を使える）が実験のもう一方の条件。下線部⑷は「3秒以内」という制限あり条件。逆。<br><strong>作問者の意図：</strong>2つの実験条件を混同した人が選ぶ罠。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d4_4')"><span class="ca-n">4</span><span>それぞれのパットを打つまでの時間が3秒までしか与えられない。</span><span class="tag-ok">正解</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d4_4"><strong>なぜ正解：</strong>"each putt（各パット）"= それぞれのパット / "only up to three seconds"= 最大3秒しか。この2点が正確に反映されている。</div>
+        </div>
+      </div>
+      <div class="maker-box"><div class="maker-label">作問者の意図まとめ</div>"each putt"と"up to three seconds"の2つの要素を両方正確に読めているかを試している。1・2・3はそれぞれ「パット間の時間」「2回」「制限なし条件との混同」という異なる読み間違いを利用した罠。</div>
+    </div>
+  </div>
+
+  <!-- 問5解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am5')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--amber);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問5</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問5 — 無関係タスクの内容　正解：4</div><div style="font-size:11px;color:var(--text2);">"counting tape-recorded tones" の正確な訳</div></div>
+      <div class="ans-arrow" id="am5-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am5-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">括弧内の直接根拠</div>
+        "(counting tape-recorded tones)"<br>
+        counting = 数える<br>
+        tape-recorded = テープ（録音）された<br>
+        tones = 音・信号音・トーン<br>
+        → 「録音された信号音の数を数える」= 選択肢4
+      </div>
+      <div class="ca-grid">
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d5_1')"><span class="ca-n">1</span><span>ハミングする。</span><span class="tag-ng">×</span><span class="tag-trap">完全に話題外</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d5_1"><strong>なぜ×：</strong>ハミングは本文に一切出てこない。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d5_2')"><span class="ca-n">2</span><span>録音された計算問題を解く。</span><span class="tag-ng">×</span><span class="tag-trap">"tones" を「問題」に変換</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d5_2"><strong>なぜ×：</strong>tones = 音・信号音。計算問題ではない。「録音された」は合っているが「何を」の部分が違う。<br><strong>作問者の意図：</strong>"counting（数える）"から「計算問題」を連想する人を引っ掛ける。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-wrong" onclick="toggleDetail('d5_3')"><span class="ca-n">3</span><span>録音されたコーチのアドバイスを聞く。</span><span class="tag-ng">×</span><span class="tag-trap">コーチという単語の再利用</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d5_3"><strong>なぜ×：</strong>第1段落でコーチのアドバイスが出てくるが、実験2のタスクはコーチのアドバイスではない。<br><strong>作問者の意図：</strong>文章全体に登場するキーワード「コーチ」を再利用して引っ掛ける。</div>
+        </div>
+        <div class="ca-row">
+          <div class="ca-hdr ca-correct" onclick="toggleDetail('d5_4')"><span class="ca-n">4</span><span>録音された信号音の数を数える。</span><span class="tag-ok">正解</span><span class="det-btn">詳細</span></div>
+          <div class="ca-detail" id="d5_4"><strong>なぜ正解：</strong>counting = 数える / tape-recorded = 録音された / tones = 信号音・トーン → すべて正確に対応。</div>
+        </div>
+      </div>
+      <div class="maker-box"><div class="maker-label">作問者の意図まとめ</div>"tones"の意味と"counting"の使い方を正確に知っているかを試している。2の「計算問題」が最大の罠で、countingを「計算する」と誤解した人が選ぶ。tones = 音・信号音であることを知っていれば即答。</div>
+    </div>
+  </div>
+
+  <!-- 問6解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am6')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--green);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問6</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問6 — 実験結果表　正解：A=2, B=1, C=2, D=1</div><div style="font-size:11px;color:var(--text2);">4マスを第2段落で全て確認する</div></div>
+      <div class="ans-arrow" id="am6-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am6-body">
+      <div style="overflow-x:auto;margin-bottom:12px;">
+        <table class="perf-table">
+          <tr>
+            <th>条件</th><th>初心者</th><th>プロ</th>
+          </tr>
+          <tr>
+            <td style="font-size:12px;padding:8px;background:var(--surface2);font-weight:700;">実験1（時間制約）</td>
+            <td class="td-down">A: 2 → 下がる</td>
+            <td class="td-up">B: 1 → 上がる</td>
+          </tr>
+          <tr>
+            <td style="font-size:12px;padding:8px;background:var(--surface2);font-weight:700;">実験2（無関係タスク）</td>
+            <td class="td-down">C: 2 → 下がる</td>
+            <td class="td-up">D: 1 → 上がる</td>
+          </tr>
+        </table>
+      </div>
+      <div style="font-size:13px;line-height:1.8;display:flex;flex-direction:column;gap:6px;">
+        <div style="padding:8px 12px;background:var(--red-light);border-radius:var(--radius);"><strong style="color:var(--red);">A（初心者・実験1）：</strong>"beginners performed worse and had fewer target hits" → パフォーマンスが下がる（2）</div>
+        <div style="padding:8px 12px;background:var(--teal-light);border-radius:var(--radius);"><strong style="color:var(--teal);">B（プロ・実験1）：</strong>"experts hit the target more often when they had less time" → パフォーマンスが上がる（1）</div>
+        <div style="padding:8px 12px;background:var(--red-light);border-radius:var(--radius);"><strong style="color:var(--red);">C（初心者・実験2）：</strong>"beginners did better than when they were distracted" → 気が散ると下がる（2）</div>
+        <div style="padding:8px 12px;background:var(--teal-light);border-radius:var(--radius);"><strong style="color:var(--teal);">D（プロ・実験2）：</strong>"when experts' attention was distracted, their performance actually improved" → 上がる（1）</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 問7解説 -->
+  <div class="ans-block">
+    <div class="ans-hdr" onclick="toggleAns('am7')">
+      <div style="width:28px;height:28px;border-radius:8px;background:var(--red);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">問7</div>
+      <div style="flex:1;"><div style="font-size:13px;font-weight:700;">問7 — 理由として当てはまらないもの　正解：3</div><div style="font-size:11px;color:var(--text2);">第3段落の論理と各選択肢を照合する</div></div>
+      <div class="ans-arrow" id="am7-arrow">▼</div>
+    </div>
+    <div class="ans-body" id="am7-body">
+      <div class="callout callout-blue" style="margin-bottom:12px;">
+        <div class="cl-label">第3段落の説明（理由の核心）</div>
+        ①「プロの運動スキルは無意識で実行される」<br>
+        ②「意識でスイングの動作を考えると逆にパフォーマンスを妨げる」<br>
+        ③「時間制約・無関係タスクは意識をスイングから遠ざける方法」<br>
+        ④「意識は一度に一つのことしかできない → 別のことに意識が向くと、スイングへの意識的干渉がなくなる」
+      </div>
+      <div style="font-size:13px;line-height:1.8;display:flex;flex-direction:column;gap:8px;">
+        <div style="padding:9px 13px;background:var(--teal-light);border-radius:var(--radius);border:0.5px solid #9fe1cb;"><strong style="color:var(--teal);">選択肢1（当てはまる）：</strong>「無関係タスクを課されることで、スイングの一つ一つの動きを考えなくなる」→ 第3段落の内容と一致（意識がスイングから離れる）</div>
+        <div style="padding:9px 13px;background:var(--teal-light);border-radius:var(--radius);border:0.5px solid #9fe1cb;"><strong style="color:var(--teal);">選択肢2（当てはまる）：</strong>「時間制約で、スイングの一つ一つの動きを意識しなくなる」→ 一致（時間制約も意識をスイングから遠ざける方法）</div>
+        <div style="padding:9px 13px;background:var(--red-light);border-radius:var(--radius);border:0.5px solid #f09595;"><strong style="color:var(--red);">選択肢3（当てはまらない = 正解）：</strong>問題文に記載あり（画像不鮮明部分）— 「意識がスイングに向くと成績が上がる」という内容であれば、第3段落と逆になる。プロの場合、スイングを意識することは妨害になる。</div>
+      </div>
+      <div class="maker-box"><div class="maker-label">作問者の意図まとめ</div>第3段落「意識がスイングに向くとプロには逆効果」を理解していれば、スイングへの意識が「良い結果をもたらす」という内容が当てはまらないとわかる。</div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <button class="btn-secondary" onclick="goPhase(2)">← PHASE 2 に戻る</button>
+    <button class="btn-primary" onclick="goPhase(4)">PHASE 4 → 全文和訳 + 本質まとめ</button>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     PHASE 4 — 全文和訳 + 本質
+══════════════════════ -->
+<div class="phase-panel" id="phase4">
+
+  <div class="phase-badge">
+    <div class="pb-num" style="background:#1a3a5c;">4</div>
+    <div>
+      <div class="pb-text">全文和訳 + 論理的な読み方の本質</div>
+      <div class="pb-sub">自然な日本語訳で内容を完全確認</div>
+    </div>
+  </div>
+
+  <!-- 全文和訳 -->
+  <div class="card">
+    <div class="section-label">全文和訳 — 自然な日本語で内容を完全確認</div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">第1段落 — アドバイスと速度・正確性のトレードオフ</div>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:16px;">
+      <div class="trans-line"><div class="trans-en">A golfer has to go through a long list of steps when putting: judge the line of the ball, the grain of the turf, and the distance and angle to the hole; position the ball; align shoulders, hips, and feet to the left of the hole; prepare for backswing.</div><div class="trans-div"></div><div class="trans-ja">ゴルファーはパッティングの際に多くの手順をこなさなければならない：ボールの進路・芝の密度・ホールまでの距離と角度を見極め、ボールを置き、肩・腰・足をホールの左に揃え、バックスイングの準備をする。</div></div>
+      <div class="trans-line"><div class="trans-en">What advice should a coach give to a golfer? How about "Take your time, concentrate on what you are doing, and don't get distracted by anything around you."</div><div class="trans-div"></div><div class="trans-ja">コーチはゴルファーにどんなアドバイスをすべきだろうか？「時間をかけて、自分がやっていることに集中し、周りのことで気を散らしてはいけない」というのはどうだろう。</div></div>
+      <div class="trans-line"><div class="trans-en">That seems like clever consulting to some, and patently obvious to others; in any case, it is backed by research on the so-called speed-accuracy trade-off; the faster a task is performed, the less accurate it becomes.</div><div class="trans-div"></div><div class="trans-ja">これは人によっては巧みなアドバイスに聞こえ、またある人には当たり前のことに聞こえる。いずれにせよ、これはいわゆる「速度・正確性のトレードオフ」に関する研究に裏付けられている。タスクを速く行えば行うほど、正確さが失われるのだ。</div></div>
+      <div class="trans-line"><div class="trans-en">And in fact, when beginners are advised to take their time, concentrate on their movements, and focus their attention, they perform better.</div><div class="trans-div"></div><div class="trans-ja">そして実際、初心者は「時間をかけて、動作に集中し、注意を向けるよう」アドバイスされると、パフォーマンスが向上する。</div></div>
+      <div class="trans-line"><div class="trans-en">Should we give expert golfers the same advice?</div><div class="trans-div"></div><div class="trans-ja">プロのゴルファーにも同じアドバイスを与えるべきだろうか？</div></div>
+    </div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">第2段落 — 実験の結果（逆説の核心）</div>
+    <div style="display:flex;flex-direction:column;gap:0;margin-bottom:16px;">
+      <div class="trans-line"><div class="trans-en">In an experiment, beginners and expert golfers were studied under two conditions: they had either only up to three seconds for each putt or all the time they wanted.</div><div class="trans-div"></div><div class="trans-ja">ある実験で、初心者とプロのゴルファーが2つの条件下で調査された。各パットに最大3秒しか与えられないか、好きなだけ時間を使えるかの2条件だ。</div></div>
+      <div class="trans-line"><div class="trans-en">Under time pressure, as mentioned, beginners performed worse and had fewer target hits. Yet surprisingly, experts hit the target more often when they had less time than when they had no time limit.</div><div class="trans-div"></div><div class="trans-ja">時間制約のある条件では、述べたように初心者のパフォーマンスは低下しターゲットへの的中数も減った。しかし驚くべきことに、プロは時間制限がある方が制限がない時より的中率が高かった。</div></div>
+      <div class="trans-line"><div class="trans-en">In a second experiment, players were either instructed to pay attention to their swing or distracted by an unrelated, second task (counting tape-recorded tones).</div><div class="trans-div"></div><div class="trans-ja">第2の実験では、プレイヤーはスイングに注意を向けるよう指示されるか、無関係な第2のタスク（録音されたトーンの数を数えること）によって気をそらされるかのいずれかだった。</div></div>
+      <div class="trans-line"><div class="trans-en">When they were asked to pay attention to their swing, as one might expect, beginners did better than when they were distracted. Yet with experts, it was again the opposite.</div><div class="trans-div"></div><div class="trans-ja">スイングに注意を向けるよう求められた場合、予想通り初心者は気が散っていた時より成績が良かった。しかしプロの場合、再び逆の結果となった。</div></div>
+      <div class="trans-line"><div class="trans-en">When experts concentrated on their swings, their performance decreased; when experts' attention was distracted, their performance actually improved.</div><div class="trans-div"></div><div class="trans-ja">プロがスイングに集中したとき、パフォーマンスは低下した。プロの注意が散漫になったとき、パフォーマンスはむしろ向上した。</div></div>
+    </div>
+
+    <div style="font-size:12px;font-weight:700;color:var(--purple);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">第3段落 — 逆説の説明（無意識のスキル）</div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+      <div class="trans-line"><div class="trans-en">How can we account for this apparent paradox?</div><div class="trans-div"></div><div class="trans-ja">この一見矛盾しているように見えるパラドックスをどう説明できるだろうか？</div></div>
+      <div class="trans-line"><div class="trans-en">Expert motor skills are executed by unconscious parts of our brains, and conscious thinking about the sequence of behaviors interferes with performance.</div><div class="trans-div"></div><div class="trans-ja">専門家の運動スキルは脳の無意識の部分によって実行されており、行動の順序についての意識的な思考はパフォーマンスを妨げてしまう。</div></div>
+      <div class="trans-line"><div class="trans-en">Setting a time limit is one method to make thinking about the swing difficult; providing a distracting task is another.</div><div class="trans-div"></div><div class="trans-ja">時間制限を設けることはスイングについて考えにくくする一つの方法であり、気を散らすタスクを与えることはもう一つの方法だ。</div></div>
+      <div class="trans-line"><div class="trans-en">Since our conscious attention can focus on only one thing at a time, it is fixed on the distracting task and cannot interfere with the swing.</div><div class="trans-div"></div><div class="trans-ja">私たちの意識的な注意は一度に一つのことにしか集中できないため、気を散らすタスクにそれが固定され、スイングを妨害できなくなるのだ。</div></div>
+    </div>
+  </div>
+
+  <!-- 本質まとめ -->
+  <div class="card">
+    <div class="section-label">この問題から学ぶ — 「実験の構造を頭で動かす力」</div>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+      <div style="padding:10px 13px;background:var(--red-light);border-radius:var(--radius);border-left:3px solid var(--red);">
+        <strong style="color:var(--red);">失点のパターン — 「なんとなく読んだ」人</strong><br>
+        問4で「1回目と2回目の間の3秒」を選ぶ / 問2で「長い時間 → 不正確」を選ぶ / 問6でA・C・D・Bを逆に入れる → いずれも「本文は読んだが頭の中で実験が動いていない」
+      </div>
+      <div style="padding:10px 13px;background:var(--amber-light);border-radius:var(--radius);border-left:3px solid var(--amber);">
+        <strong style="color:var(--amber);">yet surprisingly / yet with experts it was again the opposite</strong><br>
+        この文章の最重要シグナル語。「驚くべきことに / またしても逆だった」— ここに集中を上げれば実験の逆説が即座に頭に入る。
+      </div>
+      <div style="padding:10px 13px;background:var(--purple-light);border-radius:var(--radius);border-left:3px solid var(--purple);">
+        <strong style="color:var(--purple);">「the 比較級, the 比較級」構文</strong><br>
+        "the faster... the less accurate..."— この構文の前半（faster = 短い時間）と後半（less accurate = 不正確）の対応関係を正確に日本語に変換できているかが問2の分水嶺。
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#1a3a5c;border-radius:var(--radius-lg);padding:26px;color:#fff;margin-bottom:14px;">
+    <div style="font-size:17px;font-weight:700;margin-bottom:14px;">4月の鉄則 — この問題でできたか</div>
+    <div style="display:flex;flex-direction:column;gap:11px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:rgba(255,255,255,0.08);border-radius:var(--radius);">
+        <div style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">①</div>
+        <div style="font-size:14px;line-height:1.75;"><strong>実験の結果を4マスの表で整理できているか。</strong><br><span style="opacity:0.8;font-size:13px;">初心者・プロ × 実験1・実験2 = 4パターン。これを頭に入れてから問題を解くと問6は「確認作業」になる。</span></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:rgba(255,255,255,0.08);border-radius:var(--radius);">
+        <div style="width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,0.2);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">②</div>
+        <div style="font-size:14px;line-height:1.75;"><strong>数字・時間表現は「誰の・何の・どういう条件の」まで確認する。</strong><br><span style="opacity:0.8;font-size:13px;">"each putt"を見落として「パット間の時間」と誤読するのは「単語を拾って意味をつなぎ合わせた」典型例。</span></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:rgba(255,255,255,0.15);border-radius:var(--radius);border:1px solid rgba(255,255,255,0.2);">
+        <div style="width:24px;height:24px;border-radius:50%;background:#fff;color:#1a3a5c;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">✓</div>
+        <div style="font-size:14px;line-height:1.75;"><strong>「yet surprisingly」「yet it was again the opposite」— このシグナルに反応できているか。</strong><br><span style="opacity:0.85;font-size:13px;">逆説のシグナル語を見た瞬間に「ここが文章の核心」と集中を上げる。これが難文を読む力の正体。</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-actions">
+    <button class="btn-secondary" onclick="goPhase(3)">← PHASE 3 に戻る</button>
+    <button class="btn-primary" onclick="goPhase(1)">最初からやり直す</button>
+  </div>
+</div>
+
+</div>
+
+<script>
+var answers={qm1:1,qm2:3,qm3:2,qm4:4,qm5:4,qm7:3};
+var q6answers={selA:'2',selB:'1',selC:'2',selD:'1'};
+var selected={};
+
+function sel(qid,num){
+  selected[qid]=num;
+  document.querySelectorAll('#'+qid+' .choice-btn').forEach(function(b){b.classList.remove('selected');});
+  document.querySelector('#'+qid+' .choice-btn:nth-child('+num+')').classList.add('selected');
+}
+
+function goPhase(n){
+  document.querySelectorAll('.phase-panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('phase'+n).classList.add('active');
+  for(var i=1;i<=4;i++){
+    var d=document.getElementById('dot'+i);
+    if(!d)continue;
+    d.className='pi-dot';
+    if(i<n)d.classList.add('done');
+    else if(i===n)d.classList.add('active');
+  }
+  document.getElementById('phase-label').textContent='PHASE '+n+' / 4';
+  if(n===3){buildScore();markChoices();openAllAns();}
+  window.scrollTo(0,0);
+}
+
+function buildScore(){
+  var score=0;
+  ['qm1','qm2','qm3','qm4','qm5','qm7'].forEach(function(q){
+    if(selected[q]===answers[q])score++;
+  });
+  var q6ok=true;
+  ['selA','selB','selC','selD'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(!el||el.value!==q6answers[id])q6ok=false;
+  });
+  if(q6ok)score++;
+  var sd=document.getElementById('score-display');
+  if(sd){sd.textContent=score+' / 7';sd.style.color=score>=6?'var(--teal)':score>=4?'var(--amber)':'var(--red)';}
+}
+
+function markChoices(){
+  ['qm1','qm2','qm3','qm4','qm5','qm7'].forEach(function(qid){
+    var btns=document.querySelectorAll('#'+qid+' .choice-btn');
+    var correct=answers[qid];
+    var my=selected[qid];
+    btns.forEach(function(b,i){
+      b.classList.remove('selected','correct-mark','wrong-mark');
+      if(i+1===correct)b.classList.add('correct-mark');
+      if(my&&i+1===my&&my!==correct)b.classList.add('wrong-mark');
+    });
+  });
+  ['selA','selB','selC','selD'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    el.classList.remove('correct-sel','wrong-sel');
+    if(el.value===q6answers[id])el.classList.add('correct-sel');
+    else if(el.value)el.classList.add('wrong-sel');
+  });
+}
+
+function openAllAns(){
+  ['am1','am2','am3','am4','am5','am6','am7'].forEach(function(id){
+    var b=document.getElementById(id+'-body');
+    var a=document.getElementById(id+'-arrow');
+    if(b)b.classList.add('open');
+    if(a)a.style.transform='rotate(180deg)';
+  });
+}
+
+function toggleAns(id){
+  var b=document.getElementById(id+'-body');
+  var a=document.getElementById(id+'-arrow');
+  if(!b)return;
+  var open=b.classList.contains('open');
+  b.classList.toggle('open',!open);
+  if(a)a.style.transform=open?'rotate(0deg)':'rotate(180deg)';
+}
+
+function toggleDetail(id){
+  var el=document.getElementById(id);
+  if(el)el.classList.toggle('open');
+}
+</script>
+</body>
+</html>
