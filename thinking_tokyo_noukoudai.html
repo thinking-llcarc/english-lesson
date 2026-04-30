@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>東京農工大学 英語 完全攻略分析シート｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#0b0f17;--bg2:#101520;--bg3:#151b26;
+  --sf:#1a2030;--sf2:#1f2636;--sf3:#252d40;
+  --bd:#2a3348;--bd2:#334060;
+  --tx:#e8edf5;--t2:#8a96aa;--t3:#525e72;
+  --ac:#3b82f6;--acl:rgba(59,130,246,.15);--acd:#1d4ed8;
+  --tl:#10b981;--tll:rgba(16,185,129,.15);
+  --am:#f59e0b;--aml:rgba(245,158,11,.18);
+  --rd:#ef4444;--rdl:rgba(239,68,68,.15);
+  --pu:#8b5cf6;--pul:rgba(139,92,246,.15);
+  --gr:#6b7280;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+/* ─── HEADER ─── */
+.hdr{background:linear-gradient(135deg,#0a0f1e 0%,#0d1529 60%,#0a1428 100%);border-bottom:1px solid var(--bd);padding:0;position:sticky;top:0;z-index:300;}
+.hdr-inner{max-width:1100px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo-wrap{display:flex;align-items:center;gap:12px;}
+.logo{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--ac),#1d4ed8);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;color:var(--tx);}
+.brand-s{font-size:10px;color:var(--t3);margin-top:1px;}
+.hdr-title{font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:600;color:var(--t2);letter-spacing:.12em;text-transform:uppercase;}
+
+/* ─── TAB NAV ─── */
+.tab-nav{background:var(--bg2);border-bottom:1px solid var(--bd);display:flex;overflow-x:auto;padding:0 6px;max-width:1100px;margin:0 auto;}
+.tnav-wrap{background:var(--bg2);border-bottom:1px solid var(--bd);position:sticky;top:67px;z-index:200;}
+.tn{padding:11px 16px;font-size:12px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.tn:hover{color:var(--tx);}
+.tn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+
+.main{max-width:1100px;margin:0 auto;padding:28px 20px 100px;}
+.tabpan{display:none;}
+.tabpan.active{display:block;animation:fi .3s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── GRID ─── */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:680px){.grid2,.grid3{grid-template-columns:1fr;}}
+
+/* ─── CARDS ─── */
+.card{background:var(--sf);border-radius:var(--rl);border:1px solid var(--bd);padding:20px;margin-bottom:14px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+.divider{height:1px;background:var(--bd);margin:16px 0;}
+
+/* ─── HERO SECTION ─── */
+.hero{border-radius:var(--rl);padding:30px 32px;margin-bottom:20px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;background:rgba(255,255,255,.03);}
+.hero::after{content:'';position:absolute;right:30px;bottom:-30px;width:120px;height:120px;border-radius:50%;background:rgba(255,255,255,.02);}
+.hero-tag{font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;opacity:.55;margin-bottom:8px;}
+.hero-h{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;line-height:1.2;margin-bottom:10px;}
+.hero-p{font-size:13.5px;line-height:1.8;opacity:.85;}
+
+/* ─── SPEC METER ─── */
+.spec-meter{margin:8px 0;}
+.sm-label{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;}
+.sm-track{height:6px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;}
+.sm-fill{height:100%;border-radius:3px;transition:width .8s ease;}
+
+/* ─── BIG NUMBER ─── */
+.big-num{font-family:'Space Grotesk',sans-serif;font-size:42px;font-weight:700;line-height:1;margin-bottom:4px;}
+.big-unit{font-size:14px;color:var(--t2);margin-left:2px;}
+
+/* ─── QUESTION TYPE CARD ─── */
+.qtype{border-radius:var(--rl);overflow:hidden;margin-bottom:14px;border:1px solid var(--bd);}
+.qt-hdr{padding:14px 18px;display:flex;align-items:center;gap:12px;}
+.qt-num{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;flex-shrink:0;}
+.qt-title{font-size:15px;font-weight:700;}
+.qt-sub{font-size:11px;color:var(--t2);margin-top:2px;}
+.qt-body{padding:14px 18px;border-top:1px solid var(--bd);}
+.feature-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid var(--bd);}
+.feature-item:last-child{border-bottom:none;}
+.fi-icon{font-size:16px;flex-shrink:0;margin-top:1px;}
+.fi-title{font-size:13px;font-weight:700;color:var(--tx);margin-bottom:2px;}
+.fi-body{font-size:12.5px;color:var(--t2);line-height:1.65;}
+
+/* ─── STRATEGY BOX ─── */
+.strat-box{border-radius:var(--r);padding:12px 15px;margin:10px 0;font-size:13.5px;line-height:1.75;border:1px solid;}
+.sb-b{background:var(--acl);border-color:rgba(59,130,246,.3);color:#93c5fd;}
+.sb-t{background:var(--tll);border-color:rgba(16,185,129,.3);color:#6ee7b7;}
+.sb-a{background:var(--aml);border-color:rgba(245,158,11,.3);color:#fcd34d;}
+.sb-r{background:var(--rdl);border-color:rgba(239,68,68,.3);color:#fca5a5;}
+.sb-p{background:var(--pul);border-color:rgba(139,92,246,.3);color:#c4b5fd;}
+.sb-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:4px;opacity:.8;}
+
+/* ─── PAST QUESTION ─── */
+.pq-card{border-radius:var(--rl);overflow:hidden;margin-bottom:16px;border:1px solid var(--bd);}
+.pq-hdr{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.pq-year{font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px;}
+.pq-theme{font-size:14px;font-weight:700;}
+.pq-body{padding:16px 18px;border-top:1px solid var(--bd);}
+.pq-section{margin-bottom:14px;}
+.pq-section-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px;padding:4px 10px;border-radius:4px;display:inline-block;}
+.pq-en{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.0;color:var(--tx);padding:12px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);margin:6px 0;}
+.pq-ja{font-size:13px;color:var(--t2);padding:10px 13px;background:var(--sf2);border-radius:var(--r);margin:6px 0;line-height:1.75;}
+.wordcount{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:700;margin-left:8px;}
+.model-ans{font-family:'Source Serif 4',serif;font-size:14px;line-height:2.1;padding:14px 16px;background:var(--sf3);border-radius:var(--r);border-left:3px solid var(--tl);margin:8px 0;}
+.tip-item{display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid var(--bd);font-size:13px;line-height:1.65;}
+.tip-item:last-child{border-bottom:none;}
+.tip-num{width:20px;height:20px;border-radius:50%;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+/* ─── TEMPLATE VISUAL ─── */
+.template-vis{border-radius:var(--rl);background:var(--bg3);border:1px solid var(--bd);padding:18px;margin:12px 0;}
+.tv-row{display:flex;gap:10px;align-items:stretch;margin-bottom:8px;}
+.tv-row:last-child{margin-bottom:0;}
+.tv-label{font-size:10px;font-weight:700;font-family:'Noto Sans JP',sans-serif;flex-shrink:0;padding:4px 9px;border-radius:4px;align-self:flex-start;margin-top:2px;white-space:nowrap;}
+.tv-content{flex:1;font-size:13px;line-height:1.7;padding:7px 11px;border-radius:7px;font-family:'Source Serif 4',serif;}
+.tv-words{font-size:10px;font-weight:700;color:var(--t3);align-self:flex-start;padding-top:8px;flex-shrink:0;}
+
+/* ─── AI TUTOR ─── */
+.ai-input-area{border-radius:var(--rl);overflow:hidden;border:1px solid var(--bd);margin:12px 0;}
+.ai-input-hdr{padding:10px 16px;background:var(--sf2);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;}
+.ai-prompt{font-size:12px;color:var(--t2);padding:8px 14px;border-bottom:1px solid var(--bd);background:var(--sf2);line-height:1.6;}
+.ai-textarea{width:100%;padding:14px;font-size:13.5px;font-family:'Source Serif 4',serif;border:none;background:var(--bg3);color:var(--tx);resize:none;line-height:1.7;min-height:120px;}
+.ai-textarea:focus{outline:none;}
+.ai-textarea::placeholder{color:var(--t3);}
+.ai-footer{padding:10px 14px;background:var(--sf2);border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.wc-live{font-size:12px;font-weight:700;padding:4px 12px;border-radius:20px;transition:all .3s;}
+.wc-ok{background:var(--tll);color:#6ee7b7;}
+.wc-warn{background:var(--aml);color:#fcd34d;}
+.wc-over{background:var(--rdl);color:#fca5a5;}
+
+.ai-result{border-radius:var(--rl);overflow:hidden;border:1px solid var(--bd);margin:12px 0;display:none;}
+.ai-result.show{display:block;}
+.ar-hdr{padding:11px 16px;font-size:12px;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;}
+.ar-body{padding:16px;}
+.ar-score{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;}
+.ar-score-item{flex:1;min-width:100px;padding:12px 14px;border-radius:var(--r);text-align:center;}
+.ar-sc-num{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;line-height:1;}
+.ar-sc-lbl{font-size:11px;color:var(--t2);margin-top:3px;}
+.ar-section{margin-bottom:12px;}
+.ar-sl{font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:6px;}
+.ar-text{font-size:13.5px;line-height:1.8;padding:10px 13px;border-radius:var(--r);background:var(--bg3);}
+.btn-submit{padding:10px 24px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;}
+.btn-submit:hover{background:var(--acd);}
+.btn-submit:disabled{background:var(--t3);cursor:not-allowed;}
+.loading-dots{display:none;}
+.loading-dots.show{display:inline-flex;gap:4px;margin-left:8px;}
+.ld{width:6px;height:6px;border-radius:50%;background:var(--ac);animation:bounce .8s infinite;}
+.ld:nth-child(2){animation-delay:.15s;}
+.ld:nth-child(3){animation-delay:.3s;}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+/* ─── CALLOUT ─── */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* ─── Q SELECTOR ─── */
+.q-selector{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
+.qs-btn{padding:7px 16px;border-radius:8px;font-size:12px;font-weight:700;font-family:'Noto Sans JP',sans-serif;cursor:pointer;border:1px solid var(--bd);background:var(--sf);color:var(--t2);transition:all .2s;}
+.qs-btn:hover{border-color:var(--ac);color:var(--ac);}
+.qs-btn.active{background:var(--acl);border-color:var(--ac);color:var(--ac);}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div class="hdr-inner">
+    <div class="logo-wrap">
+      <div class="logo">T</div>
+      <div>
+        <div class="brand">THINKING｜東京農工大学 英語 完全攻略</div>
+        <div class="brand-s">完全攻略 分析シート — 生徒配布版</div>
+      </div>
+    </div>
+    <div class="hdr-title">2025 Strategy Sheet</div>
+  </div>
+</div>
+
+<div class="tnav-wrap">
+  <div class="tab-nav">
+    <button class="tn active" onclick="tab('t1')">📊 全体像</button>
+    <button class="tn" onclick="tab('t2')">📖 大問1・2 長文</button>
+    <button class="tn" onclick="tab('t3')">✍️ 大問3 英作文</button>
+    <button class="tn" onclick="tab('t4')">📝 過去問3題</button>
+    <button class="tn" onclick="tab('t5')">✅ 自己採点シート</button>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ══════════ TAB 1 — 全体像 ══════════ -->
+<div class="tabpan active" id="t1">
+
+  <div class="hero" style="background:linear-gradient(135deg,#0d1a35 0%,#0f2040 50%,#091830 100%);">
+    <div class="hero-tag">Tokyo University of Agriculture and Technology</div>
+    <div class="hero-h">東京農工大学 英語<br>完全攻略分析シート</div>
+    <div class="hero-p">偏差値70前後・英検準1級レベルの理系学生を対象とした高度な英語試験。単語・基礎文法は完成済みの前提で、<strong>論理展開力・情報処理スピード・国語力</strong>が勝負を分ける。</div>
+  </div>
+
+  <!-- 基本スペック -->
+  <div class="grid2" style="margin-bottom:14px;">
+    <div class="card">
+      <div class="lbl">試験構成</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <div style="font-size:13px;font-weight:700;">大問数</div>
+          <div><span class="big-num" style="font-size:28px;color:var(--ac);">3</span><span class="big-unit">題構成</span></div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <div style="font-size:13px;font-weight:700;">問題冊子</div>
+          <div style="font-size:14px;font-weight:700;color:var(--t2);">13〜15ページ程度</div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <div style="font-size:13px;font-weight:700;">共同獣医学科の配点</div>
+          <div><span class="big-num" style="font-size:28px;color:var(--am);">300</span><span class="big-unit">/ 1000点</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="lbl">要求スペック</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div>
+          <div class="sm-label"><span style="font-size:12px;color:var(--t2);">語彙・基礎文法</span><span style="font-size:12px;font-weight:700;color:var(--tl);">完成済みが前提</span></div>
+          <div class="sm-track"><div class="sm-fill" style="width:95%;background:var(--tl);"></div></div>
+        </div>
+        <div>
+          <div class="sm-label"><span style="font-size:12px;color:var(--t2);">論理展開力</span><span style="font-size:12px;font-weight:700;color:var(--ac);">最重要</span></div>
+          <div class="sm-track"><div class="sm-fill" style="width:90%;background:var(--ac);"></div></div>
+        </div>
+        <div>
+          <div class="sm-label"><span style="font-size:12px;color:var(--t2);">情報処理スピード</span><span style="font-size:12px;font-weight:700;color:var(--ac);">高い</span></div>
+          <div class="sm-track"><div class="sm-fill" style="width:85%;background:var(--ac);"></div></div>
+        </div>
+        <div>
+          <div class="sm-label"><span style="font-size:12px;color:var(--t2);">国語力（要約）</span><span style="font-size:12px;font-weight:700;color:var(--am);">必須</span></div>
+          <div class="sm-track"><div class="sm-fill" style="width:80%;background:var(--am);"></div></div>
+        </div>
+        <div>
+          <div class="sm-label"><span style="font-size:12px;color:var(--t2);">英検準1級相当</span><span style="font-size:12px;font-weight:700;color:var(--t2);">基準レベル</span></div>
+          <div class="sm-track"><div class="sm-fill" style="width:75%;background:var(--gr);"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 大問別概要 -->
+  <div class="card">
+    <div class="lbl">大問別 構成と難易度</div>
+    <div class="grid3">
+      <div style="padding:16px;background:var(--bg3);border-radius:var(--rl);border:1px solid var(--bd);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--ac);margin-bottom:4px;">大問1</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:8px;">超本格・長文読解</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.75;">自然科学・テクノロジー系アカデミック長文。図表・グラフとリンクした情報処理問題が特徴。</div>
+        <div style="margin-top:10px;display:flex;gap:5px;flex-wrap:wrap;">
+          <span style="padding:2px 8px;background:var(--rdl);color:#fca5a5;border-radius:20px;font-size:10px;font-weight:700;">図表読み取り</span>
+          <span style="padding:2px 8px;background:var(--acl);color:#93c5fd;border-radius:20px;font-size:10px;font-weight:700;">字数制限和訳</span>
+        </div>
+      </div>
+      <div style="padding:16px;background:var(--bg3);border-radius:var(--rl);border:1px solid var(--bd);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--tl);margin-bottom:4px;">大問2</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:8px;">農学・社会系長文</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.75;">農工大のアイデンティティを反映した長文。空欄補充・整序（並べ替え）が出題される。</div>
+        <div style="margin-top:10px;display:flex;gap:5px;flex-wrap:wrap;">
+          <span style="padding:2px 8px;background:var(--tll);color:#6ee7b7;border-radius:20px;font-size:10px;font-weight:700;">空欄補充</span>
+          <span style="padding:2px 8px;background:var(--pul);color:#c4b5fd;border-radius:20px;font-size:10px;font-weight:700;">整序問題</span>
+        </div>
+      </div>
+      <div style="padding:16px;background:var(--bg3);border-radius:var(--rl);border:1px solid var(--bd);">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--am);margin-bottom:4px;">大問3</div>
+        <div style="font-size:14px;font-weight:700;margin-bottom:8px;">会話文 + 英作文</div>
+        <div style="font-size:12px;color:var(--t2);line-height:1.75;">アカデミック会話文の後に条件付き自由英作文。40〜60語・2つの理由/解決策という制約。</div>
+        <div style="margin-top:10px;display:flex;gap:5px;flex-wrap:wrap;">
+          <span style="padding:2px 8px;background:var(--aml);color:#fcd34d;border-radius:20px;font-size:10px;font-weight:700;">合否の分岐点</span>
+          <span style="padding:2px 8px;background:var(--rdl);color:#fca5a5;border-radius:20px;font-size:10px;font-weight:700;">字数オーバー注意</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- この試験で問われる本質 -->
+  <div class="card">
+    <div class="lbl">農工大英語が「本当に」問うている力</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--acl);color:var(--ac);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(59,130,246,.3);">1</div>
+        <div><div style="font-size:13.5px;font-weight:700;margin-bottom:3px;">図表と英文を同時に処理する「理系的情報統合力」</div><div style="font-size:12.5px;color:var(--t2);line-height:1.65;">英文を読みながら、タイムライン図・グラフ・相関図を同時に参照して答える。英語力だけでなく理科的な思考力が問われる農工大独自の問題形式。</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--aml);color:var(--am);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(245,158,11,.3);">2</div>
+        <div><div style="font-size:13.5px;font-weight:700;margin-bottom:3px;">40〜50字に「過不足なく」まとめる国語力</div><div style="font-size:12.5px;color:var(--t2);line-height:1.65;">「英語が読めた」だけでは解けない。読んだ内容を適切な日本語で字数内に収める力が必須。英語力×国語力の掛け算。</div></div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+        <div style="width:28px;height:28px;border-radius:50%;background:var(--tll);color:var(--tl);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(16,185,129,.3);">3</div>
+        <div><div style="font-size:13.5px;font-weight:700;margin-bottom:3px;">50〜60語に「型」で収める英作文の精度</div><div style="font-size:12.5px;color:var(--t2);line-height:1.65;">英検準1級（120〜140語）に慣れた生徒が最も失点する箇所。前置きを捨て、即Main Body構造に入る「削る技術」が勝負。</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 2 — 大問1・2 ══════════ -->
+<div class="tabpan" id="t2">
+
+  <div class="qtype">
+    <div class="qt-hdr" style="background:linear-gradient(135deg,#0d1a35,#0f2040);">
+      <div class="qt-num" style="color:var(--ac);">大問1・2</div>
+      <div>
+        <div class="qt-title">超本格・長文読解（自然科学・テクノロジー・社会）</div>
+        <div class="qt-sub">農学・工学に直結するアカデミックな長文 — 英語力×理系的思考力×国語力</div>
+      </div>
+    </div>
+    <div class="qt-body">
+      <div class="feature-item">
+        <div class="fi-icon">📊</div>
+        <div>
+          <div class="fi-title">最大の特徴①「図表・グラフの読み取り」</div>
+          <div class="fi-body">単なる英文和訳ではなく、本文の記述と「人類進化のタイムライン図」「年齢による体感時間のグラフ」「サルの権力相関図」などをリンクさせる情報処理問題が頻出。英語を読みながら図表を参照する並列処理が必要。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="fi-icon">✍️</div>
+        <div>
+          <div class="fi-title">最大の特徴②「字数制限付き日本語記述」</div>
+          <div class="fi-body">毎年必ず「40字以内」「50字以内」などで本文の理由や内容を日本語で要約させる問題が出る。英語が読めても日本語でまとめられなければ失点する。過不足なくまとめる国語力が必須。</div>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="fi-icon">🔤</div>
+        <div>
+          <div class="fi-title">文法・語彙の出題形式</div>
+          <div class="fi-body">独立した文法問題はなく、長文内の空欄補充や並べ替え（整序問題）として出題される。文法知識を「使える」形で持っていることが求められる。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 図表問題の攻略 -->
+  <div class="card">
+    <div class="lbl">図表問題の攻略法</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div class="strat-box sb-b">
+        <div class="sb-lbl">STEP 1</div>
+        <strong>図表を先に読む（30秒）</strong>：問題を解き始める前に、まず図表のタイトル・軸・凡例を確認する。「この図は何を示しているのか」の大枠を把握してから本文に入る。
+      </div>
+      <div class="strat-box sb-t">
+        <div class="sb-lbl">STEP 2</div>
+        <strong>本文の「数値・時期・比較」に反応する</strong>：図表が絡む問題の根拠は必ず「数値・時期・グループの比較」を含む部分にある。これらの語が出たら図表と照合する準備をする。
+      </div>
+      <div class="strat-box sb-a">
+        <div class="sb-lbl">STEP 3</div>
+        <strong>本文と図表の「言い換え」を探す</strong>：本文の英語表現と図表のラベルは同じ言葉ではないことが多い。「本文の〇〇 = 図表の△△」という対応を見つけることが解答の鍵。
+      </div>
+    </div>
+  </div>
+
+  <!-- 字数制限和訳の攻略 -->
+  <div class="card">
+    <div class="lbl">字数制限日本語記述の攻略法（40〜50字）</div>
+    <div class="co co-r">
+      <div class="co-lbl">最大の落とし穴</div>
+      英語は読めたのに日本語にしたら60字を超えてしまう。または逆に短すぎて「過不足なく」の条件を満たせない。
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">
+      <div class="strat-box sb-b">
+        <div class="sb-lbl">鉄則1</div>
+        <strong>まず英文の「骨格」だけを日本語にする</strong>。肉付け（副詞句・関係詞節）は一旦省く。骨格の日本語が20〜25字なら、そこに必要な情報を足していく。
+      </div>
+      <div class="strat-box sb-t">
+        <div class="sb-lbl">鉄則2</div>
+        <strong>「〜から」「〜ため」「〜によって」などの接続語で凝縮する</strong>。英語で2文に分かれていても「AのためB」「AすることでB」と1文にまとめられることが多い。
+      </div>
+      <div class="strat-box sb-a">
+        <div class="sb-lbl">鉄則3</div>
+        <strong>書いた後に必ず字数を数える</strong>。40字以内なら38〜40字が理想。30字以下は情報不足、45字以上は削る作業が必要。
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 3 — 大問3 英作文 ══════════ -->
+<div class="tabpan" id="t3">
+
+  <div class="hero" style="background:linear-gradient(135deg,#1a1000,#2a1a00);">
+    <div class="hero-tag">大問3 — 合否の分岐点</div>
+    <div class="hero-h">条件付き自由英作文<br>「型」で戦う50〜60語の技術</div>
+    <div class="hero-p">英検準1級（120〜140語）に慣れた生徒が最も失点するセクション。削る技術と無駄のない型への順応度が直接スコアに影響する。</div>
+  </div>
+
+  <!-- 鉄の掟 -->
+  <div class="card">
+    <div class="lbl">農工大英作文 — 鉄の掟</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--rdl);border-radius:var(--r);border:1px solid rgba(239,68,68,.3);">
+        <span style="font-size:20px;flex-shrink:0;">⚠️</span>
+        <div>
+          <div style="font-size:13.5px;font-weight:700;color:#fca5a5;margin-bottom:3px;">字数オーバーが一番の失点パターン</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.65;">「指定字数（40〜60語）の中で、自分の意見と【必ず2つの理由・解決策】を書くこと」。英検準1級（120〜140語）に慣れた生徒は「書きすぎ（字数オーバー）」による失点に最も注意が必要。</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--tll);border-radius:var(--r);border:1px solid rgba(16,185,129,.3);">
+        <span style="font-size:20px;flex-shrink:0;">✅</span>
+        <div>
+          <div style="font-size:13.5px;font-weight:700;color:#6ee7b7;margin-bottom:3px;">前置きを省き、即座にFirst / Second</div>
+          <div style="font-size:12.5px;color:rgba(255,255,255,.7);line-height:1.65;">「I believe that...という前置き」「It is important to consider...という導入」は全て捨てる。1文で主張し、即座に「First, 〜. Second, 〜.」と展開する無駄のない型が必須。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 型の視覚化 -->
+  <div class="card">
+    <div class="lbl">農工大 英作文 鉄板テンプレート（50〜60語版）</div>
+    <div class="template-vis">
+      <div class="tv-row">
+        <div class="tv-label" style="background:var(--acl);color:var(--ac);">主張</div>
+        <div class="tv-content" style="background:var(--acl);color:var(--ac);">I think [主張を1文で簡潔に]. / I suggest two ways to [目標].</div>
+        <div class="tv-words" style="color:var(--ac);">〜8語</div>
+      </div>
+      <div style="height:6px;"></div>
+      <div class="tv-row">
+        <div class="tv-label" style="background:var(--tll);color:var(--tl);">First</div>
+        <div class="tv-content" style="background:var(--tll);color:var(--tld);">First, [理由・解決策①を1〜2文で]. [具体的な効果・理由を1文添える].</div>
+        <div class="tv-words" style="color:var(--tl);">〜20語</div>
+      </div>
+      <div style="height:6px;"></div>
+      <div class="tv-row">
+        <div class="tv-label" style="background:var(--tll);color:var(--tl);">Second</div>
+        <div class="tv-content" style="background:var(--tll);color:var(--tld);">Second, [理由・解決策②を1〜2文で]. [具体的な効果・理由を1文添える].</div>
+        <div class="tv-words" style="color:var(--tl);">〜20語</div>
+      </div>
+      <div style="height:6px;"></div>
+      <div class="tv-row">
+        <div class="tv-label" style="background:var(--s2,#2a3040);color:var(--t2);">締め</div>
+        <div class="tv-content" style="background:var(--sf2);color:var(--t2);">Therefore, [全体をまとめる1文]. ← <em>余裕があれば</em></div>
+        <div class="tv-words">〜10語</div>
+      </div>
+    </div>
+
+    <div class="co co-r" style="margin-top:10px;">
+      <div class="co-lbl">字数管理の鉄則</div>
+      主張8語 + First20語 + Second20語 = <strong>48語ベース</strong>。ここから調整して50〜60語に収める。締め文は入れられれば入れる程度。<strong>60語を1語でも超えたら即失点</strong>と心得る。
+    </div>
+  </div>
+
+  <!-- やってはいけないこと -->
+  <div class="card">
+    <div class="lbl">やってはいけないパターン（失点の原因Top3）</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid rgba(239,68,68,.3);">
+        <div style="background:var(--rdl);padding:8px 13px;font-size:12px;font-weight:700;color:#fca5a5;">❌ 失点パターン1 — 前置き長すぎ</div>
+        <div style="padding:10px 13px;font-size:13px;color:var(--t2);background:var(--bg3);">
+          "It is a well-known fact that food waste is a serious problem in modern society. I believe that it is very important for us to think about this issue seriously."<br>
+          <span style="color:var(--rd);font-size:12px;margin-top:4px;display:block;">→ この前置きだけで30語消費。肝心の理由が1つしか書けなくなる。</span>
+        </div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid rgba(245,158,11,.3);">
+        <div style="background:var(--aml);padding:8px 13px;font-size:12px;font-weight:700;color:#fcd34d;">⚠️ 失点パターン2 — 理由が1つしかない</div>
+        <div style="padding:10px 13px;font-size:13px;color:var(--t2);background:var(--bg3);">問題文に「TWO ways」「two reasons」と書かれているのに、理由を1つしか書いていない（または1つが曖昧すぎる）ケース。<span style="color:var(--am);display:block;margin-top:3px;font-size:12px;">→ 採点基準上、確実に大きく減点される。</span></div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid rgba(239,68,68,.3);">
+        <div style="background:var(--rdl);padding:8px 13px;font-size:12px;font-weight:700;color:#fca5a5;">❌ 失点パターン3 — 字数オーバー</div>
+        <div style="padding:10px 13px;font-size:13px;color:var(--t2);background:var(--bg3);">英検の感覚で70〜80語書いてしまう。<span style="color:var(--rd);display:block;margin-top:3px;font-size:12px;">→ 字数制限オーバーは採点対象外になることもある。書く前に「型」の語数を把握しておくことが必須。</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 4 — 過去問3題 ══════════ -->
+<div class="tabpan" id="t4">
+
+  <!-- 過去問1 -->
+  <div class="pq-card">
+    <div class="pq-hdr" style="background:var(--bg3);">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="pq-year" style="background:var(--acl);color:var(--ac);">2020年</span>
+        <div class="pq-theme">環境・社会テーマ — 食品廃棄物の解決策</div>
+      </div>
+      <span style="padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;background:var(--tll);color:var(--tl);">解決策×2を求めるパターン</span>
+    </div>
+    <div class="pq-body">
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--acl);color:var(--ac);">問題文</span>
+        <div class="pq-en">Japan burns or buries millions of tons of commercial food waste every year. Write a paragraph of 50-60 words in English stating two solutions to reduce Japanese food waste.</div>
+        <div class="pq-ja">日本は毎年何百万トンもの商業的食品廃棄物を焼却・埋め立てしています。日本の食品廃棄物を減らすための<strong>2つの解決策</strong>を50-60語の英語で書きなさい。</div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--tll);color:var(--tld);">解説（指導ポイント）</span>
+        <div style="padding:10px 13px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);font-size:13px;line-height:1.75;color:var(--t2);">
+          賛否を問うのではなく、ダイレクトに「2つの解決策」を求めているパターン。字数が50-60語と限られているため、<strong style="color:var(--tx);">導入は1文で短く済ませ、すぐにFirst/Secondで具体策を提示する</strong>構成力が問われます。
+        </div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--pul);color:var(--pu);">公式模範解答例 <span class="wordcount" style="background:var(--tll);color:var(--tl);">57 words</span></span>
+        <div class="model-ans">To reduce food waste, companies should review the amount of food they currently produce. The fact that there is discarded food means they can reduce their production. Moreover, they can devise more environmentally friendly means to reduce waste of food. For example, donation of surplus food to people in poverty will lead to cutting down food waste.</div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--aml);color:var(--amd);">模範解答の構造分析</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+          <div class="tip-item"><div class="tip-num" style="background:var(--ac);">1</div><div><strong>主張文（1文）</strong>：「To reduce food waste, companies should review...」→ 解決策①を即提示</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--tl);">2</div><div><strong>解決策①の補足（1文）</strong>：「The fact that there is discarded food means...」→ 理由を添える</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--tl);">3</div><div><strong>Moreover + 解決策②（2文）</strong>：環境に優しい手段 → 具体例（貧困層への寄付）</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 過去問2 -->
+  <div class="pq-card">
+    <div class="pq-hdr" style="background:var(--bg3);">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="pq-year" style="background:var(--tll);color:var(--tl);">2024年</span>
+        <div class="pq-theme">農業・政策テーマ — 若者の農業参加促進</div>
+      </div>
+      <span style="padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;background:var(--pul);color:var(--pu);">農工大アイデンティティ問題</span>
+    </div>
+    <div class="pq-body">
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--acl);color:var(--ac);">問題文</span>
+        <div class="pq-en">To address the labor shortage issue in agriculture, it has been suggested that the government of Japan should attract young people into the industry. Write a paragraph of 50-60 words in English suggesting TWO ways in which you think the government of Japan can promote the active participation of young people in the Japanese agricultural industry.</div>
+        <div class="pq-ja">農業における労働力不足に対処するため、日本政府は若者をこの産業に惹きつけるべきだと提案されています。若者の積極的な参加を促すために日本政府ができる<strong>2つの方法</strong>を50-60語の英語で書きなさい。</div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--tll);color:var(--tld);">解説（指導ポイント）</span>
+        <div style="padding:10px 13px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);font-size:13px;line-height:1.75;color:var(--t2);">
+          農工大のアイデンティティとも言える「農業問題」に関する出題。偏差値70の生徒であれば<strong style="color:var(--tx);">「補助金の支給（financial support）」「IT・AIを用いたスマート農業（smart agriculture using IT）」</strong>といった理系らしい解決策を、シンプルな英語でミスなく表現することが高得点のカギ。
+        </div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--pul);color:var(--pu);">解答例 <span class="wordcount" style="background:var(--tll);color:var(--tl);">54 words</span></span>
+        <div class="model-ans">I suggest two ways for the government to attract young people to agriculture. First, it should provide financial support to help them buy land and expensive machinery. Second, the government should promote smart agriculture using AI and robots. This will make farming less physically demanding and more appealing to the younger generation.</div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--aml);color:var(--amd);">模範解答の構造分析</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+          <div class="tip-item"><div class="tip-num" style="background:var(--ac);">1</div><div><strong>主張（1文）</strong>：「I suggest two ways...」→ 2つあることを明示してから展開</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--tl);">2</div><div><strong>First + 理由</strong>：財政支援（土地・機械購入の補助）</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--tl);">3</div><div><strong>Second + 効果</strong>：AI・ロボットによるスマート農業 → 肉体的負担の軽減 → 若者に魅力的</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 過去問3 -->
+  <div class="pq-card">
+    <div class="pq-hdr" style="background:var(--bg3);">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span class="pq-year" style="background:var(--aml);color:var(--am);">2025年</span>
+        <div class="pq-theme">大学・教育テーマ — 出席義務の賛否</div>
+      </div>
+      <span style="padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;background:var(--rdl);color:var(--rd);">A or B 選択パターン</span>
+    </div>
+    <div class="pq-body">
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--acl);color:var(--ac);">問題文</span>
+        <div class="pq-en">In some courses, attending two-thirds of the lectures is required in addition to passing an exam. In other courses, students are not required to attend the lectures and can simply pass the course by passing an exam. Which of the two do you think is better? Write a paragraph of 50-60 words in English giving two reasons to support your opinion.</div>
+        <div class="pq-ja">試験の合格に加えて講義の3分の2の出席が求められるコースと、出席は不要で試験に合格すればよいコースがあります。あなたはどちらが良いと思いますか？<strong>2つの理由</strong>を挙げて50-60語の英語で書きなさい。</div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--tll);color:var(--tld);">解説（指導ポイント）</span>
+        <div style="padding:10px 13px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);font-size:13px;line-height:1.75;color:var(--t2);">
+          学生生活に身近なテーマでの「A or B」選択問題。どちらを選んでも構わないが、<strong style="color:var(--tx);">「I think requiring attendance is better.」と1文で主張を終え、即座に理由2つを続けるテンプレートへの順応度</strong>が試される。字数管理が特に重要。
+        </div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--pul);color:var(--pu);">解答例 <span class="wordcount" style="background:var(--tll);color:var(--tl);">56 words</span></span>
+        <div class="model-ans">I think requiring lecture attendance is better. First, students can deeply understand the material through active discussions with their classmates, which cannot be done alone. Second, students can ask professors questions immediately if they do not understand something. Therefore, attending lectures provides valuable learning opportunities that go beyond simply passing exams.</div>
+      </div>
+      <div class="pq-section">
+        <span class="pq-section-lbl" style="background:var(--aml);color:var(--amd);">模範解答の構造分析</span>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:6px;">
+          <div class="tip-item"><div class="tip-num" style="background:var(--ac);">1</div><div><strong>主張（1文）</strong>：「I think requiring lecture attendance is better.」→ 即断言、前置き0</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--tl);">2</div><div><strong>First</strong>：ディスカッションによる深い理解 → 「which cannot be done alone」で補強</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--tl);">3</div><div><strong>Second</strong>：直接質問できる機会</div></div>
+          <div class="tip-item"><div class="tip-num" style="background:var(--am);">4</div><div><strong>Therefore（締め）</strong>：試験合格を超えた学習機会 → 上手く全体をまとめている</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ TAB 5 — 自己採点チェックシート ══════════ -->
+<div class="tabpan" id="t5">
+
+  <div class="hero" style="background:linear-gradient(135deg,#0d1a35,#0d2d1a);">
+    <div class="hero-tag">Self-Check Sheet</div>
+    <div class="hero-h">英作文 自己採点<br>チェックシート</div>
+    <div class="hero-p">書き終えたら以下のチェックリストで自分の答案を採点する。全項目に✓がつく状態が「合格答案」の基準。</div>
+  </div>
+
+  <!-- リアルタイム語数カウンター -->
+  <div class="card">
+    <div class="lbl">📏 リアルタイム語数カウンター</div>
+    <div class="ai-input-area" style="border-radius:var(--r);">
+      <div class="ai-input-hdr">
+        <span style="font-size:12px;color:var(--t2);">書いた答案をここに貼り付けると語数を自動カウント</span>
+        <span class="wc-live wc-warn" id="wc-display">0 words</span>
+      </div>
+      <textarea class="ai-textarea" id="answer-input" placeholder="Write your answer here to count words..." oninput="updateWC()" style="min-height:100px;"></textarea>
+      <div class="ai-footer" style="justify-content:flex-start;">
+        <div id="wc-status" style="font-size:13px;font-weight:700;color:var(--t3);">← 答案を入力すると判定が出ます</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- チェックリスト -->
+  <div class="card">
+    <div class="lbl">✅ 採点チェックリスト — 全項目に✓がつけば合格答案</div>
+
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:700;color:var(--ac);letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px;padding:5px 12px;background:var(--acl);border-radius:5px;display:inline-block;">字数（20点）</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">答案が <strong>50〜60語の範囲内</strong> に収まっている（上のカウンターで確認）</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">61語以上になっていない（1語オーバーでも即失点）</span>
+        </label>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:700;color:var(--tl);letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px;padding:5px 12px;background:var(--tll);border-radius:5px;display:inline-block;">構成（40点）</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;"><strong>主張が1文目に</strong>ある（「I think...」「I suggest two ways...」など）</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;"><strong>「First,」</strong> で始まる文がある（理由・解決策1つ目）</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;"><strong>「Second,」</strong> で始まる文がある（理由・解決策2つ目）</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">前置き（"It is well known that..." など）が<strong>ない</strong></span>
+        </label>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px;">
+      <div style="font-size:11px;font-weight:700;color:var(--am);letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px;padding:5px 12px;background:var(--aml);border-radius:5px;display:inline-block;">内容（30点）</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">理由・解決策①が<strong>具体的</strong>（曖昧な表現ではなく具体策が書かれている）</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">理由・解決策②が<strong>具体的</strong>で、①と重複していない</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">問題文が求めていること（解決策 or 理由 or どちらが良いか）に正確に答えている</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">「This will...」「which will make...」など<strong>効果・結果を1文添えている</strong></span>
+        </label>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:11px;font-weight:700;color:var(--pu);letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px;padding:5px 12px;background:var(--pul);border-radius:5px;display:inline-block;">文法・語彙（10点）</div>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">主語と動詞の一致（三単現のsなど）に間違いがない</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">同じ単語・表現を3回以上繰り返していない</span>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;padding:9px 12px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);">
+          <input type="checkbox" style="margin-top:2px;accent-color:var(--tl);width:16px;height:16px;flex-shrink:0;">
+          <span style="font-size:13.5px;line-height:1.65;">「very」「good」などの曖昧な語を使いすぎていない</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- スコア目安 -->
+  <div class="card">
+    <div class="lbl">📊 チェック数でスコアを見積もる</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px;">
+      <div style="padding:14px;background:var(--rdl);border-radius:var(--r);border:1px solid rgba(239,68,68,.3);text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fca5a5;">〜5個</div>
+        <div style="font-size:12px;color:var(--t2);margin-top:4px;">要再挑戦<br>型の確認から</div>
+      </div>
+      <div style="padding:14px;background:var(--aml);border-radius:var(--r);border:1px solid rgba(245,158,11,.3);text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fcd34d;">6〜8個</div>
+        <div style="font-size:12px;color:var(--t2);margin-top:4px;">あと一歩<br>×の項目を確認</div>
+      </div>
+      <div style="padding:14px;background:var(--acl);border-radius:var(--r);border:1px solid rgba(59,130,246,.3);text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#93c5fd;">9〜10個</div>
+        <div style="font-size:12px;color:var(--t2);margin-top:4px;">良好<br>内容の深化を</div>
+      </div>
+      <div style="padding:14px;background:var(--tll);border-radius:var(--r);border:1px solid rgba(16,185,129,.3);text-align:center;">
+        <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#6ee7b7;">全13個</div>
+        <div style="font-size:12px;color:var(--t2);margin-top:4px;">合格答案<br>この型を維持</div>
+      </div>
+    </div>
+    <div style="padding:12px 15px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--bd);font-size:13px;line-height:1.75;color:var(--t2);">
+      ✓がつかなかった項目を1つずつ潰していく。特に<strong style="color:#fca5a5;">字数オーバー</strong>と<strong style="color:#fcd34d;">前置きの存在</strong>は即失点なので最優先で直す。
+    </div>
+  </div>
+
+  <!-- 使える表現ストック -->
+  <div class="card">
+    <div class="lbl">🗂 頻出テーマ別 使える表現ストック</div>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);">
+        <div style="background:var(--tll);padding:8px 13px;font-size:12px;font-weight:700;color:#6ee7b7;">🌱 農業・環境テーマ</div>
+        <div style="padding:11px 13px;background:var(--bg3);font-family:'Source Serif 4',serif;font-size:13px;color:var(--tx);line-height:1.9;">financial support to help them buy land / smart agriculture using AI and robots / make farming less physically demanding / donate surplus food to people in poverty / reduce carbon emissions</div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);">
+        <div style="background:var(--acl);padding:8px 13px;font-size:12px;font-weight:700;color:#93c5fd;">🎓 教育・大学テーマ</div>
+        <div style="padding:11px 13px;background:var(--bg3);font-family:'Source Serif 4',serif;font-size:13px;color:var(--tx);line-height:1.9;">through active discussions with classmates / ask professors questions immediately / go beyond simply passing exams / provide valuable learning opportunities / develop critical thinking skills</div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);">
+        <div style="background:var(--pul);padding:8px 13px;font-size:12px;font-weight:700;color:#c4b5fd;">🔧 理系・テクノロジーテーマ</div>
+        <div style="padding:11px 13px;background:var(--bg3);font-family:'Source Serif 4',serif;font-size:13px;color:var(--tx);line-height:1.9;">introduce renewable energy sources / promote the use of AI and automation / reduce dependence on fossil fuels / develop more efficient systems / invest in research and development</div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);">
+        <div style="background:var(--aml);padding:8px 13px;font-size:12px;font-weight:700;color:#fcd34d;">🔗 型に使う接続表現</div>
+        <div style="padding:11px 13px;background:var(--bg3);display:flex;flex-wrap:wrap;gap:7px;">
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">First, ～.</span>
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">Second, ～.</span>
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">This will ～.</span>
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">which will make ～</span>
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">Therefore, ～.</span>
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">For example, ～.</span>
+          <span style="padding:4px 11px;background:var(--sf2);border:1px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;">Moreover, ～.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- /main -->
+
+<script>
+function tab(id){
+  document.querySelectorAll('.tabpan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tn').forEach(function(b){b.classList.remove('active');});
+  var idx={'t1':0,'t2':1,'t3':2,'t4':3,'t5':4};
+  var btns=document.querySelectorAll('.tn');
+  if(btns[idx[id]])btns[idx[id]].classList.add('active');
+  window.scrollTo(0,0);
+}
+function countWords(t){return t.trim().split(/\s+/).filter(function(w){return w.length>0;}).length;}
+function updateWC(){
+  var text=document.getElementById('answer-input').value;
+  var wc=countWords(text);
+  var el=document.getElementById('wc-display');
+  var st=document.getElementById('wc-status');
+  el.textContent=wc+' words';
+  el.className='wc-live';
+  if(wc===0){el.classList.add('wc-warn');st.textContent='← 答案を入力すると判定が出ます';st.style.color='var(--t3)';}
+  else if(wc<50){el.classList.add('wc-warn');st.textContent='⚠️ 字数不足（目標まであと'+(50-wc)+'語）';st.style.color='#fcd34d';}
+  else if(wc<=60){el.classList.add('wc-ok');st.textContent='✅ 字数OK！（50〜60語の範囲内）';st.style.color='#6ee7b7';}
+  else{el.classList.add('wc-over');st.textContent='❌ 字数オーバー（'+(wc-60)+'語多い。削ってください）';st.style.color='#fca5a5';}
+}
+</script>
+</body>
+</html>
