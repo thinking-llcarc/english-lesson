@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>青山学院大学 経営学部 2023年｜英語 完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--bd2:#ccc8be;
+  --tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+/* ─── HEADER ─── */
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.hdr-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+/* ─── PHASE NAV ─── */
+.pnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.pn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.pn:hover{color:var(--tx);}
+.pn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.pn.done{color:var(--tl);}
+.pn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pn.active .pn-num{background:var(--ac);color:#fff;}
+.pn.done .pn-num{background:var(--tl);color:#fff;}
+
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── CARDS ─── */
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* ─── PASSAGE ─── */
+.passage{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.2;color:var(--tx);}
+.passage p{margin-bottom:.9em;}
+.passage em{font-style:italic;}
+.ub{border-bottom:2px solid;padding-bottom:1px;}
+.u1{border-color:var(--rd);}
+.u2{border-color:var(--am);}
+.u3{border-color:var(--tl);}
+.u4{border-color:var(--ac);}
+.u6{border-color:var(--pu);}
+.u8{border-color:var(--acd);}
+.uB{border-bottom:2.5px double #0a1628;}
+.fl{color:var(--t3);font-style:italic;}
+.kw{background:var(--aml);border-radius:2px;padding:0 2px;font-weight:700;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--acd);color:#fff;font-size:9px;font-weight:700;margin-right:3px;vertical-align:middle;font-family:'Noto Sans JP',sans-serif;}
+
+/* ─── QUIZ ─── */
+.qblock{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qnum-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;font-size:12px;font-weight:700;margin-right:8px;vertical-align:middle;flex-shrink:0;}
+.qtext{font-size:14px;font-weight:700;line-height:1.6;display:inline;vertical-align:middle;}
+.qen{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin:10px 0;padding:12px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:8px 11px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:16px;}
+.rev-btn{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev-btn:hover{background:var(--acd);}
+.ans-block{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans-block.show{display:block;}
+
+/* ─── BONE BAR ─── */
+.bonebar{background:#0a1628;border-radius:var(--rl);padding:13px 17px;margin:10px 0;}
+.bb-row{display:flex;align-items:center;gap:7px;font-family:'Source Serif 4',serif;flex-wrap:wrap;margin-bottom:4px;}
+.bb-row:last-child{margin-bottom:0;}
+.bbl{font-size:10px;font-weight:700;font-family:'Noto Sans JP',sans-serif;padding:2px 7px;border-radius:3px;flex-shrink:0;}
+.bbs{background:#2563a8;color:#fff;}
+.bbv{background:#1e40af;color:#fff;}
+.bbo{background:#0f6e56;color:#fff;}
+.bbt{font-size:14px;font-weight:700;color:#fff;}
+.bbj{font-size:11px;color:rgba(255,255,255,.45);font-family:'Noto Sans JP',sans-serif;margin-left:3px;}
+.bbeq{color:rgba(255,255,255,.2);margin:0 3px;}
+
+/* ─── CALLOUT ─── */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* ─── PARA FLOW ─── */
+.pflow{display:flex;flex-direction:column;}
+.pf-item{display:flex;gap:0;align-items:stretch;margin-bottom:4px;}
+.pf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.pf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.pf-body{flex:1;padding:0 0 18px 13px;}
+.rtag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.one-liner{margin:6px 0;padding:8px 12px;border-radius:8px;font-size:13px;font-weight:700;border-left:3px solid transparent;line-height:1.6;}
+
+/* ─── SCORE ─── */
+.score-card{background:var(--sf);border-radius:var(--rl);padding:14px 18px;border:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sc-num{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--ac);}
+
+/* ─── NAV ─── */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:11px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:9px 17px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+
+/* ─── TABLE ─── */
+.ltable{width:100%;border-collapse:collapse;font-size:13px;}
+.ltable th{padding:8px 11px;background:var(--acd);color:#fff;font-size:11px;font-weight:700;text-align:left;}
+.ltable td{padding:8px 11px;border:.5px solid var(--bd);vertical-align:top;line-height:1.65;}
+.ltable tr:nth-child(even) td{background:var(--s2);}
+
+/* ─── GRID ─── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+@media(max-width:540px){.g2{grid-template-columns:1fr;}}
+
+/* ─── TRANSLATION ─── */
+.trans-input{width:100%;padding:12px 14px;font-size:14px;font-family:'Noto Sans JP',sans-serif;border:.5px solid var(--bd);border-radius:var(--r);background:var(--sf);color:var(--tx);resize:none;line-height:1.75;margin-top:8px;}
+.trans-input:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px rgba(44,95,138,.1);}
+.model-trans{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;padding:14px 16px;background:var(--sf3,#252d40);border-radius:var(--r);border-left:3px solid var(--tl);margin:8px 0;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜大学入試 完全解説</div>
+      <div class="brand-s">青山学院大学 経営学部 2023年 英語 問題1・問題2</div>
+    </div>
+  </div>
+  <span class="hdr-badge">青山学院 経営 2023</span>
+</div>
+
+<div class="pnav">
+  <button class="pn active" onclick="goP('p1')" id="pb1"><span class="pn-num">1</span>英文を読む</button>
+  <button class="pn" onclick="goP('p2')" id="pb2"><span class="pn-num">2</span>段落構造</button>
+  <button class="pn" onclick="goP('p3')" id="pb3"><span class="pn-num">3</span>設問A（1〜6）</button>
+  <button class="pn" onclick="goP('p4')" id="pb4"><span class="pn-num">4</span>設問A（7〜10）</button>
+  <button class="pn" onclick="goP('p5')" id="pb5"><span class="pn-num">5</span>設問B 和訳</button>
+  <button class="pn" onclick="goP('p6')" id="pb6"><span class="pn-num">6</span>問題2 英訳</button>
+</div>
+
+<div class="wrap">
+
+<!-- ══════════ P1 英文を読む ══════════ -->
+<div class="pan active" id="p1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">青山学院大学 経営学部 2023年 問題1</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">ポケモンGOと現代社会<br>— 監視資本主義の正体</div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">個人の具体的な「被害」から出発し、最後に「私たちは顧客ではなく商品だ」という衝撃的な結論に着地する帰納法的な論説文。</div>
+  </div>
+
+  <!-- 読む前の構造案内 -->
+  <div class="card">
+    <div class="lbl">読む前に — この文章の4つのブロック</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
+      <div style="padding:9px 12px;background:var(--rdl);border-radius:var(--r);border-left:3px solid var(--rd);"><strong>①P1〜2（具体例）</strong><br><span style="color:var(--t2);">デービッドの家に見知らぬハンターが押しかける</span></div>
+      <div style="padding:9px 12px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);"><strong>②P3〜4（説明）</strong><br><span style="color:var(--t2);">ポケモンGOの仕組みと爆発的普及</span></div>
+      <div style="padding:9px 12px;background:var(--pul);border-radius:var(--r);border-left:3px solid var(--pu);"><strong>③P5〜7（展開）</strong><br><span style="color:var(--t2);">企業との提携・スポンサービジネスの全容</span></div>
+      <div style="padding:9px 12px;background:var(--tll);border-radius:var(--r);border-left:3px solid var(--tl);"><strong>④P8〜9（結論）</strong><br><span style="color:var(--t2);">「もう一つのゲーム」→「私たちは顧客ではない」</span></div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="card">
+    <div class="lbl">本文（下線部・空所番号付き）</div>
+    <div class="passage">
+
+      <p><span class="pnum">1</span>The doorbell rang when David was taking a shower. Shower interrupted, he threw on a T-shirt and shorts and ran downstairs, opening the front door to a couple of teenagers waving their cell phones in his face. "Hey, you've got a Pokémon in your backyard. It's ours! Okay if we go back there and catch it?"</p>
+
+      <p>"A what?" He had no idea what they were talking about, but he was <span class="ub u1">⑴about to get educated</span>.</p>
+
+      <p><span class="pnum">2</span>David's doorbell rang four more times that evening: perfect strangers eager for access to his yard and disgusted when he asked them to leave. Throughout the days and evenings that followed, lots of Pokémon seekers came to his front door, some of them（ <strong>2</strong> ）and others long past that excuse. They held up their phones, pointing and shouting as they scanned his house and garden for the virtual creatures. <span class="ub uB">⑵<em>Looking at this small slice of world through their phones, they could see the Pokémon they were after but only at the expense of everything else.</em></span> They could not see a family's home. Instead, the game seized the house and the world around it, reinterpreting all of it in the world of Pokémon. David wondered, <em>When will this end? What gives them the right? Whom do I call to make this stop?</em></p>
+
+      <p><span class="pnum">3</span>Niantic, the company behind Pokémon Go, designed the game to be "played" in the real world, not on a screen. The idea is that players should be "going outside" for "adventures on foot" in the open spaces of cities, towns, and suburbs. The game is structured like a treasure hunt. Once you download the free application, you use GPS and your smartphone camera to hunt virtual creatures called Pokémon. The figures <span class="ub u3">⑶[appear / are located / as if / beside you / on your smartphone screen / they]</span> in your real-life surroundings: a complete stranger's backyard, a city street, a restaurant, a park, a drugstore. The ultimate goal is to capture all of the 151 Pokémon, but along the way players earn "experience points," rising to successive levels of experience. At level five, players can join one of three teams to battle Pokémon at sites referred to as "gyms."</p>
+
+      <p><span class="pnum">4</span>Released in July 2016, Pokémon Go became the most downloaded and highest-earning application within only a week, quickly achieving as many active Android users as Twitter. More than 60 percent of the application's downloads were in daily use, and that translated into a daily average of about 43.5 minutes per user.</p>
+
+      <p><span class="pnum">5</span>A remarkable pattern was slightly recognizable within days of the game's launch. A Virginia bar offered a discount to a Pokémon Go team; a tea shop in San Francisco offered a "buy one get one free" to the game's players. The owner of a pizza bar in New York paid about $10 for "Lure Modules," a virtual game item intended to attract Pokémon to a certain location, successfully producing virtual creatures on bar chairs and in bathroom stalls. During the first weekend of game play, the bar's sales shot up by 30 percent and later were reported to be 70 percent above average.</p>
+
+      <p><span class="pnum">6</span>John Hanke, the CEO of Niantic, admitted to the <em>Financial Times</em> that in addition to "in-application payments" for game items, "there is a second component to our business model at Niantic, which is the concept of <em>sponsored locations</em>." He explained that this new revenue stream had always been in the plan, noting that companies will "pay us to be locations within the virtual game board," the promise being that it drives <span class="ub u4">⑷foot traffic</span>. These sponsors, Hanke explained, would be charged on a "cost per visit" basis.</p>
+
+      <p><span class="pnum">7</span>For a while it seemed that everyone was making money. Niantic signed a deal with McDonald's to drive game users to its 30,000 Japanese outlets. A British mall owner commissioned "recharging teams" to walk around his malls with portable rechargers for game users. Starbucks announced that it would "join in with the fun," with 12,000 of its US stores becoming official "Pokéstops" or "gyms," along with a new "Pokémon Go Frappuccino… the perfect treat for any Pokémon trainer on the go." Another deal with Sprint, a cell phone carrier, would convert its 10,500 retail and service outlets into Pokémon centers. A UK insurance company offered special coverage for mobile phones, warning, "Don't let accidental damage get in the way of catching them all." Disney planned to transform its toy business "in a direction similar to Pokémon Go."</p>
+
+      <p><span class="pnum">8</span>The genius of Pokémon Go was to transform the game you see into a higher-order game, a game about a game. The players who took the city as their board, walking around its parks and restaurants, unknowingly constituted a totally different kind of human game board for this second and more significant game. The players in this other <em>real</em> game could not be found in the crowd of fans waving their phones in front of David's house. <span class="ub u6">⑹They</span> drive them to eat, drink, and purchase in the restaurants, bars, and shops that pay to play in its behavioral futures markets. With this second game board in motion, the players in the real game compete to get close to the trail of cash that follows each smiling member of the crowd.</p>
+
+      <p><span class="pnum">9</span>Pokémon Go attracts users into their business operations in which our personal experiences are packaged as a means to other people's ends. <span class="ub u8">⑻We are not the customers.</span> Niantic's actual customers are the enterprises that trade in its markets for future behavior.</p>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">本文を読んだら次へ</span>
+    <button class="btnp" onclick="goP('p2')">段落構造を見る →</button>
+  </div>
+</div>
+
+<!-- ══════════ P2 段落構造 ══════════ -->
+<div class="pan" id="p2">
+  <div class="card">
+    <div class="lbl">パラグラフリーディング — 各段落の役割・主張・問題との関係</div>
+    <div class="pflow">
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--rd);">1</div>
+          <div class="pf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--rdl);color:var(--rd);">具体例・導入</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">知らない10代の若者がポケモンを捕まえにデービッドの家に押しかける</div>
+          <div class="one-liner" style="background:var(--rdl);border-left-color:var(--rd);">デービッドはポケモンを全く知らなかったが「まさに知ることになる」瞬間だった。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⑴ be about to do「まさに〜しようとしている」→ ⑶ soon to learn が正解</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--am);">2</div>
+          <div class="pf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">被害の拡大・問題提起</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">何日も見知らぬ人が押しかけ、スマホ越しにしか世界を見られない人々の姿</div>
+          <div class="one-liner" style="background:var(--aml);border-left-color:var(--am);">スマホ越しには追いかけているポケモンだけが見えるが、それは「他のすべてを犠牲にした上でのこと」— 家族の家は見えない。ゲームが現実を乗っ取った。</div>
+          <div style="font-size:12px;color:var(--amd);margin-top:5px;padding:5px 10px;background:var(--aml);border-radius:5px;">⑵空所 young / 設問B 分詞構文の根拠段落</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--ac);">3</div>
+          <div class="pf-line" style="background:linear-gradient(var(--ac),var(--tl));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--acd);">ゲームの仕組み説明</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">現実空間でGPS・スマホカメラを使って仮想生物を捕まえる宝探し型ゲーム</div>
+          <div class="one-liner" style="background:var(--acl);border-left-color:var(--ac);">目標は151匹のコンプリート。レベル5でチームバトルが可能。無料アプリ。</div>
+          <div style="font-size:12px;color:var(--acd);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⑶並べ替え → as if が3番目</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">4</div>
+          <div class="pf-line" style="background:linear-gradient(var(--tl),var(--pu));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tld);">爆発的普及（数値根拠）</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">2016年7月リリース→1週間で最多DL・Twitterと同数のAndroidユーザーを獲得</div>
+          <div class="one-liner" style="background:var(--tll);border-left-color:var(--tl);">60%以上が毎日使用、平均43.5分/日。社会現象レベルの普及。</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--pu);">5</div>
+          <div class="pf-line" style="background:linear-gradient(var(--pu),#374151);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--pul);color:var(--pu);">ビジネス活用の具体例</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">バー・ティーショップ・ピザ店がゲームを利用して売上増（70%増）</div>
+          <div class="one-liner" style="background:var(--pul);border-left-color:var(--pu);">ルアーモジュール（$10）でポケモンを誘導→店に人を呼び込む構造が自然発生した。</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:#374151);">6</div>
+          <div class="pf-line" style="background:linear-gradient(#374151,var(--acd));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--s2);color:var(--t2);border:.5px solid var(--bd);">スポンサー制度の公式発表</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">CEO自らが「スポンサードロケーション」という第2ビジネスモデルを認める</div>
+          <div class="one-liner" style="background:var(--s2);border-left-color:var(--bd);">「foot traffic（客の出足）を呼び込む」価値でスポンサーから「来客数ごと課金」する。</div>
+          <div style="font-size:12px;color:var(--rd);margin-top:5px;padding:5px 10px;background:var(--rdl);border-radius:5px;">⑷ foot traffic = ユーザーが作る人の流れ ⑺ 来客数による従量課金制</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--acd);">7</div>
+          <div class="pf-line" style="background:linear-gradient(var(--acd),var(--tld));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--acd);">大企業との大規模提携</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">マクドナルド・スターバックス・スプリント・ディズニー・保険会社まで参入</div>
+          <div class="one-liner" style="background:var(--acl);border-left-color:var(--acd);">小規模な現象（P5）から産業全体を動かすレベルに拡大した。</div>
+          <div style="font-size:12px;color:var(--amd);margin-top:5px;padding:5px 10px;background:var(--aml);border-radius:5px;">⑸ 携帯電話カバーを無料配布 → 本文に言及なし（保険の話はある）</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tld);">8</div>
+          <div class="pf-line" style="background:linear-gradient(var(--tld),#1a0d35);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tld);">核心論点（ゲームの中のゲーム）</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">ポケモンGOの天才的な点：表のゲームの下に「もう一つの本当のゲーム」がある</div>
+          <div class="one-liner" style="background:var(--tll);border-left-color:var(--tl);">プレイヤーは気づかずに「人間のゲーム盤」を形成している。真のプレイヤーは企業。</div>
+          <div style="font-size:12px;color:var(--pu);margin-top:5px;padding:5px 10px;background:var(--pul);border-radius:5px;">⑹ They = The players（企業）= 前文のThe players in this other real game</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:#1a0d35;">9</div>
+          <div class="pf-line" style="background:transparent;"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:#2d1b69;color:#c4b5fd;">結論（衝撃的な逆説）</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「私たちは顧客ではない」— 私たちの行動データが商品として取引されている</div>
+          <div class="one-liner" style="background:var(--pul);border-left-color:var(--pu);">ナイアンティックの本当の顧客＝未来の行動を取引する企業たち。私たちは商品。</div>
+          <div style="font-size:12px;color:var(--rd);margin-top:5px;padding:5px 10px;background:var(--rdl);border-radius:5px;">⑻⑼⑽ の根拠段落</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p1')">← 本文</button>
+    <button class="btnp" onclick="goP('p3')">設問A（1〜6）→</button>
+  </div>
+</div>
+
+<!-- ══════════ P3 設問A 1〜6 ══════════ -->
+<div class="pan" id="p3">
+
+  <div style="background:linear-gradient(135deg,var(--acd),#1a0d35);border-radius:var(--rl);padding:18px 20px;margin-bottom:16px;color:#fff;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問A — 問1〜6</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">選択問題（3択）</div>
+    <div style="font-size:12px;opacity:.8;margin-top:4px;">選んでから「答えを見る」を押す。全選択肢の○×根拠を言えるかが本番の力。</div>
+  </div>
+
+  <div class="score-card">
+    <div><div class="lbl" style="margin-bottom:3px;">得点</div><div class="sc-num" id="sc1">— / 6</div></div>
+    <div style="font-size:12px;color:var(--t2);text-align:right;line-height:1.7;">根拠を本文で<br>指差してから答える</div>
+  </div>
+
+  <!-- 問1 -->
+  <div class="qblock">
+    <span class="qnum-badge">1</span>
+    <span class="qtext">下線部⑴の意味として最も適切なものはどれか。</span>
+    <div class="qen"><span class="ub u1">about to get educated</span></div>
+    <div class="choices" id="q1">
+      <button class="cb" onclick="ch('q1',1)"><span class="cn">1</span>becoming more and more skilled</button>
+      <button class="cb" onclick="ch('q1',2)"><span class="cn">2</span>old enough to go to school</button>
+      <button class="cb" onclick="ch('q1',3)"><span class="cn">3</span>soon to learn</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r1')">答えを見る</button>
+    <div class="ans-block" id="r1" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3</strong><br><br>
+      <strong>be about to do</strong>＝「まさに〜しようとしている」（直前の未来）<br>
+      <strong>get educated</strong>＝「教育を受ける・知識を得る」<br>
+      → ここでは「ポケモンのことを何も知らなかったデービッドが、侵入者が次々と現れることで、やがてポケモンについて知ることになった」という意味。<br><br>
+      <strong>根拠：</strong>直後のP2・P3でポケモンGOの説明が続く構成から「まさに何かを知ろうとしている」＝ soon to learn が正解。<br><br>
+      <strong>×1：</strong>「ますます熟練する」→ skillsの話は本文にない。<br>
+      <strong>×2：</strong>「学校に行ける年齢」→ 文脈と全く関係ない。
+    </div>
+  </div>
+
+  <!-- 問2 -->
+  <div class="qblock">
+    <span class="qnum-badge">2</span>
+    <span class="qtext">カッコに入るべき最も適切なものはどれか。</span>
+    <div class="qen">some of them（ <strong>2</strong> ）and others long past that excuse</div>
+    <div class="choices" id="q2">
+      <button class="cb" onclick="ch('q2',1)"><span class="cn">1</span>foreign</button>
+      <button class="cb" onclick="ch('q2',2)"><span class="cn">2</span>polite</button>
+      <button class="cb" onclick="ch('q2',3)"><span class="cn">3</span>young</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r2')">答えを見る</button>
+    <div class="ans-block" id="r2" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3（young）</strong><br><br>
+      <strong>構造の補完：</strong>some of them (being) young and others (being) long past that excuse<br><br>
+      「<strong>that excuse</strong>」＝「若いという言い訳」<br>
+      「long past that excuse」＝「その言い訳がとっくに通用しない年齢（= 大人）」<br><br>
+      意味：「年齢の若い者もいたが、若いという言い訳が通用する年齢をずっと超えた者たちもいた」<br>
+      → 子供だけでなく大人も押しかけてきた、という批判的なニュアンス。<br><br>
+      <strong>×1：</strong>foreign（外国人）→ 外国人か否かの対比は文脈にない。<br>
+      <strong>×2：</strong>polite（礼儀正しい）→ むしろ第1段落では礼儀なく押しかけてくる描写。
+    </div>
+  </div>
+
+  <!-- 問3 -->
+  <div class="qblock">
+    <span class="qnum-badge">3</span>
+    <span class="qtext">[ ]内を適切な語順に並べる場合、3番目に来るものはどれか。</span>
+    <div class="qen">The figures <span class="ub u3">[appear / are located / as if / beside you / on your smartphone screen / they]</span> in your real-life surroundings</div>
+    <div class="choices" id="q3">
+      <button class="cb" onclick="ch('q3',1)"><span class="cn">1</span>as if</button>
+      <button class="cb" onclick="ch('q3',2)"><span class="cn">2</span>beside you</button>
+      <button class="cb" onclick="ch('q3',3)"><span class="cn">3</span>on your smartphone screen</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r3')">答えを見る</button>
+    <div class="ans-block" id="r3" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：1（as if）</strong><br><br>
+      <strong>正しい語順：</strong><br>
+      The figures (<strong>1.appear</strong> <strong>2.on your smartphone screen</strong> <strong>3.as if</strong> <strong>4.they</strong> <strong>5.are located</strong> <strong>6.beside you</strong>) in...<br><br>
+      <strong>完成文：</strong>The figures appear on your smartphone screen as if they are located beside you in your real-life surroundings.<br><br>
+      → 「その姿形はあなたのスマホ画面に、まるであなたのそばに存在するかのように現れる」<br><br>
+      <strong>構文：</strong><br>
+      ・appear on your smartphone screen → 動詞＋場所<br>
+      ・as if + SV → 「まるで〜かのように」（様態の副詞節）<br>
+      ・they are located beside you → as if節の内容<br><br>
+      3番目＝ as if → 選択肢1
+    </div>
+  </div>
+
+  <!-- 問4 -->
+  <div class="qblock">
+    <span class="qnum-badge">4</span>
+    <span class="qtext">下線部⑷の意味として最も適切なものはどれか。</span>
+    <div class="qen">the promise being that it drives <span class="ub u4">foot traffic</span></div>
+    <div class="choices" id="q4">
+      <button class="cb" onclick="ch('q4',1)"><span class="cn">1</span>出現するポケモンの数</button>
+      <button class="cb" onclick="ch('q4',2)"><span class="cn">2</span>徒歩での移動時間</button>
+      <button class="cb" onclick="ch('q4',3)"><span class="cn">3</span>ユーザーが作る人の流れ</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r4')">答えを見る</button>
+    <div class="ans-block" id="r4" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3</strong><br><br>
+      <strong>foot traffic</strong>（商業用語）＝「客などの出足・人の流れ」<br>
+      <strong>drive foot traffic</strong>＝「人を（〜に）呼び寄せる」<br><br>
+      <strong>本文の根拠（P7）：</strong>"Niantic signed a deal with McDonald's to drive game users to its 30,000 Japanese outlets"<br>
+      → ゲームユーザーをマクドナルドの店舗に「呼び込む」＝ drive foot traffic と同じ意味。<br><br>
+      スポンサー企業は「自社の場所をゲームの仮想ゲーム盤の中に入れる」対価を払い、そこにユーザーが来ると課金される「come per visit（訪問ごとの課金）」制。<br><br>
+      <strong>×1：</strong>ポケモンの出現数の話ではない。<br>
+      <strong>×2：</strong>footを「徒歩」と誤読した罠。foot trafficは「徒歩の時間」ではない。
+    </div>
+  </div>
+
+  <!-- 問5 -->
+  <div class="qblock">
+    <span class="qnum-badge">5</span>
+    <span class="qtext">本文で言及されるスポンサーのサービスに当てはまらないものはどれか。</span>
+    <div class="choices" id="q5">
+      <button class="cb" onclick="ch('q5',1)"><span class="cn">1</span>自社の店舗にポケモンを出現させる。</button>
+      <button class="cb" onclick="ch('q5',2)"><span class="cn">2</span>携帯電話カバーを無料で配布する。</button>
+      <button class="cb" onclick="ch('q5',3)"><span class="cn">3</span>ユーザーに携帯電話の充電用の器具を提供する。</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r5')">答えを見る</button>
+    <div class="ans-block" id="r5" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：2（当てはまらないもの）</strong><br><br>
+      <strong>本文に言及されるスポンサーのサービスを確認：</strong><br><br>
+      <strong>選択肢1（言及あり）：</strong>P5「The owner of a pizza bar in New York paid about $10 for 'Lure Modules,' a virtual game item intended to attract Pokémon to a certain location」→ ピザ店が自店にポケモンを出現させた ✓<br><br>
+      <strong>選択肢2（言及なし）：</strong>保険会社は「スマホの専用保険」を提供した（P7）が、「携帯電話カバーを無料配布」は本文に記載なし ✗<br><br>
+      <strong>選択肢3（言及あり）：</strong>P7「A British mall owner commissioned 'recharging teams' to walk around his malls with portable rechargers for game users」→ 充電器を持ったチームが巡回 ✓<br><br>
+      <strong>罠の構造：</strong>保険会社の話は出てくるが、「カバーを配布」ではなく「スマホ破損の保険を提供」。言及されている内容と近い話題を使った混同罠。
+    </div>
+  </div>
+
+  <!-- 問6 -->
+  <div class="qblock">
+    <span class="qnum-badge">6</span>
+    <span class="qtext">下線部⑹が指示するのはどれか。</span>
+    <div class="qen"><span class="ub u6">They</span> drive them to eat, drink, and purchase in the restaurants, bars, and shops that pay to play in its behavioral futures markets.</div>
+    <div class="choices" id="q6">
+      <button class="cb" onclick="ch('q6',1)"><span class="cn">1</span>fans</button>
+      <button class="cb" onclick="ch('q6',2)"><span class="cn">2</span>phones</button>
+      <button class="cb" onclick="ch('q6',3)"><span class="cn">3</span>players</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r6')">答えを見る</button>
+    <div class="ans-block" id="r6" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3（players）</strong><br><br>
+      <strong>根拠（P8前文）：</strong>"The players in this other real game could not be found in the crowd of fans waving their phones in front of David's house."<br><br>
+      → 「本当のゲームのプレイヤー（= 企業・スポンサー）はデービッドの家の前でスマホを振っているファンの群れの中にいない」<br><br>
+      <strong>They</strong>＝ The players in this other real game（= 企業・スポンサー）<br>
+      <strong>them</strong>＝ ポケモンGOユーザー<br><br>
+      企業たちがユーザーを自社の飲食店・店舗に食べ・飲み・買い物させるように「駆り立てる（drive）」という構造。<br><br>
+      <strong>×1：</strong>fans→ 前文で「ファンの群れの中にはいない」と否定されている。<br>
+      <strong>×2：</strong>phones→ 代名詞の指示内容として文法的・意味的に不成立。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p2')">← 段落構造</button>
+    <button class="btnp" onclick="goP('p4')">設問A（7〜10）→</button>
+  </div>
+</div>
+
+<!-- ══════════ P4 設問A 7〜10 ══════════ -->
+<div class="pan" id="p4">
+
+  <div class="score-card">
+    <div><div class="lbl" style="margin-bottom:3px;">得点</div><div class="sc-num" id="sc2">— / 4</div></div>
+    <div style="font-size:12px;color:var(--t2);text-align:right;line-height:1.7;">設問A（7〜10）<br>内容一致・主題</div>
+  </div>
+
+  <!-- 問7 -->
+  <div class="qblock">
+    <span class="qnum-badge">7</span>
+    <span class="qtext">ポケモンGOのスポンサー料金の体系の記述として適切なものはどれか。</span>
+    <div class="choices" id="q7">
+      <button class="cb" onclick="ch('q7',1)"><span class="cn">1</span>ダウンロード数に応じた変動制</button>
+      <button class="cb" onclick="ch('q7',2)"><span class="cn">2</span>定額制</button>
+      <button class="cb" onclick="ch('q7',3)"><span class="cn">3</span>来客数による従量課金制</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r7')">答えを見る</button>
+    <div class="ans-block" id="r7" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3</strong><br><br>
+      <strong>根拠（P6）：</strong>"These sponsors, Hanke explained, would be charged on a 'cost per visit' basis."<br><br>
+      <strong>cost per visit</strong>＝「1訪問（来客）ごとのコスト」＝ 来客数に応じた従量課金制<br><br>
+      → スポンサー企業は「ゲームユーザーが自分たちの店舗を訪問するたびに」課金される仕組み。<br><br>
+      <strong>×1：</strong>ダウンロード数は関係ない（P4でダウンロード数の話はあるがビジネスモデルとは別）。<br>
+      <strong>×2：</strong>定額制ではなく1訪問ごとの課金。
+    </div>
+  </div>
+
+  <!-- 問8 -->
+  <div class="qblock">
+    <span class="qnum-badge">8</span>
+    <span class="qtext">下線部⑻の意味として適切なものはどれか。</span>
+    <div class="qen"><span class="ub u8">We are not the customers.</span></div>
+    <div class="choices" id="q8">
+      <button class="cb" onclick="ch('q8',1)"><span class="cn">1</span>ナイアンティックの本当の顧客はゲームのユーザーではない。</button>
+      <button class="cb" onclick="ch('q8',2)"><span class="cn">2</span>無料ダウンロードのゲームで遊んでいる者は客とはいえない。</button>
+      <button class="cb" onclick="ch('q8',3)"><span class="cn">3</span>私たちは店に引き寄せられないかぎり客ではない。</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r8')">答えを見る</button>
+    <div class="ans-block" id="r8" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：1</strong><br><br>
+      <strong>根拠（P9）：</strong>"Niantic's actual customers are the enterprises that trade in its markets for future behavior."<br><br>
+      → ナイアンティックの「本当の顧客」＝「未来の行動の市場で取引する企業たち」<br><br>
+      つまり We（ゲームユーザー）は顧客ではなく「商品」。私たちの個人的な体験・行動データが「他人の目的のための手段」として梱包・販売されている。<br><br>
+      <strong>×2：</strong>無料ダウンロードかどうかの話ではない（ゲーム内課金もある）。本質はビジネスモデルの問題。<br>
+      <strong>×3：</strong>「店に引き寄せられるかぎり」という条件の話ではない。
+    </div>
+  </div>
+
+  <!-- 問9 -->
+  <div class="qblock">
+    <span class="qnum-badge">9</span>
+    <span class="qtext">本文の内容に合致するものはどれか。</span>
+    <div class="choices" id="q9">
+      <button class="cb" onclick="ch('q9',1)"><span class="cn">1</span>デイビッドはポケモンGOのスポンサーである。</button>
+      <button class="cb" onclick="ch('q9',2)"><span class="cn">2</span>ポケモンGOの主な収益源はアプリのダウンロードである。</button>
+      <button class="cb" onclick="ch('q9',3)"><span class="cn">3</span>ポケモンGOのスポンサー収入は当初から予定されたものである。</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r9')">答えを見る</button>
+    <div class="ans-block" id="r9" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3</strong><br><br>
+      <strong>根拠（P6）：</strong>"He explained that this new revenue stream had always been in the plan"<br><br>
+      → スポンサー収入（sponsored locations）は「常に計画の中にあった」= 当初から予定されていた。<br><br>
+      <strong>×1：</strong>デービッドはポケモンGOを全く知らず、自宅に押しかけられた被害者。スポンサーとは無関係。<br>
+      <strong>×2：</strong>P3で「free application（無料アプリ）」と明示。主な収益源はゲーム内課金とスポンサー料。アプリのダウンロード自体は無料。
+    </div>
+  </div>
+
+  <!-- 問10 -->
+  <div class="qblock">
+    <span class="qnum-badge">10</span>
+    <span class="qtext">本文の題名として最も適切なものはどれか。</span>
+    <div class="choices" id="q10">
+      <button class="cb" onclick="ch('q10',1)"><span class="cn">1</span>CEOが語るポケモンGO開発秘話</button>
+      <button class="cb" onclick="ch('q10',2)"><span class="cn">2</span>ポケモンGOの人気の秘訣</button>
+      <button class="cb" onclick="ch('q10',3)"><span class="cn">3</span>ポケモンGOのもう一つの顔</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r10')">答えを見る</button>
+    <div class="ans-block" id="r10" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3</strong><br><br>
+      <strong>文章全体のテーマ：</strong>P6以降の「スポンサービジネス（P5〜7）」→「ゲームの中のゲーム（P8）」→「私たちは顧客ではない（P9）」がメインテーマ。<br><br>
+      「もう一つの顔」＝ 表向きのゲームの裏にある「監視資本主義・スポンサービジネス」という別の顔。<br><br>
+      <strong>×1：</strong>CEOの発言（P6）はあるが、「開発秘話」が主題ではない。<br>
+      <strong>×2：</strong>「人気の秘訣」だと表のゲームの話だけになり、P8〜9の本質的な議論が抜け落ちる。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p3')">← 設問A（1〜6）</button>
+    <button class="btnp" onclick="goP('p5')">設問B 和訳 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P5 設問B 和訳 ══════════ -->
+<div class="pan" id="p5">
+
+  <div class="card" style="background:linear-gradient(135deg,#0a1628,#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問B — 和訳問題</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;">下線部(B)を和訳しなさい</div>
+    <div style="font-size:12px;opacity:.8;">分詞構文の主語・at the expense of の意味・骨格から肉付けへの訳の手順を確認する。</div>
+  </div>
+
+  <!-- 対象文 -->
+  <div class="card">
+    <div class="lbl">下線部（B）</div>
+    <div class="qen" style="font-size:15px;line-height:2.2;">
+      <span class="ub uB">Looking at this small slice of world through their phones, they could see the Pokémon they were after but only at the expense of everything else.</span>
+    </div>
+
+    <!-- 自己訳入力 -->
+    <div style="font-size:12px;font-weight:700;color:var(--t2);margin-bottom:5px;margin-top:14px;">まず自分で和訳を書く（記入後に解説を見る）</div>
+    <textarea class="trans-input" id="trans-b" rows="3" placeholder="和訳を記入してください..."></textarea>
+    <button class="rev-btn" onclick="rv('rb')" style="margin-top:10px;">解説・模範訳を見る</button>
+    <div class="ans-block" id="rb" style="background:var(--tll);border:.5px solid #6ee7b7;">
+
+      <!-- 骨格分析 -->
+      <div style="font-size:11px;font-weight:700;color:var(--tld);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">構造分析</div>
+
+      <div class="bonebar" style="margin-bottom:12px;">
+        <div class="bb-row">
+          <span class="bbl" style="background:var(--am);color:#fff;">分詞構文</span>
+          <span class="bbt">Looking at this small slice of world through their phones</span>
+        </div>
+        <div class="bb-row">
+          <span class="bbj" style="margin-left:0;">主語 = they（= 直前文の lots of Pokémon seekers）</span>
+        </div>
+        <div style="height:.5px;background:rgba(255,255,255,.1);margin:7px 0;"></div>
+        <div class="bb-row">
+          <span class="bbl bbs">S</span><span class="bbt">they</span>
+          <span class="bbeq">+</span><span class="bbl bbv">V</span><span class="bbt">could see</span>
+          <span class="bbeq">+</span><span class="bbl bbo">O</span><span class="bbt">the Pokémon they were after</span>
+        </div>
+        <div class="bb-row">
+          <span class="bbl" style="background:#374151;color:#fff;">逆接</span>
+          <span class="bbt">but only at the expense of everything else</span>
+          <span class="bbj">→「しかし他のすべてを犠牲にした上でのみ」</span>
+        </div>
+      </div>
+
+      <!-- 重要表現 -->
+      <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;font-size:13px;">
+        <div style="padding:8px 12px;background:var(--sf);border-radius:var(--r);">
+          <strong>this small slice of world</strong>＝「この小さく切り取った世界」（スマホの画面という小さな窓から見た世界）
+        </div>
+        <div style="padding:8px 12px;background:var(--sf);border-radius:var(--r);">
+          <strong>the Pokémon they were after</strong>＝「彼らが追いかけていたポケモン」（関係詞節）
+        </div>
+        <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+          <strong>at the expense of 〜</strong>＝「〜を犠牲にして・〜を代償として」<br>
+          only at the expense of everything else＝「他のすべてを犠牲にした代償としてのみ（= 他は何も見えない状態で）」
+        </div>
+      </div>
+
+      <!-- 模範訳 -->
+      <div style="padding:14px 16px;background:#0a1628;border-radius:var(--r);color:#fff;font-size:14.5px;line-height:2;margin-bottom:10px;">
+        <div style="font-size:10px;font-weight:700;color:#7fb5d8;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">模範訳</div>
+        携帯電話を通して世界を小さく切り取って見ていた彼らには、追い求めているポケモンが見えていたが、ただそれは、他のすべては目に入らないという犠牲の上だった。
+      </div>
+
+      <!-- 和訳のステップ -->
+      <div style="font-size:12.5px;line-height:1.8;color:var(--tld);">
+        <strong>訳し方の手順：</strong><br>
+        ①分詞構文「Looking at...」→「〜を見ながら / 〜しながら」（主語はthey）<br>
+        ②骨格「they could see the Pokémon」→「彼らには〜が見えた」<br>
+        ③「they were after」→関係詞節「追いかけていた（ポケモン）」<br>
+        ④「but only at the expense of everything else」→「しかしそれは他の全てを犠牲にした代償として（でしかなかった）」
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p4')">← 設問A（7〜10）</button>
+    <button class="btnp" onclick="goP('p6')">問題2 英訳 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P6 問題2 英訳 ══════════ -->
+<div class="pan" id="p6">
+
+  <div class="card" style="background:linear-gradient(135deg,#0d2d1a,#0a1628);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">問題2 — 英訳問題</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;">次の文を英訳しなさい</div>
+    <div style="font-size:12px;opacity:.8;">複数の難所が含まれる。日本語を骨格から分解し、それぞれ適切な英語構文に置き換える。</div>
+  </div>
+
+  <!-- 対象文 -->
+  <div class="card">
+    <div class="lbl">問題文（日本語）</div>
+    <div style="font-size:17px;font-weight:700;line-height:1.9;padding:16px 18px;background:var(--s2);border-radius:var(--rl);border:.5px solid var(--bd);margin-bottom:14px;">
+      私はいくつもの言語を話すが、ある言語から別の言語へ切り替えると、自分の人格も身振りも考え方も、すべてが変わるのを感じる。
+    </div>
+
+    <!-- 自己英訳入力 -->
+    <div style="font-size:12px;font-weight:700;color:var(--t2);margin-bottom:5px;">まず自分で英訳を書く（記入後に解説を見る）</div>
+    <textarea class="trans-input" id="trans-2" rows="3" placeholder="English translation here..." style="font-family:'Source Serif 4',serif;"></textarea>
+    <button class="rev-btn" onclick="rv('r2e')" style="margin-top:10px;">解説・模範訳を見る</button>
+    <div class="ans-block" id="r2e" style="background:var(--tll);border:.5px solid #6ee7b7;">
+
+      <!-- 分解 -->
+      <div style="font-size:11px;font-weight:700;color:var(--tld);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;">日本語の分解と英語への対応</div>
+
+      <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:14px;font-size:13px;">
+        <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+          <div style="background:var(--acl);padding:7px 12px;font-weight:700;color:var(--acd);">①「私はいくつもの言語を話すが」</div>
+          <div style="padding:8px 12px;background:var(--sf);font-family:'Source Serif 4',serif;line-height:1.8;">
+            <strong>I speak several languages, but</strong><br>
+            <span style="color:var(--t2);">複数の言語 = several languages / いくつもの = several / though / although も可</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+          <div style="background:var(--aml);padding:7px 12px;font-weight:700;color:var(--amd);">②「ある言語から別の言語へ切り替えると」</div>
+          <div style="padding:8px 12px;background:var(--sf);font-family:'Source Serif 4',serif;line-height:1.8;">
+            <strong>when I switch from one language to another</strong><br>
+            <span style="color:var(--t2);">switch from A to B「AからBへ切り替える」/ one ... to another「ある〜から別の〜へ」</span>
+          </div>
+        </div>
+        <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+          <div style="background:var(--tll);padding:7px 12px;font-weight:700;color:var(--tld);">③「自分の人格も身振りも考え方も、すべてが変わるのを感じる」</div>
+          <div style="padding:8px 12px;background:var(--sf);font-family:'Source Serif 4',serif;line-height:1.8;">
+            <strong>I feel that everything changes — my personality, my gestures, and my way of thinking.</strong><br>
+            <span style="color:var(--t2);">feel that SV「〜が変わると感じる」/ everything changes が主節 / ダッシュで列挙</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 模範訳 -->
+      <div style="padding:14px 16px;background:#0a1628;border-radius:var(--r);color:#fff;font-size:14.5px;line-height:2;margin-bottom:10px;">
+        <div style="font-size:10px;font-weight:700;color:#7fb5d8;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">模範英訳</div>
+        I speak several languages, but when I switch from one language to another, I feel that everything changes — my personality, my gestures, and my way of thinking.
+      </div>
+
+      <!-- 別解 -->
+      <div style="padding:12px 14px;background:var(--acl);border-radius:var(--r);margin-bottom:10px;font-size:13px;">
+        <div style="font-weight:700;color:var(--ac);margin-bottom:5px;">別解・バリエーション</div>
+        <div style="font-family:'Source Serif 4',serif;line-height:1.8;">
+          Although I speak multiple languages, I find that switching from one to another changes everything about me — my personality, gestures, and way of thinking.<br>
+          <span style="color:var(--t2);font-family:'Noto Sans JP',sans-serif;font-size:12px;">→ find that + SV / switching ... changes ... という動名詞構文もOK</span>
+        </div>
+      </div>
+
+      <!-- 採点ポイント -->
+      <div style="font-size:12.5px;line-height:1.8;color:var(--tld);">
+        <strong>採点のポイント（青山学院 経営）：</strong><br>
+        ① switch from A to B の構文が正確か<br>
+        ② 「自分の人格・身振り・考え方」の3つを列挙できているか<br>
+        ③ 「〜のを感じる」＝ feel that SV / feel 〜 changing が使えているか<br>
+        ④ 全体の文法（時制・主述の一致）にミスがないか
+      </div>
+    </div>
+  </div>
+
+  <!-- 総まとめ -->
+  <div class="card" style="border-color:#9fe1cb;background:var(--tll);">
+    <div class="lbl" style="color:var(--tld);">この試験から学ぶ — 青山学院 経営の出題傾向</div>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--ac);">
+        <strong>長文の構成理解が全問の土台：</strong>P8〜9の「もう一つのゲーム論」と「We are not the customers」を理解していれば、8・9・10が全て解ける。文章を全て読んでいるかが分水嶺。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--am);">
+        <strong>内容一致（問5・9）は本文照合：</strong>「保険会社は保険を提供した（カバーを配布したのではない）」のような細部の違いが問われる。本文に戻って照合する習慣が必須。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--tl);">
+        <strong>英訳（問題2）は構文力：</strong>switch from A to B / feel that SV のような頻出構文を正確に運用できるかが問われる。直訳ではなく「英語の骨格に日本語を当てはめる」作業。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p5')">← 設問B</button>
+    <button class="btnp" onclick="goP('p1')">最初から復習 ↺</button>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// answers
+var ans={q1:3,q2:3,q3:1,q4:3,q5:2,q6:3,q7:3,q8:1,q9:3,q10:3};
+var selMap={};
+var revealed={};
+var panels=['p1','p2','p3','p4','p5','p6'];
+
+function goP(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.pn').forEach(function(b){b.classList.remove('active');});
+  var idx={p1:0,p2:1,p3:2,p4:3,p5:4,p6:5};
+  var btns=document.querySelectorAll('.pn');
+  if(btns[idx[id]])btns[idx[id]].classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function ch(qid,n){
+  selMap[qid]=n;
+  document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+  document.querySelector('#'+qid+' .cb:nth-child('+n+')').classList.add('sel');
+}
+
+function rv(rid){
+  var el=document.getElementById(rid);
+  if(!el)return;
+  el.classList.add('show');
+  // mark choices if MC
+  var qid=rid==='rb'||rid==='r2e'?null:rid.replace('r','q');
+  if(qid&&ans[qid]){
+    var c=ans[qid],my=selMap[qid];
+    document.querySelectorAll('#'+qid+' .cb').forEach(function(b,i){
+      b.classList.remove('sel','ok','ng');
+      if(i+1===c)b.classList.add('ok');
+      if(my&&i+1===my&&my!==c)b.classList.add('ng');
+    });
+  }
+  if(!revealed[rid]){
+    revealed[rid]=true;
+    updateScores();
+  }
+}
+
+function updateScores(){
+  // Score p3 (q1-q6)
+  var c1=0,t1=0;
+  ['q1','q2','q3','q4','q5','q6'].forEach(function(q){
+    var r='r'+q.replace('q','');
+    if(revealed[r]){t1++;if(selMap[q]===ans[q])c1++;}
+  });
+  var s1=document.getElementById('sc1');
+  if(s1){s1.textContent=c1+' / '+t1;s1.style.color=c1===t1&&t1>0?'var(--tl)':c1>=t1*.6?'var(--am)':'var(--rd)';}
+  // Score p4 (q7-q10)
+  var c2=0,t2=0;
+  ['q7','q8','q9','q10'].forEach(function(q){
+    var r='r'+q.replace('q','');
+    if(revealed[r]){t2++;if(selMap[q]===ans[q])c2++;}
+  });
+  var s2=document.getElementById('sc2');
+  if(s2){s2.textContent=c2+' / '+t2;s2.style.color=c2===t2&&t2>0?'var(--tl)':c2>=t2*.6?'var(--am)':'var(--rd)';}
+}
+</script>
+</body>
+</html>
