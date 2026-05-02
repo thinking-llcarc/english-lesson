@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>センター試験 会話文・熟語推測 完全解説｜論理で根拠を掴む｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+/* NAV */
+.qnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.qn{padding:10px 14px;font-size:11px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.qn:hover{color:var(--tx);}
+.qn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.qn.done{color:var(--tl);}
+.qn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.qn.active .qn-num{background:var(--ac);color:#fff;}
+.qn.done .qn-num{background:var(--tl);color:#fff;}
+
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* PHASE */
+.ph{display:none;}
+.ph.show{display:block;animation:fi .3s ease;}
+.ph-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:20px;font-size:11.5px;font-weight:700;margin-bottom:14px;font-family:'Noto Sans JP',sans-serif;}
+.ph1{background:var(--acl);color:var(--acd);}
+.ph2{background:var(--aml);color:var(--amd);}
+.ph3{background:var(--tll);color:var(--tld);}
+
+/* CARD */
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* CONVERSATION */
+.conv{display:flex;flex-direction:column;gap:2px;font-family:'Source Serif 4',serif;font-size:15px;line-height:2;padding:14px 16px;background:var(--s2);border-radius:var(--rl);border:.5px solid var(--bd);margin:12px 0;}
+.conv-line{display:flex;gap:12px;align-items:baseline;padding:4px 0;}
+.conv-spk{font-size:11px;font-weight:700;font-family:'Noto Sans JP',sans-serif;flex-shrink:0;min-width:56px;color:var(--t2);text-align:right;}
+.conv-txt{flex:1;line-height:1.85;}
+.box-blank{display:inline-flex;align-items:center;justify-content:center;min-width:48px;padding:1px 8px;background:var(--acd);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;border-radius:4px;margin:0 3px;vertical-align:middle;}
+
+/* LOGIC FLOW */
+.lflow{display:flex;flex-direction:column;gap:0;margin:12px 0;}
+.lf-item{display:flex;gap:0;align-items:stretch;}
+.lf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:40px;}
+.lf-dot{width:28px;height:28px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.lf-body{flex:1;padding:0 0 14px 12px;}
+.lf-role{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px;display:inline-block;margin-bottom:4px;font-family:'Noto Sans JP',sans-serif;}
+.lf-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.75;margin-bottom:3px;}
+.lf-ja{font-size:12.5px;color:var(--t2);line-height:1.7;}
+.lf-logic{font-size:12px;font-weight:700;padding:5px 10px;border-radius:6px;margin-top:5px;line-height:1.6;}
+.arrow-mid{text-align:center;font-size:16px;color:var(--ac);font-weight:700;margin:-4px 0;padding:0 0 0 19px;}
+
+/* KEY SIGNAL */
+.sig{display:inline-flex;align-items:center;gap:4px;padding:2px 9px;border-radius:5px;font-size:12px;font-weight:700;font-family:'Noto Sans JP',sans-serif;vertical-align:middle;}
+.sig-but{background:var(--rdl);color:var(--rd);}
+.sig-so{background:var(--acl);color:var(--ac);}
+.sig-now{background:var(--aml);color:var(--am);}
+.sig-even{background:var(--tll);color:var(--tl);}
+.sig-in{background:var(--pul);color:var(--pu);}
+
+/* CHOICES */
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:9px 12px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:11px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;}
+.rev{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev:hover{background:var(--acd);}
+.ans{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans.show{display:block;}
+
+/* CALLOUT */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* SCORE */
+.score-bar{background:var(--sf);border-radius:var(--rl);padding:13px 17px;border:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sc-n{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--ac);}
+
+/* NAV BUTTONS */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:14px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:10px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+
+/* PROOF STRIP */
+.proof{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.proof-hdr{padding:8px 14px;font-size:11px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;}
+.proof-body{padding:12px 14px;font-size:13px;line-height:1.8;}
+.proof-chain{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:8px 0;}
+.pc-box{padding:5px 12px;border-radius:7px;font-size:12.5px;font-weight:700;line-height:1.5;}
+.pc-arr{color:var(--t3);font-size:14px;font-weight:700;}
+
+/* HL in conv */
+.hl-key{background:#fff3cd;border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-sig{background:var(--rdl);border-radius:2px;padding:0 2px;font-weight:700;color:var(--rd);}
+.hl-ans{background:var(--tll);border-radius:2px;padding:0 2px;font-weight:700;color:var(--tld);}
+.hl-clue{border-bottom:2px solid var(--am);padding-bottom:1px;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜センター試験 完全解説</div>
+      <div class="brand-s">会話文・熟語推測 — 文と文の論理的つながりで必ず根拠が取れる</div>
+    </div>
+  </div>
+  <span class="badge">センター過去問</span>
+</div>
+
+<div class="qnav">
+  <button class="qn active" onclick="goQ('q0')" id="qb0"><span class="qn-num">★</span>核心の読み方</button>
+  <button class="qn" onclick="goQ('q18')" id="qb18"><span class="qn-num">18</span>Brad・期限</button>
+  <button class="qn" onclick="goQ('q19')" id="qb19"><span class="qn-num">19</span>David・冬の運動</button>
+  <button class="qn" onclick="goQ('q20')" id="qb20"><span class="qn-num">20</span>Tom・ブランド品</button>
+  <button class="qn" onclick="goQ('q27')" id="qb27"><span class="qn-num">27</span>call the shots</button>
+  <button class="qn" onclick="goQ('q28')" id="qb28"><span class="qn-num">28</span>epitome</button>
+  <button class="qn" onclick="goQ('q29')" id="qb29"><span class="qn-num">29</span>公園 ミニパーク</button>
+  <button class="qn" onclick="goQ('q30')" id="qb30"><span class="qn-num">30</span>Anne・岩の庭</button>
+  <button class="qn" onclick="goQ('q31')" id="qb31"><span class="qn-num">31</span>Carol・rock garden</button>
+</div>
+
+<div class="wrap">
+
+<!-- ★ 核心の読み方 -->
+<div class="pan active" id="q0">
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:7px;">The Core Method</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;line-height:1.25;margin-bottom:10px;">文と文は全て繋がっている<br>論理で根拠を掴む</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">「なんとなく雰囲気で選ぶ」から「前後の論理で必ず根拠が取れる」への転換。この問題集は全問それを証明する。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">会話文読解の鉄則 — 3つの論理接続</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--acd);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">① 前の発言が「理由・状況」→ 空所がその「結論・反応」</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--acl);">
+          前の発言で「問題・事実・状況」が述べられる → 空所にはそれを受けた「結論・判断・行動」が入る。<br>
+          <span style="color:var(--acd);font-weight:700;">So / Therefore / That's why が見えたら「この直前が理由」のサイン。</span>
+        </div>
+      </div>
+
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--am);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">② 空所の後の発言が「根拠の鍵」になる</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--aml);">
+          空所の直後の発言を見ると「空所に入るべき内容の答え合わせ」ができる。<br>
+          <span style="color:var(--amd);font-weight:700;">後ろの発言が「Yeah, you're right.」なら空所はHirokoが同意する内容。</span>
+        </div>
+      </div>
+
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--tl);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">③ 接続詞・副詞は「次に来る内容の方向」を予告する</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--tll);">
+          <span class="sig sig-but">But〜</span> → 逆のことが来る &nbsp;
+          <span class="sig sig-so">So〜</span> → 結論・結果が来る &nbsp;
+          <span class="sig sig-now">now that〜</span> → 状況が変わった前提<br>
+          <span class="sig sig-even">Furthermore〜</span> → さらに追加する &nbsp;
+          <span class="sig sig-in">In fact〜</span> → 強調・実際の話
+        </div>
+      </div>
+    </div>
+
+    <div class="co co-r" style="margin-top:14px;">
+      <div class="co-lbl">この問題集の使い方</div>
+      各問は「PHASE 1：白文で自分が考える」→「PHASE 2：論理の流れを可視化」→「PHASE 3：完全解説」の3段階。<br>
+      PHASE 2で「どの文がどの文の根拠になっているか」を矢印で追えるようになることが目標。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">鉄則を理解したら問題へ</span>
+    <button class="btnp" onclick="goQ('q18')">問18 → 最初の問題へ</button>
+  </div>
+</div>
+
+<!-- ══ 問18 ══ -->
+<div class="pan" id="q18">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--ac);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">18</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Brad と Mr. Tani — 課題提出の期限</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">So you still missed the deadline → 空所 → I can't accept it now.</div>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="ph show" id="q18p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Mr. Taniの「So you still missed the deadline, didn't you?」という発言の後に空所が来る。<br>
+      その後「I can't accept it now.（今は受け取れない）」と続く。<br>
+      空所に入るのはどんな内容か？
+    </div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">Brad:</span><span class="conv-txt">Excuse me, Mr. Tani. I'd like to hand in my assignment. I came yesterday, but you weren't here.</span></div>
+      <div class="conv-line"><span class="conv-spk">Mr. Tani:</span><span class="conv-txt">What time did you come?</span></div>
+      <div class="conv-line"><span class="conv-spk">Brad:</span><span class="conv-txt">About three in the afternoon.</span></div>
+      <div class="conv-line"><span class="conv-spk">Mr. Tani:</span><span class="conv-txt">So you still missed the deadline, didn't you? <span class="box-blank">18</span> I can't accept it now.</span></div>
+    </div>
+    <div class="choices" id="q18c">
+      <button class="cb" onclick="sel('q18c',1)"><span class="cn">①</span>You don't have any homework today.</button>
+      <button class="cb" onclick="sel('q18c',2)"><span class="cn">②</span>You knew the paper was due by noon.</button>
+      <button class="cb" onclick="sel('q18c',3)"><span class="cn">③</span>You were supposed to hand it in by today.</button>
+      <button class="cb" onclick="sel('q18c',4)"><span class="cn">④</span>Your assignment wasn't important.</button>
+    </div>
+    <button class="rev" onclick="showPh('q18p1','q18p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="ph" id="q18p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--t2);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--t2),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--s2);color:var(--t2);">Brad の発言（状況説明）</span>
+          <div class="lf-en">"I came yesterday, but <span class="hl-key">you weren't here.</span>"</div>
+          <div class="lf-ja">昨日来たが先生がいなかった → 提出できなかった理由</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ So（「だから」= 結論が来る）</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">根拠</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--aml);color:var(--amd);">Mr. Tani の確認（逆接＋結論）</span>
+          <div class="lf-en">"<span class="hl-sig">So</span> you <span class="hl-key">still</span> missed the deadline, <span class="hl-sig">didn't you?</span>"</div>
+          <div class="lf-ja"><strong>still（それでも）</strong>が重要：昨日来たことは認めるが「それでも締め切りに間に合っていない」という事実を確認</div>
+          <div class="lf-logic" style="background:var(--aml);color:var(--amd);">→ Mr. Taniはここで「締め切りを過ぎていること」を押さえた</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ 空所（締め切りに関する追加情報が入る）</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--ac);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--acl);color:var(--acd);">空所（締め切りの具体的な条件）</span>
+          <div class="lf-en">[空所] → "I can't accept it now."</div>
+          <div class="lf-ja">「今は受け取れない」の根拠になる内容が入るはず</div>
+          <div class="lf-logic" style="background:var(--acl);color:var(--acd);">→ Bradが「締め切りを知っていた・守るべきだった」という内容でないと「受け取れない」の理由にならない</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ 後の発言が空所の「答え合わせ」</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--tll);color:var(--tld);">Mr. Tani の結論</span>
+          <div class="lf-en">"I can't <span class="hl-ans">accept it now</span>."</div>
+          <div class="lf-ja">受け取れない → 理由は「締め切りを過ぎているから」</div>
+        </div>
+      </div>
+    </div>
+
+    <button class="rev" onclick="showPh('q18p2','q18p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="ph" id="q18p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② You knew the paper was due by noon.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="proof-chain">
+          <div class="pc-box" style="background:var(--aml);color:var(--amd);">昨日来た（=言い訳）</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--acl);color:var(--acd);">still missed（それでも遅刻）</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--tll);color:var(--tld);">②正午が締め切りと知っていた</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--rdl);color:var(--rd);">受け取れない</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          <strong>due by noon</strong>＝「正午が締め切り」。Bradは午後3時に来た → 締め切りは正午 → 知っていたのに来なかった → 受け取れない、という完璧な因果の連鎖。<br><br>
+          空所の後「I can't accept it now」の「now（今さら）」が重要。今さら受け取れない理由が空所に入っている。
+        </div>
+      </div>
+    </div>
+
+    <div class="conv" style="font-size:14px;">
+      <div class="conv-line"><span class="conv-spk">Brad:</span><span class="conv-txt">I'd like to hand in my assignment. I came yesterday, but <span class="hl-clue">you weren't here.</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Mr. Tani:</span><span class="conv-txt">What time did you come?</span></div>
+      <div class="conv-line"><span class="conv-spk">Brad:</span><span class="conv-txt"><span class="hl-clue">About three in the afternoon.</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Mr. Tani:</span><span class="conv-txt">So you <span class="hl-key">still</span> missed the deadline, didn't you? <span class="hl-ans">You knew the paper was due by noon.</span> I can't accept it now.</span></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> You don't have any homework today. → 宿題がないという話は全く関係ない。逆にBradは提出しようとしている。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> You were supposed to hand it in by today. → 「今日中に」提出すべきだった、なら今日来たBradが受け取ってもらえないのがおかしい。正午締め切りが根拠。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> Your assignment wasn't important. → 課題が重要でないなら「受け取れない」という強い言葉と矛盾。
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q0')">← 核心の読み方</button>
+      <button class="btnp" onclick="markDone('q18');goQ('q19')">問19へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問19 ══ -->
+<div class="pan" id="q19">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--am);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">19</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">David と Ruth — 冬の間の運動不足</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">I try to. [空所] → Well, now that the weather is better...</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q19p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Davidは「I try to.（やろうとしているけど）」と言った後に空所が続く。<br>
+      Ruthの次の発言「Well, <span class="hl-key">now that the weather is better</span>, you have no excuse not to walk!」に注目。<br>
+      「天気が良くなった今は言い訳できない」と言っている → 空所には「今まで歩けなかった言い訳」が入るはず。
+    </div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">David:</span><span class="conv-txt">I think I need to start exercising again. I didn't do much all winter.</span></div>
+      <div class="conv-line"><span class="conv-spk">Ruth:</span><span class="conv-txt">I thought you said you go for a long walk every day.</span></div>
+      <div class="conv-line"><span class="conv-spk">David:</span><span class="conv-txt">I try to. <span class="box-blank">19</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Ruth:</span><span class="conv-txt">Well, now that the weather is better, you have no excuse not to walk!</span></div>
+    </div>
+    <div class="choices" id="q19c">
+      <button class="cb" onclick="sel('q19c',1)"><span class="cn">①</span>Actually, I don't usually walk in the spring.</button>
+      <button class="cb" onclick="sel('q19c',2)"><span class="cn">②</span>But when it's cold and snowy, I get lazy.</button>
+      <button class="cb" onclick="sel('q19c',3)"><span class="cn">③</span>Exercising in the winter keeps me warm.</button>
+      <button class="cb" onclick="sel('q19c',4)"><span class="cn">④</span>In fact, I really like walking in the snow.</button>
+    </div>
+    <button class="rev" onclick="showPh('q19p1','q19p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q19p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--t2);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--t2),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--s2);color:var(--t2);">David の状況</span>
+          <div class="lf-en">"I didn't do much <span class="hl-key">all winter.</span>"</div>
+          <div class="lf-ja">冬の間ほとんど運動しなかった → 冬に問題があった</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--aml);color:var(--amd);">Davidの「でも〜」</span>
+          <div class="lf-en">"I try to. <span class="box-blank" style="display:inline-flex;background:var(--acd);color:#fff;border-radius:4px;padding:1px 8px;font-size:11px;font-weight:700;">19</span>"</div>
+          <div class="lf-ja">「やろうとしているけど」→ 逆接が続くはず（I try to. <strong>But</strong>...）</div>
+          <div class="lf-logic" style="background:var(--aml);color:var(--amd);">「try to」＝努力しようとしている + 空所はその努力ができない理由</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ 空所の後の発言が「答え合わせ」のカギ</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--ac);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--acl);color:var(--acd);">Ruth の発言（最重要の根拠）</span>
+          <div class="lf-en">"Well, <span class="hl-ans">now that the weather is better</span>, you have no excuse not to walk!"</div>
+          <div class="lf-ja"><strong>now that the weather is better</strong>「天気が良くなった今となっては」<br>→ これは「今まで天気が良くなかったことが言い訳だった」ことを示している！</div>
+          <div class="lf-logic" style="background:var(--acl);color:var(--acd);">→ 空所は「天気が悪い（寒い・雪）と歩けない」という内容でなければRuthの発言が成立しない</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q19p2','q19p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q19p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② But when it's cold and snowy, I get lazy.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="proof-chain">
+          <div class="pc-box" style="background:var(--aml);color:var(--amd);">冬は運動しなかった</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--acl);color:var(--acd);">②寒くて雪の日は怠けてしまう</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--tll);color:var(--tld);">「天気が良い今は言い訳できない」</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          <strong>核心：「now that the weather is better」から逆算する。</strong><br>
+          Ruthが「天気が良くなった今は言い訳できない」と言うためには、Davidが「天気が悪いと歩けない」と言っていなければならない。<br>
+          ②「But when it's cold and snowy, I get lazy.（でも寒くて雪の日はなまけてしまう）」が完璧に対応。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> Actually, I don't usually walk in the spring. → 「春は歩かない」なら、天気が良い春になっても言い訳できるはず。Ruthの「no excuse」と矛盾。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> Exercising in the winter keeps me warm. → 冬の運動が体を温めると言うなら「冬はむしろ運動しやすい」となり、冬に運動しなかった事実と矛盾。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> In fact, I really like walking in the snow. → 雪の中の歩きが好きなら「冬に運動しなかった」と言わないはず。最初の発言と矛盾。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q18')">← 問18</button>
+      <button class="btnp" onclick="markDone('q19');goQ('q20')">問20へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問20 ══ -->
+<div class="pan" id="q20">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--pu);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">20</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Tom と Hiroko — ブランド品は価値があるか</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">I don't, either. [空所] → Yeah, you're right. I think inexpensive bags are just as good...</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q20p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Tomは「I don't, either.（私も買わない）」と言い空所を続ける。<br>
+      Hirokoの次の発言「Yeah, you're right.（そうだね、あなたは正しい）」に注目。<br>
+      HirokoはTomの意見に同意している → 空所はHirokoが「そうだね」と言える内容。<br>
+      さらに「I think inexpensive bags are just as good（安いバッグで十分）」と続く → ブランド品に否定的な意見。
+    </div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">Tom:</span><span class="conv-txt">Do you ever buy brand-name bags or wallets?</span></div>
+      <div class="conv-line"><span class="conv-spk">Hiroko:</span><span class="conv-txt">No, never.</span></div>
+      <div class="conv-line"><span class="conv-spk">Tom:</span><span class="conv-txt">I don't, either. <span class="box-blank">20</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Hiroko:</span><span class="conv-txt">Yeah, you're right. I think inexpensive bags are just as good, and I'd rather save money so I can travel.</span></div>
+    </div>
+    <div class="choices" id="q20c">
+      <button class="cb" onclick="sel('q20c',1)"><span class="cn">①</span>Brand-name goods aren't that expensive.</button>
+      <button class="cb" onclick="sel('q20c',2)"><span class="cn">②</span>However, it's important to have brand-name things.</button>
+      <button class="cb" onclick="sel('q20c',3)"><span class="cn">③</span>I don't think brand-name goods are worth the money.</button>
+      <button class="cb" onclick="sel('q20c',4)"><span class="cn">④</span>I think brand-name things are very fashionable.</button>
+    </div>
+    <button class="rev" onclick="showPh('q20p1','q20p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q20p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--pu);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--pu),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--pul);color:var(--pu);">会話の流れ</span>
+          <div class="lf-en">Hiroko: "No, never." → Tom: "I don't, either."</div>
+          <div class="lf-ja">2人ともブランド品を買わない → 共通の立場が確立</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ 空所（Tomがその理由・意見を述べる）</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--aml);color:var(--amd);">空所の条件</span>
+          <div class="lf-en">条件1：Hirokoが「Yeah, you're right.」と同意できる内容</div>
+          <div class="lf-en">条件2：「inexpensive bags are just as good」と続く内容と一致</div>
+          <div class="lf-logic" style="background:var(--aml);color:var(--amd);">→ ブランド品は「価値がない・お金の無駄」という方向の意見</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ 後ろの発言が完全に方向を示す</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--tll);color:var(--tld);">Hirokoの同意発言（答え合わせ）</span>
+          <div class="lf-en">"Yeah, you're right. I think <span class="hl-ans">inexpensive bags are just as good</span>, and <span class="hl-ans">I'd rather save money</span>."</div>
+          <div class="lf-ja">安い物で十分 / お金を節約したい → ブランド品はお金の価値がないという意見への同意</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q20p2','q20p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q20p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：③ I don't think brand-name goods are worth the money.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="proof-chain">
+          <div class="pc-box" style="background:var(--pul);color:var(--pu);">2人ともブランド品を買わない</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--tll);color:var(--tld);">③お金の価値がないと思う</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--acl);color:var(--acd);">「そうだね、安い物で十分」</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          <strong>worth the money</strong>＝「お金を出す価値がある」。否定形で「ブランド品はお金を出す価値がない」。<br>
+          Hirokoの「inexpensive bags are just as good（安い物で十分）」「I'd rather save money（節約したい）」は③の論理的な続き。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> Brand-name goods aren't that expensive. → ブランド品が高くないと言うなら「お金を節約するために買わない」というHirokoの発言と矛盾。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> However, it's important to have brand-name things. → Howeverで始まりブランド品を肯定 → HirokoがYeah, you're right.と同意できない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> I think brand-name things are very fashionable. → ファッション性を認める発言 → HirokoがYeah, you're right.と言いにくい（Hirokoはファッションより節約派）。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q19')">← 問19</button>
+      <button class="btnp" onclick="markDone('q20');goQ('q27')">問27へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問27 call the shots ══ -->
+<div class="pan" id="q27">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--rd);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">27</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">第3問A 問1 — call the shots の意味推測</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">熟語の意味を文脈から推測する問題</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q27p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">Judy:</span><span class="conv-txt">Hi, Luke. Where's Bob? I thought he wanted to help us clean up the beach.</span></div>
+      <div class="conv-line"><span class="conv-spk">Luke:</span><span class="conv-txt">I decided not to ask him to come.</span></div>
+      <div class="conv-line"><span class="conv-spk">Judy:</span><span class="conv-txt">Really? Why not?</span></div>
+      <div class="conv-line"><span class="conv-spk">Luke:</span><span class="conv-txt">He always thinks he should be the one <span class="hl-clue">to call the shots</span> whenever we do anything like this. If someone suggests a different idea, Bob always ignores it or gets angry.</span></div>
+    </div>
+    <div style="font-size:13.5px;font-weight:700;margin:10px 0 8px;">In this situation, to call the shots means to <span class="box-blank">27</span>.</div>
+    <div class="choices" id="q27c">
+      <button class="cb" onclick="sel('q27c',1)"><span class="cn">①</span>ask questions</button>
+      <button class="cb" onclick="sel('q27c',2)"><span class="cn">②</span>avoid trouble</button>
+      <button class="cb" onclick="sel('q27c',3)"><span class="cn">③</span>have control</button>
+      <button class="cb" onclick="sel('q27c',4)"><span class="cn">④</span>make friends</button>
+    </div>
+    <button class="rev" onclick="showPh('q27p1','q27p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q27p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 文脈から意味を推測する</div>
+    <div class="co co-a" style="margin-bottom:12px;">
+      <div class="co-lbl">熟語推測の手順</div>
+      知らない表現が出たら「その前後の文」が必ず意味のヒントになっている。「call the shots」の直後の文を見る。
+    </div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">手がかり</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--aml);color:var(--amd);">直後の文（意味を説明している）</span>
+          <div class="lf-en">"<span class="hl-key">If someone suggests a different idea</span>, Bob always <span class="hl-ans">ignores it or gets angry</span>."</div>
+          <div class="lf-ja">誰かが違う意見を提案すると → Bobはそれを無視するか怒る</div>
+          <div class="lf-logic" style="background:var(--aml);color:var(--amd);">→ Bobは「自分が決める人・仕切る人」でなければ気が済まない → 「call the shots」＝「決定権を持つ・コントロールする」</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">文脈</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--tll);color:var(--tld);">全体の文脈</span>
+          <div class="lf-en">"He always thinks he should be <span class="hl-ans">the one</span> to call the shots..."</div>
+          <div class="lf-ja">「the one（唯一の人・その人）」→ 主導権を持つべき唯一の人物でなければならない</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q27p2','q27p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q27p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：③ have control</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>call the shots</strong>（イディオム）＝「意思決定をする・主導権を握る・仕切る」<br><br>
+          <strong>文脈からの推測経路：</strong><br>
+          ①「自分が call the shots をすべき人物だと思っている」<br>
+          ②「他人が違う意見を出すと無視・怒る」<br>
+          ③ つまり「自分が決定権を持つ人物でないと気が済まない」<br>
+          ④ = have control（コントロールを持つ）
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> ask questions → 質問することなら怒ることとつながらない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> avoid trouble → トラブルを避けるなら、他人の意見で怒ることはない。逆。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> make friends → 友達を作ることなら他人の意見を無視しない。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q20')">← 問20</button>
+      <button class="btnp" onclick="markDone('q27');goQ('q28')">問28へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問28 epitome ══ -->
+<div class="pan" id="q28">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--acd);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">28</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">第3問A 問2 — epitome の意味推測</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">「逆説構造」から意味を推測する問題</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q28p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="conv" style="background:var(--sf);border:.5px solid var(--bd);">
+      <div class="conv-line" style="display:block;padding:4px 0;"><span style="font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.1;">In my high school years, my friend and I felt that Mr. Bell was the <span class="hl-clue">epitome</span> of a good high school PE teacher. He was <span class="hl-key">not tall or well-built</span>, <span class="hl-sig">but</span> he was able to teach sports which often required a lot of strength and endurance. Furthermore, he had the ability to make us do our best and never give up. Even today I believe I have never met a better PE teacher.</span></div>
+    </div>
+    <div style="font-size:13.5px;font-weight:700;margin:10px 0 8px;">In this situation, the <u>epitome</u> of a good PE teacher is one who is the <span class="box-blank">28</span>.</div>
+    <div class="choices" id="q28c">
+      <button class="cb" onclick="sel('q28c',1)"><span class="cn">①</span>athletic kind</button>
+      <button class="cb" onclick="sel('q28c',2)"><span class="cn">②</span>perfect example</button>
+      <button class="cb" onclick="sel('q28c',3)"><span class="cn">③</span>practical sort</button>
+      <button class="cb" onclick="sel('q28c',4)"><span class="cn">④</span>strict type</button>
+    </div>
+    <button class="rev" onclick="showPh('q28p1','q28p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q28p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 逆説構造から意味を推測</div>
+    <div class="co co-a" style="margin-bottom:12px;">
+      <div class="co-lbl">推測のカギ：逆説（but）構造</div>
+      「epitome」という語の前後に「not... but...」の逆説構造がある。これが意味推測の最大のヒント。
+    </div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--aml);color:var(--amd);">逆説の前半（否定）</span>
+          <div class="lf-en">"He was <span class="hl-key">not tall or well-built</span>..."</div>
+          <div class="lf-ja">背が高くも体格が良くもなかった → 見た目は「体育の先生らしくない」</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ <span class="sig sig-but">But</span></div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--tll);color:var(--tld);">逆説の後半（肯定・強調）</span>
+          <div class="lf-en">"<span class="hl-ans">but</span> he was able to teach sports... <span class="hl-ans">Furthermore</span>, he had the ability to make us do our best... <span class="hl-ans">Even today</span> I believe I have never met a better PE teacher."</div>
+          <div class="lf-ja">→ それでも（but）すごい先生だった → Furthermore（さらに）→ Even today（今日でさえ）と強調が連続</div>
+          <div class="lf-logic" style="background:var(--tll);color:var(--tld);">→「epitome」は「見た目は〜だが、それでも最高の先生の典型」= 「完璧な手本・典型」</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q28p2','q28p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q28p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② perfect example</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>epitome</strong>（名詞）＝「典型・代表例・縮図」<br><br>
+          <strong>推測の根拠：</strong><br>
+          ①「not tall or well-built」→ 体育教師のイメージに反する外見<br>
+          ②「but... Furthermore... Even today never met a better」→ 全ての強調が「この先生は最高だった」を示す<br>
+          ③ 体育教師らしくない見た目なのに最高の先生 = 「良い体育教師の完璧な見本・典型」<br>
+          ④ = the perfect example
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> athletic kind → 「運動神経の良いタイプ」なら not tall or well-built という描写と矛盾。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> practical sort → 「実践的なタイプ」は部分的に正しいが、epitomeの「典型・完璧な見本」という意味は持たない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> strict type → 「厳しいタイプ」は本文に記述なし。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q27')">← 問27</button>
+      <button class="btnp" onclick="markDone('q28');goQ('q29')">問29へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問29 ══ -->
+<div class="pan" id="q29">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--tl);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">29</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">第3問B 問29 — Bobがミニ公園に付け加える説明</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">Jackの提案の内容を受けてBobが同意・補足する発言</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q29p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Jackが「木・芝生・ベンチ・花・本が読める場所」を提案した。BobはJackの案に同意し「That's pretty much what I imagined, too — a kind of miniature park that <span class="box-blank">29</span>.」と続ける。<br>
+      Jackが言ったことをBobが言い換えているか、補足しているかを考える。
+    </div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">Bob:</span><span class="conv-txt">Would anyone like to start with some suggestions? ... Yes, Jack?</span></div>
+      <div class="conv-line"><span class="conv-spk">Jack:</span><span class="conv-txt">I think there's enough space for a small park with at least one tree, maybe two ... and a lawn of beautiful green grass. Maybe we can put a bench there as well. Along one side, we could leave some space for flowers. <span class="hl-key">The park could be an ideal place to sit and read a book.</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Bob:</span><span class="conv-txt">That's pretty much what I imagined, too — a kind of miniature park that <span class="box-blank">29</span>.</span></div>
+    </div>
+    <div class="choices" id="q29c">
+      <button class="cb" onclick="sel('q29c',1)"><span class="cn">①</span>can be used for community events</button>
+      <button class="cb" onclick="sel('q29c',2)"><span class="cn">②</span>creates a comfortable and peaceful atmosphere</button>
+      <button class="cb" onclick="sel('q29c',3)"><span class="cn">③</span>suits the architecture of the new library</span></button>
+      <button class="cb" onclick="sel('q29c',4)"><span class="cn">④</span>would be a good place to park a car</button>
+    </div>
+    <button class="rev" onclick="showPh('q29p1','q29p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q29p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — Jackの発言をまとめる</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">Jack</div>
+          <div class="lf-line" style="background:linear-gradient(var(--tl),var(--ac));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--tll);color:var(--tld);">Jackの提案の要素</span>
+          <div class="lf-en">木・緑の芝生・ベンチ・花 + "an <span class="hl-ans">ideal place to sit and read a book</span>"</div>
+          <div class="lf-ja">→ 静かに座って本が読めるくつろぎの場所</div>
+          <div class="lf-logic" style="background:var(--tll);color:var(--tld);">キーワード：comfortable（快適）・peaceful（穏やか）・relaxing（くつろげる）</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ Bobがこれを受けて言い換える</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--ac);">Bob</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--acl);color:var(--acd);">Bobの言い換え条件</span>
+          <div class="lf-en">"That's pretty much what I imagined" → Jackの案を肯定・言い換え</div>
+          <div class="lf-ja">空所 = Jackの提案「本が読めるくつろぎの場」を言い換えた表現</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q29p2','q29p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q29p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② creates a comfortable and peaceful atmosphere</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          Jackの「sit and read a book（座って本を読む）」→「comfortable（快適）」「peaceful（穏やか）」な雰囲気に言い換え。<br>
+          木・芝生・花が作り出すのは comfortable and peaceful な環境。これがBobの言う「miniature park」のイメージ。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> can be used for community events → コミュニティイベントの話はJackもBobも言及していない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> suits the architecture of the new library → 図書館の建築に合うかどうかは話題になっていない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> would be a good place to park a car → 駐車場の話は「駐車場の隣の空き地」という設定だが、ミニ公園の提案なので車の駐車は論外。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q28')">← 問28</button>
+      <button class="btnp" onclick="markDone('q29');goQ('q30')">問30へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問30 ══ -->
+<div class="pan" id="q30">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--am);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">30</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">第3問B 問30 — BobがAnneの発言を要約する</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">「So what you're saying is...」= 相手の発言の要約</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q30p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-a" style="margin-bottom:12px;">
+      <div class="co-lbl">「So what you're saying is...」の構造</div>
+      この表現は「つまりあなたが言いたいのは〜ということ」= Anneの発言の要約・言い換え。空所には直前のAnneの発言の内容をまとめた選択肢が入る。
+    </div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">Anne:</span><span class="conv-txt">Well, last year my husband and I decided to change our lawn into a desert-style rock garden, so we hired an expert to make one for us. <span class="hl-key">It looks great, but more importantly, doesn't need much care.</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Bob:</span><span class="conv-txt">So what you're saying, Anne, is <span class="box-blank">30</span>.</span></div>
+    </div>
+    <div class="choices" id="q30c">
+      <button class="cb" onclick="sel('q30c',1)"><span class="cn">①</span>a desert-style garden is better because it is more economical</button>
+      <button class="cb" onclick="sel('q30c',2)"><span class="cn">②</span>a park with a lawn would help create jobs for residents</button>
+      <button class="cb" onclick="sel('q30c',3)"><span class="cn">③</span>we can create a desert-style garden which looks professional</button>
+      <button class="cb" onclick="sel('q30c',4)"><span class="cn">④</span>we have enough money to maintain a lawn and a garden</button>
+    </div>
+    <button class="rev" onclick="showPh('q30p1','q30p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q30p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — Anneの発言の核心を掴む</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--t2);">背景</div>
+          <div class="lf-line" style="background:linear-gradient(var(--t2),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--s2);color:var(--t2);">Anneの問題提起（前の発言）</span>
+          <div class="lf-en">"do you know how much money it would cost to do what you propose? We would need to hire somebody to take care of the flowers, trees, and lawn..."</div>
+          <div class="lf-ja">→ Jackの案（芝生公園）は維持コストが高い という批判</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">核心</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--aml);color:var(--amd);">Anneの提案の核心</span>
+          <div class="lf-en">"It looks great, <span class="hl-sig">but more importantly</span>, <span class="hl-ans">doesn't need much care.</span>"</div>
+          <div class="lf-ja"><strong>but more importantly</strong>（でも何よりも重要なのは）→ 「手入れがほとんど要らない」がAnneの最重要ポイント</div>
+          <div class="lf-logic" style="background:var(--aml);color:var(--amd);">= 経済的（economical）= お金がかからない</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q30p2','q30p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q30p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：① a desert-style garden is better because it is more economical</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          Anneのポイント：「doesn't need much care（手入れがほとんど要らない）」<br>
+          = 維持費・人件費が安い = economical（経済的）<br>
+          Bob は「So what you're saying is...」でAnneの発言の核心を要約 → ①が正解。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> a park with a lawn would help create jobs → AnneはむしろJackの「芝生の公園案」のコスト問題を批判している側。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> looks professional → Anneは「more importantly, doesn't need much care」と言っており、見た目の専門性より経済性を優先している。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> we have enough money → Anneは「how much money it would cost」と費用の問題を提起した人。お金が十分あるとは言っていない。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q29')">← 問29</button>
+      <button class="btnp" onclick="markDone('q30');goQ('q31')">問31へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問31 ══ -->
+<div class="pan" id="q31">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--tld);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">31</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">第3問B 問31 — Carol と Anne の結論</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">Carolの反論への応答でAnneがまとめる</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q31p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      JackはデザートガーデンのイメージをNegativeに（暑い・不快）と言った。<br>
+      Carolはそれに反論し「It doesn't have to be that way（そんなことはない）」と可能性を説明した。<br>
+      AnneはCarolの説明を受けて「So, Carol and I think that <span class="box-blank">31</span>.」とまとめる。
+    </div>
+    <div class="conv">
+      <div class="conv-line"><span class="conv-spk">Jack:</span><span class="conv-txt">Hmmm. I have an image of deserts being really <span class="hl-key">hot and uncomfortable, not relaxing.</span></span></div>
+      <div class="conv-line"><span class="conv-spk">Carol:</span><span class="conv-txt"><span class="hl-sig">It doesn't have to be that way.</span> We could choose a variety of rocks and plants. For instance, we could use rocks that are green and smooth pebbles from river bottoms to create <span class="hl-ans">a cooler impression</span>. Some desert plants offer <span class="hl-ans">shade as well as beauty</span>.</span></div>
+      <div class="conv-line"><span class="conv-spk">Anne:</span><span class="conv-txt">So, Carol and I think that <span class="box-blank">31</span>.</span></div>
+    </div>
+    <div class="choices" id="q31c">
+      <button class="cb" onclick="sel('q31c',1)"><span class="cn">①</span>a rock garden cannot be as comfortable as a garden full of plants</button>
+      <button class="cb" onclick="sel('q31c',2)"><span class="cn">②</span>a rock garden would go well with the atmosphere of the town</button>
+      <button class="cb" onclick="sel('q31c',3)"><span class="cn">③</span>it is difficult to choose the right materials for a rock garden</button>
+      <button class="cb" onclick="sel('q31c',4)"><span class="cn">④</span>it is possible to create a refreshing space with a rock garden</button>
+    </div>
+    <button class="rev" onclick="showPh('q31p1','q31p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q31p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — Carolの反論の論理を追う</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--rd);">Jack</div>
+          <div class="lf-line" style="background:linear-gradient(var(--rd),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--rdl);color:var(--rd);">Jackの懸念（否定的イメージ）</span>
+          <div class="lf-en">"hot and uncomfortable, not relaxing"</div>
+          <div class="lf-ja">砂漠 = 暑い・不快・くつろげない</div>
+        </div>
+      </div>
+      <div class="arrow-mid">↓ <span class="sig sig-but">It doesn't have to be that way.（そんなことはない）</span></div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">Carol</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="lf-role" style="background:var(--tll);color:var(--tld);">Carolの反論（可能性の提示）</span>
+          <div class="lf-en">"create <span class="hl-ans">a cooler impression</span>" / "shade <span class="hl-ans">as well as</span> beauty"</div>
+          <div class="lf-ja">涼しい印象 / 美しさだけでなく日陰も提供できる<br>→ 「岩の庭でも涼しく快適な空間を作れる」</div>
+          <div class="lf-logic" style="background:var(--tll);color:var(--tld);">= it is possible to create a refreshing space with a rock garden</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q31p2','q31p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q31p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：④ it is possible to create a refreshing space with a rock garden</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="proof-chain">
+          <div class="pc-box" style="background:var(--rdl);color:var(--rd);">Jack：暑い・不快</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--acl);color:var(--acd);">Carol：そんなことはない</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--tll);color:var(--tld);">涼しい・日陰・美しい</div>
+          <div class="pc-arr">→</div>
+          <div class="pc-box" style="background:var(--tll);color:var(--tld);">④爽やかな空間は可能</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          Carolのキーワード：「cooler impression（涼しい印象）」「shade（日陰）」= refreshing（爽やかな）に言い換え。<br>
+          「It doesn't have to be that way」→「it is possible to」という肯定の可能性に変換。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> cannot be as comfortable → Carolは「可能だ」と反論しているのに「できない」という結論はおかしい。Carolの発言の方向と逆。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> go well with the atmosphere of the town → 街の雰囲気との調和は話題になっていない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> difficult to choose the right materials → Carolは「岩や植物を選べる（could choose）」と言っており、難しいとは言っていない。むしろ可能性を示している。
+      </div>
+    </div>
+
+    <!-- 全問まとめ -->
+    <div style="background:#0a1628;border-radius:var(--rl);padding:22px;color:#fff;margin-top:16px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:12px;">全問を通じて証明されたこと</div>
+      <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px;">
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>会話文は「前の発言が理由→空所が結論」：</strong>問18（missed deadline→can't accept）、問30（doesn't need care→economical）
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>「後ろの発言」が空所の答え合わせになる：</strong>問19（now that weather is better→寒いと歩けないという発言が必要）、問20（Yeah you're right→同意できる内容）
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>接続詞・副詞が方向を予告する：</strong>問28（not...but+Furthermore+Even today→典型例）、問31（It doesn't have to be that way→可能性）
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.15);border-radius:var(--r);border:1px solid rgba(255,255,255,.18);">
+          <strong>「なんとなく」ではなく「前後の論理的つながり」で根拠が取れる</strong> — 全8問が証明済み。
+        </div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q30')">← 問30</button>
+      <button class="btnp" onclick="markDone('q31');goQ('q0')">核心の読み方に戻る ↺</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+var selMap={};
+var doneList=[];
+
+function goQ(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.qn').forEach(function(b){b.classList.remove('active');});
+  var btn=document.getElementById('qb'+id.replace('q',''));
+  if(btn)btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function sel(qid,n){
+  selMap[qid]=n;
+  document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+  document.querySelector('#'+qid+' .cb:nth-child('+n+')').classList.add('sel');
+}
+
+function showPh(from,to){
+  var f=document.getElementById(from);
+  var t=document.getElementById(to);
+  if(f)f.classList.remove('show');
+  if(t){t.classList.add('show');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+}
+
+var answers={q18c:2,q19c:2,q20c:3,q27c:3,q28c:2,q29c:2,q30c:1,q31c:4};
+
+function markDone(qid){
+  if(doneList.indexOf(qid)<0)doneList.push(qid);
+  var btn=document.getElementById('qb'+qid);
+  if(btn)btn.classList.add('done');
+  // mark choices for this q
+  var cid=qid+'c';
+  if(answers[cid]){
+    var c=answers[cid],my=selMap[cid];
+    document.querySelectorAll('#'+cid+' .cb').forEach(function(b,i){
+      b.classList.remove('sel','ok','ng');
+      if(i+1===c)b.classList.add('ok');
+      if(my&&i+1===my&&my!==c)b.classList.add('ng');
+    });
+  }
+}
+</script>
+</body>
+</html>
