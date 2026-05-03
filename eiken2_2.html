@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>論理読解特訓 — A Toy Made from a Spring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f7f5f0;
+    --surface: #ffffff;
+    --surface2: #f0ede6;
+    --border: #ddd9d0;
+    --text: #1a1814;
+    --text2: #6b6760;
+    --text3: #9b9892;
+    --accent: #2c5f8a;
+    --accent-light: #e8f1f8;
+    --teal: #0f6e56;
+    --teal-light: #e1f5ee;
+    --amber: #854f0b;
+    --amber-light: #faeeda;
+    --coral: #993c1d;
+    --coral-light: #faece7;
+    --purple: #534ab7;
+    --purple-light: #eeedfe;
+    --green: #3b6d11;
+    --green-light: #eaf3de;
+    --red: #a32d2d;
+    --red-light: #fcebeb;
+    --radius: 10px;
+    --radius-lg: 16px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 0 0 0.5px rgba(0,0,0,0.06);
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 15px;
+    min-height: 100vh;
+  }
+
+  .page-header {
+    background: var(--surface);
+    border-bottom: 0.5px solid var(--border);
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: -0.02em;
+  }
+  .brand-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+  .brand-tagline {
+    font-size: 11px;
+    color: var(--text3);
+    margin-top: 2px;
+    letter-spacing: 0.03em;
+  }
+  .lesson-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text);
+    text-align: right;
+    font-family: 'Source Serif 4', serif;
+  }
+  .lesson-meta {
+    font-size: 11px;
+    color: var(--text3);
+    text-align: right;
+  }
+  .progress-bar-wrap {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text2);
+  }
+  .progress-bar {
+    width: 120px;
+    height: 4px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+  }
+
+  .step-nav {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .step-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    font-size: 12px;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--text2);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+  .step-btn:hover { background: var(--surface2); color: var(--text); }
+  .step-btn.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+  .step-btn.done {
+    background: var(--green-light);
+    color: var(--green);
+    border-color: #c0dd97;
+  }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .card {
+    background: var(--surface);
+    border-radius: var(--radius-lg);
+    border: 0.5px solid var(--border);
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text3);
+    margin-bottom: 12px;
+  }
+
+  .passage-text {
+    font-family: 'Source Serif 4', serif;
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text);
+  }
+  .passage-text p { margin-bottom: 1em; }
+  .passage-text p:last-child { margin-bottom: 0; }
+
+  .highlight-sentence {
+    background: #fff9e6;
+    border-radius: 3px;
+    padding: 1px 3px;
+    cursor: pointer;
+    transition: background 0.2s;
+    position: relative;
+  }
+  .highlight-sentence:hover { background: #ffef99; }
+  .highlight-sentence.focus {
+    background: #ffe066;
+    box-shadow: 0 0 0 2px #e6c200;
+  }
+
+  .blank-box {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 1px 10px;
+    border-radius: 4px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .blank-box:hover { background: #1e4a70; }
+  .blank-box.solved {
+    background: var(--teal);
+  }
+
+  .logic-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .flow-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .flow-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 32px;
+  }
+  .flow-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 2px solid var(--surface);
+    box-shadow: 0 0 0 1px var(--border);
+    flex-shrink: 0;
+    transition: background 0.3s;
+    margin-top: 4px;
+  }
+  .flow-dot.teal { background: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
+  .flow-dot.amber { background: var(--amber); box-shadow: 0 0 0 1px var(--amber); }
+  .flow-dot.purple { background: var(--purple); box-shadow: 0 0 0 1px var(--purple); }
+  .flow-dot.accent { background: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .flow-connector {
+    width: 1.5px;
+    flex: 1;
+    background: var(--border);
+    min-height: 24px;
+  }
+  .flow-content {
+    padding-bottom: 20px;
+    flex: 1;
+  }
+  .flow-content .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .flow-content .label.teal { color: var(--teal); }
+  .flow-content .label.amber { color: var(--amber); }
+  .flow-content .label.purple { color: var(--purple); }
+  .flow-content .label.accent { color: var(--accent); }
+  .flow-content .body {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .flow-content .body em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    vertical-align: middle;
+  }
+  .tag-contrast { background: var(--purple-light); color: var(--purple); }
+  .tag-cause { background: var(--amber-light); color: var(--amber); }
+  .tag-contrast2 { background: var(--coral-light); color: var(--coral); }
+  .tag-detail { background: var(--teal-light); color: var(--teal); }
+  .tag-result { background: var(--green-light); color: var(--green); }
+
+  .blank-section {
+    background: var(--surface2);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin: 16px 0;
+    border: 0.5px solid var(--border);
+  }
+  .blank-section h3 {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text2);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .blank-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .predict-box {
+    background: #fff9e6;
+    border-left: 3px solid #e6c200;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 14px 16px;
+    margin: 12px 0;
+    font-size: 14px;
+  }
+  .predict-box .predict-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #7a6600;
+    margin-bottom: 6px;
+  }
+
+  .choices-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  @media (max-width: 500px) { .choices-grid { grid-template-columns: 1fr; } }
+  .choice-btn {
+    padding: 10px 14px;
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
+    color: var(--text);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .choice-btn:hover { background: var(--surface2); border-color: var(--accent); }
+  .choice-btn.correct {
+    background: var(--green-light);
+    border-color: var(--teal);
+    color: var(--teal);
+    font-weight: 700;
+  }
+  .choice-btn.wrong {
+    background: var(--red-light);
+    border-color: var(--red);
+    color: var(--red);
+    opacity: 0.7;
+  }
+  .choice-btn.disabled { pointer-events: none; }
+  .choice-num {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text3);
+    flex-shrink: 0;
+  }
+
+  .explanation-box {
+    background: var(--teal-light);
+    border: 0.5px solid #9fe1cb;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--teal);
+    display: none;
+  }
+  .explanation-box.show { display: block; }
+  .explanation-box strong { font-weight: 700; }
+
+  .wrong-box {
+    background: var(--red-light);
+    border: 0.5px solid #f09595;
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--red);
+    display: none;
+  }
+  .wrong-box.show { display: block; }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 16px 0;
+  }
+  @media (max-width: 500px) { .summary-grid { grid-template-columns: 1fr; } }
+  .summary-card {
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
+    text-align: center;
+  }
+  .summary-card .sc-num {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .summary-card .sc-label {
+    font-size: 11px;
+    color: var(--text2);
+    font-weight: 500;
+  }
+  .score-correct { color: var(--teal); }
+  .score-wrong { color: var(--red); }
+  .score-total { color: var(--accent); }
+
+  .master-badge {
+    text-align: center;
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--teal);
+    background: var(--teal-light);
+    margin: 16px 0;
+  }
+  .master-badge .badge-icon {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+  .master-badge h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--teal);
+    margin-bottom: 4px;
+  }
+  .master-badge p {
+    font-size: 13px;
+    color: var(--text2);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover { background: #1e4a70; }
+  .btn-primary:active { transform: scale(0.98); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--surface);
+    color: var(--text);
+    border: 0.5px solid var(--border);
+    border-radius: var(--radius);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-secondary:hover { background: var(--surface2); }
+
+  .key-point {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    border-radius: var(--radius);
+    background: var(--surface2);
+    border: 0.5px solid var(--border);
+    margin-bottom: 10px;
+    font-size: 14px;
+    align-items: flex-start;
+  }
+  .key-point-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .step-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 0.5px solid var(--border);
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline;
+  }
+  .tooltip-text {
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: #fff;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 10;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+  .tooltip:hover .tooltip-text { opacity: 1; }
+
+  .logic-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+  .logic-badge.contrast { background: var(--purple-light); color: var(--purple); }
+  .logic-badge.cause { background: var(--amber-light); color: var(--amber); }
+  .logic-badge.result { background: var(--green-light); color: var(--green); }
+  .logic-badge.detail { background: var(--teal-light); color: var(--teal); }
+
+  .divider {
+    height: 0.5px;
+    background: var(--border);
+    margin: 20px 0;
+  }
+
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+  .panel.active { animation: fadeIn 0.25s ease; }
+
+  .sentence-list { list-style: none; }
+  .sentence-list li {
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-family: 'Source Serif 4', serif;
+    line-height: 1.7;
+    border: 0.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--text);
+  }
+  .sentence-list li:hover { background: var(--surface2); border-color: var(--border); }
+  .sentence-list li.lit { background: #fff9e6; border-color: #e6c200; }
+  .sentence-list li .sent-role {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 4px;
+    display: block;
+  }
+  .role-topic { color: var(--purple); }
+  .role-example { color: var(--amber); }
+  .role-contrast { color: var(--coral); }
+  .role-bridge { color: var(--accent); }
+  .role-cause { color: var(--teal); }
+  .role-result { color: var(--green); }
+  .role-blank { color: var(--accent); font-weight: 700; }
+
+  .arrow-connector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 4px 12px;
+    font-size: 11px;
+    color: var(--text3);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+  .arrow-connector::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 16px;
+    background: var(--border);
+  }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"読む力"と"解く力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+    <div class="lesson-title">A Toy Made from a Spring</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 5</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:20%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 全体構造</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 空所(18)</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 空所(19)</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 空所(20) + 確認</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 段落読解 + まとめ</button>
+  </div>
+
+  <!-- ===================== STEP 1 ===================== -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div class="section-label">本文を読む — 1文ずつ役割を確認する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">各文をクリックすると、その文の「論理的な役割」が表示されます。</p>
+
+      <div class="passage-text">
+        <p>
+          <ul class="sentence-list">
+            <li onclick="litSent(this,'topic')">
+              There are many inventions in the world, and they have made our lives richer and more interesting.
+              <span class="sent-role role-topic">→ トピック導入：「発明」が話題だと宣言</span>
+            </li>
+            <div class="arrow-connector">具体化</div>
+            <li onclick="litSent(this,'example')">
+              Thomas Edison repeated experiments and finally achieved his original goal of inventing the light bulb.
+              <span class="sent-role role-example">→ 具体例①：エジソン＝意図的に作った発明</span>
+            </li>
+            <div class="arrow-connector">まとめ・整理</div>
+            <li onclick="litSent(this,'contrast')">
+              Some inventions, like Edison's light bulb, are the result of the inventor's desire to create them from the beginning.
+              <span class="sent-role role-contrast">→ A類型の定義：「最初から作ろうとした発明」</span>
+            </li>
+            <div class="arrow-connector" style="color:var(--purple);font-size:12px;">★ ここで空所(18) — 対比のシグナル</div>
+            <li onclick="litSent(this,'blank')" style="background:var(--accent-light);border-color:var(--accent);">
+              (<span class="blank-box" id="blank18">18</span>), there are other types of inventions that were created by chance.
+              <span class="sent-role role-blank">→ [空所] — B類型の導入：偶然の発明</span>
+            </li>
+            <div class="arrow-connector">具体例を予告</div>
+            <li onclick="litSent(this,'bridge')">
+              A toy called the Slinky is one of them.
+              <span class="sent-role role-bridge">→ 橋渡し：「偶然の発明＝スリンキー」と予告</span>
+            </li>
+          </ul>
+        </p>
+
+        <div class="divider"></div>
+
+        <p>
+          <ul class="sentence-list">
+            <li onclick="litSent(this,'topic')">
+              Richard James was an engineer working for the United States Navy.
+              <span class="sent-role role-topic">→ 人物導入：Richard Jamesとは誰か</span>
+            </li>
+            <div class="arrow-connector">彼のミッション</div>
+            <li onclick="litSent(this,'cause')">
+              He was given the task of coming up with an idea to protect expensive instruments on the ship during the rough ocean travel.
+              <span class="sent-role role-cause">→ 状況設定：何をしていた人か</span>
+            </li>
+            <div class="arrow-connector">作業中に→偶然の出来事</div>
+            <li onclick="litSent(this,'blank')" style="background:var(--accent-light);border-color:var(--accent);">
+              One day, while he was dealing with a spring, he (<span class="blank-box" id="blank19">19</span>) from a shelf.
+              <span class="sent-role role-blank">→ [空所] — 偶然の出来事が起きた</span>
+            </li>
+            <div class="arrow-connector">予想外の結果</div>
+            <li onclick="litSent(this,'result')">
+              Instead of falling where he thought it would, it moved along the shelf.
+              <span class="sent-role role-result">→ 因果：予想外の動きをした（Instead of = 対比）</span>
+            </li>
+            <div class="arrow-connector">比喩で視覚化</div>
+            <li onclick="litSent(this,'example')">
+              It looked as if it was walking down the stairs.
+              <span class="sent-role role-example">→ 具体的描写：どんな動きだったか</span>
+            </li>
+            <div class="arrow-connector">繰り返して確認</div>
+            <li onclick="litSent(this,'result')">
+              He let the spring fall to the floor again and again to check that it moved like a living thing each time.
+              <span class="sent-role role-result">→ 結果：何度も試して確認した</span>
+            </li>
+          </ul>
+        </p>
+
+        <div class="divider"></div>
+
+        <p>
+          <ul class="sentence-list">
+            <li onclick="litSent(this,'cause')">
+              After showing his wife his interesting discovery, he decided to develop it into a toy.
+              <span class="sent-role role-cause">→ 展開：妻に見せた→おもちゃ化を決断</span>
+            </li>
+            <div class="arrow-connector">妻のアクション</div>
+            <li onclick="litSent(this,'cause')">
+              She thought about the name that would suit the toy.
+              <span class="sent-role role-cause">→ 名前を考えた</span>
+            </li>
+            <div class="arrow-connector">辞書で調べて選んだ</div>
+            <li onclick="litSent(this,'result')">
+              She looked up some words in the dictionary and chose the word <em>slinky</em>.
+              <span class="sent-role role-result">→ 結果："slinky"を選んだ</span>
+            </li>
+            <div class="arrow-connector">理由</div>
+            <li onclick="litSent(this,'cause')">
+              She chose the name because it meant "elegant and smooth movement."
+              <span class="sent-role role-cause">→ 理由：意味が動きを表していた</span>
+            </li>
+            <div class="arrow-connector">いよいよ販売へ</div>
+            <li onclick="litSent(this,'cause')">
+              When James tried to demonstrate and sell it at a department store, he was worried.
+              <span class="sent-role role-cause">→ 状況：心配していた</span>
+            </li>
+            <div class="arrow-connector">★ ここで空所(20) — 逆接(However)の直前</div>
+            <li onclick="litSent(this,'blank')" style="background:var(--accent-light);border-color:var(--accent);">
+              He thought that (<span class="blank-box" id="blank20">20</span>).
+              <span class="sent-role role-blank">→ [空所] — 心配の内容（Howeverの前＝ネガティブ予測）</span>
+            </li>
+            <div class="arrow-connector" style="color:var(--coral);">However → 逆転</div>
+            <li onclick="litSent(this,'contrast')">
+              However, when he arrived, many shoppers were there to buy the toy.
+              <span class="sent-role role-contrast">→ 逆接：予想と逆の結果＝大成功</span>
+            </li>
+            <div class="arrow-connector">現在まで続く</div>
+            <li onclick="litSent(this,'result')">
+              Ever since then, the Slinky has been enjoyed by many children around the world.
+              <span class="sent-role role-result">→ 結論：世界中の子供に愛される</span>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">文章全体の論理マップ</div>
+      <div class="logic-flow">
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot teal"></div><div class="flow-connector"></div></div>
+          <div class="flow-content">
+            <div class="label teal">第1段落 — 対比構造</div>
+            <div class="body">発明には2種類ある：<em>意図的な発明</em>（エジソン）<span class="logic-badge contrast">vs 対比</span> <em>偶然の発明</em>（スリンキー）<br><span style="font-size:12px;color:var(--text2);">→ メインテーマ「偶然から生まれた発明」を提示</span></div>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot amber"></div><div class="flow-connector"></div></div>
+          <div class="flow-content">
+            <div class="label amber">第2段落 — 因果構造</div>
+            <div class="body">リチャード・ジェームズが作業中にバネを<em>落とした</em><span class="logic-badge cause">因果</span> → 予想外の動き → 確認を繰り返す<br><span style="font-size:12px;color:var(--text2);">→ 偶然の発見がどう起きたかを具体的に説明</span></div>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot accent"></div><div class="flow-connector"></div></div>
+          <div class="flow-content">
+            <div class="label accent">第3段落 — 逆接構造</div>
+            <div class="body">妻が命名 → 販売時に<em>心配</em>（ネガティブ予測）<span class="logic-badge contrast">However</span> → 実際は大成功 → 結論<br><span style="font-size:12px;color:var(--text2);">→ 「心配」と「成功」の逆転でドラマを演出</span></div>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot" style="background:var(--green);box-shadow:0 0 0 1px var(--green);"></div></div>
+          <div class="flow-content">
+            <div class="label" style="color:var(--green);">結論</div>
+            <div class="body">スリンキーは世界中の子供に愛されている<br><span style="font-size:12px;color:var(--text2);">→ メインテーマの着地点</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — 空所(18)を解く →</button>
+    </div>
+  </div>
+
+  <!-- ===================== STEP 2 ===================== -->
+  <div class="panel" id="panel2">
+
+    <div class="card">
+      <div class="section-label">空所(18) — 解く前に「予測」する</div>
+
+      <div class="blank-section">
+        <h3><span class="blank-num">18</span> 空所の前後を読む</h3>
+        <div class="passage-text" style="font-size:14px;">
+          <span style="background:var(--surface2);border-radius:4px;padding:2px 6px;">前の文：</span> Some inventions, like Edison's light bulb, are the result of the <strong>inventor's desire to create them from the beginning.</strong>
+          <br><br>
+          <span style="background:var(--accent-light);border-radius:4px;padding:2px 6px;color:var(--accent);">空所の文：</span> (<strong>18</strong>), there are <strong>other types</strong> of inventions that were <strong>created by chance.</strong>
+        </div>
+      </div>
+
+      <div class="predict-box">
+        <div class="predict-label">選択肢を見る前に予測する</div>
+        前の文：「意図的に作った発明がある」<br>
+        空所の後：「<strong>other types</strong>（別の種類）…<strong>by chance</strong>（偶然）」<br><br>
+        → 前と後は<strong>真逆の内容</strong>。つまり空所には <strong>逆接・対比</strong> の接続詞が入るはず。<br>
+        「Aだ。<strong>しかし一方で</strong>、Bもある。」という構造。
+      </div>
+
+      <div class="key-point">
+        <div class="key-point-icon">!</div>
+        <div>「other types」という言葉が決定的。他の種類があると言うためには、前と<em>対比</em>になっている必要がある。</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">予測した「逆接・対比」に当てはまる選択肢はどれ？クリックして選んでください。</p>
+
+      <div class="choices-grid" id="choices18">
+        <button class="choice-btn" onclick="checkAnswer(18, 1, false)"><span class="choice-num">1</span> As a result</button>
+        <button class="choice-btn" onclick="checkAnswer(18, 2, false)"><span class="choice-num">2</span> In other words</button>
+        <button class="choice-btn" onclick="checkAnswer(18, 3, true)"><span class="choice-num">3</span> On the other hand</button>
+        <button class="choice-btn" onclick="checkAnswer(18, 4, false)"><span class="choice-num">4</span> In the same way</button>
+      </div>
+
+      <div class="explanation-box" id="exp18">
+        <strong>正解：3 "On the other hand"（一方で）</strong><br><br>
+        「意図的な発明がある。<strong>一方で</strong>、偶然生まれた発明もある」という対比が完成する。<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 "As a result" → 結果を表す。前の文の<em>結果</em>として偶然の発明が生まれたわけではない。<br>
+        2 "In other words" → 言い換え。前文をわかりやすく言い直すはずだが、内容が真逆になっている。<br>
+        4 "In the same way" → 同様に。前文と同じことを言い続ける流れになってしまう。
+      </div>
+      <div class="wrong-box" id="wrong18">
+        惜しい！もう一度考えてみましょう。<br>
+        ヒント：前の文は「意図的な発明」、後の文は「偶然の発明」— この2つの関係は？
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — 空所(19)を解く →</button>
+    </div>
+  </div>
+
+  <!-- ===================== STEP 3 ===================== -->
+  <div class="panel" id="panel3">
+
+    <div class="card">
+      <div class="section-label">空所(19) — 解く前に「予測」する</div>
+
+      <div class="blank-section">
+        <h3><span class="blank-num">19</span> 空所の前後を読む</h3>
+        <div class="passage-text" style="font-size:14px;">
+          <span style="background:var(--surface2);border-radius:4px;padding:2px 6px;">前の文：</span> One day, <strong>while he was dealing with a spring</strong>, he (<strong>19</strong>) from a shelf.
+          <br><br>
+          <span style="background:var(--amber-light);border-radius:4px;padding:2px 6px;color:var(--amber);">直後の文：</span> <strong>Instead of falling where he thought it would</strong>, it moved along the shelf.
+        </div>
+      </div>
+
+      <div class="predict-box">
+        <div class="predict-label">選択肢を見る前に予測する</div>
+        空所の主語は "he"（ジェームズ）。<br>
+        直後に「<strong>Instead of falling where he thought it would</strong>（彼が思った場所に落ちなかった）」とある。<br><br>
+        → バネが「落ちた」場所が予想外だったということ。<br>
+        → つまり空所は「バネを<strong>落とした</strong>」という動作のはず。<br><br>
+        予測：「he <em>accidentally dropped it / knocked it off</em>（バネを落とした）」
+      </div>
+
+      <div class="key-point">
+        <div class="key-point-icon">!</div>
+        <div>"Instead of falling" が最大のヒント。何かが「落ちた」のは確実。その落とした主体は "he"。</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">予測した「バネを落とした」に最も近い選択肢はどれ？</p>
+
+      <div class="choices-grid" id="choices19">
+        <button class="choice-btn" onclick="checkAnswer(19, 1, true)"><span class="choice-num">1</span> accidentally dropped it</button>
+        <button class="choice-btn" onclick="checkAnswer(19, 2, false)"><span class="choice-num">2</span> took some books</button>
+        <button class="choice-btn" onclick="checkAnswer(19, 3, false)"><span class="choice-num">3</span> suddenly heard some noise</button>
+        <button class="choice-btn" onclick="checkAnswer(19, 4, false)"><span class="choice-num">4</span> picked up one document</button>
+      </div>
+
+      <div class="explanation-box" id="exp19">
+        <strong>正解：1 "accidentally dropped it"（誤って落とした）</strong><br><br>
+        「バネを扱っていたら、うっかりバネを棚から落とした。すると（Instead of...）予想外の動きをした。」<br>
+        これで第2段落全体の論理が1本の線でつながる。<br><br>
+        <strong>なぜ他は×？</strong><br>
+        2 "took some books" → 本を取った？その後バネが動く話につながらない。<br>
+        3 "suddenly heard some noise" → 音を聞いた？直後の「落ちた場所が違った」と論理的に繋がらない。<br>
+        4 "picked up one document" → 書類を拾った？バネの話と全く関係がない。
+      </div>
+      <div class="wrong-box" id="wrong19">
+        惜しい！直後の文に注目してください。<br>
+        "Instead of <strong>falling</strong> where he thought it would"<br>
+        → 何かが「落ちた」。その主語は何だろう？
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — 空所(20)を解く →</button>
+    </div>
+  </div>
+
+  <!-- ===================== STEP 4 ===================== -->
+  <div class="panel" id="panel4">
+
+    <div class="card">
+      <div class="section-label">空所(20) — 解く前に「予測」する</div>
+
+      <div class="blank-section">
+        <h3><span class="blank-num">20</span> 空所の前後を読む</h3>
+        <div class="passage-text" style="font-size:14px;">
+          <span style="background:var(--surface2);border-radius:4px;padding:2px 6px;">前の文：</span> When James tried to demonstrate and sell it at a department store, <strong>he was worried.</strong>
+          <br><br>
+          <span style="background:var(--accent-light);border-radius:4px;padding:2px 6px;color:var(--accent);">空所の文：</span> He thought that (<strong>20</strong>).
+          <br><br>
+          <span style="background:var(--coral-light);border-radius:4px;padding:2px 6px;color:var(--coral);">直後の文：</span> <strong>However</strong>, when he arrived, many shoppers were there to buy the toy.
+        </div>
+      </div>
+
+      <div class="predict-box">
+        <div class="predict-label">選択肢を見る前に予測する</div>
+        構造を整理すると：<br>
+        「彼は<strong>心配していた</strong>」→「彼は<em>(20)</em>と思った」→「<strong>However</strong>（しかし）」→「実際は多くの人が買いに来た」<br><br>
+        "However" は逆接。後ろが「<strong>大成功</strong>」だから、前（空所20）は<strong>失敗の予測・ネガティブな内容</strong>のはず。<br><br>
+        予測：「誰も来ないだろう」「売れないだろう」
+      </div>
+
+      <div class="key-point">
+        <div class="key-point-icon">!</div>
+        <div>"However" の前後が<em>必ず逆の内容</em>になるルールを使う。後ろが「成功」なら前は「失敗の予測」。</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">予測した「誰も来ないだろう（ネガティブな予測）」に当てはまる選択肢はどれ？</p>
+
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px;" id="choices20">
+        <button class="choice-btn" style="width:100%;" onclick="checkAnswer(20, 1, false)"><span class="choice-num">1</span> people owned one already</button>
+        <button class="choice-btn" style="width:100%;" onclick="checkAnswer(20, 2, false)"><span class="choice-num">2</span> the store did not have space</button>
+        <button class="choice-btn" style="width:100%;" onclick="checkAnswer(20, 3, true)"><span class="choice-num">3</span> people might not come to buy one</button>
+        <button class="choice-btn" style="width:100%;" onclick="checkAnswer(20, 4, false)"><span class="choice-num">4</span> the store would run out of stock</button>
+      </div>
+
+      <div class="explanation-box" id="exp20">
+        <strong>正解：3 "people might not come to buy one"（誰も買いに来ないかもしれない）</strong><br><br>
+        「誰も来ないかも…と心配した。<strong>しかし</strong>、実際には多くのお客さんが来た。」<br>
+        However を挟んだ完璧な逆転構造が完成する。<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 "people owned one already" → 既に持っている？Howeverの後「買いに来た」と逆にならない。むしろ「もう持ってるのに来た」になってしまう。<br>
+        2 "the store did not have space" → 場所がない？販売に来た「心配」としては話が噛み合わない。<br>
+        4 "the store would run out of stock" → 在庫がなくなる？これはポジティブな心配（売れすぎる不安）。Howeverでつながらない。
+      </div>
+      <div class="wrong-box" id="wrong20">
+        惜しい！"However" に注目してください。<br>
+        後ろは「多くの人が買いに来た（大成功）」。<br>
+        → However の前は、その<em>逆</em>の内容（失敗の予測）が必要。
+      </div>
+    </div>
+
+    <div class="card" id="result-card" style="display:none;">
+      <div class="section-label">特訓結果</div>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <div class="sc-num score-correct" id="correct-count">0</div>
+          <div class="sc-label">正解</div>
+        </div>
+        <div class="summary-card">
+          <div class="sc-num score-wrong" id="wrong-count">0</div>
+          <div class="sc-label">不正解</div>
+        </div>
+        <div class="summary-card">
+          <div class="sc-num score-total">3</div>
+          <div class="sc-label">合計問題数</div>
+        </div>
+      </div>
+
+      <div class="master-badge" id="master-badge" style="display:none;">
+        <div class="badge-icon">★</div>
+        <h2>論理読解マスター！</h2>
+        <p>3問全問正解。選択肢を見る前に答えを予測できた証拠です。</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="section-label">この問題から学ぶ3つの論理パターン</div>
+
+      <div class="key-point">
+        <div class="key-point-icon">A</div>
+        <div>
+          <strong>対比パターン</strong>（空所18）<br>
+          <span style="font-size:13px;color:var(--text2);">「AはXだ。<strong>一方で</strong>、BはYだ。」前と後が逆の内容 → On the other hand / However / But</span>
+        </div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">B</div>
+        <div>
+          <strong>因果パターン</strong>（空所19）<br>
+          <span style="font-size:13px;color:var(--text2);">直後の "Instead of falling"（落ちた）が手がかり。原因（落とした）→ 結果（予想外の動き）の流れ。</span>
+        </div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">C</div>
+        <div>
+          <strong>逆接パターン</strong>（空所20）<br>
+          <span style="font-size:13px;color:var(--text2);">"However" の前後は必ず逆の内容。後ろが「成功」なら前は「失敗の予測」。</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — 段落読解 + まとめ →</button>
+    </div>
+  </div>
+
+  <!-- ===================== STEP 5 ===================== -->
+  <div class="panel" id="panel5">
+
+    <div class="card">
+      <div class="section-label">パラグラフ読解 — 各段落の「要点」を掴む</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:20px;">英語の文章は段落ごとに1つの役割を持つ。各段落の「核心」を自分の言葉で言えるようになることが目標。</p>
+
+      <!-- Para 1 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:16px;">
+        <div style="background:var(--purple-light);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;" onclick="togglePara('para1')">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--purple);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P1</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--purple);">第1段落 — どんな内容？</div>
+            <div style="font-size:12px;color:#7a72c8;margin-top:1px;">クリックして展開</div>
+          </div>
+          <div id="para1-arrow" style="font-size:16px;color:var(--purple);transition:transform 0.2s;">▼</div>
+        </div>
+        <div id="para1-body" style="display:none;padding:16px;">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:14px;border:0.5px solid var(--border);">
+            There are many inventions in the world, and they have made our lives richer and more interesting. Thomas Edison repeated experiments and finally achieved his original goal of inventing the light bulb. Some inventions, like Edison's light bulb, are the result of the inventor's desire to create them from the beginning. (On the other hand), there are other types of inventions that were created by chance. A toy called the Slinky is one of them.
+          </div>
+          <div style="margin-bottom:12px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;">この段落の構造</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--purple-light);color:var(--purple);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">話題導入</span>
+                <span>発明が2種類あることを提示（エジソンの電球＝意図的 vs スリンキー＝偶然）</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">対比構造</span>
+                <span>A類型（意図的）<strong> On the other hand </strong>B類型（偶然）という対比で整理</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">予告</span>
+                <span>「スリンキーはその一例」と次の段落への橋渡し</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--purple-light);border-radius:8px;padding:12px 14px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#3c3489;line-height:1.7;">発明には意図的なものと偶然生まれたものの2種類があり、スリンキーは後者の例である。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Para 2 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:16px;">
+        <div style="background:var(--amber-light);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;" onclick="togglePara('para2')">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--amber);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P2</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--amber);">第2段落 — どんな内容？</div>
+            <div style="font-size:12px;color:#a06010;margin-top:1px;">クリックして展開</div>
+          </div>
+          <div id="para2-arrow" style="font-size:16px;color:var(--amber);transition:transform 0.2s;">▼</div>
+        </div>
+        <div id="para2-body" style="display:none;padding:16px;">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:14px;border:0.5px solid var(--border);">
+            Richard James was an engineer working for the United States Navy. He was given the task of coming up with an idea to protect expensive instruments on the ship during the rough ocean travel. One day, while he was dealing with a spring, he (accidentally dropped it) from a shelf. Instead of falling where he thought it would, it moved along the shelf. It looked as if it was walking down the stairs. He let the spring fall to the floor again and again to check that it moved like a living thing each time.
+          </div>
+          <div style="margin-bottom:12px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;">この段落の構造</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">人物設定</span>
+                <span>リチャード・ジェームズ＝海軍エンジニア。船の機材保護を任されていた。</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--coral-light);color:var(--coral);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">偶然の出来事</span>
+                <span>バネを落とした → 予想外の動き（Instead of = 対比）</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">検証</span>
+                <span>何度も繰り返して動きを確認した（＝発明者の観察眼）</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--amber-light);border-radius:8px;padding:12px 14px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-bottom:6px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#633806;line-height:1.7;">海軍エンジニアのジェームズがバネを誤って落とした際、予想外の動きをすることを発見し、繰り返し確認した。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Para 3 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:4px;">
+        <div style="background:var(--teal-light);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;" onclick="togglePara('para3')">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P3</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--teal);">第3段落 — どんな内容？</div>
+            <div style="font-size:12px;color:#1d9e75;margin-top:1px;">クリックして展開</div>
+          </div>
+          <div id="para3-arrow" style="font-size:16px;color:var(--teal);transition:transform 0.2s;">▼</div>
+        </div>
+        <div id="para3-body" style="display:none;padding:16px;">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:14px;border:0.5px solid var(--border);">
+            After showing his wife his interesting discovery, he decided to develop it into a toy. She thought about the name that would suit the toy. She looked up some words in the dictionary and chose the word <em>slinky</em>. She chose the name because it meant "elegant and smooth movement." When James tried to demonstrate and sell it at a department store, he was worried. He thought that (people might not come to buy one). However, when he arrived, many shoppers were there to buy the toy. Ever since then, the Slinky has been enjoyed by many children around the world.
+          </div>
+          <div style="margin-bottom:12px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;">この段落の構造</div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">商品化</span>
+                <span>妻が「slinky（滑らかな動き）」と命名。発明からおもちゃへの展開。</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--coral-light);color:var(--coral);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">逆接構造</span>
+                <span>心配（ネガティブ予測）<strong> However </strong>大成功 という逆転ドラマ</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;">
+                <span style="background:var(--green-light);color:var(--green);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">結論</span>
+                <span>世界中の子供に愛されるおもちゃになった＝メインテーマの着地</span>
+              </div>
+            </div>
+          </div>
+          <div style="background:var(--teal-light);border-radius:8px;padding:12px 14px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:6px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#085041;line-height:1.7;">妻の命名を経て商品化されたスリンキーは、販売当初の不安を覆す大成功を収め、世界中で愛されるおもちゃになった。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paragraph connection map -->
+    <div class="card">
+      <div class="section-label">3段落の「繋がり」を視覚化する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">各段落がどんな役割でメインテーマを支えているかを確認しよう。</p>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;gap:12px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--purple);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;">P1</div>
+            <div style="width:2px;flex:1;background:var(--border);margin:4px 0;min-height:20px;"></div>
+          </div>
+          <div style="padding-bottom:20px;flex:1;">
+            <div style="font-size:12px;font-weight:700;color:var(--purple);margin-bottom:4px;">問題提起（対比）</div>
+            <div style="font-size:13px;color:var(--text);line-height:1.6;">発明には<strong>意図的</strong>なものと<strong>偶然</strong>のものがある → 後者の例が「スリンキー」</div>
+            <div style="margin-top:6px;font-size:12px;color:var(--text3);">役割：文章全体の「問い」を立てる</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--amber);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;">P2</div>
+            <div style="width:2px;flex:1;background:var(--border);margin:4px 0;min-height:20px;"></div>
+          </div>
+          <div style="padding-bottom:20px;flex:1;">
+            <div style="font-size:12px;font-weight:700;color:var(--amber);margin-bottom:4px;">具体的な展開（因果）</div>
+            <div style="font-size:13px;color:var(--text);line-height:1.6;"><strong>どのように</strong>偶然が起きたか → バネを落とした → 予想外の動きを発見</div>
+            <div style="margin-top:6px;font-size:12px;color:var(--text3);">役割：「偶然の発明」を具体的に証明する</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:36px;flex-shrink:0;">
+            <div style="width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;">P3</div>
+          </div>
+          <div style="padding-bottom:4px;flex:1;">
+            <div style="font-size:12px;font-weight:700;color:var(--teal);margin-bottom:4px;">結論（逆接 → 着地）</div>
+            <div style="font-size:13px;color:var(--text);line-height:1.6;"><strong>その後どうなったか</strong> → 心配を乗り越え → 世界中で愛される</div>
+            <div style="margin-top:6px;font-size:12px;color:var(--text3);">役割：偶然の発明が成功した結末を語る</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary writing practice -->
+    <div class="card">
+      <div class="section-label">文章全体のまとめを自分で作る</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">3段落の要点を繋げて、文章全体を2〜3文でまとめる練習。まず自分でやってみてから、モデル解答を確認しよう。</p>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:14px;border:0.5px solid var(--border);">
+        <div style="font-size:12px;font-weight:700;color:var(--text3);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:10px;">まとめを書くための材料</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+            <span style="font-size:16px;flex-shrink:0;margin-top:-1px;">P1</span>
+            <input type="text" id="summary1" placeholder="第1段落の要点を一言で..." style="flex:1;font-size:13px;padding:8px 12px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;">
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+            <span style="font-size:16px;flex-shrink:0;margin-top:-1px;">P2</span>
+            <input type="text" id="summary2" placeholder="第2段落の要点を一言で..." style="flex:1;font-size:13px;padding:8px 12px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;">
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;font-size:13px;">
+            <span style="font-size:16px;flex-shrink:0;margin-top:-1px;">P3</span>
+            <input type="text" id="summary3" placeholder="第3段落の要点を一言で..." style="flex:1;font-size:13px;padding:8px 12px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;">
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-secondary" onclick="toggleModel()" style="margin-bottom:14px;">モデル解答を見る</button>
+
+      <div id="model-answer" style="display:none;">
+        <div style="background:var(--green-light);border:0.5px solid #c0dd97;border-radius:var(--radius);padding:16px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:10px;">モデル解答（日本語）</div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;line-height:1.7;color:#27500a;">
+            <div><strong>P1：</strong>発明には意図的なものと偶然生まれたものの2種類があり、スリンキーは後者の代表例として紹介される。</div>
+            <div><strong>P2：</strong>海軍エンジニアのジェームズがバネを誤って落とした際、階段を歩くような予想外の動きをすることを偶然発見した。</div>
+            <div><strong>P3：</strong>妻の命名を経て商品化されたスリンキーは販売当初の不安を覆し、世界中の子供に愛されるおもちゃとなった。</div>
+          </div>
+        </div>
+
+        <div style="background:var(--accent-light);border:0.5px solid #b5d4f4;border-radius:var(--radius);padding:16px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">文章全体の要約（2文バージョン）</div>
+          <div style="font-size:14px;line-height:1.8;color:#0c447c;">
+            スリンキーは、海軍エンジニアのジェームズが作業中に誤ってバネを落としたことで偶然発見されたおもちゃである。商品化当初は売れないかもしれないという不安があったが、実際には多くの人に求められ、現在では世界中の子供に愛されている。
+          </div>
+        </div>
+
+        <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius);padding:16px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:10px;">筆者のメインメッセージ（1文）</div>
+          <div style="font-size:15px;font-weight:700;line-height:1.7;color:#3c3489;">
+            偶然から生まれた発明が、意図的な発明と同様に人々の生活を豊かにすることがある。
+          </div>
+          <div style="margin-top:8px;font-size:12px;color:#534ab7;line-height:1.6;">
+            → 第1文「inventions have made our lives richer」と最終文「enjoyed by many children around the world」が呼応している。筆者はこの1点を言いたいために文章全体を構成している。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key reading method summary -->
+    <div class="card">
+      <div class="section-label">この教材で練習した「読み方」のまとめ</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div class="key-point">
+          <div class="key-point-icon">1</div>
+          <div>
+            <strong>1文目でトピックを掴む</strong><br>
+            <span style="font-size:13px;color:var(--text2);">文章の最初の文は「何について話すか」の宣言。ここで大きな方向性を決める。</span>
+          </div>
+        </div>
+        <div class="key-point">
+          <div class="key-point-icon">2</div>
+          <div>
+            <strong>接続詞・対比語に反応する</strong><br>
+            <span style="font-size:13px;color:var(--text2);">On the other hand / However / Instead of → 必ず前後で内容が逆転。空所の予測に直結する。</span>
+          </div>
+        </div>
+        <div class="key-point">
+          <div class="key-point-icon">3</div>
+          <div>
+            <strong>各段落を「1文で言える」まで圧縮する</strong><br>
+            <span style="font-size:13px;color:var(--text2);">P1：問題提起 → P2：具体的展開 → P3：結論。この3点をつなぐと文章全体の骨格が見える。</span>
+          </div>
+        </div>
+        <div class="key-point">
+          <div class="key-point-icon">4</div>
+          <div>
+            <strong>最初の文と最後の文を繋げる</strong><br>
+            <span style="font-size:13px;color:var(--text2);">筆者のメッセージは冒頭と末尾に凝縮されている。2つを繋げると「筆者が何を言いたかったか」が見える。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+
+
+<script>
+  var answers = { 18: null, 19: null, 20: null };
+  var correctAnswers = { 18: 3, 19: 1, 20: 3 };
+  var stepDone = { 1: false, 2: false, 3: false, 4: false, 5: false };
+
+  function goStep(n) {
+    document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+    document.getElementById('panel' + n).classList.add('active');
+    document.querySelectorAll('.step-btn').forEach(function(b, i) {
+      b.classList.remove('active');
+      if (stepDone[i+1]) b.classList.add('done');
+    });
+    document.getElementById('nav' + n).classList.add('active');
+    document.getElementById('nav' + n).classList.remove('done');
+    var pct = (n / 5) * 100;
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-text').textContent = 'STEP ' + n + ' / 5';
+    window.scrollTo(0, 0);
+  }
+
+  function togglePara(id) {
+    var body = document.getElementById(id + '-body');
+    var arrow = document.getElementById(id + '-arrow');
+    if (body.style.display === 'none') {
+      body.style.display = 'block';
+      arrow.style.transform = 'rotate(180deg)';
+    } else {
+      body.style.display = 'none';
+      arrow.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  function toggleModel() {
+    var el = document.getElementById('model-answer');
+    el.style.display = el.style.display === 'none' ? 'block' : 'none';
+  }
+
+  function litSent(el, role) {
+    el.classList.toggle('lit');
+  }
+
+  function checkAnswer(num, choice, isCorrect) {
+    var container = document.getElementById('choices' + num);
+    var btns = container.querySelectorAll('.choice-btn');
+    btns.forEach(function(b) { b.classList.add('disabled'); });
+    btns[choice-1].classList.add(isCorrect ? 'correct' : 'wrong');
+
+    if (isCorrect) {
+      document.getElementById('exp' + num).classList.add('show');
+      document.getElementById('wrong' + num).classList.remove('show');
+      answers[num] = 'correct';
+      if (num === 18) { document.getElementById('blank18').classList.add('solved'); document.getElementById('blank18').textContent = '3'; }
+      if (num === 19) { document.getElementById('blank19').classList.add('solved'); document.getElementById('blank19').textContent = '1'; }
+      if (num === 20) {
+        document.getElementById('blank20').classList.add('solved');
+        document.getElementById('blank20').textContent = '3';
+        showResult();
+        setTimeout(function(){ document.getElementById('nav5').style.opacity='1'; }, 600);
+      }
+    } else {
+      document.getElementById('wrong' + num).classList.add('show');
+      document.getElementById('exp' + num).classList.remove('show');
+      answers[num] = 'wrong';
+      btns.forEach(function(b) { b.classList.remove('disabled'); });
+      btns[choice-1].classList.add('wrong');
+    }
+  }
+
+  function showResult() {
+    var correct = 0;
+    var wrong = 0;
+    for (var k in answers) {
+      if (answers[k] === 'correct') correct++;
+      else if (answers[k] === 'wrong') wrong++;
+    }
+    var card = document.getElementById('result-card');
+    card.style.display = 'block';
+    document.getElementById('correct-count').textContent = correct;
+    document.getElementById('wrong-count').textContent = wrong;
+    if (correct === 3) {
+      document.getElementById('master-badge').style.display = 'block';
+    }
+    stepDone[4] = true;
+    document.getElementById('nav4').classList.add('done');
+  }
+</script>
+</body>
+</html>

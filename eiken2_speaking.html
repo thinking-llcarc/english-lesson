@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語スピーキング特訓｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface2:#f0ede6;
+  --border:#ddd9d0;--text:#1a1814;--text2:#6b6760;--text3:#9b9892;
+  --accent:#2c5f8a;--accent-light:#e8f1f8;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --amber:#854f0b;--amber-light:#faeeda;
+  --coral:#993c1d;--coral-light:#faece7;
+  --purple:#534ab7;--purple-light:#eeedfe;
+  --green:#3b6d11;--green-light:#eaf3de;
+  --red:#a32d2d;--red-light:#fcebeb;
+  --pink:#993556;--pink-light:#fbeaf0;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.page-header{background:var(--surface);border-bottom:0.5px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+.brand-logo{width:38px;height:38px;border-radius:9px;background:var(--accent);color:#fff;font-size:19px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-name{font-size:13px;font-weight:700;color:var(--text);}
+.brand-tagline{font-size:11px;color:var(--text3);margin-top:1px;letter-spacing:0.03em;}
+.lesson-title{font-size:13px;font-weight:700;color:var(--text);text-align:right;}
+.progress-bar-wrap{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text2);margin-top:4px;justify-content:flex-end;}
+.progress-bar{width:90px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.4s ease;}
+
+.container{max-width:920px;margin:0 auto;padding:24px 18px 80px;}
+.step-nav{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap;}
+.step-btn{padding:5px 13px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:11px;font-family:'Noto Sans JP',sans-serif;color:var(--text2);cursor:pointer;transition:all 0.2s;font-weight:500;}
+.step-btn:hover{background:var(--surface2);color:var(--text);}
+.step-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.panel{display:none;}
+.panel.active{display:block;animation:fadeIn 0.22s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.card{background:var(--surface);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:22px;margin-bottom:14px;}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;}
+.divider{height:0.5px;background:var(--border);margin:18px 0;}
+
+/* question number display */
+.q-number{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:#fff;font-size:18px;font-weight:700;flex-shrink:0;}
+.q-header{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px;}
+.q-type-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-left:8px;vertical-align:middle;}
+
+/* think process blocks */
+.think-block{border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;border:0.5px solid var(--border);}
+.think-hdr{padding:11px 16px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.think-body{padding:14px 16px;font-size:14px;line-height:1.75;background:var(--surface);}
+
+/* passage display */
+.passage-box{background:var(--surface2);border-radius:var(--radius);padding:16px 18px;border:0.5px solid var(--border);font-family:'Source Serif 4',serif;font-size:14px;line-height:1.9;margin-bottom:12px;}
+.hl-passage{background:#fff3cd;border-radius:2px;padding:0 2px;}
+.hl-answer{background:var(--teal-light);border-radius:2px;padding:0 2px;font-weight:700;}
+
+/* speech bubble style answer */
+.speech-bubble{background:var(--surface2);border-radius:var(--radius-lg);padding:16px 18px;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.9;border:0.5px solid var(--border);position:relative;margin:12px 0;}
+.speech-label{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;}
+.sb-q1{background:var(--accent-light);border-color:#b5d4f4;}
+.sb-q1 .speech-label{color:var(--accent);}
+.sb-q2{background:var(--teal-light);border-color:#9fe1cb;}
+.sb-q2 .speech-label{color:var(--teal);}
+.sb-q3{background:var(--amber-light);border-color:#fac775;}
+.sb-q3 .speech-label{color:var(--amber);}
+.sb-q4{background:var(--purple-light);border-color:#afa9ec;}
+.sb-q4 .speech-label{color:var(--purple);}
+
+/* sentence annotated */
+.sentence-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px;font-size:14px;}
+.sr-role{font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:3px;font-family:'Noto Sans JP',sans-serif;min-width:56px;text-align:center;}
+.sr-sent{font-family:'Source Serif 4',serif;line-height:1.7;}
+.role-opening{background:var(--accent);color:#fff;}
+.role-time{background:var(--teal);color:#fff;}
+.role-action{background:var(--amber);color:#fff;}
+.role-feeling{background:var(--pink);color:#fff;}
+.role-opinion{background:var(--accent);color:#fff;}
+.role-reason{background:var(--teal);color:#fff;}
+.role-example{background:var(--amber);color:#fff;}
+.role-conclude{background:var(--purple);color:#fff;}
+
+/* picture analysis grid */
+.pic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0;}
+.pic-panel{border-radius:var(--radius);padding:12px;font-size:13px;line-height:1.65;border:0.5px solid var(--border);}
+.pp-p1{background:var(--accent-light);border-color:#b5d4f4;}
+.pp-p2{background:var(--teal-light);border-color:#9fe1cb;}
+.pp-p3{background:var(--amber-light);border-color:#fac775;}
+.pp-label{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;font-family:'Noto Sans JP',sans-serif;}
+.pp-p1 .pp-label{color:var(--accent);}
+.pp-p2 .pp-label{color:var(--teal);}
+.pp-p3 .pp-label{color:var(--amber);}
+@media(max-width:550px){.pic-grid{grid-template-columns:1fr;}}
+
+/* flow diagram */
+.flow-chain{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:10px 0;}
+.flow-box{padding:6px 12px;border-radius:6px;font-size:12px;font-weight:700;font-family:'Noto Sans JP',sans-serif;white-space:nowrap;}
+.fb-accent{background:var(--accent-light);border:0.5px solid #b5d4f4;color:var(--accent);}
+.fb-teal{background:var(--teal-light);border:0.5px solid #9fe1cb;color:var(--teal);}
+.fb-amber{background:var(--amber-light);border:0.5px solid #fac775;color:var(--amber);}
+.fb-purple{background:var(--purple-light);border:0.5px solid #afa9ec;color:var(--purple);}
+.fb-gray{background:var(--surface2);border:0.5px solid var(--border);color:var(--text2);}
+.flow-arrow{color:var(--text3);font-size:16px;font-weight:700;}
+
+/* opinion selector */
+.opinion-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.op-card{border-radius:var(--radius-lg);overflow:hidden;border:0.5px solid var(--border);}
+.op-hdr{padding:10px 14px;font-size:13px;font-weight:700;}
+.op-body{padding:12px 14px;font-size:13px;line-height:1.7;background:var(--surface);}
+.op-agree .op-hdr{background:var(--teal-light);color:var(--teal);}
+.op-disagree .op-hdr{background:var(--coral-light);color:var(--coral);}
+@media(max-width:500px){.opinion-grid{grid-template-columns:1fr;}}
+
+/* key point */
+.key-point{display:flex;gap:11px;padding:13px 15px;border-radius:var(--radius);background:var(--surface2);border:0.5px solid var(--border);margin-bottom:9px;font-size:14px;align-items:flex-start;line-height:1.65;}
+.kp-icon{width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+/* callout */
+.callout{border-radius:var(--radius);padding:13px 15px;margin:10px 0;font-size:14px;line-height:1.75;}
+.callout-yellow{background:#fffbea;border-left:3px solid #e6c200;}
+.callout-blue{background:var(--accent-light);border-left:3px solid var(--accent);}
+.callout-purple{background:var(--purple-light);border-left:3px solid var(--purple);}
+.callout-teal{background:var(--teal-light);border-left:3px solid var(--teal);}
+.callout-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px;}
+.callout-yellow .callout-label{color:#7a6600;}
+.callout-blue .callout-label{color:var(--accent);}
+.callout-purple .callout-label{color:var(--purple);}
+.callout-teal .callout-label{color:var(--teal);}
+
+/* training menu */
+.training-card{border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;border:0.5px solid var(--border);}
+.tc-hdr{padding:12px 16px;display:flex;align-items:center;gap:12px;}
+.tc-num{width:32px;height:32px;border-radius:50%;color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.tc-body{padding:14px 16px;border-top:0.5px solid var(--border);}
+.tc-freq{font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:auto;font-family:'Noto Sans JP',sans-serif;}
+
+/* phrase chips */
+.phrase-chip{display:inline-block;padding:4px 10px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;margin:3px;cursor:pointer;transition:background 0.2s;}
+.phrase-chip:hover{background:var(--surface2);}
+
+/* buttons */
+.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:0.5px solid var(--border);}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s;}
+.btn-primary:hover{background:#1e4a70;}.btn-primary:active{transform:scale(0.98);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--surface);color:var(--text);border:0.5px solid var(--border);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--surface2);}
+
+.rubric-row{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:0.5px solid var(--border);font-size:13px;line-height:1.65;}
+.rubric-row:last-child{border-bottom:none;}
+.rubric-check{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;font-size:10px;color:transparent;flex-shrink:0;margin-top:1px;}
+.rubric-check.checked{background:var(--teal);border-color:var(--teal);color:#fff;}
+
+.acc{border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px;}
+.acc-hdr{padding:11px 15px;display:flex;align-items:center;gap:10px;cursor:pointer;background:var(--surface);}
+.acc-hdr:hover{background:var(--surface2);}
+.acc-arrow{font-size:12px;transition:transform 0.2s;margin-left:auto;color:var(--text3);}
+.acc-body{display:none;padding:15px;border-top:0.5px solid var(--border);}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語スピーキング特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"話す力"と"考える力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+    <div class="lesson-title">英検2級　二次試験（面接）完全対策</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 6</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:17%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 スピーキングの本質</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 No.1 パッセージ</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 No.2 ナレーション</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 No.3・4 意見問題</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 採点基準</button>
+    <button class="step-btn" onclick="goStep(6)" id="nav6">STEP 6 日常トレーニング</button>
+  </div>
+
+  <!-- ══════ STEP 1 ══════ -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div class="section-label">スピーキングの本質 — 「話す」テストではなく「考えて伝える」テスト</div>
+
+      <div class="callout callout-purple" style="margin-bottom:16px;">
+        <div class="callout-label">核心</div>
+        英検2級の面接は「きれいな発音で話せるか」を測るテストではない。<strong>「英語で論理的に考えて、伝えるべきことを適切な形で伝えられるか」</strong>を測るテスト。発音より構造。流暢さより内容の一貫性。
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px;">
+        <div style="background:var(--accent-light);border-radius:var(--radius-lg);padding:14px;border:0.5px solid #b5d4f4;">
+          <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">No.1</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:4px;">パッセージ内容確認</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">本文の「答えの箇所」を正確に見つけて読む力。</div>
+        </div>
+        <div style="background:var(--teal-light);border-radius:var(--radius-lg);padding:14px;border:0.5px solid #9fe1cb;">
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">No.2</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:4px;">イラストナレーション</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">3コマの絵を「誰が・いつ・何をしたか・どう感じたか」の構造で語る力。</div>
+        </div>
+        <div style="background:var(--amber-light);border-radius:var(--radius-lg);padding:14px;border:0.5px solid #fac775;">
+          <div style="font-size:11px;font-weight:700;color:var(--amber);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">No.3</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:4px;">トピック関連の意見</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">パッセージのテーマに関連した問いに自分の意見を述べる力。</div>
+        </div>
+        <div style="background:var(--purple-light);border-radius:var(--radius-lg);padding:14px;border:0.5px solid #afa9ec;">
+          <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">No.4</div>
+          <div style="font-size:13px;font-weight:700;margin-bottom:4px;">社会的テーマへの意見</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.6;">より広い社会的なトピックに対して自分の立場と理由を述べる力。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">4問に共通する「思考の順番」</div>
+
+      <div class="callout callout-yellow" style="margin-bottom:14px;">
+        <div class="callout-label">最重要原則</div>
+        英語を「話す」前に「考える」。どの問題でも最初の0.5秒で「何を聞かれているか」を特定し、次の数秒で「何を言うか」の骨格を決めてから口を開く。思考なしに流暢に話しても点にならない。
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="flow-chain">
+          <div class="flow-box fb-gray">問いを聞く</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-accent">「何を答えるべきか」特定</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-teal">「何を言うか」の骨格を決める</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-amber">英語で話す</div>
+        </div>
+        <div style="font-size:12px;color:var(--text2);">この順番を崩すと「英語で何か言ったが答えになっていない」という状態になる。</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>No.1は「本文から証拠を見つけて読む」思考</strong><br><span style="font-size:13px;color:var(--text2);">問題文のキーワードを本文で探し、その前後を「答えとして読む」。自分の言葉で言い換える必要はない。本文の言葉をそのまま使う。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>No.2は「絵を論理的な物語に変換する」思考</strong><br><span style="font-size:13px;color:var(--text2);">絵を見て「何が起きているか」の事実 + 登場人物の「気持ち」を補う。時系列（時間を示す言葉）を使って3コマを繋ぐ。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>No.3・4は「立場→理由→補足」の3段構成一択</strong><br><span style="font-size:13px;color:var(--text2);">I agree / I disagree / I think... → Because / First / Second → For example / This means... という3ステップが鉄則。中立は0点リスク。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — No.1 パッセージ →</button>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 2 ══════ -->
+  <div class="panel" id="panel2">
+
+    <div class="card">
+      <div class="section-label">No.1 パッセージの内容確認問題</div>
+
+      <div class="q-header">
+        <div class="q-number" style="background:var(--accent);">1</div>
+        <div>
+          <div style="font-size:15px;font-weight:700;font-family:'Source Serif 4',serif;">According to the passage, how do some customers with children do their shopping more easily?</div>
+          <div style="margin-top:4px;"><span class="q-type-badge" style="background:var(--accent-light);color:var(--accent);">本文根拠型</span><span style="font-size:12px;color:var(--text2);">答えは必ず本文にある</span></div>
+        </div>
+      </div>
+
+      <div class="callout callout-blue" style="margin-bottom:14px;">
+        <div class="callout-label">No.1の思考プロセス（3秒以内に完了）</div>
+        ① 問題文のキーワードを特定：<strong>"how do some customers with children do their shopping more easily"</strong><br>
+        ② 本文の中から "customers with children" と "more easily" がある箇所を探す<br>
+        ③ その箇所を「答えとして」読み上げる（"By + doing" の形で）
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <div class="section-label">本文を「根拠を探す目」で読む</div>
+        <div class="passage-box">
+          It can be troublesome for parents with young children to go shopping in crowded places. For this reason, more shopping centers have started offering their customers childcare services. <span class="hl-answer">Some customers with children choose shopping centers that provide these services. In this way, they do their shopping more easily.</span> Such services are becoming available even in places such as theaters and hospitals.
+        </div>
+        <div style="font-size:12px;color:var(--text2);margin-top:4px;">緑ハイライト = 答えが含まれる箇所。問題文の "more easily" が本文に出てきた瞬間、その前の文が答えの根拠になる。</div>
+      </div>
+
+      <div style="margin-bottom:14px;">
+        <div class="section-label">答えの組み立て方</div>
+
+        <div style="background:var(--surface2);border-radius:var(--radius);padding:14px;border:0.5px solid var(--border);margin-bottom:10px;">
+          <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">問いの構造を分解する</div>
+          <div style="font-size:14px;line-height:1.8;">
+            How do they shop more easily?<br>
+            → <strong>How</strong> = 手段を聞いている → 答えは "By + 動名詞" の形<br>
+            → 「By choosing shopping centers that provide childcare services」
+          </div>
+        </div>
+
+        <div class="speech-bubble sb-q1">
+          <div class="speech-label">模範解答</div>
+          <div style="font-family:'Source Serif 4',serif;font-size:15px;line-height:1.9;">
+            <strong>By choosing shopping centers that provide childcare services.</strong>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">
+          <div class="sentence-row">
+            <span class="sr-role role-opening">By+動名詞</span>
+            <span class="sr-sent">By choosing shopping centers <span style="background:var(--teal-light);padding:0 2px;border-radius:2px;">that provide childcare services</span>.</span>
+          </div>
+        </div>
+        <div style="font-size:12px;color:var(--text2);margin-top:6px;">本文の "choose shopping centers that provide these services" → "By choosing shopping centers that provide childcare services" に変換するだけ。難しい言い換えは不要。</div>
+      </div>
+
+      <div class="callout callout-yellow">
+        <div class="callout-label">No.1の鉄則</div>
+        答えは本文にある。自分の意見や推測を加えない。本文の言葉を使って "By ___ing" の形で答える。"According to the passage" という問いかけは「本文から証拠を出せ」という合図。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">No.1 よくある失敗とその対処</div>
+      <div style="display:flex;flex-direction:column;gap:9px;">
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:7px 14px;font-size:12px;font-weight:700;color:var(--red);">× 失敗① — 本文と全く違うことを言う</div>
+          <div style="padding:10px 14px;font-size:13px;line-height:1.7;">「They can shop online」→ 本文にインターネットの話はない。本文に書いていないことを言うのは採点対象外。</div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:7px 14px;font-size:12px;font-weight:700;color:var(--red);">× 失敗② — "By" を使わずに答える</div>
+          <div style="padding:10px 14px;font-size:13px;line-height:1.7;">「They choose shopping centers that provide services.」→ 文として成立するが、"How?" に対する答えは "By ___ing" の形が自然で評価が高い。</div>
+        </div>
+        <div style="border:0.5px solid var(--amber-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:7px 14px;font-size:12px;font-weight:700;color:var(--amber);">△ 失敗③ — 本文を丸ごと読み上げる</div>
+          <div style="padding:10px 14px;font-size:13px;line-height:1.7;">2〜3文まるごと読む → 長すぎる・核心がわかりにくい。答えの部分だけを抜き出して簡潔に答える。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — No.2 ナレーション →</button>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 3 ══════ -->
+  <div class="panel" id="panel3">
+
+    <div class="card">
+      <div class="section-label">No.2 イラストナレーション — 最難関の問題</div>
+
+      <div class="q-header">
+        <div class="q-number" style="background:var(--teal);">2</div>
+        <div>
+          <div style="font-size:15px;font-weight:700;font-family:'Source Serif 4',serif;">Now, please look at the picture and describe the situation. Your story should begin with: "One day, the Sasaki family went to an art museum that offered childcare services."</div>
+          <div style="margin-top:4px;"><span class="q-type-badge" style="background:var(--teal-light);color:var(--teal);">ナレーション型</span><span style="font-size:12px;color:var(--text2);">20秒で準備 → 約2分で語る</span></div>
+        </div>
+      </div>
+
+      <div class="callout callout-teal" style="margin-bottom:16px;">
+        <div class="callout-label">No.2の本質</div>
+        ナレーションは「絵の説明」ではなく「物語を語ること」。3コマの絵にある情報（吹き出し・時間表示・人物の表情・行動）をすべて使って、<strong>「誰が・何をして・どう感じたか」</strong>という人間の物語に変換する。
+      </div>
+
+      <div class="section-label">3コマの絵の情報を整理する（20秒で行うこと）</div>
+      <div class="pic-grid">
+        <div class="pic-panel pp-p1">
+          <div class="pp-label">コマ1 — 導入</div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">吹き出し：</div>
+          <div style="font-size:13px;font-family:'Source Serif 4',serif;font-style:italic;margin-bottom:8px;">"They'll take care of our baby while we look around."</div>
+          <div style="font-size:12px;line-height:1.6;"><strong>誰が：</strong>Mr. Sasaki（父）<br><strong>何をした：</strong>スタッフに子供を預けた<br><strong>どんな状況：</strong>美術館の入り口・チャイルドケアルームへ</div>
+        </div>
+        <div class="pic-panel pp-p2">
+          <div class="pp-label">コマ2 — 展開 "Ten minutes later"</div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">時間表示：Ten minutes later</div>
+          <div style="font-size:13px;margin-bottom:8px;color:var(--teal);">（吹き出しなし → 表情・行動から読む）</div>
+          <div style="font-size:12px;line-height:1.6;"><strong>Mr. Sasaki：</strong>荷物をロッカーに入れている<br><strong>Mrs. Sasaki：</strong>夫と一緒に絵を見ることを楽しみにしている（表情・様子）</div>
+        </div>
+        <div class="pic-panel pp-p3">
+          <div class="pp-label">コマ3 — 結末 "Two hours later"</div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:6px;">時間表示：Two hours later at the gift shop</div>
+          <div style="font-size:13px;margin-bottom:8px;color:var(--amber);">（吹き出しなし → 内面状態を補う）</div>
+          <div style="font-size:12px;line-height:1.6;"><strong>Mr. Sasaki：</strong>赤ちゃんへのおもちゃを選んでいる<br><strong>Mrs. Sasaki：</strong>赤ちゃんが泣いているかもしれないと心配している</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">ナレーションの「4つの要素」を毎コマ使う</div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
+        <div class="flow-chain">
+          <div class="flow-box fb-accent">① 時間・場所</div>
+          <div class="flow-arrow">+</div>
+          <div class="flow-box fb-teal">② 誰が何をした（行動）</div>
+          <div class="flow-arrow">+</div>
+          <div class="flow-box fb-amber">③ 吹き出しの内容</div>
+          <div class="flow-arrow">+</div>
+          <div class="flow-box fb-purple">④ 気持ち・感情（補う）</div>
+        </div>
+        <div style="font-size:12px;color:var(--text2);">④の「気持ち」は絵に直接描かれていない場合も自分で補う。これが高得点の鍵。</div>
+      </div>
+
+      <div class="section-label">模範ナレーション — 1文ずつ役割を確認</div>
+
+      <div class="speech-bubble sb-q2">
+        <div class="speech-label">模範解答（約80語）</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div class="sentence-row">
+            <span class="sr-role role-opening">導入文</span>
+            <span class="sr-sent">One day, the Sasaki family went to an art museum that offered childcare services.</span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-action">吹き出し</span>
+            <span class="sr-sent">Mr. Sasaki said to his wife, <span style="font-style:italic;">"They'll take care of our baby while we look around."</span></span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-time">時間転換</span>
+            <span class="sr-sent">Ten minutes later,</span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-action">行動①</span>
+            <span class="sr-sent">Mr. Sasaki was putting his bag into a locker.</span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-feeling">気持ち①</span>
+            <span class="sr-sent">Mrs. Sasaki was looking forward to seeing the paintings with her husband.</span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-time">時間転換</span>
+            <span class="sr-sent">Two hours later at the gift shop,</span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-action">行動②</span>
+            <span class="sr-sent">Mr. Sasaki was choosing a toy for their baby.</span>
+          </div>
+          <div class="sentence-row">
+            <span class="sr-role role-feeling">気持ち②</span>
+            <span class="sr-sent">Mrs. Sasaki was worried that their baby might be crying.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">ナレーションの文法：「過去進行形」が主力</div>
+
+      <div class="callout callout-yellow" style="margin-bottom:12px;">
+        <div class="callout-label">なぜ過去進行形を使うのか</div>
+        ナレーションは「その瞬間に起きていたこと」を語る。過去形（did）より過去進行形（was/were doing）の方が「場面描写」として自然で、採点者に「文法力がある」と判断される。
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px;">
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius);padding:12px;font-size:14px;">
+          <span style="background:var(--teal-light);padding:1px 6px;border-radius:3px;color:var(--teal);font-weight:700;">行動の描写</span> → 過去進行形<br>
+          <span style="font-family:'Source Serif 4',serif;margin-top:4px;display:block;">Mr. Sasaki <strong>was putting</strong> his bag into a locker.<br>Mr. Sasaki <strong>was choosing</strong> a toy for their baby.</span>
+        </div>
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius);padding:12px;font-size:14px;">
+          <span style="background:var(--pink-light);padding:1px 6px;border-radius:3px;color:var(--pink);font-weight:700;">気持ちの描写</span> → was + 形容詞 / was + 動詞ing<br>
+          <span style="font-family:'Source Serif 4',serif;margin-top:4px;display:block;">Mrs. Sasaki <strong>was looking forward to</strong> seeing the paintings.<br>Mrs. Sasaki <strong>was worried</strong> that their baby might be crying.</span>
+        </div>
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius);padding:12px;font-size:14px;">
+          <span style="background:var(--accent-light);padding:1px 6px;border-radius:3px;color:var(--accent);font-weight:700;">発言の描写</span> → said to + 人 + 引用符<br>
+          <span style="font-family:'Source Serif 4',serif;margin-top:4px;display:block;">Mr. Sasaki <strong>said to his wife</strong>, "They'll take care of our baby..."</span>
+        </div>
+      </div>
+
+      <div class="section-label">使える「気持ち表現」一覧</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+        <span class="phrase-chip">was happy to see...</span>
+        <span class="phrase-chip">was worried that...</span>
+        <span class="phrase-chip">was looking forward to...</span>
+        <span class="phrase-chip">was surprised to find...</span>
+        <span class="phrase-chip">was glad that...</span>
+        <span class="phrase-chip">was excited about...</span>
+        <span class="phrase-chip">was disappointed that...</span>
+        <span class="phrase-chip">thought that...</span>
+        <span class="phrase-chip">decided to...</span>
+        <span class="phrase-chip">was relieved to see...</span>
+        <span class="phrase-chip">felt that...</span>
+        <span class="phrase-chip">realized that...</span>
+      </div>
+
+      <div class="section-label">よくある失敗</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:7px 14px;font-size:12px;font-weight:700;color:var(--red);">× 気持ち（④）を一切補わない</div>
+          <div style="padding:9px 14px;font-size:13px;line-height:1.7;">行動だけ言って終わる → Mrs. Sasakiの心情（excited / worried）を補わないと話が薄くなり減点。吹き出しのないコマこそが「表現力」を問うている。</div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:7px 14px;font-size:12px;font-weight:700;color:var(--red);">× 時間を示す言葉を使わない</div>
+          <div style="padding:9px 14px;font-size:13px;line-height:1.7;">"Ten minutes later" / "Two hours later" を無視すると3コマの時間的な繋がりがなくなる。カードに書いてある情報は必ず使う。</div>
+        </div>
+        <div style="border:0.5px solid var(--amber-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:7px 14px;font-size:12px;font-weight:700;color:var(--amber);">△ 現在形で話してしまう</div>
+          <div style="padding:9px 14px;font-size:13px;line-height:1.7;">"Mr. Sasaki puts his bag..." → ナレーションは過去の物語。必ず過去形か過去進行形を使う。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — No.3・4 意見問題 →</button>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 4 ══════ -->
+  <div class="panel" id="panel4">
+
+    <div class="card">
+      <div class="section-label">No.3・4 意見問題 — 英作文スピーキング版</div>
+
+      <div class="callout callout-purple" style="margin-bottom:16px;">
+        <div class="callout-label">意見問題の本質</div>
+        No.3・4は英作文（大問5）の「口頭版」。構造は全く同じ：<strong>立場表明 → 理由① → （補足） → 理由② or 結論</strong>。英作文で練習した構造をそのまま口から出せるかが問われている。違いは「書く→話す」だけ。
+      </div>
+
+      <!-- No.3 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:14px;">
+        <div style="background:var(--amber-light);padding:12px 16px;display:flex;align-items:center;gap:12px;">
+          <div class="q-number" style="background:var(--amber);width:32px;height:32px;font-size:14px;">3</div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:var(--amber);">トピック関連の意見問題</div>
+            <div style="font-size:12px;color:#7a4500;margin-top:2px;">パッセージのテーマに関連した問い → 本文の内容を参考にしてよい</div>
+          </div>
+        </div>
+        <div style="padding:16px;">
+          <div style="font-family:'Source Serif 4',serif;font-size:15px;font-weight:500;margin-bottom:14px;">Some people say that parents today give too much freedom to their children. What do you think about that?</div>
+
+          <div class="section-label">思考プロセス</div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:14px;">
+            <div style="font-size:14px;line-height:1.75;">
+              <strong>① 立場を決める（0.5秒）：</strong> I agree か I disagree か。どちらが話しやすいか。<br>
+              <strong>② 理由の核心を1つ言葉にする（2秒）：</strong> "strictness" / "pressure" / "manners" など<br>
+              <strong>③ 補足できる例を考える（2秒）：</strong> As a result... / For example...<br>
+              <strong>④ 口を開く</strong>
+            </div>
+          </div>
+
+          <div class="opinion-grid">
+            <div class="op-card op-agree">
+              <div class="op-hdr">I agree（賛成）</div>
+              <div class="op-body">
+                <div class="sentence-row"><span class="sr-role role-opinion">立場</span><span class="sr-sent">I agree with that idea.</span></div>
+                <div class="sentence-row"><span class="sr-role role-reason">理由</span><span class="sr-sent">These days, parents are not strict enough with their children.</span></div>
+                <div class="sentence-row"><span class="sr-role role-example">結果</span><span class="sr-sent">As a result, children's manners are getting worse.</span></div>
+              </div>
+            </div>
+            <div class="op-card op-disagree">
+              <div class="op-hdr">I disagree（反対）</div>
+              <div class="op-body">
+                <div class="sentence-row"><span class="sr-role role-opinion">立場</span><span class="sr-sent" style="color:var(--coral);">I disagree with that idea.</span></div>
+                <div class="sentence-row"><span class="sr-role role-reason">理由</span><span class="sr-sent">I think many parents control their children too much.</span></div>
+                <div class="sentence-row"><span class="sr-role role-example">結果</span><span class="sr-sent">Children feel a lot of pressure from their parents.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- No.4 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+        <div style="background:var(--purple-light);padding:12px 16px;display:flex;align-items:center;gap:12px;">
+          <div class="q-number" style="background:var(--purple);width:32px;height:32px;font-size:14px;">4</div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:var(--purple);">社会的テーマへの意見問題</div>
+            <div style="font-size:12px;color:#3c3489;margin-top:2px;">より広い社会的トピック → Yes/No + Why? で答える</div>
+          </div>
+        </div>
+        <div style="padding:16px;">
+          <div style="font-family:'Source Serif 4',serif;font-size:15px;font-weight:500;margin-bottom:14px;">Today, many people buy secondhand goods such as used books and used clothing. Do you think more people will buy secondhand goods in the future?</div>
+
+          <div class="section-label">No.4の特徴：Yes/No のあとに "Why?" が来る</div>
+          <div style="font-size:14px;margin-bottom:14px;line-height:1.75;">面接官は Yes/No の答えを聞いた後に必ず "Why?" または "Why not?" を聞く。<strong>Yes/No を言う前に、理由まで準備してから答え始める</strong>こと。</div>
+
+          <div class="opinion-grid">
+            <div class="op-card op-agree">
+              <div class="op-hdr">Yes — 増えると思う</div>
+              <div class="op-body">
+                <div class="sentence-row"><span class="sr-role role-opinion">立場</span><span class="sr-sent">Yes, I do.</span></div>
+                <div class="sentence-row"><span class="sr-role role-reason">理由①</span><span class="sr-sent">People can save money by buying used goods.</span></div>
+                <div class="sentence-row"><span class="sr-role role-example">補足</span><span class="sr-sent">Also, I think secondhand stores will sell more kinds of things.</span></div>
+              </div>
+            </div>
+            <div class="op-card op-disagree">
+              <div class="op-hdr">No — 増えないと思う</div>
+              <div class="op-body">
+                <div class="sentence-row"><span class="sr-role role-opinion" style="background:var(--coral);color:#fff;">立場</span><span class="sr-sent" style="color:var(--coral);">No, I don't.</span></div>
+                <div class="sentence-row"><span class="sr-role role-reason">理由①</span><span class="sr-sent">I think most people like to buy new things.</span></div>
+                <div class="sentence-row"><span class="sr-role role-example">補足</span><span class="sr-sent">They do not want things that other people have used.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">意見問題の鉄則 — 構造の完全固定</div>
+
+      <div style="background:var(--surface2);border-radius:var(--radius-lg);padding:16px;border:0.5px solid var(--border);margin-bottom:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;">No.3の黄金構造（30秒以内）</div>
+        <div class="flow-chain">
+          <div class="flow-box fb-accent">I agree/disagree.</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-teal">Because / I think + 理由</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-amber">As a result / Also + 補足</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface2);border-radius:var(--radius-lg);padding:16px;border:0.5px solid var(--border);margin-bottom:14px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;">No.4の黄金構造</div>
+        <div class="flow-chain">
+          <div class="flow-box fb-purple">Yes/No.</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-teal">理由① (Because / First)</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-amber">補足 (Also / Second / In addition)</div>
+        </div>
+      </div>
+
+      <div class="key-point"><div class="kp-icon">!</div><div><strong>「理由が思いつかない」への対処法</strong><br><span style="font-size:13px;color:var(--text2);">まずYes/Noを言う。次の0.5秒で「なぜそう思うか」を日本語で考えて英語に変換する。理由は1つでも十分なことが多い。<em>黙って何も言わないことが最悪の選択</em>。I think... と言い始めながら考える。</span></div></div>
+      <div class="key-point"><div class="kp-icon">!</div><div><strong>「環境・健康・経済・利便性」の4軸を持っておく</strong><br><span style="font-size:13px;color:var(--text2);">どんなトピックでもこの4軸のどれかで理由が作れる。No.4のような社会的質問は「環境に良いから」「経済的だから」「健康に影響するから」「便利だから」のどれかを軸にするとほぼ対応できる。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — 採点基準 →</button>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 5 ══════ -->
+  <div class="panel" id="panel5">
+
+    <div class="card">
+      <div class="section-label">英検2級 二次試験の採点基準（自己採点）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:16px;">面接の採点は「応答の内容・発音・語彙・文法・語句のつながり」の5軸。各項目をチェックして練習の振り返りをしよう。</p>
+
+      <div style="display:flex;flex-direction:column;gap:2px;margin-bottom:16px;">
+        <div style="display:flex;gap:8px;padding:8px 12px;background:var(--accent-light);border-radius:var(--radius) var(--radius) 0 0;font-size:12px;font-weight:700;color:var(--accent);">内容（Content）— 各問題ごと</div>
+        <div class="rubric-row" id="rb1" onclick="toggleRb('rb1')"><div class="rubric-check" id="rc1">✓</div><div><strong>No.1：</strong>本文から正確な根拠を引用し "By ___ing" の形で答えられた</div></div>
+        <div class="rubric-row" id="rb2" onclick="toggleRb('rb2')"><div class="rubric-check" id="rc2">✓</div><div><strong>No.2：</strong>3コマすべてに触れ、行動＋気持ちを描写できた</div></div>
+        <div class="rubric-row" id="rb3" onclick="toggleRb('rb3')"><div class="rubric-check" id="rc3">✓</div><div><strong>No.2：</strong>時間表示（Ten minutes later / Two hours later）を使って繋いだ</div></div>
+        <div class="rubric-row" id="rb4" onclick="toggleRb('rb4')"><div class="rubric-check" id="rc4">✓</div><div><strong>No.3：</strong>明確に agree / disagree を述べ、理由を1つ以上言えた</div></div>
+        <div class="rubric-row" id="rb5" onclick="toggleRb('rb5')" style="margin-bottom:12px;"><div class="rubric-check" id="rc5">✓</div><div><strong>No.4：</strong>Yes/No の後に理由を2文以上述べた</div></div>
+
+        <div style="display:flex;gap:8px;padding:8px 12px;background:var(--teal-light);border-radius:var(--radius) var(--radius) 0 0;font-size:12px;font-weight:700;color:var(--teal);">文法・語彙</div>
+        <div class="rubric-row" id="rb6" onclick="toggleRb('rb6')"><div class="rubric-check" id="rc6">✓</div><div>No.2でナレーションに過去進行形（was + doing）を使えた</div></div>
+        <div class="rubric-row" id="rb7" onclick="toggleRb('rb7')"><div class="rubric-check" id="rc7">✓</div><div>No.3・4で "Because / As a result / Also / In addition" など論理の接続詞を使えた</div></div>
+        <div class="rubric-row" id="rb8" onclick="toggleRb('rb8')" style="margin-bottom:12px;"><div class="rubric-check" id="rc8">✓</div><div>三人称単数のs、冠詞、時制など基本文法が正確だった</div></div>
+
+        <div style="display:flex;gap:8px;padding:8px 12px;background:var(--amber-light);border-radius:var(--radius) var(--radius) 0 0;font-size:12px;font-weight:700;color:var(--amber);">スピーキング全般</div>
+        <div class="rubric-row" id="rb9" onclick="toggleRb('rb9')"><div class="rubric-check" id="rc9">✓</div><div>沈黙が3秒以上なかった（考えながら I think... / Well... で繋いだ）</div></div>
+        <div class="rubric-row" id="rb10" onclick="toggleRb('rb10')"><div class="rubric-check" id="rc10">✓</div><div>質問されたことに正面から答えた（関係ない内容を言わなかった）</div></div>
+      </div>
+
+      <div style="padding:12px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:14px;font-weight:700;">チェック済み</span>
+        <span style="font-size:24px;font-weight:700;color:var(--accent);" id="rb-score">0 / 10</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">No.3・4 で使える「つなぎ表現」チートシート</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">立場表明</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span class="phrase-chip">I agree with that idea.</span>
+            <span class="phrase-chip">I disagree with that idea.</span>
+            <span class="phrase-chip">I think so.</span>
+            <span class="phrase-chip">I don't think so.</span>
+            <span class="phrase-chip">Yes, I do.</span>
+            <span class="phrase-chip">No, I don't.</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">理由の導入</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span class="phrase-chip">Because...</span>
+            <span class="phrase-chip">I think that...</span>
+            <span class="phrase-chip">First,</span>
+            <span class="phrase-chip">One reason is that...</span>
+            <span class="phrase-chip">These days,</span>
+            <span class="phrase-chip">In recent years,</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--amber);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">補足・展開</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span class="phrase-chip">Also,</span>
+            <span class="phrase-chip">In addition,</span>
+            <span class="phrase-chip">As a result,</span>
+            <span class="phrase-chip">For example,</span>
+            <span class="phrase-chip">This means that...</span>
+            <span class="phrase-chip">Therefore,</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">間を繋ぐ（沈黙を避ける）</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span class="phrase-chip">Well...</span>
+            <span class="phrase-chip">Let me think...</span>
+            <span class="phrase-chip">I think...</span>
+            <span class="phrase-chip">Actually,</span>
+            <span class="phrase-chip">Hmm...</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(6)">STEP 6 へ — 日常トレーニング →</button>
+    </div>
+  </div>
+
+  <!-- ══════ STEP 6 ══════ -->
+  <div class="panel" id="panel6">
+
+    <div class="card">
+      <div class="section-label">スピーキングの本質的なトレーニング法</div>
+
+      <div class="callout callout-purple" style="margin-bottom:16px;">
+        <div class="callout-label">前提</div>
+        スピーキングは「英語を話す練習」をしても伸びない。<strong>「英語で考える練習」</strong>をすることで伸びる。頭の中で日本語で考えてから英語に変換しているうちは、面接で沈黙が生まれる。英語で考える回路を作ることが目標。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">問題形式別 — 毎日できる5分トレーニング</div>
+
+      <!-- No.1 training -->
+      <div class="training-card">
+        <div class="tc-hdr" style="background:var(--accent-light);">
+          <div class="tc-num" style="background:var(--accent);">1</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--accent);">No.1 対策：「根拠を探して読む」訓練</div>
+            <div style="font-size:11px;color:var(--text2);">所要時間：3分 / 頻度：毎日</div>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div style="font-size:14px;line-height:1.8;">
+            <strong>やり方：</strong>英検の長文問題（大問3）を使って、質問の "how / why / what" を見た瞬間に本文から根拠となる文を指で押さえ、"By ___ing" の形に変換して声に出す。<br><br>
+            <strong>なぜ効くか：</strong>No.1は「本文を素早くスキャンして根拠を取り出す力」が必要。これは読解と同じ回路。日々の長文読解練習をそのままスピーキングに転用できる。
+          </div>
+          <div style="background:var(--accent-light);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px;">
+            <strong>チェックポイント：</strong>「本文から根拠が見つかるまで3秒以内か」「By ___ing の形に変換できるか」
+          </div>
+        </div>
+      </div>
+
+      <!-- No.2 training -->
+      <div class="training-card">
+        <div class="tc-hdr" style="background:var(--teal-light);">
+          <div class="tc-num" style="background:var(--teal);">2</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--teal);">No.2 対策：「絵→物語」変換の瞬発力訓練</div>
+            <div style="font-size:11px;color:var(--text2);">所要時間：5分 / 頻度：週3回以上</div>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div style="font-size:14px;line-height:1.8;">
+            <strong>やり方1（絵→発話）：</strong>漫画・絵本・映画のワンシーンを見て、"[人物] was [verb]ing. [人物] was [feeling adjective] because..." の形で英語で説明する。20秒以内に。<br><br>
+            <strong>やり方2（感情補充）：</strong>英検の過去問のナレーション問題で、<em>吹き出しのないコマだけ</em>を見て「この人物は何を考えているか」を3種類の感情表現で言う練習。<br><br>
+            <strong>なぜ効くか：</strong>ナレーションで減点されるのは「気持ちが表現できない」こと。感情表現のレパートリーを体に染み込ませることが最優先。
+          </div>
+          <div style="background:var(--teal-light);border-radius:8px;padding:10px 12px;margin-top:10px;font-size:13px;">
+            <strong>目標：</strong>was worried that / was looking forward to / was surprised to find の3つを瞬時に出せるまで練習する。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.3/4 training -->
+      <div class="training-card">
+        <div class="tc-hdr" style="background:var(--amber-light);">
+          <div class="tc-num" style="background:var(--amber);">3</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--amber);">No.3・4 対策：「1分間意見立案」訓練</div>
+            <div style="font-size:11px;color:var(--text2);">所要時間：5分 / 頻度：毎日</div>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div style="font-size:14px;line-height:1.8;">
+            <strong>やり方：</strong>以下のトピックを見て、<strong>3秒以内に立場を決め、30秒以内に「立場→理由→補足」の3段構成を声に出す</strong>練習。日本語ではなく英語で考え始めることが大事。<br><br>
+            <strong>なぜ効くか：</strong>意見問題は構造が決まっているので、構造を自動化してしまえば「何を言うか」だけに集中できる。構造の自動化 = 繰り返し練習。
+          </div>
+
+          <div style="background:var(--amber-light);border-radius:8px;padding:12px;margin-top:10px;">
+            <div style="font-size:11px;font-weight:700;color:var(--amber);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:8px;">練習トピック例（これを声に出して30秒で答える）</div>
+            <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;font-family:'Source Serif 4',serif;">
+              <div style="padding:6px 10px;background:var(--surface);border-radius:6px;border:0.5px solid var(--border);">Do you think students should use smartphones in class?</div>
+              <div style="padding:6px 10px;background:var(--surface);border-radius:6px;border:0.5px solid var(--border);">Do you think people should work from home more in the future?</div>
+              <div style="padding:6px 10px;background:var(--surface);border-radius:6px;border:0.5px solid var(--border);">Do you think it is important for children to learn foreign languages?</div>
+              <div style="padding:6px 10px;background:var(--surface);border-radius:6px;border:0.5px solid var(--border);">Some people say that cities are better places to live than the countryside. Do you agree?</div>
+              <div style="padding:6px 10px;background:var(--surface);border-radius:6px;border:0.5px solid var(--border);">Do you think AI will replace many jobs in the future?</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 音読訓練 -->
+      <div class="training-card">
+        <div class="tc-hdr" style="background:var(--purple-light);">
+          <div class="tc-num" style="background:var(--purple);">4</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;color:var(--purple);">全問共通：「音読＋再生」で英語回路を作る</div>
+            <div style="font-size:11px;color:var(--text2);">所要時間：10分 / 頻度：毎日</div>
+          </div>
+        </div>
+        <div class="tc-body">
+          <div style="font-size:14px;line-height:1.8;">
+            <strong>やり方（シャドーイング→再生）：</strong><br>
+            ① 英検2級の長文・メール文などを30秒音読する<br>
+            ② 本文を閉じて、内容を英語で30秒以内に「再話」する<br>
+            ③ もう一度本文を開いて確認する<br><br>
+            <strong>なぜ効くか：</strong>「英語で読んだことを英語で話す」という回路を作る訓練。日本語を経由しないで英語が出てくるようになる。これがスピーキング力の根幹。<br><br>
+            <strong>大事な原則：</strong><em>完璧な英文を話そうとしない</em>。文法が多少崩れても、意味が伝わる英語を出し続けることが大事。採点は「正確さ」だけでなく「コミュニケーション力」も見ている。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">スピーキング上達の本質 — まとめ</div>
+
+      <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius-lg);padding:18px;margin-bottom:14px;">
+        <div style="font-size:14px;font-weight:700;color:#3c3489;margin-bottom:10px;">英語スピーキングが伸びない本当の理由</div>
+        <div style="font-size:13px;line-height:1.9;color:#534ab7;">
+          「話す練習が足りない」のではなく「<em>英語で考える練習が足りない</em>」。<br>
+          頭の中で「日本語で考える → 英語に翻訳する」という回路を使っている限り、必ず遅れが生まれる。<br>
+          目標は「英語のトピックを見た瞬間に英語で考えが動き始める」状態。<br><br>
+          そのためには：<br>
+          ① 英語の文章を読んで、英語でその内容を話す訓練<br>
+          ② 意見を3段構成（立場→理由→補足）で話す構造を体に染み込ませる<br>
+          ③ 毎日5〜10分、英語で「何かについて意見を言う」習慣を作る<br><br>
+          <strong>流暢さより構造。発音より一貫性。これが合格への最短ルート。</strong>
+        </div>
+      </div>
+
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>No.1：本文の言葉を使う。自分の言葉は不要</strong><br><span style="font-size:13px;color:var(--text2);">According to the passage は「本文から証拠を出せ」のサイン。By ___ing で簡潔に。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>No.2：時間表示＋行動＋気持ちの3点セットを毎コマ</strong><br><span style="font-size:13px;color:var(--text2);">吹き出しのないコマが評価の差になる。感情表現のレパートリーを増やすことが最優先。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>No.3・4：立場→理由→補足の3段構造を自動化する</strong><br><span style="font-size:13px;color:var(--text2);">構造が体に入っていれば「何を言うか」だけ考えればいい。英作文の口頭版として同じ練習が使える。</span></div></div>
+      <div class="key-point"><div class="kp-icon">4</div><div><strong>沈黙より「思考しながら話すフィラー」</strong><br><span style="font-size:13px;color:var(--text2);">Well... / I think... / Let me think... を使って話し続ける。3秒以上の沈黙は大きな減点になる。</span></div></div>
+
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(5)">← STEP 5 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var rbChecked={};
+
+function goStep(n){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('panel'+n).classList.add('active');
+  document.querySelectorAll('.step-btn').forEach(function(b){b.classList.remove('active');});
+  var nb=document.getElementById('nav'+n);
+  if(nb) nb.classList.add('active');
+  var pct=Math.round((n/6)*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-text').textContent='STEP '+n+' / 6';
+  window.scrollTo(0,0);
+}
+
+function toggleRb(id){
+  var circ=document.getElementById('r'+id.replace('rb','c'));
+  if(!circ){circ=document.getElementById('rc'+id.replace('rb',''));}
+  if(!circ) return;
+  var isChecked=circ.classList.contains('checked');
+  circ.classList.toggle('checked',!isChecked);
+  rbChecked[id]=!isChecked;
+  var count=Object.values(rbChecked).filter(Boolean).length;
+  var sc=document.getElementById('rb-score');
+  if(sc) sc.textContent=count+' / 10';
+}
+
+function toggleAcc(id){
+  var body=document.getElementById(id+'-body');
+  var arrow=document.getElementById(id+'-arrow');
+  if(!body) return;
+  var isOpen=body.style.display==='block';
+  body.style.display=isOpen?'none':'block';
+  if(arrow) arrow.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
+}
+</script>
+</body>
+</html>

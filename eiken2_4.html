@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語読解特訓｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface2:#f0ede6;
+  --border:#ddd9d0;--text:#1a1814;--text2:#6b6760;--text3:#9b9892;
+  --accent:#2c5f8a;--accent-light:#e8f1f8;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --amber:#854f0b;--amber-light:#faeeda;
+  --coral:#993c1d;--coral-light:#faece7;
+  --purple:#534ab7;--purple-light:#eeedfe;
+  --green:#3b6d11;--green-light:#eaf3de;
+  --red:#a32d2d;--red-light:#fcebeb;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.page-header{background:var(--surface);border-bottom:0.5px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+.brand-logo{width:38px;height:38px;border-radius:9px;background:var(--accent);color:#fff;font-size:19px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-name{font-size:13px;font-weight:700;color:var(--text);}
+.brand-tagline{font-size:11px;color:var(--text3);margin-top:1px;letter-spacing:0.03em;}
+.lesson-title{font-size:13px;font-weight:700;color:var(--text);text-align:right;font-family:'Source Serif 4',serif;}
+.progress-bar-wrap{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text2);margin-top:4px;justify-content:flex-end;}
+.progress-bar{width:90px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.4s ease;}
+
+.container{max-width:920px;margin:0 auto;padding:24px 18px 80px;}
+.step-nav{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap;}
+.step-btn{padding:5px 13px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:11px;font-family:'Noto Sans JP',sans-serif;color:var(--text2);cursor:pointer;transition:all 0.2s;font-weight:500;}
+.step-btn:hover{background:var(--surface2);color:var(--text);}
+.step-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.step-btn.done{background:var(--green-light);color:var(--green);border-color:#c0dd97;}
+.panel{display:none;}
+.panel.active{display:block;animation:fadeIn 0.22s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.card{background:var(--surface);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:22px;margin-bottom:14px;}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;}
+.divider{height:0.5px;background:var(--border);margin:18px 0;}
+
+/* passage */
+.passage-text{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:1.95;color:var(--text);}
+.para-block{border-left:3px solid transparent;padding-left:16px;margin-bottom:18px;}
+.para-block.p1{border-color:var(--accent);}
+.para-block.p2{border-color:var(--teal);}
+.para-block.p3{border-color:var(--coral);}
+.para-tag{display:inline-flex;align-items:center;gap:5px;font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:7px;}
+
+/* sentence classification */
+.sent{display:inline;border-radius:3px;padding:1px 2px;cursor:pointer;transition:background 0.15s;}
+.sent:hover{outline:1px dashed var(--border);}
+.sent.topic{background:#e8f7ff;box-shadow:0 0 0 1.5px var(--accent);border-radius:3px;}
+.sent.detail{background:#fff0e6;box-shadow:0 0 0 1.5px var(--amber);border-radius:3px;}
+.sent.example{background:#f3f0ff;box-shadow:0 0 0 1.5px #aaa3e0;border-radius:3px;opacity:0.7;}
+.sent.support{background:var(--teal-light);box-shadow:0 0 0 1.5px var(--teal);border-radius:3px;}
+
+/* sent label tooltip-style */
+.sent-label{font-family:'Noto Sans JP',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:1px 5px;border-radius:3px;vertical-align:middle;margin-left:3px;display:none;}
+.show-labels .sent-label{display:inline;}
+.lbl-topic{background:var(--accent);color:#fff;}
+.lbl-support{background:var(--teal);color:#fff;}
+.lbl-example{background:#7f77dd;color:#fff;}
+.lbl-cut{background:var(--amber);color:#fff;}
+
+/* role badge */
+.role-badge{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-right:5px;font-family:'Noto Sans JP',sans-serif;}
+.rb-topic{background:var(--accent-light);color:var(--accent);}
+.rb-support{background:var(--teal-light);color:var(--teal);}
+.rb-example{background:var(--purple-light);color:var(--purple);}
+.rb-cut{background:var(--amber-light);color:var(--amber);}
+.rb-key{background:var(--green-light);color:var(--green);}
+
+/* logic chain */
+.logic-chain{display:flex;flex-direction:column;gap:0;}
+.lc-item{display:flex;gap:13px;align-items:stretch;}
+.lc-dot{width:11px;height:11px;border-radius:50%;flex-shrink:0;margin-top:5px;border:2px solid var(--surface);}
+.lc-connector{width:1.5px;flex:1;background:var(--border);margin:3px auto;min-height:16px;}
+.lc-body{padding-bottom:16px;flex:1;font-size:14px;line-height:1.65;}
+.lc-label{font-size:9px;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;margin-bottom:3px;}
+
+/* key point */
+.key-point{display:flex;gap:11px;padding:13px 15px;border-radius:var(--radius);background:var(--surface2);border:0.5px solid var(--border);margin-bottom:9px;font-size:14px;align-items:flex-start;line-height:1.65;}
+.kp-icon{width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+/* prediction / evidence */
+.predict-box{background:#fffbea;border-left:3px solid #e6c200;border-radius:0 var(--radius) var(--radius) 0;padding:13px 15px;margin:11px 0;font-size:14px;line-height:1.75;}
+.predict-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#7a6600;margin-bottom:5px;}
+.evidence-box{background:var(--accent-light);border:0.5px solid #b5d4f4;border-radius:var(--radius);padding:13px 15px;margin:10px 0;font-size:14px;line-height:1.7;}
+.evidence-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;}
+
+/* sentence strips */
+.sent-strip{border-radius:var(--radius);padding:10px 14px;margin-bottom:7px;font-size:14px;line-height:1.7;border:0.5px solid transparent;}
+.ss-topic{background:var(--accent-light);border-color:#b5d4f4;font-family:'Source Serif 4',serif;}
+.ss-support{background:var(--teal-light);border-color:#9fe1cb;font-family:'Source Serif 4',serif;}
+.ss-example{background:var(--purple-light);border-color:#afa9ec;font-family:'Source Serif 4',serif;opacity:0.75;}
+.ss-cut{background:var(--amber-light);border-color:#fac775;font-family:'Source Serif 4',serif;opacity:0.7;text-decoration:line-through;text-decoration-color:var(--amber);}
+.ss-label{font-family:'Noto Sans JP',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:4px;}
+.ssl-topic{color:var(--accent);}
+.ssl-support{color:var(--teal);}
+.ssl-example{color:var(--purple);}
+.ssl-cut{color:var(--amber);}
+
+/* writing area */
+.writing-area{width:100%;min-height:120px;padding:14px;font-size:15px;font-family:'Source Serif 4',serif;line-height:1.85;color:var(--text);background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);resize:vertical;transition:border 0.2s;}
+.writing-area:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(44,95,138,0.1);}
+.word-count{font-size:12px;color:var(--text3);margin-top:5px;text-align:right;font-weight:500;transition:color 0.2s;}
+.word-count.ok{color:var(--green);}
+.word-count.over{color:var(--red);}
+.word-count.under{color:var(--amber);}
+
+/* model answer */
+.model-answer-box{background:var(--surface);border:2px solid var(--teal);border-radius:var(--radius-lg);padding:20px;margin-top:14px;display:none;}
+.model-answer-box.show{display:block;}
+.model-text{font-family:'Source Serif 4',serif;font-size:15px;line-height:2;color:var(--text);border-bottom:0.5px solid var(--border);padding-bottom:14px;margin-bottom:14px;}
+.model-annotated .part{display:inline;border-radius:2px;padding:1px 3px;}
+.part-p1{background:#dff0ff;}
+.part-p2{background:var(--teal-light);}
+.part-p3{background:var(--coral-light);}
+
+/* scoring rubric */
+.rubric-row{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-bottom:0.5px solid var(--border);font-size:13px;line-height:1.6;}
+.rubric-row:last-child{border-bottom:none;}
+.rubric-check{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;cursor:pointer;transition:all 0.2s;}
+.rubric-check.checked{background:var(--teal);border-color:var(--teal);color:#fff;}
+.rubric-score{font-size:11px;font-weight:700;color:var(--text3);flex-shrink:0;min-width:28px;margin-top:2px;}
+
+/* step actions */
+.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:0.5px solid var(--border);}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s;}
+.btn-primary:hover{background:#1e4a70;}.btn-primary:active{transform:scale(0.98);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--surface);color:var(--text);border:0.5px solid var(--border);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--surface2);}
+.btn-ghost{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;background:transparent;color:var(--accent);border:0.5px solid var(--accent);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;}
+.btn-ghost:hover{background:var(--accent-light);}
+
+/* para accordion */
+.para-acc{border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;}
+.para-acc-hdr{padding:11px 15px;display:flex;align-items:center;gap:10px;cursor:pointer;}
+.para-acc-num{width:26px;height:26px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.para-acc-arrow{font-size:13px;transition:transform 0.2s;margin-left:auto;}
+.para-acc-body{display:none;padding:15px;border-top:0.5px solid var(--border);}
+
+/* toggle */
+.toggle-wrap{display:flex;align-items:center;gap:8px;cursor:pointer;user-select:none;font-size:13px;color:var(--text2);font-weight:500;}
+.toggle-track{width:36px;height:20px;background:var(--border);border-radius:10px;position:relative;transition:background 0.2s;flex-shrink:0;}
+.toggle-track.on{background:var(--accent);}
+.toggle-thumb{width:16px;height:16px;background:#fff;border-radius:50%;position:absolute;top:2px;left:2px;transition:transform 0.2s;}
+.toggle-track.on .toggle-thumb{transform:translateX(16px);}
+
+@media(max-width:500px){.step-actions{flex-direction:column;gap:10px;align-items:stretch;}.btn-primary,.btn-secondary{justify-content:center;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"読む力"と"解く力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+    <div class="lesson-title">英検2級　英文要約問題</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 5</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:20%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 論理を読む</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 核心を抽出する</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 要約を書く</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 モデル解答</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 採点基準</button>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 1 — 論理を読む
+  ══════════════════════════════ -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:10px;">
+        <div class="section-label" style="margin-bottom:0;">本文を読む — 1文ずつ役割を見極める</div>
+        <div class="toggle-wrap" onclick="toggleLabels()" id="toggle-wrap">
+          <div class="toggle-track" id="label-toggle"><div class="toggle-thumb"></div></div>
+          <span id="toggle-text">役割ラベルを表示する</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:18px;">各文には「役割」がある。要約するとき何を残して何を削るかは、この役割で決まる。ラベルをONにすると各文の役割が表示される。</p>
+
+      <div id="passage-wrap">
+
+        <!-- P1 -->
+        <div class="para-block p1">
+          <div class="para-tag"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><span style="color:var(--accent);">第1段落 — 背景・テーマの導入</span></div>
+          <div class="passage-text">
+            <span class="sent" id="s1_1" onclick="focusSent('s1_1')">Many years ago, when people often wanted to buy a new product, they often asked their friends or family for personal advice.<span class="sent-label lbl-support">背景（昔）</span></span>
+            <span class="sent" id="s1_2" onclick="focusSent('s1_2')"> Nowadays, there are other sources of information available, such as customer reviews on the Internet.<span class="sent-label lbl-support">対比（今）</span></span>
+            <span class="sent topic" id="s1_3" onclick="focusSent('s1_3')"> Many people choose to read such reviews before making a purchase.<span class="sent-label lbl-topic">★ トピック文</span></span>
+          </div>
+        </div>
+
+        <!-- P2 -->
+        <div class="para-block p2">
+          <div class="para-tag"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block;"></span><span style="color:var(--teal);">第2段落 — メリット</span></div>
+          <div class="passage-text">
+            <span class="sent topic" id="s2_1" onclick="focusSent('s2_1')">What are some advantages of this?<span class="sent-label lbl-topic">★ 問いかけ（メリット段落の予告）</span></span>
+            <span class="sent topic" id="s2_2" onclick="focusSent('s2_2')"> Customer reviews give people useful information to make better choices.<span class="sent-label lbl-topic">★ メリット①（核心）</span></span>
+            <span class="sent example" id="s2_3" onclick="focusSent('s2_3')"> For example, a review can tell a buyer if an item's size is not normal.<span class="sent-label lbl-example">具体例（削る）</span></span>
+            <span class="sent topic" id="s2_4" onclick="focusSent('s2_4')"> Also, reviews offer companies chances to improve their products.<span class="sent-label lbl-topic">★ メリット②（核心）</span></span>
+            <span class="sent support" id="s2_5" onclick="focusSent('s2_5')"> Business owners can realize what customers expect by reading the feedback.<span class="sent-label lbl-support">補足説明</span></span>
+          </div>
+        </div>
+
+        <!-- P3 -->
+        <div class="para-block p3">
+          <div class="para-tag"><span style="width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block;"></span><span style="color:var(--coral);">第3段落 — デメリット・問題点</span></div>
+          <div class="passage-text">
+            <span class="sent topic" id="s3_1" onclick="focusSent('s3_1')">On the other hand, there are some problems.<span class="sent-label lbl-topic">★ 対比の導入（問題点段落の予告）</span></span>
+            <span class="sent topic" id="s3_2" onclick="focusSent('s3_2')"> Some customer reviews are not real.<span class="sent-label lbl-topic">★ 問題①（核心）</span></span>
+            <span class="sent support" id="s3_3" onclick="focusSent('s3_3')"> This makes it difficult for people to know which reviews to trust.<span class="sent-label lbl-support">影響・補足</span></span>
+            <span class="sent topic" id="s3_4" onclick="focusSent('s3_4')"> Furthermore, negative comments can hurt businesses.<span class="sent-label lbl-topic">★ 問題②（核心）</span></span>
+            <span class="sent example" id="s3_5" onclick="focusSent('s3_5')"> This often happens especially when a small business receives too many of them.<span class="sent-label lbl-example">具体例（削る）</span></span>
+            <span class="sent example" id="s3_6" onclick="focusSent('s3_6')"> Unhappy people write such comments while happy people usually stay quiet.<span class="sent-label lbl-example">具体例（削る）</span></span>
+          </div>
+        </div>
+
+      </div><!-- /passage-wrap -->
+
+      <!-- 凡例 -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;padding:12px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);">
+        <div style="font-size:11px;font-weight:700;color:var(--text3);width:100%;margin-bottom:4px;letter-spacing:0.07em;text-transform:uppercase;">文の役割（要約に使うかどうか）</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;"><span style="width:12px;height:12px;border-radius:2px;background:#e8f7ff;border:1.5px solid var(--accent);display:inline-block;"></span><span style="color:var(--accent);">トピック文（必ず使う）</span></div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;"><span style="width:12px;height:12px;border-radius:2px;background:var(--teal-light);border:1.5px solid var(--teal);display:inline-block;"></span><span style="color:var(--teal);">補足・展開（状況で使う）</span></div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:12px;font-weight:700;opacity:0.75;"><span style="width:12px;height:12px;border-radius:2px;background:var(--purple-light);border:1.5px solid #aaa3e0;display:inline-block;"></span><span style="color:var(--purple);">具体例（原則削る）</span></div>
+      </div>
+    </div>
+
+    <!-- 文の役割解説 -->
+    <div class="card">
+      <div class="section-label">なぜ各文にこの役割があるのか</div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px;font-weight:700;color:var(--accent);margin-bottom:8px;">第1段落：昔→今の対比で「レビューが読まれている」という現象を導く</div>
+        <div class="logic-chain">
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--text3);box-shadow:0 0 0 1px var(--text3);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--text3);">背景（昔）</div>
+              "Many years ago ... asked friends or family" — 昔の情報収集方法。<strong>現在と対比するための準備</strong>。要約には不要。
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--text3);box-shadow:0 0 0 1px var(--text3);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--text3);">現在の状況</div>
+              "Nowadays ... customer reviews on the Internet" — 今は他の情報源がある。<strong>話題の転換点</strong>。
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--accent);box-shadow:0 0 0 1px var(--accent);"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--accent);">★ トピック文</div>
+              <strong>"Many people choose to read such reviews before making a purchase."</strong><br>
+              <span style="font-size:12px;color:var(--text2);">1〜2文目がすべてこの文を言うための準備。「レビューが広く読まれている」が第1段落の核心。</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:8px;">第2段落：「利点は何か？」という問いかけが2つのメリットを予告する</div>
+        <div class="logic-chain">
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--accent);box-shadow:0 0 0 1px var(--accent);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--accent);">問いかけ＋メリット①</div>
+              <strong>"Customer reviews give people useful information to make better choices."</strong> — 購買者へのメリット
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:#7f77dd;box-shadow:0 0 0 1px #7f77dd;"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--purple);">具体例（削る）</div>
+              "For example, a review can tell a buyer if an item's size is not normal." — サイズの話は単なる例。なくても意味は通る。
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--accent);box-shadow:0 0 0 1px var(--accent);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--accent);">メリット②</div>
+              <strong>"reviews offer companies chances to improve their products."</strong> — 企業側へのメリット
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--teal);box-shadow:0 0 0 1px var(--teal);"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--teal);">補足</div>
+              "Business owners can realize what customers expect..." — メリット②の説明。字数に余裕があれば使えるが優先度は低い。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--coral);margin-bottom:8px;">第3段落：「On the other hand」が対比を告げ、2つの問題点が続く</div>
+        <div class="logic-chain">
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--accent);box-shadow:0 0 0 1px var(--accent);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--accent);">★ 対比の導入＋問題①</div>
+              <strong>"On the other hand, there are some problems."</strong> + <strong>"Some customer reviews are not real."</strong> — 偽レビューの問題
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--teal);box-shadow:0 0 0 1px var(--teal);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--teal);">補足</div>
+              "This makes it difficult for people to know which reviews to trust." — 問題①の影響。補足として使える。
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:var(--accent);box-shadow:0 0 0 1px var(--accent);"></div>
+              <div class="lc-connector"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--accent);">★ 問題②</div>
+              <strong>"negative comments can hurt businesses."</strong> — 企業へのダメージ
+            </div>
+          </div>
+          <div class="lc-item">
+            <div style="display:flex;flex-direction:column;align-items:center;width:28px;flex-shrink:0;">
+              <div class="lc-dot" style="background:#7f77dd;box-shadow:0 0 0 1px #7f77dd;"></div>
+            </div>
+            <div class="lc-body">
+              <div class="lc-label" style="color:var(--purple);">具体例2つ（削る）</div>
+              "This often happens especially when a small business..." + "Unhappy people write such comments..." — 両方とも単なる具体化。削る。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">要約問題の本質：「正しく読む」とはどういうことか</div>
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>具体例は「説明のための道具」であって「主張」ではない</strong><br><span style="font-size:13px;color:var(--text2);">"For example" の後は筆者の主張ではなく、読者に理解させるための補助。要約は筆者の<em>主張</em>を残す作業なので、具体例は全て削る。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>各段落の「最初の主張文」がトピック文になることが多い</strong><br><span style="font-size:13px;color:var(--text2);">英語の段落は「主張→根拠→具体例」の順で書かれることがほとんど。段落の最初か最後の文が核心である確率が高い。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>接続詞は段落の「構造」を教えてくれる</strong><br><span style="font-size:13px;color:var(--text2);">For example → 具体例が始まる合図（削る）。On the other hand → 対比が始まる合図（残す）。Also / Furthermore → 追加の主張（残す）。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — 核心を抽出する →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 2 — 核心を抽出する
+  ══════════════════════════════ -->
+  <div class="panel" id="panel2">
+
+    <div class="card">
+      <div class="section-label">各段落の文を「使う・削る」で仕分けする</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:16px;">要約とは「本文の全部をそのまま短くする」のではなく、<strong>重要な文だけを取り出して繋ぐ</strong>作業。まず仕分けを正確にする。</p>
+
+      <!-- P1 仕分け -->
+      <div style="margin-bottom:20px;">
+        <div style="font-size:13px;font-weight:700;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span>第1段落</div>
+        <div class="sent-strip ss-support">
+          <div class="ss-label ssl-cut">削る — 背景（対比の準備）</div>
+          Many years ago, when people often wanted to buy a new product, they often asked their friends or family for personal advice.
+        </div>
+        <div class="sent-strip ss-support">
+          <div class="ss-label ssl-cut">削る — 現在の状況（次の文への橋渡し）</div>
+          Nowadays, there are other sources of information available, such as customer reviews on the Internet.
+        </div>
+        <div class="sent-strip ss-topic">
+          <div class="ss-label ssl-topic">★ 使う — トピック文（段落の核心）</div>
+          Many people choose to read such reviews before making a purchase.
+        </div>
+      </div>
+
+      <!-- P2 仕分け -->
+      <div style="margin-bottom:20px;">
+        <div style="font-size:13px;font-weight:700;color:var(--teal);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block;"></span>第2段落</div>
+        <div class="sent-strip" style="background:var(--surface2);border-color:var(--border);">
+          <div class="ss-label" style="color:var(--text3);">削る — 問いかけ（メリットの予告）</div>
+          What are some advantages of this?
+        </div>
+        <div class="sent-strip ss-topic">
+          <div class="ss-label ssl-topic">★ 使う — メリット①（核心）</div>
+          Customer reviews give people useful information to make better choices.
+        </div>
+        <div class="sent-strip ss-example">
+          <div class="ss-label ssl-example">削る — 具体例（For example）</div>
+          For example, a review can tell a buyer if an item's size is not normal.
+        </div>
+        <div class="sent-strip ss-topic">
+          <div class="ss-label ssl-topic">★ 使う — メリット②（核心）</div>
+          Also, reviews offer companies chances to improve their products.
+        </div>
+        <div class="sent-strip ss-support">
+          <div class="ss-label ssl-support">状況次第 — メリット②の補足</div>
+          Business owners can realize what customers expect by reading the feedback.
+        </div>
+      </div>
+
+      <!-- P3 仕分け -->
+      <div>
+        <div style="font-size:13px;font-weight:700;color:var(--coral);margin-bottom:10px;display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block;"></span>第3段落</div>
+        <div class="sent-strip ss-topic">
+          <div class="ss-label ssl-topic">★ 使う — 対比の転換＋問題提起</div>
+          On the other hand, there are some problems.
+        </div>
+        <div class="sent-strip ss-topic">
+          <div class="ss-label ssl-topic">★ 使う — 問題①（核心）</div>
+          Some customer reviews are not real.
+        </div>
+        <div class="sent-strip ss-support">
+          <div class="ss-label ssl-support">状況次第 — 問題①の影響（補足）</div>
+          This makes it difficult for people to know which reviews to trust.
+        </div>
+        <div class="sent-strip ss-topic">
+          <div class="ss-label ssl-topic">★ 使う — 問題②（核心）</div>
+          Furthermore, negative comments can hurt businesses.
+        </div>
+        <div class="sent-strip ss-example">
+          <div class="ss-label ssl-example">削る — 具体例</div>
+          This often happens especially when a small business receives too many of them.
+        </div>
+        <div class="sent-strip ss-example">
+          <div class="ss-label ssl-example">削る — 具体例</div>
+          Unhappy people write such comments while happy people usually stay quiet.
+        </div>
+      </div>
+    </div>
+
+    <!-- 要約に使う素材の整理 -->
+    <div class="card">
+      <div class="section-label">要約に使う素材を整理する</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">仕分けが終わったら「使う文」だけを並べる。これが要約の骨格になる。</p>
+
+      <div style="background:var(--surface2);border-radius:var(--radius-lg);padding:16px;border:0.5px solid var(--border);">
+        <div style="margin-bottom:14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;">第1段落の核心（テーマ導入）</div>
+          <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.75;padding:10px 12px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border);">
+            Many people choose to read <strong>customer reviews</strong> before making a purchase.
+          </div>
+        </div>
+        <div style="margin-bottom:14px;">
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;">第2段落の核心（メリット×2）</div>
+          <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.75;padding:10px 12px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border);">
+            ① Customer reviews give people <strong>useful information</strong> to make better choices.<br>
+            ② reviews offer companies <strong>chances to improve</strong> their products.
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--coral);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;">第3段落の核心（問題点×2）</div>
+          <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.75;padding:10px 12px;background:var(--surface);border-radius:8px;border:0.5px solid var(--border);">
+            ① Some reviews are <strong>not real</strong>, making it hard to know which to trust.<br>
+            ② <strong>Negative comments</strong> can hurt businesses.
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;padding:12px 15px;background:#fffbea;border-left:3px solid #e6c200;border-radius:0 var(--radius) var(--radius) 0;font-size:14px;line-height:1.75;">
+        <div style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#7a6600;margin-bottom:5px;">次のSTEPでやること</div>
+        この素材を繋いで<strong>45〜55語</strong>の英文にする。繋ぐときは：<br>
+        P1→P2：<strong>「テーマ + メリット」</strong>の流れで接続<br>
+        P2→P3：<strong>However / On the other hand</strong>で逆接（対比を保つ）
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — 要約を書く →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 3 — 要約を書く
+  ══════════════════════════════ -->
+  <div class="panel" id="panel3">
+
+    <div class="card">
+      <div class="section-label">要約問題の指示文</div>
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:14px;border:0.5px solid var(--border);font-size:13px;line-height:1.8;color:var(--text2);">
+        以下の英文を読んで、その内容を<strong style="color:var(--red);">45〜55語の英語で要約</strong>し、解答欄に記入しなさい。<br>
+        解答が英文の要約になっていないと判断された場合は、<strong style="color:var(--red);">0点と採点される</strong>ことがあります。
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">要約を書く前のチェックリスト</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div id="chk1" class="rubric-row" onclick="toggleCheck('chk1')">
+          <div class="rubric-check" id="c1"><span style="font-size:10px;display:none;" id="c1mark">✓</span></div>
+          <div>P1の核心：<strong>「レビューを読む人が多い」</strong>という現象を書いているか</div>
+        </div>
+        <div id="chk2" class="rubric-row" onclick="toggleCheck('chk2')">
+          <div class="rubric-check" id="c2"><span style="font-size:10px;display:none;" id="c2mark">✓</span></div>
+          <div>P2の核心：<strong>メリット①（情報提供）</strong>と<strong>メリット②（企業の改善）</strong>が入っているか</div>
+        </div>
+        <div id="chk3" class="rubric-row" onclick="toggleCheck('chk3')">
+          <div class="rubric-check" id="c3"><span style="font-size:10px;display:none;" id="c3mark">✓</span></div>
+          <div>P3の核心：<strong>問題①（偽レビュー）</strong>と<strong>問題②（企業へのダメージ）</strong>が入っているか</div>
+        </div>
+        <div id="chk4" class="rubric-row" onclick="toggleCheck('chk4')">
+          <div class="rubric-check" id="c4"><span style="font-size:10px;display:none;" id="c4mark">✓</span></div>
+          <div>P2→P3の対比を<strong>However / On the other hand</strong>などで繋いでいるか</div>
+        </div>
+        <div id="chk5" class="rubric-row" onclick="toggleCheck('chk5')">
+          <div class="rubric-check" id="c5"><span style="font-size:10px;display:none;" id="c5mark">✓</span></div>
+          <div>For example / specific examples（具体例）を<strong>一切含んでいないか</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">要約を書いてみよう（45〜55語）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:12px;">本文を見ながら書いてOK。まず自分の言葉で書いてみて、次のSTEPでモデル解答と比較しよう。</p>
+
+      <!-- 手元に置くメモ -->
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:13px 15px;border:0.5px solid var(--border);margin-bottom:14px;font-size:13px;line-height:1.8;">
+        <div style="font-size:9px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;">書くときの素材メモ</div>
+        <div style="display:flex;flex-direction:column;gap:4px;">
+          <div><span style="background:var(--accent-light);color:var(--accent);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;">P1</span>Many people read customer reviews before buying</div>
+          <div><span style="background:var(--teal-light);color:var(--teal);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;">P2①</span>give useful information → better choices</div>
+          <div><span style="background:var(--teal-light);color:var(--teal);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;">P2②</span>offer companies chances to improve products</div>
+          <div><span style="background:var(--coral-light);color:var(--coral);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;">逆接</span>However, / On the other hand,</div>
+          <div><span style="background:var(--coral-light);color:var(--coral);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;">P3①</span>some reviews are not real → hard to trust</div>
+          <div><span style="background:var(--coral-light);color:var(--coral);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;">P3②</span>negative comments can hurt businesses</div>
+        </div>
+      </div>
+
+      <textarea class="writing-area" id="student-answer" placeholder="ここに要約を英語で書いてください..." oninput="countWords()"></textarea>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px;">
+        <div style="font-size:12px;color:var(--text3);">目標：45〜55語</div>
+        <div class="word-count" id="word-count">0語</div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="btn-primary" onclick="goStep(4)">モデル解答と比較する →</button>
+        <button class="btn-secondary" onclick="clearAnswer()">クリア</button>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — モデル解答 →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 4 — モデル解答
+  ══════════════════════════════ -->
+  <div class="panel" id="panel4">
+
+    <div class="card">
+      <div class="section-label">あなたの解答（再確認）</div>
+      <div id="review-answer" style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.85;padding:14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);min-height:60px;color:var(--text2);">
+        （STEP 3 で書いた内容がここに表示されます）
+      </div>
+      <div id="review-wc" style="font-size:12px;color:var(--text3);text-align:right;margin-top:4px;"></div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">モデル解答 A（基本型：51語）</div>
+      <div class="model-answer-box show">
+        <div class="model-text">
+          <span class="part part-p1">Many people now read customer reviews on the Internet before buying products.</span>
+          <span class="part part-p2"> These reviews are useful because they help buyers make better choices and give companies a chance to improve their products.</span>
+          <span class="part part-p3"> However, some reviews are fake, making it hard for people to know which ones to trust, and negative reviews can damage businesses.</span>
+        </div>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
+          <span style="background:#dff0ff;border:1px solid var(--accent);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--accent);">P1の核心</span>
+          <span style="background:var(--teal-light);border:1px solid var(--teal);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--teal);">P2の核心（メリット×2）</span>
+          <span style="background:var(--coral-light);border:1px solid var(--coral);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--coral);">P3の核心（問題点×2）</span>
+        </div>
+        <div style="font-size:13px;line-height:1.75;color:var(--text2);">
+          <strong style="color:var(--text);">構造の解説：</strong><br>
+          「P1の状況」→「P2のメリット（These reviews are useful because...）」→「<strong>However</strong>で逆接」→「P3の問題点2つを1文に統合」<br>
+          本文の "On the other hand, there are some problems. Some reviews are not real..." を <em>"some reviews are fake, making it hard..."</em> と分詞構文で圧縮しているのがポイント。
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">モデル解答 B（発展型：53語）</div>
+      <div class="model-answer-box show">
+        <div class="model-text">
+          <span class="part part-p1">These days, many people read customer reviews online before purchasing.</span>
+          <span class="part part-p2"> Reviews benefit both buyers and sellers: they provide helpful information for better decisions and allow businesses to understand customer expectations and improve their products.</span>
+          <span class="part part-p3"> On the other hand, fake reviews make it difficult to decide which ones to believe, and critical comments can harm companies.</span>
+        </div>
+        <div style="font-size:13px;line-height:1.75;color:var(--text2);margin-top:10px;">
+          <strong style="color:var(--text);">解説：</strong><br>
+          "Reviews benefit both buyers and sellers:" というコロン（:）構文でP2を統合。<em>both A and B</em>（購買者にも企業にも）という対称性を活用。P3は "fake reviews" + "critical comments can harm" で2つの問題を並列。
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">よくある失点パターン（これを避けよう）</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">× パターン① — 具体例を入れてしまう</div>
+          <div style="padding:11px 14px;font-family:'Source Serif 4',serif;font-size:13px;line-height:1.75;color:var(--text2);">
+            "...For example, a review can tell a buyer if an item's size is not normal..." → <span style="color:var(--red);">字数オーバー＋採点者に「要約できていない」と判断される</span>
+          </div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">× パターン② — P2かP3のどちらかが欠ける</div>
+          <div style="padding:11px 14px;font-family:'Source Serif 4',serif;font-size:13px;line-height:1.75;color:var(--text2);">
+            メリットだけ or 問題点だけ書く → <span style="color:var(--red);">本文の対比構造（On the other hand）を無視したことになり、内容点が大きく下がる</span>
+          </div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">× パターン③ — 本文をそのままコピーする</div>
+          <div style="padding:11px 14px;font-family:'Source Serif 4',serif;font-size:13px;line-height:1.75;color:var(--text2);">
+            本文の文を繋いだだけの解答 → <span style="color:var(--red);">「要約」ではなく「抜き書き」と判断される可能性がある。言い換え・圧縮が必要。</span>
+          </div>
+        </div>
+        <div style="border:0.5px solid var(--amber-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--amber);">△ パターン④ — 字数が範囲外（44語以下 or 56語以上）</div>
+          <div style="padding:11px 14px;font-family:'Source Serif 4',serif;font-size:13px;line-height:1.75;color:var(--text2);">
+            45語未満 → 内容が不足している可能性が高い。56語以上 → 具体例を削れていない可能性が高い。<span style="color:var(--amber);">字数は内容充実度の目安。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — 採点基準 →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 5 — 採点基準 + まとめ
+  ══════════════════════════════ -->
+  <div class="panel" id="panel5">
+
+    <div class="card">
+      <div class="section-label">英検2級 要約問題の採点基準（自己採点）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">英検の採点は「内容・語彙・文法」の3軸。チェックボックスをクリックして自己採点してみよう。</p>
+
+      <div style="display:flex;flex-direction:column;gap:2px;">
+        <div style="display:flex;gap:8px;padding:9px 12px;background:var(--accent-light);border-radius:var(--radius) var(--radius) 0 0;font-size:12px;font-weight:700;">
+          <span style="flex:1;color:var(--accent);">内容（Content）— 最重要</span>
+        </div>
+        <div class="rubric-row" id="r1" onclick="toggleRubric('r1')">
+          <div class="rubric-check" id="rc1"><span style="font-size:9px;display:none;" id="rc1mark">✓</span></div>
+          <div style="flex:1;">第1段落の核心：「多くの人がレビューを読む」という事実が含まれている</div>
+        </div>
+        <div class="rubric-row" id="r2" onclick="toggleRubric('r2')">
+          <div class="rubric-check" id="rc2"><span style="font-size:9px;display:none;" id="rc2mark">✓</span></div>
+          <div style="flex:1;">第2段落の核心①：レビューが購買者に有益な情報を与えるという内容</div>
+        </div>
+        <div class="rubric-row" id="r3" onclick="toggleRubric('r3')">
+          <div class="rubric-check" id="rc3"><span style="font-size:9px;display:none;" id="rc3mark">✓</span></div>
+          <div style="flex:1;">第2段落の核心②：企業が改善の機会を得るという内容</div>
+        </div>
+        <div class="rubric-row" id="r4" onclick="toggleRubric('r4')">
+          <div class="rubric-check" id="rc4"><span style="font-size:9px;display:none;" id="rc4mark">✓</span></div>
+          <div style="flex:1;">第3段落の核心①：偽レビューの問題（信頼性が低下する）</div>
+        </div>
+        <div class="rubric-row" id="r5" onclick="toggleRubric('r5')" style="margin-bottom:12px;">
+          <div class="rubric-check" id="rc5"><span style="font-size:9px;display:none;" id="rc5mark">✓</span></div>
+          <div style="flex:1;">第3段落の核心②：ネガティブコメントが企業に悪影響を与える</div>
+        </div>
+
+        <div style="display:flex;gap:8px;padding:9px 12px;background:var(--teal-light);border-radius:var(--radius) var(--radius) 0 0;font-size:12px;font-weight:700;">
+          <span style="flex:1;color:var(--teal);">構造・論理（Structure）</span>
+        </div>
+        <div class="rubric-row" id="r6" onclick="toggleRubric('r6')">
+          <div class="rubric-check" id="rc6"><span style="font-size:9px;display:none;" id="rc6mark">✓</span></div>
+          <div style="flex:1;">P2（メリット）とP3（問題点）が逆接（However / On the other hand等）で繋がっている</div>
+        </div>
+        <div class="rubric-row" id="r7" onclick="toggleRubric('r7')" style="margin-bottom:12px;">
+          <div class="rubric-check" id="rc7"><span style="font-size:9px;display:none;" id="rc7mark">✓</span></div>
+          <div style="flex:1;">具体例（For example, small business等）が含まれていない</div>
+        </div>
+
+        <div style="display:flex;gap:8px;padding:9px 12px;background:var(--amber-light);border-radius:var(--radius) var(--radius) 0 0;font-size:12px;font-weight:700;">
+          <span style="flex:1;color:var(--amber);">語彙・文法（Language）</span>
+        </div>
+        <div class="rubric-row" id="r8" onclick="toggleRubric('r8')">
+          <div class="rubric-check" id="rc8"><span style="font-size:9px;display:none;" id="rc8mark">✓</span></div>
+          <div style="flex:1;">本文の言葉をただコピーするのではなく、言い換えや圧縮ができている</div>
+        </div>
+        <div class="rubric-row" id="r9" onclick="toggleRubric('r9')">
+          <div class="rubric-check" id="rc9"><span style="font-size:9px;display:none;" id="rc9mark">✓</span></div>
+          <div style="flex:1;">文法的に正確な英文になっている（動詞の形、冠詞、複数形等）</div>
+        </div>
+        <div class="rubric-row" id="r10" onclick="toggleRubric('r10')">
+          <div class="rubric-check" id="rc10"><span style="font-size:9px;display:none;" id="rc10mark">✓</span></div>
+          <div style="flex:1;">語数が45〜55語の範囲内に収まっている</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;padding:12px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:14px;font-weight:700;">チェック済み</span>
+        <span style="font-size:24px;font-weight:700;color:var(--accent);" id="rubric-score">0 / 10</span>
+      </div>
+    </div>
+
+    <!-- 要約問題の本質まとめ -->
+    <div class="card">
+      <div class="section-label">要約問題の本質：テクニックより先に「正しく読む」</div>
+
+      <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius-lg);padding:18px;margin-bottom:14px;">
+        <div style="font-size:14px;font-weight:700;color:#3c3489;line-height:1.7;margin-bottom:8px;">この文章を論理的に読めていれば、自然に見えていたこと</div>
+        <div style="font-size:13px;line-height:1.9;color:#534ab7;">
+          ① 第1段落の昔→今の対比は「レビューが普及した」という<strong>現象を提示するための準備</strong>であり、要約に入れる必要はない。<br>
+          ② 第2段落の "For example" は「サイズが変わっている」という例で、<strong>メリット①の説明に過ぎない</strong>。削って当然。<br>
+          ③ "On the other hand" は第3段落が第2段落と<strong>対比構造</strong>であることを明示している。これを見た瞬間に「逆接で繋ぐ」が自動的に決まる。<br>
+          ④ 第3段落の最後2文（小さな企業・不満な人が書く）は問題②の<strong>具体的な説明</strong>。主張は "negative comments can hurt businesses" だけ。
+        </div>
+      </div>
+
+      <div class="key-point"><div class="kp-icon">★</div><div><strong>要約の手順（正しい順番）</strong><br><span style="font-size:13px;color:var(--text2);">① 1文ずつ役割（トピック/補足/具体例）を見極める → ② 各段落の核心だけを残す → ③ 論理関係（対比なら逆接）を保ちながら繋ぐ → ④ 語数を確認して調整</span></div></div>
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>接続詞が「削る」合図になる</strong><br><span style="font-size:13px;color:var(--text2);">For example / such as / In particular → 具体化の合図。この後の内容は原則削る。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>接続詞が「残す」合図になる</strong><br><span style="font-size:13px;color:var(--text2);">On the other hand / However / Also / Furthermore → 構造の転換や主張の追加。これらは要約にも反映させる。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>字数不足は「内容不足」のサイン</strong><br><span style="font-size:13px;color:var(--text2);">45語を下回るなら、どこかの段落の核心が抜けている。まず内容を確認してから字数を調整する。字数に合わせて内容を削るのは逆順。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var stepDone={1:false,2:false,3:false,4:false,5:false};
+var labelsVisible=false;
+var rubricChecked={};
+var rubricTotal=10;
+
+function goStep(n){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('panel'+n).classList.add('active');
+  document.querySelectorAll('.step-btn').forEach(function(b,i){
+    b.classList.remove('active');
+    if(stepDone[i+1]) b.classList.add('done');
+  });
+  var nb=document.getElementById('nav'+n);
+  if(nb){nb.classList.add('active');nb.classList.remove('done');}
+  var pct=Math.round((n/5)*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-text').textContent='STEP '+n+' / 5';
+  if(n===4){
+    var ans=document.getElementById('student-answer');
+    var rev=document.getElementById('review-answer');
+    if(ans&&rev){
+      var txt=ans.value.trim();
+      rev.textContent=txt||'（STEP 3 で要約を書いてから来てください）';
+      rev.style.color=txt?'var(--text)':'var(--text3)';
+      var wc=countWordsRaw(txt);
+      var rwc=document.getElementById('review-wc');
+      if(rwc) rwc.textContent=wc+'語'+(wc>=45&&wc<=55?' ✓ 範囲内':wc<45?' — 少し短い':' — 少し長い');
+    }
+  }
+  window.scrollTo(0,0);
+}
+
+function toggleLabels(){
+  labelsVisible=!labelsVisible;
+  var wrap=document.getElementById('passage-wrap');
+  var track=document.getElementById('label-toggle');
+  var txt=document.getElementById('toggle-text');
+  if(wrap) wrap.classList.toggle('show-labels',labelsVisible);
+  if(track) track.classList.toggle('on',labelsVisible);
+  if(txt) txt.textContent=labelsVisible?'役割ラベルを非表示':'役割ラベルを表示する';
+}
+
+function focusSent(id){
+  // clicking a sentence toggles a highlight for attention
+  var el=document.getElementById(id);
+  if(!el) return;
+  el.style.outline=el.style.outline?'':'2px solid var(--accent)';
+}
+
+function countWordsRaw(text){
+  if(!text||!text.trim()) return 0;
+  return text.trim().split(/\s+/).length;
+}
+
+function countWords(){
+  var ta=document.getElementById('student-answer');
+  var wc=document.getElementById('word-count');
+  if(!ta||!wc) return;
+  var n=countWordsRaw(ta.value);
+  wc.textContent=n+'語';
+  wc.className='word-count';
+  if(n>=45&&n<=55) wc.classList.add('ok');
+  else if(n<45&&n>0) wc.classList.add('under');
+  else if(n>55) wc.classList.add('over');
+}
+
+function clearAnswer(){
+  var ta=document.getElementById('student-answer');
+  if(ta){ta.value='';countWords();}
+}
+
+function toggleCheck(rowId){
+  var row=document.getElementById(rowId);
+  var circId=rowId.replace('chk','c');
+  var circ=document.getElementById(circId);
+  var mark=document.getElementById(circId+'mark');
+  if(!circ) return;
+  var isChecked=circ.classList.contains('checked');
+  circ.classList.toggle('checked',!isChecked);
+  if(mark) mark.style.display=isChecked?'none':'block';
+}
+
+function toggleRubric(rowId){
+  var row=document.getElementById(rowId);
+  var circId=rowId.replace('r','rc');
+  var circ=document.getElementById(circId);
+  var mark=document.getElementById(circId+'mark');
+  if(!circ) return;
+  var isChecked=circ.classList.contains('checked');
+  circ.classList.toggle('checked',!isChecked);
+  if(mark) mark.style.display=isChecked?'none':'block';
+  rubricChecked[rowId]=!isChecked;
+  var count=Object.values(rubricChecked).filter(Boolean).length;
+  var sc=document.getElementById('rubric-score');
+  if(sc) sc.textContent=count+' / '+rubricTotal;
+}
+</script>
+</body>
+</html>

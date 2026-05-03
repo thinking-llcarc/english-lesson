@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語読解特訓｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface2:#f0ede6;
+  --border:#ddd9d0;--text:#1a1814;--text2:#6b6760;--text3:#9b9892;
+  --accent:#2c5f8a;--accent-light:#e8f1f8;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --amber:#854f0b;--amber-light:#faeeda;
+  --coral:#993c1d;--coral-light:#faece7;
+  --purple:#534ab7;--purple-light:#eeedfe;
+  --green:#3b6d11;--green-light:#eaf3de;
+  --red:#a32d2d;--red-light:#fcebeb;
+  --pink:#993556;--pink-light:#fbeaf0;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.page-header{background:var(--surface);border-bottom:0.5px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+.brand-logo{width:38px;height:38px;border-radius:9px;background:var(--accent);color:#fff;font-size:19px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-name{font-size:13px;font-weight:700;color:var(--text);}
+.brand-tagline{font-size:11px;color:var(--text3);margin-top:1px;letter-spacing:0.03em;}
+.lesson-title{font-size:13px;font-weight:700;color:var(--text);text-align:right;font-family:'Source Serif 4',serif;}
+.progress-bar-wrap{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text2);margin-top:4px;justify-content:flex-end;}
+.progress-bar{width:90px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.4s ease;}
+
+.container{max-width:920px;margin:0 auto;padding:24px 18px 80px;}
+.step-nav{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap;}
+.step-btn{padding:5px 13px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:11px;font-family:'Noto Sans JP',sans-serif;color:var(--text2);cursor:pointer;transition:all 0.2s;font-weight:500;}
+.step-btn:hover{background:var(--surface2);color:var(--text);}
+.step-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.step-btn.done{background:var(--green-light);color:var(--green);border-color:#c0dd97;}
+.panel{display:none;}
+.panel.active{display:block;animation:fadeIn 0.22s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.card{background:var(--surface);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:22px;margin-bottom:14px;}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;}
+.divider{height:0.5px;background:var(--border);margin:18px 0;}
+
+/* topic display */
+.topic-box{background:var(--surface2);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:20px 22px;margin-bottom:14px;}
+.topic-label{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;}
+.topic-text{font-family:'Source Serif 4',serif;font-size:17px;font-style:italic;font-weight:600;line-height:1.65;color:var(--text);}
+.points-wrap{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.point-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:13px;font-weight:700;font-family:'Source Serif 4',serif;font-style:italic;cursor:pointer;transition:all 0.2s;user-select:none;}
+.point-chip:hover{background:var(--surface2);}
+.point-chip.selected-yes{background:var(--teal-light);border-color:var(--teal);color:var(--teal);}
+.point-chip.selected-no{background:var(--coral-light);border-color:var(--coral);color:var(--coral);}
+
+/* thinking steps */
+.think-step{display:flex;gap:14px;align-items:flex-start;margin-bottom:16px;}
+.think-num{width:32px;height:32px;border-radius:50%;background:var(--accent);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.think-body{flex:1;}
+.think-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:5px;}
+.think-desc{font-size:14px;color:var(--text2);line-height:1.7;}
+
+/* position selector */
+.pos-selector{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0;}
+.pos-btn{padding:14px;border-radius:var(--radius-lg);border:0.5px solid var(--border);background:var(--surface);cursor:pointer;transition:all 0.2s;text-align:center;}
+.pos-btn:hover{background:var(--surface2);}
+.pos-btn.selected-agree{background:var(--teal-light);border-color:var(--teal);}
+.pos-btn.selected-disagree{background:var(--coral-light);border-color:var(--coral);}
+.pos-btn-label{font-size:16px;font-weight:700;margin-bottom:3px;}
+.pos-btn-sub{font-size:11px;color:var(--text2);}
+.pos-btn.selected-agree .pos-btn-label{color:var(--teal);}
+.pos-btn.selected-agree .pos-btn-sub{color:var(--teal);}
+.pos-btn.selected-disagree .pos-btn-label{color:var(--coral);}
+.pos-btn.selected-disagree .pos-btn-sub{color:var(--coral);}
+
+/* reason cards */
+.reason-card{border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:12px;cursor:pointer;transition:border-color 0.2s;}
+.reason-card:hover{border-color:var(--accent);}
+.reason-card.selected{border-color:var(--accent);border-width:1.5px;}
+.reason-card-hdr{padding:12px 16px;display:flex;align-items:center;gap:10px;}
+.reason-card-body{display:none;padding:14px 16px;border-top:0.5px solid var(--border);background:var(--surface2);}
+.reason-card.open .reason-card-body{display:block;}
+.rc-check{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all 0.2s;}
+.rc-check.checked{background:var(--accent);border-color:var(--accent);color:#fff;font-size:10px;}
+.rc-point{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;font-style:italic;font-family:'Source Serif 4',serif;}
+
+/* structure visual */
+.essay-structure{display:flex;flex-direction:column;gap:0;}
+.es-block{border-radius:var(--radius);overflow:hidden;margin-bottom:3px;}
+.es-header{padding:10px 14px;font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:space-between;}
+.es-body{padding:12px 14px;font-size:14px;line-height:1.75;font-family:'Source Serif 4',serif;border-top:0.5px solid rgba(0,0,0,0.06);}
+.es-body .slot{display:inline;background:rgba(255,255,255,0.6);border-radius:3px;padding:0 4px;}
+.es-arrow{font-size:11px;opacity:0.7;}
+
+/* paragraph builder */
+.para-builder{background:var(--surface2);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:16px;margin:12px 0;}
+.pb-row{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;}
+.pb-label{font-size:10px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:3px 8px;border-radius:4px;flex-shrink:0;margin-top:3px;min-width:60px;text-align:center;}
+.pb-label.opinion{background:var(--accent);color:#fff;}
+.pb-label.reason1{background:var(--teal);color:#fff;}
+.pb-label.reason2{background:var(--amber);color:#fff;}
+.pb-label.conclude{background:var(--purple);color:#fff;}
+.pb-label.example{background:var(--surface);color:var(--text2);border:0.5px solid var(--border);}
+.pb-content{flex:1;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.75;}
+
+/* sentence annotations */
+.sa-wrap{border-radius:var(--radius-lg);overflow:hidden;border:0.5px solid var(--border);margin-bottom:12px;}
+.sa-hdr{padding:10px 14px;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;}
+.sa-body{padding:14px;}
+.sa-sent{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:14px;}
+.sa-sent:last-child{margin-bottom:0;}
+.sa-role{font-size:9px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:2px 7px;border-radius:4px;flex-shrink:0;margin-top:3px;min-width:58px;text-align:center;font-family:'Noto Sans JP',sans-serif;}
+.sa-text{font-family:'Source Serif 4',serif;line-height:1.7;}
+.sa-text .hl{background:rgba(44,95,138,0.12);border-radius:2px;padding:0 2px;}
+
+/* writing area */
+.writing-area{width:100%;min-height:160px;padding:14px;font-size:15px;font-family:'Source Serif 4',serif;line-height:1.9;color:var(--text);background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);resize:vertical;transition:border 0.2s;}
+.writing-area:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(44,95,138,0.1);}
+.wc-bar{display:flex;justify-content:space-between;align-items:center;margin-top:6px;}
+.word-count{font-size:12px;font-weight:500;transition:color 0.2s;}
+.word-count.ok{color:var(--green);}
+.word-count.over{color:var(--red);}
+.word-count.under{color:var(--amber);}
+.wc-progress{height:4px;background:var(--border);border-radius:2px;overflow:hidden;flex:1;margin:0 12px;}
+.wc-bar-fill{height:100%;background:var(--border);border-radius:2px;transition:width 0.3s,background 0.3s;}
+.wc-bar-fill.ok{background:var(--teal);}
+.wc-bar-fill.under{background:var(--amber);}
+.wc-bar-fill.over{background:var(--red);}
+
+/* model essay */
+.model-essay{font-family:'Source Serif 4',serif;font-size:15px;line-height:2;color:var(--text);padding:18px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);margin-bottom:14px;}
+.me-opinion{background:#dff0ff;border-radius:2px;padding:1px 2px;}
+.me-r1{background:var(--teal-light);border-radius:2px;padding:1px 2px;}
+.me-r2{background:var(--amber-light);border-radius:2px;padding:1px 2px;}
+.me-conclude{background:var(--purple-light);border-radius:2px;padding:1px 2px;}
+.me-example{opacity:0.85;}
+
+/* rubric */
+.rubric-table{width:100%;border-collapse:collapse;}
+.rubric-table th{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);padding:6px 10px;border-bottom:0.5px solid var(--border);text-align:left;}
+.rubric-table td{padding:8px 10px;border-bottom:0.5px solid var(--border);font-size:13px;line-height:1.6;vertical-align:top;}
+.rubric-table tr:last-child td{border-bottom:none;}
+.rubric-check{width:20px;height:20px;border-radius:50%;border:1.5px solid var(--border);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:all 0.2s;font-size:10px;color:transparent;}
+.rubric-check.checked{background:var(--teal);border-color:var(--teal);color:#fff;}
+
+/* key point */
+.key-point{display:flex;gap:11px;padding:13px 15px;border-radius:var(--radius);background:var(--surface2);border:0.5px solid var(--border);margin-bottom:9px;font-size:14px;align-items:flex-start;line-height:1.65;}
+.kp-icon{width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+/* buttons */
+.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:0.5px solid var(--border);}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s;}
+.btn-primary:hover{background:#1e4a70;}.btn-primary:active{transform:scale(0.98);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--surface);color:var(--text);border:0.5px solid var(--border);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--surface2);}
+
+/* choice toggle */
+.choice-toggle{display:flex;border:0.5px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-top:10px;}
+.ct-opt{flex:1;padding:8px;text-align:center;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s;color:var(--text2);}
+.ct-opt:first-child{border-right:0.5px solid var(--border);}
+.ct-opt.active-agree{background:var(--teal-light);color:var(--teal);}
+.ct-opt.active-disagree{background:var(--coral-light);color:var(--coral);}
+
+/* callout */
+.callout{border-radius:var(--radius);padding:13px 15px;margin:10px 0;font-size:14px;line-height:1.75;}
+.callout-yellow{background:#fffbea;border-left:3px solid #e6c200;}
+.callout-blue{background:var(--accent-light);border-left:3px solid var(--accent);}
+.callout-green{background:var(--green-light);border-left:3px solid var(--green);}
+.callout-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px;}
+.callout-yellow .callout-label{color:#7a6600;}
+.callout-blue .callout-label{color:var(--accent);}
+.callout-green .callout-label{color:var(--green);}
+
+@media(max-width:500px){.pos-selector{grid-template-columns:1fr;}.step-actions{flex-direction:column;gap:10px;align-items:stretch;}.btn-primary,.btn-secondary{justify-content:center;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"読む力"と"解く力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+    <div class="lesson-title">英検2級　英作文問題</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 6</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:17%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 TOPICを読み解く</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 立場と理由を決める</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 構造を理解する</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 英文を書く</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 モデル解答</button>
+    <button class="step-btn" onclick="goStep(6)" id="nav6">STEP 6 採点と思考法</button>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 1 — TOPICを読み解く
+  ══════════════════════════════ -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div class="section-label">問題を正確に理解する</div>
+
+      <div class="topic-box">
+        <div class="topic-label">TOPIC</div>
+        <div class="topic-text">Some people provide free online video content to help students study by themselves at home. Do you think this is a good idea?</div>
+        <div style="margin-top:14px;padding-top:14px;border-top:0.5px solid var(--border);">
+          <div class="topic-label">POINTS（参考となる観点）</div>
+          <div class="points-wrap">
+            <div class="point-chip" id="chip-conv">Convenience</div>
+            <div class="point-chip" id="chip-eff">Efficiency</div>
+            <div class="point-chip" id="chip-qual">Quality</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">TOPICを3つに分解する</div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--accent-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--accent);">① 何についての話か（What）</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.75;">
+            <span style="font-family:'Source Serif 4',serif;font-style:italic;">free online video content</span> を提供して、生徒が<span style="font-family:'Source Serif 4',serif;font-style:italic;">study by themselves at home</span>（自宅で自学）できるようにする取り組み。<br>
+            <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">→ YouTubeの学習動画・無料オンライン講座（例：Khan Academy）のような存在を想像するとよい。</span>
+          </div>
+        </div>
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--teal-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--teal);">② 何を問われているか（Question）</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.75;">
+            <span style="font-family:'Source Serif 4',serif;font-style:italic;">"Do you think this is a good idea?"</span><br>
+            → <strong>Yes か No か</strong> を明確に述べてから理由を2つ書く。<br>
+            <span style="color:var(--red);font-size:13px;margin-top:4px;display:block;">注意：「良い面も悪い面もある」という中立は0点のリスクがある。必ず立場を決める。</span>
+          </div>
+        </div>
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--amber);">③ POINTSは何のためにあるか（Points）</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.75;">
+            POINTSは「理由を書くときのヒント」。<strong>この3つから2つ選んで使う</strong>のが最短ルート。<br>
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;gap:10px;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-weight:700;flex-shrink:0;font-style:italic;font-family:'Source Serif 4',serif;">Convenience</span><span>どこでも・いつでも学べる便利さ → 場所・時間の制約がない</span></div>
+              <div style="display:flex;gap:10px;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-weight:700;flex-shrink:0;font-style:italic;font-family:'Source Serif 4',serif;">Efficiency</span><span>自分のペースで繰り返せる → 理解度に合わせた学習が可能</span></div>
+              <div style="display:flex;gap:10px;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-weight:700;flex-shrink:0;font-style:italic;font-family:'Source Serif 4',serif;">Quality</span><span>誰でも質の高い教育にアクセスできる（or 内容の質が保証されない）</span></div>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text2);">※ POINTSはYesにもNoにも使えることが多い。立場を先に決めてからPOINTSを選ぶのが正しい順番。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">英作文の本質：型より先に「思考の順番」を固める</div>
+      <div class="key-point"><div class="kp-icon">!</div><div><strong>型（テンプレート）を使うのは最後の「出力フェーズ」</strong><br><span style="font-size:13px;color:var(--text2);">「I agree / I disagree → 理由1 → 理由2 → Therefore」という型は確かに有効だが、それは<em>考えたあとの整理の道具</em>。型を先に覚えると「型を埋める作業」になり、論理的な文章にならない。まず①立場を決める→②理由の根拠を考える→③型に流し込む、の順番が大事。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — 立場と理由を決める →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 2 — 立場と理由を決める
+  ══════════════════════════════ -->
+  <div class="panel" id="panel2">
+
+    <div class="card">
+      <div class="section-label">思考プロセス① — 立場を決める</div>
+
+      <div class="think-step">
+        <div class="think-num">1</div>
+        <div class="think-body">
+          <div class="think-title">まず「どちらが理由を書きやすいか」で決める</div>
+          <div class="think-desc">英作文に「正しい立場」はない。採点者はあなたの意見の正しさではなく、<strong>意見と理由が論理的に繋がっているか</strong>を評価する。書きやすい方を選ぶのが戦略的に正しい。</div>
+        </div>
+      </div>
+
+      <div class="pos-selector">
+        <div class="pos-btn" id="btn-agree" onclick="selectPosition('agree')">
+          <div class="pos-btn-label">Yes（賛成）</div>
+          <div class="pos-btn-sub">良いアイデアだと思う</div>
+        </div>
+        <div class="pos-btn" id="btn-disagree" onclick="selectPosition('disagree')">
+          <div class="pos-btn-label">No（反対）</div>
+          <div class="pos-btn-sub">良いアイデアとは思わない</div>
+        </div>
+      </div>
+
+      <div class="callout callout-yellow" style="margin-top:4px;">
+        <div class="callout-label">判断のヒント</div>
+        「Yes」が書きやすい → Convenience・Efficiency・Quality（メリット）が理由になる<br>
+        「No」が書きやすい → Quality（質の問題）・集中力の低下・孤独な学習の限界などが理由になる<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">どちらでも80〜100語で完結できる。迷ったら「Yes」が書きやすい。</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">思考プロセス② — 理由を2つ選ぶ</div>
+
+      <div class="think-step">
+        <div class="think-num">2</div>
+        <div class="think-body">
+          <div class="think-title">理由の「具体的な中身」まで考えてから選ぶ</div>
+          <div class="think-desc">「Convenienceが理由」で止まらない。<strong>「なぜConvenienceがこのトピックで理由になるのか」を1文で言えるまで掘り下げる</strong>ことが必要。下のカードを展開して確認しよう。</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:8px;font-size:12px;color:var(--text2);">各カードをクリックして「具体的な中身」を確認してから選ぼう。</div>
+
+      <!-- Convenience -->
+      <div class="reason-card" id="rc-conv" onclick="toggleReason('conv')">
+        <div class="reason-card-hdr">
+          <div class="rc-check" id="check-conv"></div>
+          <span class="rc-point" style="background:var(--amber-light);color:var(--amber);">Convenience</span>
+          <span style="font-size:14px;font-weight:500;flex:1;margin-left:8px;">利便性・アクセスのしやすさ</span>
+          <span style="font-size:12px;color:var(--text3);">▼ 展開</span>
+        </div>
+        <div class="reason-card-body">
+          <div style="margin-bottom:10px;font-size:14px;line-height:1.75;"><strong>Yes（賛成）の理由として使う場合：</strong><br>無料・オンライン = いつでも・どこでも・何度でも学べる。交通費や塾代が不要。地方の生徒も都市部と同じ教育にアクセスできる。</div>
+          <div style="font-size:14px;line-height:1.75;"><strong>1文にすると：</strong><br><span style="font-family:'Source Serif 4',serif;font-style:italic;">Students can access learning materials anytime and anywhere without spending money.</span></div>
+        </div>
+      </div>
+
+      <!-- Efficiency -->
+      <div class="reason-card" id="rc-eff" onclick="toggleReason('eff')">
+        <div class="reason-card-hdr">
+          <div class="rc-check" id="check-eff"></div>
+          <span class="rc-point" style="background:var(--amber-light);color:var(--amber);">Efficiency</span>
+          <span style="font-size:14px;font-weight:500;flex:1;margin-left:8px;">効率・学習効果</span>
+          <span style="font-size:12px;color:var(--text3);">▼ 展開</span>
+        </div>
+        <div class="reason-card-body">
+          <div style="margin-bottom:10px;font-size:14px;line-height:1.75;"><strong>Yes（賛成）の理由として使う場合：</strong><br>動画は一時停止・巻き戻しが可能 → 自分のペースで理解できる。わからない部分だけ繰り返せる = 学校の授業より効率的な場合がある。</div>
+          <div style="font-size:14px;line-height:1.75;"><strong>1文にすると：</strong><br><span style="font-family:'Source Serif 4',serif;font-style:italic;">Students can learn at their own pace by rewatching videos until they understand.</span></div>
+        </div>
+      </div>
+
+      <!-- Quality -->
+      <div class="reason-card" id="rc-qual" onclick="toggleReason('qual')">
+        <div class="reason-card-hdr">
+          <div class="rc-check" id="check-qual"></div>
+          <span class="rc-point" style="background:var(--amber-light);color:var(--amber);">Quality</span>
+          <span style="font-size:14px;font-weight:500;flex:1;margin-left:8px;">教育の質・平等なアクセス</span>
+          <span style="font-size:12px;color:var(--text3);">▼ 展開</span>
+        </div>
+        <div class="reason-card-body">
+          <div style="margin-bottom:10px;font-size:14px;line-height:1.75;"><strong>Yes（賛成）の理由として使う場合：</strong><br>著名な教師・専門家による高品質な授業を無料で受けられる。経済的な格差に関わらず全員が同じ質の教育を受けられる。</div>
+          <div style="margin-bottom:10px;font-size:14px;line-height:1.75;"><strong>No（反対）の理由として使う場合：</strong><br>誰でも動画を作れるため、内容が正確かどうか保証されない。誤った情報を学んでしまうリスクがある。</div>
+          <div style="font-size:14px;line-height:1.75;"><strong>Yes の1文：</strong><br><span style="font-family:'Source Serif 4',serif;font-style:italic;">High-quality lessons taught by experts are available to all students for free.</span></div>
+        </div>
+      </div>
+
+      <div class="callout callout-blue" style="margin-top:6px;">
+        <div class="callout-label">理由2つを選んだら確認すること</div>
+        ① 2つの理由が<strong>同じ内容になっていないか</strong>（Convenience＝便利 と Efficiency＝効率的 は似てしまう場合がある）<br>
+        ② 選んだ2つの理由がどちらも<strong>立場（Yes/No）と同じ方向を向いているか</strong><br>
+        ③ それぞれの理由に<strong>具体例や説明を1文加えられるか</strong>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — 構造を理解する →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 3 — 構造を理解する
+  ══════════════════════════════ -->
+  <div class="panel" id="panel3">
+
+    <div class="card">
+      <div class="section-label">なぜこの構造なのか — 型の「理由」を理解する</div>
+
+      <div class="callout callout-yellow" style="margin-bottom:16px;">
+        <div class="callout-label">大前提</div>
+        英検英作文の採点者が見ているのは「構造」ではなく「意見と理由の論理的な繋がり」。型はその<em>論理を可視化するための道具</em>。なぜこの順番なのかを理解してから使う。
+      </div>
+
+      <!-- Structure blocks -->
+      <div class="essay-structure">
+
+        <div class="es-block" style="border:0.5px solid #b5d4f4;">
+          <div class="es-header" style="background:#dff0ff;color:var(--accent);" onclick="toggleEsBlock('esb1')">
+            <div><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">導入（Introduction）</span><span style="font-size:12px;font-weight:400;color:var(--text2);margin-left:8px;">約1文</span></div>
+            <div class="es-arrow" id="esb1-arrow">▼</div>
+          </div>
+          <div class="es-body" id="esb1-body" style="background:var(--accent-light);">
+            <div style="margin-bottom:10px;font-size:13px;color:var(--text2);line-height:1.7;"><strong>なぜ導入が必要か：</strong>採点者に「この人は何について、どちらの立場で書くのか」を即座に伝えるため。1文で全体を予告する。</div>
+            <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.75;">
+              <strong>Yes の場合：</strong> I think <span class="slot">providing free online video content for students</span> is a good idea for the following two reasons.<br>
+              <strong>No の場合：</strong> I do not think this is a good idea for the following two reasons.
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text2);">→ "for the following two reasons" は「これから理由を2つ言います」という予告。採点者が構造を把握しやすくなる。</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;font-size:18px;color:var(--border);padding:2px 0;">↓</div>
+
+        <div class="es-block" style="border:0.5px solid #9fe1cb;">
+          <div class="es-header" style="background:var(--teal-light);color:var(--teal);" onclick="toggleEsBlock('esb2')">
+            <div><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">理由①（Body 1）</span><span style="font-size:12px;font-weight:400;color:var(--text2);margin-left:8px;">2〜3文</span></div>
+            <div class="es-arrow" id="esb2-arrow">▼</div>
+          </div>
+          <div class="es-body" id="esb2-body" style="background:var(--teal-light);">
+            <div style="margin-bottom:10px;font-size:13px;color:var(--teal);line-height:1.7;"><strong>構造：</strong>主張（First）→ 理由の説明 → 具体例や補足（For example / This means）</div>
+            <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.8;">
+              <strong>First,</strong> students can access learning materials anytime and anywhere. <strong>This means</strong> they do not need to spend money on transportation or extra classes. <strong>For example,</strong> students living in rural areas can get the same education as those in cities.
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text2);">→ "First" は「1つ目の理由はこれです」という宣言。→ "This means / For example" で理由を肉付けする。具体例は1つで十分。</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;font-size:18px;color:var(--border);padding:2px 0;">↓</div>
+
+        <div class="es-block" style="border:0.5px solid #fac775;">
+          <div class="es-header" style="background:var(--amber-light);color:var(--amber);" onclick="toggleEsBlock('esb3')">
+            <div><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">理由②（Body 2）</span><span style="font-size:12px;font-weight:400;color:var(--text2);margin-left:8px;">2〜3文</span></div>
+            <div class="es-arrow" id="esb3-arrow">▼</div>
+          </div>
+          <div class="es-body" id="esb3-body" style="background:var(--amber-light);">
+            <div style="margin-bottom:10px;font-size:13px;color:var(--amber);line-height:1.7;"><strong>構造：</strong>主張（Second）→ 説明 → 補足・展開</div>
+            <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.8;">
+              <strong>Second,</strong> students can learn at their own pace by rewatching videos as many times as they need. <strong>In addition,</strong> they can focus on the parts they find difficult without wasting time on topics they already understand.
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text2);">→ "Second" で2つ目であることを明示。→ "In addition / Also / Furthermore" でさらに補足できる。</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;font-size:18px;color:var(--border);padding:2px 0;">↓</div>
+
+        <div class="es-block" style="border:0.5px solid #afa9ec;">
+          <div class="es-header" style="background:var(--purple-light);color:var(--purple);" onclick="toggleEsBlock('esb4')">
+            <div><span style="font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;">結論（Conclusion）</span><span style="font-size:12px;font-weight:400;color:var(--text2);margin-left:8px;">1文</span></div>
+            <div class="es-arrow" id="esb4-arrow">▼</div>
+          </div>
+          <div class="es-body" id="esb4-body" style="background:var(--purple-light);">
+            <div style="margin-bottom:10px;font-size:13px;color:var(--purple);line-height:1.7;"><strong>なぜ結論が必要か：</strong>導入で予告した立場を「もう一度確認する」のが結論の役割。新しいことを書かない。</div>
+            <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.8;">
+              <strong>For these reasons,</strong> I think providing free online video content is a great way to help students learn effectively.
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:var(--text2);">→ "For these reasons, I think..." は導入とほぼ同じ内容を別の言葉で言い直す。円環構造が完成する。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">この構造が論理的な理由</div>
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>導入＝主張の宣言、結論＝主張の確認。この2つが同じ内容で対応することで「一貫性」が生まれる</strong><br><span style="font-size:13px;color:var(--text2);">読者（採点者）は冒頭で「何が来るか」を把握し、末尾で「そうだったな」と納得できる。これが論理的な文章の基本構造。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>First / Second は「論理の見出し」であり省略できない</strong><br><span style="font-size:13px;color:var(--text2);">これらがないと採点者は「どこが理由1でどこが理由2か」を判断できない。採点のしやすさ＝論理のわかりやすさ。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>For example / This means / In addition は「理由の肉付け」。なくても成立するが、あると説得力が増す</strong><br><span style="font-size:13px;color:var(--text2);">主張だけでは抽象的。具体例や補足で「なぜそう言えるのか」を示すことで主張が説得力を持つ。字数調整にも使える。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — 英文を書く →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 4 — 英文を書く
+  ══════════════════════════════ -->
+  <div class="panel" id="panel4">
+
+    <div class="card">
+      <div class="section-label">書く前の確認</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:4px;">
+        <div style="background:var(--surface2);border-radius:var(--radius);padding:12px;border:0.5px solid var(--border);">
+          <div style="font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;">私の立場</div>
+          <div id="my-position-display" style="font-size:15px;font-weight:700;color:var(--text2);">（STEP 2 で選択）</div>
+        </div>
+        <div style="background:var(--surface2);border-radius:var(--radius);padding:12px;border:0.5px solid var(--border);">
+          <div style="font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:6px;">使う理由</div>
+          <div id="my-reasons-display" style="font-size:13px;font-weight:700;color:var(--text2);">（STEP 2 で選択）</div>
+        </div>
+      </div>
+      <div style="font-size:12px;color:var(--text3);text-align:right;margin-top:4px;">STEP 2 で決めていない場合は <span style="color:var(--accent);cursor:pointer;font-weight:700;" onclick="goStep(2)">←戻って設定する</span></div>
+    </div>
+
+    <!-- 使えるフレーズ集 -->
+    <div class="card">
+      <div class="section-label">使えるフレーズ集（クリックでコピー）</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">導入・立場表明</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">I think this is a good idea for two reasons.</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">I do not think this is a good idea for the following reasons.</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">I agree that providing free online videos is beneficial.</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--teal);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">理由の導入</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">First,</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">Second,</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">For example,</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">This means that</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">In addition,</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">Furthermore,</span>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:6px;">結論</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;">
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">For these reasons, I think...</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">Therefore, I believe that...</span>
+            <span class="phrase-chip" onclick="copyPhrase(this)" style="display:inline-block;padding:5px 11px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:12px;font-family:'Source Serif 4',serif;cursor:pointer;transition:background 0.2s;">In conclusion, providing free videos is a great idea.</span>
+          </div>
+        </div>
+
+      </div>
+      <div id="copy-msg" style="font-size:11px;color:var(--green);text-align:right;margin-top:6px;opacity:0;transition:opacity 0.3s;">コピーしました</div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">英文を書いてみよう（80〜100語）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:12px;">STEP 2・3 で考えた内容を使って書こう。書き終えたら次のSTEPでモデル解答と比較する。</p>
+      <textarea class="writing-area" id="essay-input" placeholder="I think providing free online video content is a good idea for two reasons.&#10;&#10;First, ..." oninput="countEssayWords()"></textarea>
+      <div class="wc-bar" style="margin-top:8px;">
+        <div style="font-size:12px;color:var(--text3);">目標：80〜100語</div>
+        <div class="wc-progress"><div class="wc-bar-fill" id="wc-bar-fill"></div></div>
+        <div class="word-count" id="essay-word-count">0語</div>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:8px;">
+        <button class="btn-primary" onclick="goStep(5)">モデル解答と比較する →</button>
+        <button class="btn-secondary" onclick="document.getElementById('essay-input').value='';countEssayWords();">クリア</button>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — モデル解答 →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 5 — モデル解答
+  ══════════════════════════════ -->
+  <div class="panel" id="panel5">
+
+    <div class="card">
+      <div class="section-label">あなたの解答（再確認）</div>
+      <div id="review-essay" style="font-family:'Source Serif 4',serif;font-size:14px;line-height:1.9;padding:14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);min-height:80px;color:var(--text2);">（STEP 4 で書いた内容がここに表示されます）</div>
+      <div id="review-essay-wc" style="font-size:12px;color:var(--text3);text-align:right;margin-top:4px;"></div>
+    </div>
+
+    <!-- Model A: Yes -->
+    <div class="card">
+      <div class="section-label">モデル解答 A — Yes（賛成）88語</div>
+      <div class="model-essay">
+        <span class="me-opinion">I think providing free online video content for students is a good idea for two reasons.</span>
+        <span class="me-r1"> First, it is very convenient because students can study anytime and anywhere without spending money. This is especially helpful for students who live far from schools or cannot afford private lessons.</span>
+        <span class="me-r2"> Second, students can learn at their own pace by rewatching videos as many times as needed. This allows them to focus on areas where they struggle, making their study more efficient.</span>
+        <span class="me-conclude"> For these reasons, I believe free online videos are a great way to support students' learning.</span>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
+        <span style="background:#dff0ff;border:1px solid var(--accent);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--accent);">導入（立場表明）</span>
+        <span style="background:var(--teal-light);border:1px solid var(--teal);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--teal);">理由① Convenience</span>
+        <span style="background:var(--amber-light);border:1px solid var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--amber);">理由② Efficiency</span>
+        <span style="background:var(--purple-light);border:1px solid var(--purple);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--purple);">結論（導入と対応）</span>
+      </div>
+      <div style="font-size:13px;line-height:1.75;color:var(--text2);">
+        <strong style="color:var(--text);">構造の解説：</strong><br>
+        導入で "for two reasons" と予告 → First / Second で理由を明確に区切る → For these reasons で導入の言い直し（円環）。<br>
+        理由①："This is especially helpful for..." という補足が説得力を増している。理由②："This allows them to..." という結果（This = 前の文）で論理を展開。
+      </div>
+    </div>
+
+    <!-- Model B: No -->
+    <div class="card">
+      <div class="section-label">モデル解答 B — No（反対）91語</div>
+      <div class="model-essay">
+        <span class="me-opinion">I do not think providing free online video content is a good idea for the following two reasons.</span>
+        <span class="me-r1"> First, the quality of the content cannot be guaranteed. Since anyone can create and upload videos, students may learn incorrect information, which can harm their understanding.</span>
+        <span class="me-r2"> Second, studying alone at home can reduce efficiency because students have no one to ask when they do not understand something. Without a teacher's guidance, they may develop poor study habits.</span>
+        <span class="me-conclude"> For these reasons, I believe free online video content is not a reliable learning tool for students.</span>
+      </div>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;">
+        <span style="background:#dff0ff;border:1px solid var(--accent);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--accent);">導入（反対の立場）</span>
+        <span style="background:var(--teal-light);border:1px solid var(--teal);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--teal);">理由① Quality（問題として）</span>
+        <span style="background:var(--amber-light);border:1px solid var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--amber);">理由② Efficiency（低下として）</span>
+        <span style="background:var(--purple-light);border:1px solid var(--purple);font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;color:var(--purple);">結論</span>
+      </div>
+      <div style="font-size:13px;line-height:1.75;color:var(--text2);">
+        <strong style="color:var(--text);">反対意見の書き方のポイント：</strong><br>
+        "Since anyone can create..." という because型（理由の説明）でQualityの問題を展開。"which can harm their understanding" という関係代名詞で主張を強化。<br>
+        Efficiencyを「低下」として使った例：一人で勉強＝わからないときに聞ける人がいない＝効率が下がる。同じPOINTSでもYes/No両方に使えることがわかる。
+      </div>
+    </div>
+
+    <!-- よくある失点 -->
+    <div class="card">
+      <div class="section-label">よくある失点パターン</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">× パターン① — 立場が不明確（0点リスク）</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">「Pros and cons exist...」「There are both good and bad sides...」と両論で書き始める → <span style="color:var(--red);">TOPICに答えていないと判断され0点になる可能性がある。必ずYes/Noを1文目に明記する。</span></div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">× パターン② — 理由が立場と一致しない</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">「I agree...」と書いたのに理由の中でデメリットを書く → <span style="color:var(--red);">論理的一貫性がなく減点される。理由はすべて立場と同じ方向を向いている必要がある。</span></div>
+        </div>
+        <div style="border:0.5px solid var(--amber-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--amber);">△ パターン③ — First / Second がない</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">理由1と理由2の区切りがわからない → <span style="color:var(--amber);">採点者が構造を把握しにくく、内容点が下がる可能性がある。First / Second は省略しない。</span></div>
+        </div>
+        <div style="border:0.5px solid var(--amber-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--amber);">△ パターン④ — 結論が単なる繰り返しになる</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">導入と全く同じ文を結論で書く → <span style="color:var(--amber);">多少言い換えて書くのが理想。"I think" → "I believe"、"good idea" → "great way to..." など。</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(6)">STEP 6 へ — 採点と思考法 →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 6 — 採点と思考法
+  ══════════════════════════════ -->
+  <div class="panel" id="panel6">
+
+    <div class="card">
+      <div class="section-label">英検2級 英作文の採点基準（自己採点）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">英検の採点は「内容・構成・語彙・文法」の4軸。チェックして自分の解答を振り返ろう。</p>
+      <table class="rubric-table">
+        <tr><th>軸</th><th>チェック項目</th><th style="text-align:center;">✓</th></tr>
+        <tr>
+          <td rowspan="3" style="color:var(--accent);font-weight:700;font-size:12px;vertical-align:top;padding-top:12px;">内容</td>
+          <td>立場（Yes/No）が1文目に明確に書かれている</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb1" onclick="toggleRb('rb1')">✓</div></td>
+        </tr>
+        <tr>
+          <td>理由が2つあり、どちらも立場と論理的に一致している</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb2" onclick="toggleRb('rb2')">✓</div></td>
+        </tr>
+        <tr>
+          <td>理由がTOPIC（無料オンライン動画）と関連している（的外れでない）</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb3" onclick="toggleRb('rb3')">✓</div></td>
+        </tr>
+        <tr>
+          <td rowspan="3" style="color:var(--teal);font-weight:700;font-size:12px;vertical-align:top;padding-top:12px;">構成</td>
+          <td>First / Second（またはそれに相当する語）で理由が明確に区切られている</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb4" onclick="toggleRb('rb4')">✓</div></td>
+        </tr>
+        <tr>
+          <td>結論（For these reasons / Therefore等）で立場を言い直している</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb5" onclick="toggleRb('rb5')">✓</div></td>
+        </tr>
+        <tr>
+          <td>語数が80〜100語の範囲内に収まっている</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb6" onclick="toggleRb('rb6')">✓</div></td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="color:var(--amber);font-weight:700;font-size:12px;vertical-align:top;padding-top:12px;">語彙</td>
+          <td>POINTSの語彙（convenience, efficiency, quality等）を適切に使えている</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb7" onclick="toggleRb('rb7')">✓</div></td>
+        </tr>
+        <tr>
+          <td>同じ単語の繰り返しを避けている（言い換えができている）</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb8" onclick="toggleRb('rb8')">✓</div></td>
+        </tr>
+        <tr>
+          <td rowspan="2" style="color:var(--purple);font-weight:700;font-size:12px;vertical-align:top;padding-top:12px;">文法</td>
+          <td>三人称単数のs、冠詞（a/the）、複数形など基本的な文法が正しい</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb9" onclick="toggleRb('rb9')">✓</div></td>
+        </tr>
+        <tr>
+          <td>接続詞・関係代名詞・副詞節など複雑な構文が正しく使えている</td>
+          <td style="text-align:center;"><div class="rubric-check" id="rb10" onclick="toggleRb('rb10')">✓</div></td>
+        </tr>
+      </table>
+      <div style="margin-top:12px;padding:12px 14px;background:var(--surface2);border-radius:var(--radius);border:0.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;">
+        <span style="font-size:14px;font-weight:700;">チェック済み</span>
+        <span style="font-size:24px;font-weight:700;color:var(--accent);" id="rb-score">0 / 10</span>
+      </div>
+    </div>
+
+    <!-- 思考プロセスの整理 -->
+    <div class="card">
+      <div class="section-label">英作文の正しい思考プロセス — まとめ</div>
+
+      <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius-lg);padding:18px;margin-bottom:14px;">
+        <div style="font-size:14px;font-weight:700;color:#3c3489;margin-bottom:10px;">型より先に「なぜ」を問う</div>
+        <div style="font-size:13px;line-height:1.9;color:#534ab7;">
+          「I agree → First → Second → Therefore という型を使えばいい」という考え方は<em>半分正解・半分間違い</em>。<br>
+          型は「論理を可視化するツール」であって「論理そのもの」ではない。型を先に覚えて埋めていくと、意見と理由が繋がっていない薄い文章になる。<br><br>
+          <strong>正しい順番：</strong><br>
+          ① TOPICを3つに分解（何の話・何を問われている・POINTSの意味）<br>
+          ② 書きやすい立場を選ぶ（意見の正しさより論理の展開しやすさ）<br>
+          ③ 理由の「中身」まで掘り下げる（POINTSの名前だけでは理由にならない）<br>
+          ④ 理由と立場が一致しているか確認する<br>
+          ⑤ 型に流し込んで英文にする
+        </div>
+      </div>
+
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>POINTSは「理由の名前」ではなく「理由の軸」</strong><br><span style="font-size:13px;color:var(--text2);">「Convenienceだから良い」は理由ではない。「Convenienceがこのトピックでどう働くか」を1文で言えて初めて理由になる。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>2つの理由は「別の方向から同じ立場を支える」ものが理想</strong><br><span style="font-size:13px;color:var(--text2);">理由①＝学習者へのメリット、理由②＝学習効率へのメリット のように、異なる角度から立場を支えると説得力が増す。同じようなことを2回言わない。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>For example / This means / In addition は「論理の接着剤」</strong><br><span style="font-size:13px;color:var(--text2);">主張だけでは浮いてしまう。These接続詞で理由に説明や具体例を付けることで、主張が「証明された事実」のように見える。字数調整にも使える。</span></div></div>
+      <div class="key-point"><div class="kp-icon">4</div><div><strong>結論は「新しいことを書く場所」ではない</strong><br><span style="font-size:13px;color:var(--text2);">結論で新しい理由を追加するのは構成のミス。"For these reasons, I think..." と導入の立場を言い換えて締めるだけで十分。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(5)">← STEP 5 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<script>
+var currentPosition='';
+var selectedReasons=[];
+var rbChecked={};
+
+function goStep(n){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('panel'+n).classList.add('active');
+  document.querySelectorAll('.step-btn').forEach(function(b,i){b.classList.remove('active');});
+  var nb=document.getElementById('nav'+n);
+  if(nb) nb.classList.add('active');
+  var pct=Math.round((n/6)*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-text').textContent='STEP '+n+' / 6';
+  if(n===4) updateStep4Display();
+  if(n===5) updateStep5Display();
+  window.scrollTo(0,0);
+}
+
+function selectPosition(pos){
+  currentPosition=pos;
+  var agree=document.getElementById('btn-agree');
+  var disagree=document.getElementById('btn-disagree');
+  if(agree) agree.className='pos-btn'+(pos==='agree'?' selected-agree':'');
+  if(disagree) disagree.className='pos-btn'+(pos==='disagree'?' selected-disagree':'');
+}
+
+function toggleReason(key){
+  var card=document.getElementById('rc-'+key);
+  var check=document.getElementById('check-'+key);
+  if(!card) return;
+  card.classList.toggle('open');
+  var isSelected=check.classList.contains('checked');
+  if(!isSelected){
+    if(selectedReasons.length<2||selectedReasons.includes(key)){
+      selectedReasons=selectedReasons.includes(key)?selectedReasons.filter(function(r){return r!==key;}):selectedReasons.concat([key]);
+      check.classList.toggle('checked',selectedReasons.includes(key));
+      check.textContent=selectedReasons.includes(key)?'✓':'';
+    }
+  } else {
+    selectedReasons=selectedReasons.filter(function(r){return r!==key;});
+    check.classList.remove('checked');
+    check.textContent='';
+  }
+}
+
+var reasonLabels={conv:'Convenience',eff:'Efficiency',qual:'Quality'};
+
+function updateStep4Display(){
+  var posEl=document.getElementById('my-position-display');
+  var rsnEl=document.getElementById('my-reasons-display');
+  if(posEl) posEl.textContent=currentPosition==='agree'?'Yes（賛成）':currentPosition==='disagree'?'No（反対）':'未選択';
+  if(posEl) posEl.style.color=currentPosition==='agree'?'var(--teal)':currentPosition==='disagree'?'var(--coral)':'var(--text2)';
+  if(rsnEl) rsnEl.textContent=selectedReasons.length>0?selectedReasons.map(function(r){return reasonLabels[r]||r;}).join(' ＋ '):'未選択';
+}
+
+function updateStep5Display(){
+  var inp=document.getElementById('essay-input');
+  var rev=document.getElementById('review-essay');
+  var rwc=document.getElementById('review-essay-wc');
+  if(inp&&rev){
+    var txt=inp.value.trim();
+    rev.textContent=txt||'（STEP 4 で英文を書いてから来てください）';
+    rev.style.color=txt?'var(--text)':'var(--text3)';
+    var wc=countWordsRaw(txt);
+    if(rwc) rwc.textContent=wc+'語'+(wc>=80&&wc<=100?' ✓ 範囲内':wc<80?' — 少し短い':' — 少し長い');
+  }
+}
+
+function countWordsRaw(text){
+  if(!text||!text.trim()) return 0;
+  return text.trim().split(/\s+/).length;
+}
+
+function countEssayWords(){
+  var ta=document.getElementById('essay-input');
+  var wc=document.getElementById('essay-word-count');
+  var bar=document.getElementById('wc-bar-fill');
+  if(!ta||!wc) return;
+  var n=countWordsRaw(ta.value);
+  wc.textContent=n+'語';
+  wc.className='word-count';
+  var pct=Math.min((n/100)*100,100);
+  if(bar){bar.style.width=pct+'%';}
+  if(n>=80&&n<=100){wc.classList.add('ok');if(bar)bar.className='wc-bar-fill ok';}
+  else if(n<80&&n>0){wc.classList.add('under');if(bar)bar.className='wc-bar-fill under';}
+  else if(n>100){wc.classList.add('over');if(bar)bar.className='wc-bar-fill over';}
+  else{if(bar)bar.className='wc-bar-fill';}
+}
+
+function copyPhrase(el){
+  var txt=el.textContent;
+  if(navigator.clipboard){
+    navigator.clipboard.writeText(txt).then(function(){
+      var msg=document.getElementById('copy-msg');
+      if(msg){msg.style.opacity='1';setTimeout(function(){msg.style.opacity='0';},1500);}
+    });
+  }
+  el.style.background='var(--teal-light)';
+  setTimeout(function(){el.style.background='';},400);
+}
+
+function toggleEsBlock(id){
+  var body=document.getElementById(id+'-body');
+  var arrow=document.getElementById(id+'-arrow');
+  if(!body) return;
+  var isOpen=body.style.display!=='none'&&body.style.display!=='';
+  body.style.display=isOpen?'none':'block';
+  if(arrow) arrow.textContent=isOpen?'▼':'▲';
+}
+
+function toggleRb(id){
+  var el=document.getElementById(id);
+  if(!el) return;
+  var isChecked=el.classList.contains('checked');
+  el.classList.toggle('checked',!isChecked);
+  rbChecked[id]=!isChecked;
+  var count=Object.values(rbChecked).filter(Boolean).length;
+  var sc=document.getElementById('rb-score');
+  if(sc) sc.textContent=count+' / 10';
+}
+
+// init essay structure blocks open
+window.addEventListener('DOMContentLoaded',function(){
+  ['esb1','esb2','esb3','esb4'].forEach(function(id){
+    var b=document.getElementById(id+'-body');
+    if(b) b.style.display='block';
+  });
+});
+</script>
+</body>
+</html>

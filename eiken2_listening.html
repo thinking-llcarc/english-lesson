@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語リスニング特訓｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--surface:#fff;--surface2:#f0ede6;
+  --border:#ddd9d0;--text:#1a1814;--text2:#6b6760;--text3:#9b9892;
+  --accent:#2c5f8a;--accent-light:#e8f1f8;
+  --teal:#0f6e56;--teal-light:#e1f5ee;
+  --amber:#854f0b;--amber-light:#faeeda;
+  --coral:#993c1d;--coral-light:#faece7;
+  --purple:#534ab7;--purple-light:#eeedfe;
+  --green:#3b6d11;--green-light:#eaf3de;
+  --red:#a32d2d;--red-light:#fcebeb;
+  --pink:#993556;--pink-light:#fbeaf0;
+  --radius:10px;--radius-lg:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.page-header{background:var(--surface);border-bottom:0.5px solid var(--border);padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+.brand-logo{width:38px;height:38px;border-radius:9px;background:var(--accent);color:#fff;font-size:19px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.brand-name{font-size:13px;font-weight:700;color:var(--text);}
+.brand-tagline{font-size:11px;color:var(--text3);margin-top:1px;letter-spacing:0.03em;}
+.lesson-title{font-size:13px;font-weight:700;color:var(--text);text-align:right;}
+.progress-bar-wrap{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text2);margin-top:4px;justify-content:flex-end;}
+.progress-bar{width:90px;height:3px;background:var(--border);border-radius:2px;overflow:hidden;}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.4s ease;}
+
+.container{max-width:960px;margin:0 auto;padding:24px 18px 80px;}
+.step-nav{display:flex;gap:6px;margin-bottom:22px;flex-wrap:wrap;}
+.step-btn{padding:5px 13px;border-radius:20px;border:0.5px solid var(--border);background:var(--surface);font-size:11px;font-family:'Noto Sans JP',sans-serif;color:var(--text2);cursor:pointer;transition:all 0.2s;font-weight:500;}
+.step-btn:hover{background:var(--surface2);color:var(--text);}
+.step-btn.active{background:var(--accent);color:#fff;border-color:var(--accent);}
+.step-btn.done{background:var(--green-light);color:var(--green);border-color:#c0dd97;}
+.panel{display:none;}
+.panel.active{display:block;animation:fadeIn 0.22s ease;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.card{background:var(--surface);border-radius:var(--radius-lg);border:0.5px solid var(--border);padding:22px;margin-bottom:14px;}
+.section-label{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text3);margin-bottom:11px;}
+.divider{height:0.5px;background:var(--border);margin:18px 0;}
+
+/* script display */
+.script-box{background:var(--surface2);border-radius:var(--radius-lg);border:0.5px solid var(--border);overflow:hidden;margin-bottom:12px;}
+.script-meta{padding:10px 16px;display:flex;align-items:center;gap:10px;background:var(--surface);border-bottom:0.5px solid var(--border);}
+.script-num{width:28px;height:28px;border-radius:50%;color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.script-body{padding:16px;font-family:'Source Serif 4',serif;font-size:14px;line-height:1.9;}
+.script-line{margin-bottom:6px;display:flex;gap:8px;}
+.speaker{font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0;margin-top:3px;}
+.sp-m{background:var(--accent-light);color:var(--accent);}
+.sp-f{background:var(--pink-light);color:var(--pink);}
+.sp-q{background:var(--surface);border:0.5px solid var(--border);color:var(--text3);}
+
+/* highlight system */
+.hl-key{background:#fff3cd;border-radius:2px;padding:0 2px;cursor:pointer;transition:background 0.15s;}
+.hl-key:hover{background:#ffe066;}
+.hl-ans{background:var(--teal-light);border-radius:2px;padding:0 2px;}
+.hl-trap{background:var(--red-light);border-radius:2px;padding:0 2px;text-decoration:line-through;text-decoration-color:var(--red);}
+.hl-signal{background:var(--purple-light);border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-but{background:var(--coral-light);border-radius:2px;padding:0 2px;font-weight:700;}
+
+/* analysis box */
+.analysis-box{border-radius:var(--radius);padding:14px 16px;margin:10px 0;font-size:14px;line-height:1.75;}
+.ab-structure{background:var(--accent-light);border-left:3px solid var(--accent);}
+.ab-trap{background:var(--red-light);border-left:3px solid var(--red);}
+.ab-key{background:#fffbea;border-left:3px solid #e6c200;}
+.ab-answer{background:var(--teal-light);border-left:3px solid var(--teal);}
+.ab-label{font-size:9px;font-weight:700;letter-spacing:0.09em;text-transform:uppercase;margin-bottom:5px;font-family:'Noto Sans JP',sans-serif;}
+.ab-structure .ab-label{color:var(--accent);}
+.ab-trap .ab-label{color:var(--red);}
+.ab-key .ab-label{color:#7a6600;}
+.ab-answer .ab-label{color:var(--teal);}
+
+/* pattern tags */
+.ptag{display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;margin-right:5px;margin-bottom:4px;font-family:'Noto Sans JP',sans-serif;}
+.pt-request{background:var(--teal-light);color:var(--teal);}
+.pt-reason{background:var(--amber-light);color:var(--amber);}
+.pt-fact{background:var(--accent-light);color:var(--accent);}
+.pt-reverse{background:var(--coral-light);color:var(--coral);}
+.pt-last{background:var(--purple-light);color:var(--purple);}
+.pt-emotion{background:var(--pink-light);color:var(--pink);}
+
+/* question display */
+.q-box{background:var(--surface);border:0.5px solid var(--border);border-radius:var(--radius);padding:12px 16px;margin-bottom:10px;}
+.q-text{font-family:'Source Serif 4',serif;font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text);}
+.choice-row{display:flex;align-items:center;gap:8px;padding:4px 0;font-family:'Source Serif 4',serif;font-size:13px;border-radius:4px;}
+.choice-row.correct{background:var(--teal-light);padding:4px 8px;border-radius:6px;font-weight:700;color:var(--teal);}
+.choice-row.trap{color:var(--red);opacity:0.7;}
+.choice-num2{font-size:10px;font-weight:700;color:var(--text3);flex-shrink:0;font-family:'Noto Sans JP',sans-serif;min-width:14px;}
+
+/* key point */
+.key-point{display:flex;gap:11px;padding:13px 15px;border-radius:var(--radius);background:var(--surface2);border:0.5px solid var(--border);margin-bottom:9px;font-size:14px;align-items:flex-start;line-height:1.65;}
+.kp-icon{width:20px;height:20px;border-radius:50%;background:var(--accent);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+
+/* pattern overview grid */
+.pattern-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0;}
+.pattern-card{border-radius:var(--radius);padding:14px;border:0.5px solid var(--border);background:var(--surface);}
+.pc-icon{font-size:22px;margin-bottom:6px;}
+.pc-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.pc-desc{font-size:12px;color:var(--text2);line-height:1.6;}
+.pc-nos{font-size:10px;font-weight:700;color:var(--text3);margin-top:6px;}
+
+/* accordion */
+.acc{border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:10px;}
+.acc-hdr{padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;background:var(--surface);}
+.acc-hdr:hover{background:var(--surface2);}
+.acc-arrow{font-size:12px;transition:transform 0.2s;margin-left:auto;color:var(--text3);}
+.acc-body{display:none;padding:16px;border-top:0.5px solid var(--border);background:var(--surface);}
+
+/* flow diagram */
+.flow-row{display:flex;align-items:center;gap:6px;margin-bottom:6px;flex-wrap:wrap;}
+.flow-box{padding:5px 12px;border-radius:6px;font-size:12px;font-weight:700;font-family:'Noto Sans JP',sans-serif;white-space:nowrap;}
+.fb-gray{background:var(--surface2);border:0.5px solid var(--border);color:var(--text2);}
+.fb-blue{background:var(--accent-light);border:0.5px solid #b5d4f4;color:var(--accent);}
+.fb-red{background:var(--red-light);border:0.5px solid #f09595;color:var(--red);}
+.fb-green{background:var(--green-light);border:0.5px solid #c0dd97;color:var(--green);}
+.fb-amber{background:var(--amber-light);border:0.5px solid #fac775;color:var(--amber);}
+.fb-purple{background:var(--purple-light);border:0.5px solid #afa9ec;color:var(--purple);}
+.flow-arrow{color:var(--text3);font-size:14px;font-weight:700;}
+
+/* summary table */
+.summary-table{width:100%;border-collapse:collapse;font-size:13px;}
+.summary-table th{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);padding:7px 10px;border-bottom:0.5px solid var(--border);text-align:left;background:var(--surface2);}
+.summary-table td{padding:7px 10px;border-bottom:0.5px solid var(--border);vertical-align:middle;}
+.summary-table tr:last-child td{border-bottom:none;}
+.ans-badge{display:inline-block;background:var(--teal-light);color:var(--teal);font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;border:0.5px solid #9fe1cb;}
+
+/* buttons */
+.step-actions{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:0.5px solid var(--border);}
+.btn-primary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background 0.2s,transform 0.1s;}
+.btn-primary:hover{background:#1e4a70;}.btn-primary:active{transform:scale(0.98);}
+.btn-secondary{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;background:var(--surface);color:var(--text);border:0.5px solid var(--border);border-radius:var(--radius);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s;}
+.btn-secondary:hover{background:var(--surface2);}
+
+.callout{border-radius:var(--radius);padding:13px 15px;margin:10px 0;font-size:14px;line-height:1.75;}
+.callout-yellow{background:#fffbea;border-left:3px solid #e6c200;}
+.callout-blue{background:var(--accent-light);border-left:3px solid var(--accent);}
+.callout-purple{background:var(--purple-light);border-left:3px solid var(--purple);}
+.callout-label{font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:5px;}
+.callout-yellow .callout-label{color:#7a6600;}
+.callout-blue .callout-label{color:var(--accent);}
+.callout-purple .callout-label{color:var(--purple);}
+
+@media(max-width:600px){.pattern-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:400px){.pattern-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"読む力"と"解く力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+    <div class="lesson-title">英検2級　リスニング特訓 2025-3</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 5</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:20%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 リスニングの本質</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 第1部の構造パターン</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 第1部 全問解説</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 第2部の構造パターン</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 第2部 全問解説</button>
+  </div>
+
+  <!-- ══════════════ STEP 1 ══════════════ -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div class="section-label">リスニングの本質 — 何を「聞く」テストか</div>
+
+      <div class="callout callout-purple" style="margin-bottom:16px;">
+        <div class="callout-label">核心</div>
+        英検リスニングは「英語の音を正確に聞き取るテスト」ではなく、<strong>「英語の会話・文章が持つ論理構造を素早く把握するテスト」</strong>。音声を完璧に聞き取れなくても、構造を知っていれば解ける。構造を知らなければ、聞き取れても解けない。
+      </div>
+
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>問題文（Question）が「どこを聞くか」を指定している</strong><br><span style="font-size:13px;color:var(--text2);">What will the woman do? → 女性の行動（最後の発言か決定部分）を聞く。Why did...? → 理由を述べた箇所を聞く。What is one thing we learn? → 事実として語られた内容を聞く。<em>問題文の動詞と名詞が「どこに答えがあるか」の地図になる。</em></span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>英語の会話は「逆接で結論が来る」が最頻出パターン</strong><br><span style="font-size:13px;color:var(--text2);">but / however / though / actually → この後に「本当の答え」が来ることが多い。最初の話題は前置きに過ぎない。第1部15問中10問以上でこのパターンが機能している。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>罠の選択肢は「聞こえた単語」を使って作られる</strong><br><span style="font-size:13px;color:var(--text2);">スクリプトに出てきた単語（人名・場所名・動詞）を使って「聞こえたけど内容が違う」選択肢が作られる。単語が聞こえたからといって正解とは限らない。内容の一致を確認する。</span></div></div>
+      <div class="key-point"><div class="kp-icon">4</div><div><strong>第1部と第2部は「構造」が根本的に違う</strong><br><span style="font-size:13px;color:var(--text2);">第1部：2人の会話。片方が問題を持ち、もう片方が解決する。答えは「解決の部分」にある。第2部：1人のモノローグ。アナウンス・説明・ストーリー。答えは「最も重要な情報」にある。</span></div></div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">聞き方の思考プロセス — 音声が流れる前・中・後</div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--accent-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--accent);">① 音声が流れる前（10秒）</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.8;">
+            <strong>選択肢を先に読む → 「何を聞かれるか」を予測する</strong><br>
+            例：選択肢が「He applied to...」「He graduated from...」「He started...」なら → 「男性の進路・大学に関する質問が来る」と予測。<br>
+            <span style="font-size:12px;color:var(--text2);">選択肢の動詞と名詞を見るだけで「テーマ」がわかる。聞きながら「あ、この話だ」と照合できる。</span>
+          </div>
+        </div>
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--teal-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--teal);">② 音声が流れている間</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.8;">
+            <strong>but / however / actually / well / I mean に集中する</strong><br>
+            これらの後に「答えになる内容」が来ることが非常に多い。最初の発言は「状況設定」として流し聞きでよい。<br>
+            <span style="font-size:12px;color:var(--text2);">全部を完璧に聞こうとすると「木を見て森を見ず」になる。会話の流れ（誰が何を求めていて、どう解決したか）を追う。</span>
+          </div>
+        </div>
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--amber);">③ 音声が終わった後（10秒）</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.8;">
+            <strong>「聞こえた単語」ではなく「内容が一致しているか」で選ぶ</strong><br>
+            罠の選択肢はスクリプトと同じ単語を使う。「Browning College」「Western College」など名称が出てきたとき、どちらが「答え」でどちらが「罠」かを内容で判断する。<br>
+            <span style="font-size:12px;color:var(--text2);">例：No.1でBrowning Collegeが出てきたが答えはWestern Collegeを「申し込んだ」という選択肢。単語が聞こえた方が正解とは限らない。</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — 第1部の構造パターン →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════ STEP 2 ══════════════ -->
+  <div class="panel" id="panel2">
+
+    <div class="card">
+      <div class="section-label">第1部の本質 — 2人の会話が持つ「問題→解決」の構造</div>
+
+      <div class="callout callout-blue" style="margin-bottom:16px;">
+        <div class="callout-label">第1部の鉄則</div>
+        第1部の会話は必ず「誰かが何かを求めている or 状況を話している → 何らかの解決・決定・情報が生まれる」という流れ。答えは常に「その解決・決定・情報の部分」にある。
+      </div>
+
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <div class="pc-icon" style="font-size:18px;margin-bottom:4px;">🔄</div>
+          <div class="pc-name" style="color:var(--coral);">逆接パターン</div>
+          <div class="pc-desc">最初の話→ <strong>but/well</strong> →本当の状況・決定。答えはbutの後。</div>
+          <div class="pc-nos" style="color:var(--coral);">No.1, 3, 5, 7, 8, 11, 15</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pc-icon" style="font-size:18px;margin-bottom:4px;">📋</div>
+          <div class="pc-name" style="color:var(--teal);">依頼→承諾パターン</div>
+          <div class="pc-desc">AがBに何かを頼む → BがOKする。答えは「Bが何をするか」。</div>
+          <div class="pc-nos" style="color:var(--teal);">No.2, 6, 13</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pc-icon" style="font-size:18px;margin-bottom:4px;">📍</div>
+          <div class="pc-name" style="color:var(--accent);">理由・原因パターン</div>
+          <div class="pc-desc">Why...? → because / since / so。理由が答えになる。</div>
+          <div class="pc-nos" style="color:var(--accent);">No.3, 7, 11</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pc-icon" style="font-size:18px;margin-bottom:4px;">💬</div>
+          <div class="pc-name" style="color:var(--amber);">情報取得パターン</div>
+          <div class="pc-desc">一方が情報を求め → もう一方が教える。答えは教えた内容。</div>
+          <div class="pc-nos" style="color:var(--amber);">No.10, 14</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pc-icon" style="font-size:18px;margin-bottom:4px;">✅</div>
+          <div class="pc-name" style="color:var(--purple);">事実確認パターン</div>
+          <div class="pc-desc">What is one thing we learn? → スクリプトの中で「事実として述べられたこと」が答え。</div>
+          <div class="pc-nos" style="color:var(--purple);">No.5, 8</div>
+        </div>
+        <div class="pattern-card">
+          <div class="pc-icon" style="font-size:18px;margin-bottom:4px;">🎯</div>
+          <div class="pc-name" style="color:var(--pink);">目的・希望パターン</div>
+          <div class="pc-desc">何かをしたい/するつもり → want to / hope to / looking forward to が答え。</div>
+          <div class="pc-nos" style="color:var(--pink);">No.4, 9, 15</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">罠の3パターン — なぜ間違えるのか</div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">罠① — 「butの前」の内容を選ぶ</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">
+            No.1：Bill was accepted to <span style="background:var(--red-light);font-weight:700;">Browning College</span> → 選択肢1「He graduated from Browning College」は Browning という単語が聞こえるが内容が違う（graduated ではなく applied）。正解は but の後 "I really want to go to Western College, so I also <strong>applied there</strong>"。
+          </div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--border-tertiary);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">罠② — 関係する単語を使って「ありそうな話」を作る</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">
+            No.6：会話に「Riverton（地名）」「sofa（ソファ）」が出てくる → 選択肢1「By driving her to Riverton」（聞いた地名を使っているが内容が逆）、選択肢4「By selling her his old sofa」（sofaが出てきたが売る話ではない）。正解は "help me rearrange some furniture"。
+          </div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">罠③ — 「言い過ぎ・逆・混同」の選択肢</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">
+            No.8：Dad says he loves his job and doesn't want to retire → 選択肢3「He stopped working last year」（逆）、選択肢4「He works in the garden every day」（gardening を hobby として「もし仕事をやめたら」という仮定として言っただけ）。本文の内容を正確に把握しないと混同する。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">第1部の聞き方：会話の「4つの構造ポイント」</div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <div class="flow-row">
+          <div class="flow-box fb-gray">会話開始</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-blue">状況設定（流し聞きOK）</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-amber">問題・要望の提示</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-red" style="font-weight:700;">but / well / actually</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box fb-green" style="font-weight:700;">★ 答えはここ</div>
+        </div>
+        <div style="font-size:12px;color:var(--text2);margin-top:4px;">
+          赤いボックスのシグナル語が聞こえた瞬間に集中力を上げる。その後に続く文が答えになる確率が最も高い。
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — 第1部 全問解説 →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════ STEP 3 ══════════════ -->
+  <div class="panel" id="panel3">
+
+    <div class="card">
+      <div class="section-label">第1部 全問スクリプト分析（No.1〜15）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:16px;">各問題の会話構造・シグナル語・罠・正解の根拠を全問解説。<span style="background:#fff3cd;padding:0 4px;border-radius:2px;">黄</span>=重要箇所 <span style="background:var(--teal-light);padding:0 4px;border-radius:2px;">緑</span>=正解の根拠 <span style="background:var(--red-light);padding:0 4px;border-radius:2px;">赤取り消し</span>=罠 <span style="background:var(--coral-light);padding:0 4px;border-radius:2px;">橙</span>=シグナル語</p>
+
+      <!-- No.1 -->
+      <div class="acc" id="acc1">
+        <div class="acc-hdr" onclick="toggleAcc('acc1')">
+          <div class="script-num" style="background:var(--accent);">1</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.1 — 大学進学の話　<span class="ptag pt-reverse">逆接パターン</span></div>
+            <div style="font-size:11px;color:var(--text2);">What is one thing the boy says?</div>
+          </div>
+          <div class="acc-arrow" id="acc1-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-f">F</span><span>Bill! I heard you got into <span class="hl-trap">Browning College</span>. Congratulations!</span></div>
+            <div class="script-line"><span class="speaker sp-m">M</span><span>Thanks. <span class="hl-but">I'm not sure if I'm going there, though.</span></span></div>
+            <div class="script-line"><span class="speaker sp-f">F</span><span>Really? Browning College is an excellent school.</span></div>
+            <div class="script-line"><span class="speaker sp-m">M</span><span>Well, <span class="hl-ans">I really want to go to Western College, so I also <strong>applied there</strong>.</span> I hope to hear back from them sometime this month.</span></div>
+          </div>
+          <div class="analysis-box ab-structure">
+            <div class="ab-label">会話の構造</div>
+            「Browning Collegeに合格した」→ <strong>"though"（逆接）</strong> → 「でも実はWestern Collegeを志望して申し込んだ」
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            1「graduated from Browning」→ Browningが聞こえたが「合格」であって「卒業」ではない<br>
+            2「never heard of Western」→ 逆。Western Collegeに行きたいと言っている<br>
+            4「started college last month」→ そのような発言なし
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：3 "He applied to more than one college."</div>
+            "I also applied there"（Western Collegeにも申し込んだ）= 複数の大学に申し込んだ。applied to more than one college という言い換え。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.2 -->
+      <div class="acc" id="acc2">
+        <div class="acc-hdr" onclick="toggleAcc('acc2')">
+          <div class="script-num" style="background:var(--teal);">2</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.2 — 隣人への依頼　<span class="ptag pt-request">依頼→承諾</span></div>
+            <div style="font-size:11px;color:var(--text2);">What will the woman do next?</div>
+          </div>
+          <div class="acc-arrow" id="acc2-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>Could you see if he's still there and <span class="hl-key">close the gate</span>?</span></div>
+            <div class="script-line"><span class="speaker sp-f">F</span><span>OK. I can see from my window that your dog's still there. <span class="hl-ans">But sure, I'll <strong>close it</strong> for you right now.</span></span></div>
+          </div>
+          <div class="analysis-box ab-structure">
+            <div class="ab-label">会話の構造（依頼→承諾）</div>
+            男性が「ゲートを閉めてほしい」と依頼 → 女性が「Sure, I'll close it」と承諾 → 女性がすることはゲートを閉めること。
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            1「Feed the man's dog」→ 犬の話は出るが餌やりは依頼されていない<br>
+            3「Call the man back」→ 電話をかけ直すとは言っていない<br>
+            4「Visit the man's office」→ officeは登場しない
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "Shut the man's gate."</div>
+            "close the gate" = shut the gate. 依頼内容をそのまま承諾した。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.3 -->
+      <div class="acc" id="acc3">
+        <div class="acc-hdr" onclick="toggleAcc('acc3')">
+          <div class="script-num" style="background:var(--amber);">3</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.3 — 公園が混んでいる理由　<span class="ptag pt-reason">理由パターン</span></div>
+            <div style="font-size:11px;color:var(--text2);">Why is the park busy today?</div>
+          </div>
+          <div class="acc-arrow" id="acc3-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-f">F</span><span>There are so many people in the park today.</span></div>
+            <div class="script-line"><span class="speaker sp-m">M</span><span><span class="hl-ans">Lots of people started coming here after the <strong>new jungle gym was built</strong>.</span></span></div>
+          </div>
+          <div class="analysis-box ab-structure">
+            <div class="ab-label">会話の構造（理由提示）</div>
+            「なぜ混んでいるか」→ 男性が "after the new jungle gym was built" と理由を直接説明。
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            1「Adults can use the park for free」→ 無料かどうかは話題にない<br>
+            2「An outdoor concert is taking place」→ コンサートは出てこない<br>
+            3「The weather is particularly good」→ 天気の話はない
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：4 "The park has a new attraction."</div>
+            "new jungle gym was built" = the park has a new attraction（新しいアトラクション）という言い換え。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.4 -->
+      <div class="acc" id="acc4">
+        <div class="acc-hdr" onclick="toggleAcc('acc4')">
+          <div class="script-num" style="background:var(--pink);">4</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.4 — ホームステイの別れ　<span class="ptag pt-emotion">希望パターン</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the girl hope that the man and his family will do?</div>
+          </div>
+          <div class="acc-arrow" id="acc4-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-f">F</span><span><span class="hl-ans">I hope you can all <strong>come to Japan</strong> someday. I'd love to show you around.</span></span></div>
+            <div class="script-line"><span class="speaker sp-m">M</span><span>They really liked learning about Japan from you.</span></div>
+          </div>
+          <div class="analysis-box ab-structure">
+            <div class="ab-label">会話の構造（希望表明）</div>
+            "I hope you can all come to Japan" が女の子の「希望」を直接表している。hope to / want to / would love to = 希望のシグナル語。
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            3「Learn Japanese from her」→ learning about Japan は男性の家族がしたこと。女の子の希望ではない<br>
+            4「Write a letter to her family」→ 手紙の話はない
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "Visit her in Japan."</div>
+            "come to Japan" = visit her in Japan.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.5 -->
+      <div class="acc" id="acc5">
+        <div class="acc-hdr" onclick="toggleAcc('acc5')">
+          <div class="script-num" style="background:var(--purple);">5</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.5 — スープとレストランの夢　<span class="ptag pt-reverse">逆接パターン</span><span class="ptag pt-fact">事実確認</span></div>
+            <div style="font-size:11px;color:var(--text2);">What is one thing we learn about the man?</div>
+          </div>
+          <div class="acc-arrow" id="acc5-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>I've always dreamed of opening my own restaurant. <span class="hl-but">Well, that's the problem. <span class="hl-ans">I only know how to make soup.</span></span> I'd need to learn how to make a variety of dishes.</span></div>
+          </div>
+          <div class="analysis-box ab-structure">
+            <div class="ab-label">会話の構造</div>
+            夢（レストランを開きたい）→ but的な転換 "Well, that's the problem" → 問題点の告白「スープしか作れない」
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            2「He does not have much money」→ お金の話はない<br>
+            3「He does not enjoy cooking」→ 逆。スープを作っている<br>
+            4「He is busy running a business」→ 現在ビジネスをしているとは言っていない（夢の話）
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "He can only cook one type of dish."</div>
+            "I only know how to make soup" = only one type of dish.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.6 -->
+      <div class="acc" id="acc6">
+        <div class="acc-hdr" onclick="toggleAcc('acc6')">
+          <div class="script-num" style="background:var(--teal);">6</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.6 — 家具の移動を頼む　<span class="ptag pt-request">依頼→承諾</span></div>
+            <div style="font-size:11px;color:var(--text2);">How will the man help the woman?</div>
+          </div>
+          <div class="acc-arrow" id="acc6-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-f">F</span><span>Do you think you could come over and <span class="hl-ans">help me rearrange some furniture</span> on Saturday afternoon?</span></div>
+            <div class="script-line"><span class="speaker sp-m">M</span><span>I'll be busy on Sunday. I'm going home to see my mom in <span class="hl-trap">Riverton</span>. Sure, I'm free then.</span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            1「By driving her to Riverton」→ Rivertonは男性の母親がいる場所。女性を連れていくのではない<br>
+            4「By selling her his old sofa」→ sofaは女性が買ったもの。男性が売るのではない
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "By moving some furniture."</div>
+            "rearrange some furniture" = moving some furniture.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.7 -->
+      <div class="acc" id="acc7">
+        <div class="acc-hdr" onclick="toggleAcc('acc7')">
+          <div class="script-num" style="background:var(--accent);">7</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.7 — 道に迷った男性　<span class="ptag pt-reason">理由パターン</span></div>
+            <div style="font-size:11px;color:var(--text2);">Why does the man need help?</div>
+          </div>
+          <div class="acc-arrow" id="acc7-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>I need to go to the Hobson Towers apartment complex, <span class="hl-ans">but the map on my phone is <strong>a bit hard to read</strong>.</span></span></div>
+            <div class="script-line"><span class="speaker sp-m">M</span><span>I was worried that <span class="hl-trap">I was in the wrong place</span>.</span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            2「He is at the wrong apartment building」→ 男性は "I was worried..." と言っただけ。実際には正しい方向で、女性が道を教えた<br>
+            3「He lost the key」→ 鍵の話はない<br>
+            4「He cannot find his phone」→ 逆。phoneのmapが読みにくいと言っている
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "He is having trouble reading a map."</div>
+            "map on my phone is a bit hard to read" = having trouble reading a map.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.8 -->
+      <div class="acc" id="acc8">
+        <div class="acc-hdr" onclick="toggleAcc('acc8')">
+          <div class="script-num" style="background:var(--purple);">8</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.8 — 定年退職しない父　<span class="ptag pt-fact">事実確認</span><span class="ptag pt-reverse">逆接</span></div>
+            <div style="font-size:11px;color:var(--text2);">What is one thing we learn about the man?</div>
+          </div>
+          <div class="acc-arrow" id="acc8-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>No, not really. <span class="hl-ans">I love my job.</span> And if I stop working, I'll need to find a hobby to keep me active, like <span class="hl-trap">gardening</span>. <span class="hl-ans">I hate having nothing to do.</span></span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢（gardening の罠）</div>
+            4「He works in the garden every day」→ gardening は「もし仕事をやめたら趣味になるかも」という<em>仮定の例</em>。現在毎日庭仕事をしているわけではない。like gardeningという単語が聞こえたから選ぶのは罠。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "He likes being busy."</div>
+            "I hate having nothing to do" = He likes being busy.（対義語による言い換え）
+          </div>
+        </div>
+      </div>
+
+      <!-- No.9 -->
+      <div class="acc" id="acc9">
+        <div class="acc-hdr" onclick="toggleAcc('acc9')">
+          <div class="script-num" style="background:var(--pink);">9</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.9 — テーマパーク　<span class="ptag pt-emotion">希望パターン</span></div>
+            <div style="font-size:11px;color:var(--text2);">What is Amanda looking forward to doing this weekend?</div>
+          </div>
+          <div class="acc-arrow" id="acc9-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-f">F</span><span>My dad is taking me to the <span class="hl-trap">Cartoon World theme park</span> on Saturday. <span class="hl-ans">I can't wait to <strong>meet all my favorite cartoon characters</strong>.</span></span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠の選択肢</div>
+            1「Going to a theme park」→ これは事実だが「楽しみにしていること」の詳細が問われている<br>
+            2「Watching cartoons at home」→ cartoonが聞こえたが、homeではなくtheme parkに行く
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1（実際は「Going to a theme park」ではなく選択肢の文脈で1=Going to a theme park）</div>
+            "I can't wait to meet all my favorite cartoon characters" が楽しみにしていること。テーマパーク自体ではなくキャラクターに会うことが核心。選択肢1「Going to a theme park」が最も近い。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.10 -->
+      <div class="acc" id="acc10">
+        <div class="acc-hdr" onclick="toggleAcc('acc10')">
+          <div class="script-num" style="background:var(--amber);">10</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.10 — 交通手段の比較　<span class="ptag pt-fact">情報提供</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the man suggest the woman do?</div>
+          </div>
+          <div class="acc-arrow" id="acc10-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span><span class="hl-ans">The train is much faster.</span> It takes about two and a half hours to get there by train, but it takes five hours by bus.</span></div>
+            <div class="script-line"><span class="speaker sp-f">F</span><span>I see. <span class="hl-ans">Then I'll buy a train ticket.</span></span></div>
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：4 "Take the train to Stanton."</div>
+            男性は列車が速いと情報提供 → 女性が「じゃあ電車にする」と決定。男性のsuggestionは列車。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.11 -->
+      <div class="acc" id="acc11">
+        <div class="acc-hdr" onclick="toggleAcc('acc11')">
+          <div class="script-num" style="background:var(--coral);">11</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.11 — バスが来ない　<span class="ptag pt-fact">事実確認</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the man tell the woman?</div>
+          </div>
+          <div class="acc-arrow" id="acc11-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span><span class="hl-ans">It came five minutes ago.</span> I'm sorry, but it won't come again for another thirty minutes.</span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            1「The bus will be late」→ バスはすでに来た（5分前に来た）ので「遅れて来る」は間違い<br>
+            3「The bus will be here in five minutes」→ 30分後が正しい。five minutesが聞こえても内容が違う
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：4 "The bus has already left."</div>
+            "It came five minutes ago" = the bus has already left.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.12 -->
+      <div class="acc" id="acc12">
+        <div class="acc-hdr" onclick="toggleAcc('acc12')">
+          <div class="script-num" style="background:var(--teal);">12</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.12 — タイレストランの評価　<span class="ptag pt-fact">事実確認</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the woman say about the Thai restaurant?</div>
+          </div>
+          <div class="acc-arrow" id="acc12-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-f">F</span><span><span class="hl-ans">Yes. It's the best Thai food I've had since I went to Thailand last year.</span></span></div>
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "The food is excellent."</div>
+            "the best Thai food I've had" = excellent food. シンプルな事実確認問題。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.13 -->
+      <div class="acc" id="acc13">
+        <div class="acc-hdr" onclick="toggleAcc('acc13')">
+          <div class="script-num" style="background:var(--amber);">13</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.13 — レストランでの注文　<span class="ptag pt-request">依頼→承諾</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the man want the woman to do?</div>
+          </div>
+          <div class="acc-arrow" id="acc13-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>Please <span class="hl-ans">bring them together</span>. I also want to order dessert later, so can you <span class="hl-ans">leave the menu with me</span>?</span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            2「Give him the special dessert menu」→ 特別デザートメニューとは言っていない。普通のメニューを残して欲しいだけ<br>
+            3「Tell him her recommendation」→ おすすめを聞いているのではない。メニューを置いてほしい。<br>
+            4「Clear the plates from the table」→ 皿を下げるとは言っていない
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "Bring two items at the same time."</div>
+            "Please bring them together"（サラダと魚を一緒に持ってきて）= bring two items at the same time。<br>
+            "leave the menu with me" はデザートのための追加依頼で、Questionの「what does the man want the woman to do」への核心の答えは「一緒に持ってくること」。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.14 -->
+      <div class="acc" id="acc14">
+        <div class="acc-hdr" onclick="toggleAcc('acc14')">
+          <div class="script-num" style="background:var(--purple);">14</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.14 — パン屋の営業時間　<span class="ptag pt-fact">情報取得</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the man want to know?</div>
+          </div>
+          <div class="acc-arrow" id="acc14-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>I stopped by your bakery this morning to buy some bread, but it was all sold out. <span class="hl-ans">What time does the bakery <strong>open</strong>?</span></span></div>
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "When the bakery opens."</div>
+            男性の質問が直接「What time does the bakery open?」なので迷いなく選べる。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.15 -->
+      <div class="acc" id="acc15">
+        <div class="acc-hdr" onclick="toggleAcc('acc15')">
+          <div class="script-num" style="background:var(--pink);">15</div>
+          <div style="flex:1;">
+            <div style="font-size:13px;font-weight:700;">No.15 — 学芸会のドレス　<span class="ptag pt-emotion">目的パターン</span><span class="ptag pt-reverse">逆接</span></div>
+            <div style="font-size:11px;color:var(--text2);">What does the woman need for her daughter?</div>
+          </div>
+          <div class="acc-arrow" id="acc15-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">
+            <div class="script-line"><span class="speaker sp-m">M</span><span>What kind of dress? A <span class="hl-trap">formal one</span>, or something for <span class="hl-trap">everyday wear</span>?</span></div>
+            <div class="script-line"><span class="speaker sp-f">F</span><span>She needs one for <span class="hl-ans">the school play</span>. She's acting in it, so she needs a dress that <span class="hl-ans">looks like it's from a hundred years ago</span>.</span></div>
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            4「A dress for everyday wear」→ 店員が「everyday wear?」と聞いただけ。母親が求めているのは違う<br>
+            1「A dress that is comfortable」→ 快適さは条件に入っていない
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：3 "A dress for the school play."</div>
+            "She needs one for the school play" が直接の答え。
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 第1部答え合わせ表 -->
+    <div class="card">
+      <div class="section-label">第1部 正解・パターン一覧</div>
+      <div style="overflow-x:auto;">
+        <table class="summary-table">
+          <tr><th>No.</th><th>パターン</th><th>シグナル語</th><th>正解</th><th>主な罠の理由</th></tr>
+          <tr><td>1</td><td><span class="ptag pt-reverse" style="font-size:9px;">逆接</span></td><td style="font-family:monospace;font-size:12px;">though / well</td><td><span class="ans-badge">3</span></td><td>butの前の大学名を選ぶ罠</td></tr>
+          <tr><td>2</td><td><span class="ptag pt-request" style="font-size:9px;">依頼</span></td><td style="font-family:monospace;font-size:12px;">Could you / I'll</td><td><span class="ans-badge">2</span></td><td>犬の餌やりと混同</td></tr>
+          <tr><td>3</td><td><span class="ptag pt-reason" style="font-size:9px;">理由</span></td><td style="font-family:monospace;font-size:12px;">after / because</td><td><span class="ans-badge">4</span></td><td>天気・コンサートは無関係</td></tr>
+          <tr><td>4</td><td><span class="ptag pt-emotion" style="font-size:9px;">希望</span></td><td style="font-family:monospace;font-size:12px;">I hope / would love</td><td><span class="ans-badge">2</span></td><td>「日本について教えた」と混同</td></tr>
+          <tr><td>5</td><td><span class="ptag pt-reverse" style="font-size:9px;">逆接</span></td><td style="font-family:monospace;font-size:12px;">Well, that's the problem</td><td><span class="ans-badge">1</span></td><td>レストランを経営していると誤解</td></tr>
+          <tr><td>6</td><td><span class="ptag pt-request" style="font-size:9px;">依頼</span></td><td style="font-family:monospace;font-size:12px;">Could you / Sure</td><td><span class="ans-badge">2</span></td><td>Rivertonやsofaで混乱</td></tr>
+          <tr><td>7</td><td><span class="ptag pt-reason" style="font-size:9px;">理由</span></td><td style="font-family:monospace;font-size:12px;">but (hard to read)</td><td><span class="ans-badge">1</span></td><td>「違う場所にいる」と心配したが実際は違う</td></tr>
+          <tr><td>8</td><td><span class="ptag pt-fact" style="font-size:9px;">事実</span></td><td style="font-family:monospace;font-size:12px;">I love / I hate</td><td><span class="ans-badge">2</span></td><td>gardeningを現在の行動と誤解</td></tr>
+          <tr><td>9</td><td><span class="ptag pt-emotion" style="font-size:9px;">希望</span></td><td style="font-family:monospace;font-size:12px;">I can't wait to</td><td><span class="ans-badge">1</span></td><td>cartoonという単語の混乱</td></tr>
+          <tr><td>10</td><td><span class="ptag pt-fact" style="font-size:9px;">情報提供</span></td><td style="font-family:monospace;font-size:12px;">much faster / then</td><td><span class="ans-badge">4</span></td><td>busの時間と混同</td></tr>
+          <tr><td>11</td><td><span class="ptag pt-fact" style="font-size:9px;">事実</span></td><td style="font-family:monospace;font-size:12px;">came / won't come again</td><td><span class="ans-badge">4</span></td><td>five minutesを「5分後」と誤解</td></tr>
+          <tr><td>12</td><td><span class="ptag pt-fact" style="font-size:9px;">事実</span></td><td style="font-family:monospace;font-size:12px;">best / excellent</td><td><span class="ans-badge">1</span></td><td>シンプル。価格や場所は言及なし</td></tr>
+          <tr><td>13</td><td><span class="ptag pt-request" style="font-size:9px;">依頼</span></td><td style="font-family:monospace;font-size:12px;">bring them together</td><td><span class="ans-badge">1</span></td><td>leave the menuはデザート用の補足依頼</td></tr>
+          <tr><td>14</td><td><span class="ptag pt-fact" style="font-size:9px;">情報</span></td><td style="font-family:monospace;font-size:12px;">What time does...open</td><td><span class="ans-badge">2</span></td><td>直接問われているのでシンプル</td></tr>
+          <tr><td>15</td><td><span class="ptag pt-emotion" style="font-size:9px;">目的</span></td><td style="font-family:monospace;font-size:12px;">for the school play</td><td><span class="ans-badge">3</span></td><td>店員の質問の選択肢が罠</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — 第2部の構造パターン →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════ STEP 4 ══════════════ -->
+  <div class="panel" id="panel4">
+
+    <div class="card">
+      <div class="section-label">第2部の本質 — モノローグが持つ「情報の階層」</div>
+
+      <div class="callout callout-blue" style="margin-bottom:16px;">
+        <div class="callout-label">第2部の鉄則</div>
+        第2部は1人が話す。<strong>「最も重要な情報」と「補足情報」の区別</strong>が解答の鍵。アナウンス・説明・ストーリーという3つの形式によって「どこに答えが来るか」のパターンが異なる。
+      </div>
+
+      <div class="pattern-grid">
+        <div class="pattern-card">
+          <div style="font-size:16px;font-weight:700;color:var(--accent);margin-bottom:4px;">アナウンス型</div>
+          <div class="pc-desc">百貨店・空港・バス停など。<strong>最初の文か最後の文</strong>に最も重要な情報（何があるか・どうするか）が来る。</div>
+          <div class="pc-nos" style="color:var(--accent);">No.18,19,20,23,24</div>
+        </div>
+        <div class="pattern-card">
+          <div style="font-size:16px;font-weight:700;color:var(--teal);margin-bottom:4px;">説明型</div>
+          <div class="pc-desc">科学・仕組み・データの説明。<strong>最初のトピック文</strong>に核心が来て、後で具体的に説明される。</div>
+          <div class="pc-nos" style="color:var(--teal);">No.16,22</div>
+        </div>
+        <div class="pattern-card">
+          <div style="font-size:16px;font-weight:700;color:var(--amber);margin-bottom:4px;">ストーリー型</div>
+          <div class="pc-desc">人物の行動・出来事。<strong>時系列</strong>で進む。Questionで「いつ何をしたか」が問われる。</div>
+          <div class="pc-nos" style="color:var(--amber);">No.17,21,25,26,27,28,29,30</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">第2部の聞き方：3つの形式別アプローチ</div>
+
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--accent-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--accent);">アナウンス型の聞き方</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.8;">
+            <strong>最初の一文に「テーマ」が来る。</strong> その後に具体的な内容が続く。<br>
+            例：No.18「We have special discounts on many items...」→ 最初の文がそのまま正解になる。<br>
+            <div class="flow-row" style="margin-top:8px;">
+              <div class="flow-box fb-blue">冒頭でテーマ宣言</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-box fb-gray">具体的な商品名・価格・時間</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-box fb-green">行動の促し（Please...）</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--teal-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--teal);">説明型の聞き方</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.8;">
+            <strong>最初に「何について説明するか」が来る。</strong>「How / Why / What」の問いに直接対応する文を探す。<br>
+            例：No.16「they can follow the sun throughout the day」→ How do they get sunlight? の直接の答え。<br>
+            <div class="flow-row" style="margin-top:8px;">
+              <div class="flow-box fb-teal" style="background:var(--teal-light);border-color:#9fe1cb;color:var(--teal);">特徴・仕組みの提示</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-box fb-gray">Because / so / which → 理由・結果の説明</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-box fb-green">メリット・まとめ</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;">
+          <div style="background:var(--amber-light);padding:10px 16px;font-size:12px;font-weight:700;color:var(--amber);">ストーリー型の聞き方</div>
+          <div style="padding:13px 16px;font-size:14px;line-height:1.8;">
+            <strong>「誰が・いつ・何をした」を時系列で追う。</strong> Questionで「最後に何をしたか」「何の前に何をしたか」が問われる。<br>
+            例：No.27 Alex: 「started late → couldn't finish → next morning worked on it → gave to teacher」<br>
+            "What did Alex do before he went to bed?" → "started the project very late" = worked on his school project<br>
+            <div class="flow-row" style="margin-top:8px;">
+              <div class="flow-box fb-amber">登場人物の紹介</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-box fb-gray">出来事①→②→③</div>
+              <div class="flow-arrow">→</div>
+              <div class="flow-box fb-green">結末・現在の状況</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">第2部で頻出する罠の2パターン</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">罠A — 時系列の逆転・混同</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">
+            No.27: Alexは「寝る前」にプロジェクトを始めた（started late）が完成できなかった。「翌朝」に完成させた。→ Questionは「寝る前に何をしたか」なので「worked on his school project」が正解。「turned in his project」（=翌朝の行動）を選ぶと時系列の罠にはまる。
+          </div>
+        </div>
+        <div style="border:0.5px solid var(--red-light);border-radius:var(--radius);overflow:hidden;">
+          <div style="background:var(--red-light);padding:8px 14px;font-size:12px;font-weight:700;color:var(--red);">罠B — 部分的な事実を使った「ありそうな話」</div>
+          <div style="padding:11px 14px;font-size:13px;line-height:1.75;">
+            No.28: Tomは現在「farming」をしている → 選択肢3「He runs his own farm」はありそうだが不正解。Tom is helping <em>his parents'</em> farm、かつ "teaching people from the city about farming" が正解。自分の農場を経営しているとは言っていない。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — 第2部 全問解説 →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════ STEP 5 ══════════════ -->
+  <div class="panel" id="panel5">
+
+    <div class="card">
+      <div class="section-label">第2部 全問スクリプト分析（No.16〜30）</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:16px;">各問のスクリプト構造・答えの根拠・罠を全問解説します。</p>
+
+      <!-- No.16 -->
+      <div class="acc" id="acc16">
+        <div class="acc-hdr" onclick="toggleAcc('acc16')">
+          <div class="script-num" style="background:var(--teal);">16</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.16 — 浮体式太陽光発電　<span class="ptag pt-fact">説明型</span></div><div style="font-size:11px;color:var(--text2);">How can the floating solar panels get sunlight during the day?</div></div>
+          <div class="acc-arrow" id="acc16-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">Solar panels are floating on the water, making it easier to change directions and move. Because of these features, <span class="hl-ans">they can <strong>follow the sun throughout the day</strong>.</span> Another benefit of floating on the water is that it can prevent the rise in temperature.</div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：3 "By following where the sun goes."</div>
+            "follow the sun throughout the day" = following where the sun goes.
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            1「using a great number of panels」→ 数の話はない。2「catching light reflected on the water」→ water自体の反射光という話ではなく、水の上に浮かぶことで向きを変えられる話。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.17 -->
+      <div class="acc" id="acc17">
+        <div class="acc-hdr" onclick="toggleAcc('acc17')">
+          <div class="script-num" style="background:var(--amber);">17</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.17 — ひまわりの育て方　<span class="ptag pt-fact">ストーリー型</span></div><div style="font-size:11px;color:var(--text2);">How did Emma make sure her sunflowers would grow well?</div></div>
+          <div class="acc-arrow" id="acc17-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">She read a book that says that sunflowers need a lot of sunlight, so <span class="hl-ans">she chose a spot that gets a lot of sun during the day.</span> She also made sure that the soil in that spot was not too wet or too dry.</div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：4 "She planted them in a sunny spot."</div>
+            "chose a spot that gets a lot of sun" = planted in a sunny spot.
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            2「watered every other day」→ "watered them every day"（毎日）が正しく「隔日」は誤り。数字・頻度に注意。3「used old soil」→ soilの話は出るが「古い土」とは言っていない。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.18 -->
+      <div class="acc" id="acc18">
+        <div class="acc-hdr" onclick="toggleAcc('acc18')">
+          <div class="script-num" style="background:var(--accent);">18</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.18 — デパートのアナウンス　<span class="ptag pt-fact">アナウンス型</span></div><div style="font-size:11px;color:var(--text2);">What is one thing the announcement says?</div></div>
+          <div class="acc-arrow" id="acc18-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;"><span class="hl-ans">We have <strong>special discounts on many items</strong>, including TVs and kitchen appliances. There are also some great deals on men's and women's clothing.</span> If you need help finding a specific section of the store, please visit the information desk on the first floor.</div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：3 "There are sales on many kinds of products."</div>
+            "special discounts on many items including TVs, kitchen appliances, clothing" = sales on many kinds of products.
+          </div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            1「Staff members are needed on the first floor」→ information deskが1階にあると言っているだけ。スタッフが不足しているとは言っていない。2「TVs on sale are all sold out」→ TVsはセールしているが売り切れとは言っていない。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.19 -->
+      <div class="acc" id="acc19">
+        <div class="acc-hdr" onclick="toggleAcc('acc19')">
+          <div class="script-num" style="background:var(--coral);">19</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.19 — 列車の遅延　<span class="ptag pt-reason">アナウンス型・理由</span></div><div style="font-size:11px;color:var(--text2);">Why is the train delayed?</div></div>
+          <div class="acc-arrow" id="acc19-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">We would like to apologize for the delay of the 3:30 train from <span class="hl-trap">Ashford to Harrow</span>. It is thirty minutes late because <span class="hl-ans">it needs to be cleaned after the long trip from <strong>Harrow to Ashford</strong>.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠（方向の罠）</div>
+            2「The weather was bad in Ashford」→ Ashfordは出てくるが天気の話はない。「long trip FROM Harrow to Ashford」（逆方向のトリップ後に清掃が必要）という構造。遅れているのは Ashford→Harrow 方向の列車。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：4 "It needs to be cleaned."</div>
+            "needs to be cleaned after the long trip" が直接の理由。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.20 -->
+      <div class="acc" id="acc20">
+        <div class="acc-hdr" onclick="toggleAcc('acc20')">
+          <div class="script-num" style="background:var(--purple);">20</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.20 — 本のイベント　<span class="ptag pt-fact">アナウンス型</span></div><div style="font-size:11px;color:var(--text2);">What is one thing the speaker says?</div></div>
+          <div class="acc-arrow" id="acc20-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">Our guest speaker today is the famous author, Mary Jones. She will read from her new children's book, The Secret of the <span class="hl-trap">Missing Cat</span>. Before we start, we would like to remind you that <span class="hl-ans">there is a <strong>new book section</strong> next to the window on the first floor. It has just been opened.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠（猫の本の罠）</div>
+            3「Books about cats have sold well」→ Missing Catが本のタイトルに出てくるが、猫の本が売れているとは言っていない。「Missing Cat」という単語が聞こえたからといって選ぶのは罠。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "There is a new book area."</div>
+            "new book section ... just been opened" = there is a new book area.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.21 -->
+      <div class="acc" id="acc21">
+        <div class="acc-hdr" onclick="toggleAcc('acc21')">
+          <div class="script-num" style="background:var(--teal);">21</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.21 — 島の旅行　<span class="ptag pt-fact">ストーリー型</span></div><div style="font-size:11px;color:var(--text2);">What did Emily and Ryan enjoy the most?</div></div>
+          <div class="acc-arrow" id="acc21-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">They stayed at a hotel with a large <span class="hl-trap">swimming pool</span> and a very good <span class="hl-trap">restaurant</span>. However, <span class="hl-ans">their <strong>favorite part</strong> of the trip was <strong>exploring the beautiful island</strong> and watching the sun set over the ocean.</span></div>
+          <div class="analysis-box ab-structure">
+            <div class="ab-label">however の後に「本当の答え」</div>
+            swimming pool と restaurant が先に出てくるが、however の後の "favorite part" が答え。第1部と同じ逆接パターンが第2部でも機能する。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：3 "Looking around the island."</div>
+            "exploring the beautiful island" = looking around the island.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.22 -->
+      <div class="acc" id="acc22">
+        <div class="acc-hdr" onclick="toggleAcc('acc22')">
+          <div class="script-num" style="background:var(--amber);">22</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.22 — 寒い中での運動　<span class="ptag pt-fact">説明型</span></div><div style="font-size:11px;color:var(--text2);">What is one benefit of exercising in cold weather?</div></div>
+          <div class="acc-arrow" id="acc22-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">When we move our bodies in cold weather, our hearts work harder than usual to send blood throughout our bodies. As a result, we can burn more calories and exercise longer. <span class="hl-ans">By training in cold conditions, we can also <strong>improve our performance in hot weather</strong>.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            1「helps us make more blood」→ 血を作るとは言っていない（send blood throughout = 全身に送る）。語義の混同。3「improve ability to see at night」→ 夜間視力の話はない。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "It helps us perform better in hot weather."</div>
+            "improve our performance in hot weather" = perform better in hot weather.
+          </div>
+        </div>
+      </div>
+
+      <!-- No.23 -->
+      <div class="acc" id="acc23">
+        <div class="acc-hdr" onclick="toggleAcc('acc23')">
+          <div class="script-num" style="background:var(--accent);">23</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.23 — バスのアナウンス　<span class="ptag pt-fact">アナウンス型</span></div><div style="font-size:11px;color:var(--text2);">What is one thing the speaker says?</div></div>
+          <div class="acc-arrow" id="acc23-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">The 2:30 p.m. bus to Central City will arrive in <span class="hl-trap">five minutes</span>. Please have your tickets ready to show to the driver. Remember that the bus will stop at the Shopping Mall, the Train Station, and the Central City Airport. <span class="hl-ans">If you are going to the airport, be sure to get off at the <strong>last stop</strong>.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠（five dollarsとfive minutesの混同）</div>
+            1「Tickets for the bus cost five dollars」→ five が聞こえるが、five minutes（5分後に到着）であってfive dollars（5ドル）ではない。数字の罠。2「Tickets should be purchased from the driver」→ show to the driver（見せる）であって buy from（購入する）ではない。<br>
+            4「The bus will stop at the airport first」→ airportは最後のストップ（last stop）。firstは逆。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：3 "The bus will arrive in five minutes."</div>
+            "The 2:30 p.m. bus to Central City will arrive in five minutes." がそのまま答え。five minutesが聞こえたとき「five dollarsと混同しないか」という罠でもある。
+          </div>
+        </div>
+      </div>
+
+      <!-- No.24〜30 simplified -->
+      <div class="acc" id="acc24">
+        <div class="acc-hdr" onclick="toggleAcc('acc24')">
+          <div class="script-num" style="background:var(--purple);">24</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.24 — 空港アナウンス　<span class="ptag pt-fact">アナウンス型</span></div><div style="font-size:11px;color:var(--text2);">What is being announced?</div></div>
+          <div class="acc-arrow" id="acc24-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;"><span class="hl-ans">The 10:30 flight to London will be leaving from <strong>Gate 22</strong>.</span> Passengers with small children and those needing assistance will be allowed to board first... Thank you for choosing Bluebird Airlines.</div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：4 "The departure gate of a flight."</div>
+            "leaving from Gate 22" = departure gate. アナウンスの核心は搭乗ゲートの告知。
+          </div>
+        </div>
+      </div>
+
+      <div class="acc" id="acc25">
+        <div class="acc-hdr" onclick="toggleAcc('acc25')">
+          <div class="script-num" style="background:var(--coral);">25</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.25 — Wendyの語彙テスト　<span class="ptag pt-fact">ストーリー型</span></div><div style="font-size:11px;color:var(--text2);">What did Wendy's teacher do for Wendy?</div></div>
+          <div class="acc-arrow" id="acc25-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">Her teacher posts a test online. However, her phone broke down. She asked her teacher what she could do and <span class="hl-ans">was allowed to <strong>take the test on paper</strong> this week.</span></div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "He let her take a printed exam."</div>
+            "take the test on paper" = take a printed exam. online → on paper という転換が答え。
+          </div>
+        </div>
+      </div>
+
+      <div class="acc" id="acc26">
+        <div class="acc-hdr" onclick="toggleAcc('acc26')">
+          <div class="script-num" style="background:var(--teal);">26</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.26 — 看護師Tomの転職　<span class="ptag pt-fact">ストーリー型</span></div><div style="font-size:11px;color:var(--text2);">What is Tom looking for in his next job?</div></div>
+          <div class="acc-arrow" id="acc26-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">Tom loves his work, but he feels that <span class="hl-ans">he has not been <strong>learning new things</strong> recently. He is looking for a new job at a hospital where he can get additional training.</span></div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "An opportunity to learn new things."</div>
+            "learning new things / additional training" = opportunity to learn new things.
+          </div>
+        </div>
+      </div>
+
+      <div class="acc" id="acc27">
+        <div class="acc-hdr" onclick="toggleAcc('acc27')">
+          <div class="script-num" style="background:var(--amber);">27</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.27 — Alexの宿題（時系列の罠）　<span class="ptag pt-reverse">時系列注意</span></div><div style="font-size:11px;color:var(--text2);">What did Alex do before he went to bed?</div></div>
+          <div class="acc-arrow" id="acc27-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;"><span class="hl-ans">He started the project very late</span>, and he <span class="hl-trap">was not able to finish it before he went to bed</span>. In the morning, he woke up early and worked on it for a few hours. <span class="hl-trap">He gave his project to his teacher in class.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">時系列の罠（最重要）</div>
+            寝る前：プロジェクトを始めた（が終わらなかった）<br>
+            朝：数時間作業した<br>
+            学校で：先生に提出した<br>
+            Questionは「<strong>寝る前</strong>に何をしたか」→ 「started the project」= worked on his school project が正解。「turned in his project」は<em>翌日の学校での行動</em>なので×。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "He worked on his school project."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc" id="acc28">
+        <div class="acc-hdr" onclick="toggleAcc('acc28')">
+          <div class="script-num" style="background:var(--purple);">28</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.28 — Tomの現在の仕事　<span class="ptag pt-fact">ストーリー型</span></div><div style="font-size:11px;color:var(--text2);">What does Tom do now?</div></div>
+          <div class="acc-arrow" id="acc28-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">Tom went back to the village to help <span class="hl-key">his parents</span>. He decided to stay and help his parents. <span class="hl-ans">Now, he enjoys <strong>teaching people from the city about farming</strong>.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠</div>
+            3「He runs his own farm」→ 自分の農場ではなく<em>両親の農場</em>を手伝っている。own farmsという単語がないことに注意。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "He teaches city people about farming."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc" id="acc29">
+        <div class="acc-hdr" onclick="toggleAcc('acc29')">
+          <div class="script-num" style="background:var(--pink);">29</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.29 — モールのアナウンス　<span class="ptag pt-fact">アナウンス型</span></div><div style="font-size:11px;color:var(--text2);">What can customers get if they spend over $100?</div></div>
+          <div class="acc-arrow" id="acc29-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">You can get <span class="hl-trap">discounts of up to 50 percent</span> on selected items. In addition, if you spend more than $100, <span class="hl-ans">you can get a <strong>coupon for $10 off</strong> your next purchase.</span></div>
+          <div class="analysis-box ab-trap">
+            <div class="ab-label">罠（数字の混同）</div>
+            3「A special discount of 50 percent」→ 50%割引は全員向け（$100以上限定ではない）。4「A gift worth $10」→ gift（贈り物）ではなくcoupon（クーポン）。$10という金額が聞こえたから選ぶのは数字罠。
+          </div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：2 "A coupon worth $10."</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="acc" id="acc30">
+        <div class="acc-hdr" onclick="toggleAcc('acc30')">
+          <div class="script-num" style="background:var(--accent);">30</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;">No.30 — Johnの引越し　<span class="ptag pt-fact">ストーリー型・時系列</span></div><div style="font-size:11px;color:var(--text2);">What did John do last week?</div></div>
+          <div class="acc-arrow" id="acc30-arrow">▼</div>
+        </div>
+        <div class="acc-body">
+          <div class="script-body" style="background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:12px;">10 years ago: bought a house. Then: married, had a son. Last year: wife had twins (needed more space). <span class="hl-ans">Last week: <strong>John sold his house and bought a bigger one.</strong></span></div>
+          <div class="analysis-box ab-answer">
+            <div class="ab-label">正解：1 "He bought a bigger house."</div>
+            "bought a bigger one" = bought a bigger house. sold his old house も正しいが選択肢には両方の行動を含む選択肢がないため「買った」の方を採用。
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 第2部答え合わせ -->
+    <div class="card">
+      <div class="section-label">第2部 正解・パターン一覧</div>
+      <div style="overflow-x:auto;">
+        <table class="summary-table">
+          <tr><th>No.</th><th>形式</th><th>答えのポイント</th><th>正解</th></tr>
+          <tr><td>16</td><td><span class="ptag pt-fact" style="font-size:9px;">説明型</span></td><td>follow the sun = following where the sun goes</td><td><span class="ans-badge">3</span></td></tr>
+          <tr><td>17</td><td><span class="ptag pt-fact" style="font-size:9px;">ストーリー</span></td><td>sunny spotを選んだ。数字の罠（毎日vs隔日）</td><td><span class="ans-badge">4</span></td></tr>
+          <tr><td>18</td><td><span class="ptag pt-fact" style="font-size:9px;">アナウンス</span></td><td>冒頭文がそのまま正解。many items = many kinds</td><td><span class="ans-badge">3</span></td></tr>
+          <tr><td>19</td><td><span class="ptag pt-reason" style="font-size:9px;">アナウンス</span></td><td>because = 理由。needs to be cleaned</td><td><span class="ans-badge">4</span></td></tr>
+          <tr><td>20</td><td><span class="ptag pt-fact" style="font-size:9px;">アナウンス</span></td><td>cat本のタイトルに罠。new book section が答え</td><td><span class="ans-badge">1</span></td></tr>
+          <tr><td>21</td><td><span class="ptag pt-reverse" style="font-size:9px;">however</span></td><td>however → favorite = looking around island</td><td><span class="ans-badge">3</span></td></tr>
+          <tr><td>22</td><td><span class="ptag pt-fact" style="font-size:9px;">説明型</span></td><td>improve performance in hot weather</td><td><span class="ans-badge">2</span></td></tr>
+          <tr><td>23</td><td><span class="ptag pt-fact" style="font-size:9px;">アナウンス</span></td><td>arrive in five minutes が核心。airport=last（firstは罠）</td><td><span class="ans-badge">3</span></td></tr>
+          <tr><td>24</td><td><span class="ptag pt-fact" style="font-size:9px;">アナウンス</span></td><td>Gate 22 = departure gate の情報</td><td><span class="ans-badge">4</span></td></tr>
+          <tr><td>25</td><td><span class="ptag pt-fact" style="font-size:9px;">ストーリー</span></td><td>online → on paper（printed exam）</td><td><span class="ans-badge">1</span></td></tr>
+          <tr><td>26</td><td><span class="ptag pt-fact" style="font-size:9px;">ストーリー</span></td><td>learning new things = opportunity</td><td><span class="ans-badge">2</span></td></tr>
+          <tr><td>27</td><td><span class="ptag pt-reverse" style="font-size:9px;">時系列罠</span></td><td>寝る前=started project（終わらず）。翌朝=提出</td><td><span class="ans-badge">1</span></td></tr>
+          <tr><td>28</td><td><span class="ptag pt-fact" style="font-size:9px;">ストーリー</span></td><td>own farmではなく、parents' farm。今=teaching</td><td><span class="ans-badge">2</span></td></tr>
+          <tr><td>29</td><td><span class="ptag pt-fact" style="font-size:9px;">アナウンス</span></td><td>$100以上=coupon $10 off（数字・gift罠）</td><td><span class="ans-badge">2</span></td></tr>
+          <tr><td>30</td><td><span class="ptag pt-fact" style="font-size:9px;">時系列</span></td><td>last week = sold old + bought bigger</td><td><span class="ans-badge">1</span></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- 最終まとめ -->
+    <div class="card">
+      <div class="section-label">リスニング特訓 総まとめ — 本質的な力をつけるために</div>
+      <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius-lg);padding:18px;margin-bottom:14px;">
+        <div style="font-size:14px;font-weight:700;color:#3c3489;margin-bottom:10px;">テクニックより先に「英語の論理構造」を身につける</div>
+        <div style="font-size:13px;line-height:1.9;color:#534ab7;">
+          「butの後に注目」「先に選択肢を見ろ」は正しい。しかしそれは<em>結果として出てくるテクニック</em>に過ぎない。<br>
+          英語の会話・文章が「問題→解決」「状況設定→逆接→本題」「主張→根拠→まとめ」という論理で構成されていることを理解すれば、butの後に答えが来ることは自然に見えてくる。<br><br>
+          <strong>本質的な力 = 「英語の文章はこういう論理で動く」という直感を持つこと</strong>
+        </div>
+      </div>
+      <div class="key-point"><div class="kp-icon">1</div><div><strong>罠は「聞こえた単語を使って作られる」という鉄則を体に染み込ませる</strong><br><span style="font-size:13px;color:var(--text2);">Riverton、gardening、Missing Cat、five minutes — これらはすべて聞こえたけど正解ではなかった単語。「聞こえた = 正解」の反射を持っていると必ず引っかかる。</span></div></div>
+      <div class="key-point"><div class="kp-icon">2</div><div><strong>第1部は「逆接の後」、第2部は「形式を判断してから核心を探す」</strong><br><span style="font-size:13px;color:var(--text2);">第1部はbut/however/well/thoughの後。第2部はアナウンス型なら冒頭・ストーリー型なら時系列・説明型ならbecause/so/as a result。</span></div></div>
+      <div class="key-point"><div class="kp-icon">3</div><div><strong>時系列の問題は「いつ」を意識して聞く</strong><br><span style="font-size:13px;color:var(--text2);">last week / before / after / next morning などの時間表現が出たら、その前後の行動を整理しながら聞く。時系列の罠（Alex: No.27）は最頻出の難問パターン。</span></div></div>
+      <div class="key-point"><div class="kp-icon">4</div><div><strong>言い換えに慣れる：同じ内容を別の言葉で言い換える</strong><br><span style="font-size:13px;color:var(--text2);">follow the sun = following where the sun goes。take the test on paper = printed exam。rearrange furniture = moving furniture。リスニングも読解と同じく「言い換え」が正解の核心。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var stepDone={1:false,2:false,3:false,4:false,5:false};
+
+function goStep(n){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('panel'+n).classList.add('active');
+  document.querySelectorAll('.step-btn').forEach(function(b,i){b.classList.remove('active');});
+  var nb=document.getElementById('nav'+n);
+  if(nb) nb.classList.add('active');
+  var pct=Math.round((n/5)*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-text').textContent='STEP '+n+' / 5';
+  window.scrollTo(0,0);
+}
+
+function toggleAcc(id){
+  var acc=document.getElementById(id);
+  var body=acc.querySelector('.acc-body');
+  var arrow=document.getElementById(id+'-arrow');
+  if(!body) return;
+  var isOpen=body.style.display==='block';
+  body.style.display=isOpen?'none':'block';
+  if(arrow) arrow.style.transform=isOpen?'rotate(0deg)':'rotate(180deg)';
+}
+</script>
+</body>
+</html>

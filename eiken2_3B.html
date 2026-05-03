@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語読解特訓｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:#f7f5f0; --surface:#fff; --surface2:#f0ede6;
+  --border:#ddd9d0; --text:#1a1814; --text2:#6b6760; --text3:#9b9892;
+  --accent:#2c5f8a; --accent-light:#e8f1f8;
+  --teal:#0f6e56; --teal-light:#e1f5ee;
+  --amber:#854f0b; --amber-light:#faeeda;
+  --coral:#993c1d; --coral-light:#faece7;
+  --purple:#534ab7; --purple-light:#eeedfe;
+  --green:#3b6d11; --green-light:#eaf3de;
+  --red:#a32d2d; --red-light:#fcebeb;
+  --pink:#993556; --pink-light:#fbeaf0;
+  --radius:10px; --radius-lg:16px;
+}
+body { font-family:'Noto Sans JP',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; font-size:15px; min-height:100vh; }
+
+/* ─── HEADER ─── */
+.page-header { background:var(--surface); border-bottom:0.5px solid var(--border); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; position:sticky; top:0; z-index:100; }
+.brand-logo { width:38px; height:38px; border-radius:9px; background:var(--accent); color:#fff; font-size:19px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.brand-name { font-size:13px; font-weight:700; color:var(--text); }
+.brand-tagline { font-size:11px; color:var(--text3); margin-top:1px; letter-spacing:0.03em; }
+.lesson-title { font-size:13px; font-weight:700; color:var(--text); text-align:right; font-family:'Source Serif 4',serif; font-style:italic; }
+.progress-bar-wrap { display:flex; align-items:center; gap:8px; font-size:11px; color:var(--text2); margin-top:4px; justify-content:flex-end; }
+.progress-bar { width:90px; height:3px; background:var(--border); border-radius:2px; overflow:hidden; }
+.progress-fill { height:100%; background:var(--accent); border-radius:2px; transition:width 0.4s ease; }
+
+/* ─── LAYOUT ─── */
+.container { max-width:920px; margin:0 auto; padding:24px 18px 80px; }
+.step-nav { display:flex; gap:6px; margin-bottom:22px; flex-wrap:wrap; }
+.step-btn { padding:5px 12px; border-radius:20px; border:0.5px solid var(--border); background:var(--surface); font-size:11px; font-family:'Noto Sans JP',sans-serif; color:var(--text2); cursor:pointer; transition:all 0.2s; font-weight:500; }
+.step-btn:hover { background:var(--surface2); color:var(--text); }
+.step-btn.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+.step-btn.done { background:var(--green-light); color:var(--green); border-color:#c0dd97; }
+.panel { display:none; }
+.panel.active { display:block; animation:fadeIn 0.22s ease; }
+@keyframes fadeIn { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+
+/* ─── CARDS ─── */
+.card { background:var(--surface); border-radius:var(--radius-lg); border:0.5px solid var(--border); padding:22px; margin-bottom:14px; }
+.section-label { font-size:10px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--text3); margin-bottom:11px; }
+.divider { height:0.5px; background:var(--border); margin:18px 0; }
+
+/* ─── PASSAGE ─── */
+.passage-text { font-family:'Source Serif 4',serif; font-size:14.5px; line-height:1.95; color:var(--text); }
+.passage-text p { margin-bottom:1.1em; }
+
+/* paragraph color bars */
+.para-block { border-left:3px solid var(--border); padding-left:14px; margin-bottom:16px; transition:border-color 0.2s; }
+.para-block.p1 { border-color:var(--accent); }
+.para-block.p2 { border-color:var(--amber); }
+.para-block.p3 { border-color:var(--teal); }
+.para-block.p4 { border-color:var(--pink); }
+.para-tag { display:inline-flex; align-items:center; gap:5px; font-family:'Noto Sans JP',sans-serif; font-size:10px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; margin-bottom:6px; }
+.para-tag .dot { width:8px; height:8px; border-radius:50%; }
+
+/* sentence highlights */
+.hl { cursor:pointer; border-radius:3px; transition:background 0.15s; padding:1px 2px; display:inline; }
+.hl:hover { background:rgba(44,95,138,0.07); }
+.hl.lit-q27 { background:#dff0ff; box-shadow:0 0 0 1.5px var(--accent); border-radius:3px; }
+.hl.lit-q28 { background:var(--amber-light); box-shadow:0 0 0 1.5px var(--amber); border-radius:3px; }
+.hl.lit-q29 { background:var(--teal-light); box-shadow:0 0 0 1.5px var(--teal); border-radius:3px; }
+.hl.lit-q30 { background:var(--pink-light); box-shadow:0 0 0 1.5px var(--pink); border-radius:3px; }
+.hl.lit-q31 { background:var(--green-light); box-shadow:0 0 0 1.5px var(--green); border-radius:3px; }
+.hl.lit-key { background:#fff3cd; box-shadow:0 0 0 1.5px #e6c200; border-radius:3px; }
+
+/* ─── QUESTION LAYOUT ─── */
+.q-header { display:flex; align-items:flex-start; gap:14px; margin-bottom:18px; }
+.q-num-badge { width:34px; height:34px; border-radius:50%; color:#fff; font-size:14px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.q-stem { font-size:15px; font-weight:500; line-height:1.65; color:var(--text); font-family:'Source Serif 4',serif; padding-top:4px; }
+
+.decompose-box { background:var(--surface2); border-radius:var(--radius); padding:14px 16px; border:0.5px solid var(--border); margin-bottom:14px; font-size:14px; line-height:1.8; }
+.kw { padding:1px 7px; border-radius:4px; font-weight:700; font-size:13px; display:inline; }
+.kw-accent { background:var(--accent-light); color:var(--accent); }
+.kw-amber { background:var(--amber-light); color:var(--amber); }
+.kw-teal { background:var(--teal-light); color:var(--teal); }
+.kw-pink { background:var(--pink-light); color:var(--pink); }
+.kw-green { background:var(--green-light); color:var(--green); }
+
+.predict-box { background:#fffbea; border-left:3px solid #e6c200; border-radius:0 var(--radius) var(--radius) 0; padding:13px 15px; margin:11px 0; font-size:14px; line-height:1.75; }
+.predict-label { font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:#7a6600; margin-bottom:5px; }
+.evidence-box { background:var(--accent-light); border:0.5px solid #b5d4f4; border-radius:var(--radius); padding:13px 15px; margin:10px 0; font-size:14px; line-height:1.7; }
+.evidence-label { font-size:10px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent); margin-bottom:5px; }
+
+.choices-list { display:flex; flex-direction:column; gap:7px; margin-top:11px; }
+.choice-btn { padding:10px 14px; border:0.5px solid var(--border); border-radius:var(--radius); background:var(--surface); font-family:'Source Serif 4',serif; font-size:14px; color:var(--text); cursor:pointer; text-align:left; transition:all 0.18s; display:flex; align-items:flex-start; gap:10px; line-height:1.6; }
+.choice-btn:hover { background:var(--surface2); border-color:var(--accent); }
+.choice-btn.correct { background:var(--green-light); border-color:var(--teal); color:var(--teal); font-weight:700; }
+.choice-btn.wrong { background:var(--red-light); border-color:var(--red); color:var(--red); opacity:0.65; }
+.choice-btn.disabled { pointer-events:none; }
+.choice-num { font-size:10px; font-weight:700; color:var(--text3); flex-shrink:0; margin-top:4px; font-family:'Noto Sans JP',sans-serif; }
+
+.exp-box { border-radius:var(--radius); padding:15px 16px; margin-top:11px; font-size:14px; line-height:1.75; display:none; }
+.exp-box.show { display:block; }
+.exp-correct { background:var(--teal-light); border:0.5px solid #9fe1cb; color:var(--teal); }
+.exp-wrong { background:var(--red-light); border:0.5px solid #f09595; color:var(--red); }
+
+/* ─── KEY POINTS ─── */
+.key-point { display:flex; gap:11px; padding:13px 15px; border-radius:var(--radius); background:var(--surface2); border:0.5px solid var(--border); margin-bottom:9px; font-size:14px; align-items:flex-start; line-height:1.65; }
+.key-point-icon { width:20px; height:20px; border-radius:50%; background:var(--accent); color:#fff; font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:2px; }
+
+/* ─── PARA ACCORDION ─── */
+.para-accordion { border:0.5px solid var(--border); border-radius:var(--radius-lg); overflow:hidden; margin-bottom:13px; }
+.para-accordion-header { padding:12px 16px; display:flex; align-items:center; gap:10px; cursor:pointer; }
+.para-accordion-num { width:28px; height:28px; border-radius:50%; color:#fff; font-size:12px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.para-accordion-arrow { font-size:14px; transition:transform 0.2s; margin-left:auto; }
+.para-accordion-body { display:none; padding:16px; border-top:0.5px solid var(--border); }
+.para-summary-box { border-radius:8px; padding:11px 14px; margin-top:11px; }
+
+/* ─── SCORE ─── */
+.summary-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:11px; margin:14px 0; }
+.summary-card { background:var(--surface); border:0.5px solid var(--border); border-radius:var(--radius); padding:14px; text-align:center; }
+.sc-num { font-size:26px; font-weight:700; margin-bottom:2px; }
+.sc-label { font-size:10px; color:var(--text2); font-weight:500; }
+.score-correct { color:var(--teal); } .score-wrong { color:var(--red); } .score-total { color:var(--accent); }
+.master-badge { text-align:center; padding:22px; border-radius:var(--radius-lg); border:2px solid var(--teal); background:var(--teal-light); margin:14px 0; }
+.master-badge h2 { font-size:18px; font-weight:700; color:var(--teal); margin-bottom:4px; }
+
+/* ─── BUTTONS ─── */
+.step-actions { display:flex; justify-content:space-between; align-items:center; margin-top:22px; padding-top:18px; border-top:0.5px solid var(--border); }
+.btn-primary { display:inline-flex; align-items:center; gap:6px; padding:10px 20px; background:var(--accent); color:#fff; border:none; border-radius:var(--radius); font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:700; cursor:pointer; transition:background 0.2s,transform 0.1s; }
+.btn-primary:hover { background:#1e4a70; } .btn-primary:active { transform:scale(0.98); }
+.btn-secondary { display:inline-flex; align-items:center; gap:6px; padding:10px 20px; background:var(--surface); color:var(--text); border:0.5px solid var(--border); border-radius:var(--radius); font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:500; cursor:pointer; transition:background 0.2s; }
+.btn-secondary:hover { background:var(--surface2); }
+
+/* ─── LEGEND ─── */
+.legend { display:flex; gap:10px; flex-wrap:wrap; font-size:11px; font-weight:700; font-family:'Noto Sans JP',sans-serif; margin-top:12px; }
+.legend-item { display:flex; align-items:center; gap:4px; }
+.legend-swatch { width:13px; height:13px; border-radius:2px; border-width:1px; border-style:solid; display:inline-block; }
+
+@media(max-width:500px){.summary-grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:14px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"読む力"と"解く力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+    <div class="lesson-title">Stopping Advertisements</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 7</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:14%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 全体を読む</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 問題(27)</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 問題(28)</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 問題(29)</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 問題(30)</button>
+    <button class="step-btn" onclick="goStep(6)" id="nav6">STEP 6 問題(31) + 確認</button>
+    <button class="step-btn" onclick="goStep(7)" id="nav7">STEP 7 段落まとめ</button>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 1 — 全体を読む
+  ══════════════════════════════ -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div class="section-label">本文を読む — 段落ごとの役割を把握する</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:16px;">各文をクリックすると対応する問題がハイライト表示されます。段落ごとに「何を言っているか」を意識しながら読もう。</p>
+
+      <!-- P1 -->
+      <div class="para-block p1">
+        <div class="para-tag"><span class="dot" style="background:var(--accent)"></span><span style="color:var(--accent);">第1段落 — 問題(27)(31)の根拠</span></div>
+        <div class="passage-text">
+          <span class="hl" id="p1s1" onclick="litLine('p1s1','lit-key')">It is said that the earliest advertisement appeared in ancient Egypt.</span>
+          <span class="hl" id="p1s2" onclick="litLine('p1s2','lit-key')"> Later, after newspapers were invented, advertising spread as a way for businesses to share information about their products.</span>
+          <span class="hl" id="p1s3" onclick="litLine('p1s3','lit-q31')"> This tool not only encouraged people to buy goods and helped businesses make money but also caused problems with negative effects on everyday life.</span>
+          <span class="hl" id="p1s4" onclick="litLine('p1s4','lit-q27')"> The increase in advertisements has led to more advertisements with wrong information and has changed the look of cities by covering streets with many signs and billboards.</span>
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div class="para-block p2">
+        <div class="para-tag"><span class="dot" style="background:var(--amber)"></span><span style="color:var(--amber);">第2段落 — 問題(28)の根拠</span></div>
+        <div class="passage-text">
+          <span class="hl" id="p2s1" onclick="litLine('p2s1','lit-q28')">Different countries have set up rules stopping advertisements for some products and services to protect public health and well-being.</span>
+          <span class="hl" id="p2s2" onclick="litLine('p2s2','lit-key')"> For example, many countries have reduced or fully stopped tobacco advertising due to tobacco's harmful effects on health.</span>
+          <span class="hl" id="p2s3" onclick="litLine('p2s3','lit-key')"> Also, some countries, like Australia and the UK, have set strict laws to control the advertising of alcohol to young people.</span>
+          <span class="hl" id="p2s4" onclick="litLine('p2s4','lit-key')"> Some areas have removed advertisements for unhealthy food from schools.</span>
+          <span class="hl" id="p2s5" onclick="litLine('p2s5','lit-q28')"> In this way, advertising has been controlled strictly to protect people's health.</span>
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div class="para-block p3">
+        <div class="para-tag"><span class="dot" style="background:var(--teal)"></span><span style="color:var(--teal);">第3段落 — 問題(29)の根拠</span></div>
+        <div class="passage-text">
+          <span class="hl" id="p3s1" onclick="litLine('p3s1','lit-key')">In the early 2000s, São Paulo, Brazil, passed the Clean City Law.</span>
+          <span class="hl" id="p3s2" onclick="litLine('p3s2','lit-key')"> This law prohibited advertisements on taxis and buses, and outside store entrances.</span>
+          <span class="hl" id="p3s3" onclick="litLine('p3s3','lit-key')"> Many advertisements were removed, and it became possible for citizens to enjoy the beauty of buildings.</span>
+          <span class="hl" id="p3s4" onclick="litLine('p3s4','lit-q29')"> However, electronic signs, which had started to gain popularity, could be used even under the law.</span>
+          <span class="hl" id="p3s5" onclick="litLine('p3s5','lit-key')"> Later, in Grenoble, France, the decision was made to ban certain advertisements, including electronic signs.</span>
+          <span class="hl" id="p3s6" onclick="litLine('p3s6','lit-key')"> Some companies tried to introduce new electronic signs before the decision, but they could not.</span>
+          <span class="hl" id="p3s7" onclick="litLine('p3s7','lit-key')"> In Grenoble, after advertisements were removed, the spaces for the signs were planted with trees and plants.</span>
+        </div>
+      </div>
+
+      <!-- P4 -->
+      <div class="para-block p4">
+        <div class="para-tag"><span class="dot" style="background:var(--pink)"></span><span style="color:var(--pink);">第4段落 — 問題(30)の根拠</span></div>
+        <div class="passage-text">
+          <span class="hl" id="p4s1" onclick="litLine('p4s1','lit-key')">Advertisement bans are not welcomed everywhere.</span>
+          <span class="hl" id="p4s2" onclick="litLine('p4s2','lit-key')"> The local government of Vernier, Switzerland, has tried to ban outdoor advertisements.</span>
+          <span class="hl" id="p4s3" onclick="litLine('p4s3','lit-key')"> The government argued that the city's view was spoiled by too many advertisements and that it was necessary to remove them to bring back its beauty and improve the overall environment.</span>
+          <span class="hl" id="p4s4" onclick="litLine('p4s4','lit-q30')"> However, freedom of speech is emphasized in the country, and the right to advertise is seen as an important part of that freedom.</span>
+          <span class="hl" id="p4s5" onclick="litLine('p4s5','lit-q30')"> Some believe that banning advertisements would go against this right.</span>
+          <span class="hl" id="p4s6" onclick="litLine('p4s6','lit-key')"> Moreover, some businesses worry that they might lose customers if advertisements are banned.</span>
+        </div>
+      </div>
+
+      <div class="legend">
+        <div class="legend-item"><span class="legend-swatch" style="background:#dff0ff;border-color:var(--accent);"></span>問題(27)</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--amber-light);border-color:var(--amber);"></span>問題(28)</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--teal-light);border-color:var(--teal);"></span>問題(29)</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--pink-light);border-color:var(--pink);"></span>問題(30)</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:var(--green-light);border-color:var(--green);"></span>問題(31)</div>
+        <div class="legend-item"><span class="legend-swatch" style="background:#fff3cd;border-color:#e6c200;"></span>重要文</div>
+      </div>
+    </div>
+
+    <!-- 構造マップ -->
+    <div class="card">
+      <div class="section-label">4段落の論理マップ</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+        <div style="display:flex;gap:14px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0;">
+            <div style="width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 1px var(--accent);margin-top:4px;flex-shrink:0;"></div>
+            <div style="width:1.5px;flex:1;background:var(--border);margin:4px 0;min-height:20px;"></div>
+          </div>
+          <div style="padding-bottom:18px;flex:1;font-size:14px;line-height:1.65;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:3px;">第1段落 — 広告の歴史と問題提起</div>
+            広告は古代エジプト発祥 → 新聞の発明で普及 → ビジネスに有益な一方で<strong>負の側面も</strong>（誤情報・景観破壊）<br>
+            <span style="font-size:12px;color:var(--text3);">→ 文章全体の「広告には問題がある」というテーマを立ち上げる</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0;">
+            <div style="width:12px;height:12px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 1px var(--amber);margin-top:4px;flex-shrink:0;"></div>
+            <div style="width:1.5px;flex:1;background:var(--border);margin:4px 0;min-height:20px;"></div>
+          </div>
+          <div style="padding-bottom:18px;flex:1;font-size:14px;line-height:1.65;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-bottom:3px;">第2段落 — 健康保護のための規制（一般論）</div>
+            各国がタバコ・アルコール・不健康食品の広告を規制 → 目的は<strong>健康保護</strong><br>
+            <span style="font-size:12px;color:var(--text3);">→ 問題への「解決策A：健康系規制」を提示</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:stretch;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0;">
+            <div style="width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 1px var(--teal);margin-top:4px;flex-shrink:0;"></div>
+            <div style="width:1.5px;flex:1;background:var(--border);margin:4px 0;min-height:20px;"></div>
+          </div>
+          <div style="padding-bottom:18px;flex:1;font-size:14px;line-height:1.65;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:3px;">第3段落 — 景観保護のための規制（具体例：2都市）</div>
+            サンパウロ（Clean City Law）→ ただし電子看板は例外 → グルノーブルはより厳格（電子看板も禁止・跡地を緑化）<br>
+            <span style="font-size:12px;color:var(--text3);">→ 解決策Bの具体例。2都市の比較でグルノーブルの方が厳しいことを示す</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;">
+          <div style="display:flex;flex-direction:column;align-items:center;width:32px;flex-shrink:0;">
+            <div style="width:12px;height:12px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 1px var(--pink);margin-top:4px;flex-shrink:0;"></div>
+          </div>
+          <div style="flex:1;font-size:14px;line-height:1.65;">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--pink);margin-bottom:3px;">第4段落 — 規制への反論・反発</div>
+            スイス・ヴェルニエでは政府が禁止を試みたが → <strong>表現の自由・広告の権利</strong>を主張する声・経済的損失を恐れる声も<br>
+            <span style="font-size:12px;color:var(--text3);">→ 規制は一筋縄ではいかないという「対立構造」で文章が終わる</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">長文読解の3つの鉄則</div>
+      <div class="key-point"><div class="key-point-icon">1</div><div><strong>問題が聞いていることを特定してから本文を探す</strong><br><span style="font-size:13px;color:var(--text2);">問題文のキーワードを本文から見つけ、その周辺に答えがある。段落ごとに「どのトピックか」を把握しておくと速くなる。</span></div></div>
+      <div class="key-point"><div class="key-point-icon">2</div><div><strong>正解は必ず「言い換え」になっている</strong><br><span style="font-size:13px;color:var(--text2);">本文と全く同じ言葉の選択肢は罠。本文の内容を別の言葉で正確に言い換えているものが正解。</span></div></div>
+      <div class="key-point"><div class="key-point-icon">3</div><div><strong>「本文に書いていない」「逆のことが書いてある」は即×</strong><br><span style="font-size:13px;color:var(--text2);">常識や推測で選ばない。必ず本文の1文を「根拠の文」として指差せること。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — 問題(27) →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 2 — Q27
+  ══════════════════════════════ -->
+  <div class="panel" id="panel2">
+    <div class="card">
+      <div class="section-label">問題(27) — 根拠を本文に探す</div>
+      <div class="q-header">
+        <div class="q-num-badge" style="background:var(--accent);">27</div>
+        <div class="q-stem">With an increase in advertisements in people's daily lives,</div>
+      </div>
+      <div class="decompose-box">
+        <div class="section-label">問題文を分解する</div>
+        <span class="kw kw-accent">With an increase in advertisements</span> — 広告が増えることで<br>
+        <span style="font-size:12px;color:var(--text3);display:block;margin-top:6px;">→ 第1段落の最後の文「The increase in advertisements has led to...」が直接の根拠</span>
+      </div>
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第1段落最終文：<strong>"The increase in advertisements has led to more advertisements with wrong information and has changed the look of cities by covering streets with many signs and billboards."</strong><br><br>
+        → 広告が増えた結果として「①誤情報が多くなった」「②街の景観が変わった」と書いてある。<br>
+        → 選択肢でこれを言い換えているものはどれ？<br>
+        → <strong>「誤情報の広告に接しやすくなった」</strong>が正解の方向
+      </div>
+      <div class="evidence-box">
+        <div class="evidence-label">根拠の文</div>
+        "led to more advertisements with <strong>wrong information</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">wrong information → incorrect information という言い換えに気づく</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <div class="choices-list" id="choices27">
+        <button class="choice-btn" onclick="checkAnswer(27,1,true)"><span class="choice-num">1</span><span>people have become more likely to come across advertisements with incorrect information.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(27,2,false)"><span class="choice-num">2</span><span>stores and businesses put more effort into creating better advertisements than others.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(27,3,false)"><span class="choice-num">3</span><span>the importance of advertising in ancient Egypt has become the target of study.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(27,4,false)"><span class="choice-num">4</span><span>even ordinary people have begun to make their own advertisements for different purposes.</span></button>
+      </div>
+      <div class="exp-box exp-correct" id="exp27">
+        <strong>正解：1 "come across advertisements with incorrect information"</strong><br><br>
+        本文：<em>"led to more advertisements with wrong information"</em><br>
+        正解：<em>"more likely to come across advertisements with incorrect information"</em><br><br>
+        <strong>言い換えの対応：</strong><br>
+        　wrong information → incorrect information（同義語の言い換え）<br>
+        　has led to more → more likely to come across（増えた結果、接触しやすくなった）<br><br>
+        <strong>なぜ他は×？</strong><br>
+        2 → 「より良い広告を作る努力」→ 本文にそのような記述なし。<br>
+        3 → 「古代エジプトの広告の重要性が研究対象に」→ 本文にそのような記述なし。<br>
+        4 → 「一般人が自分で広告を作り始めた」→ 本文にそのような記述なし。
+      </div>
+      <div class="exp-box exp-wrong" id="wrong27">
+        惜しい！第1段落の最後の文に戻ろう。<br>
+        "The increase in advertisements has led to <strong>more advertisements with wrong information</strong>"<br>
+        → これを言い換えた選択肢はどれ？
+      </div>
+    </div>
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — 問題(28) →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 3 — Q28
+  ══════════════════════════════ -->
+  <div class="panel" id="panel3">
+    <div class="card">
+      <div class="section-label">問題(28) — 根拠を本文に探す</div>
+      <div class="q-header">
+        <div class="q-num-badge" style="background:var(--amber);">28</div>
+        <div class="q-stem">Why have some countries decided to control certain types of advertisements?</div>
+      </div>
+      <div class="decompose-box">
+        <div class="section-label">問題文を分解する</div>
+        <span class="kw kw-amber">Why</span> — 理由を問う<br>
+        <span class="kw kw-amber">control certain types of advertisements</span> — 特定の広告を規制する理由<br>
+        <span style="font-size:12px;color:var(--text3);display:block;margin-top:6px;">→ 第2段落のトピックセンテンス（最初の文）に理由が直接書いてある</span>
+      </div>
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第2段落第1文：<strong>"Different countries have set up rules stopping advertisements for some products and services <u>to protect public health and well-being</u>."</strong><br><br>
+        → 理由は明確に「<strong>公衆の健康と幸福を守るため</strong>」<br>
+        → 段落の最後も "controlled strictly to <strong>protect people's health</strong>" で締めている<br>
+        → 正解の方向は「健康を守るため」
+      </div>
+      <div class="evidence-box">
+        <div class="evidence-label">根拠の文（2つが呼応している）</div>
+        第1文："to protect <strong>public health and well-being</strong>"<br>
+        最終文："controlled strictly to protect <strong>people's health</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">段落の冒頭と末尾が同じ内容で「サンドイッチ構造」になっている</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <div class="choices-list" id="choices28">
+        <button class="choice-btn" onclick="checkAnswer(28,1,false)"><span class="choice-num">1</span><span>To encourage young people to cook more often at home.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(28,2,false)"><span class="choice-num">2</span><span>To promote products that are good for the environment.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(28,3,true)"><span class="choice-num">3</span><span>To protect people's health from being harmed.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(28,4,false)"><span class="choice-num">4</span><span>To increase profits for businesses selling healthier products.</span></button>
+      </div>
+      <div class="exp-box exp-correct" id="exp28">
+        <strong>正解：3 "To protect people's health from being harmed."</strong><br><br>
+        本文：<em>"to protect public health and well-being"</em><br>
+        正解：<em>"To protect people's health from being harmed"</em><br><br>
+        本文の "harmful effects on health" → "from being harmed" という言い換えもポイント。<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 → 「家庭料理を増やす」→ 本文に記述なし。学校での不健康食品広告禁止の話はあるが目的が違う。<br>
+        2 → 「環境に良い商品を宣伝」→ 本文に記述なし。環境は出てこない。<br>
+        4 → 「健康食品業者の利益を増やす」→ 本文にそのような記述なし。企業の利益は話題にない。
+      </div>
+      <div class="exp-box exp-wrong" id="wrong28">
+        惜しい！第2段落の最初の文に戻ろう。<br>
+        "rules stopping advertisements ... <strong>to protect public health and well-being</strong>"<br>
+        → この目的を言い換えた選択肢はどれ？
+      </div>
+    </div>
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — 問題(29) →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 4 — Q29
+  ══════════════════════════════ -->
+  <div class="panel" id="panel4">
+    <div class="card">
+      <div class="section-label">問題(29) — 根拠を本文に探す</div>
+      <div class="q-header">
+        <div class="q-num-badge" style="background:var(--teal);">29</div>
+        <div class="q-stem">Under São Paulo's Clean City Law, electronic signs were</div>
+      </div>
+      <div class="decompose-box">
+        <div class="section-label">問題文を分解する</div>
+        <span class="kw kw-teal">Under São Paulo's Clean City Law</span> — サンパウロの法律の下で<br>
+        <span class="kw kw-teal">electronic signs were ___</span> — 電子看板はどうなった？<br>
+        <span style="font-size:12px;color:var(--text3);display:block;margin-top:6px;">→ 第3段落の中でサンパウロ＋電子看板に言及している箇所を探す</span>
+      </div>
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第3段落：<strong>"However, electronic signs, which had started to gain popularity, <u>could be used even under the law</u>."</strong><br><br>
+        → サンパウロの法律では、電子看板は禁止されず<strong>使用が許可されていた</strong><br>
+        → つまり「法律の規制対象にならなかった（法律の的にならなかった）」<br>
+        → 正解の方向：「法律の対象にならずに残された」
+      </div>
+      <div class="evidence-box">
+        <div class="evidence-label">根拠の文（However に注目）</div>
+        "However, electronic signs ... <strong>could be used even under the law</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">However = 他の広告は禁止されたが、電子看板は違った（対比構造）</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <div class="choices-list" id="choices29">
+        <button class="choice-btn" onclick="checkAnswer(29,1,false)"><span class="choice-num">1</span><span>given a few years before they were completely banned.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(29,2,false)"><span class="choice-num">2</span><span>discussed more often than any other topic in advertisements.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(29,3,false)"><span class="choice-num">3</span><span>criticized by government officials more.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(29,4,true)"><span class="choice-num">4</span><span>left without becoming the target of the law.</span></button>
+      </div>
+      <div class="exp-box exp-correct" id="exp29">
+        <strong>正解：4 "left without becoming the target of the law."</strong><br><br>
+        本文：<em>"could be used even under the law"</em><br>
+        正解：<em>"left without becoming the target of the law"</em><br><br>
+        <strong>言い換えの対応：</strong><br>
+        　could be used even under the law → left without becoming the target of the law<br>
+        　（法律の下でも使えた＝法律の規制対象にならなかった）<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 → 「数年後に完全禁止された」→ サンパウロでは禁止されていない。グルノーブルで禁止されたのと混同しやすい。<br>
+        2 → 「広告の中で最も頻繁に議論された話題」→ 本文に記述なし。<br>
+        3 → 「政府関係者により批判された」→ 本文に記述なし。
+      </div>
+      <div class="exp-box exp-wrong" id="wrong29">
+        惜しい！サンパウロの箇所に戻ろう。<br>
+        "<strong>However</strong>, electronic signs ... <strong>could be used even under the law</strong>"<br>
+        → 「法律の下でも使えた」を言い換えた選択肢はどれ？
+      </div>
+    </div>
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — 問題(30) →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 5 — Q30
+  ══════════════════════════════ -->
+  <div class="panel" id="panel5">
+    <div class="card">
+      <div class="section-label">問題(30) — 根拠を本文に探す</div>
+      <div class="q-header">
+        <div class="q-num-badge" style="background:var(--pink);">30</div>
+        <div class="q-stem">In Switzerland, some people think that</div>
+      </div>
+      <div class="decompose-box">
+        <div class="section-label">問題文を分解する</div>
+        <span class="kw kw-pink">In Switzerland</span> — スイスでの話<br>
+        <span class="kw kw-pink">some people think that ___</span> — 一部の人たちの考えは何か<br>
+        <span style="font-size:12px;color:var(--text3);display:block;margin-top:6px;">→ 第4段落でスイスの人々の意見が書かれている箇所を探す</span>
+      </div>
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第4段落：<strong>"freedom of speech is emphasized in the country, and the right to advertise is seen as an important part of that freedom."</strong><br>
+        続いて：<strong>"Some believe that banning advertisements would go against this right."</strong><br><br>
+        → スイスでは「広告する権利＝表現の自由の一部」と考えられており、<strong>禁止はその権利に反する</strong>と思う人がいる<br>
+        → 正解の方向：「広告禁止は表現の自由・広告の権利に反する」
+      </div>
+      <div class="evidence-box">
+        <div class="evidence-label">根拠の文（2文をセットで読む）</div>
+        "the right to advertise is seen as an important part of <strong>freedom of speech</strong>"<br>
+        + "banning advertisements would <strong>go against this right</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">→ 選択肢1「banning advertisements would be against the right to advertise and freedom of speech」はこの2文を1文にまとめたもの</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <div class="choices-list" id="choices30">
+        <button class="choice-btn" onclick="checkAnswer(30,1,true)"><span class="choice-num">1</span><span>banning advertisements would be against the right to advertise and freedom of speech.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(30,2,false)"><span class="choice-num">2</span><span>removing advertisements would improve the economy and bring more tourists.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(30,3,false)"><span class="choice-num">3</span><span>fewer advertisements will lead to a decrease in the number of violent crimes.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(30,4,false)"><span class="choice-num">4</span><span>it will be easier for the cities to invite new businesses by banning advertisements.</span></button>
+      </div>
+      <div class="exp-box exp-correct" id="exp30">
+        <strong>正解：1 "banning advertisements would be against the right to advertise and freedom of speech."</strong><br><br>
+        本文の2文を1文に統合した見事な言い換え。<br>
+        "go against this right" → "be against the right to advertise and freedom of speech"<br><br>
+        <strong>なぜ他は×？</strong><br>
+        2 → 「観光客増加・経済改善」→ 本文に記述なし。スイスの文脈でこの話は出てこない。<br>
+        3 → 「暴力犯罪の減少」→ 本文に記述なし。完全に本文外の内容。<br>
+        4 → 「新しいビジネスを招きやすくなる」→ 本文では逆に「広告禁止でビジネスが顧客を失うかもしれない」と書いてある。
+      </div>
+      <div class="exp-box exp-wrong" id="wrong30">
+        惜しい！第4段落のスイスの箇所に戻ろう。<br>
+        "the right to advertise is seen as part of <strong>freedom of speech</strong>"<br>
+        "banning advertisements would <strong>go against this right</strong>"<br>
+        → この2文を1文にまとめた選択肢はどれ？
+      </div>
+    </div>
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(6)">STEP 6 へ — 問題(31) →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 6 — Q31 + SCORE
+  ══════════════════════════════ -->
+  <div class="panel" id="panel6">
+    <div class="card">
+      <div class="section-label">問題(31) — 根拠を本文に探す</div>
+      <div class="q-header">
+        <div class="q-num-badge" style="background:var(--green);">31</div>
+        <div class="q-stem">Which of the following statements is true?</div>
+      </div>
+      <div class="decompose-box">
+        <div class="section-label">問題文を分解する</div>
+        <span class="kw kw-green">Which is true?</span> — 正しい記述はどれか（内容一致問題）<br>
+        <span style="font-size:12px;color:var(--text3);display:block;margin-top:6px;">→ 選択肢を1つずつ本文に照らし合わせる。本文に書いてあること＝○、書いていないこと・逆のこと＝×</span>
+      </div>
+      <div class="predict-box">
+        <div class="predict-label">各選択肢を本文で検証する手順</div>
+        1 → 「テレビが20世紀に広告放映のために登場した」→ 本文に「テレビ」は一切出てこない → <strong>×</strong><br><br>
+        2 → 「広告はビジネスが商品情報を共有し利益を得るのに役立つ」→ 第1段落："advertising spread as a way for businesses to share information about their products" + "helped businesses make money" → <strong>○ 本文に書いてある</strong><br><br>
+        3 → 「サンパウロはグルノーブルの電子看板禁止の方法に倣った」→ 時系列が逆。サンパウロが先。グルノーブルが後に「より厳格に」した → <strong>×</strong><br><br>
+        4 → 「表現の自由はスイスで他のどの権利よりも最重要」→ 本文は "freedom of speech is emphasized" とあるが「最重要・他を上回る」とは書いていない → <strong>×（言い過ぎ）</strong>
+      </div>
+      <div class="evidence-box">
+        <div class="evidence-label">正解の根拠</div>
+        "advertising spread as a way for businesses to <strong>share information about their products</strong>"<br>
+        + "not only encouraged people to buy goods and <strong>helped businesses make money</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">この2点を合わせると「広告＝情報共有＋利益」という正解の内容になる</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <div class="choices-list" id="choices31">
+        <button class="choice-btn" onclick="checkAnswer(31,1,false)"><span class="choice-num">1</span><span>Television appeared in the twentieth century mainly to broadcast advertisements.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(31,2,true)"><span class="choice-num">2</span><span>Advertisements can help businesses share information about their products and make a profit.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(31,3,false)"><span class="choice-num">3</span><span>São Paulo followed Grenoble's successful way to ban electronic advertisements.</span></button>
+        <button class="choice-btn" onclick="checkAnswer(31,4,false)"><span class="choice-num">4</span><span>Freedom of speech is the most important right above all other rights in Switzerland.</span></button>
+      </div>
+      <div class="exp-box exp-correct" id="exp31">
+        <strong>正解：2 "Advertisements can help businesses share information about their products and make a profit."</strong><br><br>
+        本文第1段落を2つの情報に分解して合わせた選択肢：<br>
+        ① "share information about their products" → そのまま<br>
+        ② "helped businesses make money" → make a profit（利益を得る）という言い換え<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 → 「テレビ」は本文に一切登場しない。完全に本文外。<br>
+        3 → 順序が逆。サンパウロの法律（2000年代初頭）の方が先で、グルノーブルが後に続いた。<br>
+        4 → 本文は "emphasized（強調されている）" であり「最も重要で他を上回る」とは言っていない。言い過ぎ。
+      </div>
+      <div class="exp-box exp-wrong" id="wrong31">
+        惜しい！各選択肢を本文で1つずつ確認しよう。<br>
+        「本文に書いていること」のみが正解。<br>
+        テレビ・時系列・「最重要」という言い過ぎ表現に注目。
+      </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="card" id="result-card" style="display:none;">
+      <div class="section-label">特訓結果</div>
+      <div class="summary-grid">
+        <div class="summary-card"><div class="sc-num score-correct" id="correct-count">0</div><div class="sc-label">正解</div></div>
+        <div class="summary-card"><div class="sc-num score-wrong" id="wrong-count">0</div><div class="sc-label">不正解</div></div>
+        <div class="summary-card"><div class="sc-num score-total">5</div><div class="sc-label">合計問題数</div></div>
+      </div>
+      <div class="master-badge" id="master-badge" style="display:none;">
+        <div style="font-size:36px;margin-bottom:8px;">★</div>
+        <h2>根拠読解マスター！</h2>
+        <p style="font-size:13px;color:var(--text2);margin-top:4px;">5問全問正解。本文の根拠を指差しながら解けた証拠です。</p>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(5)">← STEP 5 に戻る</button>
+      <button class="btn-primary" onclick="goStep(7)">STEP 7 へ — 段落まとめ →</button>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       STEP 7 — 段落まとめ
+  ══════════════════════════════ -->
+  <div class="panel" id="panel7">
+
+    <div class="card">
+      <div class="section-label">パラグラフ読解 — 各段落の役割を確認する</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:18px;">4段落それぞれの「核心」を1文で言えるようになることが目標。クリックして展開しよう。</p>
+
+      <!-- P1 accordion -->
+      <div class="para-accordion">
+        <div class="para-accordion-header" style="background:var(--accent-light);" onclick="togglePara('pa1')">
+          <div class="para-accordion-num" style="background:var(--accent);">P1</div>
+          <div style="font-size:13px;font-weight:700;color:var(--accent);">第1段落 — 広告の歴史と負の側面</div>
+          <div class="para-accordion-arrow" id="pa1-arrow" style="color:var(--accent);">▼</div>
+        </div>
+        <div id="pa1-body" class="para-accordion-body">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:13px;margin-bottom:12px;border:0.5px solid var(--border);">It is said that the earliest advertisement appeared in ancient Egypt. Later, after newspapers were invented, advertising spread as a way for businesses to share information about their products. This tool not only encouraged people to buy goods and helped businesses make money but also caused problems with negative effects on everyday life. The increase in advertisements has led to more advertisements with wrong information and has changed the look of cities by covering streets with many signs and billboards.</div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--accent-light);color:var(--accent);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">歴史</span><span>古代エジプト発祥 → 新聞発明後に普及</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--green-light);color:var(--green);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">メリット</span><span>商品情報の共有・ビジネスの収益向上</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--red-light);color:var(--red);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">デメリット</span><span>誤情報の増加・景観の悪化（問題27の根拠）</span></div>
+          </div>
+          <div class="para-summary-box" style="background:var(--accent-light);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#0c447c;line-height:1.7;">広告は古代から発展し、ビジネスに有益な一方、誤情報の増加や景観悪化という負の側面も生んでいる。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2 accordion -->
+      <div class="para-accordion">
+        <div class="para-accordion-header" style="background:var(--amber-light);" onclick="togglePara('pa2')">
+          <div class="para-accordion-num" style="background:var(--amber);">P2</div>
+          <div style="font-size:13px;font-weight:700;color:var(--amber);">第2段落 — 健康保護のための広告規制</div>
+          <div class="para-accordion-arrow" id="pa2-arrow" style="color:var(--amber);">▼</div>
+        </div>
+        <div id="pa2-body" class="para-accordion-body">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:13px;margin-bottom:12px;border:0.5px solid var(--border);">Different countries have set up rules stopping advertisements for some products and services to protect public health and well-being. For example, many countries have reduced or fully stopped tobacco advertising due to tobacco's harmful effects on health. Also, some countries, like Australia and the UK, have set strict laws to control the advertising of alcohol to young people. Some areas have removed advertisements for unhealthy food from schools. In this way, advertising has been controlled strictly to protect people's health.</div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">目的</span><span>公衆衛生と健康の保護（問題28の根拠）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--surface2);color:var(--text2);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;border:0.5px solid var(--border);">具体例</span><span>タバコ広告禁止 / アルコール規制（豪・英）/ 学校での不健康食品広告禁止</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">構造</span><span>冒頭と末尾が「健康保護」で対応するサンドイッチ構造</span></div>
+          </div>
+          <div class="para-summary-box" style="background:var(--amber-light);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#633806;line-height:1.7;">各国がタバコ・アルコール・不健康食品の広告を規制しているのは、人々の健康を守るためである。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 accordion -->
+      <div class="para-accordion">
+        <div class="para-accordion-header" style="background:var(--teal-light);" onclick="togglePara('pa3')">
+          <div class="para-accordion-num" style="background:var(--teal);">P3</div>
+          <div style="font-size:13px;font-weight:700;color:var(--teal);">第3段落 — 景観保護のための規制（2都市の比較）</div>
+          <div class="para-accordion-arrow" id="pa3-arrow" style="color:var(--teal);">▼</div>
+        </div>
+        <div id="pa3-body" class="para-accordion-body">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:13px;margin-bottom:12px;border:0.5px solid var(--border);">In the early 2000s, São Paulo, Brazil, passed the Clean City Law. This law prohibited advertisements on taxis and buses, and outside store entrances. Many advertisements were removed, and it became possible for citizens to enjoy the beauty of buildings. However, electronic signs, which had started to gain popularity, could be used even under the law. Later, in Grenoble, France, the decision was made to ban certain advertisements, including electronic signs. Some companies tried to introduce new electronic signs before the decision, but they could not. In Grenoble, after advertisements were removed, the spaces for the signs were planted with trees and plants.</div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">サンパウロ</span><span>Clean City Law：広告禁止 → ただし電子看板は例外（問題29の根拠）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">グルノーブル</span><span>電子看板も含めて禁止、撤去跡地を緑化 → より厳格</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">比較</span><span>時系列：サンパウロが先 → グルノーブルが後（問題31の罠対策）</span></div>
+          </div>
+          <div class="para-summary-box" style="background:var(--teal-light);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#085041;line-height:1.7;">サンパウロは電子看板を除いて広告を禁止し、後にグルノーブルはそれより厳格に電子看板も禁止して跡地を緑化した。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P4 accordion -->
+      <div class="para-accordion">
+        <div class="para-accordion-header" style="background:var(--pink-light);" onclick="togglePara('pa4')">
+          <div class="para-accordion-num" style="background:var(--pink);">P4</div>
+          <div style="font-size:13px;font-weight:700;color:var(--pink);">第4段落 — 規制への反対意見</div>
+          <div class="para-accordion-arrow" id="pa4-arrow" style="color:var(--pink);">▼</div>
+        </div>
+        <div id="pa4-body" class="para-accordion-body">
+          <div class="passage-text" style="font-size:13px;background:var(--surface2);border-radius:8px;padding:13px;margin-bottom:12px;border:0.5px solid var(--border);">Advertisement bans are not welcomed everywhere. The local government of Vernier, Switzerland, has tried to ban outdoor advertisements. The government argued that the city's view was spoiled by too many advertisements and that it was necessary to remove them to bring back its beauty and improve the overall environment. However, freedom of speech is emphasized in the country, and the right to advertise is seen as an important part of that freedom. Some believe that banning advertisements would go against this right. Moreover, some businesses worry that they might lose customers if advertisements are banned.</div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--green-light);color:var(--green);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">政府の主張</span><span>景観が損なわれている → 禁止して美観・環境を改善したい</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--pink-light);color:var(--pink);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">反対意見①</span><span>広告の権利＝表現の自由の一部。禁止はその権利に反する（問題30の根拠）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--pink-light);color:var(--pink);padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;flex-shrink:0;margin-top:2px;">反対意見②</span><span>企業が顧客を失うかもしれないという経済的懸念</span></div>
+          </div>
+          <div class="para-summary-box" style="background:var(--pink-light);">
+            <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--pink);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#72243e;line-height:1.7;">スイスでは政府が景観改善のため広告禁止を試みるが、表現の自由や経済的損失を懸念する反対意見もある。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- まとめ練習 -->
+    <div class="card">
+      <div class="section-label">文章全体のまとめを自分で作る</div>
+      <p style="font-size:12px;color:var(--text2);margin-bottom:14px;">4段落の要点を繋げて「この文章が言いたいこと」を3〜4文でまとめよう。書いてからモデル解答を確認。</p>
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:14px;margin-bottom:12px;border:0.5px solid var(--border);">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="font-size:14px;font-weight:700;color:var(--accent);flex-shrink:0;min-width:22px;">P1</span><input type="text" placeholder="第1段落の要点..." style="flex:1;font-size:13px;padding:7px 11px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;"></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="font-size:14px;font-weight:700;color:var(--amber);flex-shrink:0;min-width:22px;">P2</span><input type="text" placeholder="第2段落の要点..." style="flex:1;font-size:13px;padding:7px 11px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;"></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="font-size:14px;font-weight:700;color:var(--teal);flex-shrink:0;min-width:22px;">P3</span><input type="text" placeholder="第3段落の要点..." style="flex:1;font-size:13px;padding:7px 11px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;"></div>
+          <div style="display:flex;gap:10px;align-items:flex-start;"><span style="font-size:14px;font-weight:700;color:var(--pink);flex-shrink:0;min-width:22px;">P4</span><input type="text" placeholder="第4段落の要点..." style="flex:1;font-size:13px;padding:7px 11px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;"></div>
+        </div>
+      </div>
+      <button class="btn-secondary" onclick="var e=document.getElementById('model-ans');e.style.display=e.style.display==='none'?'block':'none';" style="margin-bottom:12px;">モデル解答を見る</button>
+      <div id="model-ans" style="display:none;">
+        <div style="background:var(--green-light);border:0.5px solid #c0dd97;border-radius:var(--radius);padding:14px;margin-bottom:11px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:8px;">モデル解答（段落ごと）</div>
+          <div style="font-size:13px;line-height:1.9;color:#27500a;">
+            <div><strong>P1：</strong>広告は古代から発展し、ビジネスに有益な反面、誤情報の増加や景観悪化という問題も生じている。</div>
+            <div style="margin-top:5px;"><strong>P2：</strong>各国がタバコ・アルコール・不健康食品の広告を規制しているのは、公衆衛生と健康を守るためである。</div>
+            <div style="margin-top:5px;"><strong>P3：</strong>サンパウロは電子看板を除いて広告を禁止し、後にグルノーブルはより厳しく電子看板も禁止して跡地を緑化した。</div>
+            <div style="margin-top:5px;"><strong>P4：</strong>スイスでは景観改善のため広告禁止が試みられたが、表現の自由や経済的損失を理由に反対意見もある。</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-light);border:0.5px solid #b5d4f4;border-radius:var(--radius);padding:14px;margin-bottom:11px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;">文章全体の要約（3文）</div>
+          <div style="font-size:14px;line-height:1.85;color:#0c447c;">広告は古代から普及し、ビジネスに貢献してきたが、誤情報や景観破壊などの問題も引き起こした。そのため各国は健康保護や景観改善を目的として広告規制を設け、サンパウロやグルノーブルのような成功例も生まれた。一方で、表現の自由や経済的損失を懸念する反対意見もあり、広告規制はどこでも歓迎されるわけではない。</div>
+        </div>
+        <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius);padding:14px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:5px;">筆者のメインメッセージ（1文）</div>
+          <div style="font-size:14px;font-weight:700;line-height:1.7;color:#3c3489;">広告規制は健康や景観を守る一方で表現の自由や経済と衝突するという複雑な問題である。</div>
+          <div style="margin-top:7px;font-size:12px;color:#534ab7;line-height:1.65;">→ タイトル "Stopping Advertisements"（広告を止めること）はポジティブにも聞こえるが、第4段落で "not welcomed everywhere" と締めることで、筆者は一方的な賛否を示さず「複雑な問題」として描いている。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 読み方まとめ -->
+    <div class="card">
+      <div class="section-label">この問題で練習した「解き方」のまとめ</div>
+      <div class="key-point"><div class="key-point-icon">1</div><div><strong>段落ごとにトピックを把握してから解く</strong><br><span style="font-size:13px;color:var(--text2);">P1=歴史・問題提起、P2=健康規制、P3=景観規制の2都市、P4=反対意見。段落の役割を知っていると答えの場所がすぐわかる。</span></div></div>
+      <div class="key-point"><div class="key-point-icon">2</div><div><strong>However / Also / For example に反応する</strong><br><span style="font-size:13px;color:var(--text2);">However → 前と逆の内容。For example → 前の文の具体化。これらは「根拠の文」のすぐそばにあることが多い。</span></div></div>
+      <div class="key-point"><div class="key-point-icon">3</div><div><strong>「言い過ぎ」の選択肢は×</strong><br><span style="font-size:13px;color:var(--text2);">本文が "emphasized（強調されている）" と言っているのに、選択肢が "the most important above all" と言っていたら×。本文の強さを超えた主張は誤り。</span></div></div>
+      <div class="key-point"><div class="key-point-icon">4</div><div><strong>時系列の正確な把握（問題29・31の教訓）</strong><br><span style="font-size:13px;color:var(--text2);">サンパウロが先、グルノーブルが後。時系列を入れ替えた選択肢は定番の罠。"Later" などの時間表現を見逃さない。</span></div></div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(6)">← STEP 6 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var answers = {27:null,28:null,29:null,30:null,31:null};
+var stepDone = {1:false,2:false,3:false,4:false,5:false,6:false,7:false};
+
+function goStep(n){
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.getElementById('panel'+n).classList.add('active');
+  document.querySelectorAll('.step-btn').forEach(function(b,i){
+    b.classList.remove('active');
+    if(stepDone[i+1]) b.classList.add('done');
+  });
+  var nb=document.getElementById('nav'+n);
+  if(nb){nb.classList.add('active');nb.classList.remove('done');}
+  var pct=Math.round((n/7)*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-text').textContent='STEP '+n+' / 7';
+  window.scrollTo(0,0);
+}
+
+function litLine(id,cls){
+  var el=document.getElementById(id);
+  if(!el) return;
+  var classes=['lit-key','lit-q27','lit-q28','lit-q29','lit-q30','lit-q31'];
+  if(el.classList.contains(cls)){el.classList.remove(cls);}
+  else{classes.forEach(function(c){el.classList.remove(c);});el.classList.add(cls);}
+}
+
+function checkAnswer(num,choice,isCorrect){
+  var container=document.getElementById('choices'+num);
+  if(!container) return;
+  var btns=container.querySelectorAll('.choice-btn');
+  btns.forEach(function(b){b.classList.add('disabled');});
+  btns[choice-1].classList.add(isCorrect?'correct':'wrong');
+  if(isCorrect){
+    var exp=document.getElementById('exp'+num);
+    var wrg=document.getElementById('wrong'+num);
+    if(exp) exp.classList.add('show');
+    if(wrg) wrg.classList.remove('show');
+    answers[num]='correct';
+    if(num===31) showResult();
+  } else {
+    var exp2=document.getElementById('exp'+num);
+    var wrg2=document.getElementById('wrong'+num);
+    if(exp2) exp2.classList.remove('show');
+    if(wrg2) wrg2.classList.add('show');
+    answers[num]='wrong';
+    btns.forEach(function(b){b.classList.remove('disabled');});
+    btns[choice-1].classList.add('wrong');
+  }
+}
+
+function showResult(){
+  var correct=0,wrong=0;
+  Object.keys(answers).forEach(function(k){
+    if(answers[k]==='correct') correct++;
+    else if(answers[k]==='wrong') wrong++;
+  });
+  var card=document.getElementById('result-card');
+  if(card) card.style.display='block';
+  document.getElementById('correct-count').textContent=correct;
+  document.getElementById('wrong-count').textContent=wrong;
+  if(correct===5){var b=document.getElementById('master-badge');if(b) b.style.display='block';}
+  stepDone[6]=true;
+  var nb6=document.getElementById('nav6');
+  if(nb6) nb6.classList.add('done');
+}
+
+function togglePara(id){
+  var body=document.getElementById(id+'-body');
+  var arrow=document.getElementById(id+'-arrow');
+  if(!body) return;
+  if(body.style.display==='none'||body.style.display===''){
+    body.style.display='block';
+    if(arrow) arrow.style.transform='rotate(180deg)';
+  } else {
+    body.style.display='none';
+    if(arrow) arrow.style.transform='rotate(0deg)';
+  }
+}
+</script>
+</body>
+</html>

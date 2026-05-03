@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語読解特訓｜オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f7f5f0; --surface: #ffffff; --surface2: #f0ede6;
+    --border: #ddd9d0; --text: #1a1814; --text2: #6b6760; --text3: #9b9892;
+    --accent: #2c5f8a; --accent-light: #e8f1f8;
+    --teal: #0f6e56; --teal-light: #e1f5ee;
+    --amber: #854f0b; --amber-light: #faeeda;
+    --coral: #993c1d; --coral-light: #faece7;
+    --purple: #534ab7; --purple-light: #eeedfe;
+    --green: #3b6d11; --green-light: #eaf3de;
+    --red: #a32d2d; --red-light: #fcebeb;
+    --radius: 10px; --radius-lg: 16px;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 15px; min-height: 100vh; }
+
+  .page-header {
+    background: var(--surface); border-bottom: 0.5px solid var(--border);
+    padding: 16px 24px; display: flex; align-items: center;
+    justify-content: space-between; gap: 16px; flex-wrap: wrap;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .brand-logo { width: 40px; height: 40px; border-radius: 10px; background: var(--accent); color: #fff; font-size: 20px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .brand-name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .brand-tagline { font-size: 11px; color: var(--text3); margin-top: 2px; letter-spacing: 0.03em; }
+  .lesson-title { font-size: 13px; font-weight: 700; color: var(--text); text-align: right; font-family: 'Source Serif 4', serif; }
+  .progress-bar-wrap { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--text2); margin-top: 4px; }
+  .progress-bar { width: 100px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--accent); border-radius: 2px; transition: width 0.4s ease; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 28px 20px 80px; }
+
+  .step-nav { display: flex; gap: 6px; margin-bottom: 24px; flex-wrap: wrap; }
+  .step-btn { padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--border); background: var(--surface); font-size: 12px; font-family: 'Noto Sans JP', sans-serif; color: var(--text2); cursor: pointer; transition: all 0.2s; font-weight: 500; }
+  .step-btn:hover { background: var(--surface2); color: var(--text); }
+  .step-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .step-btn.done { background: var(--green-light); color: var(--green); border-color: #c0dd97; }
+
+  .panel { display: none; }
+  .panel.active { display: block; animation: fadeIn 0.25s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+  .card { background: var(--surface); border-radius: var(--radius-lg); border: 0.5px solid var(--border); padding: 24px; margin-bottom: 16px; }
+  .section-label { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 12px; }
+  .divider { height: 0.5px; background: var(--border); margin: 20px 0; }
+
+  /* メール本文スタイル */
+  .email-wrap { background: var(--surface2); border-radius: var(--radius-lg); border: 0.5px solid var(--border); overflow: hidden; margin-bottom: 8px; }
+  .email-header { background: var(--surface); border-bottom: 0.5px solid var(--border); padding: 14px 18px; }
+  .email-header-row { font-size: 13px; color: var(--text2); line-height: 1.8; }
+  .email-header-row strong { color: var(--text); font-weight: 500; }
+  .email-body { padding: 18px; font-family: 'Source Serif 4', serif; font-size: 14px; line-height: 1.9; color: var(--text); }
+  .email-body p { margin-bottom: 1em; }
+  .email-body p:last-child { margin-bottom: 0; }
+
+  /* ハイライト可能文 */
+  .hl { cursor: pointer; border-radius: 3px; transition: background 0.15s; padding: 1px 2px; }
+  .hl:hover { background: rgba(44,95,138,0.08); }
+  .hl.lit-key { background: #fff3cd; box-shadow: 0 0 0 1.5px #e6c200; border-radius: 3px; }
+  .hl.lit-q24 { background: #e8f1f8; box-shadow: 0 0 0 1.5px var(--accent); border-radius: 3px; }
+  .hl.lit-q25 { background: var(--amber-light); box-shadow: 0 0 0 1.5px var(--amber); border-radius: 3px; }
+  .hl.lit-q26 { background: var(--teal-light); box-shadow: 0 0 0 1.5px var(--teal); border-radius: 3px; }
+
+  /* 段落ラベル */
+  .para-label { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; vertical-align: middle; margin-right: 4px; }
+  .pl-accent { background: var(--accent); }
+  .pl-amber { background: var(--amber); }
+  .pl-teal { background: var(--teal); }
+
+  /* 問題カード */
+  .q-num-badge { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+  .q-stem { font-size: 15px; font-weight: 500; line-height: 1.6; color: var(--text); font-family: 'Source Serif 4', serif; }
+
+  .predict-box { background: #fff9e6; border-left: 3px solid #e6c200; border-radius: 0 var(--radius) var(--radius) 0; padding: 14px 16px; margin: 12px 0; font-size: 14px; }
+  .predict-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #7a6600; margin-bottom: 6px; }
+
+  .evidence-box { background: var(--accent-light); border: 0.5px solid #b5d4f4; border-radius: var(--radius); padding: 14px 16px; margin: 10px 0; font-size: 14px; }
+  .evidence-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+
+  .choices-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .choice-btn { padding: 11px 16px; border: 0.5px solid var(--border); border-radius: var(--radius); background: var(--surface); font-family: 'Source Serif 4', serif; font-size: 14px; color: var(--text); cursor: pointer; text-align: left; transition: all 0.2s; display: flex; align-items: flex-start; gap: 10px; line-height: 1.6; }
+  .choice-btn:hover { background: var(--surface2); border-color: var(--accent); }
+  .choice-btn.correct { background: var(--green-light); border-color: var(--teal); color: var(--teal); font-weight: 700; }
+  .choice-btn.wrong { background: var(--red-light); border-color: var(--red); color: var(--red); opacity: 0.7; }
+  .choice-btn.disabled { pointer-events: none; }
+  .choice-num { font-size: 11px; font-weight: 700; color: var(--text3); flex-shrink: 0; margin-top: 3px; font-family: 'Noto Sans JP', sans-serif; }
+
+  .explanation-box { background: var(--teal-light); border: 0.5px solid #9fe1cb; border-radius: var(--radius); padding: 16px; margin-top: 12px; font-size: 14px; color: var(--teal); display: none; line-height: 1.7; }
+  .explanation-box.show { display: block; }
+  .wrong-box { background: var(--red-light); border: 0.5px solid #f09595; border-radius: var(--radius); padding: 14px 16px; margin-top: 12px; font-size: 14px; color: var(--red); display: none; line-height: 1.6; }
+  .wrong-box.show { display: block; }
+
+  .key-point { display: flex; gap: 12px; padding: 14px 16px; border-radius: var(--radius); background: var(--surface2); border: 0.5px solid var(--border); margin-bottom: 10px; font-size: 14px; align-items: flex-start; line-height: 1.6; }
+  .key-point-icon { width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+
+  .summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+  @media (max-width: 500px) { .summary-grid { grid-template-columns: 1fr; } }
+  .summary-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 16px; text-align: center; }
+  .sc-num { font-size: 28px; font-weight: 700; margin-bottom: 2px; }
+  .sc-label { font-size: 11px; color: var(--text2); font-weight: 500; }
+  .score-correct { color: var(--teal); } .score-wrong { color: var(--red); } .score-total { color: var(--accent); }
+  .master-badge { text-align: center; padding: 24px; border-radius: var(--radius-lg); border: 2px solid var(--teal); background: var(--teal-light); margin: 16px 0; }
+  .master-badge h2 { font-size: 20px; font-weight: 700; color: var(--teal); margin-bottom: 4px; }
+  .master-badge p { font-size: 13px; color: var(--text2); }
+
+  .step-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 24px; padding-top: 20px; border-top: 0.5px solid var(--border); }
+  .btn-primary { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: var(--accent); color: #fff; border: none; border-radius: var(--radius); font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.1s; }
+  .btn-primary:hover { background: #1e4a70; }
+  .btn-primary:active { transform: scale(0.98); }
+  .btn-secondary { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: var(--surface); color: var(--text); border: 0.5px solid var(--border); border-radius: var(--radius); font-family: 'Noto Sans JP', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+  .btn-secondary:hover { background: var(--surface2); }
+
+  .flow-item { display: flex; gap: 16px; align-items: flex-start; }
+  .flow-line { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; width: 32px; }
+  .flow-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--surface); box-shadow: 0 0 0 1px var(--border); flex-shrink: 0; margin-top: 4px; background: var(--border); }
+  .flow-dot.accent { background: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .flow-dot.amber { background: var(--amber); box-shadow: 0 0 0 1px var(--amber); }
+  .flow-dot.teal { background: var(--teal); box-shadow: 0 0 0 1px var(--teal); }
+  .flow-dot.green { background: var(--green); box-shadow: 0 0 0 1px var(--green); }
+  .flow-connector { width: 1.5px; flex: 1; background: var(--border); min-height: 20px; }
+  .flow-content { padding-bottom: 20px; flex: 1; font-size: 14px; line-height: 1.65; }
+  .flow-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 4px; }
+  .flow-label.accent { color: var(--accent); }
+  .flow-label.amber { color: var(--amber); }
+  .flow-label.teal { color: var(--teal); }
+  .flow-label.green { color: var(--green); }
+
+  .tag { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-right: 4px; vertical-align: middle; }
+  .tag-q { background: var(--accent-light); color: var(--accent); }
+  .tag-q2 { background: var(--amber-light); color: var(--amber); }
+  .tag-q3 { background: var(--teal-light); color: var(--teal); }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="brand-logo">T</div>
+    <div>
+      <div class="brand-name">英語読解特訓｜オンライン塾 THINKING</div>
+      <div class="brand-tagline">"読む力"と"解く力"の徹底トレーニング</div>
+    </div>
+  </div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;">
+    <div class="lesson-title">Retirement Party — Email Reading</div>
+    <div class="progress-bar-wrap">
+      <span id="progress-text">STEP 1 / 5</span>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:20%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="step-nav">
+    <button class="step-btn active" onclick="goStep(1)" id="nav1">STEP 1 メール全体を読む</button>
+    <button class="step-btn" onclick="goStep(2)" id="nav2">STEP 2 問題(24)</button>
+    <button class="step-btn" onclick="goStep(3)" id="nav3">STEP 3 問題(25)</button>
+    <button class="step-btn" onclick="goStep(4)" id="nav4">STEP 4 問題(26) + 確認</button>
+    <button class="step-btn" onclick="goStep(5)" id="nav5">STEP 5 構造まとめ</button>
+  </div>
+
+  <!-- ===== STEP 1 ===== -->
+  <div class="panel active" id="panel1">
+
+    <div class="card">
+      <div class="section-label">メールを読む — 段落ごとの役割を把握する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">下線部をクリックすると、その文の役割が表示されます。各問題に対応する箇所の色が異なります。</p>
+
+      <div class="email-wrap">
+        <div class="email-header">
+          <div class="email-header-row"><strong>From:</strong> Julia Young &lt;j_young@nflowtech.com&gt;</div>
+          <div class="email-header-row"><strong>To:</strong> Todd Musk &lt;t_musk@nflowtech.com&gt;</div>
+          <div class="email-header-row"><strong>Date:</strong> June 19</div>
+          <div class="email-header-row"><strong>Subject:</strong> Retirement party</div>
+        </div>
+        <div class="email-body">
+
+          <p id="para1-text">
+            Hi, Todd,<br>
+            <span class="hl" id="s1" onclick="litLine('s1','lit-q24')">Thank you for giving me some time over the phone this morning.</span>
+            <span class="hl" id="s2" onclick="litLine('s2','lit-key')">I hope that I didn't cause you much trouble.</span>
+            <span class="hl" id="s3" onclick="litLine('s3','lit-q24')">After the call, our team finally decided on all the details of the retirement party for our manager, Mr. Jenkins.</span>
+            <span class="hl" id="s4" onclick="litLine('s4','lit-key')">This will be a special opportunity for us to show how thankful we have been for his long years of achievement at the company.</span>
+          </p>
+
+          <p id="para2-text">
+            <span class="hl" id="s5" onclick="litLine('s5','lit-q25')">For this party, we are planning a surprise movie to be shown on a large screen.</span>
+            <span class="hl" id="s6" onclick="litLine('s6','lit-q25')">This will include slides about Mr. Jenkins's key achievements since joining the company, special photos with his coworkers, and messages from his customers' companies.</span>
+            <span class="hl" id="s7" onclick="litLine('s7','lit-key')">By displaying it this way, everyone at the party will be able to look back on his great career.</span>
+            <span class="hl" id="s8" onclick="litLine('s8','lit-key')">For this event to be successful, the professional support of the IT department is very important, so we would like to ask for your help.</span>
+          </p>
+
+          <p id="para3-text">
+            <span class="hl" id="s9" onclick="litLine('s9','lit-q26')">We have collected all the photos, but we're having trouble creating a clear and exciting graphic to show his great sales results over the years.</span>
+            <span class="hl" id="s10" onclick="litLine('s10','lit-q26')">We have the data and need help turning it into a powerful picture.</span>
+            <span class="hl" id="s11" onclick="litLine('s11','lit-key')">For the event day, we want good video and sound, and we would like to help set up the right equipment.</span>
+            <span class="hl" id="s12" onclick="litLine('s12','lit-key')">I'm truly sorry to trouble you during your busy time, but I would be delighted if you could help us with this.</span>
+          </p>
+
+          <p>Best wishes,<br>Julia Young<br>Sales Department<br>New Flow Technologies</p>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;font-size:12px;font-weight:700;">
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:2px;background:#fff3cd;border:1px solid #e6c200;display:inline-block;"></span> 重要文</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:2px;background:#e8f1f8;border:1px solid var(--accent);display:inline-block;"></span> 問題(24)の根拠</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:2px;background:var(--amber-light);border:1px solid var(--amber);display:inline-block;"></span> 問題(25)の根拠</span>
+        <span style="display:flex;align-items:center;gap:4px;"><span style="width:14px;height:14px;border-radius:2px;background:var(--teal-light);border:1px solid var(--teal);display:inline-block;"></span> 問題(26)の根拠</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">メールの構造マップ</div>
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot accent"></div><div class="flow-connector"></div></div>
+          <div class="flow-content">
+            <div class="flow-label accent">第1段落 — 目的・背景 <span class="tag tag-q">問題(24)</span></div>
+            電話後にチームで退職パーティーの詳細を決定した。<br>
+            <span style="font-size:12px;color:var(--text3);">→ メールを書いた理由とパーティーの目的（感謝を示す）を伝える</span>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot amber"></div><div class="flow-connector"></div></div>
+          <div class="flow-content">
+            <div class="flow-label amber">第2段落 — パーティーの内容 <span class="tag tag-q2">問題(25)</span></div>
+            サプライズ映像（大画面）＝ 実績スライド＋同僚との写真＋顧客メッセージ<br>
+            <span style="font-size:12px;color:var(--text3);">→ 映像の具体的な中身と、IT部門への協力依頼の伏線</span>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot teal"></div><div class="flow-connector"></div></div>
+          <div class="flow-content">
+            <div class="flow-label teal">第3段落 — 具体的な依頼内容 <span class="tag tag-q3">問題(26)</span></div>
+            ① 売上データのグラフィック化、② 当日の映像・音響設備のセットアップ<br>
+            <span style="font-size:12px;color:var(--text3);">→ IT部門（Todd）に何をお願いしたいかを具体的に説明</span>
+          </div>
+        </div>
+
+        <div class="flow-item">
+          <div class="flow-line"><div class="flow-dot green"></div></div>
+          <div class="flow-content">
+            <div class="flow-label green">メールの全体構造</div>
+            <span style="font-size:13px;">背景説明 → 依頼の理由 → <strong>具体的な依頼</strong>　という、ビジネスメールの典型的な3段構成</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">長文読解の鉄則 — 問題を解く前に必ずやること</div>
+      <div class="key-point">
+        <div class="key-point-icon">1</div>
+        <div><strong>問題文のキーワードを本文に探しに行く</strong><br><span style="font-size:13px;color:var(--text2);">選択肢は正しいことも間違っていることも「本文にある言葉」を使ってくる。まず問題文が聞いていることを特定し、その答えが書いてある段落を見つける。</span></div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">2</div>
+        <div><strong>「言い換え」に気づく</strong><br><span style="font-size:13px;color:var(--text2);">正解の選択肢は本文とほぼ同じ意味を別の言葉で言い換えている。本文そのままの選択肢は罠のことが多い。</span></div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">3</div>
+        <div><strong>本文に書いていないことは×</strong><br><span style="font-size:13px;color:var(--text2);">「そうかもしれない」「常識的にそうだろう」では選ばない。必ず本文の根拠を指差せること。</span></div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <span></span>
+      <button class="btn-primary" onclick="goStep(2)">STEP 2 へ — 問題(24)を解く →</button>
+    </div>
+  </div>
+
+  <!-- ===== STEP 2: Q24 ===== -->
+  <div class="panel" id="panel2">
+
+    <div class="card">
+      <div class="section-label">問題(24) — 根拠を本文に探す</div>
+
+      <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;">
+        <div class="q-num-badge">24</div>
+        <div class="q-stem">What happened after the phone call today?</div>
+      </div>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;border:0.5px solid var(--border);margin-bottom:14px;">
+        <div class="section-label">問題文を分解する</div>
+        <div style="font-size:14px;line-height:1.8;">
+          <span style="background:var(--accent-light);padding:2px 6px;border-radius:4px;color:var(--accent);font-weight:700;">What happened</span> — 何が起きたか（出来事を問う）<br>
+          <span style="background:var(--accent-light);padding:2px 6px;border-radius:4px;color:var(--accent);font-weight:700;">after the phone call today</span> — 今日の電話の後に<br>
+          <span style="font-size:12px;color:var(--text3);margin-top:6px;display:block;">→ 本文のどこに「電話の後に〜した」が書いてあるか探す</span>
+        </div>
+      </div>
+
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第1段落：<strong>"After the call, our team finally decided on all the details of the retirement party for our manager, Mr. Jenkins."</strong><br><br>
+        → 電話の後に「チームが退職パーティーの詳細を全て決定した」<br>
+        → これを英語で言い換えると？ <strong>「チームが将来のお祝いの詳細に合意した」</strong>
+      </div>
+
+      <div class="evidence-box">
+        <div class="evidence-label">正解の根拠となる文</div>
+        "After the call, our team <strong>finally decided on all the details</strong> of the <strong>retirement party</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">decided on all the details → agreed on details　という言い換えに気づけるか</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:14px;">根拠を持って選ぼう。「本文に書いてある内容と一致する選択肢」を選ぶ。</p>
+
+      <div class="choices-list" id="choices24">
+        <button class="choice-btn" onclick="checkAnswer(24,1,false)">
+          <span class="choice-num">1</span>
+          <span>The manager announced a new company policy about retirement.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(24,2,false)">
+          <span class="choice-num">2</span>
+          <span>The IT department talked about new computers for the office.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(24,3,true)">
+          <span class="choice-num">3</span>
+          <span>Julia Young's team agreed on details for a future celebration.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(24,4,false)">
+          <span class="choice-num">4</span>
+          <span>Employees talked about taking over tasks from Mr. Jenkins.</span>
+        </button>
+      </div>
+
+      <div class="explanation-box" id="exp24">
+        <strong>正解：3 "Julia Young's team agreed on details for a future celebration."</strong><br><br>
+        本文：<em>"our team finally decided on all the details of the retirement party"</em><br>
+        正解：<em>"agreed on details for a future celebration"</em><br><br>
+        <strong>言い換えの対応：</strong><br>
+        　decided on all the details → agreed on details<br>
+        　retirement party → future celebration<br>
+        　our team → Julia Young's team<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 → managerが方針を発表した？本文にそんな記述なし。Juliaがメールを書いている。<br>
+        2 → IT部門が新しいコンピューターの話？第3段落ではITへの依頼だが内容が全く違う。<br>
+        4 → Jenkins氏の業務を引き継ぐ話？本文にそのような記述は一切ない。
+      </div>
+      <div class="wrong-box" id="wrong24">
+        惜しい！第1段落に戻ろう。<br>
+        "After the call" の後に何をしたと書いてある？<br>
+        本文の言葉と選択肢の言葉は違う形で出てくる（言い換え）。
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(1)">← STEP 1 に戻る</button>
+      <button class="btn-primary" onclick="goStep(3)">STEP 3 へ — 問題(25)を解く →</button>
+    </div>
+  </div>
+
+  <!-- ===== STEP 3: Q25 ===== -->
+  <div class="panel" id="panel3">
+
+    <div class="card">
+      <div class="section-label">問題(25) — 根拠を本文に探す</div>
+
+      <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;">
+        <div class="q-num-badge" style="background:var(--amber);">25</div>
+        <div class="q-stem">The surprise movie for Mr. Jenkins's retirement party will</div>
+      </div>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;border:0.5px solid var(--border);margin-bottom:14px;">
+        <div class="section-label">問題文を分解する</div>
+        <div style="font-size:14px;line-height:1.8;">
+          <span style="background:var(--amber-light);padding:2px 6px;border-radius:4px;color:var(--amber);font-weight:700;">The surprise movie</span> — サプライズ映像<br>
+          <span style="background:var(--amber-light);padding:2px 6px;border-radius:4px;color:var(--amber);font-weight:700;">retirement party will ___</span> — パーティーでどうなる/何をする？<br>
+          <span style="font-size:12px;color:var(--text3);margin-top:6px;display:block;">→ 第2段落に「映像の中身」が具体的に書いてある</span>
+        </div>
+      </div>
+
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第2段落：<strong>"For this party, we are planning a surprise movie to be shown on a large screen."</strong><br>
+        続いて：<strong>"This will include slides about Mr. Jenkins's key achievements since joining the company, special photos with his coworkers, and messages from his customers' companies."</strong><br><br>
+        → 映像の内容：① 実績スライド ② 同僚との写真 ③ <strong>顧客の会社からのメッセージ</strong><br>
+        → 「顧客の会社」= customers' companies = <strong>自社社員ではない人たち</strong>
+      </div>
+
+      <div class="evidence-box">
+        <div class="evidence-label">正解の根拠となる文</div>
+        "messages from his <strong>customers' companies</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">customers' companies（取引先）= people who are not members of his company という言い換え</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:14px;">映像の中身に関する記述が本文にあるかどうか、1つずつ確認しよう。</p>
+
+      <div class="choices-list" id="choices25">
+        <button class="choice-btn" onclick="checkAnswer(25,1,true)">
+          <span class="choice-num">1</span>
+          <span>show messages from people who are not members of his company.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(25,2,false)">
+          <span class="choice-num">2</span>
+          <span>be sent to the family members of Mr. Jenkins's coworkers from the past.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(25,3,false)">
+          <span class="choice-num">3</span>
+          <span>include a short company history and a timeline of its growth.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(25,4,false)">
+          <span class="choice-num">4</span>
+          <span>be shown on display screens set up on each table during the party.</span>
+        </button>
+      </div>
+
+      <div class="explanation-box" id="exp25">
+        <strong>正解：1 "show messages from people who are not members of his company."</strong><br><br>
+        本文：<em>"messages from his customers' companies"</em><br>
+        正解：<em>"messages from people who are not members of his company"</em><br><br>
+        <strong>言い換えの対応：</strong><br>
+        　customers' companies（取引先の会社の人たち）→ people who are not members of his company（社外の人）<br><br>
+        <strong>なぜ他は×？</strong><br>
+        2 → 家族に送る？本文には「大画面で上映する」とあるだけ。家族への送付は書いていない。<br>
+        3 → 会社の歴史とタイムライン？本文には「Jenkins氏の実績」が中心で会社の歴史への言及はない。<br>
+        4 → 各テーブルのスクリーン？本文は "a large screen"（1枚の大きなスクリーン）。テーブルごとは書いていない。
+      </div>
+      <div class="wrong-box" id="wrong25">
+        惜しい！第2段落の映像の内容リストに戻ろう。<br>
+        "messages from his <strong>customers' companies</strong>"<br>
+        → 「顧客の会社」とは、Jenkins氏の会社の社員？社外の人？
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(2)">← STEP 2 に戻る</button>
+      <button class="btn-primary" onclick="goStep(4)">STEP 4 へ — 問題(26)を解く →</button>
+    </div>
+  </div>
+
+  <!-- ===== STEP 4: Q26 ===== -->
+  <div class="panel" id="panel4">
+
+    <div class="card">
+      <div class="section-label">問題(26) — 根拠を本文に探す</div>
+
+      <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;">
+        <div class="q-num-badge" style="background:var(--teal);">26</div>
+        <div class="q-stem">What does Julia Young want help with?</div>
+      </div>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;border:0.5px solid var(--border);margin-bottom:14px;">
+        <div class="section-label">問題文を分解する</div>
+        <div style="font-size:14px;line-height:1.8;">
+          <span style="background:var(--teal-light);padding:2px 6px;border-radius:4px;color:var(--teal);font-weight:700;">What does Julia want help with?</span> — Juliaが助けを求めていることは何か<br>
+          <span style="font-size:12px;color:var(--text3);margin-top:6px;display:block;">→ 第3段落に依頼の具体的内容が書いてある。第2段落の最後でもITサポートが必要と言っていた。</span>
+        </div>
+      </div>
+
+      <div class="predict-box">
+        <div class="predict-label">本文の根拠を見つける</div>
+        第3段落の依頼内容は2つ：<br>
+        ① <strong>"we're having trouble creating a clear and exciting graphic to show his great sales results"</strong><br>
+        　→ 売上データを<strong>グラフィック（視覚的な画像）に変換すること</strong>が難しい<br><br>
+        ② <strong>"we want good video and sound, and we would like to help set up the right equipment"</strong><br>
+        　→ 当日の映像・音響機材のセットアップ<br><br>
+        → 選択肢4「Creating something exciting to show Mr. Jenkins's history at the company」はどちらを指している？
+      </div>
+
+      <div class="evidence-box">
+        <div class="evidence-label">正解の根拠となる文</div>
+        "having trouble creating a <strong>clear and exciting graphic</strong> to show his great <strong>sales results</strong>"<br>
+        + "We have the <strong>data</strong> and need help turning it into a <strong>powerful picture</strong>"<br>
+        <span style="font-size:12px;color:var(--text2);margin-top:4px;display:block;">data → powerful picture = turning data into an exciting visual = 「会社での歴史を見せるものを作る」</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="section-label">選択肢を吟味する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:14px;">「本文に書いてあること」かどうかを1つずつ確認する。</p>
+
+      <div class="choices-list" id="choices26">
+        <button class="choice-btn" onclick="checkAnswer(26,1,false)">
+          <span class="choice-num">1</span>
+          <span>Collecting the necessary numbers about Mr. Jenkins's sales to make slides.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(26,2,false)">
+          <span class="choice-num">2</span>
+          <span>Putting together a list of songs to play for people to choose from.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(26,3,false)">
+          <span class="choice-num">3</span>
+          <span>Checking and preparing computers at the sales department before the party.</span>
+        </button>
+        <button class="choice-btn" onclick="checkAnswer(26,4,true)">
+          <span class="choice-num">4</span>
+          <span>Creating something exciting to show Mr. Jenkins's history at the company.</span>
+        </button>
+      </div>
+
+      <div class="explanation-box" id="exp26">
+        <strong>正解：4 "Creating something exciting to show Mr. Jenkins's history at the company."</strong><br><br>
+        本文：<em>"having trouble creating a clear and exciting graphic to show his great sales results"</em><br>
+        + <em>"need help turning it into a powerful picture"</em><br>
+        正解：<em>"Creating something exciting to show Mr. Jenkins's history at the company"</em><br><br>
+        <strong>言い換えの対応：</strong><br>
+        　exciting graphic / powerful picture → something exciting<br>
+        　sales results（会社でのキャリアの実績）→ history at the company<br><br>
+        <strong>なぜ他は×？</strong><br>
+        1 → データ収集の依頼？本文は "We have the data"（データはもう持っている）。集めるのではなく<em>グラフィックにする</em>ことが依頼。<br>
+        2 → 音楽リスト？本文に一切記述なし。完全に本文外の情報。<br>
+        3 → 営業部のコンピューター確認？本文はIT部門への依頼で、営業部のPC確認とは全く別の話。
+      </div>
+      <div class="wrong-box" id="wrong26">
+        惜しい！第3段落の依頼内容に戻ろう。<br>
+        "We have the data and need help turning it into a <strong>powerful picture</strong>"<br>
+        → 「データを視覚的な絵に変える」= 選択肢のどれと一致する？
+      </div>
+    </div>
+
+    <!-- スコア表示 -->
+    <div class="card" id="result-card" style="display:none;">
+      <div class="section-label">特訓結果</div>
+      <div class="summary-grid">
+        <div class="summary-card"><div class="sc-num score-correct" id="correct-count">0</div><div class="sc-label">正解</div></div>
+        <div class="summary-card"><div class="sc-num score-wrong" id="wrong-count">0</div><div class="sc-label">不正解</div></div>
+        <div class="summary-card"><div class="sc-num score-total">3</div><div class="sc-label">合計問題数</div></div>
+      </div>
+      <div class="master-badge" id="master-badge" style="display:none;">
+        <div style="font-size:40px;margin-bottom:8px;">★</div>
+        <h2>根拠読解マスター！</h2>
+        <p>3問全問正解。本文の根拠を指差しながら解けた証拠です。</p>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(3)">← STEP 3 に戻る</button>
+      <button class="btn-primary" onclick="goStep(5)">STEP 5 へ — 構造まとめ →</button>
+    </div>
+  </div>
+
+  <!-- ===== STEP 5: まとめ ===== -->
+  <div class="panel" id="panel5">
+
+    <div class="card">
+      <div class="section-label">メールの段落読解 — 各段落の役割を確認する</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:20px;">ビジネスメールも長文読解も、構造は同じ。段落ごとの「役割」を言えるようにしよう。</p>
+
+      <!-- P1 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:14px;">
+        <div style="background:var(--accent-light);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;" onclick="togglePara('p1')">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P1</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;color:var(--accent);">第1段落 — メールの目的・背景</div></div>
+          <div id="p1-arrow" style="font-size:16px;color:var(--accent);transition:transform 0.2s;">▼</div>
+        </div>
+        <div id="p1-body" style="display:none;padding:16px;">
+          <div style="font-family:'Source Serif 4',serif;font-size:13px;background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:14px;border:0.5px solid var(--border);line-height:1.9;">
+            Thank you for giving me some time over the phone this morning. I hope that I didn't cause you much trouble. After the call, our team finally decided on all the details of the retirement party for our manager, Mr. Jenkins. This will be a special opportunity for us to show how thankful we have been for his long years of achievement at the company.
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--accent-light);color:var(--accent);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">クッション</span><span>電話のお礼＋迷惑をかけたかもという謝辞（ビジネスメールの定型）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--green-light);color:var(--green);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">核心</span><span>電話の後にチームでパーティーの詳細を全て決めた（問題24の根拠）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">目的</span><span>Jenkins氏の長年の功績への感謝を示す場にする</span></div>
+          </div>
+          <div style="background:var(--accent-light);border-radius:8px;padding:12px 14px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#0c447c;line-height:1.7;">電話後にチームでMr. Jenkinsの退職パーティーの詳細を決定し、彼への感謝を示すイベントにしたいとJuliaがToddに伝えている。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P2 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:14px;">
+        <div style="background:var(--amber-light);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;" onclick="togglePara('p2')">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--amber);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P2</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;color:var(--amber);">第2段落 — パーティーの具体的な内容</div></div>
+          <div id="p2-arrow" style="font-size:16px;color:var(--amber);transition:transform 0.2s;">▼</div>
+        </div>
+        <div id="p2-body" style="display:none;padding:16px;">
+          <div style="font-family:'Source Serif 4',serif;font-size:13px;background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:14px;border:0.5px solid var(--border);line-height:1.9;">
+            For this party, we are planning a surprise movie to be shown on a large screen. This will include slides about Mr. Jenkins's key achievements since joining the company, special photos with his coworkers, and messages from his customers' companies. By displaying it this way, everyone at the party will be able to look back on his great career. For this event to be successful, the professional support of the IT department is very important, so we would like to ask for your help.
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">映像内容</span><span>① 実績スライド ② 同僚との写真 ③ 顧客企業からのメッセージ（問題25の根拠）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">伏線</span><span>「ITサポートが重要」→ 第3段落の具体的依頼につながる</span></div>
+          </div>
+          <div style="background:var(--amber-light);border-radius:8px;padding:12px 14px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#633806;line-height:1.7;">大画面でのサプライズ映像（実績・写真・顧客メッセージ）を計画しており、その実現にITサポートが必要だと伝えている。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- P3 -->
+      <div style="border:0.5px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:4px;">
+        <div style="background:var(--teal-light);padding:12px 16px;display:flex;align-items:center;gap:10px;cursor:pointer;" onclick="togglePara('p3')">
+          <div style="width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;">P3</div>
+          <div style="flex:1;"><div style="font-size:13px;font-weight:700;color:var(--teal);">第3段落 — 具体的な2つの依頼</div></div>
+          <div id="p3-arrow" style="font-size:16px;color:var(--teal);transition:transform 0.2s;">▼</div>
+        </div>
+        <div id="p3-body" style="display:none;padding:16px;">
+          <div style="font-family:'Source Serif 4',serif;font-size:13px;background:var(--surface2);border-radius:8px;padding:14px;margin-bottom:14px;border:0.5px solid var(--border);line-height:1.9;">
+            We have collected all the photos, but we're having trouble creating a clear and exciting graphic to show his great sales results over the years. We have the data and need help turning it into a powerful picture. For the event day, we want good video and sound, and we would like to help set up the right equipment. I'm truly sorry to trouble you during your busy time, but I would be delighted if you could help us with this.
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">依頼①</span><span>売上データを魅力的なグラフィックに変換してほしい（問題26の根拠）</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--teal-light);color:var(--teal);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">依頼②</span><span>当日の映像・音響機材のセットアップを手伝ってほしい</span></div>
+            <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;"><span style="background:var(--amber-light);color:var(--amber);padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700;flex-shrink:0;margin-top:2px;">締め</span><span>忙しい中申し訳ないが、協力してもらえると嬉しい（ビジネスの丁寧な結び）</span></div>
+          </div>
+          <div style="background:var(--teal-light);border-radius:8px;padding:12px 14px;">
+            <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--teal);margin-bottom:5px;">この段落を1文で言うと？</div>
+            <div style="font-size:14px;color:#085041;line-height:1.7;">売上グラフィックの作成と当日の機材セットアップという2つの具体的なIT支援をToddにお願いしている。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- まとめ練習 -->
+    <div class="card">
+      <div class="section-label">メール全体のまとめを自分で作る</div>
+      <p style="font-size:13px;color:var(--text2);margin-bottom:16px;">3段落の要点を繋げて「Juliaが何のためにToddにメールを書いたか」を2〜3文でまとめよう。</p>
+
+      <div style="background:var(--surface2);border-radius:var(--radius);padding:16px;margin-bottom:14px;border:0.5px solid var(--border);">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="font-size:15px;font-weight:700;color:var(--accent);flex-shrink:0;margin-top:2px;">P1</span>
+            <input type="text" placeholder="第1段落の要点を一言で..." style="flex:1;font-size:13px;padding:8px 12px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;">
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="font-size:15px;font-weight:700;color:var(--amber);flex-shrink:0;margin-top:2px;">P2</span>
+            <input type="text" placeholder="第2段落の要点を一言で..." style="flex:1;font-size:13px;padding:8px 12px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;">
+          </div>
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <span style="font-size:15px;font-weight:700;color:var(--teal);flex-shrink:0;margin-top:2px;">P3</span>
+            <input type="text" placeholder="第3段落の要点を一言で..." style="flex:1;font-size:13px;padding:8px 12px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface);color:var(--text);font-family:'Noto Sans JP',sans-serif;">
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-secondary" onclick="var e=document.getElementById('model-ans');e.style.display=e.style.display==='none'?'block':'none';" style="margin-bottom:14px;">モデル解答を見る</button>
+
+      <div id="model-ans" style="display:none;">
+        <div style="background:var(--green-light);border:0.5px solid #c0dd97;border-radius:var(--radius);padding:16px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);margin-bottom:10px;">モデル解答（段落ごと）</div>
+          <div style="font-size:14px;line-height:1.9;color:#27500a;">
+            <div><strong>P1：</strong>電話後にチームでJenkinsマネージャーの退職パーティーの詳細が決まり、感謝を示すイベントにしたいと伝えている。</div>
+            <div style="margin-top:6px;"><strong>P2：</strong>パーティーでは大画面でサプライズ映像を上映する計画で、内容は実績スライド・写真・顧客メッセージ。ITサポートが必要と述べている。</div>
+            <div style="margin-top:6px;"><strong>P3：</strong>具体的に①売上グラフィックの作成と②当日の機材セットアップの2点でToddに協力を求めている。</div>
+          </div>
+        </div>
+        <div style="background:var(--accent-light);border:0.5px solid #b5d4f4;border-radius:var(--radius);padding:16px;margin-bottom:12px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px;">メール全体の要約（2文）</div>
+          <div style="font-size:14px;line-height:1.8;color:#0c447c;">JuliaはMr. Jenkinsの退職パーティー用のサプライズ映像を計画しており、大画面での上映に向けてIT部門の協力が必要だとToddにメールで伝えた。具体的には、売上データの視覚化と当日の映像・音響設備のセットアップを依頼している。</div>
+        </div>
+        <div style="background:var(--purple-light);border:0.5px solid #afa9ec;border-radius:var(--radius);padding:16px;">
+          <div style="font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--purple);margin-bottom:6px;">このメールのメインメッセージ（1文）</div>
+          <div style="font-size:15px;font-weight:700;line-height:1.7;color:#3c3489;">JuliaはJenkinsの功績に感謝を示すパーティーを成功させるため、IT部門のToddに具体的な技術支援を求めている。</div>
+          <div style="margin-top:8px;font-size:12px;color:#534ab7;line-height:1.6;">→ Subject「Retirement party」＋締めの "I would be delighted if you could help" が呼応。メール全体がこの1点のために構成されている。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 読み方まとめ -->
+    <div class="card">
+      <div class="section-label">この問題で練習した「解き方」のまとめ</div>
+      <div class="key-point">
+        <div class="key-point-icon">1</div>
+        <div><strong>問題文で「何を聞いているか」を特定してから本文に戻る</strong><br><span style="font-size:13px;color:var(--text2);">選択肢を先に読まない。問題文のキーワードを本文から探す習慣をつける。</span></div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">2</div>
+        <div><strong>正解は必ず「言い換え」になっている</strong><br><span style="font-size:13px;color:var(--text2);">customers' companies → people who are not members of his company　など。本文と同じ単語の選択肢は罠のことが多い。</span></div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">3</div>
+        <div><strong>「本文に書いていない」は即×</strong><br><span style="font-size:13px;color:var(--text2);">「常識的にそうかも」「ありそう」では選ばない。必ず本文の1文を根拠として指差せること。</span></div>
+      </div>
+      <div class="key-point">
+        <div class="key-point-icon">4</div>
+        <div><strong>メールの構造を掴むと速くなる</strong><br><span style="font-size:13px;color:var(--text2);">ビジネスメールは「背景→理由→依頼」の3段構造がほぼ固定。構造を先に読むと答えのある段落がすぐわかる。</span></div>
+      </div>
+    </div>
+
+    <div class="step-actions">
+      <button class="btn-secondary" onclick="goStep(4)">← STEP 4 に戻る</button>
+      <button class="btn-primary" onclick="goStep(1)">最初からやり直す</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var answers = { 24: null, 25: null, 26: null };
+  var stepDone = { 1: false, 2: false, 3: false, 4: false, 5: false };
+
+  function goStep(n) {
+    document.querySelectorAll('.panel').forEach(function(p) { p.classList.remove('active'); });
+    document.getElementById('panel' + n).classList.add('active');
+    document.querySelectorAll('.step-btn').forEach(function(b, i) {
+      b.classList.remove('active');
+      if (stepDone[i+1]) b.classList.add('done');
+    });
+    var nb = document.getElementById('nav' + n);
+    if (nb) { nb.classList.add('active'); nb.classList.remove('done'); }
+    var pct = Math.round((n / 5) * 100);
+    document.getElementById('progress-fill').style.width = pct + '%';
+    document.getElementById('progress-text').textContent = 'STEP ' + n + ' / 5';
+    window.scrollTo(0, 0);
+  }
+
+  function litLine(id, cls) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var classes = ['lit-key','lit-q24','lit-q25','lit-q26'];
+    if (el.classList.contains(cls)) {
+      el.classList.remove(cls);
+    } else {
+      classes.forEach(function(c) { el.classList.remove(c); });
+      el.classList.add(cls);
+    }
+  }
+
+  function checkAnswer(num, choice, isCorrect) {
+    var container = document.getElementById('choices' + num);
+    if (!container) return;
+    var btns = container.querySelectorAll('.choice-btn');
+    btns.forEach(function(b) { b.classList.add('disabled'); });
+    btns[choice-1].classList.add(isCorrect ? 'correct' : 'wrong');
+
+    if (isCorrect) {
+      var exp = document.getElementById('exp' + num);
+      var wrg = document.getElementById('wrong' + num);
+      if (exp) exp.classList.add('show');
+      if (wrg) wrg.classList.remove('show');
+      answers[num] = 'correct';
+      if (num === 26) showResult();
+    } else {
+      var exp2 = document.getElementById('exp' + num);
+      var wrg2 = document.getElementById('wrong' + num);
+      if (exp2) exp2.classList.remove('show');
+      if (wrg2) wrg2.classList.add('show');
+      answers[num] = 'wrong';
+      btns.forEach(function(b) { b.classList.remove('disabled'); });
+      btns[choice-1].classList.add('wrong');
+    }
+  }
+
+  function showResult() {
+    var correct = 0, wrong = 0;
+    Object.keys(answers).forEach(function(k) {
+      if (answers[k] === 'correct') correct++;
+      else if (answers[k] === 'wrong') wrong++;
+    });
+    var card = document.getElementById('result-card');
+    if (card) { card.style.display = 'block'; }
+    document.getElementById('correct-count').textContent = correct;
+    document.getElementById('wrong-count').textContent = wrong;
+    if (correct === 3) {
+      var badge = document.getElementById('master-badge');
+      if (badge) badge.style.display = 'block';
+    }
+    stepDone[4] = true;
+    var nb4 = document.getElementById('nav4');
+    if (nb4) nb4.classList.add('done');
+  }
+
+  function togglePara(id) {
+    var body = document.getElementById(id + '-body');
+    var arrow = document.getElementById(id + '-arrow');
+    if (!body) return;
+    if (body.style.display === 'none') {
+      body.style.display = 'block';
+      if (arrow) arrow.style.transform = 'rotate(180deg)';
+    } else {
+      body.style.display = 'none';
+      if (arrow) arrow.style.transform = 'rotate(0deg)';
+    }
+  }
+</script>
+</body>
+</html>
