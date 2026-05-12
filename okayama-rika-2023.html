@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>岡山理科大学 2023年｜英語 完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--bd2:#ccc8be;
+  --tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+/* ─── HEADER ─── */
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.hdr-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+/* ─── PHASE NAV ─── */
+.pnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.pn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.pn:hover{color:var(--tx);}
+.pn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.pn.done{color:var(--tl);}
+.pn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pn.active .pn-num{background:var(--ac);color:#fff;}
+.pn.done .pn-num{background:var(--tl);color:#fff;}
+
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── CARDS ─── */
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* ─── PASSAGE ─── */
+.passage{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.2;color:var(--tx);}
+.passage p{margin-bottom:.9em;}
+.passage em{font-style:italic;}
+.ub{border-bottom:2px solid;padding-bottom:1px;}
+.u1{border-color:var(--rd);}
+.u2{border-color:var(--am);}
+.u3{border-color:var(--tl);}
+.u4{border-color:var(--ac);}
+.u6{border-color:var(--pu);}
+.u8{border-color:var(--acd);}
+.uB{border-bottom:2.5px double #0a1628;}
+.fl{color:var(--t3);font-style:italic;}
+.kw{background:var(--aml);border-radius:2px;padding:0 2px;font-weight:700;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--acd);color:#fff;font-size:9px;font-weight:700;margin-right:3px;vertical-align:middle;font-family:'Noto Sans JP',sans-serif;}
+.blank-box{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;border:1.5px dashed var(--rd);border-radius:4px;background:var(--rdl);color:var(--rd);font-weight:700;font-size:13px;padding:0 7px;font-family:'Noto Sans JP',sans-serif;vertical-align:middle;}
+
+/* ─── QUIZ ─── */
+.qblock{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qnum-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;font-size:12px;font-weight:700;margin-right:8px;vertical-align:middle;flex-shrink:0;}
+.qtext{font-size:14px;font-weight:700;line-height:1.6;display:inline;vertical-align:middle;}
+.qen{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin:10px 0;padding:12px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:8px 11px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:16px;}
+.rev-btn{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev-btn:hover{background:var(--acd);}
+.ans-block{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans-block.show{display:block;}
+.tf-row{display:flex;gap:8px;margin:8px 0;}
+.tf-btn{flex:1;padding:10px;background:var(--sf);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:all .15s;}
+.tf-btn:hover{border-color:var(--ac);background:var(--acl);}
+.tf-btn.sel{border-color:var(--ac);background:var(--acl);color:var(--ac);}
+.tf-btn.ok{background:var(--tll);border-color:var(--tl);color:var(--tld);}
+.tf-btn.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+
+/* ─── BONE BAR ─── */
+.bonebar{background:#0a1628;border-radius:var(--rl);padding:13px 17px;margin:10px 0;}
+.bb-row{display:flex;align-items:center;gap:7px;font-family:'Source Serif 4',serif;flex-wrap:wrap;margin-bottom:4px;}
+.bb-row:last-child{margin-bottom:0;}
+.bbl{font-size:10px;font-weight:700;font-family:'Noto Sans JP',sans-serif;padding:2px 7px;border-radius:3px;flex-shrink:0;}
+.bbs{background:#2563a8;color:#fff;}
+.bbv{background:#1e40af;color:#fff;}
+.bbo{background:#0f6e56;color:#fff;}
+.bbt{font-size:14px;font-weight:700;color:#fff;}
+.bbj{font-size:11px;color:rgba(255,255,255,.45);font-family:'Noto Sans JP',sans-serif;margin-left:3px;}
+.bbeq{color:rgba(255,255,255,.2);margin:0 3px;}
+
+/* ─── CALLOUT ─── */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* ─── PARA FLOW ─── */
+.pflow{display:flex;flex-direction:column;}
+.pf-item{display:flex;gap:0;align-items:stretch;margin-bottom:4px;}
+.pf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.pf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.pf-body{flex:1;padding:0 0 18px 13px;}
+.rtag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.one-liner{margin:6px 0;padding:8px 12px;border-radius:8px;font-size:13px;font-weight:700;border-left:3px solid transparent;line-height:1.6;}
+
+/* ─── SCORE ─── */
+.score-card{background:var(--sf);border-radius:var(--rl);padding:14px 18px;border:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sc-num{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--ac);}
+
+/* ─── NAV ─── */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:11px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:9px 17px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+
+/* ─── TABLE ─── */
+.ltable{width:100%;border-collapse:collapse;font-size:13px;}
+.ltable th{padding:8px 11px;background:var(--acd);color:#fff;font-size:11px;font-weight:700;text-align:left;}
+.ltable td{padding:8px 11px;border:.5px solid var(--bd);vertical-align:top;line-height:1.65;}
+.ltable tr:nth-child(even) td{background:var(--s2);}
+
+/* ─── GRID ─── */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;}
+@media(max-width:540px){.g2{grid-template-columns:1fr;}}
+
+/* ─── TRANSLATION ─── */
+.trans-input{width:100%;padding:12px 14px;font-size:14px;font-family:'Noto Sans JP',sans-serif;border:.5px solid var(--bd);border-radius:var(--r);background:var(--sf);color:var(--tx);resize:none;line-height:1.75;margin-top:8px;}
+.trans-input:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px rgba(44,95,138,.1);}
+.model-trans{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;padding:14px 16px;background:var(--sf3,#252d40);border-radius:var(--r);border-left:3px solid var(--tl);margin:8px 0;}
+
+/* ─── WORD CHIP (並べ替え用) ─── */
+.wchip{display:inline-block;padding:3px 9px;margin:2px;background:var(--sf);border:.5px solid var(--bd);border-radius:6px;font-family:'Source Serif 4',serif;font-size:13px;}
+.wchip.used{background:var(--acl);border-color:var(--ac);font-weight:700;}
+.wchip-num{font-size:9px;color:var(--t3);margin-right:4px;font-family:'Space Grotesk',sans-serif;}
+.wchip.used .wchip-num{color:var(--ac);}
+
+/* ─── LOGIC FLOW ─── */
+.logic-step{display:flex;gap:10px;align-items:flex-start;padding:8px 0;}
+.logic-num{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:var(--ac);color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;}
+.logic-arrow{color:var(--t3);text-align:center;font-size:14px;margin:2px 0;padding-left:11px;}
+
+/* ─── TRANSLATION (全文和訳) ─── */
+.tr-row{display:grid;grid-template-columns:1fr;gap:0;border-radius:var(--rl);overflow:hidden;border:.5px solid var(--bd);margin-bottom:14px;}
+.tr-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.95;padding:14px 18px;background:var(--sf);color:var(--tx);}
+.tr-jp{font-family:'Noto Sans JP',sans-serif;font-size:13.5px;line-height:2;padding:14px 18px;background:var(--s2);color:var(--tx);border-top:.5px solid var(--bd);}
+.tr-pnum{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--acd);color:#fff;font-size:10px;font-weight:700;margin-right:8px;vertical-align:middle;font-family:'Space Grotesk',sans-serif;flex-shrink:0;}
+.tr-tag{display:inline-block;font-size:10px;font-weight:700;padding:2px 9px;border-radius:4px;margin-bottom:6px;letter-spacing:.04em;}
+.tr-en em{font-style:italic;}
+.tr-jp em{font-style:normal;font-weight:700;color:var(--ac);}
+.tr-section-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.tr-section-title::before{content:"";width:24px;height:1px;background:var(--bd);}
+.tr-section-title::after{content:"";flex:1;height:1px;background:var(--bd);}
+.tr-points{margin-top:8px;padding:11px 14px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);font-size:12.5px;line-height:1.8;}
+.tr-points strong{color:var(--acd);}
+@media(min-width:720px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:.5px solid var(--bd);}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜大学入試 完全解説</div>
+      <div class="brand-s">岡山理科大学 2023年 英語 大問1</div>
+    </div>
+  </div>
+  <span class="hdr-badge">岡山理科大 2023</span>
+</div>
+
+<div class="pnav">
+  <button class="pn active" onclick="goP('p1')" id="pb1"><span class="pn-num">1</span>英文を読む</button>
+  <button class="pn" onclick="goP('p2')" id="pb2"><span class="pn-num">2</span>段落構造</button>
+  <button class="pn" onclick="goP('p3')" id="pb3"><span class="pn-num">3</span>設問(1) T/F</button>
+  <button class="pn" onclick="goP('p4')" id="pb4"><span class="pn-num">4</span>設問(2)〜(4)</button>
+  <button class="pn" onclick="goP('p5')" id="pb5"><span class="pn-num">5</span>設問(5) 記述</button>
+  <button class="pn" onclick="goP('p6')" id="pb6"><span class="pn-num">6</span>設問(6) 並べ替え</button>
+  <button class="pn" onclick="goP('p7')" id="pb7"><span class="pn-num">7</span>全文和訳</button>
+</div>
+
+<div class="wrap">
+
+<!-- ══════════ P1 英文を読む ══════════ -->
+<div class="pan active" id="p1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">岡山理科大学 2023年 大問1</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">Why Does Rain Smell So Good?<br><span style="font-size:14px;opacity:.85;">— 雨の匂いはなぜ良いのか</span></div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">「雨の匂い＝みんな好き」という共感から始まり、その匂いの正体（petrichor / geosmin / ozone）を科学的に解説。途中で「ジオスミンは味になると不快」という意外性、そして「オゾンの感じ方は人によって違う」という主観性で締める、起承転結のはっきりした科学エッセイ。</div>
+  </div>
+
+  <!-- 読む前の構造案内 -->
+  <div class="card">
+    <div class="lbl">読む前に — この文章の3つのブロック</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:8px;font-size:13px;">
+      <div style="padding:9px 12px;background:var(--rdl);border-radius:var(--r);border-left:3px solid var(--rd);"><strong>①P1〜P2（導入）</strong><br><span style="color:var(--t2);">雨の匂いはみんな好き → 香水化までされている → でもこの匂いには「petrichor」という専門用語があって、1960年代の豪科学者が研究した</span></div>
+      <div style="padding:9px 12px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);"><strong>②P3〜P4（地から来る匂い：geosmin）</strong><br><span style="color:var(--t2);">乾燥期に植物が出す油＋バクテリアが作る化学物質ジオスミン → 雨で空気中に放出される ／ ただし味としては不快</span></div>
+      <div style="padding:9px 12px;background:var(--tll);border-radius:var(--r);border-left:3px solid var(--tl);"><strong>③P5〜P6（雷雨の匂い：ozone）</strong><br><span style="color:var(--t2);">雷雨は普通の雨と違う匂い → オゾンのせい → 雷で窒素・酸素が結合してオゾンになる ／ 風で地上に押し下げられて感じられる ／ 感じ方は人それぞれ</span></div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="card">
+    <div class="lbl">本文（下線・空所番号付き）</div>
+    <div class="passage">
+
+      <p><span class="pnum">1</span>If you were to make a list of the best smells, aromas like freshly baked cookies and freshly brewed coffee would probably be on there, but there's a good chance that the sweet, earthy smell of rain would also be at or near the top of the list. Our fondness for the smell of rain is such that fragrance makers have even found a way to bottle it up for us, so we can smell <span class="ub u1">⑵⒜<strong>it</strong></span> whenever we want in perfumes, colognes, soaps and other scented products.</p>
+
+      <p><span class="pnum">2</span>The smell of rain even has its own special term — <em>petrichor</em> — first used by two Australian scientists who, in the 1960s, studied the phenomenon behind the smell. The reason rain smells has to do with biology, chemistry and timing. After a recent fall of rain, a rainstorm doesn't produce that sought-after smell so many of us have come to love. Instead, we are most likely to smell rain when it falls after a dry period.</p>
+
+      <p><span class="pnum">3</span>According to <em>Smithsonian</em> magazine, the earthy smell of rain develops because plants release oils during dry periods, and these oils then <span class="ub u4">⑷⒜<strong>accumulate</strong></span> in the soil and rocks around the plants. （ <span class="blank-box">⑶①</span> ） rain falls, the oily compounds combine with other compounds to create the smell we have all come to know. One such compound is geosmin, a chemical produced by bacteria that live in soil. When it rains, spores* produced by the bacteria are pushed up into the air, releasing the geosmin and creating that fresh, distinctive scent. The BBC has reported that geosmin can be found in most healthy soils, usually in abundant quantities. Although it's always <span class="ub u3">⑵⒝<strong>there</strong></span>, you don't smell it when it is dry because it's the rain that releases it into the air.</p>
+
+      <p><span class="pnum">4</span>Interestingly, although most people enjoy the smell of geosmin, its taste is another story. Geosmin is sometimes present in small quantities in wine and mineral water, and many people find the taste particularly unpleasant.</p>
+
+      <p><span class="pnum">5</span>（ <span class="blank-box">⑶②</span> ） you've noticed that the smell of a thunderstorm seems a bit different than just your average rainstorm, you aren't wrong. When a thunderstorm is rolling in, it sometimes seems like you can both smell and see it coming. That's because of ozone, which is a form of oxygen. <em>Scientific American</em> reports that ozone originates from natural sources as well as fertilizers and pollutants. During a storm, a lightning strike splits atmospheric nitrogen and oxygen into separate <span class="ub u4">⑷⒝<strong>particles</strong></span>, and some of these particles then combine with nitric oxide*, which can then create ozone.</p>
+
+      <p><span class="pnum">6</span>Ozone is always in the atmosphere, but we can smell it during a storm because the winds push it down to our level from higher up in the atmosphere. This is why it is possible to actually be able to smell rain coming. <span class="ub uB">⑸<em>Ozone is said to smell like different things to different people</em></span>, but it's often described as smelling sweet or clean or having a metallic odor. The word ozone is even derived from the Greek word <em>ozein</em>, which means "to smell."</p>
+
+      <p style="font-size:11px;color:var(--t2);margin-top:14px;">*spore：胞子　*nitric oxide：一酸化窒素</p>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">本文を読んだら次へ</span>
+    <button class="btnp" onclick="goP('p2')">段落構造を見る →</button>
+  </div>
+</div>
+
+<!-- ══════════ P2 段落構造 ══════════ -->
+<div class="pan" id="p2">
+  <div class="card">
+    <div class="lbl">パラグラフリーディング — 各段落の役割・主張・つながり</div>
+    <div style="font-size:12.5px;color:var(--t2);margin-bottom:14px;line-height:1.7;">この文章は<strong style="color:var(--ac);">「読み手の共感（雨の匂い好きでしょ？）」→「専門用語の登場」→「2つの匂い源（地から・空から）の科学」</strong>という流れで進む。各段落は次の段落への <strong style="color:var(--rd);">論理的な橋渡し</strong> を必ず持っている。下記の連結語に注目：</div>
+
+    <div class="pflow">
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--rd);">1</div>
+          <div class="pf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--rdl);color:var(--rd);">読者への共感づくり・導入</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「雨の匂いって最高だよね？香水にもなってるくらいだし」</div>
+          <div class="one-liner" style="background:var(--rdl);border-left-color:var(--rd);">If you were to make a list...→ 仮定法で読者を巻き込む。雨の匂いはトップクラスに好まれている例として「クッキー」「コーヒー」と並べて提示。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⑵⒜ <strong>it</strong> = the smell of rain（直前の文の主語）／ ⑴T「最も人々が好きな匂いの一つだと言うのは言い過ぎ」→ <strong>F</strong>（実際にトップ近くと書いてある）</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--am);">2</div>
+          <div class="pf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">専門用語の提示・問題の絞り込み</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「実はその匂い、petrichorって名前があって、1960年代に豪科学者が研究してるんだ」</div>
+          <div class="one-liner" style="background:var(--aml);border-left-color:var(--am);">P1の素朴な共感から、P2で<strong>研究対象</strong>として焦点を絞り直す。さらに「<strong>乾燥期後の雨</strong>でこそ匂う」という条件を提示し、P3の説明への橋を架ける。</div>
+          <div style="font-size:12px;color:var(--tl);margin-top:5px;padding:5px 10px;background:var(--tll);border-radius:5px;">⑴T「1960年代に2人のオーストラリアの科学者が雨の匂いを研究し、petrichorと呼んだ」→ <strong>T</strong>（本文と完全一致）</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--ac);">3</div>
+          <div class="pf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--acd);">第1の科学：地から — geosmin</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「乾燥期に植物の油が地面に蓄積→雨で土壌バクテリア由来のgeosminが空気に放出される」</div>
+          <div class="one-liner" style="background:var(--acl);border-left-color:var(--ac);">P2の「乾燥期後の雨」の理由を、ここで化学的に解明。<strong>According to Smithsonian magazine</strong> という出典の引用で信頼性を担保。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⑵⒝ <strong>there</strong> = in most healthy soils（地中、健康な土壌の中）／ ⑶① <strong>When</strong>（時を表す副詞節）／ ⑷⒜ <strong>accumulate</strong> = 量が時間をかけて増える</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--am);">4</div>
+          <div class="pf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">対比のひねり — 同じ物質でも別の感じ方</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「面白いのは、地中のジオスミン、匂いはいいけど味になると不快なんだ」</div>
+          <div class="one-liner" style="background:var(--aml);border-left-color:var(--am);"><strong>Interestingly, although</strong> = 譲歩のシグナル。「同じ物質に対する感じ方が、嗅覚と味覚で正反対」という意外性で読者の興味をつなぐ。後の P6（人によって匂いの感じ方が違う）と <strong>同じ「主観性」のテーマ</strong> で繋がる重要段落。</div>
+          <div style="font-size:12px;color:var(--rd);margin-top:5px;padding:5px 10px;background:var(--rdl);border-radius:5px;">⑴3「ジオスミンはワインとミネラルウォーターを美味しくする」→ <strong>F</strong>（本文は<strong>unpleasant</strong>＝不快と明記）</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">5</div>
+          <div class="pf-line" style="background:linear-gradient(var(--tl),var(--pu));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tld);">第2の科学：空から — ozone</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「もう1つの匂い源：雷雨の匂いは違う？それはオゾンのせい。雷で窒素と酸素が分かれて結合してできる」</div>
+          <div class="one-liner" style="background:var(--tll);border-left-color:var(--tl);">P3の「地から（geosmin）」に対して、ここでは<strong>「空から（ozone）」</strong>。読者を仮定で誘い込む書き出し（If you've noticed...）が巧み。<strong>Scientific American</strong> という別の出典でまた科学的根拠を示す。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⑶② <strong>If</strong>（条件を表す副詞節：「もし〜と気づいたなら、それは間違いではない」）／ ⑷⒝ <strong>particles</strong> = 微小な粒子</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--pu);">6</div>
+          <div class="pf-line" style="background:transparent;"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--pul);color:var(--pu);">補足説明・結論（語源で締める）</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「オゾンは常に大気中にあるが、嵐の風が地上まで押し下げるから嗅げる。感じ方は人による」</div>
+          <div class="one-liner" style="background:var(--pul);border-left-color:var(--pu);">P5の「オゾンとは何か」に対して、ここで「<strong>なぜ嗅げるのか</strong>（風の役割）」「<strong>どう感じるのか</strong>（人による）」を補足。最後にギリシャ語<strong>ozein（匂う）</strong>の語源で美しく締めくくる。</div>
+          <div style="font-size:12px;color:var(--rd);margin-top:5px;padding:5px 10px;background:var(--rdl);border-radius:5px;">⑴4「オゾンは常に大気中にあるからいつでも嗅げる」→ <strong>F</strong>（嵐の時に風が押し下げるから嗅げる）／⑴5「ギリシャ語ozeinがozoneの語源で『匂う』を意味する」→ <strong>T</strong>／⑸ 30行目下線部「人によって違うものに感じる」=主観性の例</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 全体ロジックマップ -->
+  <div class="card" style="background:linear-gradient(135deg,#f0ede6,#e8e4dc);">
+    <div class="lbl" style="color:var(--acd);">全体の論理構造（一望）</div>
+    <div style="font-size:13px;line-height:1.8;">
+      <div class="logic-step">
+        <div class="logic-num">1</div>
+        <div><strong>共感の獲得（P1）：</strong>「雨の匂い好きでしょ？」と読者を引き込む</div>
+      </div>
+      <div class="logic-arrow">↓ <span style="font-size:11px;color:var(--t2);">「実はこの匂い、専門用語があるんだ」と専門領域へ誘導</span></div>
+      <div class="logic-step">
+        <div class="logic-num">2</div>
+        <div><strong>研究対象としての提示（P2）：</strong>petrichor、豪科学者、「乾燥期後」の条件</div>
+      </div>
+      <div class="logic-arrow">↓ <span style="font-size:11px;color:var(--t2);">「なぜ乾燥期後？」を化学で説明</span></div>
+      <div class="logic-step">
+        <div class="logic-num">3</div>
+        <div><strong>第1の答え：地から（P3）：</strong>植物の油＋バクテリア由来のgeosmin</div>
+      </div>
+      <div class="logic-arrow">↓ <span style="font-size:11px;color:var(--t2);">Interestinglyで意外性のひねり</span></div>
+      <div class="logic-step">
+        <div class="logic-num">4</div>
+        <div><strong>対比のひねり（P4）：</strong>同じジオスミンでも、味になると不快</div>
+      </div>
+      <div class="logic-arrow">↓ <span style="font-size:11px;color:var(--t2);">「もう1つ別の匂い源があるんだ」と話題転換</span></div>
+      <div class="logic-step">
+        <div class="logic-num">5</div>
+        <div><strong>第2の答え：空から（P5）：</strong>雷で生まれるozone</div>
+      </div>
+      <div class="logic-arrow">↓ <span style="font-size:11px;color:var(--t2);">「ではなぜ嗅げる？」を補足</span></div>
+      <div class="logic-step">
+        <div class="logic-num">6</div>
+        <div><strong>結論と語源（P6）：</strong>風が押し下げる／感じ方は主観／ozein=匂う</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p1')">← 本文</button>
+    <button class="btnp" onclick="goP('p3')">設問(1) T/F →</button>
+  </div>
+</div>
+
+<!-- ══════════ P3 設問(1) T/F ══════════ -->
+<div class="pan" id="p3">
+
+  <div style="background:linear-gradient(135deg,var(--acd),#1a3354);border-radius:var(--rl);padding:18px 20px;margin-bottom:16px;color:#fff;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問(1) — 内容一致</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">本文の内容に合っていればT、合っていなければFと答える</div>
+    <div style="font-size:12px;opacity:.8;margin-top:4px;">5問。本文の該当箇所を必ず指差してから判定すること。</div>
+  </div>
+
+  <div class="score-card">
+    <div><div class="lbl" style="margin-bottom:3px;">得点</div><div class="sc-num" id="sc1">— / 5</div></div>
+    <div style="font-size:12px;color:var(--t2);text-align:right;line-height:1.7;">本文の該当箇所を<br>指差してから答える</div>
+  </div>
+
+  <!-- 問1 -->
+  <div class="qblock">
+    <span class="qnum-badge">1</span>
+    <span class="qtext">It is too much to say that the smell of rain can be listed as one of the smells people like best.</span>
+    <div class="qen" style="font-size:12.5px;color:var(--t2);">「雨の匂いが人々が最も好きな匂いの一つに挙げられると言うのは言い過ぎだ」</div>
+    <div class="tf-row" id="q1">
+      <button class="tf-btn" onclick="ch('q1','T')">T</button>
+      <button class="tf-btn" onclick="ch('q1','F')">F</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r1')">答えを見る</button>
+    <div class="ans-block" id="r1" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：F</strong><br><br>
+      <strong>本文の該当箇所（P1）：</strong><br>
+      "the sweet, earthy smell of rain would also be at or near the top of the list."<br>
+      → 雨の匂いは「リストのトップ、またはトップ近くに来るだろう」と書かれている。<br><br>
+      <strong>判定：</strong>本文は「最も好きな匂いの上位に入る」と肯定的に述べている。それを「言い過ぎ（too much to say）」とする選択肢は本文と<strong>逆の主張</strong>になる。<br><br>
+      <strong>罠の構造：</strong>選択肢の英文を表面だけ読むと「雨の匂いが好きの上位」と書いてあるように見えるが、<strong>It is too much to say that 〜</strong>＝「〜と言うのは言い過ぎだ」という否定的構文に注意。
+    </div>
+  </div>
+
+  <!-- 問2 -->
+  <div class="qblock">
+    <span class="qnum-badge">2</span>
+    <span class="qtext">In the 1960s, two Australian scientists researched the smell of rain and called it petrichor.</span>
+    <div class="qen" style="font-size:12.5px;color:var(--t2);">「1960年代に2人のオーストラリアの科学者が雨の匂いを研究し、petrichorと呼んだ」</div>
+    <div class="tf-row" id="q2">
+      <button class="tf-btn" onclick="ch('q2','T')">T</button>
+      <button class="tf-btn" onclick="ch('q2','F')">F</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r2')">答えを見る</button>
+    <div class="ans-block" id="r2" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：T</strong><br><br>
+      <strong>本文の該当箇所（P2）：</strong><br>
+      "The smell of rain even has its own special term — <em>petrichor</em> — first used by two Australian scientists who, in the 1960s, studied the phenomenon behind the smell."<br><br>
+      <strong>対応関係：</strong><br>
+      ・two Australian scientists ✓ （2人のオーストラリアの科学者）<br>
+      ・in the 1960s ✓ （1960年代）<br>
+      ・studied the phenomenon = researched the smell ✓ （研究した）<br>
+      ・<em>petrichor</em> ✓ （その名前で呼んだ）<br><br>
+      → 4つの要素すべてが本文と一致するので<strong>T</strong>。
+    </div>
+  </div>
+
+  <!-- 問3 -->
+  <div class="qblock">
+    <span class="qnum-badge">3</span>
+    <span class="qtext">Geosmin makes wine and mineral water taste better.</span>
+    <div class="qen" style="font-size:12.5px;color:var(--t2);">「ジオスミンはワインとミネラルウォーターを美味しくする」</div>
+    <div class="tf-row" id="q3">
+      <button class="tf-btn" onclick="ch('q3','T')">T</button>
+      <button class="tf-btn" onclick="ch('q3','F')">F</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r3')">答えを見る</button>
+    <div class="ans-block" id="r3" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：F</strong><br><br>
+      <strong>本文の該当箇所（P4）：</strong><br>
+      "Geosmin is sometimes present in small quantities in wine and mineral water, and many people find the taste <strong>particularly unpleasant</strong>."<br>
+      → 「多くの人がその味を<strong>特に不快</strong>と感じる」<br><br>
+      <strong>判定：</strong>選択肢は「美味しくする（taste better）」と<strong>逆のこと</strong>を言っている。<br><br>
+      <strong>罠の構造：</strong>「ワインとミネラルウォーター」というキーワードが本文にあるので、表面だけ照合すると引っかかる。本文の本当の主張＝「<strong>不快</strong>な味になる」を見落とすかが分かれ目。<br><br>
+      <strong>段落構造の鍵：</strong>P4は冒頭が <strong>"Interestingly, although most people enjoy the smell of geosmin, its taste is another story."</strong>（嗅覚は心地よいが味覚は別の話）= 対比のひねり段落であることを掴んでいれば、即座にFと判定できる。
+    </div>
+  </div>
+
+  <!-- 問4 -->
+  <div class="qblock">
+    <span class="qnum-badge">4</span>
+    <span class="qtext">Because ozone is always in the atmosphere, people can smell it anytime.</span>
+    <div class="qen" style="font-size:12.5px;color:var(--t2);">「オゾンは常に大気中にあるので、人々はいつでもそれを嗅ぐことができる」</div>
+    <div class="tf-row" id="q4">
+      <button class="tf-btn" onclick="ch('q4','T')">T</button>
+      <button class="tf-btn" onclick="ch('q4','F')">F</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r4')">答えを見る</button>
+    <div class="ans-block" id="r4" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：F</strong><br><br>
+      <strong>本文の該当箇所（P6）：</strong><br>
+      "Ozone is always in the atmosphere, but we can smell it <strong>during a storm</strong> because the winds push it down to our level from higher up in the atmosphere."<br>
+      → 「オゾンは常に大気中にあるが、<strong>嵐の時に</strong>嗅げる。なぜなら風が上から地上に押し下げるから」<br><br>
+      <strong>判定：</strong>選択肢は「常にあるから<strong>いつでも</strong>嗅げる」だが、本文は<strong>嵐の時のみ</strong>嗅げると明確に限定している。<br><br>
+      <strong>罠の構造：</strong>選択肢の前半（オゾンは常に大気中）は本文と一致するので、その流れで「だからいつでも嗅げる」という後半も正しいと早とちりしやすい。<strong>but we can smell it during a storm</strong> の but が決定的な逆接シグナル。
+    </div>
+  </div>
+
+  <!-- 問5 -->
+  <div class="qblock">
+    <span class="qnum-badge">5</span>
+    <span class="qtext">The Greek word ozein is the origin of the word ozone and it means "to smell."</span>
+    <div class="qen" style="font-size:12.5px;color:var(--t2);">「ギリシャ語のozeinがozoneという語の起源であり、『匂う』を意味する」</div>
+    <div class="tf-row" id="q5">
+      <button class="tf-btn" onclick="ch('q5','T')">T</button>
+      <button class="tf-btn" onclick="ch('q5','F')">F</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r5')">答えを見る</button>
+    <div class="ans-block" id="r5" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：T</strong><br><br>
+      <strong>本文の該当箇所（P6最終文）：</strong><br>
+      "The word ozone is even derived from the Greek word <em>ozein</em>, which means 'to smell.'"<br><br>
+      <strong>対応関係：</strong><br>
+      ・ozone <strong>is derived from</strong> the Greek word ozein = ozone is the origin of ozein... ❌ 違う！<br><br>
+      <strong>注意：</strong>本文「ozone <strong>is derived from</strong> ozein」＝「ozoneはozeinから派生した」＝「ozeinがoriginである」<br>
+      選択肢「Greek word ozein <strong>is the origin of</strong> the word ozone」＝「ozeinがozoneの起源である」<br>
+      → 主語と主述が反転して言い換えられているが、内容は<strong>同一</strong>。<br><br>
+      ・means "to smell" ✓ 一致<br><br>
+      → 全体としてTで正解。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p2')">← 段落構造</button>
+    <button class="btnp" onclick="goP('p4')">設問(2)〜(4) →</button>
+  </div>
+</div>
+
+<!-- ══════════ P4 設問(2)〜(4) ══════════ -->
+<div class="pan" id="p4">
+
+  <div style="background:linear-gradient(135deg,var(--acd),#1a3354);border-radius:var(--rl);padding:18px 20px;margin-bottom:16px;color:#fff;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問(2)〜(4)</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">指示語・空所補充・語句の意味</div>
+    <div style="font-size:12px;opacity:.8;margin-top:4px;">代名詞は必ず「直前の文」で受ける／空所は前後の論理関係で決める／語彙は文脈から推定する。</div>
+  </div>
+
+  <div class="score-card">
+    <div><div class="lbl" style="margin-bottom:3px;">得点</div><div class="sc-num" id="sc2">— / 6</div></div>
+    <div style="font-size:12px;color:var(--t2);text-align:right;line-height:1.7;">指示語・空所・語彙</div>
+  </div>
+
+  <!-- 問2(a) it -->
+  <div class="qblock">
+    <span class="qnum-badge">2a</span>
+    <span class="qtext">下線部 <strong>it</strong> が表すものとして最も適切なものは？</span>
+    <div class="qen">"so we can smell <span class="ub u1"><strong>it</strong></span> whenever we want in perfumes, colognes, soaps and other scented products" （4行目）</div>
+    <div class="choices" id="q2a">
+      <button class="cb" onclick="ch('q2a',1)"><span class="cn">1</span>the smell of rain</button>
+      <button class="cb" onclick="ch('q2a',2)"><span class="cn">2</span>our fondness</button>
+      <button class="cb" onclick="ch('q2a',3)"><span class="cn">3</span>freshly brewed coffee</button>
+      <button class="cb" onclick="ch('q2a',4)"><span class="cn">4</span>a way</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r2a')">答えを見る</button>
+    <div class="ans-block" id="r2a" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：1（the smell of rain）</strong><br><br>
+      <strong>文脈の追跡：</strong><br>
+      "Our fondness for the smell of rain is such that fragrance makers have even found a way to <strong>bottle it up</strong> for us, so we can <strong>smell it</strong> whenever we want..."<br><br>
+      → 「我々の<strong>雨の匂い</strong>への愛情ゆえに、香水業者はそれを瓶詰めにする方法すら見つけた、だから我々は望むときにいつでも<strong>それを</strong>嗅げる」<br><br>
+      <strong>論理：</strong>「瓶詰めにできるもの」「いつでも嗅げるもの」＝<strong>香り（the smell of rain）</strong>。<br><br>
+      <strong>×2 our fondness：</strong>「愛情」を瓶詰めにするのは意味不明。<br>
+      <strong>×3 coffee：</strong>P1冒頭で例示されただけで、ここで瓶詰めにされるのは雨の匂いの話。<br>
+      <strong>×4 a way：</strong>「方法を嗅ぐ」は文法的にも意味的にも不可。
+    </div>
+  </div>
+
+  <!-- 問2(b) there -->
+  <div class="qblock">
+    <span class="qnum-badge">2b</span>
+    <span class="qtext">下線部 <strong>there</strong> が表すものとして最も適切なものは？</span>
+    <div class="qen">"Although it's always <span class="ub u3"><strong>there</strong></span>, you don't smell it when it is dry" （17行目）</div>
+    <div class="choices" id="q2b">
+      <button class="cb" onclick="ch('q2b',1)"><span class="cn">1</span>in the air</button>
+      <button class="cb" onclick="ch('q2b',2)"><span class="cn">2</span>in most healthy soils</button>
+      <button class="cb" onclick="ch('q2b',3)"><span class="cn">3</span>in abundant quantities</button>
+      <button class="cb" onclick="ch('q2b',4)"><span class="cn">4</span>in that fresh, distinctive scent</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r2b')">答えを見る</button>
+    <div class="ans-block" id="r2b" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：2（in most healthy soils）</strong><br><br>
+      <strong>直前の文（P3）：</strong><br>
+      "The BBC has reported that geosmin can be found <strong>in most healthy soils</strong>, usually in abundant quantities. Although it's always <strong>there</strong>, you don't smell it when it is dry..."<br><br>
+      <strong>論理：</strong><br>
+      「ジオスミンはほとんどの健康な土壌の中に、たいてい豊富にある」→「<strong>常にそこ</strong>にあるが、乾いている時は嗅げない」<br>
+      → there＝<strong>most healthy soils（健康な土壌の中）</strong>。地中に常にあって、雨が降って初めて空気中に放出されることを述べている。<br><br>
+      <strong>×1 in the air：</strong>本文の論理は「<strong>地中</strong>にあるが、雨で空気中に放出される」という流れ。常に空気中にあるなら「乾いている時に嗅げない」理由が説明できない。<br>
+      <strong>×3 in abundant quantities：</strong>「豊富に」は量の話。場所を示す there とは合わない。<br>
+      <strong>×4 in that fresh, distinctive scent：</strong>「香りの中にある」は意味不明。
+    </div>
+  </div>
+
+  <!-- 問3① When -->
+  <div class="qblock">
+    <span class="qnum-badge">3①</span>
+    <span class="qtext">空所 <strong>① </strong> に入る最も適切な語は？</span>
+    <div class="qen">"these oils then accumulate in the soil and rocks around the plants. （ <span class="blank-box">①</span> ） rain falls, the oily compounds combine with other compounds to create the smell..."</div>
+    <div class="choices" id="q3a">
+      <button class="cb" onclick="ch('q3a',1)"><span class="cn">1</span>When</button>
+      <button class="cb" onclick="ch('q3a',2)"><span class="cn">2</span>During</button>
+      <button class="cb" onclick="ch('q3a',3)"><span class="cn">3</span>Before</button>
+      <button class="cb" onclick="ch('q3a',4)"><span class="cn">4</span>Until</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r3a')">答えを見る</button>
+    <div class="ans-block" id="r3a" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：1（When）</strong><br><br>
+      <strong>文脈：</strong><br>
+      「乾燥期に植物が油を出して、それが土壌に蓄積する」→「（  ① ）雨が降ると、油性の化合物が他の化合物と結合して匂いを生み出す」<br><br>
+      <strong>論理：</strong>これは<strong>因果関係＋時間</strong>「雨が降った<strong>とき</strong>に、結合反応が起きる」を表す副詞節。<strong>When + S V</strong>「〜するとき」が完璧に当てはまる。<br><br>
+      <strong>文法的な見極め：</strong>空所の後ろは <strong>rain falls</strong>＝「主語＋動詞」の節。だから接続詞でなければならない。<br><br>
+      <strong>×2 During：</strong>前置詞。後ろに<strong>名詞</strong>が来る（During the rain なら可）。SVの節を取れない。<br>
+      <strong>×3 Before：</strong>「雨が降る前に油性化合物が他と結合する」→ 因果関係が逆。乾燥期に蓄積し、雨で結合する流れと矛盾。<br>
+      <strong>×4 Until：</strong>「雨が降るまで結合する」→ 意味不明。
+    </div>
+  </div>
+
+  <!-- 問3② If -->
+  <div class="qblock">
+    <span class="qnum-badge">3②</span>
+    <span class="qtext">空所 <strong>② </strong> に入る最も適切な語は？</span>
+    <div class="qen">"（ <span class="blank-box">②</span> ） you've noticed that the smell of a thunderstorm seems a bit different than just your average rainstorm, you aren't wrong."</div>
+    <div class="choices" id="q3b">
+      <button class="cb" onclick="ch('q3b',1)"><span class="cn">1</span>Because</button>
+      <button class="cb" onclick="ch('q3b',2)"><span class="cn">2</span>Although</button>
+      <button class="cb" onclick="ch('q3b',3)"><span class="cn">3</span>Since</button>
+      <button class="cb" onclick="ch('q3b',4)"><span class="cn">4</span>If</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r3b')">答えを見る</button>
+    <div class="ans-block" id="r3b" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：4（If）</strong><br><br>
+      <strong>文脈：</strong><br>
+      「（  ② ）あなたが、雷雨の匂いは普通の雨と少し違うと気づいたことがあるなら、それは間違いではない」<br><br>
+      <strong>論理：</strong>これは典型的な<strong>「もし〜なら、…だ」</strong>の条件文。読者に呼びかけて議論に巻き込む書き出しのパターン。<br><br>
+      <strong>後半の <em>"you aren't wrong"</em>（あなたは間違ってない）</strong> がヒント。<br>
+      → 「もしあなたが〜と気づいたなら → あなたは間違ってない」<br>
+      この呼応が成立するのは<strong>If</strong> のみ。<br><br>
+      <strong>×1 Because/×3 Since：</strong>「気づいたから、間違っていない」→ 因果関係としておかしい（気づいたら正しいわけではない）。<br>
+      <strong>×2 Although：</strong>「〜にもかかわらず、間違っていない」→ 逆接が成立する文脈ではない。
+    </div>
+  </div>
+
+  <!-- 問4(a) accumulate -->
+  <div class="qblock">
+    <span class="qnum-badge">4a</span>
+    <span class="qtext">下線部 <strong>accumulate</strong> の意味として最も適切なものは？</span>
+    <div class="qen">"plants release oils during dry periods, and these oils then <strong>accumulate</strong> in the soil and rocks around the plants" （12行目）</div>
+    <div class="choices" id="q4a">
+      <button class="cb" onclick="ch('q4a',1)"><span class="cn">1</span>to happen faster than expected</button>
+      <button class="cb" onclick="ch('q4a',2)"><span class="cn">2</span>to refuse to accept something because it is not valid</button>
+      <button class="cb" onclick="ch('q4a',3)"><span class="cn">3</span>to increase in amount over a period of time</button>
+      <button class="cb" onclick="ch('q4a',4)"><span class="cn">4</span>to make something smaller in size and number</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r4a')">答えを見る</button>
+    <div class="ans-block" id="r4a" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：3（to increase in amount over a period of time）</strong><br><br>
+      <strong>accumulate</strong>＝「（時間をかけて）蓄積する・たまる」<br><br>
+      <strong>文脈推定：</strong>「乾燥期の間、植物が油を放出する → そしてその油が地面と岩に〜する」<br>
+      → 「期間を通じて（dry periods）」「徐々にたまっていく」イメージ。次の文で「雨が降って初めて他の化合物と結合する」と続くことから、<strong>蓄積されている状態</strong>であることが分かる。<br><br>
+      ＝ <strong>to increase in amount over a period of time</strong>（時間をかけて量が増える）と完全一致。<br><br>
+      <strong>×1：</strong>「予想より早く起こる」→ 速度の話で、量の話ではない。<br>
+      <strong>×2：</strong>「無効だから受け入れない」→ 全く関係ない（refuseの定義）。<br>
+      <strong>×4：</strong>「サイズと数を小さくする」→ 蓄積の<strong>逆</strong>。
+    </div>
+  </div>
+
+  <!-- 問4(b) particle -->
+  <div class="qblock">
+    <span class="qnum-badge">4b</span>
+    <span class="qtext">下線部 <strong>particle</strong> の意味として最も適切なものは？</span>
+    <div class="qen">"a lightning strike splits atmospheric nitrogen and oxygen into separate <strong>particles</strong>" （26行目）</div>
+    <div class="choices" id="q4b">
+      <button class="cb" onclick="ch('q4b',1)"><span class="cn">1</span>a piece of a solid material that is square in shape</button>
+      <button class="cb" onclick="ch('q4b',2)"><span class="cn">2</span>a very small piece of matter</button>
+      <button class="cb" onclick="ch('q4b',3)"><span class="cn">3</span>a chemical used for killing pests, especially insects</button>
+      <button class="cb" onclick="ch('q4b',4)"><span class="cn">4</span>a substance that consists of very small pieces of rock</button>
+    </div>
+    <button class="rev-btn" onclick="rv('r4b')">答えを見る</button>
+    <div class="ans-block" id="r4b" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：2（a very small piece of matter）</strong><br><br>
+      <strong>particle</strong>＝「微粒子・素粒子」（極めて小さい物質の単位）<br><br>
+      <strong>文脈推定：</strong>「雷が大気中の窒素と酸素を別々の<strong>particles</strong>に分裂させる」<br>
+      → 物理・化学で「窒素分子・酸素分子が分裂してできるもの」＝<strong>原子レベルの極小の粒子</strong>。<br><br>
+      ＝ <strong>a very small piece of matter</strong>（物質の極めて小さな一片）と完全一致。<br><br>
+      <strong>×1：</strong>「四角い形の固体の一片」→ 形状の指定（square）が無関係で、固体（solid）も窒素・酸素の状態と矛盾。<br>
+      <strong>×3：</strong>「害虫駆除の化学物質」→ pesticide（殺虫剤）の定義。全く別物。<br>
+      <strong>×4：</strong>「岩のとても小さな破片からなる物質」→ 「岩（rock）」が無関係。窒素・酸素は岩ではない。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p3')">← 設問(1)</button>
+    <button class="btnp" onclick="goP('p5')">設問(5) 記述 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P5 設問(5) 記述 ══════════ -->
+<div class="pan" id="p5">
+
+  <div class="card" style="background:linear-gradient(135deg,#0a1628,#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問(5) — 記述問題</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;">下線部(30行目)と同じように感じられる具体例を一つ、日本語で説明せよ</div>
+    <div style="font-size:12px;opacity:.8;">下線部の主張を「抽象→具体」で言い換える記述問題。何の話なのかを正確に掴むことが第一歩。</div>
+  </div>
+
+  <!-- 対象文 -->
+  <div class="card">
+    <div class="lbl">下線部（30行目）</div>
+    <div class="qen" style="font-size:15px;line-height:2.2;">
+      <span class="ub uB">Ozone is said to smell like different things to different people</span>
+    </div>
+
+    <!-- 抽象化 -->
+    <div style="font-size:11px;font-weight:700;color:var(--t2);letter-spacing:.08em;text-transform:uppercase;margin-top:14px;margin-bottom:8px;">下線部の意味分析</div>
+    <div class="bonebar" style="margin-bottom:12px;">
+      <div class="bb-row">
+        <span class="bbl bbs">S</span><span class="bbt">Ozone</span>
+        <span class="bbeq">+</span><span class="bbl bbv">V</span><span class="bbt">is said to smell like</span>
+        <span class="bbeq">+</span><span class="bbl bbo">O</span><span class="bbt">different things</span>
+      </div>
+      <div class="bb-row">
+        <span class="bbl" style="background:#374151;color:#fff;">to+人</span>
+        <span class="bbt">to different people</span>
+        <span class="bbj">→「人によって違う」</span>
+      </div>
+    </div>
+
+    <div class="co co-b" style="margin-bottom:14px;">
+      <div class="co-lbl">直訳</div>
+      「オゾンは、人によって違うものに匂うと言われている」
+    </div>
+
+    <div class="co co-t" style="margin-bottom:14px;">
+      <div class="co-lbl">下線部の主張（抽象化）</div>
+      <strong>同じ物事（刺激）でも、人によって感じ方・受け取り方が異なる</strong>という主観性の話。<br>
+      この後の文で「ある人には甘い、ある人には清潔な、ある人には金属的な匂いに感じられる」と続くことが、まさにその実例。
+    </div>
+
+    <!-- 自己解答入力 -->
+    <div style="font-size:12px;font-weight:700;color:var(--t2);margin-bottom:5px;margin-top:14px;">まず自分で具体例を書く（記入後に解説を見る）</div>
+    <textarea class="trans-input" id="trans-5" rows="3" placeholder="同じ〇〇でも、人によって△△の感じ方が異なる... のような形で書いてみよう"></textarea>
+    <button class="rev-btn" onclick="rv('r5')" style="margin-top:10px;">解答例・採点ポイントを見る</button>
+    <div class="ans-block" id="r5" style="background:var(--tll);border:.5px solid #6ee7b7;">
+
+      <!-- 模範解答 -->
+      <div style="padding:14px 16px;background:#0a1628;border-radius:var(--r);color:#fff;font-size:14.5px;line-height:2;margin-bottom:14px;">
+        <div style="font-size:10px;font-weight:700;color:#7fb5d8;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">解答例（旺文社）</div>
+        同じ香水でも人によってにおいの感じ方が異なり、いいにおいだと感じる人もいれば不快に感じる人もいる。
+      </div>
+
+      <!-- ほかの解答例 -->
+      <div style="padding:12px 14px;background:var(--acl);border-radius:var(--r);margin-bottom:14px;font-size:13px;line-height:1.85;">
+        <div style="font-weight:700;color:var(--ac);margin-bottom:6px;">他にもこんな解答が成立する</div>
+        <div style="margin-bottom:6px;">・<strong>味覚の例：</strong>同じパクチー（コリアンダー）を食べても、爽やかと感じる人もいれば、石鹸のような味だと感じて苦手な人もいる。</div>
+        <div style="margin-bottom:6px;">・<strong>音の例：</strong>同じクラシック音楽を聴いても、心地よいと感じる人もいれば、退屈だと感じる人もいる。</div>
+        <div>・<strong>食感の例：</strong>同じ納豆の匂いを、香ばしいと感じる人もいれば、不快な腐敗臭と感じる人もいる。</div>
+      </div>
+
+      <!-- 採点ポイント -->
+      <div class="co co-a" style="margin-bottom:0;">
+        <div class="co-lbl">採点ポイント — 必須3要素</div>
+        <div style="line-height:1.85;">
+          <strong>① 「同じ〇〇」</strong>と一つの対象を提示する → <strong>同じ刺激</strong>を共有していることを明示<br>
+          <strong>② 「人によって」</strong>の主観性を明示する → 受け手による違いを言及<br>
+          <strong>③ 「感じ方が異なる」具体的な対比</strong>を出す → 例：「いい/不快」「美味しい/不味い」「心地よい/退屈」など2つの対比を入れる
+        </div>
+      </div>
+
+      <!-- 失敗例 -->
+      <div class="co co-r" style="margin-top:10px;">
+        <div class="co-lbl">よくある失敗例</div>
+        <strong>×「人によって好きな音楽が違う」</strong>→ これは「好き嫌い」の話で、「<strong>同じ音楽の感じ方</strong>」ではない。下線部は<strong>同一の対象に対する</strong>感じ方の差異を言っているので注意。<br><br>
+        <strong>×「雨の匂いの感じ方が違う」</strong>→ 本文と同じ題材を使うのはNG。<strong>別の具体例</strong>を出す必要がある。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p4')">← 設問(2)〜(4)</button>
+    <button class="btnp" onclick="goP('p6')">設問(6) 並べ替え →</button>
+  </div>
+</div>
+
+<!-- ══════════ P6 設問(6) 並べ替え ══════════ -->
+<div class="pan" id="p6">
+
+  <div class="card" style="background:linear-gradient(135deg,#0d2d1a,#0a1628);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問(6) — 整序英作文</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;">日本文の意味とほぼ同じになるよう、語句を並べ替える</div>
+    <div style="font-size:12px;opacity:.8;">①と②の位置に入る語の番号を答える。日本文を「骨格＋肉付け」に分解してから組み立てる。</div>
+  </div>
+
+  <!-- 6(a) -->
+  <div class="card">
+    <div class="lbl">⒜ 着陸時、天候は著しく悪かったと機長は発言した。</div>
+
+    <!-- 与えられた語句 -->
+    <div style="margin-bottom:14px;">
+      <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:6px;">与えられた8語</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;">
+        <span class="wchip"><span class="wchip-num">1.</span>the weather</span>
+        <span class="wchip"><span class="wchip-num">2.</span>the pilot</span>
+        <span class="wchip"><span class="wchip-num">3.</span>been</span>
+        <span class="wchip"><span class="wchip-num">4.</span>bad</span>
+        <span class="wchip"><span class="wchip-num">5.</span>commented</span>
+        <span class="wchip"><span class="wchip-num">6.</span>extremely</span>
+        <span class="wchip"><span class="wchip-num">7.</span>that</span>
+        <span class="wchip"><span class="wchip-num">8.</span>had</span>
+      </div>
+    </div>
+
+    <!-- 構造分析 -->
+    <div style="font-size:11px;font-weight:700;color:var(--t2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">日本文の骨格分解</div>
+    <div style="background:var(--s2);border-radius:var(--r);padding:12px 14px;margin-bottom:12px;font-size:13px;line-height:1.85;">
+      <div style="margin-bottom:6px;">「機長は<strong style="color:var(--ac);">発言した</strong>」→ <strong>主節</strong>：the pilot commented</div>
+      <div style="margin-bottom:6px;">「<strong style="color:var(--am);">〜と</strong>発言した」→ <strong>that 節</strong>を導く</div>
+      <div style="margin-bottom:6px;">「（着陸時）天候は<strong style="color:var(--rd);">著しく悪かった</strong>」→ <strong>that 節の中身</strong>：the weather had been extremely bad</div>
+      <div style="font-size:12px;color:var(--rd);font-weight:700;margin-top:8px;">時制のポイント：「発言した」は過去形。「天候が悪かった」は<strong>その発言時点よりさらに前</strong>（着陸時＝過去のさらに過去）→ <strong>過去完了 had been</strong> を使う。</div>
+    </div>
+
+    <!-- 完成 -->
+    <button class="rev-btn" onclick="rv('r6a')">並べ替えを見る</button>
+    <div class="ans-block" id="r6a" style="background:var(--tll);border:.5px solid #6ee7b7;">
+
+      <div style="font-size:11px;font-weight:700;color:var(--tld);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">完成文</div>
+
+      <!-- 完成文表示 -->
+      <div style="padding:14px 16px;background:#0a1628;border-radius:var(--r);color:#fff;font-size:15px;line-height:2;margin-bottom:14px;font-family:'Source Serif 4',serif;">
+        When the aircraft landed, <span style="color:#fbbf24;font-weight:700;">the pilot</span> <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;">[①commented]</span> <span style="color:#fbbf24;font-weight:700;">that the weather had</span> <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;">[②been]</span> <span style="color:#fbbf24;font-weight:700;">extremely bad</span>.
+      </div>
+
+      <!-- 並び順 -->
+      <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:8px;">並び順（左から）</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+        <span class="wchip used"><span class="wchip-num">2</span>the pilot</span>
+        <span class="wchip used" style="background:var(--rdl);border-color:var(--rd);"><span class="wchip-num" style="color:var(--rd);">①=5</span>commented</span>
+        <span class="wchip used"><span class="wchip-num">7</span>that</span>
+        <span class="wchip used"><span class="wchip-num">1</span>the weather</span>
+        <span class="wchip used"><span class="wchip-num">8</span>had</span>
+        <span class="wchip used" style="background:var(--rdl);border-color:var(--rd);"><span class="wchip-num" style="color:var(--rd);">②=3</span>been</span>
+        <span class="wchip used"><span class="wchip-num">6</span>extremely</span>
+        <span class="wchip used"><span class="wchip-num">4</span>bad</span>
+      </div>
+
+      <!-- 解答 -->
+      <div style="display:flex;gap:10px;margin-bottom:14px;">
+        <div style="flex:1;padding:12px;background:var(--rdl);border-radius:var(--r);text-align:center;border:.5px solid var(--rd);">
+          <div style="font-size:10px;color:var(--rd);font-weight:700;margin-bottom:3px;">①</div>
+          <div style="font-size:18px;font-weight:700;color:var(--rd);font-family:'Space Grotesk',sans-serif;">5</div>
+          <div style="font-size:12px;color:var(--rd);">commented</div>
+        </div>
+        <div style="flex:1;padding:12px;background:var(--rdl);border-radius:var(--r);text-align:center;border:.5px solid var(--rd);">
+          <div style="font-size:10px;color:var(--rd);font-weight:700;margin-bottom:3px;">②</div>
+          <div style="font-size:18px;font-weight:700;color:var(--rd);font-family:'Space Grotesk',sans-serif;">3</div>
+          <div style="font-size:12px;color:var(--rd);">been</div>
+        </div>
+      </div>
+
+      <!-- 構文解説 -->
+      <div class="co co-b" style="margin-bottom:10px;">
+        <div class="co-lbl">構文ポイント①：comment that SV</div>
+        <strong>comment</strong>＝「（自分の意見・観察を）述べる、論評する」<br>
+        ※ <strong>say that SV</strong> や <strong>state that SV</strong> と同じく、that 節を取って「〜と発言する」の意味になる動詞。<br>
+        例：The pilot commented that the weather had been bad.（機長は天候が悪かったと述べた）
+      </div>
+
+      <div class="co co-a" style="margin-bottom:10px;">
+        <div class="co-lbl">構文ポイント②：時制の一致＋大過去</div>
+        ・主節 <strong>commented</strong>（過去形）<br>
+        ・that 節の中：「commented した時点よりも<strong>さらに前</strong>」の出来事 → <strong>過去完了（had + 過去分詞）</strong>＝「大過去」<br><br>
+        本問では：機長が「発言した」のは着陸後。天候が「悪かった」のは<strong>着陸前＝発言時点より前</strong>の状態。<br>
+        → had been（過去完了）<br><br>
+        この had + 過去分詞のセットが見抜ければ、had と been の組み合わせは自動的に決まる。
+      </div>
+
+      <div class="co co-p">
+        <div class="co-lbl">語の機能による分類</div>
+        <strong>動詞要員：</strong>commented（主動詞）／had been（that節内の動詞句）<br>
+        <strong>名詞要員：</strong>the pilot（主語）／the weather（that節内の主語）<br>
+        <strong>接続詞：</strong>that（「〜ということ」を導く）<br>
+        <strong>形容詞・副詞：</strong>bad（補語）／extremely（副詞、badを修飾）<br><br>
+        この分類を最初にやれば、骨格は <strong>S+V+that+S+V+補語</strong> と即座に確定する。
+      </div>
+    </div>
+  </div>
+
+  <!-- 6(b) -->
+  <div class="card">
+    <div class="lbl">⒝ 環境活動家として、教授は環境問題の解決に全身全霊をかける決意をした。</div>
+
+    <!-- 与えられた語句 -->
+    <div style="margin-bottom:14px;">
+      <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:6px;">与えられた8語句</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;">
+        <span class="wchip"><span class="wchip-num">1.</span>solving</span>
+        <span class="wchip"><span class="wchip-num">2.</span>to</span>
+        <span class="wchip"><span class="wchip-num">3.</span>the problem</span>
+        <span class="wchip"><span class="wchip-num">4.</span>the professor</span>
+        <span class="wchip"><span class="wchip-num">5.</span>his energies</span>
+        <span class="wchip"><span class="wchip-num">6.</span>to devote</span>
+        <span class="wchip"><span class="wchip-num">7.</span>all</span>
+        <span class="wchip"><span class="wchip-num">8.</span>determined</span>
+      </div>
+    </div>
+
+    <!-- 構造分析 -->
+    <div style="font-size:11px;font-weight:700;color:var(--t2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">日本文の骨格分解</div>
+    <div style="background:var(--s2);border-radius:var(--r);padding:12px 14px;margin-bottom:12px;font-size:13px;line-height:1.85;">
+      <div style="margin-bottom:6px;">「教授は<strong style="color:var(--ac);">決意をした</strong>」→ <strong>主節</strong>：the professor determined</div>
+      <div style="margin-bottom:6px;">「（決意の内容）<strong style="color:var(--am);">〜することを</strong>」→ <strong>to不定詞</strong>を続ける：to devote ...</div>
+      <div style="margin-bottom:6px;">「<strong style="color:var(--rd);">全身全霊（=全エネルギー）を</strong>かける」→ devote の<strong>目的語</strong>：all his energies</div>
+      <div style="margin-bottom:6px;">「環境問題の<strong style="color:var(--pu);">解決<strong>に</strong></strong>」→ <strong>devote A to B</strong> の B：to solving the problem</div>
+      <div style="font-size:12px;color:var(--rd);font-weight:700;margin-top:8px;">2つの落とし穴：①「決意した」=<strong>determined</strong>（過去形）／ devote の to は<strong>前置詞</strong>なので後ろは<strong>動名詞 solving</strong>。to不定詞ではない！</div>
+    </div>
+
+    <!-- 完成 -->
+    <button class="rev-btn" onclick="rv('r6b')">並べ替えを見る</button>
+    <div class="ans-block" id="r6b" style="background:var(--tll);border:.5px solid #6ee7b7;">
+
+      <div style="font-size:11px;font-weight:700;color:var(--tld);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">完成文</div>
+
+      <!-- 完成文表示 -->
+      <div style="padding:14px 16px;background:#0a1628;border-radius:var(--r);color:#fff;font-size:15px;line-height:2;margin-bottom:14px;font-family:'Source Serif 4',serif;">
+        As an environmental activist, <span style="color:#fbbf24;font-weight:700;">the professor</span> <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;">[①determined]</span> <span style="color:#fbbf24;font-weight:700;">to devote all his energies</span> <span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:4px;font-weight:700;">[②to]</span> <span style="color:#fbbf24;font-weight:700;">solving the problem</span>.
+      </div>
+
+      <!-- 並び順 -->
+      <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:8px;">並び順（左から）</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;">
+        <span class="wchip used"><span class="wchip-num">4</span>the professor</span>
+        <span class="wchip used" style="background:var(--rdl);border-color:var(--rd);"><span class="wchip-num" style="color:var(--rd);">①=8</span>determined</span>
+        <span class="wchip used"><span class="wchip-num">6</span>to devote</span>
+        <span class="wchip used"><span class="wchip-num">7</span>all</span>
+        <span class="wchip used"><span class="wchip-num">5</span>his energies</span>
+        <span class="wchip used" style="background:var(--rdl);border-color:var(--rd);"><span class="wchip-num" style="color:var(--rd);">②=2</span>to</span>
+        <span class="wchip used"><span class="wchip-num">1</span>solving</span>
+        <span class="wchip used"><span class="wchip-num">3</span>the problem</span>
+      </div>
+
+      <!-- 解答 -->
+      <div style="display:flex;gap:10px;margin-bottom:14px;">
+        <div style="flex:1;padding:12px;background:var(--rdl);border-radius:var(--r);text-align:center;border:.5px solid var(--rd);">
+          <div style="font-size:10px;color:var(--rd);font-weight:700;margin-bottom:3px;">①</div>
+          <div style="font-size:18px;font-weight:700;color:var(--rd);font-family:'Space Grotesk',sans-serif;">8</div>
+          <div style="font-size:12px;color:var(--rd);">determined</div>
+        </div>
+        <div style="flex:1;padding:12px;background:var(--rdl);border-radius:var(--r);text-align:center;border:.5px solid var(--rd);">
+          <div style="font-size:10px;color:var(--rd);font-weight:700;margin-bottom:3px;">②</div>
+          <div style="font-size:18px;font-weight:700;color:var(--rd);font-family:'Space Grotesk',sans-serif;">2</div>
+          <div style="font-size:12px;color:var(--rd);">to</div>
+        </div>
+      </div>
+
+      <!-- 構文解説 -->
+      <div class="co co-b" style="margin-bottom:10px;">
+        <div class="co-lbl">構文ポイント①：determine to do</div>
+        <strong>determine to do</strong>＝「〜することを決意する」<br>
+        ※ <strong>decide to do</strong> や <strong>resolve to do</strong> と同様、後ろに to不定詞を取って「〜しようと決める」という意味の動詞。<br>
+        ・The professor determined <strong>to devote</strong> ...（教授は捧げることを決意した）<br><br>
+        ※今回は1人の主語が自発的に決意するので <strong>determined</strong>（自動詞・過去形）。なお、be determined to do（〜する決心がついている）という形もあり、両方OK。
+      </div>
+
+      <div class="co co-a" style="margin-bottom:10px;">
+        <div class="co-lbl">構文ポイント②：devote A to B（最重要）</div>
+        <strong>devote A to B</strong>＝「AをBに捧げる・注ぐ」<br>
+        ・A＝all his energies（全エネルギー＝全身全霊）<br>
+        ・B＝solving the problem（問題を解決すること）<br><br>
+        <strong style="color:var(--rd);">⚠️ ここの to は前置詞！</strong><br>
+        前置詞 <strong>to</strong> の後ろは<strong>名詞または動名詞</strong>。<br>
+        → 動詞 solve ではなく、動名詞 <strong>solving</strong> が来る。<br><br>
+        この構文の to は to不定詞の to ではなく、<strong>方向・対象を示す前置詞</strong>。同じパターンの動詞：<br>
+        ・dedicate A to B-ing（AをBすることに捧げる）<br>
+        ・commit oneself to B-ing（〜することに専念する）<br>
+        ・look forward to B-ing（〜することを楽しみにする）
+      </div>
+
+      <div class="co co-p">
+        <div class="co-lbl">語の機能による分類</div>
+        <strong>動詞要員：</strong>determined（主動詞・過去形）／to devote（不定詞）／solving（動名詞）<br>
+        <strong>名詞要員：</strong>the professor（主語）／all his energies（devoteの目的語）／the problem（solvingの目的語）<br>
+        <strong>前置詞：</strong>to（devote A <strong>to</strong> B のto）<br>
+        <strong>限定詞：</strong>all（his energiesを修飾）<br><br>
+        ※ to が2つあることに注意。1つは to devote（to不定詞）、もう1つは devote A <strong>to</strong> B（前置詞）。前者は名詞句直前、後者は動名詞 solving の直前に置く。
+      </div>
+    </div>
+  </div>
+
+  <!-- 総まとめ -->
+  <div class="card" style="border-color:#9fe1cb;background:var(--tll);margin-top:20px;">
+    <div class="lbl" style="color:var(--tld);">この試験から学ぶ — 岡山理科大の出題傾向</div>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--ac);">
+        <strong>段落構造の追跡が全問の土台：</strong>「導入（共感）→専門用語→第1の科学（地）→ひねり→第2の科学（空）→結論」という流れを掴んでいれば、(1)のT/F は本文に立ち戻る前に8割方判定できる。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--am);">
+        <strong>指示語は直前1〜2文：</strong>(2)の it・there のような代名詞・指示副詞は、必ず<strong>直前1〜2文</strong>を見て決まる。<strong>意味的に成立するか</strong>と<strong>文法的に正しいか</strong>の両方を確認する。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--tl);">
+        <strong>語彙問題は文脈推定：</strong>(4)の accumulate / particle のような語彙は、知らなくても<strong>前後の動詞・名詞の流れ</strong>から意味を絞り込める。「乾燥期に油が地面に〜する」→「蓄積する」と推定する練習を。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--pu);">
+        <strong>整序英作文は骨格→肉付け：</strong>(6)では日本文を「主節（誰がどうした）→従属節（何を）→修飾語（どのように）」に分解。動詞同士の組み合わせ（comment that / determine to do / devote to V-ing）を覚えていれば、語の配置はほぼ自動的に決まる。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p5')">← 設問(5) 記述</button>
+    <button class="btnp" onclick="goP('p7')">全文和訳 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P7 全文和訳 ══════════ -->
+<div class="pan" id="p7">
+
+  <div class="card" style="background:linear-gradient(135deg,#0a1628,#1a3354);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">FULL TRANSLATION</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">全文和訳<br><span style="font-size:13px;opacity:.85;font-weight:400;">— 英文と訳を一文ずつ照合できる対訳形式</span></div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">原文の構造をできるだけ保ちながら、自然な日本語に訳した完訳。各段落の末尾に <strong>訳のポイント</strong> を付記しているので、仮定法・分詞構文・関係詞・<em>such...that</em>構文などの構造把握ポイントを自分の訳と照らし合わせて確認できる。</div>
+  </div>
+
+  <!-- ─── タイトルの和訳 ─── -->
+  <div class="card">
+    <div class="tr-section-title">タイトル</div>
+    <div class="tr-row">
+      <div class="tr-en">
+        <em><strong>Why Does Rain Smell So Good?</strong></em>
+      </div>
+      <div class="tr-jp">
+        <strong>雨はなぜこんなにいい匂いがするのか？</strong>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── 第1段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">1</span>
+      <span style="margin-left:6px;">第1段落 — 読者への共感（雨の匂いはみんな好き）</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        If you were to make a list of the best smells, aromas like freshly baked cookies and freshly brewed coffee would probably be on there, but there's a good chance that the sweet, earthy smell of rain would also be at or near the top of the list. Our fondness for the smell of rain is such that fragrance makers have even found a way to bottle it up for us, so we can smell it whenever we want in perfumes, colognes, soaps and other scented products.
+      </div>
+      <div class="tr-jp">
+        もし最高の匂いのリストを作るとしたら、焼きたてのクッキーや淹れたてのコーヒーのような香りはおそらくそこに入るだろう。しかし、あの<em>甘く、土の香りのする雨の匂い</em>もまた、リストの一番上、もしくはその近くに入る可能性が十分にある。私たちの雨の匂いに対する愛情はあまりにも強く、香水業者がその匂いを瓶詰めにする方法すら見つけてしまったほどである。おかげで私たちは、香水、コロン、石鹸、その他の香り製品を通じて、いつでも好きなときに雨の匂いを嗅ぐことができる。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>If you were to make ... would be</strong>（仮定法）→「もし〜するとしたら〜だろう」。実際にはリストを作っていない仮想の状況。<br>
+      ② <strong>Our fondness ... is such that ...</strong>（such ... that 構文）→「〜の度合いは、…するほどである」。「あまりに〜なので…」と訳すと自然。<br>
+      ③ <strong>bottle it up</strong>＝「瓶詰めにする」（itは雨の匂い）。<br>
+      ④ <strong>so we can smell it</strong>＝結果を表す so。「だから〜できる」。
+    </div>
+  </div>
+
+  <!-- ─── 第2段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">2</span>
+      <span style="margin-left:6px;">第2段落 — 専門用語petrichorと条件の絞り込み</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        The smell of rain even has its own special term — <em>petrichor</em> — first used by two Australian scientists who, in the 1960s, studied the phenomenon behind the smell. The reason rain smells has to do with biology, chemistry and timing. After a recent fall of rain, a rainstorm doesn't produce that sought-after smell so many of us have come to love. Instead, we are most likely to smell rain when it falls after a dry period.
+      </div>
+      <div class="tr-jp">
+        雨の匂いには、専用の特別な用語すら存在する——<em>petrichor</em>（ペトリコール）だ。これは1960年代に、その匂いの背後にある現象を研究した2人のオーストラリアの科学者によって、最初に用いられた語である。雨が匂う理由は、<em>生物学、化学、そしてタイミング</em>と関係している。直近で雨が降った後では、新たな雨嵐は、私たちの多くが愛するようになったあの待ち望まれた匂いを生み出さない。むしろ、雨の匂いを最も嗅ぎやすいのは、<em>乾燥期の後に</em>雨が降ったときである。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>even has its own special term</strong>（強調のeven）→「専用の用語<strong>すら</strong>持つ」。<br>
+      ② <strong>first used by two Australian scientists who, in the 1960s, studied ...</strong>＝過去分詞＋関係代名詞who節の二重修飾。「1960年代にその現象を研究した2人の豪科学者によって最初に使われた」と整理。<br>
+      ③ <strong>has to do with</strong>＝「〜と関係がある」。<br>
+      ④ <strong>that sought-after smell so many of us have come to love</strong>＝「私たちの多くが愛するようになった、あの待望の匂い」。<strong>come to do</strong>「〜するようになる」が含意する「変化」を訳に出す。<br>
+      ⑤ <strong>are most likely to smell</strong>＝「嗅ぐ可能性が最も高い」。
+    </div>
+  </div>
+
+  <!-- ─── 第3段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">3</span>
+      <span style="margin-left:6px;">第3段落 — 第1の答え：地から（geosmin）</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        According to <em>Smithsonian</em> magazine, the earthy smell of rain develops because plants release oils during dry periods, and these oils then accumulate in the soil and rocks around the plants. When rain falls, the oily compounds combine with other compounds to create the smell we have all come to know. One such compound is geosmin, a chemical produced by bacteria that live in soil. When it rains, spores* produced by the bacteria are pushed up into the air, releasing the geosmin and creating that fresh, distinctive scent. The BBC has reported that geosmin can be found in most healthy soils, usually in abundant quantities. Although it's always there, you don't smell it when it is dry because it's the rain that releases it into the air.
+      </div>
+      <div class="tr-jp">
+        『スミソニアン』誌によれば、雨の土っぽい匂いが生まれるのは、植物が乾燥期の間に油を放出し、それらの油が植物の周りの土壌や岩に<em>蓄積する</em>からである。雨が降ると、その油性の化合物が他の化合物と結合し、私たちみんなが知るようになったあの匂いを生み出す。そうした化合物の一つが<em>ジオスミン</em>であり、これは土壌に住むバクテリアによって生み出される化学物質である。雨が降ると、そのバクテリアによって作られた胞子が空中へと押し上げられ、ジオスミンを放出して、あの新鮮で独特な香りを生み出す。BBCの報じるところによれば、ジオスミンはほとんどの健全な土壌の中に、たいてい豊富な量で見つけることができる。常にそこ（＝土壌の中）に存在しているにもかかわらず、乾いている時に嗅ぐことができないのは、それを空気中に放出するのが雨だからである。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>develops because ...</strong>＝「〜だから（その匂いが）生まれる」。develop は「発生する・生じる」の意味。<br>
+      ② <strong>the smell we have all come to know</strong>＝関係詞節（that省略）＋現在完了。「私たちみんなが知るようになった匂い」。<br>
+      ③ <strong>spores produced by the bacteria are pushed up</strong>＝過去分詞の修飾＋受動態。「バクテリアによって作られた胞子が押し上げられる」。<br>
+      ④ <strong>releasing the geosmin and creating ...</strong>＝分詞構文（付帯状況）。「〜しながら、〜を生み出す」と並行的に訳す。<br>
+      ⑤ <strong>it's the rain that releases it into the air</strong>＝強調構文（It is 〜 that ...）。「それを空気中に放出するのは<strong>雨</strong>なのだ」と「雨」を強調。
+    </div>
+  </div>
+
+  <!-- ─── 第4段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">4</span>
+      <span style="margin-left:6px;">第4段落 — 対比のひねり：嗅覚と味覚は別の話</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Interestingly, although most people enjoy the smell of geosmin, its taste is another story. Geosmin is sometimes present in small quantities in wine and mineral water, and many people find the taste particularly unpleasant.
+      </div>
+      <div class="tr-jp">
+        興味深いことに、ほとんどの人がジオスミンの匂いを楽しむ一方で、その<em>味</em>となると話は別である。ジオスミンはワインやミネラルウォーターに少量含まれていることがあり、多くの人がその味を<em>特に不快</em>に感じる。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>Interestingly, although ...</strong>＝文頭の副詞＋譲歩節。「興味深いことに〜だけれども」。<br>
+      ② <strong>its taste is another story</strong>＝慣用表現「〜は別の話だ」。直訳「別の物語」よりも「話は別」のほうが自然。<br>
+      ③ <strong>find the taste particularly unpleasant</strong>＝<strong>find O C</strong>「OをCだと感じる」の形。「その味を特に不快だと感じる」。
+    </div>
+  </div>
+
+  <!-- ─── 第5段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">5</span>
+      <span style="margin-left:6px;">第5段落 — 第2の答え：空から（ozone）</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        If you've noticed that the smell of a thunderstorm seems a bit different than just your average rainstorm, you aren't wrong. When a thunderstorm is rolling in, it sometimes seems like you can both smell and see it coming. That's because of ozone, which is a form of oxygen. <em>Scientific American</em> reports that ozone originates from natural sources as well as fertilizers and pollutants. During a storm, a lightning strike splits atmospheric nitrogen and oxygen into separate particles, and some of these particles then combine with nitric oxide*, which can then create ozone.
+      </div>
+      <div class="tr-jp">
+        雷雨の匂いが、ただの普通の雨嵐とは少し違うように感じられたことがあるなら、その感覚は<em>間違いではない</em>。雷雨が近づいてきているときには、その到来を匂いと視覚の両方で感じ取れるように思えることがある。それは<em>オゾン</em>のせいで、オゾンは酸素の一形態である。『サイエンティフィック・アメリカン』誌の報じるところによれば、オゾンは自然由来のものに加えて、肥料や汚染物質からも生じる。嵐の最中、落雷は大気中の窒素と酸素を別々の粒子へと分解し、そのうちのいくつかが<em>一酸化窒素</em>と結合し、それがオゾンを生み出すことがある。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>If you've noticed that ..., you aren't wrong</strong>＝条件節＋現在完了。「〜と気づいたことがあるなら、それは間違いではない」と読者に呼びかける構文。<br>
+      ② <strong>seems a bit different than ...</strong>＝口語的な比較。標準的には<em>different from</em>だが、ここでは<em>different than</em>。<br>
+      ③ <strong>it sometimes seems like you can both smell and see it coming</strong>＝<strong>it seems like SV</strong>「〜のように思える」＋<strong>see/smell + O + 〜ing</strong>「Oが〜するのを見る／嗅ぐ」。「雷雨が来るのを匂いと視覚で感じ取れる」。<br>
+      ④ <strong>which is a form of oxygen</strong>＝非制限用法の関係代名詞。「そしてそれは酸素の一形態である」と補足説明。<br>
+      ⑤ <strong>A as well as B</strong>＝「BだけでなくAも」。<strong>A</strong>のほうに重点。<br>
+      ⑥ <strong>splits A into B</strong>＝「AをBに分解する」。<strong>combine with</strong>＝「〜と結合する」。
+    </div>
+  </div>
+
+  <!-- ─── 第6段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">6</span>
+      <span style="margin-left:6px;">第6段落 — 結論と語源（ozein = to smell）</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Ozone is always in the atmosphere, but we can smell it during a storm because the winds push it down to our level from higher up in the atmosphere. This is why it is possible to actually be able to smell rain coming. Ozone is said to smell like different things to different people, but it's often described as smelling sweet or clean or having a metallic odor. The word ozone is even derived from the Greek word <em>ozein</em>, which means "to smell."
+      </div>
+      <div class="tr-jp">
+        オゾンは常に大気中に存在しているが、嵐の最中にそれを嗅ぐことができるのは、風が大気の高い場所から私たちのいる高さまでオゾンを<em>押し下げてくれる</em>からだ。これが、雨が来るのを実際に匂いで感じ取ることが可能である理由である。オゾンは<em>人によって違うものに匂う</em>と言われているが、<em>甘い</em>匂い、<em>清潔な</em>匂い、あるいは<em>金属的な</em>匂いがするものと表現されることが多い。オゾン（ozone）という語は、「<em>匂う</em>」を意味するギリシャ語の <em>ozein</em>（オゼイン）にすら由来している。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>push it down to our level</strong>＝「私たちの高さまで（オゾンを）押し下げる」。<strong>level</strong>＝「（地上付近の）高さ・水準」。<br>
+      ② <strong>This is why ...</strong>＝「これが〜の理由である」（結果を導く）。⇔ <em>This is because ...</em>「これは〜のせいである」（原因を導く）と区別。<br>
+      ③ <strong>be said to do</strong>＝「〜すると言われている」。<br>
+      ④ <strong>different things to different people</strong>＝「人によって違うもの」（直訳：違う人に違うもの）。「人それぞれ」という主観性を表す表現。<br>
+      ⑤ <strong>be described as 〜ing / having ...</strong>＝「〜していると／〜を持っていると評される」。受動態 + 〜ing。<br>
+      ⑥ <strong>be derived from</strong>＝「〜に由来する」。<strong>even</strong>「〜にすら」で語源にまで遡る話の意外性を演出。<br>
+      ⑦ <strong>which means "to smell"</strong>＝非制限用法の関係代名詞。「そしてそれは『匂う』を意味する」。
+    </div>
+  </div>
+
+  <!-- ─── 文章全体の流れ振り返り ─── -->
+  <div class="card" style="background:linear-gradient(135deg,var(--tll),#e0f7ee);border-color:#9fe1cb;">
+    <div class="lbl" style="color:var(--tld);">和訳を通して見える文章全体の流れ</div>
+    <div style="font-size:13px;line-height:1.85;color:var(--tld);">
+      <p style="margin-bottom:10px;">この英文は、<strong>「雨の匂いって最高だよね？」</strong>という親しみやすい問いから始まり、<strong>「実はその匂いには専門用語があって、化学的にも面白い理由があるんだ」</strong>と読者を専門的な議論へと自然に誘導する、典型的な科学エッセイの構造を持っている。</p>
+      <p style="margin-bottom:10px;"><strong>P3で「地から（ジオスミン）」</strong>という第1の答えを提示し、<strong>P4で「ただし味になると不快」</strong>という意外性のひねりを入れた後、<strong>P5で「空から（オゾン）」</strong>という第2の答えへと展開する。最後の<strong>P6では「ozein（匂う）」というギリシャ語の語源</strong>で美しく締めくくる。</p>
+      <p style="margin-bottom:0;">和訳ができれば終わりではない。<strong>各段落がどう前後とつながっているか</strong>（具体例→専門用語→第1の科学→ひねり→第2の科学→結論＋語源）まで掴めて初めて、文章を「読めた」と言える。</p>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p6')">← 設問(6) 並べ替え</button>
+    <button class="btnp" onclick="goP('p1')">最初から復習 ↺</button>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// answers
+var ans={
+  q1:'F',q2:'T',q3:'F',q4:'F',q5:'T',
+  q2a:1,q2b:2,q3a:1,q3b:4,q4a:3,q4b:2
+};
+var selMap={};
+var revealed={};
+
+function goP(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.pn').forEach(function(b){b.classList.remove('active');});
+  var idx={p1:0,p2:1,p3:2,p4:3,p5:4,p6:5,p7:6};
+  var btns=document.querySelectorAll('.pn');
+  if(btns[idx[id]])btns[idx[id]].classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function ch(qid,n){
+  selMap[qid]=n;
+  // T/F questions
+  if(n==='T'||n==='F'){
+    document.querySelectorAll('#'+qid+' .tf-btn').forEach(function(b){b.classList.remove('sel','ok','ng');});
+    document.querySelectorAll('#'+qid+' .tf-btn').forEach(function(b){
+      if(b.textContent===n)b.classList.add('sel');
+    });
+  } else {
+    // multiple choice
+    document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+    var btns=document.querySelectorAll('#'+qid+' .cb');
+    if(btns[n-1])btns[n-1].classList.add('sel');
+  }
+}
+
+function rv(rid){
+  var el=document.getElementById(rid);
+  if(!el)return;
+  el.classList.add('show');
+  var qid=rid.replace('r','q');
+  if(ans[qid]!==undefined){
+    var c=ans[qid],my=selMap[qid];
+    if(typeof c==='string'){
+      // T/F
+      document.querySelectorAll('#'+qid+' .tf-btn').forEach(function(b){
+        b.classList.remove('sel','ok','ng');
+        if(b.textContent===c)b.classList.add('ok');
+        if(my&&b.textContent===my&&my!==c)b.classList.add('ng');
+      });
+    } else {
+      // MC
+      document.querySelectorAll('#'+qid+' .cb').forEach(function(b,i){
+        b.classList.remove('sel','ok','ng');
+        if(i+1===c)b.classList.add('ok');
+        if(my&&i+1===my&&my!==c)b.classList.add('ng');
+      });
+    }
+  }
+  if(!revealed[rid]){
+    revealed[rid]=true;
+    updateScores();
+  }
+}
+
+function updateScores(){
+  // P3: T/F (q1-q5)
+  var c1=0,t1=0;
+  ['q1','q2','q3','q4','q5'].forEach(function(q){
+    var r='r'+q.replace('q','');
+    if(revealed[r]){t1++;if(selMap[q]===ans[q])c1++;}
+  });
+  var s1=document.getElementById('sc1');
+  if(s1){s1.textContent=c1+' / '+t1;s1.style.color=c1===t1&&t1>0?'var(--tl)':c1>=t1*.6?'var(--am)':'var(--rd)';}
+  // P4: MC (q2a,q2b,q3a,q3b,q4a,q4b) — 6問
+  var c2=0,t2=0;
+  ['q2a','q2b','q3a','q3b','q4a','q4b'].forEach(function(q){
+    var r='r'+q.replace('q','');
+    if(revealed[r]){t2++;if(selMap[q]===ans[q])c2++;}
+  });
+  var s2=document.getElementById('sc2');
+  if(s2){s2.textContent=c2+' / '+t2;s2.style.color=c2===t2&&t2>0?'var(--tl)':c2>=t2*.6?'var(--am)':'var(--rd)';}
+}
+</script>
+</body>
+</html>

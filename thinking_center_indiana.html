@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>センター試験 インディアナ州の時間帯｜完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+/* ─── HEADER ─── */
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+/* ─── TAB NAV ─── */
+.tnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.tn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.tn:hover{color:var(--tx);}
+.tn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.tn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.tn.active .tn-num{background:var(--ac);color:#fff;}
+.tn.done .tn-num{background:var(--tl);color:#fff;}
+.tn.done{color:var(--tl);}
+
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* PHASE */
+.ph{display:none;}
+.ph.show{display:block;animation:fi .3s ease;}
+.ph-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:20px;font-size:11.5px;font-weight:700;margin-bottom:14px;}
+.ph1{background:var(--acl);color:var(--acd);}
+.ph2{background:var(--aml);color:var(--amd);}
+.ph3{background:var(--tll);color:var(--tld);}
+
+/* CARD */
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* PASSAGE */
+.passage{font-family:'Source Serif 4',serif;font-size:15px;line-height:2.25;color:var(--tx);}
+.passage p{margin-bottom:.85em;}
+.bl{display:inline-flex;align-items:center;justify-content:center;min-width:46px;padding:1px 8px;background:var(--acd);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;border-radius:4px;margin:0 3px;vertical-align:middle;}
+.hl-k{background:#fff3cd;border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-sig{color:var(--rd);font-weight:700;background:var(--rdl);border-radius:2px;padding:0 2px;}
+.hl-tl{color:var(--tld);font-weight:700;background:var(--tll);border-radius:2px;padding:0 2px;}
+.hl-ac{color:var(--acd);font-weight:700;background:var(--acl);border-radius:2px;padding:0 2px;}
+.hl-am{color:var(--amd);font-weight:700;background:var(--aml);border-radius:2px;padding:0 2px;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--acd);color:#fff;font-size:9px;font-weight:700;margin-right:3px;vertical-align:middle;font-family:'Noto Sans JP',sans-serif;}
+
+/* MAP SVG */
+.map-wrap{background:var(--s2);border-radius:var(--rl);padding:16px;border:.5px solid var(--bd);margin:12px 0;}
+.map-title{font-size:11px;font-weight:700;color:var(--t2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;}
+
+/* LOGIC FLOW */
+.lflow{display:flex;flex-direction:column;gap:0;margin:12px 0;}
+.lf-item{display:flex;gap:0;align-items:stretch;}
+.lf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.lf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.lf-body{flex:1;padding:0 0 16px 13px;}
+.ltag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;font-family:'Noto Sans JP',sans-serif;}
+.lf-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.75;margin-bottom:3px;}
+.lf-ja{font-size:12.5px;color:var(--t2);line-height:1.7;}
+.lf-note{font-size:12px;font-weight:700;padding:5px 10px;border-radius:6px;margin-top:5px;line-height:1.6;}
+.arr-mid{text-align:center;font-size:15px;color:var(--ac);font-weight:700;margin:-4px 0;padding-left:21px;}
+
+/* CALLOUT */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* PROOF */
+.proof{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.proof-hdr{padding:9px 14px;font-size:12px;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px;}
+.proof-body{padding:13px 14px;font-size:13px;line-height:1.8;}
+.pchain{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:7px 0;}
+.pc{padding:5px 12px;border-radius:7px;font-size:12.5px;font-weight:700;line-height:1.45;}
+.pc-arr{color:var(--t3);font-size:14px;font-weight:700;}
+
+/* QUIZ */
+.qb{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;font-size:12px;font-weight:700;margin-right:8px;vertical-align:middle;}
+.qt{font-size:14px;font-weight:700;line-height:1.6;vertical-align:middle;}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:16px;}
+.rev{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev:hover{background:var(--acd);}
+.ans{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans.show{display:block;}
+
+/* BONE BAR */
+.bonebar{background:#0a1628;border-radius:var(--rl);padding:13px 17px;margin:10px 0;}
+.bb-row{display:flex;align-items:center;gap:7px;font-family:'Source Serif 4',serif;flex-wrap:wrap;margin-bottom:4px;}
+.bb-row:last-child{margin-bottom:0;}
+.bbl{font-size:10px;font-weight:700;font-family:'Noto Sans JP',sans-serif;padding:2px 7px;border-radius:3px;flex-shrink:0;}
+.bbs{background:#2563a8;color:#fff;}
+.bbv{background:#1e40af;color:#fff;}
+.bbo{background:#0f6e56;color:#fff;}
+.bbt{font-size:14px;font-weight:700;color:#fff;}
+.bbj{font-size:11px;color:rgba(255,255,255,.45);font-family:'Noto Sans JP',sans-serif;margin-left:3px;}
+
+/* TRANS BOX */
+.trans{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.trans-hdr{padding:9px 15px;font-size:11px;font-weight:700;background:var(--tld);color:#fff;}
+.trans-body{padding:13px 15px;font-size:14px;line-height:1.95;background:var(--tll);color:var(--tld);font-family:'Noto Sans JP',sans-serif;font-weight:500;}
+.trans-en{font-family:'Source Serif 4',serif;font-size:13.5px;color:var(--t2);margin-bottom:5px;line-height:1.7;}
+
+/* TABLE */
+.dg{display:grid;gap:10px;margin:10px 0;}
+.dg2{grid-template-columns:1fr 1fr;}
+@media(max-width:540px){.dg2{grid-template-columns:1fr;}}
+
+/* NAV */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:14px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:10px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+
+/* SCORE */
+.score-wrap{background:var(--sf);border-radius:var(--rl);padding:13px 17px;border:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sc-n{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:var(--ac);}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜センター試験 完全解説</div>
+      <div class="brand-s">インディアナ州の時間帯問題 — 白文から論理読解・完全解答まで</div>
+    </div>
+  </div>
+  <span class="badge">第3問 C｜センター過去問</span>
+</div>
+
+<div class="tnav">
+  <button class="tn active" onclick="goT('t1')" id="tb1"><span class="tn-num">1</span>英文を読む</button>
+  <button class="tn" onclick="goT('t2')" id="tb2"><span class="tn-num">2</span>段落・論理の整理</button>
+  <button class="tn" onclick="goT('t3')" id="tb3"><span class="tn-num">3</span>問32 解説</button>
+  <button class="tn" onclick="goT('t4')" id="tb4"><span class="tn-num">4</span>問33 解説</button>
+  <button class="tn" onclick="goT('t5')" id="tb5"><span class="tn-num">5</span>問34 解説</button>
+  <button class="tn" onclick="goT('t6')" id="tb6"><span class="tn-num">6</span>全文日本語訳</button>
+</div>
+
+<div class="wrap">
+
+<!-- ══════════ TAB 1 — 英文を読む ══════════ -->
+<div class="pan active" id="t1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">センター試験 第3問C</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">インディアナ州の複雑な時間帯問題<br>— 説明文＋図表の読み取り</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">「地理・社会」系の説明文。段落ごとに新情報が加わり、最終的に「問題の部分解決」で終わる。空所は前後の文で必ず根拠が取れる。</div>
+  </div>
+
+  <!-- 読む前の構造ガイド -->
+  <div class="card">
+    <div class="lbl">読む前に — 4段落の役割を先に把握する</div>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+      <div style="padding:8px 12px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);"><strong>段落1：</strong>アメリカの時間帯の基本（前提知識）</div>
+      <div style="padding:8px 12px;background:var(--aml);border-radius:var(--r);border-left:3px solid var(--am);"><strong>段落2：</strong>インディアナ州の複雑な時間帯の説明 → <strong>問32</strong></div>
+      <div style="padding:8px 12px;background:var(--pul);border-radius:var(--r);border-left:3px solid var(--pu);"><strong>段落3：</strong>問題点（ビジネスへの影響）→ <strong>問33</strong> + 解決の難しさ</div>
+      <div style="padding:8px 12px;background:var(--tll);border-radius:var(--r);border-left:3px solid var(--tl);"><strong>段落4：</strong>2006年の部分的解決と残る議論 → <strong>問34</strong></div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="card">
+    <div class="lbl">本文（空所番号付き）</div>
+    <div class="passage">
+
+      <p><span class="pnum">1</span>The United States is a vast country. From the East Coast to the West Coast, there are four different time zones. In addition, many parts of the country observe daylight saving time (DST) as well. In areas that adopt DST, the clock is moved one hour forward for the summer. Thus, the local time varies across different areas of the country, depending on which time zone the area is in and whether DST is adopted.</p>
+
+      <p><span class="pnum">2</span>The state of Indiana, shown in the map below, is known for its <span class="bl">32</span>. For decades, both the Eastern Time Zone and Central Time Zone have existed within the state. Many areas in the state have switched back and forth between Eastern Time and Central Time. Furthermore, until very recently, policy concerning DST differed from one place to another. Most areas in the Eastern Time Zone did not adopt DST, and the time stayed the same throughout the year; while in other areas, where DST was adopted, the clock was moved forward by one hour for the summer. In 2006, however, the entire state started to observe DST.</p>
+
+      <p><span class="pnum">3</span>Some have argued that the time system in Indiana <span class="bl">33</span>. For example, a company in Indiana once scheduled a phone conference with companies in other states. When the meeting started, only half of the out-of-state participants were on the line. This was because the participants who missed the conference did not know in which time zone the company was located.</p>
+
+      <p style="margin-top:.5em;">It is not easy to resolve this issue because being in a particular time zone has important consequences for Indiana residents. Local businesses may benefit from being in the Eastern Time Zone where the financial center of the entire country, Wall Street in New York City, is located. Meanwhile, this may not be convenient for residents in the western parts of Indiana who commute to major cities in the Central Time Zone, like Chicago, just across the state border.</p>
+
+      <p><span class="pnum">4</span>The controversy over time in Indiana was partly resolved in 2006, when the entire state started to observe DST. <span class="bl">34</span> This debate may continue as long as people living in different parts of the state have different needs.</p>
+    </div>
+  </div>
+
+  <!-- 図の説明 -->
+  <div class="map-wrap">
+    <div class="map-title">図：インディアナ州とその周辺の時間帯</div>
+    <svg viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block;margin:0 auto;">
+      <!-- 背景 -->
+      <rect width="620" height="320" fill="#f0ede6" rx="8"/>
+
+      <!-- Central Time Zone ラベルエリア -->
+      <rect x="10" y="10" width="130" height="44" rx="6" fill="#1e3a5f" opacity=".9"/>
+      <text x="75" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="sans-serif">CENTRAL</text>
+      <text x="75" y="44" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="sans-serif">TIME ZONE</text>
+
+      <!-- 時計1（Central） -->
+      <circle cx="175" cy="32" r="20" fill="white" stroke="#1e3a5f" stroke-width="2"/>
+      <line x1="175" y1="32" x2="175" y2="17" stroke="#1e3a5f" stroke-width="2"/>
+      <line x1="175" y1="32" x2="185" y2="37" stroke="#1e3a5f" stroke-width="1.5"/>
+      <text x="175" y="62" text-anchor="middle" fill="#1e3a5f" font-size="10" font-family="sans-serif">①</text>
+
+      <!-- 境界線（点線） -->
+      <line x1="240" y1="0" x2="240" y2="320" stroke="#666" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+      <!-- Eastern Time Zone ラベルエリア -->
+      <rect x="250" y="10" width="130" height="44" rx="6" fill="#0f6e56" opacity=".9"/>
+      <text x="315" y="28" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="sans-serif">EASTERN</text>
+      <text x="315" y="44" text-anchor="middle" fill="white" font-size="11" font-weight="bold" font-family="sans-serif">TIME ZONE</text>
+
+      <!-- 時計2（Eastern） -->
+      <circle cx="415" cy="32" r="20" fill="white" stroke="#0f6e56" stroke-width="2"/>
+      <line x1="415" y1="32" x2="415" y2="17" stroke="#0f6e56" stroke-width="2"/>
+      <line x1="415" y1="32" x2="425" y2="27" stroke="#0f6e56" stroke-width="1.5"/>
+      <text x="415" y="62" text-anchor="middle" fill="#0f6e56" font-size="10" font-family="sans-serif">②</text>
+
+      <!-- Great Lakes 凡例 -->
+      <rect x="440" y="14" width="14" height="14" fill="#9ca3af" rx="2"/>
+      <text x="460" y="25" fill="#374151" font-size="11" font-family="sans-serif">the Great Lakes</text>
+
+      <!-- 大きな輪郭（中部のイメージ） -->
+      <!-- Central area（左側） -->
+      <ellipse cx="130" cy="190" rx="110" ry="100" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1"/>
+
+      <!-- Great Lakes（薄いグレー） -->
+      <ellipse cx="360" cy="120" rx="80" ry="40" fill="#9ca3af" opacity=".6"/>
+      <ellipse cx="460" cy="130" rx="55" ry="35" fill="#9ca3af" opacity=".6"/>
+
+      <!-- Eastern area（右側） -->
+      <ellipse cx="440" cy="200" rx="120" ry="95" fill="#d1fae5" stroke="#6ee7b7" stroke-width="1" opacity=".7"/>
+
+      <!-- インディアナ（斜線エリア） -->
+      <rect x="195" y="200" width="90" height="85" rx="4" fill="none" stroke="#374151" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <!-- 斜線パターン -->
+      <line x1="195" y1="210" x2="215" y2="200" stroke="#374151" stroke-width=".8"/>
+      <line x1="195" y1="222" x2="232" y2="200" stroke="#374151" stroke-width=".8"/>
+      <line x1="195" y1="234" x2="249" y2="200" stroke="#374151" stroke-width=".8"/>
+      <line x1="195" y1="246" x2="266" y2="200" stroke="#374151" stroke-width=".8"/>
+      <line x1="195" y1="258" x2="283" y2="200" stroke="#374151" stroke-width=".8"/>
+      <line x1="195" y1="270" x2="285" y2="210" stroke="#374151" stroke-width=".8"/>
+      <line x1="195" y1="282" x2="285" y2="224" stroke="#374151" stroke-width=".8"/>
+      <line x1="203" y1="285" x2="285" y2="237" stroke="#374151" stroke-width=".8"/>
+      <line x1="218" y1="285" x2="285" y2="249" stroke="#374151" stroke-width=".8"/>
+      <line x1="234" y1="285" x2="285" y2="261" stroke="#374151" stroke-width=".8"/>
+      <line x1="250" y1="285" x2="285" y2="273" stroke="#374151" stroke-width=".8"/>
+
+      <!-- インディアナラベル -->
+      <text x="240" y="305" text-anchor="middle" fill="#374151" font-size="13" font-weight="bold" font-family="sans-serif">Indiana</text>
+
+      <!-- Chicago -->
+      <circle cx="175" cy="195" r="4" fill="#1e3a5f"/>
+      <text x="155" y="185" fill="#1e3a5f" font-size="11" font-family="sans-serif" font-weight="bold">Chicago</text>
+
+      <!-- New York -->
+      <circle cx="545" cy="160" r="4" fill="#0f6e56"/>
+      <text x="548" y="158" fill="#0f6e56" font-size="11" font-family="sans-serif" font-weight="bold">New York City</text>
+
+      <!-- 方位 -->
+      <text x="575" y="275" text-anchor="middle" fill="#374151" font-size="11" font-family="sans-serif">N</text>
+      <text x="558" y="293" text-anchor="middle" fill="#374151" font-size="11" font-family="sans-serif">W</text>
+      <text x="575" y="293" text-anchor="middle" fill="#374151" font-size="10" font-family="sans-serif">+</text>
+      <text x="592" y="293" text-anchor="middle" fill="#374151" font-size="11" font-family="sans-serif">E</text>
+      <text x="575" y="311" text-anchor="middle" fill="#374151" font-size="11" font-family="sans-serif">S</text>
+      <rect x="555" y="263" width="42" height="52" fill="none" stroke="#9ca3af" stroke-width=".8"/>
+    </svg>
+
+    <div style="margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--t2);">
+      <div style="display:flex;align-items:center;gap:5px;"><div style="width:16px;height:16px;border:1.5px dashed #374151;border-radius:2px;"></div> インディアナ州（両タイムゾーンにまたがる）</div>
+      <div style="display:flex;align-items:center;gap:5px;"><div style="width:16px;height:10px;background:#9ca3af;border-radius:2px;"></div> 五大湖（Great Lakes）</div>
+      <div style="display:flex;align-items:center;gap:5px;"><div style="width:16px;height:2px;background:#666;border-top:1px dashed #666;"></div> タイムゾーン境界</div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">英文・地図を確認したら次へ</span>
+    <button class="btnp" onclick="goT('t2')">段落・論理を整理する →</button>
+  </div>
+</div>
+
+<!-- ══════════ TAB 2 — 段落・論理の整理 ══════════ -->
+<div class="pan" id="t2">
+
+  <div class="card">
+    <div class="lbl">文章の論理構造 — 段落ごとの役割と「つながり」</div>
+
+    <div class="lflow">
+
+      <!-- P1 -->
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--ac);">1</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">前提知識・導入</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">アメリカ全体の時間帯とDSTの基本</div>
+          <div class="lf-en">vast / four time zones / DST / clock moved one hour forward / <span class="hl-am">Thus</span>, local time varies</div>
+          <div class="lf-ja">→「Thus（だから）」でP1の結論：時間は地域によって異なる。これがP2以降の前提。</div>
+          <div class="lf-note" style="background:var(--acl);color:var(--acd);">接続詞シグナル：<strong>In addition</strong>（さらに）→ DSTの追加情報　<strong>Thus</strong>（だから）→ P1の結論</div>
+        </div>
+      </div>
+
+      <div class="arr-mid">↓ P1の「地域差がある」という前提を受けて</div>
+
+      <!-- P2 -->
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">2</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--pu));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">問32 — インディアナ州の複雑な時間帯</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「インディアナ州はその<span class="bl" style="font-size:10px;padding:0 6px;min-width:0;">32</span>で知られている」</div>
+          <div class="lf-en">For decades / switched back and forth / <span class="hl-am">Furthermore</span> / differed from one place to another / <span class="hl-sig">however</span>, entire state started DST</div>
+          <div class="lf-ja">→「For decades（何十年もの間）」→ 複雑さの時間的な深刻さ<br>→「Furthermore」→ さらに問題追加<br>→「however」→ 逆接：2006年に全州でDST開始（問題の変化）</div>
+          <div class="lf-note" style="background:var(--aml);color:var(--amd);">核心：インディアナ州は ①2つのタイムゾーンが混在 ②DSTの適用もバラバラだった → 「複雑な時間システム」</div>
+        </div>
+      </div>
+
+      <div class="arr-mid">↓ その複雑さが引き起こす問題は？</div>
+
+      <!-- P3 -->
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--pu);">3</div>
+          <div class="lf-line" style="background:linear-gradient(var(--pu),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--pul);color:var(--pu);">問33 — 問題の主張＋具体例＋解決の難しさ</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「時間システムが<span class="bl" style="font-size:10px;padding:0 6px;min-width:0;">33</span>と主張する人がいる」</div>
+          <div class="lf-en"><span class="hl-am">For example</span>, phone conference → only half on line / <span class="hl-sig">This was because</span> they didn't know which time zone</div>
+          <div class="lf-ja">→「For example」→ 直前の主張の具体例が来る<br>→「This was because」→ 問題の原因を説明<br>→ 解決が難しい理由：東部では金融（NY）、西部では生活圏（シカゴ）と利害が対立</div>
+          <div class="lf-note" style="background:var(--pul);color:var(--pu);">核心：具体例（電話会議の失敗）はビジネスへの「被害」→ 33の空所はネガティブな内容</div>
+        </div>
+      </div>
+
+      <div class="arr-mid">↓ 部分的に解決されたが…</div>
+
+      <!-- P4 -->
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">4</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">問34 — 部分解決と残る議論</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「論争は2006年に部分的に解決された。<span class="bl" style="font-size:10px;padding:0 6px;min-width:0;">34</span> この議論は続くだろう」</div>
+          <div class="lf-en"><span class="hl-am">partly resolved</span> / [空所34] / <span class="hl-sig">This debate may continue</span></div>
+          <div class="lf-ja">→「partly（部分的に）」= 完全には解決していない<br>→「This debate may continue」= まだ議論が残っている<br>→ 空所34は「partly resolved」と「This debate may continue」の橋渡しをする内容</div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">核心：「partly（部分的）」→ 空所は「残った問題」を示す逆接（However）の内容</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 重要語 一覧 -->
+  <div class="card">
+    <div class="lbl">文章を読むための重要語・接続詞まとめ</div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:7px 11px;background:var(--s2);border-radius:var(--r);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:700;font-size:14px;color:var(--am);">Thus</span>
+        <span>「だから・したがって」→ 前の内容の結論が来る</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:7px 11px;background:var(--s2);border-radius:var(--r);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:700;font-size:14px;color:var(--am);">Furthermore</span>
+        <span>「さらに」→ 前の問題点に追加情報が来る（複雑さが増す）</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:7px 11px;background:var(--s2);border-radius:var(--r);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:700;font-size:14px;color:var(--rd);">however</span>
+        <span>「しかし・ところが」→ 前の状況から転換（2006年に変化）</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:7px 11px;background:var(--s2);border-radius:var(--r);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:700;font-size:14px;color:var(--am);">For example</span>
+        <span>「例えば」→ 直前の主張（空所33）の具体例が続く</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:7px 11px;background:var(--s2);border-radius:var(--r);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:700;font-size:14px;color:var(--ac);">Meanwhile</span>
+        <span>「一方で」→ 対比する情報が来る（東部と西部の利害の対立）</span>
+      </div>
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;padding:7px 11px;background:var(--s2);border-radius:var(--r);">
+        <span style="font-family:'Source Serif 4',serif;font-weight:700;font-size:14px;color:var(--am);">partly</span>
+        <span>「部分的に」→ 完全解決ではない → 問題が残っている → 問34の根拠</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goT('t1')">← 英文を読む</button>
+    <button class="btnp" onclick="goT('t3')">問32の解説へ →</button>
+  </div>
+</div>
+
+<!-- ══════════ TAB 3 — 問32 ══════════ -->
+<div class="pan" id="t3">
+
+  <div class="qb">
+    <span class="qn">32</span><span class="qt">Indiana is known for its <span class="bl">32</span>.</span>
+    <div class="choices" id="q32">
+      <button class="cb" onclick="ch('q32',1)"><span class="cn">①</span>complex time system that has been changed many times over the years</button>
+      <button class="cb" onclick="ch('q32',2)"><span class="cn">②</span>convenient time system that has attracted new businesses to the state</button>
+      <button class="cb" onclick="ch('q32',3)"><span class="cn">③</span>flexible time system that allows workers to choose their own working hours</button>
+      <button class="cb" onclick="ch('q32',4)"><span class="cn">④</span>traditional time system that is a good model for the rest of the country</button>
+    </div>
+    <button class="rev" onclick="rv('r32')">答えを見る</button>
+    <div class="ans" id="r32" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：①</strong><br><br>
+      以下で根拠を完全解説します。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">問32 — 根拠の取り方</div>
+
+    <div class="co co-a" style="margin-bottom:14px;">
+      <div class="co-lbl">読み方の鉄則</div>
+      空所32は「Indiana is known for its ___」。<strong>空所の直後の文が空所の内容を具体的に説明している。</strong><br>
+      「For decades...」以降の文全体が空所32の「答え合わせ」になっている。
+    </div>
+
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">根拠1</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">直後の文</span>
+          <div class="lf-en">"<span class="hl-k">For decades</span>, both the Eastern Time Zone and Central Time Zone <span class="hl-k">have existed</span> within the state."</div>
+          <div class="lf-ja">何十年もの間、両方のタイムゾーンが州内に存在してきた<br>→「has been changed many times over the years（長年にわたって何度も変更されてきた）」に対応</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--ac);">根拠2</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">さらに追加情報</span>
+          <div class="lf-en">"Many areas <span class="hl-k">have switched back and forth</span> between Eastern Time and Central Time."</div>
+          <div class="lf-ja">東部時間と中部時間の間を行き来してきた<br>→「complex（複雑な）」かつ「has been changed many times（何度も変更）」の直接的な根拠</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Furthermore（さらに）</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--tl);">根拠3</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">さらに問題追加</span>
+          <div class="lf-en">"policy concerning DST <span class="hl-k">differed from one place to another</span>."</div>
+          <div class="lf-ja">DSTの方針が場所によって異なっていた<br>→ タイムゾーンの複雑さ + DSTの複雑さ = 二重の複雑さ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：① complex time system that has been changed many times over the years</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="pchain">
+          <div class="pc" style="background:var(--aml);color:var(--amd);">何十年もの混在</div>
+          <div class="pc-arr">+</div>
+          <div class="pc" style="background:var(--acl);color:var(--acd);">行き来・変更を繰り返した</div>
+          <div class="pc-arr">+</div>
+          <div class="pc" style="background:var(--pul);color:var(--pu);">DSTもバラバラ</div>
+          <div class="pc-arr">=</div>
+          <div class="pc" style="background:var(--tll);color:var(--tld);">①複雑で何度も変更されたシステム</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> convenient（便利な）→ P3で電話会議が失敗した例など「不便さ」が描かれている。正反対。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> flexible / allows workers to choose their own hours → 働く時間を自分で選べるという内容は本文に全くない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> traditional / good model → P2〜3で問題だらけと書かれており「良い手本」とは全く逆の内容。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goT('t2')">← 論理の整理</button>
+    <button class="btnp" onclick="markDone('t3');goT('t4')">問33の解説へ →</button>
+  </div>
+</div>
+
+<!-- ══════════ TAB 4 — 問33 ══════════ -->
+<div class="pan" id="t4">
+
+  <div class="qb">
+    <span class="qn">33</span><span class="qt">Some have argued that the time system in Indiana <span class="bl">33</span>.</span>
+    <div class="choices" id="q33">
+      <button class="cb" onclick="ch('q33',1)"><span class="cn">①</span>discourages communication between government and businesses</button>
+      <button class="cb" onclick="ch('q33',2)"><span class="cn">②</span>harms local businesses working with companies outside of Indiana</button>
+      <button class="cb" onclick="ch('q33',3)"><span class="cn">③</span>is understood and accepted by companies in other areas of the country</button>
+      <button class="cb" onclick="ch('q33',4)"><span class="cn">④</span>strengthens relationships among businesses in the state and those elsewhere</button>
+    </div>
+    <button class="rev" onclick="rv('r33')">答えを見る</button>
+    <div class="ans" id="r33" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：②</strong><br><br>
+      以下で根拠を完全解説します。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">問33 — 根拠の取り方</div>
+
+    <div class="co co-a" style="margin-bottom:14px;">
+      <div class="co-lbl">読み方の鉄則</div>
+      「Some have argued that...」→ 空所33は「主張の内容」。<br>
+      <strong>直後の「For example」が空所33の具体例を提示している。</strong><br>
+      具体例の内容を読んで「どんな主張だったか」を逆算する。
+    </div>
+
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--pu);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--pu),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--pul);color:var(--pu);">空所33 — 主張</span>
+          <div class="lf-en">"Some have argued that the time system in Indiana <span class="bl" style="display:inline-flex;background:var(--acd);color:#fff;border-radius:4px;padding:1px 7px;font-size:10px;font-weight:700;vertical-align:middle;">33</span>."</div>
+          <div class="lf-ja">→ 空所に入る内容は「インディアナの時間システムが〜だ」という批判的な主張</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ For example（具体例＝答え合わせの根拠）</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">根拠</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--rd));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">具体例（電話会議の失敗）</span>
+          <div class="lf-en">"a company <span class="hl-k">in Indiana</span> once scheduled a phone conference with companies <span class="hl-k">in other states</span>."</div>
+          <div class="lf-en">"only <span class="hl-k">half</span> of the out-of-state participants were on the line."</div>
+          <div class="lf-en">"<span class="hl-sig">This was because</span> the participants did not know in which <span class="hl-k">time zone</span> the company was located."</div>
+          <div class="lf-ja">→ インディアナの企業が州外の企業と電話会議 → 半数しか参加せず<br>→ 理由：参加者がインディアナのタイムゾーンを知らなかった<br>→ = 州外の企業とのビジネスに損害が出た</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ この具体例が示す主張は？</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--rd);">結論</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--rdl);color:var(--rd);">逆算で特定</span>
+          <div class="lf-en">具体例：インディアナの企業が<strong>州外の企業と</strong>電話会議で失敗した<br>→ 主張：「インディアナの時間システムは<strong>州外の企業と仕事をする</strong>地元企業に害を与えている」</div>
+          <div class="lf-note" style="background:var(--rdl);color:var(--rd);">→ ②「harms local businesses working with companies outside of Indiana」が完全に一致</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② harms local businesses working with companies outside of Indiana</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="pchain">
+          <div class="pc" style="background:var(--aml);color:var(--amd);">For example（具体例）</div>
+          <div class="pc-arr">→</div>
+          <div class="pc" style="background:var(--pul);color:var(--pu);">州外企業との電話会議失敗</div>
+          <div class="pc-arr">→</div>
+          <div class="pc" style="background:var(--tll);color:var(--tld);">②州外と仕事する地元企業に害</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          <strong>harm local businesses</strong>「地元企業に害を与える」<br>
+          <strong>working with companies outside of Indiana</strong>「インディアナ州外の企業と仕事をする」<br>
+          = 電話会議の失敗例がそのまま「州外企業とのビジネスに支障をきたす」という主張の根拠。
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> discourages communication between government and businesses → 「政府とビジネスの間」の話は本文にない。具体例は「企業と他州の企業」の話。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> is understood and accepted → 電話会議の失敗は「理解されていない」から起きた。正反対。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> strengthens relationships → 電話会議が失敗して関係が悪化している。正反対。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goT('t3')">← 問32</button>
+    <button class="btnp" onclick="markDone('t4');goT('t5')">問34の解説へ →</button>
+  </div>
+</div>
+
+<!-- ══════════ TAB 5 — 問34 ══════════ -->
+<div class="pan" id="t5">
+
+  <div class="qb">
+    <span class="qn">34</span>
+    <div class="passage" style="font-size:14px;padding:10px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);margin-bottom:10px;">
+      The controversy over time in Indiana was <span class="hl-k">partly resolved</span> in 2006, when the entire state started to observe DST. <span class="bl">34</span> This debate may continue as long as people living in different parts of the state have different needs.
+    </div>
+    <div class="choices" id="q34">
+      <button class="cb" onclick="ch('q34',1)"><span class="cn">①</span>However, residents agree that Indiana should adopt a single statewide time zone.</button>
+      <button class="cb" onclick="ch('q34',2)"><span class="cn">②</span>However, there is still disagreement about having two different time zones in the state.</button>
+      <button class="cb" onclick="ch('q34',3)"><span class="cn">③</span>Thus, this new change made the problem in the state more serious than before.</button>
+      <button class="cb" onclick="ch('q34',4)"><span class="cn">④</span>Thus, whether or not Indiana should have two time zones is no longer an issue.</button>
+    </div>
+    <button class="rev" onclick="rv('r34')">答えを見る</button>
+    <div class="ans" id="r34" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);">正解：②</strong><br><br>
+      以下で根拠を完全解説します。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">問34 — 根拠の取り方（前後の両方から挟み撃ち）</div>
+
+    <div class="co co-a" style="margin-bottom:14px;">
+      <div class="co-lbl">この問題の鉄則</div>
+      空所34は前の文と後の文の<strong>両方から根拠が取れる</strong>。<br>
+      前の文の「partly（部分的に）」と後の文の「This debate may continue（議論は続く）」を同時に満たす選択肢を選ぶ。
+    </div>
+
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--am);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">前の文のシグナル</span>
+          <div class="lf-en">"The controversy ... was <span class="hl-am">partly</span> resolved in 2006"</div>
+          <div class="lf-ja"><strong>partly（部分的に）</strong>= 完全には解決していない<br>→ 空所には「でも〜は残っている」という内容が来るはず<br>→ However（逆接）を使った選択肢が予測される</div>
+          <div class="lf-note" style="background:var(--aml);color:var(--amd);">「partly」がある → 空所は「However + 残った問題」の構造</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 空所34</div>
+      <div class="lf-item">
+        <div class="lf-spine">
+          <div class="lf-dot" style="background:var(--ac);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">後の文のシグナル（答え合わせ）</span>
+          <div class="lf-en">"<span class="hl-sig">This debate</span> may continue as long as people living in different parts of the state have different needs."</div>
+          <div class="lf-ja"><strong>This debate</strong> = 空所34で述べられた「議論」を指す<br>→「この議論」が続くということは、空所に「議論」が述べられていなければならない<br>→ 残った問題＝タイムゾーンに関する意見の不一致</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 選択肢の接続詞を分析 -->
+    <div style="margin-top:14px;">
+      <div class="lbl">接続詞で選択肢を絞る</div>
+      <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;">
+        <div style="padding:8px 12px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+          <strong>①・②：However</strong>（逆接）→「partly resolved」の後に残った問題を述べる逆接 ✓ 方向性は合っている
+        </div>
+        <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+          <strong>③・④：Thus</strong>（順接・結論）→「partly resolved（部分的に解決）」の後にThusで別の結論は不自然 ✗
+        </div>
+      </div>
+    </div>
+
+    <!-- ①と②の違い -->
+    <div style="margin-top:12px;">
+      <div class="lbl">①と②の違い（最後の絞り込み）</div>
+      <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+        <div style="padding:10px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+          <strong style="color:var(--rd);">×①</strong> "residents <strong>agree</strong> that Indiana should adopt a <strong>single statewide time zone</strong>"<br>
+          → 全住民が「1つのタイムゾーン」に同意している → 「This debate may continue（議論が続く）」と矛盾。同意しているなら議論は終わる。
+        </div>
+        <div style="padding:10px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+          <strong style="color:var(--tl);">✓②</strong> "there is still <strong>disagreement</strong> about having two different time zones"<br>
+          → 2つのタイムゾーンについてまだ意見の不一致がある → 「This debate may continue（この議論は続くだろう）」と完璧につながる。
+        </div>
+      </div>
+    </div>
+
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② However, there is still disagreement about having two different time zones in the state.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div class="pchain">
+          <div class="pc" style="background:var(--aml);color:var(--amd);">partly resolved（部分解決）</div>
+          <div class="pc-arr">→</div>
+          <div class="pc" style="background:var(--tll);color:var(--tld);">②However：まだ意見不一致</div>
+          <div class="pc-arr">→</div>
+          <div class="pc" style="background:var(--acl);color:var(--acd);">This debate may continue</div>
+        </div>
+        <div style="font-size:13px;line-height:1.8;margin-top:8px;">
+          前後の両方が②を支持している。「partly」→「However残った問題」→「debate continues」の論理の流れが一直線に繋がる。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goT('t4')">← 問33</button>
+    <button class="btnp" onclick="markDone('t5');goT('t6')">全文日本語訳へ →</button>
+  </div>
+</div>
+
+<!-- ══════════ TAB 6 — 全文日本語訳 ══════════ -->
+<div class="pan" id="t6">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--tld),#0a1628);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">Full Translation</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;margin-bottom:6px;">全文日本語訳</div>
+    <div style="font-size:12px;opacity:.8;">英文→骨格→日本語の順で確認。訳がずれていた箇所を確認する。</div>
+  </div>
+
+  <!-- 段落1 -->
+  <div class="trans">
+    <div class="trans-hdr">段落1 — アメリカの時間帯の基本</div>
+    <div class="trans-body">
+
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">The United States is a vast country.</div>
+        アメリカ合衆国は広大な国である。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">From the East Coast to the West Coast, there are four different time zones.</div>
+        東海岸から西海岸にかけて、4つの異なる時間帯がある。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">In addition, many parts of the country observe daylight saving time (DST) as well.</div>
+        さらに、国内の多くの地域はサマータイム（DST）も採用している。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">In areas that adopt DST, the clock is moved one hour forward for the summer.</div>
+        DSTを採用している地域では、夏の間は時計が1時間進められる。
+      </div>
+      <div>
+        <div class="trans-en">Thus, the local time varies across different areas of the country, depending on which time zone the area is in and whether DST is adopted.</div>
+        <strong>したがって</strong>、現地時間はその地域がどのタイムゾーンにあるか、DSTが採用されているかどうかによって、国内の異なる地域にわたって変化する。
+      </div>
+    </div>
+  </div>
+
+  <!-- 段落2 -->
+  <div class="trans">
+    <div class="trans-hdr">段落2 — インディアナ州の複雑な時間帯（問32）</div>
+    <div class="trans-body">
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">The state of Indiana, shown in the map below, is known for its <span style="color:var(--tl);font-weight:700;">① complex time system that has been changed many times over the years</span>.</div>
+        下の地図に示されているインディアナ州は、その<span style="color:var(--tl);font-weight:700;">長年にわたって何度も変更されてきた複雑な時間システム</span>で知られている。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">For decades, both the Eastern Time Zone and Central Time Zone have existed within the state.</div>
+        <strong>何十年もの間</strong>、東部タイムゾーンと中部タイムゾーンの両方が州内に存在してきた。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">Many areas in the state have switched back and forth between Eastern Time and Central Time.</div>
+        州内の多くの地域が東部時間と中部時間の間を行き来してきた。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">Furthermore, until very recently, policy concerning DST differed from one place to another.</div>
+        <strong>さらに</strong>、ごく最近まで、DSTに関する方針は場所によって異なっていた。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">Most areas in the Eastern Time Zone did not adopt DST, and the time stayed the same throughout the year; while in other areas, where DST was adopted, the clock was moved forward by one hour for the summer.</div>
+        東部タイムゾーンのほとんどの地域はDSTを採用せず、時刻は1年中同じままだった。一方、DSTが採用されていた他の地域では、夏の間は時計が1時間進められた。
+      </div>
+      <div>
+        <div class="trans-en">In 2006, however, the entire state started to observe DST.</div>
+        <strong>しかし</strong>2006年に、州全体がDSTを採用し始めた。
+      </div>
+    </div>
+  </div>
+
+  <!-- 段落3 -->
+  <div class="trans">
+    <div class="trans-hdr">段落3 — 問題の主張と解決の難しさ（問33）</div>
+    <div class="trans-body">
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">Some have argued that the time system in Indiana <span style="color:var(--tl);font-weight:700;">② harms local businesses working with companies outside of Indiana</span>.</div>
+        インディアナ州の時間システムは<span style="color:var(--tl);font-weight:700;">インディアナ州外の企業と仕事をする地元企業に害を与えている</span>と主張する人もいる。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">For example, a company in Indiana once scheduled a phone conference with companies in other states.</div>
+        <strong>例えば</strong>、インディアナ州のある企業が、他の州の企業との電話会議を予定したことがあった。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">When the meeting started, only half of the out-of-state participants were on the line.</div>
+        会議が始まったとき、州外の参加者の半分しか回線につながっていなかった。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">This was because the participants who missed the conference did not know in which time zone the company was located.</div>
+        <strong>これは</strong>、会議に参加できなかった人たちが、その企業がどのタイムゾーンにあるかを知らなかったためだった。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">It is not easy to resolve this issue because being in a particular time zone has important consequences for Indiana residents.</div>
+        特定のタイムゾーンにいることはインディアナ州の住民にとって重要な影響をもたらすため、この問題を解決するのは容易ではない。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">Local businesses may benefit from being in the Eastern Time Zone where the financial center of the entire country, Wall Street in New York City, is located.</div>
+        地元企業は、国全体の金融センターであるニューヨーク市のウォール街が位置する東部タイムゾーンにいることで恩恵を受けるかもしれない。
+      </div>
+      <div>
+        <div class="trans-en">Meanwhile, this may not be convenient for residents in the western parts of Indiana who commute to major cities in the Central Time Zone, like Chicago, just across the state border.</div>
+        <strong>一方で</strong>、これは州境を越えたすぐのところにあるシカゴなど、中部タイムゾーンの主要都市に通勤するインディアナ州西部の住民にとっては、便利ではないかもしれない。
+      </div>
+    </div>
+  </div>
+
+  <!-- 段落4 -->
+  <div class="trans">
+    <div class="trans-hdr">段落4 — 部分的な解決と残る議論（問34）</div>
+    <div class="trans-body">
+      <div style="margin-bottom:12px;">
+        <div class="trans-en">The controversy over time in Indiana was partly resolved in 2006, when the entire state started to observe DST.</div>
+        インディアナ州の時間をめぐる論争は2006年に<span style="font-weight:700;">部分的に</span>解決され、その年に州全体がDSTを採用し始めた。
+      </div>
+      <div style="margin-bottom:12px;">
+        <div class="trans-en"><span style="color:var(--tl);font-weight:700;">② However, there is still disagreement about having two different time zones in the state.</span></div>
+        <span style="color:var(--tl);font-weight:700;"><strong>しかし</strong>、州内に2つの異なるタイムゾーンを持つことについては、依然として意見の不一致がある。</span>
+      </div>
+      <div>
+        <div class="trans-en">This debate may continue as long as people living in different parts of the state have different needs.</div>
+        州の異なる地域に住む人々が異なるニーズを持ち続ける限り、この議論は続くかもしれない。
+      </div>
+    </div>
+  </div>
+
+  <!-- 全問まとめ -->
+  <div class="card" style="border-color:#9fe1cb;background:var(--tll);">
+    <div class="lbl" style="color:var(--tld);">3問を通じて証明されたこと</div>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--ac);">
+        <strong>問32：</strong>空所の直後の文が「空所の内容の説明」になっている。「For decades...have switched back and forth...differed」→「complex time system that has been changed many times」
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--am);">
+        <strong>問33：</strong>「For example（具体例）」が空所の内容の答え合わせ。具体例を読んで「どんな主張だったか」を逆算する。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--tl);">
+        <strong>問34：</strong>前の「partly」と後の「This debate may continue」の両方から挟み撃ちで特定。接続詞（However vs Thus）でも絞れる。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goT('t5')">← 問34</button>
+    <button class="btnp" onclick="goT('t1')">最初から復習 ↺</button>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+var ans={q32:1,q33:2,q34:2};
+var sm={};
+
+function goT(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.tn').forEach(function(b){b.classList.remove('active');});
+  var idx={t1:0,t2:1,t3:2,t4:3,t5:4,t6:5};
+  var btns=document.querySelectorAll('.tn');
+  if(btns[idx[id]])btns[idx[id]].classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function ch(qid,n){
+  sm[qid]=n;
+  document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+  document.querySelector('#'+qid+' .cb:nth-child('+n+')').classList.add('sel');
+}
+
+function rv(rid){
+  var el=document.getElementById(rid);
+  if(!el)return;
+  el.classList.add('show');
+  var qid=rid.replace('r','q');
+  if(ans[qid]){
+    var c=ans[qid],my=sm[qid];
+    document.querySelectorAll('#'+qid+' .cb').forEach(function(b,i){
+      b.classList.remove('sel','ok','ng');
+      if(i+1===c)b.classList.add('ok');
+      if(my&&i+1===my&&my!==c)b.classList.add('ng');
+    });
+  }
+}
+
+function markDone(tid){
+  var btn=document.getElementById('tb'+tid.replace('t',''));
+  if(btn)btn.classList.add('done');
+}
+</script>
+</body>
+</html>
