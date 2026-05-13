@@ -1,0 +1,2324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第4講 【英文分析4・慶應大】比較級 + than ~ might have us believe を、骨格で読み解く | オンライン塾 THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-base: #f7f3ed;
+    --bg-paper: #fdfaf4;
+    --bg-card: #ffffff;
+    --bg-soft: #f2ece1;
+    --bg-warm: #fbf6ee;
+    --bg-cool: #f0f4f6;
+    
+    --ink-primary: #2c2520;
+    --ink-secondary: #5a4f47;
+    --ink-tertiary: #8a7d72;
+    --ink-faint: #b8ac9f;
+    
+    --line-thin: #e0d6c5;
+    --line-mid: #c9bca8;
+    --line-strong: #2c2520;
+    
+    --orange-main: #e85a1a;
+    --orange-deep: #b8420f;
+    --orange-soft: #fde4d3;
+    --orange-bg: #fff4e8;
+    --orange-pale: #fdeede;
+    
+    --aqua-main: #4a90a8;
+    --aqua-deep: #2f6d82;
+    --aqua-soft: #d8e8ee;
+    --aqua-bg: #eef5f8;
+    --aqua-faded: #6fa3b5;
+    
+    --warn: #c84e2c;
+    --warn-bg: #fdecdb;
+    --good: #4a8a5e;
+    --good-bg: #e8f1ea;
+    
+    --accent-gold: #c9a961;
+    --accent-gold-bg: #faf2dd;
+    
+    --shadow-sm: 0 1px 2px rgba(40, 30, 20, 0.04), 0 2px 4px rgba(40, 30, 20, 0.04);
+    --shadow-md: 0 2px 4px rgba(40, 30, 20, 0.06), 0 4px 12px rgba(40, 30, 20, 0.08);
+    --shadow-lg: 0 4px 8px rgba(40, 30, 20, 0.06), 0 12px 32px rgba(40, 30, 20, 0.10);
+    
+    --font-display: 'Crimson Pro', 'Noto Sans JP', serif;
+    --font-serif-jp: 'Noto Sans JP', sans-serif;
+    --font-body-jp: 'Noto Sans JP', sans-serif;
+    --font-mono: 'DM Mono', 'Courier New', monospace;
+    --font-en: 'Manrope', 'Noto Sans JP', sans-serif;
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  
+  body {
+    font-family: var(--font-body-jp);
+    background: var(--bg-base);
+    color: var(--ink-primary);
+    line-height: 1.8;
+    font-size: 16px;
+    font-feature-settings: "palt";
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    background-image: 
+      radial-gradient(ellipse at top left, rgba(232, 90, 26, 0.05) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom right, rgba(74, 144, 168, 0.04) 0%, transparent 50%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  /* ===== Header ===== */
+  .site-header {
+    background: var(--bg-paper);
+    border-bottom: 1px solid var(--line-thin);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--orange-main) 0%, var(--orange-main) 60%, var(--aqua-main) 60%, var(--aqua-main) 100%);
+    z-index: 1;
+  }
+  
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .lesson-num-block {
+    flex-shrink: 0;
+    width: 84px;
+    height: 84px;
+    background: var(--orange-main);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 16px rgba(232, 90, 26, 0.3);
+    position: relative;
+  }
+  
+  .lesson-num-block::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+  }
+  
+  .lesson-num {
+    font-family: var(--font-display);
+    font-size: 2.85rem;
+    font-weight: 600;
+    line-height: 1;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .lesson-cat {
+    font-family: var(--font-serif-jp);
+    font-size: 0.75rem;
+    color: var(--orange-main);
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    background: var(--orange-pale);
+    border-radius: 2px;
+  }
+  
+  .lesson-title {
+    font-family: var(--font-serif-jp);
+    font-size: clamp(1.4rem, 3vw, 2.1rem);
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--ink-primary);
+    letter-spacing: -0.005em;
+  }
+  
+  .header-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.85rem;
+  }
+  
+  .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+    text-align: right;
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--line-mid);
+    border-radius: 2px;
+    background: var(--bg-card);
+    position: relative;
+  }
+  
+  .brand::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px;
+    width: 8px; height: 8px;
+    border-top: 2px solid var(--orange-main);
+    border-left: 2px solid var(--orange-main);
+  }
+  
+  .brand::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; right: -1px;
+    width: 8px; height: 8px;
+    border-bottom: 2px solid var(--aqua-main);
+    border-right: 2px solid var(--aqua-main);
+  }
+  
+  .brand-tag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink-tertiary);
+    line-height: 1;
+  }
+  
+  .brand-name {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--ink-primary);
+    line-height: 1;
+    font-style: italic;
+  }
+  
+  .brand-name span {
+    color: var(--orange-main);
+    font-style: normal;
+    font-weight: 700;
+  }
+  
+  /* ===== Main ===== */
+  main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
+  }
+  
+  /* ===== STEP heading ===== */
+  .step-head {
+    margin-bottom: 1.75rem;
+    margin-top: 4rem;
+  }
+  
+  .step-head:first-child {
+    margin-top: 0;
+  }
+  
+  .step-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .step-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: white;
+    background: var(--ink-primary);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+  
+  .step-line {
+    flex: 1;
+    height: 1px;
+    background: var(--line-mid);
+  }
+  
+  .step-counter {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--ink-tertiary);
+    letter-spacing: 0.05em;
+  }
+  
+  .step-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+  }
+  
+  .step-subtitle {
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    color: var(--ink-secondary);
+    margin-top: 0.5rem;
+    line-height: 1.7;
+  }
+  
+  /* ===== OPENING ===== */
+  .opening {
+    background: linear-gradient(135deg, #fef9f0 0%, #fdf2e0 100%);
+    border-left: 4px solid var(--orange-main);
+    padding: 2rem 2.25rem;
+    border-radius: 2px 8px 8px 2px;
+    margin-bottom: 3.5rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+  }
+  
+  .opening-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    color: var(--orange-main);
+    margin-bottom: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .opening-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    margin-bottom: 1.1rem;
+    line-height: 1.45;
+  }
+  
+  .opening-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.98rem;
+    line-height: 1.95;
+    color: var(--ink-primary);
+    margin-bottom: 1.25rem;
+  }
+  
+  .opening-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+  
+  .opening-skill {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.7rem 0.95rem;
+    background: rgba(255,255,255,0.6);
+    border-radius: 4px;
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  
+  .opening-skill-num {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    background: var(--orange-main);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  
+  /* ===== STEP 0: 自分で読む ===== */
+  .self-read-card {
+    background: var(--bg-card);
+    border: 2px dashed var(--line-mid);
+    border-radius: 6px;
+    padding: 2rem 2.25rem;
+    text-align: center;
+  }
+  
+  .self-read-text {
+    font-family: var(--font-en);
+    font-size: 1.55rem;
+    line-height: 1.85;
+    color: var(--ink-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.01em;
+  }
+  
+  .self-read-instruct {
+    font-family: var(--font-serif-jp);
+    font-size: 0.92rem;
+    color: var(--ink-secondary);
+    line-height: 1.8;
+    background: var(--bg-warm);
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-gold);
+    text-align: left;
+  }
+  
+  .self-read-instruct strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+  }
+  
+  /* ===== Trap card (誤読の罠) ===== */
+  .trap-card {
+    background: var(--warn-bg);
+    border: 1px solid #f0c8a8;
+    border-left: 4px solid var(--warn);
+    border-radius: 2px 6px 6px 2px;
+    padding: 1.5rem 1.75rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+  }
+  
+  .trap-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 0.85rem;
+  }
+  
+  .trap-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--warn);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+  
+  .trap-card-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--warn);
+  }
+  
+  .trap-misread {
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    color: var(--ink-primary);
+    margin-bottom: 0.85rem;
+    padding: 0.85rem 1rem;
+    background: rgba(255,255,255,0.55);
+    border-radius: 4px;
+    line-height: 1.75;
+  }
+  
+  .trap-misread::before {
+    content: '✕';
+    color: var(--warn);
+    font-weight: 700;
+    margin-right: 0.5em;
+    font-size: 1.1em;
+  }
+  
+  .trap-why {
+    font-family: var(--font-serif-jp);
+    font-size: 0.92rem;
+    color: var(--ink-secondary);
+    line-height: 1.85;
+  }
+  
+  .trap-why strong {
+    color: var(--warn);
+    font-weight: 700;
+  }
+  
+  /* ===== 実況中継 read-along ===== */
+  .read-along {
+    margin: 1.75rem 0;
+  }
+  
+  .ra-step {
+    background: var(--bg-card);
+    border: 1px solid var(--line-thin);
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .ra-step-head {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.4rem;
+    background: linear-gradient(90deg, var(--orange-pale) 0%, transparent 80%);
+    border-bottom: 1px solid var(--line-thin);
+  }
+  
+  .ra-step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--orange-main);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .ra-step-pos {
+    font-family: var(--font-en);
+    font-size: 1.15rem;
+    color: var(--orange-deep);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  
+  .ra-step-pos em {
+    font-style: italic;
+    background: var(--orange-soft);
+    padding: 0 0.25em;
+    border-radius: 2px;
+  }
+  
+  .ra-step-arrow {
+    color: var(--ink-faint);
+    margin: 0 0.3rem;
+  }
+  
+  .ra-step-question {
+    font-family: var(--font-serif-jp);
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+    margin-left: auto;
+    background: var(--bg-soft);
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  
+  .ra-step-body {
+    padding: 1.25rem 1.5rem;
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    line-height: 1.95;
+    color: var(--ink-primary);
+  }
+  
+  .ra-step-body p { margin-bottom: 0.85rem; }
+  .ra-step-body p:last-child { margin-bottom: 0; }
+  
+  .ra-step-think {
+    background: var(--aqua-bg);
+    border-left: 3px solid var(--aqua-main);
+    padding: 0.85rem 1.1rem;
+    border-radius: 2px 4px 4px 2px;
+    margin: 0.75rem 0 !important;
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+  
+  .ra-step-think::before {
+    content: '🧠 ここで考える';
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--aqua-deep);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.45rem;
+    font-weight: 600;
+  }
+  
+  .ra-step-conclude {
+    background: var(--good-bg);
+    border-left: 3px solid var(--good);
+    padding: 0.85rem 1.1rem;
+    border-radius: 2px 4px 4px 2px;
+    margin: 0.75rem 0 !important;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    font-weight: 500;
+  }
+  
+  .ra-step-conclude::before {
+    content: '✓ 結論';
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--good);
+    letter-spacing: 0.15em;
+    margin-bottom: 0.45rem;
+    font-weight: 700;
+  }
+  
+  /* ===== ルール抽出 ===== */
+  .rule-card {
+    background: linear-gradient(135deg, #fff8ee 0%, #fef0d8 100%);
+    border: 2px solid var(--orange-main);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    margin: 1.5rem 0;
+    position: relative;
+    box-shadow: var(--shadow-md);
+  }
+  
+  .rule-card::before {
+    content: 'RULE';
+    position: absolute;
+    top: -10px;
+    left: 1.25rem;
+    background: var(--orange-main);
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+  
+  .rule-card-num {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--orange-deep);
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .rule-card-text {
+    font-family: var(--font-serif-jp);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    line-height: 1.55;
+    letter-spacing: -0.005em;
+  }
+  
+  .rule-card-text strong {
+    color: var(--orange-deep);
+    background: rgba(255,255,255,0.6);
+    padding: 0 0.25em;
+    border-radius: 2px;
+  }
+  
+  .rule-card-explain {
+    font-family: var(--font-serif-jp);
+    font-size: 0.92rem;
+    color: var(--ink-secondary);
+    line-height: 1.85;
+    margin-top: 0.85rem;
+    padding-top: 0.9rem;
+    border-top: 1px dashed var(--line-mid);
+  }
+  
+  /* ===== ミニドリル / 転用練習 ===== */
+  .drill-card {
+    background: var(--bg-cool);
+    border: 1px solid var(--aqua-soft);
+    border-left: 4px solid var(--aqua-main);
+    border-radius: 2px 6px 6px 2px;
+    padding: 1.5rem 1.75rem;
+    margin: 1.25rem 0;
+  }
+  
+  .drill-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  .drill-icon {
+    width: 28px;
+    height: 28px;
+    background: var(--aqua-main);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+  
+  .drill-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--aqua-deep);
+  }
+  
+  .drill-en {
+    font-family: var(--font-en);
+    font-size: 1.2rem;
+    color: var(--ink-primary);
+    line-height: 1.6;
+    padding: 0.85rem 1rem;
+    background: white;
+    border-radius: 4px;
+    margin-bottom: 0.85rem;
+  }
+  
+  .drill-q {
+    font-family: var(--font-serif-jp);
+    font-size: 0.92rem;
+    color: var(--ink-secondary);
+    margin-bottom: 0.85rem;
+    line-height: 1.75;
+  }
+  
+  .drill-toggle-btn {
+    background: var(--aqua-main);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-serif-jp);
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+  }
+  
+  .drill-toggle-btn:hover {
+    background: var(--aqua-deep);
+  }
+  
+  .drill-answer {
+    display: none;
+    margin-top: 1rem;
+    padding: 1rem 1.2rem;
+    background: white;
+    border-radius: 4px;
+    border-left: 3px solid var(--good);
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .drill-answer.is-shown { display: block; }
+  
+  .drill-answer strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+    background: var(--orange-bg);
+    padding: 0 0.25em;
+    border-radius: 2px;
+  }
+  
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ===== Final Sentence Display (色分け) ===== */
+  .final-display {
+    background: var(--bg-card);
+    border: 1px solid var(--line-thin);
+    border-radius: 6px;
+    padding: 2rem 2.25rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .final-display::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--orange-main) 0%, var(--aqua-main) 100%);
+  }
+  
+  .final-display-text {
+    font-family: var(--font-en);
+    font-size: 1.5rem;
+    line-height: 2.4;
+    color: var(--ink-primary);
+    letter-spacing: 0.01em;
+    margin-bottom: 1.25rem;
+  }
+  
+  .seg-main {
+    color: var(--orange-deep);
+    font-weight: 600;
+    background: linear-gradient(180deg, transparent 65%, var(--orange-soft) 65%);
+    padding: 0 0.05em;
+  }
+  
+  .seg-sub {
+    color: var(--aqua-faded);
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.92;
+  }
+  
+  .seg-text {
+    color: var(--ink-secondary);
+  }
+  
+  .seg-wrap {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 1.5em;
+  }
+  
+  .seg-marker {
+    position: absolute;
+    bottom: 0.15em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    padding: 0.05rem 0.3rem;
+    border-radius: 2px;
+    line-height: 1;
+    color: white;
+  }
+  
+  .seg-wrap::before {
+    content: '';
+    position: absolute;
+    bottom: 1.05em;
+    left: 0; right: 0;
+    height: 1px;
+    background: var(--ink-faint);
+  }
+  
+  .seg-marker-main { background: var(--orange-main); }
+  .seg-marker-sub { background: var(--aqua-main); opacity: 0.85; }
+  
+  /* ===== Merge Bridge (STEP 2 統合用の橋渡し) ===== */
+  .merge-bridge {
+    margin: 2.5rem 0 1.5rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, #fdf8ed 0%, #faf2dd 100%);
+    border-radius: 4px;
+    border-left: 4px solid var(--accent-gold);
+    position: relative;
+  }
+  
+  .merge-bridge-2 {
+    background: linear-gradient(135deg, #f3e8da 0%, #e8d5b8 100%);
+    border-left-color: var(--orange-deep);
+  }
+  
+  .merge-bridge-tag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    color: var(--orange-deep);
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+  }
+  
+  .merge-bridge-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.96rem;
+    line-height: 1.85;
+    color: var(--ink-primary);
+  }
+  
+  .merge-bridge-text strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+  }
+  
+  /* ===== Skeleton line in final-display ===== */
+  .skeleton-line {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--ink-secondary);
+    padding-top: 1rem;
+    border-top: 1px dashed var(--line-mid);
+    letter-spacing: 0.05em;
+  }
+  
+  .skeleton-line strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+  }
+  
+  /* ===== Translation building (改良版) ===== */
+  .trans-build {
+    margin: 1.5rem 0;
+  }
+  
+  .trans-row {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.1rem;
+    align-items: flex-start;
+    padding: 1.1rem 1.4rem;
+    background: var(--bg-card);
+    border: 1px solid var(--line-thin);
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .trans-row.is-direct {
+    border-left: 4px solid var(--ink-faint);
+  }
+  
+  .trans-row.is-natural {
+    border-left: 4px solid var(--good);
+    background: linear-gradient(135deg, #f0f8f3 0%, #e3f0e7 100%);
+    box-shadow: 0 2px 6px rgba(74, 138, 94, 0.12);
+  }
+  
+  .trans-row-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--ink-tertiary);
+    background: var(--bg-soft);
+    padding: 0.3rem 0.65rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    text-align: center;
+    min-width: 5rem;
+    font-weight: 600;
+    margin-top: 0.15rem;
+  }
+  
+  .trans-row.is-natural .trans-row-label {
+    background: var(--good);
+    color: white;
+  }
+  
+  .trans-row-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  
+  .trans-row-text {
+    font-family: var(--font-serif-jp);
+    font-size: 1.02rem;
+    color: var(--ink-primary);
+    line-height: 1.8;
+  }
+  
+  .trans-row.is-natural .trans-row-text {
+    font-weight: 500;
+  }
+  
+  .trans-row-note {
+    font-family: var(--font-serif-jp);
+    font-size: 0.82rem;
+    color: var(--ink-tertiary);
+    line-height: 1.65;
+    font-style: italic;
+  }
+  
+  .trans-arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 0.4rem 0;
+    padding: 0.6rem;
+  }
+  
+  .trans-arrow-icon {
+    color: var(--orange-main);
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: 700;
+  }
+  
+  .trans-arrow-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.9rem;
+    color: var(--ink-primary);
+    text-align: center;
+    line-height: 1.55;
+  }
+  
+  .trans-arrow-text strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+    background: var(--orange-bg);
+    padding: 0 0.25em;
+    border-radius: 2px;
+  }
+  
+  .trans-arrow-detail {
+    font-family: var(--font-serif-jp);
+    font-size: 0.78rem;
+    color: var(--ink-tertiary);
+    text-align: center;
+    line-height: 1.7;
+    max-width: 580px;
+  }
+  
+  /* ===== Natural translation tip ===== */
+  .natural-tip {
+    background: var(--bg-warm);
+    border: 1px solid var(--line-thin);
+    border-left: 3px solid var(--accent-gold);
+    padding: 1.4rem 1.6rem;
+    border-radius: 2px 6px 6px 2px;
+    margin: 1.5rem 0;
+  }
+  
+  .natural-tip-head {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 0.85rem;
+  }
+  
+  .natural-tip-icon {
+    font-size: 1.1rem;
+  }
+  
+  .natural-tip-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--orange-deep);
+  }
+  
+  .natural-tip-body {
+    font-family: var(--font-serif-jp);
+    font-size: 0.93rem;
+    line-height: 1.85;
+    color: var(--ink-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .natural-tip-body strong {
+    color: var(--orange-deep);
+    font-weight: 700;
+    background: rgba(255,255,255,0.55);
+    padding: 0 0.25em;
+    border-radius: 2px;
+  }
+  
+  .natural-tip-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  
+  .natural-tip-ex {
+    background: white;
+    border: 1px solid var(--line-thin);
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-family: var(--font-serif-jp);
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+  
+  .natural-tip-ex-en {
+    font-family: var(--font-en);
+    font-size: 1rem;
+    color: var(--ink-primary);
+    margin-bottom: 0.2rem;
+  }
+  
+  .natural-tip-ex-bad {
+    color: var(--warn);
+  }
+  
+  .natural-tip-ex-bad::before {
+    content: '✕ ';
+    font-weight: 700;
+  }
+  
+  .natural-tip-ex-good {
+    color: var(--good);
+    font-weight: 600;
+  }
+  
+  .natural-tip-ex-good::before {
+    content: '○ ';
+    font-weight: 700;
+  }
+  
+  /* ===== STEP 2 まとめ ===== */
+  .step2-summary {
+    background: linear-gradient(135deg, #2c2520 0%, #3a3128 100%);
+    color: var(--bg-paper);
+    border-radius: 8px;
+    padding: 2rem 2.25rem;
+    margin: 2.5rem 0 0;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .step2-summary-head {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(253, 250, 244, 0.25);
+  }
+  
+  .step2-summary-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--orange-main);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  
+  .step2-summary-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--bg-paper);
+    line-height: 1.5;
+  }
+  
+  .step2-summary-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+  
+  .step2-flow-item {
+    flex: 1;
+    min-width: 180px;
+    background: rgba(253, 250, 244, 0.08);
+    border: 1px solid rgba(253, 250, 244, 0.15);
+    padding: 0.85rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  
+  .step2-flow-num {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--orange-main);
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .step2-flow-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--bg-paper);
+  }
+  
+  .step2-flow-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .step2-summary-text {
+    font-family: var(--font-serif-jp);
+    font-size: 0.93rem;
+    line-height: 1.85;
+    color: var(--bg-paper);
+    opacity: 0.92;
+  }
+  
+  .step2-summary-text strong {
+    color: var(--orange-main);
+    font-weight: 700;
+  }
+  
+  /* ===== Flow diagram ===== */
+  .flow {
+    margin: 1.5rem 0;
+    background: white;
+    border: 1px solid var(--line-thin);
+    border-radius: 8px;
+    padding: 1.75rem 1.5rem;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .flow-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.95rem 0;
+    position: relative;
+  }
+  
+  .flow-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 14px;
+    top: 38px;
+    bottom: 0;
+    width: 2px;
+    background: var(--line-mid);
+  }
+  
+  .flow-num {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    background: var(--orange-main);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.85rem;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .flow-content {
+    flex: 1;
+    padding-top: 0.15rem;
+  }
+  
+  .flow-q {
+    font-family: var(--font-serif-jp);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+  }
+  
+  .flow-q strong {
+    color: var(--orange-deep);
+  }
+  
+  .flow-desc {
+    font-family: var(--font-serif-jp);
+    font-size: 0.88rem;
+    color: var(--ink-secondary);
+    line-height: 1.75;
+  }
+  
+  /* ===== Checklist ===== */
+  .checklist {
+    background: white;
+    border: 2px solid var(--ink-primary);
+    border-radius: 8px;
+    padding: 1.75rem 2rem;
+    margin: 1.5rem 0;
+    position: relative;
+  }
+  
+  .checklist::before {
+    content: 'TAKEAWAY';
+    position: absolute;
+    top: -10px;
+    left: 1.25rem;
+    background: var(--ink-primary);
+    color: var(--bg-paper);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    padding: 0.3rem 0.85rem;
+    border-radius: 2px;
+    font-weight: 700;
+  }
+  
+  .check-title {
+    font-family: var(--font-serif-jp);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 0.4rem;
+    line-height: 1.5;
+  }
+  
+  .check-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px dashed var(--line-thin);
+    font-family: var(--font-serif-jp);
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+  
+  .check-item:last-child {
+    border-bottom: none;
+  }
+  
+  .check-box {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--ink-primary);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.15rem;
+  }
+  
+  .check-box::after {
+    content: '✓';
+    color: var(--ink-primary);
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+  
+  .check-text strong {
+    color: var(--orange-deep);
+    background: var(--orange-bg);
+    padding: 0 0.25em;
+    border-radius: 2px;
+  }
+  
+  /* ===== Inline elements ===== */
+  .kw {
+    font-family: var(--font-en);
+    font-weight: 600;
+    color: var(--ink-primary);
+    background: var(--bg-soft);
+    padding: 0 0.3em;
+    border-radius: 2px;
+    font-size: 1.02em;
+  }
+  
+  .en {
+    font-family: var(--font-en);
+    font-style: italic;
+    font-size: 1.04em;
+  }
+  
+  /* ===== Footer ===== */
+  .site-footer {
+    border-top: 1px solid var(--line-thin);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background: var(--bg-paper);
+  }
+  
+  .footer-text {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--ink-tertiary);
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-brand {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.9rem;
+    letter-spacing: 0.18em;
+    color: var(--ink-secondary);
+  }
+  
+  .footer-brand span {
+    color: var(--orange-main);
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    body { font-size: 15px; }
+    
+    .header-inner { 
+      grid-template-columns: 1fr; 
+      gap: 1.25rem; 
+      padding: 1.5rem 1.25rem;
+    }
+    .header-left { gap: 1rem; }
+    .lesson-num-block { width: 60px; height: 60px; }
+    .lesson-num { font-size: 2rem; }
+    .lesson-title { font-size: 1.2rem; }
+    .header-right {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+    }
+    .brand { padding: 0.45rem 0.7rem; }
+    .brand-name { font-size: 1.05rem; letter-spacing: 0.15em; }
+    .brand-tag { font-size: 0.55rem; }
+    
+    main { padding: 2rem 1.25rem 3rem; }
+    
+    .step-head { margin-top: 3rem; }
+    .step-title { font-size: 1.25rem; }
+    .step-subtitle { font-size: 0.88rem; }
+    
+    .opening { padding: 1.5rem 1.4rem; }
+    .opening-title { font-size: 1.15rem; }
+    .opening-text { font-size: 0.92rem; }
+    .opening-skill { font-size: 0.88rem; }
+    
+    .self-read-card { padding: 1.5rem 1.25rem; }
+    .self-read-text { font-size: 1.15rem; line-height: 1.8; }
+    
+    .trap-card { padding: 1.2rem 1.25rem; }
+    .trap-card-title { font-size: 0.98rem; }
+    .trap-misread { font-size: 0.9rem; padding: 0.7rem 0.85rem; }
+    .trap-why { font-size: 0.88rem; }
+    
+    .ra-step-head { padding: 0.8rem 1rem; flex-wrap: wrap; }
+    .ra-step-pos { font-size: 1rem; }
+    .ra-step-question { 
+      margin-left: 0; 
+      margin-top: 0.4rem;
+      width: 100%;
+      white-space: normal;
+      font-size: 0.78rem;
+    }
+    .ra-step-body { padding: 1rem 1.15rem; font-size: 0.9rem; }
+    
+    .rule-card { padding: 1.4rem 1.4rem 1.25rem; }
+    .rule-card-text { font-size: 1rem; }
+    .rule-card-explain { font-size: 0.88rem; }
+    
+    .drill-card { padding: 1.2rem 1.25rem; }
+    .drill-en { font-size: 1.05rem; padding: 0.7rem 0.85rem; }
+    
+    .final-display { padding: 1.4rem 1.25rem; }
+    .final-display-text { font-size: 1.15rem; line-height: 2.2; }
+    .seg-marker { font-size: 0.6rem; padding: 0.05rem 0.25rem; }
+    
+    .merge-bridge { padding: 1rem 1.2rem; }
+    .merge-bridge-text { font-size: 0.88rem; }
+    
+    .trans-row { 
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+      padding: 0.95rem 1.1rem;
+    }
+    .trans-row-label { 
+      width: fit-content; 
+      font-size: 0.65rem;
+      min-width: 0;
+    }
+    .trans-row-text { font-size: 0.95rem; }
+    .trans-row-note { font-size: 0.78rem; }
+    .trans-arrow-text { font-size: 0.85rem; }
+    .trans-arrow-detail { font-size: 0.75rem; }
+    
+    .natural-tip { padding: 1.15rem 1.25rem; }
+    .natural-tip-title { font-size: 0.96rem; }
+    .natural-tip-body { font-size: 0.88rem; }
+    .natural-tip-ex { padding: 0.7rem 0.85rem; font-size: 0.85rem; }
+    .natural-tip-ex-en { font-size: 0.95rem; }
+    
+    .step2-summary { padding: 1.5rem 1.4rem; }
+    .step2-summary-title { font-size: 1rem; }
+    .step2-summary-flow { 
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .step2-flow-arrow { 
+      transform: rotate(90deg);
+      padding: 0.2rem;
+    }
+    .step2-summary-text { font-size: 0.88rem; }
+    
+    .flow { padding: 1.25rem 1.1rem; }
+    .flow-step:not(:last-child)::after { left: 13px; top: 36px; }
+    .flow-q { font-size: 0.92rem; }
+    .flow-desc { font-size: 0.82rem; }
+    
+    .checklist { padding: 1.4rem 1.4rem 1.25rem; }
+    .check-item { font-size: 0.88rem; }
+  }
+  
+  @media (max-width: 480px) {
+    .lesson-title { font-size: 1.1rem; }
+    .self-read-text { font-size: 1rem; }
+    .final-display-text { font-size: 1rem; }
+  }
+
+</style>
+
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <div class="lesson-num-block">
+        <span class="lesson-num">4</span>
+      </div>
+      <div class="lesson-title-block">
+        <div class="lesson-cat">▶ 比較級 + 使役動詞 have + 形容詞並列 + 同格修飾</div>
+        <h1 class="lesson-title">【英文分析4・慶應大】比較級 + than ~ might have us believe を、骨格で読み解く</h1>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="brand">
+        <span class="brand-tag">Online Cram School</span>
+        <span class="brand-name"><span>THINKING</span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ OPENING ============ -->
+<section class="opening">
+  <div class="opening-eyebrow">▶ THIS LESSON</div>
+  <h2 class="opening-title">この講で身につく「読み方」</h2>
+  
+    <p class="opening-text">
+      今回は<strong>慶應大の英文</strong>!入門60シリーズで身につけた基礎を、<strong>本格的な大学入試レベル</strong>に応用する回!<br>
+      テーマは <strong>「比較級 + than S might have us believe を、骨格で読み解く」</strong>。<br>
+      この英文の最大の難所は、3文目!<strong>far more 形容詞群 way than S might have us believe</strong>「Sが我々に信じさせるよりも、はるかに ~ なやり方で」(=比較級 + 使役動詞 have + O + V)。<br>
+      第36講の比較級、第57講の比較級強調 much/far、第15講の形容詞並列、第40講の同格的修飾、第50・57講の同格、第40・58講のコロン、第55講の that 省略 ─ <strong>すべて結集</strong>!<br>
+      今日のキー:<br>
+      ① <strong>be hardwired to V</strong>「<strong>Vするように遺伝的に決まっている</strong>」(=慣用、語句注釈)<br>
+      ② <strong>no different from ~</strong>「<strong>~と少しも変わらない</strong>」(=no + 比較級、否定の強調)<br>
+      ③ <strong>far + 比較級</strong>「はるかに~」(=比較級の強調、第36・57講応用)<br>
+      ④ <strong>形容詞4つの並列 + above all</strong>「~、何より~」(=A, B, C and, above all, D)<br>
+      ⑤ <strong>than S might have us believe</strong>「Sが我々に信じさせるよりも」(=使役動詞 have + O + V 原形!)<br>
+      ⑥ <strong>同格的修飾 Neil Selwyn, of the Institute of Education in London,</strong>「ロンドンの教育研究所の~」(=第57講応用)<br>
+      デジタルネイティブ論を題材に、<strong>大学入試レベルの英文構造</strong>を読み解きます!
+    </p>
+    <div class="opening-skills">
+      <div class="opening-skill">
+        <span class="opening-skill-num">1</span>
+        <div><strong>far more 形容詞群 way than ~</strong>(=比較級の強調 + 比較対象)を見抜き、何が何より~なのか整理します。</div>
+      </div>
+      <div class="opening-skill">
+        <span class="opening-skill-num">2</span>
+        <div><strong>have us believe</strong>(=使役動詞 have + O + V 原形)で「O に V させる」の構造を理解します。</div>
+      </div>
+      <div class="opening-skill">
+        <span class="opening-skill-num">3</span>
+        <div><strong>長い英文を、骨格 SVM の構造に集約</strong>して、補足を全部括弧でくくる読み方を実践します。</div>
+      </div>
+    </div>
+</section>
+
+<!-- ============ STEP 0 ============ -->
+<div class="step-head">
+  <div class="step-eyebrow">
+    <span class="step-tag">STEP 0</span>
+    <span class="step-line"></span>
+    <span class="step-counter">— First Read —</span>
+  </div>
+  <h2 class="step-title">まず、自分で読んでみよう</h2>
+  <p class="step-subtitle">解説を読む前に必ずやってほしいステップ。「自分はどう読んだか」を意識化することが、読み方を身につける最大の近道です。</p>
+</div>
+
+<div class="self-read-card">
+  <p class="self-read-text">Then again, perhaps the Digital Native doesn’t actually exist after all. Neil Selwyn, of the Institute of Education in London, argues that the current generation is actually no different from preceding ones: young people are not hardwired to have unprecedented brains. Rather, many young people are using technology in a far more sporadic, passive, solitary and, above all, unspectacular way than the hype of the blogosphere and zealous proponents of cyberculture might have us believe.</p>
+  <div class="self-read-instruct">
+    <strong>STOP. ここで一度立ち止まって。</strong><br>
+    ① まず辞書を引かずに訳してみてください。<br>
+    ② 訳せなくても OK。<strong>「どこで詰まったか」</strong>を意識してください。<br>
+    ③ 「ここの構造がよく分からない」「この単語の品詞が判別できない」と感じたら、それがあなたの<strong>伸びしろ</strong>です。
+  </div>
+</div>
+
+<!-- ============ STEP 1 ============ -->
+<div class="step-head">
+  <div class="step-eyebrow">
+    <span class="step-tag">STEP 1</span>
+    <span class="step-line"></span>
+    <span class="step-counter">— Common Mistakes —</span>
+  </div>
+  <h2 class="step-title">ありがちな誤読を先につぶしておく</h2>
+  <p class="step-subtitle">この英文で多くの生徒がハマる罠が <strong>8つ</strong> あります。先に見ておくことで、自分が同じ罠にハマっていないかチェックできます。</p>
+</div>
+
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">Then again, perhaps the Digital Native doesn’t actually exist after all</span> の <span class="en">Then again</span> と <span class="en">after all</span> を取り違える</span>
+  </div>
+  <div class="trap-misread">「(Then again / after all の意味を取り違え)」</div>
+  <p class="trap-why">★ <span class="en">Then again</span> = 副詞句「<strong>そしてまた/さらに(言えば)</strong>」(=語句注釈)<br>→ 前の話に加えて、もう一つの観点を加えるニュアンス!<br>★ <span class="en">after all</span> = 副詞句「<strong>(予想に反したことを言う際に)結局のところ/実は</strong>」(=語句注釈)<br>→ 「やっぱり~なのかも/結局は~」のニュアンス!<br>★ <strong>本問</strong>: <span class="en">Then again, perhaps the Digital Native doesn’t actually exist after all.</span><br>→ Then again「そしてまた」(=副詞句、文修飾)<br>→ perhaps「もしかすると」(=副詞)<br>→ S = the Digital Native「デジタルネイティブ」(=デジタル世代を指す固有概念)<br>→ V = doesn’t actually exist「実際には存在しない」<br>→ M = after all「結局のところ/実は」<br>★ <strong>意訳</strong>: 「<strong>そしてまた、もしかすると、デジタルネイティブなどというものは実際には存在しないのかもしれない</strong>」<br>★ <span class="en">the Digital Native</span>:<br>→ 「<strong>デジタルネイティブ</strong>」(=2001年に教育学者マーク・プレンスキーが提唱)<br>→ デジタル技術と共に育った世代(=従来の世代とは脳の構造が違うとされる)<br>→ 本問はこの<strong>「デジタルネイティブ論」への反論</strong>!<br>★ <strong>本問の文脈</strong>: 「デジタルネイティブは特別な世代だ」という考えに対し、「<strong>実はそんなものは存在しない</strong>」と反論する英文!</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">Neil Selwyn, of the Institute of Education in London, argues that ~</span> の同格的修飾を取り違える</span>
+  </div>
+  <div class="trap-misread">「(Neil Selwyn, of the Institute ~ の関係を取り違え)」</div>
+  <p class="trap-why">★ <strong>核心</strong>: <span class="en">Neil Selwyn, of the Institute of Education in London,</span> = <strong>同格的修飾</strong>(=第57講応用)<br>→ コンマで挟まれた前置詞句が、Neil Selwyn の所属を補足!<br>★ <strong>本問</strong>: <span class="en">Neil Selwyn, of the Institute of Education in London, argues that ~</span><br>→ S = Neil Selwyn「ニール・セルウィン」(=人名、固有名詞)<br>→ 〈, of the Institute of Education in London,〉(=同格的修飾、所属を示す)<br>→ V = argues「主張する」(=他動詞)<br>→ O = that 名詞節「~ということ」<br>★ <strong>分解</strong>:<br>→ of the Institute of Education「教育研究所の(=所属)」<br>→ in London「ロンドンの」(=Institute を修飾)<br>→ 「ロンドンの教育研究所の(ニール・セルウィン)」<br>★ <strong>意訳</strong>: 「<strong>ロンドンの教育研究所のニール・セルウィンは、~と主張する</strong>」<br>★ <strong>同格的修飾の判別</strong>(=第57講応用):<br>→ 名詞 + コンマ + 名詞句(=前置詞句など)+ コンマ → 同格・補足!<br>→ 後ろの名詞句が前の名詞を<strong>説明・補足</strong>!<br>★ <strong>類例</strong>(=同格的修飾):<br>・<span class="en">My friend, a famous lawyer, lives in New York.</span>「有名な弁護士である友人は、ニューヨークに住んでいる」<br>・<span class="en">Mr. Smith, of Harvard University, gave a lecture.</span>「ハーバード大学のスミス氏は、講義を行った」<br>・<span class="en">Tokyo, the capital of Japan, is huge.</span>「日本の首都である東京は、巨大だ」</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">the current generation is actually no different from preceding ones</span> の <span class="en">no different from</span> を取り違える</span>
+  </div>
+  <div class="trap-misread">「<u>現代世代は実は前の世代と違わない</u>」(=直訳的でぎこちない)</div>
+  <p class="trap-why">★ <strong>核心</strong>: <span class="en">no different from ~</span> = 「<strong>~と少しも変わらない</strong>」(=慣用、語句注釈、no + 比較級 = 否定の強調)<br>→ different from ~「~と違う」(=慣用)<br>→ <strong>no</strong> + different「全く違わない/少しも変わらない」(=強い否定)<br>★ <strong>本問</strong>: <span class="en">the current generation is actually no different from preceding ones</span><br>→ S’ = the current generation「現代世代」<br>→ V’ = is(=be 動詞)<br>→ M’ = actually「実際は」(=副詞)<br>→ C’ = no different「少しも変わらない」(=形容詞 + 否定強調)<br>→ M’’ = from preceding ones「以前の(世代)と」<br>★ <span class="en">preceding ones</span>:<br>→ preceding「前の」(=形容詞、語句注釈)<br>→ ones「~なもの」(=代名詞 one の複数、=preceding generations を指す)<br>→ 「<strong>以前の世代</strong>」<br>★ <strong>no + 形容詞/副詞</strong> の用法:<br>→ no different「全く違わない」<br>→ no better「全く良くならない」<br>→ no longer「もはや~ない」(=第58講応用)<br>→ <strong>強い否定</strong>を表す!<br>★ <strong>意訳</strong>: 「<strong>現代世代は、実は以前の世代と少しも変わらない</strong>」<br>★ <strong>類例</strong>(=no different from):<br>・<span class="en">This is no different from a normal day.</span>「これは普通の日と何ら変わらない」<br>・<span class="en">My new job is no different from my old one.</span>「私の新しい仕事は、前の仕事と全く同じだ」</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">young people are not hardwired to have unprecedented brains</span> の <span class="en">be hardwired to V</span> を取り違える</span>
+  </div>
+  <div class="trap-misread">「(be hardwired to V の意味を取り違え)」</div>
+  <p class="trap-why">★ <strong>核心</strong>: <span class="en">be hardwired to V</span> = 慣用「<strong>Vするように遺伝的に決まっている</strong>」(=語句注釈)<br>→ hardwired「(脳が)配線された」 = 「生まれつき決まっている」<br>→ to V「Vするように」(=不定詞、副詞用法)<br>★ <strong>本問</strong>: <span class="en">young people are not hardwired to have unprecedented brains</span><br>→ S = young people「若者」<br>→ V = are not hardwired「~するように決まっているわけではない」(=否定 + be + 過去分詞)<br>→ to V = to have「持つ」(=不定詞)<br>→ unprecedented brains「前例のない脳/今までになかった脳」(=O)<br>★ <span class="en">unprecedented</span>:<br>→ 形容詞「<strong>前例のない/今までになかった</strong>」<br>→ un-(=否定の接頭辞)+ precedent(=「前例」)+ -ed<br>→ 「過去に例のない」(=新しい/特別な)<br>★ <strong>本問の意味</strong>:<br>→ 「若者は、前例のない(=特別な)脳を持つように遺伝的に決まっているわけではない」<br>→ つまり、「<strong>デジタルネイティブが特別な脳を持つわけではない</strong>」(=主張のコア!)<br>★ <strong>類例</strong>(=be hardwired to V):<br>・<span class="en">Humans are hardwired to seek pleasure.</span>「人間は快楽を求めるように生まれつき決まっている」<br>・<span class="en">Babies are hardwired to recognize faces.</span>「赤ちゃんは顔を認識するように遺伝的に決まっている」<br>★ <strong>意訳</strong>: 「<strong>若者たちは、前例のない脳を持つように遺伝的に決まっているわけではない</strong>」<br>★ <strong>コロン(:) の役割</strong>(=第40・58講応用):<br>→ 前の文 the current generation is no different from preceding ones「現代世代は前の世代と変わらない」(=主張)<br>→ コロン以降 = young people are not hardwired ~「若者は前例のない脳を持つわけではない」(=具体的な説明)<br>→ コロンは「すなわち/つまり」のニュアンス!</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">Rather, many young people are using technology in a far more sporadic, passive, solitary and, above all, unspectacular way</span> の <span class="en">far more 形容詞群 way</span> を取り違える</span>
+  </div>
+  <div class="trap-misread">「(far more 形容詞群 way の構造を取り違え)」</div>
+  <p class="trap-why">★ <strong>核心 ─ 本問最大のハイライト!</strong><br>★ <strong>骨格</strong>: <span class="en">many young people are using technology in a way</span>「多くの若者はあるやり方でテクノロジーを使っている」(=最重要骨格!)<br>→ in a way「~なやり方で」(=様態の前置詞句)<br>→ way の前に長い修飾!<br>★ <strong>修飾の構造</strong>: <span class="en">a far more sporadic, passive, solitary and, above all, unspectacular way</span><br>→ a + 修飾語 + way<br>→ 修飾語 = <strong>far more</strong> + <strong>4つの形容詞 and 並列</strong><br>★ <strong>分解</strong>:<br>(1) <strong>far more</strong> = 「<strong>はるかにより</strong>」(=比較級の強調、第36・57講応用)<br>(2) <strong>4つの形容詞並列</strong>(=第15講応用):<br>　・sporadic「散発的な」<br>　・passive「受動的な」<br>　・solitary「孤独な」<br>　・unspectacular「地味な/目立たない」<br>(3) <strong>and, above all,</strong> = 「~、そして<strong>何より</strong>、~」(=強調の挿入)<br>★ <strong>並列の構造</strong>:<br>→ A(sporadic), B(passive), C(solitary) and, above all, D(unspectacular)<br>→ 4つ目の D を <strong>above all で強調</strong>!<br>★ <span class="en">above all</span> = 慣用「<strong>何よりも/とりわけ</strong>」(=強調、追加情報)<br>★ <strong>意訳</strong>: 「<strong>多くの若者がテクノロジーを使うやり方は、はるかにより散発的で、受動的で、孤独で、そして何より、地味なやり方である</strong>」<br>★ <strong>比較対象は?</strong>: 比較級 more があるから、後ろに <strong>than ~</strong> が続くはず!(=次のtrap!)<br>★ <strong>類例</strong>(=A, B, C and, above all, D):<br>・<span class="en">He is kind, honest, smart and, above all, hardworking.</span>「彼は親切で、誠実で、賢く、そして何より、勤勉だ」<br>・<span class="en">The food was fresh, tasty, healthy and, above all, cheap.</span>「料理は新鮮で、美味しく、健康的で、そして何より、安かった」<br>★ <strong>Rather「むしろ」</strong>(=対比、副詞):<br>→ 前文(=「若者の脳が特別というわけではない」)に対する<strong>言い換え・対比</strong>!<br>→ 「むしろ、(若者の実態は)~である」</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">than the hype of the blogosphere and zealous proponents of cyberculture might have us believe</span> の <span class="en">have us believe</span> を取り違える</span>
+  </div>
+  <div class="trap-misread">「<u>~が我々を持つ信じる</u>」(=have us believe を取り違え)</div>
+  <p class="trap-why">★ <strong>本問最大の核心 ─ 使役動詞 have!</strong><br>★ <span class="en">have + O + V 原形</span> = <strong>使役動詞構文</strong>「<strong>OにVさせる</strong>」<br>→ have us believe「我々に信じさせる/思わせる」<br>→ make / let / have が使役動詞の代表3つ!<br>★ <strong>本問</strong>: <span class="en">than the hype of the blogosphere and zealous proponents of cyberculture might have us believe</span><br>→ than(=比較対象を導入、前の far more に対応)<br>→ S = the hype of the blogosphere and zealous proponents of cyberculture「ブログ界の誇大宣伝とサイバー文化の熱狂的支持者(たち)」<br>→ V = might have「~するかもしれない」(=助動詞 + 使役動詞 have)<br>→ O = us「我々」<br>→ V 原形 = believe「信じる」<br>★ <strong>分解の重要性</strong>:<br>→ have us believe = 「我々に信じさせる」<br>→ 「~に信じ込ませようとする」のニュアンス!<br>★ <strong>使役動詞の意味の違い</strong>:<br>(1) make + O + V「強制的にOにVさせる」(=強い)<br>(2) <strong>have + O + V</strong>「(立場上)OにVさせる/Oに~させる」(=中立、本問!)<br>(3) let + O + V「Oに(やりたいことを)させてあげる」(=許可)<br>★ <strong>本問の構造を整理</strong>:<br>→ 〈A(=many young people) are using technology in a far more 形容詞群 way〉 than 〈B(=the hype ~) might have us believe〉.<br>→ A の way の度合い > B が us believe させる way の度合い<br>→ 「A の実態は、B が思わせるよりもはるかに~である」<br>★ <strong>意訳</strong>: 「<strong>ブログ界の誇大宣伝やサイバー文化の熱狂的支持者が我々に信じさせるかもしれないよりも、(若者の使い方は)はるかに ~ である</strong>」<br>★ <span class="en">the hype of the blogosphere</span>:<br>→ hype = 「誇大宣伝/大げさな話」(=名詞)<br>→ the blogosphere = 「ブログ界/ブログ圏」(=blog + -sphere、SNSやインターネット上のブログ全体を指す造語)<br>→ 「ブログ界の誇大宣伝」<br>★ <span class="en">zealous proponents of cyberculture</span>:<br>→ zealous「熱狂的な」(=形容詞)<br>→ proponents「支持者」(=名詞)<br>→ of cyberculture「サイバー文化の」<br>→ 「サイバー文化の熱狂的支持者(たち)」<br>★ <strong>類例</strong>(=have + O + V):<br>・<span class="en">The teacher had us study every day.</span>「先生は私たちに毎日勉強させた」<br>・<span class="en">She had him repair her car.</span>「彼女は彼に車を修理させた」<br>・<span class="en">Don’t let advertisements have you believe everything.</span>「広告に何でも信じ込まされるな」</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title">比較級全体の構造 ─ <span class="en">in a far more X way than S V</span> の比較関係を取り違える</span>
+  </div>
+  <div class="trap-misread">「(比較の対象が何なのか曖昧)」</div>
+  <p class="trap-why">★ <strong>核心 ─ 比較級の構造の整理!</strong><br>★ <strong>骨格</strong>: <span class="en">A is using technology in a far more X way than B might have us believe</span><br>→ A = many young people<br>→ in a way「~なやり方で」(=様態)<br>→ way の前: far more X(=比較級の強調 + 形容詞群)<br>→ than B「Bよりも」(=比較対象)<br>→ B = the hype ~ might have us believe(=Bが「我々に信じさせる」<strong>way</strong>と比較)<br>★ <strong>比較対象を明確に</strong>:<br>(1) A の使い方の way<br>(2) B が「我々に信じさせる」way<br>→ (1)の way > (2)の way という比較!<br>→ つまり、「A の実態は、B が思わせるよりも、はるかに ~ である」<br>★ <strong>類似の比較構造の例</strong>:<br>・<span class="en">She is far more intelligent than people might think.</span>「彼女は、人々が思うよりも、はるかに知的だ」<br>・<span class="en">The problem is far more complex than the media suggests.</span>「問題はメディアが示唆するよりも、はるかに複雑だ」<br>★ <strong>本問の難所</strong>: than の後ろに長い節(=B might have us believe)が来る!<br>→ 比較対象 B が長くて主節と区別しにくい!<br>→ 「than 以降は<strong>比較の対象</strong>」と確実に押さえる!<br>★ <strong>意訳</strong>: 「<strong>多くの若者がテクノロジーを使うやり方は、ブログ界の誇大宣伝やサイバー文化の熱狂的支持者が我々に信じさせるかもしれないよりも、はるかに散発的で、受動的で、孤独で、何より地味なのだ</strong>」</p>
+</div>
+
+<div class="trap-card">
+  <div class="trap-card-head">
+    <span class="trap-icon">!</span>
+    <span class="trap-card-title"><span class="en">the hype of the blogosphere and zealous proponents of cyberculture</span> の <span class="en">and</span> の繋ぎを取り違える</span>
+  </div>
+  <div class="trap-misread">「(and の繋ぎを取り違え)」</div>
+  <p class="trap-why">★ <span class="en">the hype of the blogosphere and zealous proponents of cyberculture</span><br>★ <strong>and が繋ぐもの</strong>:<br>(1) <strong>2つの名詞句並列</strong>(=本問の解釈):<br>　・the hype of the blogosphere「ブログ界の誇大宣伝」<br>　・zealous proponents of cyberculture「サイバー文化の熱狂的支持者」<br>　→ どちらも might have us believe する主体!<br>(2) <strong>blogosphere and zealous proponents</strong> = the hype of (blogosphere and zealous proponents) という別解釈もありうるが、文脈から(1)が自然!<br>★ <strong>解釈の決め手</strong>:<br>→ 「ブログ界の誇大宣伝」(=ブログ等で広まる誇張)<br>→ 「サイバー文化の熱狂的支持者」(=人々)<br>→ どちらも「デジタルネイティブの特別さを煽る存在」!<br>→ <strong>2つを並列して、共通の述語 might have us believe を取る</strong>!<br>★ <strong>意訳</strong>: 「<strong>ブログ界の誇大宣伝と、サイバー文化の熱狂的支持者が、我々に信じさせるかもしれない</strong>」<br>★ <strong>本問の意図</strong>:<br>→ ブログやサイバー文化の支持者は、若者のテクノロジー利用を「華々しい」「能動的」「革新的」と謳う<br>→ <strong>でも実態は逆</strong>!→ 散発的、受動的、孤独、地味!<br>→ <strong>誇大宣伝への辛辣な批判</strong>!<br>★ <strong>類例</strong>(=A and B + 共通動詞):<br>・<span class="en">The teacher and his students study together.</span>「先生と生徒たちが一緒に勉強する」(=共通動詞 study)</p>
+</div>
+
+<!-- ============ STEP 2 ============ -->
+<div class="step-head">
+  <div class="step-eyebrow">
+    <span class="step-tag">STEP 2</span>
+    <span class="step-line"></span>
+    <span class="step-counter">— Read Along —</span>
+  </div>
+  <h2 class="step-title">左から右へ、頭の中の実況中継</h2>
+  <p class="step-subtitle">読める人は、英文を読みながら<strong>頭の中で常に何かを「考えて」います</strong>。その思考プロセスを 1語ずつ覗いてみましょう。これが英文解釈の正体です。</p>
+</div>
+
+<div class="read-along">
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">1</span>
+      <span class="ra-step-pos"><em>Then again, perhaps the Digital Native doesn’t actually exist after all.</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">1文目 ─ 問題提起「デジタルネイティブは存在しないかも?」</span>
+    </div>
+    <div class="ra-step-body">
+      <p>1文目 <span class="en">Then again, perhaps the Digital Native doesn’t actually exist after all.</span>「そしてまた、もしかすると、デジタルネイティブなどというものは実際には存在しないのかもしれない」!</p>
+        <div class="ra-step-think">
+          ★ <span class="en">Then again</span> = 「そしてまた/さらに(言えば)」(=副詞句、語句注釈)<br>
+          → 前の話に加えて、もう一つの観点を加える!<br><br>
+          ★ <span class="en">perhaps</span> = 副詞「もしかすると/おそらく」(=控えめな推量)<br><br>
+          ★ S = <span class="en">the Digital Native</span>「デジタルネイティブ」<br>
+          → 2001年に教育学者マーク・プレンスキーが提唱した概念<br>
+          → デジタル技術と共に育った世代を指す!<br><br>
+          ★ V = <span class="en">doesn’t actually exist</span>「実際には存在しない」<br>
+          → 否定 + 副詞 actually + 動詞 exist<br><br>
+          ★ <span class="en">after all</span> = 「(予想に反したことを言う際に)結局のところ/実は」(=語句注釈)<br>
+          → 「やっぱり~なのかも」のニュアンス!<br><br>
+          ★ <strong>意訳</strong>: 「<strong>そしてまた、もしかすると、デジタルネイティブなどというものは実際には存在しないのかもしれない</strong>」<br><br>
+          ★ <strong>1文目の役割</strong>: <strong>問題提起</strong>!<br>
+          → 「デジタルネイティブは特別」という従来の考えに疑問を投げかける!<br><br>
+          → 誰の主張?(=次へ!)
+        </div>
+        <div class="ra-step-conclude">
+          Then again「さらに」+ perhaps「もしかすると」+ after all「結局のところ」!1文目は問題提起「デジタルネイティブは実は存在しない?」!
+        </div>
+    </div>
+  </div>
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">2</span>
+      <span class="ra-step-pos"><em>Neil Selwyn, of the Institute of Education in London, argues that the current generation is actually no different from preceding ones:</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">2文目 ─ 同格的修飾 + argue that + no different from + コロン</span>
+    </div>
+    <div class="ra-step-body">
+      <p>2文目 <span class="en">Neil Selwyn, of the Institute of Education in London, argues that the current generation is actually no different from preceding ones:</span>「ロンドンの教育研究所のニール・セルウィンは、現代世代は実は以前の世代と少しも変わらない、と主張する」!</p>
+        <div class="ra-step-think">
+          ★ S = <span class="en">Neil Selwyn</span>「ニール・セルウィン」(=固有名詞、人名)<br>
+          → 教育社会学者、デジタルネイティブ論への批判者として有名<br><br>
+          ★ <span class="en">, of the Institute of Education in London,</span> = <strong>同格的修飾</strong>(=第57講応用!)<br>
+          → コンマで挟まれた前置詞句が、Neil Selwyn の所属を補足!<br>
+          → 「ロンドンの教育研究所の(ニール・セルウィン)」<br><br>
+          ★ V = <span class="en">argues</span>「主張する」(=他動詞)<br>
+          ★ O = <span class="en">that the current generation is actually no different from preceding ones</span>「現代世代は実は以前の世代と少しも変わらない、ということ」(=that 名詞節)<br><br>
+          ★ <strong>that 節の中身</strong>:<br>
+          → S’ = the current generation「現代世代」<br>
+          → V’ = is(=be 動詞)<br>
+          → M’ = actually「実際は」<br>
+          → C’ = <span class="en">no different</span>「少しも変わらない」(=no + 形容詞、強い否定)<br>
+          → M’’ = from preceding ones「以前の(世代)と」<br><br>
+          ★ <strong>no different from ~</strong> = 慣用「<strong>~と少しも変わらない</strong>」<br>
+          → no = 否定の強調(=「全く~ない」)<br>
+          → preceding ones = preceding generations「以前の世代」<br><br>
+          ★ <strong>コロン (:)</strong> の役割(=第40・58講応用):<br>
+          → 「すなわち/つまり/具体的には」!<br>
+          → コロンの後ろで、コロン前の<strong>具体的な説明</strong>!<br><br>
+          ★ <strong>意訳</strong>: 「<strong>ロンドンの教育研究所のニール・セルウィンは、現代世代は実は以前の世代と少しも変わらない、と主張する。すなわち~</strong>」<br><br>
+          → 具体的な内容?(=次へ!)
+        </div>
+        <div class="ra-step-conclude">
+          同格的修飾 Neil Selwyn, of the Institute ~ ,(=L57応用)。no different from「少しも変わらない」(=慣用、no + 比較級)。コロンで具体内容を導入!
+        </div>
+    </div>
+  </div>
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">3</span>
+      <span class="ra-step-pos"><em>young people are not hardwired to have unprecedented brains.</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">コロン後 ─ be hardwired to V「Vするように遺伝的に決まっている」</span>
+    </div>
+    <div class="ra-step-body">
+      <p>続く <span class="en">young people are not hardwired to have unprecedented brains.</span>「若者たちは、前例のない脳を持つように遺伝的に決まっているわけではない」!</p>
+        <div class="ra-step-think">
+          ★ S = <span class="en">young people</span>「若者」<br>
+          ★ V = <span class="en">are not hardwired</span>「~するように決まっているわけではない」(=否定 + be + 過去分詞)<br><br>
+          ★ <span class="en">be hardwired to V</span> = 慣用「<strong>Vするように遺伝的に決まっている</strong>」(=語句注釈)<br>
+          → hardwired = 「(脳が)配線された」 = 「生まれつき決まっている」<br>
+          → to V = 「Vするように」(=不定詞、副詞用法)<br><br>
+          ★ to V = <span class="en">to have</span>「持つ」(=不定詞)<br>
+          → have の目的語 = unprecedented brains「前例のない脳」<br><br>
+          ★ <span class="en">unprecedented</span>:<br>
+          → 形容詞「<strong>前例のない/今までになかった</strong>」<br>
+          → un-(=否定の接頭辞)+ precedent(=「前例」)+ -ed<br><br>
+          ★ <strong>本問の意味</strong>:<br>
+          → 「若者は、前例のない(=特別な)脳を持つように遺伝的に決まっているわけではない」<br>
+          → つまり、<strong>デジタルネイティブが特別な脳を持つわけではない</strong>!<br><br>
+          ★ <strong>2文目全体</strong>: 「<strong>ロンドンの教育研究所のニール・セルウィンは、現代世代は実は以前の世代と少しも変わらない、と主張する。若者たちは、前例のない脳を持つように遺伝的に決まっているわけではないのだ</strong>」<br><br>
+          → では実態は?(=次へ!)
+        </div>
+        <div class="ra-step-conclude">
+          be hardwired to V「Vするように遺伝的に決まっている」(=語句注釈、慣用)!unprecedented「前例のない」(=un + precedent + ed)!セルウィンの主張のコア!
+        </div>
+    </div>
+  </div>
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">4</span>
+      <span class="ra-step-pos"><em>Rather, many young people are using technology</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">3文目スタート ─ Rather「むしろ」+ メインの SV</span>
+    </div>
+    <div class="ra-step-body">
+      <p>3文目スタート <span class="en">Rather, many young people are using technology</span>「むしろ、多くの若者がテクノロジーを使っている」!</p>
+        <div class="ra-step-think">
+          ★ <span class="en">Rather</span> = 副詞「<strong>むしろ</strong>」(=対比、副詞)<br>
+          → 前文の主張(=「若者の脳が特別というわけではない」)に対する<strong>言い換え・対比</strong>!<br>
+          → 「実態はむしろ ~ である」<br><br>
+          ★ S = <span class="en">many young people</span>「多くの若者」<br>
+          ★ V = <span class="en">are using technology</span>「テクノロジーを使っている」(=現在進行形)<br>
+          → S V O の骨格!<br><br>
+          ★ <strong>これから来る修飾</strong>: in a way ~ than ~(=様態 + 比較)!<br><br>
+          ★ <strong>骨格を頭に入れる</strong>: 「<strong>多くの若者があるやり方でテクノロジーを使っている</strong>」<br>
+          → どんなやり方で?(=次へ!)<br><br>
+          ★ <strong>本問のラスボス到来!</strong>(=次のステップで詳しく!)
+        </div>
+        <div class="ra-step-conclude">
+          Rather「むしろ」(=対比)!骨格 SVO = many young people are using technology「若者はテクノロジーを使っている」!修飾はこれから!
+        </div>
+    </div>
+  </div>
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">5</span>
+      <span class="ra-step-pos"><em>in a far more sporadic, passive, solitary and, above all, unspectacular way</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">本問のハイライト ─ far more 形容詞群 way!</span>
+    </div>
+    <div class="ra-step-body">
+      <p>続く <span class="en">in a far more sporadic, passive, solitary and, above all, unspectacular way</span>「はるかにより散発的で、受動的で、孤独で、そして何より、地味なやり方で」!</p>
+        <div class="ra-step-think">
+          ★ <strong>核心 ─ 本問最大のハイライト!</strong><br><br>
+          ★ <span class="en">in a way</span>「~なやり方で」(=様態の前置詞句、最重要骨格!)<br>
+          → way の前に長い修飾!<br><br>
+          ★ <strong>修飾の構造</strong>: <span class="en">a far more sporadic, passive, solitary and, above all, unspectacular way</span><br>→ a + 修飾語 + way<br>→ 修飾語 = <strong>far more</strong> + <strong>4つの形容詞 and 並列</strong><br><br>
+          ★ <strong>分解</strong>:<br>
+          (1) <strong>far more</strong> = 「<strong>はるかにより</strong>」(=比較級の強調、第36・57講応用)<br>
+          → far / much / a lot + 比較級「はるかに~」<br><br>
+          (2) <strong>4つの形容詞並列</strong>(=第15講応用):<br>
+          ・<span class="en">sporadic</span>「散発的な」<br>
+          ・<span class="en">passive</span>「受動的な」<br>
+          ・<span class="en">solitary</span>「孤独な」<br>
+          ・<span class="en">unspectacular</span>「地味な/目立たない」(=un + spectacular)<br><br>
+          (3) <strong>and, above all,</strong> = 「~、そして<strong>何より</strong>、~」(=強調の挿入)<br>
+          → above all「何よりも/とりわけ」(=慣用、強調)<br><br>
+          ★ <strong>並列の構造</strong>:<br>
+          → A(sporadic), B(passive), C(solitary) and, above all, D(unspectacular)<br>
+          → 4つ目の D を <strong>above all で強調</strong>!<br>
+          → 「散発的、受動的、孤独、<strong>そして何より</strong>、地味」<br><br>
+          ★ <strong>比較対象は?</strong>:<br>
+          → far more がある → 後ろに than が来るはず!<br>
+          → 「~よりも、はるかに ~ なやり方で」<br><br>
+          ★ <strong>意訳</strong>: 「<strong>はるかにより散発的で、受動的で、孤独で、そして何より、地味なやり方で</strong>」<br><br>
+          → 比較対象は?(=次へ!)
+        </div>
+        <div class="ra-step-conclude">
+          far more + 4つの形容詞並列 + above all で4つ目を強調!a in a 形容詞群 way「~なやり方で」!比較対象 than が次に来る!
+        </div>
+    </div>
+  </div>
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">6</span>
+      <span class="ra-step-pos"><em>than the hype of the blogosphere and zealous proponents of cyberculture</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">比較対象の主語 ─ 2つの名詞句 and 並列</span>
+    </div>
+    <div class="ra-step-body">
+      <p>続く <span class="en">than the hype of the blogosphere and zealous proponents of cyberculture</span>「ブログ界の誇大宣伝と、サイバー文化の熱狂的支持者(が ~ するよりも)」!</p>
+        <div class="ra-step-think">
+          ★ <span class="en">than</span> = 接続詞「~よりも」(=比較対象を導入、前の far more に対応)<br><br>
+          ★ <strong>than 節の主語</strong>: <span class="en">the hype of the blogosphere and zealous proponents of cyberculture</span><br>
+          → and が<strong>2つの名詞句を並列</strong>!(=第15講応用)<br><br>
+          ★ <strong>2つの名詞句</strong>:<br>
+          (1) <strong>the hype of the blogosphere</strong>「ブログ界の誇大宣伝」<br>
+          ・hype = 「誇大宣伝/大げさな話」(=名詞)<br>
+          ・the blogosphere = 「ブログ界/ブログ圏」(=blog + -sphere)<br><br>
+          (2) <strong>zealous proponents of cyberculture</strong>「サイバー文化の熱狂的支持者(たち)」<br>
+          ・zealous「熱狂的な」(=形容詞)<br>
+          ・proponents「支持者」(=名詞、複数)<br>
+          ・of cyberculture「サイバー文化の」<br><br>
+          ★ <strong>2つの共通点</strong>:<br>
+          → どちらも「<strong>デジタルネイティブの特別さを煽る存在</strong>」!<br>
+          → 「若者は革新的でテクノロジーに熱中している」と謳う立場!<br><br>
+          ★ <strong>意訳</strong>: 「<strong>ブログ界の誇大宣伝と、サイバー文化の熱狂的支持者が ~</strong>」<br><br>
+          → V を待つ!(=次へ、本問最大の核心!)
+        </div>
+        <div class="ra-step-conclude">
+          than 節の主語 = and で2つの名詞句並列(hype of blogosphere / zealous proponents of cyberculture)!共通点: デジタルネイティブを煽る存在!
+        </div>
+    </div>
+  </div>
+
+  <div class="ra-step">
+    <div class="ra-step-head">
+      <span class="ra-step-num">7</span>
+      <span class="ra-step-pos"><em>might have us believe.</em></span>
+      <span class="ra-step-arrow">▸</span>
+      <span class="ra-step-question">本問のラスボス ─ 使役動詞 have + O + V 原形!</span>
+    </div>
+    <div class="ra-step-body">
+      <p>最後 <span class="en">might have us believe.</span>「我々に信じさせるかもしれない」!</p>
+        <div class="ra-step-think">
+          ★ <strong>本問最大の核心 ─ 使役動詞 have!</strong><br><br>
+          ★ <span class="en">have + O + V 原形</span> = <strong>使役動詞構文</strong>「<strong>OにVさせる</strong>」<br>
+          → have us believe「我々に信じさせる/思わせる」<br>
+          → make / let / have が使役動詞の代表3つ!<br><br>
+          ★ <strong>分解</strong>:<br>
+          → might = 助動詞「~するかもしれない」<br>
+          → have = 使役動詞「~させる」(=動詞の原形)<br>
+          → us = 目的語「我々」<br>
+          → believe = 原形不定詞「信じる」<br><br>
+          ★ <strong>意訳</strong>: 「<strong>(我々に)信じさせるかもしれない</strong>」<br><br>
+          ★ <strong>使役動詞の意味の違い</strong>:<br>
+          (1) make + O + V「強制的にOにVさせる」(=強い)<br>
+          (2) <strong>have + O + V</strong>「(立場上)OにVさせる/Oに~させる」(=中立、本問!)<br>
+          (3) let + O + V「Oに(やりたいことを)させてあげる」(=許可)<br><br>
+          ★ <strong>3文目全体の構造</strong>:<br>
+          → <strong>骨格</strong>: A(=many young people) are using technology in a way<br>
+          → 修飾: in a far more X way than B might have us believe<br>
+          → A の way の度合い > B が us believe させる way の度合い<br>
+          → 「A の実態は、B が思わせるよりもはるかに ~ である」<br><br>
+          ★ <strong>3文目全体の意訳</strong>: 「<strong>むしろ、多くの若者がテクノロジーを使うやり方は、ブログ界の誇大宣伝やサイバー文化の熱狂的支持者が我々に信じ込ませようとするよりも、はるかに散発的で、受動的で、孤独で、そして何より地味なのである</strong>」<br><br>
+          ★ <strong>3文全体のメッセージ</strong>:<br>
+          → 1文目: デジタルネイティブは実は存在しないかも(=問題提起)<br>
+          → 2文目: 現代世代は前の世代と変わらない、特別な脳を持つわけではない(=セルウィンの主張)<br>
+          → 3文目: 若者のテクノロジー利用は、誇大宣伝が言うほど華々しくはない。実態ははるかに散発的・受動的・孤独・地味!<br>
+          → <strong>「デジタルネイティブ神話」への辛辣な批判</strong>!<br><br>
+          ★ <strong>本問の本質</strong>:<br>
+          → far more X way than S V「Sが~するよりも、はるかにXなやり方で」(=比較級の応用)<br>
+          → have us believe「我々に信じさせる」(=使役動詞)<br>
+          → 同格的修飾、no different from、be hardwired to V、コロンなど、入門60で学んだすべてを総動員!<br>
+          → <strong>慶應大レベルの英文も、基礎をしっかり積めば読める!</strong>
+        </div>
+        <div class="ra-step-conclude">
+          have us believe = 使役動詞 have + O + V原形「我々に信じさせる」!本問の核心!入門60の総動員で慶應レベルの英文も読める!
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STEP 2 - 構造の見える化 ============ -->
+<div class="merge-bridge">
+  <div class="merge-bridge-tag">▼ ここまでの解析を1枚で見る</div>
+  <p class="merge-bridge-text">7つのステップで、左から右へと考えてきたことを<strong>構造図にまとめる</strong>と、こうなります。色分けで見ると、骨格(メイン)と補足の関係が一気にクリアになるはず。</p>
+</div>
+
+<div class="final-display">
+  <p class="final-display-text">
+    <span class="seg-wrap"><span class="seg-sub">Then again,</span><span class="seg-marker seg-marker-sub">M(文修飾)</span></span>
+    <span class="seg-wrap"><span class="seg-sub">perhaps</span><span class="seg-marker seg-marker-sub">M(副詞)</span></span>
+    <span class="seg-wrap"><span class="seg-main">the Digital Native</span><span class="seg-marker seg-marker-main">S₁</span></span>
+    <span class="seg-wrap"><span class="seg-main">doesn’t actually exist</span><span class="seg-marker seg-marker-main">V₁(否定)</span></span>
+    <span class="seg-wrap"><span class="seg-sub">after all.</span><span class="seg-marker seg-marker-sub">M(慣用)</span></span>
+    <span class="seg-wrap"><span class="seg-main">Neil Selwyn,</span><span class="seg-marker seg-marker-main">S₂</span></span>
+    <span class="seg-wrap"><span class="seg-sub">of the Institute of Education in London,</span><span class="seg-marker seg-marker-sub">同格的修飾</span></span>
+    <span class="seg-wrap"><span class="seg-main">argues</span><span class="seg-marker seg-marker-main">V₂</span></span>
+    <span class="seg-wrap"><span class="seg-sub">[that the current generation is actually no different from preceding ones]:</span><span class="seg-marker seg-marker-sub">O₂(that名詞節)+コロン</span></span>
+    <span class="seg-wrap"><span class="seg-main">young people</span><span class="seg-marker seg-marker-main">S₃(=コロン後具体)</span></span>
+    <span class="seg-wrap"><span class="seg-main">are not hardwired</span><span class="seg-marker seg-marker-main">V₃(=慣用)</span></span>
+    <span class="seg-wrap"><span class="seg-sub">to have unprecedented brains.</span><span class="seg-marker seg-marker-sub">不定詞(=hardwiredの目的)</span></span>
+    <span class="seg-wrap"><span class="seg-sub">Rather,</span><span class="seg-marker seg-marker-sub">M(対比)</span></span>
+    <span class="seg-wrap"><span class="seg-main">many young people</span><span class="seg-marker seg-marker-main">S₄</span></span>
+    <span class="seg-wrap"><span class="seg-main">are using</span><span class="seg-marker seg-marker-main">V₄(進行形)</span></span>
+    <span class="seg-wrap"><span class="seg-main">technology</span><span class="seg-marker seg-marker-main">O₄</span></span>
+    <span class="seg-wrap"><span class="seg-sub">〈in a far more sporadic, passive, solitary and, above all, unspectacular way</span><span class="seg-marker seg-marker-sub">M(=far more 形容詞群 way)</span></span>
+    <span class="seg-wrap"><span class="seg-sub">than the hype of the blogosphere and zealous proponents of cyberculture might have us believe〉.</span><span class="seg-marker seg-marker-sub">比較対象 + 使役動詞 have+O+V</span></span>
+  </p>
+  <div class="skeleton-line">
+    骨格 = <strong>1: 〈M〉, 〈M〉 S V(=否定) 〈M〉. 2: S, 〈同格的修飾〉, V [O=that S V 〈M〉 C(=no different from N)]: S V(=慣用 be hardwired) to V O. 3: 〈M(=Rather)〉, S V O 〈in a [far more A, B, C and, above all, D] way than [S(=and並列) might have us believe(=使役動詞)]〉.</strong>(同格的修飾、no different from、be hardwired to V、far + 比較級、A, B, C and, above all, D の4つ並列、above all 強調、than S might have us believe = 使役動詞 have + O + V 原形、コロンで具体内容)
+  </div>
+</div>
+
+<!-- ============ STEP 2 - 訳の仕上げ ============ -->
+<div class="merge-bridge merge-bridge-2">
+  <div class="merge-bridge-tag">▼ 構造が見えたら、いよいよ訳の仕上げ</div>
+  <p class="merge-bridge-text">
+    構造解析で終わると「結局この文は何を言ってるの？」が宙ぶらりんになりがち。<br>
+    ここから、<strong>直訳 → 中間訳 → 完成訳</strong>と、日本語として自然な訳に磨き上げる手順を見ていきます。これも「センス」ではなく、ちゃんと<strong>段階的な手順</strong>があります。
+  </p>
+</div>
+
+<div class="trans-build">
+
+  <div class="trans-row is-direct">
+    <span class="trans-row-label">① 直訳</span>
+    <div class="trans-row-content">
+      <span class="trans-row-text">そしてまた、もしかすると、デジタルネイティブは、結局のところ、実際には存在しない。ロンドンの教育研究所のニール・セルウィンは、現代世代は実は前の世代と少しも違わないと主張する: 若者は前例のない脳を持つように遺伝的に決まっているわけではない。むしろ、多くの若者は、ブログ界の誇大宣伝とサイバー文化の熱狂的支持者が我々に信じさせるかもしれないよりも、はるかにより散発的で、受動的で、孤独で、そして何より、目立たないやり方でテクノロジーを使っている。</span>
+      <span class="trans-row-note">構造どおりの直訳。「結局のところ実際には存在しない」「少しも違わない」「(我々に)信じさせるかもしれないよりも、はるかにより~」が硬い。比較級の長い構造もまだ自然じゃない。</span>
+    </div>
+  </div>
+  <div class="trans-arrow">
+    <span class="trans-arrow-icon">▼</span>
+    <span class="trans-arrow-text"><strong>3文目の骨格</strong>: <span class="en">A are using technology in a [far more 形容詞群] way than B might have us believe</span>「Aの使うやり方は、Bが我々に信じさせるよりも、はるかに ~ なやり方」</span>
+    <span class="trans-arrow-detail">比較級 far more + 4つの形容詞並列(A, B, C and, above all, D)+ 比較対象 than + 使役動詞 have + O + V 原形!骨格は「A is ~ ing in a way than B might have us believe」!</span>
+  </div>
+  <div class="trans-row is-direct">
+    <span class="trans-row-label">② 中間訳</span>
+    <div class="trans-row-content">
+      <span class="trans-row-text">そしてまた、もしかすると、デジタルネイティブなどというものは、実際には存在しないのかもしれない。ロンドンの教育研究所のニール・セルウィンは、現代世代は実は前の世代と少しも変わらない、と主張する。若者は前例のない脳を持つように遺伝的に決まっているわけではない、ということだ。むしろ、多くの若者がテクノロジーを使うやり方は、ブログ界の誇大宣伝やサイバー文化の熱狂的支持者が我々に信じさせるかもしれないよりも、はるかに散発的で、受動的で、孤独で、何より地味なやり方なのである。</span>
+      <span class="trans-row-note">no different from を「少しも変わらない」、be hardwired to V を「~するように遺伝的に決まっている」、far more ~ than を「~よりも、はるかに ~」、A, B, C and above all D を「~、何より~」、have us believe を「我々に信じさせる」と仕上げ。</span>
+    </div>
+  </div>
+  <div class="trans-arrow">
+    <span class="trans-arrow-icon">▼</span>
+    <span class="trans-arrow-text"><strong>have + O + V 原形</strong> = 使役動詞「OにVさせる」(=本問の核心!)、<strong>同格的修飾</strong>(=第57講応用)、<strong>be hardwired to V</strong>「Vするように遺伝的に決まる」、<strong>no different from</strong>「少しも変わらない」(=否定強調)</span>
+    <span class="trans-arrow-detail">使役動詞 make/have/let の中で、have は「(立場上)~させる」の中立的なニュアンス!同格 Neil Selwyn, of the Institute ~, は人名の所属を補足!be hardwired は語句注釈!</span>
+  </div>
+  <div class="trans-row is-natural">
+    <span class="trans-row-label">③ 完成訳</span>
+    <div class="trans-row-content">
+      <span class="trans-row-text"><strong>そしてまた、もしかすると、デジタルネイティブなどというものは実際には存在しないのかもしれない。ロンドンの教育研究所のニール・セルウィンは、現代世代は実は以前の世代と少しも変わらない、と主張する。若者たちは、前例のない脳を持つように遺伝的に決まっているわけではないのだ。むしろ、多くの若者がテクノロジーを使うやり方は、ブログ界の誇大宣伝やサイバー文化の熱狂的支持者が我々に信じ込ませようとするよりも、はるかに散発的で、受動的で、孤独で、そして何より地味なのである。</strong></span>
+      <span class="trans-row-note">「デジタルネイティブなどというもの」(=「the」を強調)、「以前の世代」(=preceding ones)、「~わけではないのだ」(=コロン後の念押し)、「信じ込ませようとする」(=have us believe の自然訳、強い意図ニュアンス)、「~のである」(=断定の余韻)で仕上げ。これで完成!</span>
+    </div>
+  </div>
+</div>
+
+<div class="natural-tip">
+  <div class="natural-tip-head">
+    <span class="natural-tip-icon">💡</span>
+    <span class="natural-tip-title">自然訳の「型」: <strong>比較級 + than S might have us believe を、骨格で読み解く</strong></span>
+  </div>
+  <p class="natural-tip-body">
+    ★ 今回は<strong>慶應大の英文</strong>!入門60シリーズで身につけた基礎を、本格的な大学入試レベルに応用する回!<br><br>★ 本問の最大の難所は、3文目!<strong>far more 形容詞群 way than S might have us believe</strong>!<br>★ この複雑な比較級構造を、<strong>骨格に集約して読み解く</strong>力を磨きます。<br><br>★ <strong>3文目の構造を整理</strong>:<br>★ <span class="en">A are using technology in a [far more sporadic, passive, solitary and, above all, unspectacular] way than B might have us believe.</span><br><br>★ <strong>骨格(=補足を全部削る)</strong>: <span class="en">A is using technology in a way</span>「A はあるやり方でテクノロジーを使っている」<br><br>★ <strong>way の修飾</strong>:<br>(1) <strong>far more</strong>「はるかにより」(=比較級の強調)<br>(2) <strong>4つの形容詞並列</strong>(=sporadic, passive, solitary, unspectacular)<br>(3) <strong>above all</strong>「何よりも」(=最後の形容詞を強調する挿入)<br>(4) <strong>than B</strong>「Bよりも」(=比較対象)<br><br>★ <strong>than B の中身</strong>: <span class="en">B might have us believe</span>「BがUSに信じさせるかもしれない」(=使役動詞構文!)<br><br>★ <strong>have + O + V 原形 = 使役動詞構文</strong>:<br>★ make / let / have が使役動詞の代表3つ!<br>(1) <strong>make + O + V</strong>「強制的にOにVさせる」(=強い)<br>(2) <strong>have + O + V</strong>「(立場上)OにVさせる」(=中立、本問!)<br>(3) <strong>let + O + V</strong>「Oに(やりたいことを)させてあげる」(=許可)<br><br>★ <strong>本問の使役動詞 have</strong>: have us believe「我々に信じさせる/思わせる」<br>→ 「(立場や影響で)我々に信じ込ませようとする」のニュアンス!<br><br>★ <strong>類例</strong>(=have + O + V):<br>・<span class="en">The teacher had us study every day.</span>「先生は私たちに毎日勉強させた」<br>・<span class="en">She had him repair her car.</span>「彼女は彼に車を修理させた」<br>・<span class="en">Don’t let ads have you believe everything.</span>「広告に何でも信じ込まされるな」<br><br>★ <strong>もう一つ ─ far + 比較級「はるかに~」</strong>(=第36・57講応用):<br>★ 比較級を強調する副詞: far / much / a lot + 比較級<br>★ <strong>very + 比較級は不可</strong>!(=very は原級を強調)<br>★ 類例: far more difficult / much better / a lot worse など<br><br>★ <strong>もう一つ ─ A, B, C and, above all, D の4つ並列</strong>:<br>★ 4つ目の D を <strong>above all で強調</strong>!<br>★ above all = 慣用「何よりも/とりわけ」<br>★ 「~、~、~、そして<strong>何より</strong>、~」<br><br>★ <strong>類例</strong>:<br>・<span class="en">He is kind, honest, smart and, above all, hardworking.</span>「彼は親切で、誠実で、賢く、そして何より、勤勉だ」<br>・<span class="en">The food was fresh, tasty, healthy and, above all, cheap.</span>「料理は新鮮で、美味しく、健康的で、そして何より、安かった」<br><br>★ <strong>もう一つ ─ 同格的修飾</strong>(=第57講応用):<br>★ 名詞 + コンマ + 名詞句(=前置詞句など)+ コンマ → 同格・補足!<br>★ <strong>本問</strong>: <span class="en">Neil Selwyn, of the Institute of Education in London,</span>「ロンドンの教育研究所のニール・セルウィン」<br>→ コンマで挟まれた前置詞句が、Neil Selwyn の所属を補足!<br><br>★ <strong>類例</strong>:<br>・<span class="en">Mr. Smith, of Harvard University, gave a lecture.</span>「ハーバード大学のスミス氏は、講義を行った」<br>・<span class="en">Tokyo, the capital of Japan, is huge.</span>「日本の首都である東京は、巨大だ」<br><br>★ <strong>もう一つ ─ be hardwired to V</strong>「Vするように遺伝的に決まっている」(=慣用、語句注釈):<br>★ hardwired = 「(脳が)配線された」 = 「生まれつき決まっている」<br>★ to V = 「Vするように」(=不定詞、副詞用法)<br><br>★ <strong>類例</strong>:<br>・<span class="en">Humans are hardwired to seek pleasure.</span>「人間は快楽を求めるように生まれつき決まっている」<br>・<span class="en">Babies are hardwired to recognize faces.</span>「赤ちゃんは顔を認識するように遺伝的に決まっている」<br><br>★ <strong>もう一つ ─ no different from ~</strong>「~と少しも変わらない」(=慣用):<br>★ no + 形容詞 = 否定の強調!<br>★ 「全く~でない/少しも~でない」<br>★ <strong>類例</strong>: no longer「もはや~ない」、no better「全く良くならない」<br><br>★ <strong>もう一つ ─ コロン (:)</strong>(=第40・58講応用):<br>★ 「すなわち/つまり」のニュアンス!<br>★ コロン前の主張に対する、コロン後の具体的説明!<br>★ 本問: 「現代世代は前の世代と変わらない: 若者は前例のない脳を持つわけではない」<br><br>★ <strong>もう一つ ─ Then again / after all / Rather</strong>(=文脈をつなぐ副詞):<br>★ <span class="en">Then again</span>「そしてまた/さらに(言えば)」(=追加の観点)<br>★ <span class="en">after all</span>「結局のところ/実は」(=予想に反する結論)<br>★ <span class="en">Rather</span>「むしろ」(=対比、言い換え)<br><br>★ <strong>大学入試レベルの英文を読むコツ</strong>:<br>★ 本問は慶應大の英文。複雑だが、入門60で学んだ要素の<strong>組み合わせ</strong>!<br>(1) 比較級(=L36)<br>(2) 比較級の強調 far/much(=L57)<br>(3) 形容詞並列(=L15)<br>(4) 同格的修飾(=L57)<br>(5) コロンで具体例(=L40・L58)<br>(6) 使役動詞 + O + V 原形(=新出!)<br>(7) 慣用句多数(=be hardwired to V、no different from、above all、after all など)<br><br>★ <strong>骨格を見抜く読み方</strong>:<br>(1) <strong>長い修飾を全部括弧でくくる</strong><br>(2) <strong>残る骨格(=SVO や SVM)を浮かび上がらせる</strong><br>(3) <strong>骨格を理解してから、修飾の中身を一つずつ読む</strong><br>★ これが大学入試レベルの英文でも通用する読み方!<br><br>★ 入門60講をしっかり完走した皆さんなら、慶應大の英文も<strong>確実に読める</strong>!<br>★ これからの長文読解で、この読み方を実践していきましょう!
+  </p>
+  <div class="natural-tip-examples">
+    
+    <div class="natural-tip-ex">
+      <span class="natural-tip-ex-en"><span class="en">The teacher had us memorize all the vocabulary.</span></span>
+      <span class="natural-tip-ex-bad">先生は私たちに全ての語彙を記憶を持った (have を「持つ」と取り違え)</span>
+      <span class="natural-tip-ex-good">先生は私たちに全ての語彙を覚えさせた (have + O + V 原形 = 使役動詞「OにVさせる」!)</span>
+    </div>
+    <div class="natural-tip-ex">
+      <span class="natural-tip-ex-en"><span class="en">The problem is far more serious than people might think.</span></span>
+      <span class="natural-tip-ex-bad">問題は人々が思うよりも、はるかにもっと深刻だ (far more の比較級強調を訳出しすぎ)</span>
+      <span class="natural-tip-ex-good">問題は、人々が思うかもしれないよりも、はるかに深刻だ (far more = 比較級の強調「はるかに~」、very + 比較級は不可!)</span>
+    </div>
+    <div class="natural-tip-ex">
+      <span class="natural-tip-ex-en"><span class="en">My friend, of the University of Tokyo, won the award.</span></span>
+      <span class="natural-tip-ex-bad">私の友人は、東京大学のもので、賞を取った (同格的修飾を取り違え)</span>
+      <span class="natural-tip-ex-good">東京大学に在籍している私の友人が、賞を取った (My friend, of ~ , = 同格的修飾、所属を補足!)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STEP 2 - まとめ ============ -->
+<div class="step2-summary">
+  <div class="step2-summary-head">
+    <span class="step2-summary-icon">✓</span>
+    <span class="step2-summary-title">STEP 2 のまとめ ─ 「構造」から「意味」までの一直線</span>
+  </div>
+  <div class="step2-summary-flow">
+    <div class="step2-flow-item">
+      <span class="step2-flow-num">1</span>
+      <span class="step2-flow-text">左から右へ、1語ずつ品詞と役割を確定する</span>
+    </div>
+    <span class="step2-flow-arrow">→</span>
+    <div class="step2-flow-item">
+      <span class="step2-flow-num">2</span>
+      <span class="step2-flow-text">骨格と修飾語(M)を色分けで把握する</span>
+    </div>
+    <span class="step2-flow-arrow">→</span>
+    <div class="step2-flow-item">
+      <span class="step2-flow-num">3</span>
+      <span class="step2-flow-text">直訳 → 中間訳 → 完成訳と日本語に仕上げる</span>
+    </div>
+  </div>
+  <p class="step2-summary-text">
+    この一連の流れが、英文解釈の全プロセスです。<strong>「構造が見えた」だけで満足せず、必ず最後の「自然な訳」まで仕上げる</strong>習慣を、今日からつけていきましょう。
+  </p>
+</div>
+
+<!-- ============ STEP 3: ドリル ============ -->
+<div class="step-head">
+  <div class="step-eyebrow">
+    <span class="step-tag">STEP 3</span>
+    <span class="step-line"></span>
+    <span class="step-counter">— Try It Yourself —</span>
+  </div>
+  <h2 class="step-title">同じ思考で、別の英文を読んでみる</h2>
+  <p class="step-subtitle">読み方は「使えてナンボ」。今日身につけた思考プロセスを、別の英文で試してみましょう。<strong>答えを見る前に必ず自分で考える</strong>のがポイント。<br>知識として「覚える」のではなく、<strong>手を動かして「使える」状態</strong>に持っていきます。</p>
+</div>
+
+
+<div class="drill-card">
+  <div class="drill-head">
+    <span class="drill-icon">Q1</span>
+    <span class="drill-title">使役動詞 have + O + V 原形</span>
+  </div>
+  <p class="drill-en">My boss <strong>had me work overtime</strong> last night.</p>
+  <p class="drill-q">使役動詞構文を分析して訳すと?</p>
+  <button class="drill-toggle-btn" data-target="drill1">解答と解説を見る</button>
+  <div class="drill-answer" id="drill1">
+    <strong>分析:</strong> have + O + V 原形 = 使役動詞「OにVさせる」!<br>
+        ・S = My boss「上司」<br>
+        ・V = had「させた」(=使役動詞、過去形)<br>
+        ・O = me「私」<br>
+        ・V 原形 = work「働く」(=動詞の原形、不定詞の to なし!)<br>
+        ・M = overtime「残業で/時間外に」<br>
+        ・M = last night「昨夜」<br>
+        <strong>訳:</strong> 「<strong>昨夜、上司は私に残業させた</strong>」<br><br>
+        💡 have + O + V 原形 = 中立的な使役「(立場上)OにVさせる」!make(=強制)、let(=許可)とニュアンスが違う!
+  </div>
+</div>
+
+<div class="drill-card">
+  <div class="drill-head">
+    <span class="drill-icon">Q2</span>
+    <span class="drill-title">far + 比較級 + than S V</span>
+  </div>
+  <p class="drill-en">This book is <strong>far more interesting than I expected</strong>.</p>
+  <p class="drill-q">far + 比較級の強調と比較対象を分析して訳すと?</p>
+  <button class="drill-toggle-btn" data-target="drill2">解答と解説を見る</button>
+  <div class="drill-answer" id="drill2">
+    <strong>分析:</strong> far + 比較級 + than S V!<br>
+        ・S = This book<br>
+        ・V = is<br>
+        ・C = far more interesting「はるかにより興味深い」(=far = 比較級強調)<br>
+        ・than I expected「私が期待したよりも」(=比較対象、後ろの interesting の繰り返しを省略)<br>
+        ・元の形: This book is far more interesting than I expected (it to be).<br>
+        <strong>訳:</strong> 「<strong>この本は、私が期待したよりも、はるかに興味深い</strong>」<br><br>
+        💡 far + 比較級 = 「はるかに~」!very + 比較級は不可!much / a lot も同様の役割!
+  </div>
+</div>
+
+<div class="drill-card">
+  <div class="drill-head">
+    <span class="drill-icon">Q3</span>
+    <span class="drill-title">4つ並列 + above all 強調</span>
+  </div>
+  <p class="drill-en">She is <strong>creative, hardworking, talented and, above all, kind</strong>.</p>
+  <p class="drill-q">and, above all, ~ の構造を分析して訳すと?</p>
+  <button class="drill-toggle-btn" data-target="drill3">解答と解説を見る</button>
+  <div class="drill-answer" id="drill3">
+    <strong>分析:</strong> A, B, C and, above all, D の4つ並列!<br>
+        ・S = She<br>
+        ・V = is<br>
+        ・C = creative, hardworking, talented and, above all, kind「創造的で、勤勉で、才能があり、そして何より、親切」(=4つの形容詞並列)<br>
+        ・<strong>above all</strong> = 慣用「何よりも/とりわけ」(=最後の D を強調する挿入)<br>
+        ・「~、~、~、<strong>そして何より</strong>、~」のリズム!<br>
+        <strong>訳:</strong> 「<strong>彼女は創造的で、勤勉で、才能があり、そして何より、親切だ</strong>」<br><br>
+        💡 A, B, C and, above all, D = 4つ並列で最後の D を強調!above all は「何より/とりわけ」!
+  </div>
+</div>
+
+<!-- ============ STEP 4: Reading Algorithm ============ -->
+<div class="step-head">
+  <div class="step-eyebrow">
+    <span class="step-tag">STEP 4</span>
+    <span class="step-line"></span>
+    <span class="step-counter">— Your Reading Algorithm —</span>
+  </div>
+  <h2 class="step-title">これからの英文に使える「思考フロー」</h2>
+  <p class="step-subtitle">最後に、今日の学びを<strong>初見の英文に使える型</strong>として整理しておきます。これを毎回頭の中で回せば、確実に読める英文が増えていきます。</p>
+</div>
+
+<div class="flow">
+
+  <div class="flow-step">
+    <span class="flow-num">1</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>長い英文の骨格を見抜く</strong>(=入門60の集大成!)</div>
+      <div class="flow-desc">長い修飾を全部括弧でくくり、SVO や SVM の骨格を浮かび上がらせる!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">2</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>have + O + V 原形</strong> = 使役動詞「OにVさせる」(=本問の核心!)</div>
+      <div class="flow-desc">have us believe「我々に信じさせる」!make(=強制)/let(=許可)とニュアンス違い!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">3</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>far + 比較級</strong>「はるかに~」(=比較級強調、第36・57講応用)</div>
+      <div class="flow-desc">far/much/a lot + 比較級!very + 比較級は不可!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">4</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>A, B, C and, above all, D</strong>(=4つ並列、最後を強調)</div>
+      <div class="flow-desc">above all「何より/とりわけ」で最後の D を強調する挿入!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">5</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>同格的修飾</strong>(=第57講応用)</div>
+      <div class="flow-desc">名詞 + コンマ + 名詞句 + コンマ → 同格・補足!Neil Selwyn, of the Institute ~ ,</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">6</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>be hardwired to V</strong>「Vするように遺伝的に決まる」(=慣用、語句注釈)</div>
+      <div class="flow-desc">hardwired = 「(脳が)配線された」!to V は不定詞、副詞用法!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">7</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>no different from ~</strong>「~と少しも変わらない」(=否定強調)</div>
+      <div class="flow-desc">no + 形容詞 = 否定の強調!no longer / no better と同じ仕組み!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">8</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>コロン (:)</strong> で具体内容を導入(=第40・58講応用)</div>
+      <div class="flow-desc">「すなわち/つまり」!コロン前の主張に対する、コロン後の具体的説明!</div>
+    </div>
+  </div>
+
+  <div class="flow-step">
+    <span class="flow-num">9</span>
+    <div class="flow-content">
+      <div class="flow-q"><strong>Then again / after all / Rather</strong>(=文脈をつなぐ副詞)</div>
+      <div class="flow-desc">Then again「さらに」/after all「結局のところ」/Rather「むしろ」!論理の流れを示す!</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CHECK ============ -->
+<div class="checklist">
+  <h3 class="check-title">今日のチェックリスト ─ 全部できれば本日の内容は完璧</h3>
+  <ul class="check-list">
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>have + O + V 原形</strong> = 使役動詞「OにVさせる」を理解した</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>使役動詞の違い</strong>(=make 強制/have 中立/let 許可)を覚えた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>far + 比較級</strong>「はるかに~」(=第36・57講応用、very 不可)を再確認</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>A, B, C and, above all, D</strong>(=4つ並列、最後を強調)を覚えた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>above all</strong>「何より/とりわけ」(=強調)を覚えた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>同格的修飾</strong>(=第57講応用)を再確認</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>be hardwired to V</strong>「Vするように遺伝的に決まる」(=慣用)を覚えた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>no different from ~</strong>「~と少しも変わらない」(=否定強調)を覚えた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>コロン (:) で具体内容</strong>(=第40・58講応用)を再確認</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>Then again / after all / Rather</strong>(=文脈をつなぐ副詞)を覚えた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text"><strong>大学入試レベルの長文を、骨格に集約して読み解く力</strong>を身につけた</span>
+    </li>
+    <li class="check-item">
+      <span class="check-box"></span>
+      <span class="check-text">STEP 3のドリル3問を、答えを見ずに自力で説明できる</span>
+    </li>
+  </ul>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-text">英文構造解析 · 第4講 · 【英文分析4・慶應大】比較級 + than ~ might have us believe を、骨格で読み解く</p>
+  <p class="footer-brand">Online Cram School &nbsp;<span>THINKING</span></p>
+</footer>
+
+<script>
+(function() {
+  'use strict';
+  
+  // Drill toggle
+  document.querySelectorAll('.drill-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const targetId = btn.getAttribute('data-target');
+      const answer = document.getElementById(targetId);
+      const isShown = answer.classList.contains('is-shown');
+      if (isShown) {
+        answer.classList.remove('is-shown');
+        btn.textContent = '解答と解説を見る';
+      } else {
+        answer.classList.add('is-shown');
+        btn.textContent = '解答を閉じる';
+      }
+    });
+  });
+  
+  // Checkbox interaction
+  document.querySelectorAll('.check-box').forEach(box => {
+    box.style.cursor = 'pointer';
+    box.addEventListener('click', function() {
+      const after = box.querySelector('::after');
+      if (box.style.background === 'var(--ink-primary)' || box.style.background === 'rgb(44, 37, 32)') {
+        box.style.background = 'transparent';
+      } else {
+        box.style.background = 'var(--ink-primary)';
+      }
+    });
+  });
+})();
+
+</script>
+
+</body>
+</html>
