@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学習院大学 2023年｜英語 完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--bd2:#ccc8be;
+  --tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+/* ─── HEADER ─── */
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.hdr-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+/* ─── PHASE NAV ─── */
+.pnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.pn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.pn:hover{color:var(--tx);}
+.pn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.pn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pn.active .pn-num{background:var(--ac);color:#fff;}
+
+.wrap{max-width:920px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+
+/* ─── CARDS ─── */
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* ─── PASSAGE ─── */
+.passage{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.2;color:var(--tx);}
+.passage p{margin-bottom:.9em;}
+.passage em{font-style:italic;}
+.ub{border-bottom:2px solid;padding-bottom:1px;}
+.u1{border-color:var(--rd);}
+.u2{border-color:var(--am);}
+.u3{border-color:var(--tl);}
+.u4{border-color:var(--ac);}
+.u5{border-color:var(--pu);}
+.u6{border-color:#c026d3;}
+.u7{border-color:#0891b2;}
+.uB{border-bottom:2.5px double #0a1628;}
+.fl{color:var(--t3);font-style:italic;}
+.kw{background:var(--aml);border-radius:2px;padding:0 2px;font-weight:700;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--acd);color:#fff;font-size:9px;font-weight:700;margin-right:3px;vertical-align:middle;font-family:'Noto Sans JP',sans-serif;}
+.blank-box{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:24px;border:1.5px dashed var(--rd);border-radius:4px;background:var(--rdl);color:var(--rd);font-weight:700;font-size:13px;padding:0 7px;font-family:'Noto Sans JP',sans-serif;vertical-align:middle;}
+
+/* ─── QUIZ ─── */
+.qblock{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qnum-badge{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:#fff;font-size:13px;font-weight:700;margin-right:10px;vertical-align:middle;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+.qtext{font-size:14px;font-weight:700;line-height:1.6;display:inline;vertical-align:middle;}
+.qen{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin:10px 0;padding:12px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:9px 12px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:11px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:18px;font-family:'Noto Sans JP',sans-serif;}
+.rev-btn{padding:8px 19px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev-btn:hover{background:var(--acd);}
+.ans-block{display:none;margin-top:12px;padding:14px 16px;border-radius:var(--r);font-size:13px;line-height:1.85;}
+.ans-block.show{display:block;}
+
+/* ─── EVIDENCE BLOCK (根拠取り) ─── */
+.evi-section{margin:10px 0;padding:11px 13px;border-radius:var(--r);}
+.evi-correct{background:#d1fae5;border-left:3px solid var(--tl);}
+.evi-wrong{background:#fee2e2;border-left:3px solid var(--rd);}
+.evi-neutral{background:#f0f4f8;border-left:3px solid var(--ac);}
+.evi-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:5px;}
+.evi-correct .evi-label{color:var(--tld);}
+.evi-wrong .evi-label{color:var(--rd);}
+.evi-neutral .evi-label{color:var(--acd);}
+.evi-source{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:3px;background:var(--acd);color:#fff;margin-right:6px;font-family:'Space Grotesk',sans-serif;}
+.evi-quote{font-family:'Source Serif 4',serif;font-size:13px;font-style:italic;color:var(--tx);line-height:1.7;background:rgba(255,255,255,.5);padding:7px 10px;border-radius:5px;margin:5px 0;}
+
+/* ─── CALLOUT ─── */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* ─── PARA FLOW ─── */
+.pflow{display:flex;flex-direction:column;}
+.pf-item{display:flex;gap:0;align-items:stretch;margin-bottom:4px;}
+.pf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.pf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+.pf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.pf-body{flex:1;padding:0 0 18px 13px;}
+.rtag{font-size:10px;font-weight:700;padding:2px 9px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.one-liner{margin:6px 0;padding:9px 12px;border-radius:8px;font-size:13px;font-weight:700;border-left:3px solid transparent;line-height:1.6;}
+
+/* ─── SCORE ─── */
+.score-card{background:var(--sf);border-radius:var(--rl);padding:14px 18px;border:.5px solid var(--bd);display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+.sc-num{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--ac);}
+
+/* ─── NAV ─── */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:11px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:9px 17px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+
+/* ─── DESC INPUT ─── */
+.trans-input{width:100%;padding:12px 14px;font-size:14px;font-family:'Noto Sans JP',sans-serif;border:.5px solid var(--bd);border-radius:var(--r);background:var(--sf);color:var(--tx);resize:none;line-height:1.75;margin-top:8px;}
+.trans-input:focus{outline:none;border-color:var(--ac);box-shadow:0 0 0 3px rgba(44,95,138,.1);}
+
+/* ─── J 複数選択 ─── */
+.j-choice{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;line-height:1.7;text-align:left;width:100%;font-family:'Noto Sans JP',sans-serif;margin-bottom:5px;transition:all .15s;}
+.j-choice:hover{border-color:var(--ac);background:var(--acl);}
+.j-choice.sel{border-color:var(--ac);background:var(--acl);}
+.j-choice.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.j-choice.ng-sel{background:var(--rdl);border-color:var(--rd);}
+
+/* ─── TRANSLATION (全文和訳) ─── */
+.tr-row{display:grid;grid-template-columns:1fr;gap:0;border-radius:var(--rl);overflow:hidden;border:.5px solid var(--bd);margin-bottom:14px;}
+.tr-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.95;padding:14px 18px;background:var(--sf);color:var(--tx);}
+.tr-jp{font-family:'Noto Sans JP',sans-serif;font-size:13.5px;line-height:2;padding:14px 18px;background:var(--s2);color:var(--tx);border-top:.5px solid var(--bd);}
+.tr-pnum{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--acd);color:#fff;font-size:10px;font-weight:700;margin-right:8px;vertical-align:middle;font-family:'Space Grotesk',sans-serif;flex-shrink:0;}
+.tr-en em{font-style:italic;}
+.tr-jp em{font-style:normal;font-weight:700;color:var(--ac);}
+.tr-section-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.tr-section-title::before{content:"";width:24px;height:1px;background:var(--bd);}
+.tr-section-title::after{content:"";flex:1;height:1px;background:var(--bd);}
+.tr-points{margin-top:8px;padding:11px 14px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);font-size:12.5px;line-height:1.8;}
+.tr-points strong{color:var(--acd);}
+@media(min-width:720px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:.5px solid var(--bd);}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜大学入試 完全解説</div>
+      <div class="brand-s">学習院大学 2023年 英語 大問I</div>
+    </div>
+  </div>
+  <span class="hdr-badge">学習院大 2023</span>
+</div>
+
+<div class="pnav">
+  <button class="pn active" onclick="goP('p1')" id="pb1"><span class="pn-num">1</span>英文を読む</button>
+  <button class="pn" onclick="goP('p2')" id="pb2"><span class="pn-num">2</span>段落構造</button>
+  <button class="pn" onclick="goP('p3')" id="pb3"><span class="pn-num">3</span>設問A〜D</button>
+  <button class="pn" onclick="goP('p4')" id="pb4"><span class="pn-num">4</span>設問E 記述</button>
+  <button class="pn" onclick="goP('p5')" id="pb5"><span class="pn-num">5</span>設問F〜I</button>
+  <button class="pn" onclick="goP('p6')" id="pb6"><span class="pn-num">6</span>設問J 内容一致</button>
+  <button class="pn" onclick="goP('p7')" id="pb7"><span class="pn-num">7</span>全文和訳</button>
+</div>
+
+<div class="wrap">
+
+<!-- ══════════ P1 英文を読む ══════════ -->
+<div class="pan active" id="p1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">学習院大学 2023年 大問I（40点）</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">Cultural Appropriation<br><span style="font-size:14px;opacity:.85;">— 文化の流用とは何か</span></div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">「文化の流用（cultural appropriation）」を定義し、似て非なる「文化的影響の受容」と区別したうえで、米国の歴史的背景・現代の具体例（Katy Perryの2013年AMAパフォーマンス）を踏まえ、最後に「他文化に関わる際に自問すべき3つの質問」を提示する論説。社会問題系英文の典型的な「定義→対比→歴史→現代→処方箋」の流れ。</div>
+  </div>
+
+  <!-- 読む前の構造案内 -->
+  <div class="card">
+    <div class="lbl">読む前に — 文章全体を貫く3つの軸</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:8px;font-size:13px;">
+      <div style="padding:10px 13px;background:var(--rdl);border-radius:var(--r);border-left:3px solid var(--rd);"><strong>軸① 定義の混乱を整理する（P1〜P3）</strong><br><span style="color:var(--t2);">cultural appropriation は単なる「異文化の影響を受けること」ではない。支配集団が少数派の文化を「歴史への理解なしに搾取する」こと。この区別が全体の理解の土台。</span></div>
+      <div style="padding:10px 13px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);"><strong>軸② なぜ問題なのか（P4〜P8）</strong><br><span style="color:var(--t2);">米国の歴史的経緯（白人優位のイデオロギー）／少数派から称賛と富を奪う／ステレオタイプを強化する／Katy Perry事例</span></div>
+      <div style="padding:10px 13px;background:var(--tll);border-radius:var(--r);border-left:3px solid var(--tl);"><strong>軸③ どう向き合うか（P9〜P11）</strong><br><span style="color:var(--t2);">敬意か侮辱かは紙一重 → 自問すべき3つの質問（なぜ？出所は？敬意ある扱いか？）→ 純粋な興味は否定しないが、無視できない問題提起</span></div>
+    </div>
+  </div>
+
+  <!-- 本文 -->
+  <div class="card">
+    <div class="lbl">本文（下線・空所番号付き）</div>
+    <div class="passage">
+
+      <p><span class="pnum">1</span>Cultural appropriation is the adoption of certain elements from another culture without the consent of people who belong to that culture. It's a controversial topic that <span class="ub u1">⒜<strong>celebrities have helped bring into the national spotlight</strong></span>. However, much of the public remains confused about what the term actually means.</p>
+
+      <p><span class="pnum">2</span>People from hundreds of different ethnic backgrounds make up the U.S. population, so it's not surprising that cultural groups have an influence on each other at times. Americans who grow up in diverse communities may <span class="ub u2">⒝<strong>pick up</strong></span> the dialects, customs, and religious traditions of the cultural groups that surround them.</p>
+
+      <p><span class="pnum">3</span>Cultural appropriation is an entirely different matter. It （ <span class="blank-box">X</span> ） one's exposure to and familiarity with different cultures. Instead, cultural appropriation typically involves members of a dominant group exploiting the culture of less privileged groups. Quite often, this is done along racial and ethnic lines with little understanding of the latter's history, experience, and traditions.</p>
+
+      <p><span class="pnum">4</span>In the United States, cultural appropriation almost always involves members of the dominant culture (or those who identify with it) "borrowing" from the cultures of minority groups. Black people, Asians, Latinxs*, and Native Americans generally <span class="ub u4">⒞<strong>tend to emerge as the groups targeted for</strong></span> cultural appropriation. Asian martial arts*, black music and dance, and Native American dress and cultural symbols have all been the victim of cultural appropriation.</p>
+
+      <p><span class="pnum">5</span>"Borrowing" is a key component of cultural appropriation and there are many examples in recent U.S. history. However, it can be traced back to the racial beliefs of the early U.S., an era when many white people saw people of color as less than human, and the U.S. government made laws based on that ideology. <span class="ub u5">⒟<strong>Society has yet to move completely beyond those great injustices</strong></span>, and insensitivity to the historical and current sufferings of less privileged groups remains apparent today.</p>
+
+      <p><span class="pnum">6</span><span class="ub u6">⒠<strong>Cultural appropriation remains a concern</strong></span> for a variety of reasons. For one, this sort of "borrowing" is unfair because it robs oppressed groups of the credit they deserve and often the wealth owed to them as well. Many of the black pioneers of rock music died in poverty, while the white musicians who stole their musical ideas earned millions.</p>
+
+      <p><span class="pnum">7</span>Ultimately, art and music forms that originated with oppressed groups come to be associated with members of the dominant group. （ <span class="blank-box">Y</span> ）, the dominant group is considered innovative and cool, while the disadvantaged groups they "borrow" from face negative stereotypes, implying they're lacking in intelligence and creativity.</p>
+
+      <p><span class="pnum">8</span>When singer Katy Perry performed as a geisha at the American Music Awards in 2013, she described it as being an act of respect to Asian culture. Asian Americans disagreed with this assessment, declaring her performance "yellowface*." They also objected to the song choice, "Unconditionally,"* for emphasizing the stereotype that Asian women are passive.</p>
+
+      <p><span class="pnum">9</span>The question of whether this form of "borrowing" is an act of respect or an insult lies at the core of cultural appropriation. What one person perceives as respectful, others may perceive as disrespectful. It's a fine line and one that must be carefully considered. Every individual can make the decision to show sensitivity toward others. Sometimes, someone may not be able to recognize <span class="ub u7">⒡<strong>a harmful appropriation</strong></span> unless it's pointed out. This is why it's important to understand why you're buying or doing something associated with another culture.</p>
+
+      <p><span class="pnum">10</span>To behave responsibly and sensitively toward other groups, ask yourself a series of questions:</p>
+
+      <ul style="margin-left:18px;font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin-bottom:.9em;">
+        <li>Why are you "borrowing" this? Is it out of genuine interest? Is it something you feel obliged to do? Or, does it simply look appealing and trendy?</li>
+        <li>What is the source? For material items such as artwork, was it made by someone from that culture? Has that individual given permission for the item to be used?</li>
+        <li>How respectful is this artwork to the culture? Would people from that group object to the piece of art, or to it being used by outsiders?</li>
+      </ul>
+
+      <p><span class="pnum">11</span>The sharing of ideas, traditions, and material items is what makes life interesting and helps diversify the world. <span class="ub uB">⒢<em>A genuine interest in other cultures is not necessarily wrong</em></span>, but cultural appropriation raises questions that should not be ignored.</p>
+
+      <p style="font-size:11px;color:var(--t2);margin-top:14px;">*Latinx：ラテンアメリカ系移民　*martial arts：武道　*yellowface：アジア人以外の人が扮装してアジア人を演じること　*"Unconditionally"：米国の歌手Katy Perryが無条件の愛について歌った曲</p>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">本文を読んだら次へ</span>
+    <button class="btnp" onclick="goP('p2')">段落構造を見る →</button>
+  </div>
+</div>
+
+<!-- ══════════ P2 段落構造 ══════════ -->
+<div class="pan" id="p2">
+  <div class="card">
+    <div class="lbl">パラグラフリーディング — 各段落の役割・主張・つながり</div>
+    <div style="font-size:12.5px;color:var(--t2);margin-bottom:14px;line-height:1.7;">この英文は <strong style="color:var(--ac);">「定義（混乱の整理）→ 対比 → なぜ問題か → 具体例 → 処方箋 → 結論」</strong> という社会問題系論説の王道構造で展開する。各段落は <strong style="color:var(--rd);">前段落への反応／前段落の発展</strong> として配置されており、論理の方向を示すシグナル語（However, Instead, Ultimately, As a result, This is why...）に注目すれば全体が一気に見通せる。</div>
+
+    <div class="pflow">
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--rd);">1</div>
+          <div class="pf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--rdl);color:var(--rd);">定義の提示・問題のフレーミング</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「文化の流用とは、その文化に属する人々の同意なしに別文化の要素を取り入れること。有名人が話題化したが、多くの人は混乱したまま」</div>
+          <div class="one-liner" style="background:var(--rdl);border-left-color:var(--rd);">最初の文＝厳密な定義（<em>without the consent</em>「同意なしに」が鍵）。続く文に <strong>However</strong> シグナル：「だが大衆は混乱している」と問題提起 → P2以降で「混乱の正体」を解きほぐす流れへ。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⒜ celebrities have helped bring into the national spotlight = <strong>有名人がこの話題を国民的注目を集める手助けをした</strong>（A. 設問対象）</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--am);">2</div>
+          <div class="pf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">対比の準備：似て非なるもの①</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「米国は多民族で、文化集団が互いに影響し合うのは当然。多様な環境で育ったアメリカ人は周囲の方言・慣習・宗教伝統を <em>pick up</em>（身につける）かもしれない」</div>
+          <div class="one-liner" style="background:var(--aml);border-left-color:var(--am);">これは <strong>cultural appropriationではない</strong> 例。P3の冒頭で「Cultural appropriation is an entirely different matter（まったく別物）」と否定されるための<strong>布石</strong>。「自然な相互影響」と「流用」を区別させる構造的な配置。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⒝ pick up = <strong>身につける・習得する</strong>（B. 設問対象）→ acquireと同義</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--ac);">3</div>
+          <div class="pf-line" style="background:linear-gradient(var(--ac),var(--tl));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--acd);">核心の定義：流用の本質</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「文化の流用は全く別物。それは異文化への接触や親しみとは関係ない（has little to do with）。むしろ支配集団による少数派文化の <em>搾取</em> である」</div>
+          <div class="one-liner" style="background:var(--acl);border-left-color:var(--ac);">P2との <strong>明示的な対比</strong>（"an entirely different matter" / "Instead"）。3つの定義要素を提示：<strong>① 支配集団→少数派</strong>（権力構造）／<strong>② 搾取（exploiting）</strong>／<strong>③ 歴史・経験・伝統への無理解</strong>。この3要素はJの内容一致でも重要。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">X = <strong>has little to do with</strong>「〜とほとんど関係がない」（C. 設問対象）／Instead が決定的なシグナル</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">4</div>
+          <div class="pf-line" style="background:linear-gradient(var(--tl),var(--pu));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tld);">米国における具体的様相</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「米国では支配文化の構成員が少数派文化から『借りる』。黒人・アジア系・ラテン系・ネイティブが標的になる傾向。武道・黒人音楽ダンス・ネイティブの衣装などがすべて犠牲に」</div>
+          <div class="one-liner" style="background:var(--tll);border-left-color:var(--tl);">P3の抽象的定義を、<strong>米国の文脈と具体例で肉付け</strong>。「借りる（borrowing）」が引用符付きなのは「正当な貸し借りではない」という皮肉。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⒞ tend to emerge as the groups targeted for = <strong>～の対象となる集団として現れる傾向がある</strong>（D. 設問対象）</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--pu);">5</div>
+          <div class="pf-line" style="background:linear-gradient(var(--pu),#c026d3);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--pul);color:var(--pu);">歴史的根：米国初期の人種主義</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「『借用』は文化の流用の主要な要素。それは米国初期にまで遡る：当時の白人は有色人種を『人間以下』とみなし、政府はそのイデオロギーに基づく法律を作った。社会はこの不公正を完全に乗り越えてはおらず、現在も鈍感さは明らか」</div>
+          <div class="one-liner" style="background:var(--pul);border-left-color:var(--pu);">「最近の現象ではなく、歴史的根がある」という主張。P5の最後の <strong>"Society has yet to move beyond"</strong>（まだ乗り越えていない）が、P6以降の「だから今もなお問題」への橋渡し。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⒟ Society has yet to move completely beyond those great injustices（E. 記述問題）→ <strong>have yet to do</strong>＝「まだ〜していない」</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:#c026d3;">6</div>
+          <div class="pf-line" style="background:linear-gradient(#c026d3,#0891b2);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:#fae8ff;color:#a21caf;">なぜ問題か① — 経済的不公正</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「文化の流用が懸念される理由はいくつかある。一つは『借用』が <em>不公正</em> だから：抑圧集団から、彼らが受けるべき称賛と、しばしば富まで奪うから。ロックの黒人パイオニアの多くは貧困の中で死に、アイデアを盗んだ白人ミュージシャンは数百万ドルを稼いだ」</div>
+          <div class="one-liner" style="background:#fae8ff;border-left-color:#c026d3;">"<strong>For one</strong>" は「理由の一つとして」。リスト形式で理由を挙げる始まり → P7で「もう一つの理由（ステレオタイプ）」へ。具体例（ロックのパイオニア）で抽象的主張を裏付ける。</div>
+          <div style="font-size:12px;color:#a21caf;margin-top:5px;padding:5px 10px;background:#fae8ff;border-radius:5px;">⒠ Cultural appropriation remains a concern（F. 理由を問う設問）→ 直後の <strong>"For one, this sort of 'borrowing' is unfair because..."</strong> が答え</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:#0891b2;">7</div>
+          <div class="pf-line" style="background:linear-gradient(#0891b2,var(--rd));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:#cffafe;color:#0e7490;">なぜ問題か② — ステレオタイプの強化</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「結局、抑圧集団から生まれた芸術・音楽は支配集団と結びつけられる。<em>その結果（As a result）</em>、支配集団は革新的でクールと見なされる一方、不利な集団は『知性も創造性もない』というネガティブなステレオタイプに直面する」</div>
+          <div class="one-liner" style="background:#cffafe;border-left-color:#0891b2;"><strong>Ultimately</strong>（結局）+ <strong>As a result</strong>（その結果）の二段階で「因果関係の連鎖」を明示。前段落の経済的搾取に加えて「象徴的・心理的な不公正」を提示。</div>
+          <div style="font-size:12px;color:#0e7490;margin-top:5px;padding:5px 10px;background:#cffafe;border-radius:5px;">Y = <strong>As a result</strong>「その結果として」（G. 設問対象）／直前の文の流れが「結果」を導く</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--rd);">8</div>
+          <div class="pf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--rdl);color:var(--rd);">具体例：Katy Perryの2013年AMA</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「Katy Perryが2013年のAMAで芸者として演じたとき、本人はアジア文化への敬意の表れと述べた。アジア系アメリカ人はこれを <em>イエローフェイス</em> と批判。曲『Unconditionally』も『アジア女性は受動的』というステレオタイプを強調するとして反対した」</div>
+          <div class="one-liner" style="background:var(--rdl);border-left-color:var(--rd);">P6・P7の抽象的議論を、<strong>誰でも知っている具体例</strong>で印象付ける。本人の「敬意」、他者の「侮辱」という<strong>視点の食い違い</strong>を提示し、次のP9「敬意か侮辱か」という核心の問いへ繋ぐ。</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--am);">9</div>
+          <div class="pf-line" style="background:linear-gradient(var(--am),var(--ac));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">核心の問い：敬意か侮辱か</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「『借用』が敬意か侮辱かの問いがcultural appropriationの核心。ある人が敬意と感じることを、別の人は失礼と感じるかも。微妙な線引き。指摘されない限り有害な流用と気づかないことも。だからこそ、自分のする行為の『なぜ』を理解することが重要」</div>
+          <div class="one-liner" style="background:var(--aml);border-left-color:var(--am);">"<strong>This is why...</strong>"（だからこそ〜が重要）が決定的シグナル → P10の処方箋（自問すべき質問）への橋渡し。J問題のヘ選択肢「考えることで感受性を示せる」の根拠もここ。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⒡ a harmful appropriation = <strong>他者を傷つける流用</strong>（H. 設問対象）／ <strong>fine line</strong>＝微妙な線引き</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--ac);">10</div>
+          <div class="pf-line" style="background:linear-gradient(var(--ac),var(--tl));"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--acd);">処方箋：自問すべき3つの質問</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「他者集団に責任と気配りを持って振る舞うため、3つを自問せよ：①なぜ借りるのか？／②出所は誰／許可は？／③その作品はその文化にどれだけ敬意を払っているか？」</div>
+          <div class="one-liner" style="background:var(--acl);border-left-color:var(--ac);">抽象的議論を、<strong>読者が実際に使えるチェックリスト</strong>に落とし込む段落。P9で示された「自分のする行為のwhyを理解する」の具体化。</div>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">11</div>
+          <div class="pf-line" style="background:transparent;"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tld);">結論：純粋な興味は否定しないが…</span>
+          <div style="font-size:13.5px;font-weight:700;margin-bottom:4px;">「アイデア・伝統・物品の共有は生活を豊かにし、世界の多様化を助ける。他文化への純粋な興味は必ずしも誤りではない。<em>しかし</em> cultural appropriationは無視できない問題を提起する」</div>
+          <div class="one-liner" style="background:var(--tll);border-left-color:var(--tl);">バランスの取れた締めくくり：「異文化への関心」自体を否定するのではなく、「流用」と「敬意ある関心」を区別する道を示す。<strong>not necessarily</strong>（必ずしも〜ない）で柔軟な立場を表明。</div>
+          <div style="font-size:12px;color:var(--ac);margin-top:5px;padding:5px 10px;background:var(--acl);border-radius:5px;">⒢ A genuine interest in other cultures is not necessarily wrong（I. 設問対象）→ <strong>「他文化への純粋な興味は容認可能」</strong>と言い換え</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 全体ロジックマップ -->
+  <div class="card" style="background:linear-gradient(135deg,#f0ede6,#e8e4dc);">
+    <div class="lbl" style="color:var(--acd);">全体の論理構造（一望）</div>
+    <div style="font-size:13px;line-height:1.85;">
+      <div style="display:grid;grid-template-columns:1fr;gap:8px;">
+        <div style="padding:9px 12px;background:var(--sf);border-radius:8px;"><strong style="color:var(--rd);">PART 1（P1〜P3）定義のフェーズ</strong>　定義 → 似た現象との対比 → 核心の区別</div>
+        <div style="padding:9px 12px;background:var(--sf);border-radius:8px;"><strong style="color:var(--ac);">PART 2（P4〜P5）米国における歴史的根</strong>　現代の標的集団 → 米国初期の人種主義イデオロギーまで遡る</div>
+        <div style="padding:9px 12px;background:var(--sf);border-radius:8px;"><strong style="color:#a21caf;">PART 3（P6〜P8）なぜ問題か</strong>　経済的搾取 → ステレオタイプ強化 → Katy Perry事例</div>
+        <div style="padding:9px 12px;background:var(--sf);border-radius:8px;"><strong style="color:var(--am);">PART 4（P9〜P10）処方箋</strong>　敬意か侮辱か → 自問すべき3つの質問</div>
+        <div style="padding:9px 12px;background:var(--sf);border-radius:8px;"><strong style="color:var(--tl);">PART 5（P11）結論</strong>　純粋な興味は否定しないが、無視できない問題を提起</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p1')">← 本文</button>
+    <button class="btnp" onclick="goP('p3')">設問A〜D →</button>
+  </div>
+</div>
+
+<!-- ══════════ P3 設問A〜D ══════════ -->
+<div class="pan" id="p3">
+
+  <div style="background:linear-gradient(135deg,var(--acd),#1a3354);border-radius:var(--rl);padding:18px 20px;margin-bottom:16px;color:#fff;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問A〜D — 下線部の言い換え＆空所補充</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">語義・構文の正確な把握</div>
+    <div style="font-size:12px;opacity:.8;margin-top:4px;">下線部は必ず「直前直後の文脈」「前後段落との論理関係」と照らし合わせて判断する。選択肢は全て検討。</div>
+  </div>
+
+  <div class="score-card">
+    <div><div class="lbl" style="margin-bottom:3px;">得点</div><div class="sc-num" id="sc1">— / 4</div></div>
+    <div style="font-size:12px;color:var(--t2);text-align:right;line-height:1.7;">下線部の言い換え<br>選択肢を全部潰す</div>
+  </div>
+
+  <!-- A -->
+  <div class="qblock">
+    <span class="qnum-badge">A</span>
+    <span class="qtext">下線部⒜の意味に最も近いものは？</span>
+    <div class="qen">"celebrities have <strong>helped bring into the national spotlight</strong>" <span style="font-size:11px;color:var(--t2);">（P1）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>直訳：</strong>「有名人がそれを国民的注目の場へ持ち込む手助けをしてきた」<br>
+      <strong>itの中身：</strong>cultural appropriation（直前文の話題）／<strong>bring A into B</strong>＝AをBに持ち込む／<strong>national spotlight</strong>＝国民的な注目／<strong>have helped do</strong>＝〜する手助けをしてきた
+    </div>
+    <div class="choices" id="qA">
+      <button class="cb" onclick="ch('qA',1)"><span class="cn">イ</span>celebrities have avoided controversy over the topic（有名人はこの話題に関する論争を避けてきた）</button>
+      <button class="cb" onclick="ch('qA',2)"><span class="cn">ロ</span>celebrities have been only lightly concerned about the topic（有名人はこの話題にあまり関心を持ってこなかった）</button>
+      <button class="cb" onclick="ch('qA',3)"><span class="cn">ハ</span>celebrities have confused people by discussing the topic（有名人はこの話題を議論することで人々を混乱させてきた）</button>
+      <button class="cb" onclick="ch('qA',4)"><span class="cn">ニ</span>the focus of attention on the topic is partly due to celebrities（この話題への注目の集中は、一部は有名人のおかげである）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rA')">答えを見る</button>
+    <div class="ans-block" id="rA" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：ニ</strong><br><br>
+      
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ ニが正解の根拠</div>
+        「helped bring into the national spotlight」（注目を浴びる場へ持ち込む手助けをした）＝「注目の集中は<strong>一部は</strong>有名人のおかげ」（partly due to celebrities）と完全一致。<strong>help</strong>＝「単独ではなく手助け」のニュアンスが「partly」と対応する。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× イが不正解の根拠</div>
+        「論争を避けた（avoided）」→ 本文は逆。彼らは話題を<strong>注目に持ち込んだ</strong>のだから、避けてはいない。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロが不正解の根拠</div>
+        「あまり関心がなかった（only lightly concerned）」→ 本文と矛盾。話題化に貢献したのだから関心は強い。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ハが不正解の根拠</div>
+        「人々を混乱させた」→ 一見近そうだが致命的な誤り。本文では <strong>much of the public remains confused</strong>（多くの大衆が混乱している）と述べられているが、混乱の原因が celebrities だとは書かれていない。celebrities がしたのは <strong>注目を集める手助け</strong> であって、「混乱を引き起こした」ではない。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">構文ポイント</div>
+        <strong>It's a controversial topic <span style="color:var(--rd);">that</span> celebrities have helped bring into the national spotlight.</strong><br>
+        この that は <strong>controversial topic</strong> を先行詞とする関係代名詞（目的格）。元の形は「celebrities have helped bring <strong>the controversial topic</strong> into the national spotlight」。
+      </div>
+    </div>
+  </div>
+
+  <!-- B -->
+  <div class="qblock">
+    <span class="qnum-badge">B</span>
+    <span class="qtext">下線部⒝の意味に最も近いものは？</span>
+    <div class="qen">"Americans who grow up in diverse communities may <strong>pick up</strong> the dialects, customs, and religious traditions of the cultural groups that surround them." <span style="font-size:11px;color:var(--t2);">（P2）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>文脈：</strong>多様な地域で育つアメリカ人は、周りの集団の方言・慣習・宗教伝統を「〜する」かもしれない。<br>
+      <strong>pick up</strong> は基本的に「拾い上げる→（自然に）身につける・習得する」の意味。<strong>「努力なく自然に得る」</strong>のニュアンス。
+    </div>
+    <div class="choices" id="qB">
+      <button class="cb" onclick="ch('qB',1)"><span class="cn">イ</span>acquire（獲得する・身につける）</button>
+      <button class="cb" onclick="ch('qB',2)"><span class="cn">ロ</span>expand（拡大する）</button>
+      <button class="cb" onclick="ch('qB',3)"><span class="cn">ハ</span>improve（改善する）</button>
+      <button class="cb" onclick="ch('qB',4)"><span class="cn">ニ</span>search（探す）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rB')">答えを見る</button>
+    <div class="ans-block" id="rB" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：イ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ イが正解の根拠</div>
+        pick up = <strong>acquire（身につける・習得する）</strong>。両者とも「もともと持っていなかったものを得る」の意。「方言・慣習・宗教伝統を身につける」という目的語との結びつきも完璧。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロ expand</div>
+        「拡大する」は <strong>既存のものを広げる</strong> 意味。方言や慣習を「拡大する」は意味不明。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ハ improve</div>
+        「改善する」も的外れ。pick up に「質を高める」のニュアンスはない。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニ search</div>
+        「探す」では「身につける」結果が出てこない。pick up は <strong>get の意</strong> で、search（look for）とは別物。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">pick up の主な意味</div>
+        ① 拾い上げる（the book を pick up）／② 車で迎えに行く（pick someone up）／③ <strong>身につける・習得する</strong>（言語、習慣、技能） ← 本問<br>
+        例：He picked up Spanish while living in Mexico.（メキシコで暮らすうちにスペイン語を身につけた）
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="qblock">
+    <span class="qnum-badge">C</span>
+    <span class="qtext">空所 ( X ) に入る最も適切な語句は？</span>
+    <div class="qen">"Cultural appropriation is an entirely different matter. It （ <strong style="color:var(--rd);">X</strong> ） one's exposure to and familiarity with different cultures. <strong>Instead</strong>, cultural appropriation typically involves members of a dominant group exploiting the culture of less privileged groups." <span style="font-size:11px;color:var(--t2);">（P3）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>文脈：</strong>「文化の流用はまったく別の話だ。それは異文化への接触・親しみを ( X ) する。<strong>その代わり（Instead）</strong>、支配集団が少数派文化を搾取することなのだ」<br>
+      <strong>Instead が決定的シグナル：</strong>「Xではなく、こちら（搾取）だ」という対比構造 → ( X ) には「異文化への接触・親しみ」を<strong>否定する</strong>表現が入る。
+    </div>
+    <div class="choices" id="qC">
+      <button class="cb" onclick="ch('qC',1)"><span class="cn">イ</span>finds fault with（〜の欠点を見つける、〜にケチをつける）</button>
+      <button class="cb" onclick="ch('qC',2)"><span class="cn">ロ</span>has little to do with（〜とほとんど関係がない）</button>
+      <button class="cb" onclick="ch('qC',3)"><span class="cn">ハ</span>is consistent with（〜と一致する）</button>
+      <button class="cb" onclick="ch('qC',4)"><span class="cn">ニ</span>makes the most of（〜を最大限に活用する）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rC')">答えを見る</button>
+    <div class="ans-block" id="rC" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：ロ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ ロが正解の根拠</div>
+        「文化の流用」と「異文化への接触・親しみ」を切り離す＝<strong>has little to do with</strong>（〜とほとんど関係がない）。P2の「身につける（pick up）」のような自然な相互影響と、P3の「搾取（exploiting）」を<strong>明確に区別する</strong>のがこの段落の役割。<strong>Instead</strong>「その代わりに」が「Xではない、こうだ」という対比を明示しているので、否定的な意味の語句が入ることが確定。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× イ finds fault with</div>
+        「ケチをつける」では意味が変。文化の流用が「異文化への接触に欠点を見つける」では、その後の「搾取」との論理がつながらない。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ハ is consistent with</div>
+        「一致する」は<strong>正反対</strong>の意味。これだと「流用＝異文化への接触」となり、Instead以下の対比が成立しなくなる。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニ makes the most of</div>
+        「最大限活用する」は流用の<strong>肯定的評価</strong>になり、論調と矛盾。「文化の流用は異文化を最大限活用する」だと、流用を擁護する立場になってしまう。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">have to do with の用法（重要）</div>
+        ・<strong>have something to do with</strong>＝「〜と何らかの関係がある」<br>
+        ・<strong>have nothing to do with</strong>＝「〜と全く関係がない」<br>
+        ・<strong>have little to do with</strong>＝「〜とほとんど関係がない」 ← 本問<br>
+        ・<strong>have a lot to do with</strong>＝「〜と大いに関係がある」
+      </div>
+    </div>
+  </div>
+
+  <!-- D -->
+  <div class="qblock">
+    <span class="qnum-badge">D</span>
+    <span class="qtext">下線部⒞の意味に最も近いものは？</span>
+    <div class="qen">"Black people, Asians, Latinxs, and Native Americans generally <strong>tend to emerge as the groups targeted for</strong> cultural appropriation." <span style="font-size:11px;color:var(--t2);">（P4）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>直訳：</strong>「黒人、アジア系、ラテン系、ネイティブアメリカンは一般に、文化の流用の<strong>標的となる集団として現れる傾向</strong>がある」<br>
+      <strong>tend to emerge as</strong>＝「〜として現れる傾向がある」／<strong>targeted for</strong>＝「〜の標的とされる」<br>
+      → つまり「これらの集団が（最も）文化流用の<strong>対象</strong>となる」という意味。
+    </div>
+    <div class="choices" id="qD">
+      <button class="cb" onclick="ch('qD',1)"><span class="cn">イ</span>are usually the subject of（通常〜の対象（主題）である）</button>
+      <button class="cb" onclick="ch('qD',2)"><span class="cn">ロ</span>come largely from the position of（〜の立場から大きく現れる）</button>
+      <button class="cb" onclick="ch('qD',3)"><span class="cn">ハ</span>mostly appear to become part of（〜の一部になるように見える）</button>
+      <button class="cb" onclick="ch('qD',4)"><span class="cn">ニ</span>often seem to play the main role of（〜の主役を演じるように見える）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rD')">答えを見る</button>
+    <div class="ans-block" id="rD" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：イ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ イが正解の根拠</div>
+        <strong>the subject of cultural appropriation</strong>＝「文化流用の<strong>対象</strong>」。<strong>subject</strong> は「主題」だけでなく「（行為の）対象」の意味も持つ。例：He is the subject of investigation.（彼は調査の対象だ）。<br>
+        本文の「the groups targeted for cultural appropriation（流用の標的とされる集団）」と完全一致。「generally」と「usually」も意味が一致。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロ come largely from the position of</div>
+        「〜の立場から大部分来る」では意味が成立しない。流用される側が「流用の立場から来る」ではおかしい。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ハ mostly appear to become part of</div>
+        「〜の一部になるように見える」も意味不明。これらの少数派集団は流用の<strong>標的</strong>であって、流用の「一部」ではない。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニ often seem to play the main role of</div>
+        「〜の主役を演じる」は致命的な誤訳。流用される側は「主役」ではなく「<strong>被害者・対象</strong>」。実際に次の文で <strong>"have all been the victim of cultural appropriation"</strong>（すべて文化の流用の犠牲者である）と明言。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">subject の意味の幅</div>
+        ① 主題、テーマ（the subject of the article）<br>
+        ② <strong>（行為や調査などの）対象</strong>（the subject of an experiment / investigation）← 本問<br>
+        ③ 国民、臣民（British subjects）<br>
+        ④ （文法）主語<br><br>
+        本問では②の用法。「行為が向けられる相手」という意味で、targeted for と置き換え可能。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p2')">← 段落構造</button>
+    <button class="btnp" onclick="goP('p4')">設問E 記述 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P4 設問E 記述 ══════════ -->
+<div class="pan" id="p4">
+
+  <div class="card" style="background:linear-gradient(135deg,#0a1628,#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問E — 部分和訳（記述）</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:6px;">下線部(4)を解答欄に与えられた語句に続けて、句読点を含め20字以内の日本語に訳しなさい</div>
+    <div style="font-size:12px;opacity:.8;">解答欄：「社会はこれらの甚だしい不公正                                  」</div>
+  </div>
+
+  <!-- 対象文 -->
+  <div class="card">
+    <div class="lbl">下線部(4)</div>
+    <div class="qen" style="font-size:15px;line-height:2.2;">
+      "<span class="ub u5">Society has yet to move completely beyond those great injustices</span>"
+    </div>
+
+    <!-- 解答欄プレビュー -->
+    <div style="background:var(--s2);border-radius:var(--r);padding:14px 18px;margin:14px 0;border:.5px dashed var(--bd2);">
+      <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:8px;">解答欄</div>
+      <div style="font-size:14px;line-height:2;">
+        社会はこれらの甚だしい不公正<span style="display:inline-block;border-bottom:1.5px dashed var(--bd2);min-width:200px;height:24px;vertical-align:middle;margin-left:6px;"></span>
+      </div>
+    </div>
+
+    <!-- 構文分析 -->
+    <div style="font-size:11px;font-weight:700;color:var(--t2);letter-spacing:.08em;text-transform:uppercase;margin-top:18px;margin-bottom:8px;">構文分析</div>
+
+    <div style="background:#0a1628;border-radius:var(--r);padding:14px 16px;color:#fff;margin-bottom:14px;">
+      <div style="font-family:'Source Serif 4',serif;font-size:14px;line-height:2;">
+        Society <span style="background:#1e40af;padding:1px 6px;border-radius:3px;font-size:12px;">主語</span><br>
+        has yet to move <span style="background:#dc2626;padding:1px 6px;border-radius:3px;font-size:12px;">have yet to do = まだ〜していない</span><br>
+        completely beyond <span style="background:#0f6e56;padding:1px 6px;border-radius:3px;font-size:12px;">「〜を完全に超えて」</span><br>
+        those great injustices <span style="background:#7c2d12;padding:1px 6px;border-radius:3px;font-size:12px;">目的語＝甚だしい不公正</span>
+      </div>
+    </div>
+
+    <div class="co co-r">
+      <div class="co-lbl">最重要：have yet to do</div>
+      <strong>have yet to do</strong>＝「<strong>まだ〜していない</strong>」（＝have not done yet）<br><br>
+      ・She has yet to arrive.（彼女はまだ到着していない）<br>
+      ・They have yet to make a decision.（彼らはまだ決定を下していない）<br><br>
+      <strong>※ yet が肯定文で「まだ」を表す慣用構文。完了形と組み合わさることが多い。</strong>「これから〜することになっている／〜しなければならないがまだしていない」というニュアンスを含む。
+    </div>
+
+    <div class="co co-b">
+      <div class="co-lbl">move beyond の意味</div>
+      <strong>move beyond X</strong>＝「Xを越える、Xを乗り越える」「Xから前進する」<br>
+      ※ ここでは「不公正を乗り越える＝克服する」の意。<br>
+      <strong>completely</strong>（完全に）が beyond を修飾。
+    </div>
+
+    <!-- 自己解答 -->
+    <div style="font-size:12px;font-weight:700;color:var(--t2);margin-bottom:5px;margin-top:14px;">まず自分で訳を書く（記入後に模範解答を確認）</div>
+    <textarea class="trans-input" id="trans-E" rows="2" placeholder="20字以内（句読点込み）で続けて訳す。「社会はこれらの甚だしい不公正」のあとに続ける形で..."></textarea>
+
+    <button class="rev-btn" onclick="rv('rE')" style="margin-top:10px;">模範解答・採点ポイントを見る</button>
+
+    <div class="ans-block" id="rE" style="background:var(--tll);border:.5px solid #6ee7b7;">
+
+      <!-- 模範解答 -->
+      <div style="padding:16px 18px;background:#0a1628;border-radius:var(--r);color:#fff;font-size:14.5px;line-height:2;margin-bottom:14px;">
+        <div style="font-size:10px;font-weight:700;color:#7fb5d8;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px;">模範解答（旺文社）</div>
+        <div style="font-size:16px;font-weight:700;line-height:2;">社会はこれらの甚だしい不公正<span style="background:#dc2626;padding:2px 8px;border-radius:4px;color:#fff;margin:0 3px;">を完全に乗り越えてはいない</span></div>
+        <div style="font-size:11px;color:#7fb5d8;margin-top:8px;">続けた部分のみで「<strong>13字</strong>」（〜を完全に乗り越えてはいない）</div>
+      </div>
+
+      <!-- 別解 -->
+      <div style="padding:13px 15px;background:var(--acl);border-radius:var(--r);margin-bottom:14px;font-size:13px;line-height:1.85;">
+        <div style="font-weight:700;color:var(--ac);margin-bottom:6px;">許容される別解（20字以内）</div>
+        ・「を完全に乗り越えてはいない。」（14字）<br>
+        ・「を完全に克服してはいない。」（13字）<br>
+        ・「をまだ完全に超えていない。」（13字）<br>
+        ・「を完全に乗り越えるには至っていない。」（18字）<br>
+        ・「をまだ完全には乗り越えていない。」（16字）
+      </div>
+
+      <!-- 採点必須要素 -->
+      <div class="co co-a" style="margin-bottom:10px;">
+        <div class="co-lbl">採点必須3要素</div>
+        <strong>① "has yet to" の訳：</strong>「まだ〜していない」「まだ〜するに至っていない」を必ず反映。<br>
+        <strong>② "move completely beyond" の訳：</strong>「完全に乗り越える」「完全に克服する」など。<strong>completely</strong> を訳出することが重要（後で「だから今もなお影響が残っている」という文脈につながるため）。<br>
+        <strong>③ 字数（20字以内）：</strong>句読点込み20字以内に収める。
+      </div>
+
+      <!-- よくある失敗 -->
+      <div class="co co-r">
+        <div class="co-lbl">よくある失敗例</div>
+        <strong>× 「を完全に乗り越えた」</strong>→ <strong>has yet to</strong> の否定の含意を訳出していない。意味が真逆。<br>
+        <strong>× 「を乗り越えていない」</strong>→ <strong>completely</strong>（完全に）を訳していない。「完全には乗り越えていない（少しは進んだが）」というニュアンスが失われる。<br>
+        <strong>× 「をまだ乗り越えなければならない」</strong>→ have yet to を「〜しなければならない」と訳してしまう。確かにそのニュアンスを含むが、ここでは「まだ〜していない」と素直に訳すべき。
+      </div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">なぜこの一文が重要か（文脈把握）</div>
+        この一文の直後に「<strong>and insensitivity to the historical and current sufferings of less privileged groups remains apparent today</strong>（少数派集団の歴史的・現在の苦難への鈍感さが、今日もなお明らかである）」と続く。<br><br>
+        つまりこの下線部は「米国は人種主義の歴史的不公正を<strong>まだ完全には乗り越えていない</strong>。だから今も鈍感さが残っている」という、<strong>P5から後半（なぜ問題か）への論理的橋渡し</strong>の文。「乗り越えた」と訳してしまうと、論理が完全に破綻する。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p3')">← 設問A〜D</button>
+    <button class="btnp" onclick="goP('p5')">設問F〜I →</button>
+  </div>
+</div>
+
+<!-- ══════════ P5 設問F〜I ══════════ -->
+<div class="pan" id="p5">
+
+  <div style="background:linear-gradient(135deg,var(--acd),#1a3354);border-radius:var(--rl);padding:18px 20px;margin-bottom:16px;color:#fff;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問F〜I — 理由・空所・言い換え</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">理由問題・接続詞・パラフレーズ</div>
+    <div style="font-size:12px;opacity:.8;margin-top:4px;">理由問題は <strong>直後の文に答えがある</strong> ことが多い。接続詞・副詞句は <strong>前後の論理関係</strong> から決める。</div>
+  </div>
+
+  <div class="score-card">
+    <div><div class="lbl" style="margin-bottom:3px;">得点</div><div class="sc-num" id="sc2">— / 4</div></div>
+    <div style="font-size:12px;color:var(--t2);text-align:right;line-height:1.7;">理由・接続詞・<br>パラフレーズ</div>
+  </div>
+
+  <!-- F -->
+  <div class="qblock">
+    <span class="qnum-badge">F</span>
+    <span class="qtext">下線部⒠の理由の1つとして最も適切なものは？</span>
+    <div class="qen">"<strong>Cultural appropriation remains a concern</strong> for a variety of reasons. For one, this sort of 'borrowing' is unfair because it robs oppressed groups of the credit they deserve and often the wealth owed to them as well." <span style="font-size:11px;color:var(--t2);">（P6）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>理由問題の鉄則：</strong>直後の文（理由提示部分）に答えがある。<br>
+      <strong>For one</strong>（理由の一つとして）の後ろをそのまま訳すと：「『借用』は不公正だ。なぜなら抑圧集団から、彼らが受けるべき<strong>称賛（credit）</strong>と、しばしば<strong>彼らに支払われるべき富</strong>を奪うから」
+    </div>
+    <div class="choices" id="qF">
+      <button class="cb" onclick="ch('qF',1)"><span class="cn">イ</span>because cultural appropriation brings suffering to people associated with white musicians（白人ミュージシャンと結びついた人々に苦難をもたらすから）</button>
+      <button class="cb" onclick="ch('qF',2)"><span class="cn">ロ</span>because cultural appropriation is an act of showing off the privileged cultures（特権文化を見せびらかす行為だから）</button>
+      <button class="cb" onclick="ch('qF',3)"><span class="cn">ハ</span>because cultural appropriation takes away the praise that should be given to minority groups（少数派集団に与えられるべき称賛を奪うから）</button>
+      <button class="cb" onclick="ch('qF',4)"><span class="cn">ニ</span>because white musicians offered financial support to the pioneers of rock music（白人ミュージシャンがロック音楽のパイオニアに金銭的支援を提供したから）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rF')">答えを見る</button>
+    <div class="ans-block" id="rF" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：ハ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ ハが正解の根拠</div>
+        <span class="evi-source">P6</span>本文「it robs oppressed groups of <strong>the credit they deserve</strong>」（抑圧集団から、<strong>彼らが受けるべき称賛</strong>を奪う）<br>
+        ＝ ハ「takes away <strong>the praise that should be given to minority groups</strong>」（少数派集団に与えられるべき称賛を奪う）<br><br>
+        ・rob A of B（AからBを奪う）→ take away B<br>
+        ・oppressed groups → minority groups<br>
+        ・the credit they deserve → the praise that should be given to them<br>
+        ※ <strong>credit ≈ praise</strong>（功績への称賛・評価）→ 完全な言い換え。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× イが不正解の根拠</div>
+        「<strong>白人ミュージシャンと結びついた人々に</strong>苦難をもたらす」→ 主語と目的語が完全に逆。本文では <strong>白人ミュージシャンこそが</strong> 黒人パイオニアからアイデアを盗んだ加害者。苦難を受けたのは<strong>黒人パイオニア</strong>側。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロが不正解の根拠</div>
+        「特権文化を見せびらかす行為」→ 本文に言及なし。流用は「搾取」であって「誇示」ではない。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニが不正解の根拠</div>
+        「白人ミュージシャンが金銭的支援を提供した」→ 本文と<strong>真逆</strong>。本文は「白人ミュージシャンが何百万ドルも稼いだ（earned millions）」「黒人パイオニアは貧困の中で死んだ」と書いており、支援どころか搾取。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">構文ポイント：rob A of B</div>
+        <strong>rob A of B</strong>＝「AからBを奪う」（典型的な「奪う動詞」のパターン）<br>
+        ・The thief robbed him of his wallet.（強盗は彼から財布を奪った）<br><br>
+        同じパターン：deprive A of B（AからBを剥奪する）、relieve A of B（Aの負担を取り除く）、cure A of B（AのBを治す）<br><br>
+        本問では：<strong>it robs oppressed groups of the credit</strong>＝「それ（流用）は抑圧集団から称賛を奪う」
+      </div>
+    </div>
+  </div>
+
+  <!-- G -->
+  <div class="qblock">
+    <span class="qnum-badge">G</span>
+    <span class="qtext">空所 ( Y ) に入る最も適切な語句は？</span>
+    <div class="qen">"Ultimately, art and music forms that originated with oppressed groups come to be associated with members of the dominant group. （ <strong style="color:var(--rd);">Y</strong> ）, the dominant group is considered innovative and cool, while the disadvantaged groups they 'borrow' from face negative stereotypes, implying they're lacking in intelligence and creativity." <span style="font-size:11px;color:var(--t2);">（P7）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>前文：</strong>「抑圧集団に端を発する芸術・音楽は、支配集団と結びつけられるようになる」<br>
+      <strong>Y文：</strong>「支配集団は革新的でクールと考えられ、不利な集団は『知性・創造性を欠く』というネガティブステレオタイプに直面する」<br><br>
+      → 前文の「結びつけられる」という結果として、後文の「逆転した評価」が起きる関係。<strong>原因 → 結果</strong> の流れ。
+    </div>
+    <div class="choices" id="qG">
+      <button class="cb" onclick="ch('qG',1)"><span class="cn">イ</span>As a result（その結果として）</button>
+      <button class="cb" onclick="ch('qG',2)"><span class="cn">ロ</span>In comparison（比較すると）</button>
+      <button class="cb" onclick="ch('qG',3)"><span class="cn">ハ</span>Instead（その代わりに）</button>
+      <button class="cb" onclick="ch('qG',4)"><span class="cn">ニ</span>On the contrary（それどころか／逆に）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rG')">答えを見る</button>
+    <div class="ans-block" id="rG" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：イ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ イが正解の根拠</div>
+        前文（原因）と後文（結果）の関係：<br>
+        「芸術・音楽が支配集団と<strong>結びつけられる</strong>」（原因）<br>
+        ↓ <strong>As a result（その結果）</strong><br>
+        「支配集団は革新的でクール、少数派は知性も創造性もないと見なされる」（結果）<br><br>
+        さらに <strong>Ultimately</strong>「結局・最終的に」（前文の冒頭）と <strong>As a result</strong> が呼応して、「結局〜こうなる。その結果〜」という因果の連鎖を構成している。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロ In comparison</div>
+        「比較すると」では、前文と後文の関係が<strong>並列比較</strong>になってしまう。前文は「結びつけられる」、後文は「評価が逆転する」で、これは並列ではなく<strong>因果関係</strong>。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ハ Instead</div>
+        「その代わり」では、前文を<strong>否定</strong>することになる。前文「結びつけられる」を否定する内容が後文に来ているわけではない（むしろ強化）。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニ On the contrary</div>
+        「それどころか／逆に」も、前文の主張を<strong>反転させる</strong>シグナル。本問では反転ではなく、前文の自然な帰結なので不適。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">類似副詞句の使い分け</div>
+        <strong>As a result</strong>＝原因 → 結果（本問）<br>
+        <strong>In comparison</strong>＝Aと比べてBは…（並列比較）<br>
+        <strong>Instead</strong>＝Aではなく、その代わりにB（否定 + 代替案）<br>
+        <strong>On the contrary</strong>＝Aと言われるが、それどころかB（反論・正反対）
+      </div>
+    </div>
+  </div>
+
+  <!-- H -->
+  <div class="qblock">
+    <span class="qnum-badge">H</span>
+    <span class="qtext">下線部⒡の意味に最も近いものは？</span>
+    <div class="qen">"Sometimes, someone may not be able to recognize <strong>a harmful appropriation</strong> unless it's pointed out." <span style="font-size:11px;color:var(--t2);">（P9）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>直訳：</strong>「指摘されない限り、有害な流用に気づけない人もいる」<br>
+      <strong>harmful</strong>＝「有害な、害を与える」／<strong>harm</strong>＝「（人や物に）害を与える」<br>
+      → <strong>「他者に害を与える流用」</strong>の意。
+    </div>
+    <div class="choices" id="qH">
+      <button class="cb" onclick="ch('qH',1)"><span class="cn">イ</span>an appropriation that purposely attacks someone's community（誰かのコミュニティを意図的に攻撃する流用）</button>
+      <button class="cb" onclick="ch('qH',2)"><span class="cn">ロ</span>an appropriation that helps us understand（理解を助ける流用）</button>
+      <button class="cb" onclick="ch('qH',3)"><span class="cn">ハ</span>an appropriation that hurts others（他者を傷つける流用）</button>
+      <button class="cb" onclick="ch('qH',4)"><span class="cn">ニ</span>an appropriation that puts people in danger（人々を危険にさらす流用）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rH')">答えを見る</button>
+    <div class="ans-block" id="rH" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：ハ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ ハが正解の根拠</div>
+        <strong>harmful</strong>（有害な）＝<strong>hurts others</strong>（他者を傷つける）。語義そのもの。harm（害する）と hurt（傷つける）はほぼ同義。「他者を傷つける流用」が文脈にも完璧に合う。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× イが不正解の根拠</div>
+        <strong>purposely</strong>（意図的に）が余計。harmful には「<strong>意図的</strong>」のニュアンスは含まれない。むしろ本文「Sometimes, someone may not be able to recognize（時に気づかない人もいる）」とあるように、<strong>無意識の害</strong>を意味している。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロが不正解の根拠</div>
+        「理解を助ける」は<strong>harmful の逆</strong>。helpful の意味。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニが不正解の根拠</div>
+        <strong>puts in danger</strong>（危険にさらす）は<strong>過度な表現</strong>。harmful は「害がある」程度であり、「生命や安全の危険」までは含意しない。文化の流用は「心理的傷つけ」「経済的不公正」が問題で、生命の危険ではない。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">harm系の語のニュアンスの違い</div>
+        <strong>harm / hurt</strong>＝害する、傷つける（程度問わず広く使える）<br>
+        <strong>damage</strong>＝損害を与える（主に物に対して）<br>
+        <strong>injure</strong>＝負傷させる（身体的な怪我）<br>
+        <strong>endanger</strong>＝危険にさらす（命や存続を脅かす）<br><br>
+        本問の <strong>harmful</strong> は最も広い「害がある」の意味で、hurt と対応する。
+      </div>
+    </div>
+  </div>
+
+  <!-- I -->
+  <div class="qblock">
+    <span class="qnum-badge">I</span>
+    <span class="qtext">下線部⒢の意味に最も近いものは？</span>
+    <div class="qen">"<strong>A genuine interest in other cultures is not necessarily wrong</strong>, but cultural appropriation raises questions that should not be ignored." <span style="font-size:11px;color:var(--t2);">（P11）</span></div>
+    <div style="font-size:12.5px;color:var(--t2);margin:6px 0;padding:8px 11px;background:#f0f4f8;border-radius:6px;line-height:1.7;">
+      <strong>直訳：</strong>「他文化への純粋な興味は<strong>必ずしも誤りではない</strong>」<br>
+      <strong>not necessarily</strong>＝「必ずしも〜ない」（部分否定）／<strong>genuine</strong>＝「純粋な、本物の」<br>
+      → 「（純粋な興味は問題なし、ただし流用は別問題）」という<strong>柔軟な許容</strong>。
+    </div>
+    <div class="choices" id="qI">
+      <button class="cb" onclick="ch('qI',1)"><span class="cn">イ</span>A sincere curiosity about other cultures is acceptable.（他文化への誠実な好奇心は容認できる）</button>
+      <button class="cb" onclick="ch('qI',2)"><span class="cn">ロ</span>Borrowing from other cultures out of necessity is prohibited.（必要に駆られて他文化から借りることは禁止されている）</button>
+      <button class="cb" onclick="ch('qI',3)"><span class="cn">ハ</span>Buying material items of other cultures is permitted when they are for sale.（他文化の物品の購入は、それらが売り物の時には許可される）</button>
+      <button class="cb" onclick="ch('qI',4)"><span class="cn">ニ</span>Cultural appropriation helps make the world more diverse and equal.（文化の流用は世界をより多様で平等にする助けになる）</button>
+    </div>
+    <button class="rev-btn" onclick="rv('rI')">答えを見る</button>
+    <div class="ans-block" id="rI" style="background:var(--tll);border:.5px solid #6ee7b7;">
+      <strong style="color:var(--tl);font-size:15px;">正解：イ</strong><br><br>
+
+      <div class="evi-section evi-correct">
+        <div class="evi-label">◯ イが正解の根拠</div>
+        ・<strong>genuine interest</strong>（純粋な興味）≈ <strong>sincere curiosity</strong>（誠実な好奇心）<br>
+        ・<strong>not necessarily wrong</strong>（必ずしも誤りではない）≈ <strong>acceptable</strong>（容認できる）<br>
+        ・<strong>other cultures</strong>＝<strong>other cultures</strong>（完全一致）<br>
+        全ての要素が綺麗に対応するパラフレーズ。
+      </div>
+
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ロが不正解の根拠</div>
+        「<strong>禁止されている</strong>」は本文と無関係かつ過度。本文は「必ずしも誤りではない」と<strong>柔軟な許容</strong>を述べているのであり、「禁止」とは反対の方向。<strong>out of necessity</strong>（必要に駆られて）も本文に対応する記述なし。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ハが不正解の根拠</div>
+        「<strong>売り物の時には許可される</strong>」も本文と無関係。確かにP10で「許可（permission）」の話は出るが、それは「その文化の人が許可したか」という話で、「売られているか」は無関係。さらに本問の対象は「興味（interest）」であって「購入（buying）」ではない。
+      </div>
+      <div class="evi-section evi-wrong">
+        <div class="evi-label">× ニが不正解の根拠</div>
+        「文化の流用が世界を多様で平等にする」→ 本文の主張と<strong>正反対</strong>。文化の流用は批判的に扱われており、「多様で平等」にする好ましいものではない。本文P11は「シェアすることで世界が多様化する」と書いており、「シェア」と「流用」は別物。
+      </div>
+
+      <div class="co co-b">
+        <div class="co-lbl">not necessarily（部分否定）の重要性</div>
+        <strong>not necessarily</strong>＝「必ずしも〜ない」（一部例外あり）<br>
+        ・全否定：not at all / never wrong（全く誤りではない）<br>
+        ・部分否定：not necessarily wrong（必ずしも誤りではない＝場合によっては可）<br><br>
+        本文は <strong>「（流用は問題だが）純粋な興味そのものは必ずしも悪くない」</strong> という<strong>バランスを取った主張</strong>。これを「全くOK」と読み違えると、ニのような選択肢を選んでしまう罠。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p4')">← 設問E</button>
+    <button class="btnp" onclick="goP('p6')">設問J 内容一致 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P6 設問J 内容一致 ══════════ -->
+<div class="pan" id="p6">
+
+  <div style="background:linear-gradient(135deg,#0d2d1a,#0a1628);border-radius:var(--rl);padding:18px 20px;margin-bottom:16px;color:#fff;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:5px;">設問J — 内容一致（複数選択）</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;">本文の内容と一致するものを2つ選ぶ</div>
+    <div style="font-size:12px;opacity:.8;margin-top:4px;">3つ以上マークすると得点なし。<strong>全7択を1つずつ本文と照合</strong>するのが鉄則。</div>
+  </div>
+
+  <div style="background:var(--rdl);border-radius:var(--r);padding:11px 14px;margin-bottom:14px;border:.5px solid #fca5a5;font-size:12.5px;color:var(--rd);line-height:1.75;">
+    <strong>⚠️ 注意：</strong>3つ以上選ぶと0点。確信のある2つに絞ること。<strong>「本文に書いてある」と「本文の主張と一致する」は別</strong>。本文の論理を歪めずに言い換えているかを確認する。
+  </div>
+
+  <!-- 各選択肢の検証 -->
+  <div class="qblock">
+    <div style="font-size:13px;font-weight:700;color:var(--ac);margin-bottom:12px;">以下の7択を1つずつ確認しよう。クリックで選択／解除：</div>
+
+    <button class="j-choice" id="jA" onclick="toggleJ('jA')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">イ</strong><span>The definition of cultural appropriation is settled and clearly understood by most people.<br><span style="font-size:11px;color:var(--t2);">文化の流用の定義は確立されており、ほとんどの人に明確に理解されている。</span></span></button>
+
+    <button class="j-choice" id="jB" onclick="toggleJ('jB')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">ロ</strong><span>Children who are raised in ethnically diverse neighbourhoods should be adopted by members of the cultural groups around them.<br><span style="font-size:11px;color:var(--t2);">民族的多様性のある地域で育つ子供たちは、周囲の文化集団の構成員によって養子として迎え入れられるべきだ。</span></span></button>
+
+    <button class="j-choice" id="jC" onclick="toggleJ('jC')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">ハ</strong><span>Cultural appropriation is often practiced by members of a dominant group without recognizing the history of minority groups.<br><span style="font-size:11px;color:var(--t2);">文化の流用は、少数派集団の歴史を認識せずに支配集団の構成員によってしばしば実行される。</span></span></button>
+
+    <button class="j-choice" id="jD" onclick="toggleJ('jD')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">ニ</strong><span>Cultural appropriation has appeared in the U.S. because white people have recently started discriminating against people of color.<br><span style="font-size:11px;color:var(--t2);">文化の流用は、白人が最近、有色人種を差別し始めたために米国に出現した。</span></span></button>
+
+    <button class="j-choice" id="jE" onclick="toggleJ('jE')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">ホ</strong><span>Members of the privileged group borrow the music and art of the minority groups because they are neither smart nor inventive.<br><span style="font-size:11px;color:var(--t2);">特権集団の構成員は、自分たちが賢くも革新的でもないため、少数派集団の音楽や芸術を借用する。</span></span></button>
+
+    <button class="j-choice" id="jF" onclick="toggleJ('jF')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">ヘ</strong><span>You can show sensitivity to others by thinking about why you are doing something associated with another culture.<br><span style="font-size:11px;color:var(--t2);">他文化と関連したことをする理由を考えることで、他者への感受性（気配り）を示すことができる。</span></span></button>
+
+    <button class="j-choice" id="jG" onclick="toggleJ('jG')"><strong style="font-family:'Space Grotesk',sans-serif;color:var(--ac);min-width:24px;">ト</strong><span>Asking why someone is borrowing from other cultures is the responsibility of those who belong to a minority group.<br><span style="font-size:11px;color:var(--t2);">誰かが他文化から借用している理由を聞くことは、少数派集団に所属する人々の責任である。</span></span></button>
+
+    <div style="font-size:12px;color:var(--t2);margin-top:8px;text-align:center;">選択中：<span id="jcount" style="font-weight:700;color:var(--ac);">0</span> / 2</div>
+
+    <button class="rev-btn" onclick="rv('rJ')" style="display:block;margin:10px auto 0;">全選択肢の検証を見る</button>
+  </div>
+
+  <!-- 全選択肢の検証ブロック -->
+  <div class="ans-block" id="rJ" style="background:var(--sf);border:.5px solid var(--bd);padding:0;">
+    <div style="padding:14px 18px;background:var(--tld);color:#fff;border-radius:10px 10px 0 0;">
+      <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.7;margin-bottom:4px;">正解</div>
+      <div style="font-size:22px;font-weight:700;font-family:'Space Grotesk',sans-serif;">ハ ＆ ヘ</div>
+    </div>
+
+    <div style="padding:18px;">
+
+      <!-- イ -->
+      <div style="margin-bottom:18px;padding:14px;border-radius:10px;background:var(--rdl);border-left:4px solid var(--rd);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--rd);font-size:16px;">イ × 不正解</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「文化の流用の定義はほとんどの人に明確に理解されている」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--rd);">P1</span>However, much of the public remains confused about what the term actually means.</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--rd);">→ 本文と矛盾：</strong>「多くの大衆が混乱したまま」と書かれており、選択肢の「明確に理解されている」は<strong>逆の主張</strong>。</div>
+      </div>
+
+      <!-- ロ -->
+      <div style="margin-bottom:18px;padding:14px;border-radius:10px;background:var(--rdl);border-left:4px solid var(--rd);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--rd);font-size:16px;">ロ × 不正解</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「民族的多様性のある環境で育つ子供たちは、周りの文化集団の構成員によって <strong>養子として迎え入れられる</strong> べきだ」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--rd);">P2</span>Americans who grow up in diverse communities may <strong>pick up</strong> the dialects, customs, and religious traditions of the cultural groups that surround them.</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--rd);">→ 本文に言及なし／致命的なすり替え：</strong>本文は「方言・慣習・宗教伝統を<strong>pick up（身につける）</strong>かもしれない」と述べているだけ。選択肢の「<strong>adopted（養子に取られる）</strong>」は、<strong>adoption（流用）／adopt</strong> と「pick up」を混同させた巧妙な引っ掛け。さらに「〜すべき（should be）」という規範的主張も本文にない。</div>
+      </div>
+
+      <!-- ハ -->
+      <div style="margin-bottom:18px;padding:14px;border-radius:10px;background:var(--tll);border-left:4px solid var(--tl);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--tl);font-size:16px;">ハ ◯ 正解①</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「文化の流用は、<strong>少数派集団の歴史を認識せずに</strong>、支配集団の構成員によってしばしば実行される」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--tl);">P3</span>cultural appropriation typically involves members of a dominant group exploiting the culture of less privileged groups. Quite often, this is done along racial and ethnic lines <strong>with little understanding of the latter's history, experience, and traditions</strong>.</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--tl);">→ 完全に一致：</strong><br>・members of a dominant group → members of a dominant group（完全一致）<br>・typically involves / Quite often → often practiced<br>・with little understanding of the latter's history → without recognizing the history of minority groups<br>※「less privileged groups（後者の集団）」＝「minority groups（少数派集団）」と読み替え。</div>
+      </div>
+
+      <!-- ニ -->
+      <div style="margin-bottom:18px;padding:14px;border-radius:10px;background:var(--rdl);border-left:4px solid var(--rd);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--rd);font-size:16px;">ニ × 不正解</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「文化の流用は、白人が<strong>最近</strong>、有色人種を差別し始めたために米国に出現した」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--rd);">P5</span>"Borrowing" is a key component of cultural appropriation and there are many examples in recent U.S. history. However, <strong>it can be traced back to the racial beliefs of the early U.S.</strong>, an era when many white people saw people of color as less than human...</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--rd);">→ 本文と矛盾：</strong>本文は「文化の流用は<strong>米国初期にまで遡れる（trace back to the early U.S.）</strong>」と明言。選択肢の「<strong>recently（最近）</strong>差別し始めた」は時代設定が完全に逆。</div>
+      </div>
+
+      <!-- ホ -->
+      <div style="margin-bottom:18px;padding:14px;border-radius:10px;background:var(--rdl);border-left:4px solid var(--rd);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--rd);font-size:16px;">ホ × 不正解（最も巧妙な引っ掛け）</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「特権集団の構成員は、<strong>自分たちが賢くも革新的でもないため</strong>（理由として）、少数派の音楽や芸術を借用する」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--rd);">P7</span>the dominant group is considered innovative and cool, while the disadvantaged groups they "borrow" from face negative stereotypes, <strong>implying they're lacking in intelligence and creativity</strong>.</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--rd);">→ 因果関係の致命的なすり替え：</strong>本文は「流用の<strong>結果として</strong>、不利な集団が『知性も創造性もない』というステレオタイプに直面する」と述べている。つまり「知性・創造性がないと<strong>見なされる</strong>のは<strong>不利な集団（少数派）</strong>」。<br><br>選択肢ホは：<br>・<strong>主語のすり替え：</strong>「賢くも革新的でもない」のが<strong>特権集団</strong>（×）→ 本文では<strong>少数派</strong>（◯）<br>・<strong>因果関係のすり替え：</strong>「賢くないから借りる」（×）→ 本文は「借りるから（結果として）少数派が賢くないと見なされる」（◯）<br>これは「引き算でも因果でも誤り」の二重の罠選択肢。</div>
+      </div>
+
+      <!-- ヘ -->
+      <div style="margin-bottom:18px;padding:14px;border-radius:10px;background:var(--tll);border-left:4px solid var(--tl);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--tl);font-size:16px;">ヘ ◯ 正解②</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「他文化と関連したことをしている<strong>理由を考える</strong>ことで、他者への感受性を示すことができる」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--tl);">P9</span>Every individual can make the decision to show sensitivity toward others. ... This is why it's important to <strong>understand why you're buying or doing something associated with another culture</strong>.</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--tl);">→ 完全に一致：</strong><br>・show sensitivity toward others（他者への感受性を示す）→ show sensitivity to others<br>・understand why you're buying or doing something（自分がそれをする理由を理解する）→ thinking about why you are doing something<br>・associated with another culture → associated with another culture（完全一致）<br>※ P9の最後の文を、選択肢ヘは見事に言い換えている。</div>
+      </div>
+
+      <!-- ト -->
+      <div style="margin-bottom:0;padding:14px;border-radius:10px;background:var(--rdl);border-left:4px solid var(--rd);">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--rd);font-size:16px;">ト × 不正解</span>
+        </div>
+        <div style="font-size:12.5px;color:var(--tx);line-height:1.75;margin-bottom:8px;">「他文化から借用している理由を聞くことは、<strong>少数派集団に所属する人々の責任</strong> である」</div>
+        <div class="evi-quote"><span class="evi-source" style="background:var(--rd);">P10</span>To behave responsibly and sensitively toward other groups, <strong>ask yourself</strong> a series of questions: Why are you "borrowing" this? ...</div>
+        <div style="font-size:12px;color:var(--tx);margin-top:6px;line-height:1.7;"><strong style="color:var(--rd);">→ 本文と矛盾：</strong>本文は「<strong>自分自身に</strong>（ask <strong>yourself</strong>）」問うべきだと述べている。つまり<strong>借りる側</strong>＝<strong>特権集団／流用する側</strong>の責任。選択肢の「<strong>少数派集団の責任</strong>」は責任の所在を完全に逆転させている。</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 総まとめ -->
+  <div class="card" style="border-color:#9fe1cb;background:var(--tll);margin-top:20px;">
+    <div class="lbl" style="color:var(--tld);">この試験から学ぶ — 学習院大の出題傾向と攻略法</div>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--ac);">
+        <strong>言い換え問題（A・B・D・H・I）：</strong>下線部の<strong>「核となる意味」</strong>を1つの動詞・形容詞に絞ってから選択肢を絞る。例：A「helped bring into the spotlight」→「注目させた」／H「harmful」→「他者を傷つける」。<strong>全選択肢を本文と対比</strong>するのが鉄則。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--am);">
+        <strong>空所補充（C・G）：</strong>空所の<strong>直前直後の論理関係</strong>から決める。C は <strong>"Instead"</strong> が「対比」を、G は前文末「Ultimately」と後文の「評価逆転」が「因果」を示すヒント。<strong>接続副詞を文章の論理マップとして読む</strong>習慣を。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--tl);">
+        <strong>記述問題（E）：</strong>下線部の<strong>キー構文を絶対に外さない</strong>。本問は「<strong>have yet to do</strong>＝まだ〜していない」がすべて。これを「乗り越えた」と取ると0点。さらに <strong>completely</strong> も漏らさない。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--pu);">
+        <strong>理由問題（F）：</strong>下線部「remains a concern」の<strong>直後の文</strong>「For one, ... is unfair because it robs ...」がそのまま答え。<strong>For one</strong>（理由その1）のような<strong>リストの開始シグナル</strong>を見つける。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--rd);">
+        <strong>内容一致（J）：</strong><strong>全選択肢を本文と1つずつ照合</strong>。「キーワードは同じだが論理が逆」の罠（特に<strong>ホ</strong>のような「結果と原因のすり替え」「主語と被害者のすり替え」）に注意。「<strong>本文に書いてある語彙</strong>」と「<strong>本文の主張</strong>」を混同しない。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p5')">← 設問F〜I</button>
+    <button class="btnp" onclick="goP('p7')">全文和訳 →</button>
+  </div>
+</div>
+
+<!-- ══════════ P7 全文和訳 ══════════ -->
+<div class="pan" id="p7">
+
+  <div class="card" style="background:linear-gradient(135deg,#0a1628,#1a3354);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">FULL TRANSLATION</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">全文和訳<br><span style="font-size:13px;opacity:.85;font-weight:400;">— 英文と訳を一文ずつ照合できる対訳形式</span></div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">原文の構造をできるだけ保ちながら、自然な日本語に訳した完訳。各段落の末尾に <strong>訳のポイント</strong> を付記しているので、関係詞節・分詞構文・<em>have yet to / rob A of B</em> などの構造把握ポイントを自分の訳と照らし合わせて確認できる。</div>
+  </div>
+
+  <!-- P1 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">1</span>
+      <span style="margin-left:6px;">第1段落 — 定義の提示と問題のフレーミング</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Cultural appropriation is the adoption of certain elements from another culture without the consent of people who belong to that culture. It's a controversial topic that celebrities have helped bring into the national spotlight. However, much of the public remains confused about what the term actually means.
+      </div>
+      <div class="tr-jp">
+        文化の流用とは、別の文化に属する人々の<em>同意なしに</em>、その文化の一定の要素を取り入れることである。これは論争を呼ぶ話題であり、有名人たちがこの話題を国民的注目を集める場へと持ち込む手助けをしてきた。しかし、一般市民の多くは、この用語が実際には何を意味するのかについて<em>混乱したまま</em>である。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>the adoption of certain elements from another culture without the consent of people who belong to that culture</strong>＝定義の核。「同意なしに」が<strong>cultural appropriation</strong>を「文化的影響の単なる受容」と区別する決定的要素。<br>
+      ② <strong>a controversial topic that celebrities have helped bring into the national spotlight</strong>＝関係代名詞 that（目的格）が controversial topic を受ける。<strong>help do</strong>＝〜する手助けをする。<strong>bring A into B</strong>＝AをBへ持ち込む。<br>
+      ③ <strong>remains confused</strong>＝<strong>remain + 形容詞</strong>「〜のままである」。混乱の状態が継続していることを示す。
+    </div>
+  </div>
+
+  <!-- P2 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">2</span>
+      <span style="margin-left:6px;">第2段落 — 対比の準備：自然な相互影響</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        People from hundreds of different ethnic backgrounds make up the U.S. population, so it's not surprising that cultural groups have an influence on each other at times. Americans who grow up in diverse communities may pick up the dialects, customs, and religious traditions of the cultural groups that surround them.
+      </div>
+      <div class="tr-jp">
+        数百もの異なる民族的背景を持つ人々が米国の人口を構成している。だから、文化集団がときに互いに影響を及ぼし合うのは<em>驚くべきことではない</em>。多様なコミュニティで育つアメリカ人は、自分の周囲にいる文化集団の方言、慣習、宗教的伝統を<em>身につける</em>かもしれない。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>it's not surprising that ...</strong>＝形式主語 it。「〜ということは驚くべきことではない」。<br>
+      ② <strong>have an influence on each other</strong>＝「互いに影響を及ぼし合う」。<strong>at times</strong>＝「ときどき」。<br>
+      ③ <strong>pick up</strong>＝「（自然に・努力なく）身につける」。設問Bの対象語。<strong>acquire</strong> と同義。<br>
+      ④ この段落全体が、P3冒頭の <strong>"Cultural appropriation is an entirely different matter"</strong>（まったく別の話）への布石。「自然な影響を受けること」と「流用」を区別させるための比較対象として置かれている。
+    </div>
+  </div>
+
+  <!-- P3 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">3</span>
+      <span style="margin-left:6px;">第3段落 — 核心の定義：流用の本質</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Cultural appropriation is an entirely different matter. It has little to do with one's exposure to and familiarity with different cultures. Instead, cultural appropriation typically involves members of a dominant group exploiting the culture of less privileged groups. Quite often, this is done along racial and ethnic lines with little understanding of the latter's history, experience, and traditions.
+      </div>
+      <div class="tr-jp">
+        文化の流用はまったく別の話である。それは、異文化に触れたり親しんだりすることとは<em>ほとんど関係がない</em>。<em>そうではなく</em>、文化の流用とは典型的には、支配的集団の構成員が、より特権の少ない集団の文化を<em>搾取する</em>ことに関わるものだ。きわめてしばしば、これは人種的・民族的境界に沿って、後者の歴史、経験、伝統をほとんど理解しないままに行われる。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>has little to do with</strong>＝「〜とほとんど関係がない」。設問Cの対象。<br>
+      ② <strong>one's exposure to and familiarity with</strong>＝<strong>exposure to + familiarity with</strong> の<strong>共通の修飾語</strong>を一つにまとめた形。「（〜への）接触と親しみ」。<br>
+      ③ <strong>Instead</strong>（その代わりに）が前文との対比を明示するキー語。<br>
+      ④ <strong>involves members of a dominant group exploiting</strong>＝<strong>involve + O + Ving</strong>「OがVするのを含む」。動名詞の意味上の主語が members。<br>
+      ⑤ <strong>along racial and ethnic lines</strong>＝「人種・民族の境界線に沿って」。<br>
+      ⑥ <strong>with little understanding of the latter's history</strong>＝<strong>付帯状況のwith</strong>。「後者の歴史をほとんど理解せずに」。<strong>the latter</strong>＝直前の「less privileged groups」を指す。
+    </div>
+  </div>
+
+  <!-- P4 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">4</span>
+      <span style="margin-left:6px;">第4段落 — 米国における具体的な様相</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        In the United States, cultural appropriation almost always involves members of the dominant culture (or those who identify with it) "borrowing" from the cultures of minority groups. Black people, Asians, Latinxs, and Native Americans generally tend to emerge as the groups targeted for cultural appropriation. Asian martial arts, black music and dance, and Native American dress and cultural symbols have all been the victim of cultural appropriation.
+      </div>
+      <div class="tr-jp">
+        米国では、文化の流用はほとんど常に、支配文化の構成員（あるいはその文化に自己同一化する者たち）が、少数派集団の文化から「借用する」ことを伴う。一般に、黒人、アジア系、ラテンアメリカ系、ネイティブアメリカンが、文化流用の<em>標的となる集団として浮上しがち</em>である。アジアの武道、黒人の音楽やダンス、ネイティブアメリカンの衣装や文化的シンボルは、どれも文化の流用の<em>犠牲者</em>となってきた。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>those who identify with it</strong>＝<strong>identify with</strong>「〜に自己同一化する／〜に共感する」。「支配文化と自分を同一視する人々」の意で、白人以外でも支配的価値観を内面化した人を含むという含意。<br>
+      ② <strong>"borrowing"</strong>（引用符）＝正当な借用ではなく皮肉込みの表現。<br>
+      ③ <strong>tend to emerge as the groups targeted for</strong>＝設問Dの対象。「〜の標的となる集団として現れる傾向がある」。<br>
+      ④ <strong>have all been the victim of</strong>＝完了形＋受動的意味。「すべて〜の犠牲となってきた」。<strong>all</strong> は主語の同格副詞「全部」。
+    </div>
+  </div>
+
+  <!-- P5 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">5</span>
+      <span style="margin-left:6px;">第5段落 — 歴史的根：米国初期の人種主義イデオロギー</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        "Borrowing" is a key component of cultural appropriation and there are many examples in recent U.S. history. However, it can be traced back to the racial beliefs of the early U.S., an era when many white people saw people of color as less than human, and the U.S. government made laws based on that ideology. Society has yet to move completely beyond those great injustices, and insensitivity to the historical and current sufferings of less privileged groups remains apparent today.
+      </div>
+      <div class="tr-jp">
+        「借用」は文化の流用の主要な構成要素であり、近年の米国史の中にも多くの実例がある。しかし、これは米国初期の人種に関する信念にまで<em>遡る</em>ことができる。それは、多くの白人が有色人種を「人間以下」とみなし、米国政府もそのイデオロギーに基づいて法律を制定した時代であった。社会はこれらの甚だしい不公正を<em>完全に乗り越えてはおらず</em>、より特権の少ない集団の歴史的および現在の苦難に対する鈍感さは、今日もなお明らかに残っている。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>can be traced back to</strong>＝「〜にまで遡ることができる」。受動態で「歴史的起源を持つ」の意味。<br>
+      ② <strong>an era when many white people saw ...</strong>＝<strong>era</strong> を先行詞とする関係副詞 when。「〜という時代」と同格的に解釈。<br>
+      ③ <strong>saw people of color as less than human</strong>＝<strong>see A as B</strong>「AをBとみなす」。<strong>less than human</strong>＝「人間未満、人間に値しない」（極めて強い差別表現の引用）。<br>
+      ④ <strong>has yet to move completely beyond</strong>＝設問Eの記述問題。<strong>have yet to do</strong>＝「まだ〜していない」。「（不公正を）完全に乗り越えるには至っていない」。<br>
+      ⑤ <strong>insensitivity to ... remains apparent today</strong>＝主語が <strong>insensitivity（鈍感さ）</strong>、動詞が <strong>remains apparent</strong>「明白なままである」。「鈍感さが現在も明らかに残っている」。
+    </div>
+  </div>
+
+  <!-- P6 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">6</span>
+      <span style="margin-left:6px;">第6段落 — なぜ問題か①：経済的搾取</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Cultural appropriation remains a concern for a variety of reasons. For one, this sort of "borrowing" is unfair because it robs oppressed groups of the credit they deserve and often the wealth owed to them as well. Many of the black pioneers of rock music died in poverty, while the white musicians who stole their musical ideas earned millions.
+      </div>
+      <div class="tr-jp">
+        文化の流用は、さまざまな理由から今もなお懸念事項であり続けている。その理由の一つとして、この種の「借用」は<em>不公正</em>である。なぜなら、それは抑圧された集団から、彼らが受けるべき<em>称賛</em>を奪い、しばしば彼らに支払われるべき<em>富</em>をも奪うからだ。ロック音楽の黒人パイオニアたちの多くが貧困のうちに亡くなった一方で、彼らの音楽的アイデアを盗んだ白人ミュージシャンたちは何百万ドルも稼いだのだった。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>remains a concern</strong>＝<strong>remain + 名詞</strong>「〜のままである」。「依然として懸念事項である」。設問Fの下線部。<br>
+      ② <strong>For one</strong>＝「一つの理由として」（複数の理由の最初を示す表現）。<strong>For one thing</strong>とほぼ同義。<br>
+      ③ <strong>rob A of B</strong>＝「AからBを奪う」。本問のキー構文。<strong>oppressed groups</strong> から、① <strong>the credit they deserve</strong>（受けるべき称賛）と ② <strong>often the wealth owed to them as well</strong>（しばしば彼らに支払われるべき富も）が奪われる。<br>
+      ④ <strong>the credit they deserve</strong>＝関係詞節（that省略）「彼らに値する称賛」。<strong>the wealth owed to them</strong>＝過去分詞による後置修飾「彼らに支払われるべき富」（<strong>owe</strong>「〜を借りている、〜に支払う義務がある」）。<br>
+      ⑤ <strong>while</strong>＝対比の接続詞。「〜の一方で」。「黒人が貧困死」と「白人が大儲け」の鋭い対比を示す。
+    </div>
+  </div>
+
+  <!-- P7 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">7</span>
+      <span style="margin-left:6px;">第7段落 — なぜ問題か②：ステレオタイプの強化</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Ultimately, art and music forms that originated with oppressed groups come to be associated with members of the dominant group. As a result, the dominant group is considered innovative and cool, while the disadvantaged groups they "borrow" from face negative stereotypes, implying they're lacking in intelligence and creativity.
+      </div>
+      <div class="tr-jp">
+        結局のところ、抑圧された集団に端を発する芸術や音楽の形式が、支配的集団の構成員と<em>結びつけられる</em>ようになる。<em>その結果として</em>、支配的集団は革新的でクールだと見なされる一方で、彼らが「借用」する不利な立場の集団は、否定的なステレオタイプに直面することになる。それらのステレオタイプは、彼らに知性や創造性が欠けていることを<em>示唆する</em>ものである。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>Ultimately</strong>＝「結局のところ、最終的に」（結論を導く副詞）。<br>
+      ② <strong>that originated with</strong>＝関係詞節。<strong>originate with</strong>＝「〜から生じる、〜に起源を持つ」。<br>
+      ③ <strong>come to be associated with</strong>＝<strong>come to do</strong>「〜するようになる」＋ 受動態。「〜と結びつけられるようになる」。<br>
+      ④ <strong>As a result</strong>＝設問Gの対象。前文の結果を示す副詞句。<br>
+      ⑤ <strong>the disadvantaged groups they "borrow" from</strong>＝目的格関係代名詞（that省略）＋前置詞 from の残留。「彼らが（そこから）借りる不利な集団」。<br>
+      ⑥ <strong>implying they're lacking in ...</strong>＝<strong>分詞構文</strong>（付帯状況）。「〜を示唆しながら」。実質的に「（それらのステレオタイプは）〜を含意している」と訳すと自然。
+    </div>
+  </div>
+
+  <!-- P8 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">8</span>
+      <span style="margin-left:6px;">第8段落 — 具体例：Katy Perryの2013年AMA</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        When singer Katy Perry performed as a geisha at the American Music Awards in 2013, she described it as being an act of respect to Asian culture. Asian Americans disagreed with this assessment, declaring her performance "yellowface." They also objected to the song choice, "Unconditionally," for emphasizing the stereotype that Asian women are passive.
+      </div>
+      <div class="tr-jp">
+        歌手のケイティ・ペリーが2013年のアメリカン・ミュージック・アワードで芸者に扮してパフォーマンスをしたとき、彼女はそれをアジア文化に対する<em>敬意の行為</em>だと説明した。アジア系アメリカ人はこの見解に異議を唱え、彼女のパフォーマンスを「<em>イエローフェイス</em>」と断じた。彼らはまた、アジア人女性は受動的であるというステレオタイプを強調しているとして、楽曲の選択である『アンコンディショナリー』にも抗議した。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>perform as a geisha</strong>＝「芸者として演じる、芸者に扮して演じる」。<strong>as</strong>＝「〜として」。<br>
+      ② <strong>describe A as B</strong>＝「AをBだと述べる／表現する」。ここではAが<strong>it</strong>（パフォーマンス）、Bが<strong>being an act of respect</strong>（敬意の行為であること）。動名詞 being で「〜であること」を表す。<br>
+      ③ <strong>declaring her performance "yellowface"</strong>＝分詞構文（付帯状況）。<strong>declare A B</strong>＝「AがBだと断定・宣言する」第5文型。<br>
+      ④ <strong>object to A for V-ing</strong>＝「Vしているという理由でAに反対する」。<br>
+      ⑤ <strong>the stereotype that Asian women are passive</strong>＝同格の that 節。「アジア女性は受動的という<strong>ステレオタイプ</strong>」。<strong>stereotype</strong> と that節を = で結ぶ用法。
+    </div>
+  </div>
+
+  <!-- P9 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">9</span>
+      <span style="margin-left:6px;">第9段落 — 核心の問い：敬意か侮辱か</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        The question of whether this form of "borrowing" is an act of respect or an insult lies at the core of cultural appropriation. What one person perceives as respectful, others may perceive as disrespectful. It's a fine line and one that must be carefully considered. Every individual can make the decision to show sensitivity toward others. Sometimes, someone may not be able to recognize a harmful appropriation unless it's pointed out. This is why it's important to understand why you're buying or doing something associated with another culture.
+      </div>
+      <div class="tr-jp">
+        この形式の「借用」が<em>敬意の行為なのか、それとも侮辱なのか</em>という問いが、文化の流用の核心にある。ある人が敬意あるものと感じることを、別の人は無礼だと感じるかもしれない。それは<em>微妙な境界</em>であり、慎重に考慮されなければならないものだ。誰でも、他者への気配りを示す決断を下すことができる。ときには、指摘されない限り、有害な流用を認識できない者もいるだろう。<em>だからこそ</em>、自分が異文化と結びつけられたものを買おうとしたり、行おうとしたりするのは<em>なぜなのか</em>を理解することが重要なのである。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>The question of whether SV ... lies at the core of ...</strong>＝主語が <strong>The question</strong>、動詞が <strong>lies</strong>。「〜という問いが核心にある」。<strong>whether A or B</strong>＝「AかBかどうか」。<br>
+      ② <strong>What one person perceives as respectful, others may perceive as disrespectful.</strong>＝倒置構文。通常の語順は <strong>Others may perceive what one person perceives as respectful as disrespectful</strong>。<strong>perceive A as B</strong>＝「AをBと知覚する」。<br>
+      ③ <strong>a fine line</strong>＝「微妙な境界線」（紙一重）。<br>
+      ④ <strong>one that must be carefully considered</strong>＝<strong>one</strong> は a line の代用。「（それは）慎重に考慮されなければならないものだ」。<br>
+      ⑤ <strong>unless it's pointed out</strong>＝「指摘されない限り」。<strong>unless</strong>＝「〜しない限り」。<br>
+      ⑥ <strong>This is why ...</strong>＝「これが〜である理由だ」（結果を導く）。設問ヘの根拠箇所。
+    </div>
+  </div>
+
+  <!-- P10 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">10</span>
+      <span style="margin-left:6px;">第10段落 — 処方箋：自問すべき3つの質問</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        To behave responsibly and sensitively toward other groups, ask yourself a series of questions:<br><br>
+        • Why are you "borrowing" this? Is it out of genuine interest? Is it something you feel obliged to do? Or, does it simply look appealing and trendy?<br>
+        • What is the source? For material items such as artwork, was it made by someone from that culture? Has that individual given permission for the item to be used?<br>
+        • How respectful is this artwork to the culture? Would people from that group object to the piece of art, or to it being used by outsiders?
+      </div>
+      <div class="tr-jp">
+        他の集団に対して責任と気配りを持って振る舞うためには、一連の質問を自問してみるとよい。<br><br>
+        ・なぜあなたはこれを「借用」しているのか？ それは<em>純粋な興味</em>からだろうか？ それともそうしなければならないと感じているからだろうか？ それとも、単に魅力的でおしゃれに見えるからなのだろうか？<br>
+        ・出所はどこか？ 工芸品などの物品に関しては、それはその文化に属する人が作ったものなのか？ その個人は、使用されるアイテムに関して許可を与えていたのか？<br>
+        ・この工芸品はその文化にどれくらい敬意を示しているのか？ その集団に属する人々はその作品に、あるいはそれが部外者に利用されることに、反対するだろうか？
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>To behave responsibly and sensitively</strong>＝目的を表す to不定詞。「責任と気配りを持って振る舞うためには」。<br>
+      ② <strong>out of genuine interest</strong>＝<strong>out of</strong>「〜から（動機・原因）」＋ 名詞。「純粋な興味から」。<br>
+      ③ <strong>something you feel obliged to do</strong>＝関係詞節（that省略）＋<strong>feel obliged to do</strong>「〜するよう義務感を感じる」。<br>
+      ④ <strong>For material items such as artwork</strong>＝<strong>such as</strong>「〜のような」。具体例を導く。<br>
+      ⑤ <strong>or to it being used by outsiders</strong>＝<strong>動名詞 being used</strong> の意味上の主語が <strong>it</strong>（the piece of art）。<strong>object to + Ving</strong>「〜することに反対する」のパターン。「それが部外者に使われることに反対する」。
+    </div>
+  </div>
+
+  <!-- P11 -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">11</span>
+      <span style="margin-left:6px;">第11段落 — 結論：純粋な興味と流用の区別</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        The sharing of ideas, traditions, and material items is what makes life interesting and helps diversify the world. A genuine interest in other cultures is not necessarily wrong, but cultural appropriation raises questions that should not be ignored.
+      </div>
+      <div class="tr-jp">
+        アイデア、伝統、物品の<em>共有</em>こそが、生活を興味深いものにし、世界を多様にするのに役立つものである。他の文化への純粋な興味は<em>必ずしも誤りではない</em>。だが、文化の流用は、無視されるべきでない問題を提起しているのである。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>The sharing of ideas, traditions, and material items is what makes life interesting</strong>＝<strong>what 関係代名詞</strong>（先行詞を内包）「〜するもの」。「共有が、生活を面白くするものだ」と訳すと自然。<br>
+      ② <strong>helps diversify</strong>＝<strong>help + 原形不定詞（to省略）</strong>「〜するのを助ける」。<strong>diversify</strong>＝「多様化する」。<br>
+      ③ <strong>not necessarily wrong</strong>＝<strong>部分否定</strong>「必ずしも〜ではない」。設問Iの対象。「（流用は問題だが）純粋な興味そのものを否定するわけではない」というバランス。<br>
+      ④ <strong>raises questions that should not be ignored</strong>＝「無視されるべきでない問題を提起する」。<strong>raise a question</strong>＝「問題を提起する」。受動態 + 助動詞 should not の形を「〜されるべきでない」と訳す。
+    </div>
+  </div>
+
+  <!-- 全体振り返り -->
+  <div class="card" style="background:linear-gradient(135deg,var(--tll),#e0f7ee);border-color:#9fe1cb;">
+    <div class="lbl" style="color:var(--tld);">和訳を通して見える文章全体の流れ</div>
+    <div style="font-size:13px;line-height:1.85;color:var(--tld);">
+      <p style="margin-bottom:10px;">この論説は、<strong>「定義の混乱を整理する」</strong>という地味な作業から始まる。<strong>P1で「同意なしの取り入れ」</strong>と厳密に定義し、<strong>P2で「自然な相互影響」と対比</strong>、そして<strong>P3で「Instead, ... exploiting」</strong>と決定打を打って核心定義を確定させる。論説の最初の3段落で、読者の混乱を取り除く「概念整理のフェーズ」を完結させているのが構造的に見事。</p>
+      <p style="margin-bottom:10px;">中盤の<strong>P4〜P8では「なぜ問題か」</strong>を、歴史的根（P5）→経済的搾取（P6）→ステレオタイプ強化（P7）→具体例（P8）と、抽象から具体へと積み上げていく。中でも<strong>P5の "Society has yet to move beyond"</strong>（記述問題E）が「歴史と現在をつなぐ蝶番」として機能している。</p>
+      <p style="margin-bottom:0;">後半<strong>P9〜P11では処方箋を提示</strong>。「敬意か侮辱か」という核心の問い（P9）→ 具体的な自問リスト（P10）→ バランスの取れた結論（P11）と展開し、読者が「自分はどう振る舞うべきか」を持ち帰れる形で締める。<strong>not necessarily wrong</strong> という<strong>柔軟な許容</strong>を示しつつも、<strong>raises questions that should not be ignored</strong> で問題提起を譲らない。論文として極めて完成度の高い構成。</p>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p6')">← 設問J</button>
+    <button class="btnp" onclick="goP('p1')">最初から復習 ↺</button>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+var ans={
+  qA:4,qB:1,qC:2,qD:1,
+  qF:3,qG:1,qH:3,qI:1
+};
+var jAns=['jC','jF'];
+var selMap={};
+var jSel={};
+var revealed={};
+
+function goP(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.pn').forEach(function(b){b.classList.remove('active');});
+  var idx={p1:0,p2:1,p3:2,p4:3,p5:4,p6:5,p7:6};
+  var btns=document.querySelectorAll('.pn');
+  if(btns[idx[id]])btns[idx[id]].classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function ch(qid,n){
+  selMap[qid]=n;
+  document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+  var btns=document.querySelectorAll('#'+qid+' .cb');
+  if(btns[n-1])btns[n-1].classList.add('sel');
+}
+
+function toggleJ(jid){
+  var el=document.getElementById(jid);
+  if(jSel[jid]){
+    delete jSel[jid];
+    el.classList.remove('sel');
+  } else {
+    jSel[jid]=true;
+    el.classList.add('sel');
+  }
+  var n=Object.keys(jSel).length;
+  document.getElementById('jcount').textContent=n;
+  if(n>2){
+    document.getElementById('jcount').style.color='var(--rd)';
+  } else {
+    document.getElementById('jcount').style.color='var(--ac)';
+  }
+}
+
+function rv(rid){
+  var el=document.getElementById(rid);
+  if(!el)return;
+  el.classList.add('show');
+
+  // J の場合（複数選択）
+  if(rid==='rJ'){
+    ['jA','jB','jC','jD','jE','jF','jG'].forEach(function(jid){
+      var b=document.getElementById(jid);
+      b.classList.remove('sel','ok','ng-sel');
+      if(jAns.indexOf(jid)>-1){
+        b.classList.add('ok');
+      } else if(jSel[jid]){
+        b.classList.add('ng-sel');
+      }
+    });
+    revealed[rid]=true;
+    return;
+  }
+
+  // 単一選択
+  var qid=rid.replace('r','q');
+  if(ans[qid]!==undefined){
+    var c=ans[qid],my=selMap[qid];
+    document.querySelectorAll('#'+qid+' .cb').forEach(function(b,i){
+      b.classList.remove('sel','ok','ng');
+      if(i+1===c)b.classList.add('ok');
+      if(my&&i+1===my&&my!==c)b.classList.add('ng');
+    });
+  }
+  if(!revealed[rid]){
+    revealed[rid]=true;
+    updateScores();
+  }
+}
+
+function updateScores(){
+  // A~D (4問)
+  var c1=0,t1=0;
+  ['qA','qB','qC','qD'].forEach(function(q){
+    var r='r'+q.substring(1);
+    if(revealed[r]){t1++;if(selMap[q]===ans[q])c1++;}
+  });
+  var s1=document.getElementById('sc1');
+  if(s1){s1.textContent=c1+' / '+t1;s1.style.color=c1===t1&&t1>0?'var(--tl)':c1>=t1*.6?'var(--am)':'var(--rd)';}
+
+  // F~I (4問)
+  var c2=0,t2=0;
+  ['qF','qG','qH','qI'].forEach(function(q){
+    var r='r'+q.substring(1);
+    if(revealed[r]){t2++;if(selMap[q]===ans[q])c2++;}
+  });
+  var s2=document.getElementById('sc2');
+  if(s2){s2.textContent=c2+' / '+t2;s2.style.color=c2===t2&&t2>0?'var(--tl)':c2>=t2*.6?'var(--am)':'var(--rd)';}
+}
+</script>
+</body>
+</html>

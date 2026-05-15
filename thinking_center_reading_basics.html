@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>センター試験 完全解説 第2問B＋第3問A・B｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+.qnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.qn{padding:10px 13px;font-size:11px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.qn:hover{color:var(--tx);}
+.qn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.qn.done{color:var(--tl);}
+.qn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.qn.active .qn-num{background:var(--ac);color:#fff;}
+.qn.done .qn-num{background:var(--tl);color:#fff;}
+
+.wrap{max-width:860px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.ph{display:none;}
+.ph.show{display:block;animation:fi .3s ease;}
+.ph-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:20px;font-size:11.5px;font-weight:700;margin-bottom:14px;}
+.ph1{background:var(--acl);color:var(--acd);}
+.ph2{background:var(--aml);color:var(--amd);}
+.ph3{background:var(--tll);color:var(--tld);}
+
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* CONV */
+.conv{display:flex;flex-direction:column;gap:2px;font-family:'Source Serif 4',serif;font-size:15px;line-height:2;padding:14px 16px;background:var(--s2);border-radius:var(--rl);border:.5px solid var(--bd);margin:12px 0;}
+.cl{display:flex;gap:11px;align-items:baseline;padding:4px 0;}
+.csp{font-size:11px;font-weight:700;font-family:'Noto Sans JP',sans-serif;flex-shrink:0;min-width:60px;color:var(--t2);text-align:right;}
+.ctx{flex:1;line-height:1.85;}
+.bl{display:inline-flex;align-items:center;justify-content:center;min-width:46px;padding:1px 8px;background:var(--acd);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;border-radius:4px;margin:0 3px;vertical-align:middle;}
+
+.hl-k{background:#fff3cd;border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-sig{color:var(--rd);font-weight:700;background:var(--rdl);border-radius:2px;padding:0 2px;}
+.hl-tl{color:var(--tld);font-weight:700;background:var(--tll);border-radius:2px;padding:0 2px;}
+.hl-am{color:var(--amd);font-weight:700;background:var(--aml);border-radius:2px;padding:0 2px;}
+.hl-rm{background:var(--rdl);color:var(--rd);text-decoration:line-through;border-radius:2px;padding:0 3px;}
+
+/* PARA */
+.para{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.15;padding:16px 18px;background:var(--s2);border-radius:var(--rl);border:.5px solid var(--bd);margin:12px 0;}
+.sent-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--ac);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;margin-right:5px;vertical-align:middle;flex-shrink:0;}
+.sn-rm{background:var(--rd);}
+.sent-mark{padding:0 3px;border-radius:3px;}
+.sm-keep{background:var(--tll);}
+.sm-rm{background:var(--rdl);text-decoration:line-through;}
+
+/* LOGIC FLOW */
+.lflow{display:flex;flex-direction:column;gap:0;margin:12px 0;}
+.lf-item{display:flex;gap:0;align-items:stretch;}
+.lf-sp{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.lf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.lf-body{flex:1;padding:0 0 16px 13px;}
+.ltag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;font-family:'Noto Sans JP',sans-serif;}
+.lf-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.75;margin-bottom:3px;}
+.lf-ja{font-size:12.5px;color:var(--t2);line-height:1.7;}
+.lf-note{font-size:12px;font-weight:700;padding:5px 10px;border-radius:6px;margin-top:5px;line-height:1.6;}
+.arr-mid{text-align:center;font-size:15px;color:var(--ac);font-weight:700;margin:-4px 0;padding-left:21px;}
+
+/* CHOICES */
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:16px;}
+.rev{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev:hover{background:var(--acd);}
+.ans{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans.show{display:block;}
+
+/* CALLOUT */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* PROOF */
+.proof{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.proof-hdr{padding:9px 14px;font-size:12px;font-weight:700;color:#fff;}
+.proof-body{padding:13px 14px;font-size:13px;line-height:1.8;}
+
+/* TRANS */
+.trans{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.trans-hdr{padding:9px 15px;font-size:11px;font-weight:700;background:var(--tld);color:#fff;}
+.trans-body{padding:13px 15px;font-size:13.5px;line-height:1.95;background:var(--tll);color:var(--tld);font-family:'Noto Sans JP',sans-serif;}
+.trans-en{font-family:'Source Serif 4',serif;font-size:13px;color:var(--t2);margin-bottom:4px;line-height:1.7;}
+.trans-sp{display:inline-block;font-size:11px;font-weight:700;background:rgba(255,255,255,.6);padding:1px 8px;border-radius:4px;margin-right:6px;color:var(--tld);}
+
+/* NAV */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:14px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:10px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜センター試験 完全解説</div>
+      <div class="brand-s">第2問B（会話文）＋ 第3問A（熟語推測）＋ 第3問B（段落整序）</div>
+    </div>
+  </div>
+  <span class="badge">センター過去問</span>
+</div>
+
+<div class="qnav">
+  <button class="qn active" onclick="goQ('q0')" id="qb0"><span class="qn-num">★</span>核心の読み方</button>
+  <button class="qn" onclick="goQ('q18')" id="qb18"><span class="qn-num">18</span>映画かテニス</button>
+  <button class="qn" onclick="goQ('q19')" id="qb19"><span class="qn-num">19</span>Jean疲れた</button>
+  <button class="qn" onclick="goQ('q20')" id="qb20"><span class="qn-num">20</span>洗濯機の携帯</button>
+  <button class="qn" onclick="goQ('q27')" id="qb27"><span class="qn-num">27</span>exuberant</button>
+  <button class="qn" onclick="goQ('q28')" id="qb28"><span class="qn-num">28</span>got cold feet</button>
+  <button class="qn" onclick="goQ('q29')" id="qb29"><span class="qn-num">29</span>子供の質問</button>
+  <button class="qn" onclick="goQ('q30')" id="qb30"><span class="qn-num">30</span>田舎と都市</button>
+  <button class="qn" onclick="goQ('q31')" id="qb31"><span class="qn-num">31</span>金魚の世話</button>
+</div>
+
+<div class="wrap">
+
+<!-- ★ 核心の読み方 -->
+<div class="pan active" id="q0">
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:7px;">3種類の問題形式 × 1つの読み方</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;line-height:1.25;margin-bottom:10px;">文と文の論理的つながりで<br>必ず根拠が取れる</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">会話文・熟語推測・段落整序の3種類の問題は、全て「文と文の論理的つながり」で解ける。「なんとなく」を捨てて、論理で根拠を掴む。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">3つの問題形式 × 共通の読み方</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--acd);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">第2問B 会話文（問18〜20）</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--acl);">
+          空所の<strong>前と後の発言から両方向で挟み撃ち</strong>に根拠を取る。<br>
+          <span style="color:var(--acd);font-weight:700;">「前の状況」と「後の続き」を満たす選択肢が必ず1つだけある。</span>
+        </div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--am);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">第3問A 熟語推測（問27〜28）</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--aml);">
+          <strong>前後の文に「同じ意味を別の言葉で言い換えた箇所」が必ずある</strong>。<br>
+          <span style="color:var(--amd);font-weight:700;">話の流れから「ポジティブ／ネガティブ」の方向を掴み、選択肢を絞る。</span>
+        </div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--tl);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">第3問B 段落整序（問29〜31）</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--tll);">
+          段落の<strong>第1文（テーマ）から論理が外れる文</strong>を抜く。<br>
+          <span style="color:var(--tld);font-weight:700;">「テーマ語の繰り返し」と「論理のつながり」を追えば、テーマと無関係な文が浮き上がる。</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">考え方を理解したら問題へ</span>
+    <button class="btnp" onclick="goQ('q18')">問18から始める →</button>
+  </div>
+</div>
+
+<!-- ══ 問18 ══ -->
+<div class="pan" id="q18">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--ac);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">18</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Martha と Ed — 午後の予定（映画かテニスか）</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">On the other hand → 空所 → Either is fine with me.</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q18p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Edが「映画はどう？」と提案 → Martha「いいよ」と同意 → <strong>Edが「On the other hand（一方で）」と別の提案を出す</strong>。<br>
+      Marthaの空所の後「Either is fine with me.（どっちでもいい）」に注目。<br>
+      Marthaは何にイライラしてOh, come on!と言ったのか？
+    </div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Martha:</span><span class="ctx">What do you want to do this afternoon?</span></div>
+      <div class="cl"><span class="csp">Ed:</span><span class="ctx">Well, how about going to that new movie?</span></div>
+      <div class="cl"><span class="csp">Martha:</span><span class="ctx">Sure. It starts at three o'clock, doesn't it? I'll be ready.</span></div>
+      <div class="cl"><span class="csp">Ed:</span><span class="ctx">On the other hand, we haven't played tennis for a long time.</span></div>
+      <div class="cl"><span class="csp">Martha:</span><span class="ctx">Oh, come on! <span class="bl">18</span> Either is fine with me.</span></div>
+    </div>
+    <div class="choices" id="q18c">
+      <button class="cb" onclick="sel('q18c',1)"><span class="cn">①</span>Change your mind.</button>
+      <button class="cb" onclick="sel('q18c',2)"><span class="cn">②</span>Make up your mind.</button>
+      <button class="cb" onclick="sel('q18c',3)"><span class="cn">③</span>Mind your manners.</button>
+      <button class="cb" onclick="sel('q18c',4)"><span class="cn">④</span>Open your mind.</button>
+    </div>
+    <button class="rev" onclick="showPh('q18p1','q18p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q18p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--ac);">Ed①</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">Ed の最初の提案</span>
+          <div class="lf-en">"how about going to <span class="hl-k">that new movie</span>?"</div>
+          <div class="lf-ja">映画はどう？ → Marthaは「Sure（いいよ）」と承諾</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ ところがEdは……</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">Ed②</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--rd));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">Ed が別の提案（態度を変える）</span>
+          <div class="lf-en">"<span class="hl-sig">On the other hand</span>, we haven't played <span class="hl-k">tennis</span> for a long time."</div>
+          <div class="lf-ja"><strong>On the other hand（一方で）</strong>= さっき決めた映画と別のことを言い出す<br>→ Edは「決められない・気が変わっている」状態</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Marthaがイラっとして……</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--rd);">Martha</div>
+          <div class="lf-line" style="background:linear-gradient(var(--rd),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--rdl);color:var(--rd);">空所 + 補足発言</span>
+          <div class="lf-en">"Oh, come on! [空所] <span class="hl-k">Either is fine with me.</span>"</div>
+          <div class="lf-ja"><strong>Oh, come on!</strong>（もう、いい加減にして！）→ イラ立ち<br><strong>Either is fine with me.</strong>（どっちでもいい）= Marthaはどちらでもいい → 問題は<strong>Edが決めないこと</strong></div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 「決めて！」という意味の表現が入る</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">✓</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">論理から導かれる答え</span>
+          <div class="lf-en"><strong>Make up your mind.</strong>（決心しなさい・決めて）</div>
+          <div class="lf-ja">→ Edが2つの選択肢の間で揺れている → 「決めて」と促す</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q18p2','q18p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q18p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② Make up your mind.（決めて・決心して）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>make up one's mind</strong>＝「決心する・心を決める」<br><br>
+          <strong>論理の流れ：</strong><br>
+          Edが映画を提案 → Marthaが同意 → Edが「On the other hand」でテニスも提案 → Marthaは「どっちでもいい」のに Edが決められない<br>
+          → Marthaがイライラして「決めて」と言う → <strong>Make up your mind.</strong> がピッタリ
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> Change your mind.（気を変えて）→ Edはむしろ気を変えすぎている。これ以上気を変える必要はない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> Mind your manners.（行儀よくして）→ 文脈と全く関係ない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> Open your mind.（心を開いて）→ 文脈と関係ない。考えを広げる話ではない。
+      </div>
+    </div>
+
+    <!-- 和訳 -->
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">Martha</span>今日の午後は何をしたい？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Ed</span>そうだな、あの新しい映画を観に行くのはどう？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Martha</span>いいよ。3時開始だよね？準備しておくね。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Ed</span>でも一方で、しばらくテニスもやってないなあ。</div>
+        <div><span class="trans-sp">Martha</span>もう、いい加減にして！<strong>決めてよ</strong>。どっちでもいいから。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q0')">← 核心の読み方</button>
+      <button class="btnp" onclick="markDone('q18');goQ('q19')">問19へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問19 ══ -->
+<div class="pan" id="q19">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--am);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">19</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Yukie と Jean — Jeanが疲れている理由</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">Yes, I was（野球の話を始めた）→ 空所 → she never stops talking about her favorite team.</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q19p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Jeanは「野球の話を始めたのは自分」と認めた → Yukieが「Oh, dear.」とため息 → 空所 → 「彼女（Sally）は好きなチームの話を止めないと知ってるよね」と続く。<br>
+      空所には「だから話を始めるべきじゃなかった」という意味の発言が入るはず。
+    </div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Yukie:</span><span class="ctx">Jean, you look really tired. What's wrong?</span></div>
+      <div class="cl"><span class="csp">Jean:</span><span class="ctx">Well, I went out with Sally last night. We started talking about baseball and she wouldn't stop.</span></div>
+      <div class="cl"><span class="csp">Yukie:</span><span class="ctx">Were you the first to mention baseball?</span></div>
+      <div class="cl"><span class="csp">Jean:</span><span class="ctx">Well.... Yes, I was.</span></div>
+      <div class="cl"><span class="csp">Yukie:</span><span class="ctx">Oh, dear. <span class="bl">19</span> You know she never stops talking about her favorite team.</span></div>
+      <div class="cl"><span class="csp">Jean:</span><span class="ctx">Right. I know that now.</span></div>
+    </div>
+    <div class="choices" id="q19c">
+      <button class="cb" onclick="sel('q19c',1)"><span class="cn">①</span>You couldn't have listened to her.</button>
+      <button class="cb" onclick="sel('q19c',2)"><span class="cn">②</span>You mustn't make her so angry.</button>
+      <button class="cb" onclick="sel('q19c',3)"><span class="cn">③</span>You shouldn't have done that.</button>
+      <button class="cb" onclick="sel('q19c',4)"><span class="cn">④</span>You'd better not leave her alone.</button>
+    </div>
+    <button class="rev" onclick="showPh('q19p1','q19p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q19p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--rd);">事実</div>
+          <div class="lf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--rdl);color:var(--rd);">Jean が認めた事実</span>
+          <div class="lf-en">"<span class="hl-k">Yes, I was</span>" (= the first to mention baseball)</div>
+          <div class="lf-ja">野球の話を始めたのは自分だった（過去の行為）</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Oh, dear.（あらまあ）= 残念がる</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">空所の役割</span>
+          <div class="lf-en">[空所] + "You know she never stops talking about her favorite team."</div>
+          <div class="lf-ja">「Sallyは好きなチームの話を止めないって知ってるでしょ」<br>→ つまり「<strong>知ってたなら話を始めるべきじゃなかった</strong>」というニュアンス</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 答え合わせ：Jeanの返答</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">答え合わせ</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">Jean の返答（決定的根拠）</span>
+          <div class="lf-en">"<span class="hl-tl">Right. I know that now.</span>"</div>
+          <div class="lf-ja"><strong>「そうだね。今ならわかる」</strong>= 自分の過去の行為を後悔している<br>→ 空所は「<strong>そんなことしなければよかったのに</strong>」という過去への後悔・批判</div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ shouldn't have done that（やるべきじゃなかった）の助動詞構文</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q19p2','q19p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q19p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：③ You shouldn't have done that.（そんなことすべきじゃなかったね）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>shouldn't have + 過去分詞</strong>＝「〜すべきではなかったのに（実際はしてしまった）」過去の行為への後悔・批判<br><br>
+          <strong>根拠の連鎖：</strong>「Yes, I was（始めたのは自分）」→ Oh, dear → 空所 → 「Right. I know that now（そうだね、今ならわかる）」<br>
+          → 「過去にしてしまった行為を後悔する内容」が空所に入る → ③が唯一一致
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> You couldn't have listened to her.（彼女の話を聞けなかったはずがない）→ 文脈に合わない。Jeanは彼女の話を聞いた人。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> You mustn't make her so angry.（彼女を怒らせてはいけない）→ Sallyは怒っていない、ただ話し続けただけ。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> You'd better not leave her alone.（彼女を一人にしない方がいい）→ 「一人にする」という話は出ていない。逆方向。
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">Yukie</span>Jean、すごく疲れてるね。どうしたの？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jean</span>うん、昨日の夜Sallyと出かけたんだけど、野球の話を始めたら彼女が止まらなくて。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Yukie</span>野球の話を最初に出したのはあなた？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jean</span>えーと…そう、私だったの。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Yukie</span>あらまあ。<strong>そんなことすべきじゃなかったよ</strong>。彼女が好きなチームの話を止めないって知ってるでしょ。</div>
+        <div><span class="trans-sp">Jean</span>そうね。今ならわかる。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q18')">← 問18</button>
+      <button class="btnp" onclick="markDone('q19');goQ('q20')">問20へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問20 ══ -->
+<div class="pan" id="q20">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--pu);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">20</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">母 と Jack — 洗濯機で壊れた携帯</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">how am I going to call him? → 空所 → We'll talk about your carelessness later.</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q20p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Jackの携帯は壊れた → Jack「But Mom, how am I going to call him?（どうやって電話するの？）」と母に質問 → 空所 → 母「不注意については後で話そう」<br>
+      母は今は<strong>電話の問題を解決</strong>しようとしている。「後で話そう」と言える＝今は別のことで電話の問題を解決する。
+    </div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Mother:</span><span class="ctx">Jack, I just finished washing your school uniform, and found your cellphone in the washing machine. It's broken!</span></div>
+      <div class="cl"><span class="csp">Jack:</span><span class="ctx">Oh, no. I have to call Bob now.</span></div>
+      <div class="cl"><span class="csp">Mother:</span><span class="ctx">That's not the point! I just bought it for you last week!</span></div>
+      <div class="cl"><span class="csp">Jack:</span><span class="ctx">Oh, yeah. I'm so sorry. But Mom, how am I going to call him?</span></div>
+      <div class="cl"><span class="csp">Mother:</span><span class="ctx"><span class="bl">20</span> We'll talk about your carelessness later.</span></div>
+    </div>
+    <div class="choices" id="q20c">
+      <button class="cb" onclick="sel('q20c',1)"><span class="cn">①</span>Buy him a new phone.</button>
+      <button class="cb" onclick="sel('q20c',2)"><span class="cn">②</span>I'll call you soon.</button>
+      <button class="cb" onclick="sel('q20c',3)"><span class="cn">③</span>Just use my phone.</button>
+      <button class="cb" onclick="sel('q20c',4)"><span class="cn">④</span>Tell him to wait for me.</button>
+    </div>
+    <button class="rev" onclick="showPh('q20p1','q20p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q20p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--rd);">問題</div>
+          <div class="lf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--rdl);color:var(--rd);">Jack の困った質問</span>
+          <div class="lf-en">"But Mom, <span class="hl-k">how am I going to call him?</span>"</div>
+          <div class="lf-ja">携帯が壊れた → どうやってBobに電話すればいい？</div>
+          <div class="lf-note" style="background:var(--rdl);color:var(--rd);">→ 空所は「電話する方法」を提案する内容</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 母の返答（空所）</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">空所の条件</span>
+          <div class="lf-en">条件1：Jackの「どうやって電話する？」への答えになる</div>
+          <div class="lf-en">条件2：後の「後で話そう」と整合する = 今は電話の問題を解決</div>
+          <div class="lf-ja">→ 「母の携帯を使えばいい」という解決策が最も自然</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 答え合わせ</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">母の続き</span>
+          <div class="lf-en">"<span class="hl-tl">We'll talk about your carelessness later.</span>"</div>
+          <div class="lf-ja">「不注意については<strong>後で</strong>話そう」<br>→ 今は問題解決優先 → 空所では今すぐの解決策（母の携帯を使え）を提案している</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q20p2','q20p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q20p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：③ Just use my phone.（私の携帯を使いなさい）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          母は怒っているが、まずJackの「電話できない」問題を解決する。「Just use my phone（私の携帯を使えばいい）」と提案 → 「不注意の件は後で話す」と続く流れが完璧に成立。<br><br>
+          <strong>Just use my phone.</strong>＝「とにかく私の携帯を使いなさい」（Justは「とにかく・ただ」の強調）
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> Buy him a new phone.（彼に新しい携帯を買って）→ Bobに買えという意味不明な発言。Jackの問題は「自分の電話」。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> I'll call you soon.（すぐ電話する）→ Jackは目の前にいる。電話する必要がない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> Tell him to wait for me.（私を待つように言って）→ 母がBobを待つ理由が不明。話の文脈に合わない。
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">母</span>Jack、制服を洗い終わったら洗濯機の中にあなたの携帯があったの。壊れてるよ！</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jack</span>ああ、嫌だ。今すぐBobに電話しなきゃいけないのに。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">母</span>そんなことが問題じゃないでしょ！先週買ったばかりなのよ！</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jack</span>うん、本当にごめん。でもお母さん、どうやって彼に電話したらいいの？</div>
+        <div><span class="trans-sp">母</span><strong>私の携帯を使いなさい</strong>。あなたの不注意については後で話しましょう。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q19')">← 問19</button>
+      <button class="btnp" onclick="markDone('q20');goQ('q27')">問27へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問27 ══ -->
+<div class="pan" id="q27">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--rd);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">27</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">熟語推測 — exuberant の意味</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">前後の文に「言い換え」が必ずある</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q27p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Jane:</span><span class="ctx">How's Michelle doing? The last time I met her, she looked a little <span class="hl-rm">depressed</span> and said she was <span class="hl-rm">worried</span> about her schoolwork.</span></div>
+      <div class="cl"><span class="csp">Mary:</span><span class="ctx">I saw her yesterday, and she seemed absolutely <strong style="text-decoration:underline;text-underline-offset:3px;">exuberant</strong>.</span></div>
+      <div class="cl"><span class="csp">Jane:</span><span class="ctx">Really? I wonder what happened.</span></div>
+      <div class="cl"><span class="csp">Mary:</span><span class="ctx">Well, she'd been worried about her math test, <span class="hl-sig">but</span> she <span class="hl-k">did really well</span> after all. Also, she's found a part-time job that she <span class="hl-k">enjoys a lot</span>.</span></div>
+      <div class="cl"><span class="csp">Jane:</span><span class="ctx">That's great. I'm happy to hear that.</span></div>
+    </div>
+    <div style="font-size:13.5px;font-weight:700;margin:10px 0 8px;">In this situation, <strong>exuberant</strong> means to be very <span class="bl">27</span>.</div>
+    <div class="choices" id="q27c">
+      <button class="cb" onclick="sel('q27c',1)"><span class="cn">①</span>busy and stressed</button>
+      <button class="cb" onclick="sel('q27c',2)"><span class="cn">②</span>happy and energetic</button>
+      <button class="cb" onclick="sel('q27c',3)"><span class="cn">③</span>hard-working and healthy</button>
+      <button class="cb" onclick="sel('q27c',4)"><span class="cn">④</span>upset and nervous</button>
+    </div>
+    <button class="rev" onclick="showPh('q27p1','q27p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q27p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 文脈から意味を推測</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--rd);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--rd),var(--ac));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--rdl);color:var(--rd);">Jane の発言（過去の状態）</span>
+          <div class="lf-en">"she looked a little <span class="hl-rm">depressed</span> and said she was <span class="hl-rm">worried</span>"</div>
+          <div class="lf-ja">以前は<strong>落ち込んでいた・心配していた</strong>（ネガティブ）</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Mary が「昨日」会った時の話 — 状態が変わった</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--ac);">転換</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">Maryの観察（現在の状態）</span>
+          <div class="lf-en">"she seemed absolutely <strong>exuberant</strong>"</div>
+          <div class="lf-ja">→「絶対的にexuberantだった」= 過去のdepressedとは逆 = ポジティブな状態</div>
+          <div class="lf-note" style="background:var(--acl);color:var(--acd);">absolutely（完全に・絶対的に）の強い肯定 = 強いポジティブ語</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Mary の理由説明 — 答え合わせの根拠</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">理由</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">なぜそうなったか（言い換え）</span>
+          <div class="lf-en">"<span class="hl-sig">but</span> she <span class="hl-tl">did really well</span> after all"</div>
+          <div class="lf-en">"a part-time job that she <span class="hl-tl">enjoys a lot</span>"</div>
+          <div class="lf-ja">テストでとても良くできた + 楽しんでいるバイトを見つけた<br>→ <strong>幸せ・元気・喜びに満ちている</strong>状態の理由</div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ exuberant = happy and energetic（幸せで活気がある）</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q27p2','q27p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q27p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② happy and energetic（幸せで活気がある）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>exuberant</strong>＝「元気いっぱいの・活気にあふれた」<br><br>
+          <strong>推測の根拠（4段論法）：</strong><br>
+          ① 過去は「depressed / worried」（ネガティブ）<br>
+          ② 「absolutely exuberant」= 過去と対比される強いポジティブ語<br>
+          ③ 理由：テスト成功 + 楽しいバイト → 幸せで活発<br>
+          ④ = happy and energetic
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> busy and stressed → ストレスが多い = 「悩んでいた前の状態」と同じ。逆方向。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> hard-working and healthy → 健康・勤勉という意味は本文に根拠なし。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> upset and nervous → ストレスや動揺 = 完全にネガティブ。butで否定されている前の状態。
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jane</span>Michelleはどうしてる？前に会った時は少し落ち込んでいて、学校の勉強が心配だと言っていたけど。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Mary</span>昨日会ったよ、彼女<strong>絶対的に元気いっぱい</strong>に見えたよ。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jane</span>本当に？何があったんだろう。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Mary</span>数学のテストが心配だったんだけど、結局すごくよくできたみたいで。それに、すごく楽しいバイトも見つけたんだって。</div>
+        <div><span class="trans-sp">Jane</span>すごい！それを聞けて嬉しい。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q20')">← 問20</button>
+      <button class="btnp" onclick="markDone('q27');goQ('q28')">問28へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問28 ══ -->
+<div class="pan" id="q28">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--acd);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">28</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">熟語推測 — got cold feet の意味</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">「直訳→比喩」+「言い換え（anxious）」がヒント</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q28p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Jacob:</span><span class="ctx">How are your summer plans going? I heard you're going to travel around South America with your friend.</span></div>
+      <div class="cl"><span class="csp">Hiromi:</span><span class="ctx">Well, I'd made all the travel arrangements, was studying Spanish, and had even started packing my bag. <span class="hl-sig">But</span> suddenly, my friend told me <span class="hl-k">she couldn't go</span>. So then I <strong style="text-decoration:underline;">got cold feet</strong> and <span class="hl-k">canceled the trip</span>.</span></div>
+      <div class="cl"><span class="csp">Jacob:</span><span class="ctx">Oh, too bad. It's a shame that you felt <span class="hl-tl">too anxious</span> to travel alone.</span></div>
+    </div>
+    <div style="font-size:13.5px;font-weight:700;margin:10px 0 8px;">In this situation, <strong>got cold feet</strong> means <span class="bl">28</span>.</div>
+    <div class="choices" id="q28c">
+      <button class="cb" onclick="sel('q28c',1)"><span class="cn">①</span>became sick</button>
+      <button class="cb" onclick="sel('q28c',2)"><span class="cn">②</span>became thrilled</button>
+      <button class="cb" onclick="sel('q28c',3)"><span class="cn">③</span>lost control</button>
+      <button class="cb" onclick="sel('q28c',4)"><span class="cn">④</span>lost courage</button>
+    </div>
+    <button class="rev" onclick="showPh('q28p1','q28p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q28p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 直訳→イメージ→文脈の3段推測</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">分解</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--pu));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">単語分解と直訳</span>
+          <div class="lf-en">got + cold + feet → 「冷たい足を得た」</div>
+          <div class="lf-ja">→ 直訳は意味不明 = 比喩・慣用表現の合図</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ イメージ化：足が冷たくなる＝身がすくむ＝怖気づく</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--pu);">流れ</div>
+          <div class="lf-line" style="background:linear-gradient(var(--pu),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--pul);color:var(--pu);">出来事の流れ</span>
+          <div class="lf-en">準備万端（手配済・スペイン語勉強・荷造り）→ <span class="hl-sig">But</span> 友人が来られない → got cold feet → <span class="hl-k">旅行をキャンセル</span></div>
+          <div class="lf-ja">準備していたのに突然キャンセル → 何かネガティブな心境変化があった</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Jacob の言い換えが決定的根拠</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">言い換え</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">Jacob による言い換え</span>
+          <div class="lf-en">"you felt <span class="hl-tl">too anxious</span> to travel alone"</div>
+          <div class="lf-ja"><strong>too anxious to travel alone</strong>（一人で旅するには不安すぎた）<br>→ got cold feet = 不安になって尻込みした = <strong>勇気を失った</strong></div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ got cold feet = lost courage（勇気を失った）</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q28p2','q28p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q28p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：④ lost courage（勇気を失った）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>get cold feet</strong>（イディオム）＝「怖気づく・尻込みする・勇気を失う」<br><br>
+          <strong>推測の3段論法：</strong><br>
+          ① 直訳「足が冷たくなる」→ おかしい → 比喩<br>
+          ② 状況：友人キャンセル → 一人で行けないと感じてキャンセル<br>
+          ③ Jacobの言い換え「too anxious to travel alone」（不安すぎて一人で旅できない）<br>
+          → 「不安で勇気を失った」= lost courage
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:5px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> became sick（病気になった）→ 病気の話は本文にない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> became thrilled（わくわくした）→ ワクワクして旅をキャンセルする理由がない。逆方向。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> lost control（自制を失った）→ 「興奮しすぎ」のニュアンス。「不安」とは別。
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">Jacob</span>夏の予定はどう？友達と南米を旅行するって聞いたよ。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Hiromi</span>うん、旅の手配は全部終わっていて、スペイン語も勉強していて、荷造りも始めていたの。でも突然、友達から行けないって言われて。それで<strong>怖気づいて</strong>、旅行をキャンセルしちゃった。</div>
+        <div><span class="trans-sp">Jacob</span>あら、残念。一人で旅するには不安すぎたなんて、もったいないね。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q27')">← 問27</button>
+      <button class="btnp" onclick="markDone('q28');goQ('q29')">問29へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問29 段落整序 ══ -->
+<div class="pan" id="q29">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--tl);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">29</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">段落整序 — 子供の質問と親の対応</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">テーマ：質問を扱う親の態度 → テーマから外れる文を抜く</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q29p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      第1文（テーマ）：「3〜5歳の子供は多くの質問をするようになる」<br>
+      → この段落のテーマは「<strong>子供の質問</strong>」と「<strong>親の対応</strong>」<br>
+      → テーマから論理的に外れる文を1つ抜く
+    </div>
+    <div class="para">
+      <span class="sent-num" style="background:var(--gr,#374151);">T</span>Children between the ages of three and five begin to ask many questions.<br>
+      <span class="sent-num">①</span>The average <span class="hl-rm">weight</span> of children around these ages is more than 12 kilograms.<br>
+      <span class="sent-num">②</span>The way parents handle their children's questions is important.<br>
+      <span class="sent-num">③</span>Some parents may be proud of their children's development and happily answer all their questions.<br>
+      <span class="sent-num">④</span>This encourages children to use their imagination and become more creative.<br>
+      <span style="font-size:13px;color:var(--t2);">On the other hand, if parents are not patient enough to answer questions, children might feel that they shouldn't be curious about things. As a result, they may begin to feel nervous about trying new activities.</span>
+    </div>
+    <div class="choices" id="q29c">
+      <button class="cb" onclick="sel('q29c',1)"><span class="cn">①</span>The average weight of children around these ages is more than 12 kilograms.</button>
+      <button class="cb" onclick="sel('q29c',2)"><span class="cn">②</span>The way parents handle their children's questions is important.</button>
+      <button class="cb" onclick="sel('q29c',3)"><span class="cn">③</span>Some parents may be proud of their children's development and happily answer all their questions.</button>
+      <button class="cb" onclick="sel('q29c',4)"><span class="cn">④</span>This encourages children to use their imagination and become more creative.</button>
+    </div>
+    <button class="rev" onclick="showPh('q29p1','q29p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q29p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — テーマと各文の関係を整理</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:10px 0;font-size:13px;">
+      <div style="padding:9px 13px;background:var(--acl);border-radius:var(--r);border:.5px solid #93c5fd;">
+        <strong>テーマ文：</strong>子供は多くの質問をする → <span style="color:var(--ac);font-weight:700;">テーマ＝質問</span>
+      </div>
+      <div style="padding:9px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+        <strong style="color:var(--rd);">×①</strong> <strong>体重（weight）</strong>の話 → 質問とは無関係なテーマ外！
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓②</strong> 親が質問を<strong>扱う方法</strong>が重要 → テーマ「親の対応」と一致
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓③</strong> 親が誇りに思って<strong>全部の質問に答える</strong> → ②の具体例
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓④</strong> Thisが指す内容 = ③の親の行為 → 想像力・創造性を伸ばす（ポジティブな結果）
+      </div>
+      <div style="padding:9px 13px;background:var(--aml);border-radius:var(--r);border:.5px solid #fcd34d;">
+        <strong>続き：</strong>On the other hand（一方で）= 「逆のケース」へ → 質問に答えない親の話に進む
+      </div>
+    </div>
+    <div class="co co-r">
+      <div class="co-lbl">論理が外れる文を発見</div>
+      ①の「体重」は「質問」「親の対応」というテーマと一切関係ない。<br>
+      ②→③→④はテーマと一直線につながる（親の対応＝具体例＝結果）。<br>
+      → ①が異物
+    </div>
+    <button class="rev" onclick="showPh('q29p2','q29p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q29p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：① The average weight of children around these ages is more than 12 kilograms.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          段落のテーマは「子供の質問と親の対応」。①だけが「体重（weight）」という全く別の話題。<br>
+          ②〜④は「親の対応（②）→ 良い対応の具体例（③）→ その結果（④）」と論理が一直線に進む。①を抜くと完璧な段落になる。
+        </div>
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳（①を除いた完成版）</div>
+      <div class="trans-body">
+        3歳から5歳の子供たちは多くの質問をするようになる。<strong>親が子供の質問を扱う方法は重要だ</strong>。中には子供の成長を誇りに思って、すべての質問に喜んで答える親もいる。<strong>これは</strong>子供に想像力を使わせ、より創造的にすることを促す。<br>
+        <strong>一方で</strong>、もし親が質問に答えるほど忍耐強くなければ、子供は「物事に好奇心を持つべきではない」と感じるかもしれない。その結果、新しい活動に挑戦することに不安を感じ始める可能性がある。
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q28')">← 問28</button>
+      <button class="btnp" onclick="markDone('q29');goQ('q30')">問30へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問30 ══ -->
+<div class="pan" id="q30">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--am);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">30</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">段落整序 — 田舎と都市の人口動向</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">テーマ：都市化の流れと住む場所の選択肢</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q30p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      第1文：「田舎と都市、どちらが好き？」→ テーマは<strong>人口動向と住む場所の選択</strong><br>
+      最後の文：「人口動向のせいで、すぐに住む場所を選べなくなるかも」<br>
+      → この段落は「<strong>都市化が進んでいる客観的事実</strong>」を述べている。個人の感想は浮く。
+    </div>
+    <div class="para">
+      <span class="sent-num" style="background:var(--gr,#374151);">T</span>Which do you prefer, living in the country or in the city?<br>
+      <span class="sent-num">①</span>According to a United Nations survey, half of the seven billion people on this planet are living in the countryside.<br>
+      <span style="font-size:13px;color:var(--t2);">However, more and more people are moving into urban areas.</span><br>
+      <span class="sent-num">②</span>It is estimated that about two thirds of the world's population will live in cities within the next 35 years.<br>
+      <span class="sent-num">③</span>Living in a city apartment <span class="hl-rm">is convenient but sometimes lonely</span>.<br>
+      <span class="sent-num">④</span>Cities are likely to be too crowded and become very difficult places to live.<br>
+      <span style="font-size:13px;color:var(--t2);">Having said that, due to recent population trends, we soon may not have a choice about where to live.</span>
+    </div>
+    <div class="choices" id="q30c">
+      <button class="cb" onclick="sel('q30c',1)"><span class="cn">①</span>According to a United Nations survey, half of the seven billion people on this planet are living in the countryside.</button>
+      <button class="cb" onclick="sel('q30c',2)"><span class="cn">②</span>It is estimated that about two thirds of the world's population will live in cities within the next 35 years.</button>
+      <button class="cb" onclick="sel('q30c',3)"><span class="cn">③</span>Living in a city apartment is convenient but sometimes lonely.</button>
+      <button class="cb" onclick="sel('q30c',4)"><span class="cn">④</span>Cities are likely to be too crowded and become very difficult places to live.</button>
+    </div>
+    <button class="rev" onclick="showPh('q30p1','q30p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q30p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — テーマと各文の関係を整理</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:10px 0;font-size:13px;">
+      <div style="padding:9px 13px;background:var(--acl);border-radius:var(--r);border:.5px solid #93c5fd;">
+        <strong>テーマ文：</strong>田舎と都市の住居 → <span style="color:var(--ac);font-weight:700;">テーマ＝人口の移動・都市化の客観的データ</span>
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓①</strong> 国連調査：半数が田舎に住んでいる（客観的事実）
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓②</strong> 35年後には人口の2/3が都市に住む見込み（将来予測の客観的事実）
+      </div>
+      <div style="padding:9px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+        <strong style="color:var(--rd);">×③</strong> 都市のアパート暮らしは便利だが孤独 → <strong>個人の感想</strong>。客観的データの流れから外れる！
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓④</strong> 都市が混雑して住みにくくなる（将来予測）
+      </div>
+      <div style="padding:9px 13px;background:var(--aml);border-radius:var(--r);border:.5px solid #fcd34d;">
+        <strong>結論：</strong>最近の人口動向→ すぐに住む場所を選べなくなる（人口動向の話に戻る）
+      </div>
+    </div>
+    <div class="co co-r">
+      <div class="co-lbl">論理が外れる文を発見</div>
+      他の文は全て「人口動向・都市化」という<strong>客観的事実・予測</strong>を扱っている。<br>
+      ③だけ「便利だが孤独」という<strong>個人の感想・主観的評価</strong> → 段落のトーンと合わない。
+    </div>
+    <button class="rev" onclick="showPh('q30p2','q30p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q30p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：③ Living in a city apartment is convenient but sometimes lonely.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          段落全体は「都市化が進んでいる」という<strong>客観的データ・予測</strong>で構成されている。<br>
+          ③だけ「便利だが孤独」という<strong>主観的な感想</strong> → 段落の論理から浮いている。<br>
+          ④の「混雑して住みにくくなる」とも「孤独」の論点が違う。
+        </div>
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳（③を除いた完成版）</div>
+      <div class="trans-body">
+        田舎と都市、どちらに住むのが好きですか？国連の調査によれば、この地球上の70億人の半数が田舎に住んでいる。しかし、ますます多くの人々が都市部に移住している。今後35年以内に世界の人口の約3分の2が都市に住むと推定されている。都市は混雑しすぎて、住みにくい場所になる可能性がある。<br>
+        とはいえ、最近の人口動向のために、私たちは近いうちにどこに住むかを選ぶことができなくなるかもしれない。
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q29')">← 問29</button>
+      <button class="btnp" onclick="markDone('q30');goQ('q31')">問31へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問31 ══ -->
+<div class="pan" id="q31">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--pu);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">31</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">段落整序 — 金魚を長生きさせる世話の仕方</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">テーマ：金魚の長寿のための「世話のポイント」</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q31p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      第1文：「少しの世話で、金魚はずっと長生きする」→ テーマ＝<strong>長生きのための世話の仕方</strong><br>
+      First, Second, The most important thing... と<strong>具体的な世話の手順</strong>が並ぶ構造。<br>
+      → 「長生きの世話と無関係な情報」は浮く。
+    </div>
+    <div class="para">
+      <span class="sent-num" style="background:var(--gr,#374151);">T</span>With a little bit of care, your goldfish can live much longer than you might expect.<br>
+      <span style="font-size:13px;color:var(--t2);">First, choose the largest possible tank you can afford and decorate it with objects such as small rocks and plants.</span><br>
+      <span class="sent-num">①</span>However, be careful not to put sharp objects in the tank that could harm your fish.<br>
+      <span style="font-size:13px;color:var(--t2);">Second, feed them only as much as they can eat in a few minutes and immediately remove any leftover food.</span><br>
+      <span class="sent-num">②</span>You can soon <span class="hl-rm">teach them to eat from your hand</span>.<br>
+      <span class="sent-num">③</span>The most important thing is to clean the tank and change the water at least once every two weeks.<br>
+      <span class="sent-num">④</span>To make it easier for the fish to adjust to new water, partial water changes are much better than complete water changes.<br>
+      <span style="font-size:13px;color:var(--t2);">By doing all these things, you can be sure your fish will survive into their "golden years."</span>
+    </div>
+    <div class="choices" id="q31c">
+      <button class="cb" onclick="sel('q31c',1)"><span class="cn">①</span>However, be careful not to put sharp objects in the tank that could harm your fish.</button>
+      <button class="cb" onclick="sel('q31c',2)"><span class="cn">②</span>You can soon teach them to eat from your hand.</button>
+      <button class="cb" onclick="sel('q31c',3)"><span class="cn">③</span>The most important thing is to clean the tank and change the water at least once every two weeks.</button>
+      <button class="cb" onclick="sel('q31c',4)"><span class="cn">④</span>To make it easier for the fish to adjust to new water, partial water changes are much better than complete water changes.</button>
+    </div>
+    <button class="rev" onclick="showPh('q31p1','q31p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q31p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — テーマと各文の関係を整理</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:10px 0;font-size:13px;">
+      <div style="padding:9px 13px;background:var(--acl);border-radius:var(--r);border:.5px solid #93c5fd;">
+        <strong>テーマ文：</strong>少しの世話で金魚は長生きする → <span style="color:var(--ac);font-weight:700;">テーマ＝長生きのための世話の手順</span>
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong>First：</strong>大きな水槽を選び、小石や植物で飾る → 長生きの環境作り
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓①</strong> However, 鋭利な物は<strong>害になる</strong>から入れないで → 「長生きさせる」テーマと一致（金魚を傷つけないため）
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong>Second：</strong>数分で食べられる量だけ与え、残りは取り除く → 長生きのための餌の世話
+      </div>
+      <div style="padding:9px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+        <strong style="color:var(--rd);">×②</strong> 手から餌を食べさせることが<strong>できるようになる</strong> → これは「芸・しつけ」の話。<strong>長生きと関係ない</strong>！
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓③</strong> <strong>最も重要：</strong>水槽の掃除と2週間ごとの水替え → 長生きの核心
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓④</strong> 水替えのコツ：部分水替えの方が良い → ③の詳細
+      </div>
+    </div>
+    <div class="co co-r">
+      <div class="co-lbl">論理が外れる文を発見</div>
+      ②「手から餌を食べさせることができる」は「芸・芸当」の話。<br>
+      他の文は全て「<strong>長生きのための世話の手順</strong>」を述べている → ②だけ「長生き」と関係ない。
+    </div>
+    <button class="rev" onclick="showPh('q31p2','q31p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q31p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② You can soon teach them to eat from your hand.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          段落のテーマは「金魚の長生き」のための世話。<br>
+          ②「手から餌を食べさせることができる」は<strong>長生きとは関係ない、しつけ・芸の話</strong>。<br>
+          ①は「鋭利な物で傷つけない」、③は「水替えで清潔に保つ」、④は「水替えのコツ」と、全て長生きと直結している。
+        </div>
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳（②を除いた完成版）</div>
+      <div class="trans-body">
+        少しの世話で、金魚は思ったよりずっと長く生きることができる。<strong>まず</strong>、買える限り最も大きな水槽を選び、小石や植物などで飾ろう。<strong>しかし</strong>、金魚を傷つける可能性のある鋭利な物を水槽に入れないように注意すること。<strong>次に</strong>、数分で食べきれる量だけ餌を与え、残りはすぐに取り除こう。<strong>最も重要なこと</strong>は、少なくとも2週間に1回は水槽を掃除して水を替えることだ。金魚が新しい水に慣れやすいように、完全水替えよりも部分水替えの方がずっと良い。<br>
+        これらを全て実行すれば、金魚は晩年（「黄金時代」）まで生き延びるはずだ。
+      </div>
+    </div>
+
+    <!-- 全問まとめ -->
+    <div style="background:#0a1628;border-radius:var(--rl);padding:22px;color:#fff;margin-top:16px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:12px;">全8問を通じて証明されたこと</div>
+      <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px;">
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>会話文（問18〜20）：</strong>空所の<strong>前と後の発言</strong>から両方向で根拠を取る。「Either is fine with me」「I know that now」「We'll talk later」が全て空所の答え合わせ。
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>熟語推測（問27〜28）：</strong>知らない語の意味は<strong>前後の言い換え</strong>に必ず書かれている。「did really well / enjoys a lot」が exuberant の言い換え。「too anxious」が got cold feet の言い換え。
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>段落整序（問29〜31）：</strong>段落の<strong>テーマと無関係な文</strong>を抜く。テーマ文（第1文）を把握し、各文がテーマと論理的に繋がるかを確認すれば異物が浮き上がる。
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.15);border-radius:var(--r);border:1px solid rgba(255,255,255,.18);">
+          <strong>「なんとなく」ではなく「前後の論理的つながり」で根拠が取れる</strong> — 全8問が証明済み。
+        </div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q30')">← 問30</button>
+      <button class="btnp" onclick="markDone('q31');goQ('q0')">核心の読み方に戻る ↺</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+var selMap={};
+var doneList=[];
+var ans={q18c:2,q19c:3,q20c:3,q27c:2,q28c:4,q29c:1,q30c:3,q31c:2};
+
+function goQ(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.qn').forEach(function(b){b.classList.remove('active');});
+  var btn=document.getElementById('qb'+id.replace('q',''));
+  if(btn)btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function sel(qid,n){
+  selMap[qid]=n;
+  document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+  document.querySelector('#'+qid+' .cb:nth-child('+n+')').classList.add('sel');
+}
+
+function showPh(from,to){
+  var f=document.getElementById(from);
+  var t=document.getElementById(to);
+  if(f)f.classList.remove('show');
+  if(t){t.classList.add('show');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+}
+
+function markDone(qid){
+  if(doneList.indexOf(qid)<0)doneList.push(qid);
+  var btn=document.getElementById('qb'+qid);
+  if(btn)btn.classList.add('done');
+  var cid=qid+'c';
+  if(ans[cid]){
+    var c=ans[cid],my=selMap[cid];
+    document.querySelectorAll('#'+cid+' .cb').forEach(function(b,i){
+      b.classList.remove('sel','ok','ng');
+      if(i+1===c)b.classList.add('ok');
+      if(my&&i+1===my&&my!==c)b.classList.add('ng');
+    });
+  }
+}
+</script>
+</body>
+</html>
