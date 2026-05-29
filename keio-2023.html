@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>慶應義塾大学 2023年｜英語 完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;--bd:#ddd9d0;--bd2:#ccc8be;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;--ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;--tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;--am:#92560c;--aml:#fef3c7;--amd:#78350f;--rd:#991b1b;--rdl:#fee2e2;--pu:#4c3ab3;--pul:#ede9fe;--r:10px;--rl:16px;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.hdr-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+.pnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.pn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.pn:hover{color:var(--tx);}
+.pn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.pn.done{color:var(--tl);}
+.pn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pn.active .pn-num{background:var(--ac);color:#fff;}
+.pn.done .pn-num{background:var(--tl);color:#fff;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+.passage{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.2;color:var(--tx);}
+.passage p{margin-bottom:.9em;}
+.passage em{font-style:italic;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--acd);color:#fff;font-size:9px;font-weight:700;margin-right:3px;vertical-align:middle;font-family:'Noto Sans JP',sans-serif;}
+.blank-box{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:24px;border:1.5px dashed var(--rd);border-radius:4px;background:var(--rdl);color:var(--rd);font-weight:700;font-size:13px;padding:0 9px;font-family:'Noto Sans JP',sans-serif;vertical-align:middle;}
+.qblock{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qnum-badge{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:#fff;font-size:13px;font-weight:700;margin-right:8px;vertical-align:middle;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+.qtext{font-size:14px;font-weight:700;line-height:1.6;display:inline;vertical-align:middle;}
+.qen{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin:10px 0;padding:12px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:10px 13px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13.5px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:11px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:18px;font-family:'Noto Sans JP',sans-serif;}
+.cb.sel .cn,.cb.ok .cn{color:var(--ac);}
+.cb.ng .cn{color:var(--rd);}
+.rev-btn{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev-btn:hover{background:var(--acd);}
+.ans-block{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans-block.show{display:block;}
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+.ev{background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);padding:0;margin:10px 0;overflow:hidden;}
+.ev-hd{background:var(--acd);color:#fff;padding:7px 13px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:7px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;}
+.ev-bd{padding:12px 14px;font-size:13px;line-height:1.85;}
+.ev-q{font-family:'Source Serif 4',serif;font-style:italic;color:var(--acd);background:var(--acl);padding:8px 12px;border-radius:6px;border-left:3px solid var(--ac);margin:6px 0;font-size:13px;}
+.ev-q .h{background:#fef08a;font-style:normal;font-weight:700;padding:0 2px;border-radius:2px;}
+.choice-anal{margin-top:14px;}
+.ca-row{display:flex;gap:0;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex-shrink:0;width:36px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--tl);}
+.ca-mark.ng{background:var(--rd);}
+.ca-bd{padding:9px 13px;font-size:12.5px;line-height:1.75;flex:1;}
+.ca-bd .ca-key{font-weight:700;display:block;margin-bottom:2px;font-size:12.5px;}
+.ca-bd .ca-key.ok-clr{color:var(--tld);}
+.ca-bd .ca-key.ng-clr{color:var(--rd);}
+.pflow{display:flex;flex-direction:column;}
+.pf-item{display:flex;gap:0;align-items:stretch;margin-bottom:4px;}
+.pf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.pf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+.pf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.pf-body{flex:1;padding:0 0 18px 13px;}
+.rtag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.one-liner{margin:6px 0;padding:8px 12px;border-radius:8px;font-size:13px;font-weight:700;border-left:3px solid transparent;line-height:1.6;}
+.bridge{font-size:11.5px;color:var(--t2);margin:5px 0 0 0;padding:6px 10px;background:var(--s2);border-radius:6px;line-height:1.6;}
+.bridge::before{content:"→ ";color:var(--ac);font-weight:700;}
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:11px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:9px 17px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+.tr-row{display:grid;grid-template-columns:1fr;gap:0;border-radius:var(--rl);overflow:hidden;border:.5px solid var(--bd);margin-bottom:14px;}
+.tr-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.95;padding:14px 18px;background:var(--sf);color:var(--tx);}
+.tr-jp{font-family:'Noto Sans JP',sans-serif;font-size:13.5px;line-height:2;padding:14px 18px;background:var(--s2);color:var(--tx);border-top:.5px solid var(--bd);}
+.tr-pnum{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--acd);color:#fff;font-size:10px;font-weight:700;margin-right:8px;vertical-align:middle;font-family:'Space Grotesk',sans-serif;flex-shrink:0;}
+.tr-en em{font-style:italic;}
+.tr-jp em{font-style:normal;font-weight:700;color:var(--ac);}
+.tr-section-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.tr-section-title::before{content:"";width:24px;height:1px;background:var(--bd);}
+.tr-section-title::after{content:"";flex:1;height:1px;background:var(--bd);}
+.tr-points{margin-top:8px;padding:11px 14px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);font-size:12.5px;line-height:1.8;}
+.tr-points strong{color:var(--acd);}
+@media(min-width:720px){.tr-row{grid-template-columns:1fr 1fr;}.tr-jp{border-top:none;border-left:.5px solid var(--bd);}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜大学入試 完全解説</div>
+      <div class="brand-s">慶應義塾大学 2023年 英語 大問1</div>
+    </div>
+  </div>
+  <span class="hdr-badge">慶應 2023｜やや難</span>
+</div>
+
+<div class="pnav">
+  <button class="pn active" onclick="goP('p1')" id="pb1"><span class="pn-num">1</span>英文を読む</button>
+  <button class="pn" onclick="goP('p2')" id="pb2"><span class="pn-num">2</span>段落構造</button>
+  <button class="pn" onclick="goP('p3')" id="pb3"><span class="pn-num">3</span>設問1〜3</button>
+  <button class="pn" onclick="goP('p4')" id="pb4"><span class="pn-num">4</span>設問4・5</button>
+  <button class="pn" onclick="goP('p5')" id="pb5"><span class="pn-num">5</span>設問6・7</button>
+  <button class="pn" onclick="goP('p6')" id="pb6"><span class="pn-num">6</span>全文和訳</button>
+</div>
+
+<div class="wrap">
+
+<div class="pan active" id="p1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">慶應義塾大学 2023年 大問1</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">Cash for Kids:<br>Government Finance as Fertility Solution<br><span style="font-size:14px;opacity:.85;">— 子供のために現金を：出生率の解決策としての政府による財政支援</span></div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">世界各地で出生率（TFR）が低下するなか、フランスの家族政策を成功例として取り上げ、<strong>政府による経済的支援が出生率向上にどう機能するか</strong>を論じた説明的論説文。本文8段落＋設問7問（すべて空所補充）。<strong>「やや難」</strong>レベルで、慶應らしく<strong>文脈と論理関係の正確な把握＋熟語・連語の知識</strong>が試される。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">設問への準備｜空所マッピング</div>
+    <div style="font-size:13px;line-height:2;">
+      本文中の空所7か所にはすべて選択式の設問が紐付いている：<br>
+      <span class="blank-box">1</span> ＝ 段落①の空所：「TFR 2.1は標準として、世界全体ではまだ〜」（meets this challenge）<br>
+      <span class="blank-box">2</span> ＝ 段落②の空所：「東アジアでの低下傾向はとくに〜」（pronounced）<br>
+      <span class="blank-box">3</span> ＝ 段落③の空所：「これらはある程度の成功を収めた。〜。2020年、出生率の低下は世界的現象に」（However, the scale of the problem has changed）<br>
+      <span class="blank-box">4</span> ＝ 段落④の空所：「TFR低下の原因は多々ある。〜、政府の対応が肝要だ」（No matter the reason）<br>
+      <span class="blank-box">5</span> ＝ 段落⑤の空所：「政府の取り組みは本当に効果があるか？ フランスは政策が本当に〜うることのよい例証だ」（make a difference）<br>
+      <span class="blank-box">6</span> ＝ 段落⑥の空所：「フランスでは課税対象となる所得は家族の人数で〜」（reduced with each increase）<br>
+      <span class="blank-box">7</span> ＝ 段落⑧の空所：「政府が代表していると主張する、まさにその社会の未来に責任を持つことを拒否することだ」（very）
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">本文｜PASSAGE</div>
+    <div class="passage" style="font-size:14px;">
+
+      <p style="text-align:center;font-weight:700;font-size:16px;margin-bottom:2px;">Cash for Kids: Government Finance as Fertility Solution</p>
+      <p style="text-align:center;font-size:12px;color:var(--t2);margin-bottom:1em;">by Aphra Disiac (2020)</p>
+
+      <p><span class="pnum">1</span>Across the world, governments are increasingly concerned about falling fertility rates. To ensure stability in any population, the total fertility rate (TFR), which is the average number of children each woman gives birth to over her lifetime, needs to be 2.1. The world as a whole still <span class="blank-box">1</span>: in 2020 the world TFR was 2.4, with high rates still seen in Africa (the highest was Niger, with a TFR of 6.8).</p>
+
+      <p><span class="pnum">2</span>Elsewhere, however, worrying examples of decline in the TFR are not hard to find. In East Asia the trend is particularly <span class="blank-box">2</span>. Today, China seems set to experience again the low levels of TFR around 1.2, last seen in the 1990s. In 2020, the TFR in Singapore was 1.1 and Korea had reached 0.84. At 1.36, Japan seems slightly better, but considering that the figure is still well below the rate required to keep the population stable, there can be no cause for optimism in any of these countries.</p>
+
+      <p><span class="pnum">3</span>In isolation, such situations are by no means new. Even in Roman times, Caesar Augustus placed a tax on unmarried men — via the <em>Lex Papia Poppaea</em> — apparently in the hope of raising the birth rate. Similar measures were attempted in the US states of Missouri in 1927 and California in 1933. In the former Soviet Union, Stalin enacted a tax on childlessness, helping reverse the devastating losses suffered during WWII. Each of these was somewhat successful, even if to a limited degree. <span class="blank-box">3</span>. In 2020, the decline in fertility has become a global phenomenon, enhanced by the devastating impact of COVID-19.</p>
+
+      <p><span class="pnum">4</span>Many factors are behind this alarming trend. Economic uncertainties and the pandemic are merely the most visible of these. Environmental factors such as pollution could also be at work. Societal shifts, including the greater role played by women outside the home, might have further contributed. <span class="blank-box">4</span>, given the immense strains it has placed upon social systems, from healthcare to pensions, it is vital that governments respond.</p>
+
+      <p><span class="pnum">5</span>Yet, can government initiatives really be effective? France provides a good illustration of how government policies may indeed <span class="blank-box">5</span>. France's total fertility rate stood at close to 1.9 in 2019, making it one of Europe's most successful countries in this respect. Government policies aimed explicitly at family life and children's well-being (as opposed to those emphasizing gender equality, like in Sweden) have been at the heart of this success. The French family policy model is built on generous cash transfers towards families combined with an extensive childcare provision, without regard to social class.</p>
+
+      <p><span class="pnum">6</span>In France, these cash transfers have a pro-birth character and are directed foremost towards large families. However, an indirect approach has been found to be the most productive. Tax breaks, therefore, form one of the cornerstones of the French family policy system: income subject to taxes can be <span class="blank-box">6</span> in family size. This means the larger the family the lower the tax burden. In addition, France grants universal family allowances to parents with at least two children, special allowances for poor families, and extra housing allowances.</p>
+
+      <p><span class="pnum">7</span>The French are not reluctant to have children largely because of their well-organized system of childcare services. This system has allowed more women to participate in the labor force. The childcare system has also benefited from a shorter working week, with 35 hours as standard. Although the French work week was mainly shortened to reduce unemployment, a secondary result of this reform was to improve work-family balance.</p>
+
+      <p><span class="pnum">8</span>The consistent and generous family policy package in France can be considered an important reason for its relatively high fertility. Moreover, it is not the sole government to achieve success: Canada and Estonia, to give just two examples, also experienced some modest fertility growth by offering baby bonuses and a "mother's salary." Similarly, other governments need to take action. Leaving society without support when it comes to creating and nourishing children is to abandon the government's duty to govern and is a disastrous refusal to take responsibility for the future of the <span class="blank-box">7</span> societies whom they claim to represent.</p>
+
+      <p style="font-size:11px;color:var(--t3);margin-top:10px;">注：<em>Lex Papia Poppaea</em>＝古代ローマのパピウス・ポパエウス法（紀元9年）。アウグストゥス帝の人口政策の一環で、未婚の成人男性と子供のいない既婚男性に相続権の制限などを課した。</p>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--aml);border-color:#fbbf24;">
+    <div class="lbl" style="color:var(--amd);">読みながら意識するべきこと</div>
+    <div style="font-size:13.5px;line-height:1.85;color:var(--amd);">
+      ① <strong>「世界の現状 → 歴史的視点 → 原因分析 → フランスの成功例 → 他国への提言」</strong>という典型的な論説文の流れ。各段落の役割を意識して読むと、空所補充の答えが論理的に導ける。<br>
+      ② <strong>TFR（合計特殊出生率）2.1が人口維持の基準</strong>。これを下回ると人口は減少する。本文はこの基準を中心に世界各国の状況を論じる。<br>
+      ③ <strong>第3段で「歴史的に同様の問題はあった（古代ローマ・スターリン時代）」→ しかし「今回は規模が違う（世界的現象）」</strong>という<strong>転換</strong>が論の核。空所3はここに入る。<br>
+      ④ <strong>第4段は「TFR低下の原因」を複数列挙</strong>：経済不安、パンデミック、汚染、女性の社会進出。空所4は「これらの理由のうちのどれが本当の原因であれ、政府の対応が必要」とつなぐ表現。<br>
+      ⑤ <strong>第5段以降はフランスの政策を詳細に分析</strong>。「現金給付」「税制優遇」「育児支援」「労働時間短縮」の4本柱を具体的に示す。<br>
+      ⑥ <strong>第8段の結論</strong>：「他国も行動を取るべき」「子供を育てる社会への支援なしで放置することは、政府の責務放棄である」。空所7は <em>the societies whom they claim to represent</em>「政府が代表していると主張する社会」を強調する語が入る。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" disabled style="opacity:.4;">← 戻る</button>
+    <button class="btnp" onclick="goP('p2')">段落構造へ →</button>
+  </div>
+</div>
+
+<div class="pan" id="p2">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 2 — STRUCTURE</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">段落構造を掴む</div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">8段落を「<strong>現状把握｜歴史的視点｜原因分析｜フランスの成功事例｜他国への提言</strong>」の <strong>5ブロック</strong> に整理する。各段落の役割と次段落への論理の橋渡しを押さえれば、設問のどこに答えがあるかが見える。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">5つのブロック ─ 全体の論理マップ</div>
+    <table style="width:100%;border-collapse:collapse;font-size:12.5px;">
+      <thead>
+        <tr style="background:var(--acd);color:#fff;">
+          <th style="padding:9px 12px;text-align:left;font-weight:700;width:18%;">ブロック</th>
+          <th style="padding:9px 12px;text-align:left;font-weight:700;width:14%;">段落</th>
+          <th style="padding:9px 12px;text-align:left;font-weight:700;">内容</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px;border:.5px solid var(--bd);background:var(--rdl);font-weight:700;color:var(--rd);">Ⅰ 現状把握</td><td style="padding:8px 12px;border:.5px solid var(--bd);">①〜②</td><td style="padding:8px 12px;border:.5px solid var(--bd);">人口維持に必要なTFRは2.1／2020年世界TFRは2.4で課題を満たす／しかし東アジアの低下傾向は顕著（中国1.2、シンガポール1.1、韓国0.84、日本1.36）</td></tr>
+        <tr><td style="padding:8px 12px;border:.5px solid var(--bd);background:var(--aml);font-weight:700;color:var(--am);">Ⅱ 歴史的視点</td><td style="padding:8px 12px;border:.5px solid var(--bd);">③</td><td style="padding:8px 12px;border:.5px solid var(--bd);">出生率対策は新しくない／古代ローマのアウグストゥス／米国ミズーリ・カリフォルニア／スターリン時代のソ連／これらは限定的にだが成功／しかし規模が変わった＝2020年は世界的現象＋COVID-19</td></tr>
+        <tr><td style="padding:8px 12px;border:.5px solid var(--bd);background:var(--pul);font-weight:700;color:var(--pu);">Ⅲ 原因分析</td><td style="padding:8px 12px;border:.5px solid var(--bd);">④</td><td style="padding:8px 12px;border:.5px solid var(--bd);">複数要因：経済不安・パンデミック・汚染・女性の社会進出／理由が何であれ、社会システムへの負担を考えると政府の対応は不可欠</td></tr>
+        <tr><td style="padding:8px 12px;border:.5px solid var(--bd);background:var(--tll);font-weight:700;color:var(--tl);">Ⅳ フランスの成功</td><td style="padding:8px 12px;border:.5px solid var(--bd);">⑤〜⑦</td><td style="padding:8px 12px;border:.5px solid var(--bd);">フランスTFR 1.9はヨーロッパで最も成功／家族政策の4本柱：現金給付（家族規模重視）／税制優遇（家族が多いほど税負担減）／充実した育児サービス／週35時間労働で仕事と家庭のバランス</td></tr>
+        <tr><td style="padding:8px 12px;border:.5px solid var(--bd);background:var(--acl);font-weight:700;color:var(--ac);">Ⅴ 結論・提言</td><td style="padding:8px 12px;border:.5px solid var(--bd);">⑧</td><td style="padding:8px 12px;border:.5px solid var(--bd);">フランスだけでなくカナダ・エストニアも成功／他国も行動を取るべき／子供を育てる社会を放置することは、政府の責務放棄であり、代表すると主張する社会の未来への責任放棄である</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="lbl">段落フロー｜各段落の役割と橋渡し</div>
+    <div class="pflow">
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--rd);">1</div>
+          <div class="pf-line" style="background:var(--rd);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--rdl);color:var(--rd);">導入｜世界全体の現状</span>
+          <div class="one-liner" style="background:var(--rdl);border-color:var(--rd);color:var(--rd);">世界中の政府が出生率低下を懸念／人口安定にはTFR 2.1が必要／世界全体は <strong>まだこの課題を満たす（meets this challenge）</strong>＝2020年TFR 2.4でアフリカ（最高ニジェール6.8）</div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;"><em>increasingly concerned about A</em>「Aについてますます懸念している」で問題提起。<em>which is the average number of children each woman gives birth to over her lifetime</em>がTFRの定義（関係代名詞の非制限用法）。空所1には「世界全体は<strong>まだこの課題（人口維持）を満たしている</strong>」という肯定的表現が入る。</div>
+          <p class="bridge">世界全体は2.4でOKと前置きしておいてから → 第2段で「ただし他地域では」と逆接</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--rd);">2</div>
+          <div class="pf-line" style="background:var(--rd);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--rdl);color:var(--rd);">現状②｜東アジアの低下</span>
+          <div class="one-liner" style="background:var(--rdl);border-color:var(--rd);color:var(--rd);"><em>Elsewhere, however</em>「他の場所では、しかし」TFR低下の事例も少なくない／東アジアでは傾向が特に <strong>顕著（pronounced）</strong>／中国1.2、シンガポール1.1、韓国0.84、日本1.36</div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;"><em>Elsewhere, however</em>は段落冒頭の重要転換シグナル。「全体は2.4」（第1段）→「他地域は低下」（第2段）の対比を明示。空所2は <em>particularly</em>「特に」と並ぶ形容詞で、「顕著な、際立った」を意味する <strong>pronounced</strong> が入る。</div>
+          <p class="bridge">「東アジアでは異常な低下」と具体例を挙げる → 第3段で「歴史的にも対策はあった」と時間軸を広げる</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--am);">3</div>
+          <div class="pf-line" style="background:var(--am);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--am);">歴史的視点｜転換点</span>
+          <div class="one-liner" style="background:var(--aml);border-color:var(--am);color:var(--amd);"><em>In isolation</em>「単独で見れば」、こうした状況は新しくない／ローマ帝国アウグストゥス・米国ミズーリ州/カリフォルニア州・ソ連スターリンの例／いずれも限定的にだが成功 → <strong>しかし問題の規模が変化した（空所3）</strong>／2020年は世界的現象＋COVID-19</div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;">空所3は段落内の<strong>転換点</strong>。前は「歴史上も同様の対策があった／ある程度成功した」、後は「2020年は世界的現象に」。前後をつなぐためには「<strong>しかし、問題の規模が変化した</strong>」が必要 → <em>However, the scale of the problem has changed</em> が完璧に文脈にはまる。</div>
+          <p class="bridge">「規模が変わった＝世界的現象に」と問題の深刻化を示す → 第4段で「原因の分析」へ移行</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--pu);">4</div>
+          <div class="pf-line" style="background:var(--pu);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--pul);color:var(--pu);">原因分析｜政府対応の必要性</span>
+          <div class="one-liner" style="background:var(--pul);border-color:var(--pu);color:var(--pu);">TFR低下の背景には多くの要因／経済不安・パンデミック・汚染・女性の社会進出 → <strong>理由が何であれ（No matter the reason）</strong>、社会システムへの計り知れない負担を考えると、政府の対応は不可欠</div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;">空所4は段落内の<strong>原因列挙の総括</strong>。直前で複数原因（経済・環境・社会変化）を列挙、直後で「政府の対応が肝要」と結論。「<strong>原因が何であれ</strong>」と<strong>譲歩的につないで結論に進む</strong>表現＝<em>No matter the reason</em>が完璧。</div>
+          <p class="bridge">「政府対応が必要」と提起 → 第5段で「では、政府の取り組みは本当に効くのか？」と疑問形で受けて議論を展開</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">5</div>
+          <div class="pf-line" style="background:var(--tl);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tl);">フランス｜成功事例の導入</span>
+          <div class="one-liner" style="background:var(--tll);border-color:var(--tl);color:var(--tld);">政府の取り組みは本当に効果あるか？／フランスは政策が <strong>実際に差を生む（make a difference）</strong> よい例／2019年TFR 1.9はヨーロッパで最も成功／成功の中心は <strong>家族生活と子供の幸福を明確に目指す政策</strong>（スウェーデンの男女平等とは異なる）／<strong>社会階層に関係なく、家族への現金給付＋充実した育児サービス</strong></div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;">空所5は <em>government policies may indeed ＿</em> の形。直後でフランス政府の対策が成功を収めた事例が述べられている → 「政策が実際に<strong>差を生む／違いをもたらす／重要だ</strong>」を意味する <em>make a difference</em> が適切。<em>as opposed to those emphasizing gender equality</em>「男女平等を強調する政策とは対照的に」がポイントで、フランスは「家族と子供の幸福」に焦点を当てている。</div>
+          <p class="bridge">「フランスは現金給付＋育児で成功」と概観 → 第6段で「現金給付」の中身（税制優遇）を詳しく説明</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">6</div>
+          <div class="pf-line" style="background:var(--tl);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tl);">フランス｜税制優遇の仕組み</span>
+          <div class="one-liner" style="background:var(--tll);border-color:var(--tl);color:var(--tld);">フランスの現金給付は出産促進的で大家族に向けられる／しかし<strong>間接的アプローチが最も生産的</strong>と判明／したがって減税措置（tax breaks）が家族政策の柱／<strong>課税対象の所得は家族規模の増加とともに減らされる（reduced with each increase）</strong>＝家族が多ければ多いほど税負担が軽い</div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;">空所6は <em>income subject to taxes can be ＿ in family size</em>「課税対象となる所得は、家族規模に関して〜」。直後 <em>This means the larger the family the lower the tax burden</em>「これは家族が多ければ多いほど税負担が低いという意味だ」が決定的根拠。「家族が増えるごとに減らされる」＝ <em>reduced with each increase</em> が完璧。</div>
+          <p class="bridge">「税制優遇」を詳述 → 第7段で「育児サービス＋労働時間短縮」のもう一つの柱に進む</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--tl);">7</div>
+          <div class="pf-line" style="background:var(--tl);"></div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tl);">フランス｜育児・労働環境</span>
+          <div class="one-liner" style="background:var(--tll);border-color:var(--tl);color:var(--tld);">フランス人が子供を産むことに消極的でないのは、<strong>育児サービス制度が整っている</strong>から／これにより女性の労働参加が増えた／<strong>週35時間労働</strong>の恩恵も：もとは失業率低下のために導入されたが、副次的に <strong>仕事と家庭のバランス改善</strong>という成果</div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;">この段落には空所がないが、フランス政策の<strong>「育児支援」</strong>と<strong>「労働時間短縮」</strong>という2つの柱を補足説明。<em>a secondary result of this reform was to improve work-family balance</em>「この改革の副次的な成果は、仕事と家庭のバランスを改善することだった」が結論。</div>
+          <p class="bridge">フランスの政策を完全に説明し終え → 第8段で「フランスだけでなく他国も」と結論・提言へ移行</p>
+        </div>
+      </div>
+
+      <div class="pf-item">
+        <div class="pf-spine">
+          <div class="pf-dot" style="background:var(--ac);">8</div>
+        </div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--ac);">結論｜他国への提言</span>
+          <div class="one-liner" style="background:var(--acl);border-color:var(--ac);color:var(--acd);">フランスの一貫した寛大な家族政策パッケージは、比較的高い出生率の重要な理由／カナダとエストニアも同様の成果（ベビーボーナス、母親の給料）／他国も行動が必要／<strong>子供を産み育てることに支援を置かない社会を放置することは、政府の統治義務の放棄であり、政府が代表していると主張する まさにその（very）社会 の未来に責任を持つことを拒否する悲惨な行為</strong></div>
+          <div style="font-size:12.5px;color:var(--t2);line-height:1.7;">空所7は <em>the future of the ＿ societies whom they claim to represent</em>「政府が代表していると主張する〜社会の未来」の <em>＿</em> に入る。<em>whom they claim to represent</em>「政府が代表していると主張する」と関係代名詞節で <em>societies</em> を強調修飾する文脈で、<strong>「まさにその」を意味する形容詞 very</strong> が文脈に合う。<em>the very society</em>＝「まさにその社会」（強調）。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--acl);border-color:#7ba9d4;">
+    <div class="lbl" style="color:var(--ac);">この本文を読む際の「最大のコツ」</div>
+    <div style="font-size:13.5px;line-height:1.85;color:var(--acd);">
+      <strong>① 段落冒頭の「シグナル語」に注目</strong><br>
+      • <em>Elsewhere, however</em>（②）：「他の場所では、しかし」＝対比の合図<br>
+      • <em>In isolation</em>（③）：「単独で見れば」＝歴史的視点への移行<br>
+      • <em>Many factors</em>（④）：複数原因の列挙が始まる<br>
+      • <em>Yet, can government initiatives really be effective?</em>（⑤）：疑問形で議論を発展させる<br>
+      • <em>In France ... However, an indirect approach</em>（⑥）：直接→間接へ転換<br>
+      • <em>The French are not reluctant</em>（⑦）：別の側面（育児）の説明<br>
+      • <em>The consistent and generous family policy ... Moreover</em>（⑧）：結論部＋他国例＋提言<br><br>
+      <strong>② 「TFRの数字」を丁寧に追う</strong><br>
+      2.1（人口維持基準）／2.4（世界全体2020）／6.8（ニジェール）／1.2（中国）／1.1（シンガポール）／0.84（韓国）／1.36（日本）／1.9（フランス2019）。これらの<strong>数字の比較</strong>が論の骨格。<br><br>
+      <strong>③ フランス政策の「4本柱」を頭に入れる</strong><br>
+      (1) 現金給付（cash transfers）＝大家族向け／(2) 税制優遇（tax breaks）＝家族規模に応じて減税／(3) 育児サービス（childcare services）＝女性の労働参加促進／(4) 労働時間短縮（35時間制）＝仕事と家庭のバランス。<br><br>
+      <strong>④ 設問の答えは「直後の根拠文」にある</strong><br>
+      慶應の空所補充は「<strong>空所の直後で論理的に何が来ているか</strong>」を確認すれば答えが見える設計が多い。例：<br>
+      • 設問1：空所直後「2020年世界TFR 2.4」＝<strong>2.1基準を満たす</strong>＝<em>meets this challenge</em><br>
+      • 設問6：空所直後「家族が多いほど税負担が低い」＝<strong>家族規模が増えると課税対象所得が減る</strong>＝<em>reduced with each increase</em>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p1')">← 英文を読む</button>
+    <button class="btnp" onclick="goP('p3')">設問1〜3 →</button>
+  </div>
+</div>
+
+<div class="pan" id="p3">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 3 — QUESTIONS 1-3</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">設問1〜3｜世界の現状と歴史的転換</div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">段落①〜③に対応する3問。<strong>1</strong> は「TFR 2.1基準と世界2.4」の関係、<strong>2</strong> は東アジアの状況を表す形容詞、<strong>3</strong> は段落内の<strong>論理転換点</strong>を作る一文。すべて<strong>直後の文脈を読む</strong>のが鍵。</div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">1</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">1</span> in Paragraph ①?</div>
+    </div>
+    <div class="qen">To ensure stability in any population, the total fertility rate (TFR) ... needs to be 2.1. The world as a whole still <em><strong>＿＿1＿＿</strong></em>: in 2020 the world TFR was 2.4, with high rates still seen in Africa (the highest was Niger, with a TFR of 6.8).</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel1(this,'1')"><span class="cn">1.</span>challenges this figure</button>
+      <button class="cb" onclick="sel1(this,'2')"><span class="cn">2.</span>makes the challenge</button>
+      <button class="cb" onclick="sel1(this,'3')"><span class="cn">3.</span>meets this challenge</button>
+      <button class="cb" onclick="sel1(this,'4')"><span class="cn">4.</span>fails to meet the challenge</button>
+    </div>
+    <button class="rev-btn" onclick="rev1()">答えを見る</button>
+
+    <div class="ans-block" id="ans1" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：3. meets this challenge</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺のロジック</div>
+        <strong>① 直前の前提：</strong>「人口安定にはTFR 2.1が必要」（人口維持の基準＝<em>this challenge</em>＝「この課題」）<br>
+        <strong>② 空所：</strong>「世界全体は<strong>まだ</strong>（still）＿＿」<br>
+        <strong>③ 直後のコロン以下：</strong>「2020年の世界TFRは<strong>2.4</strong>、アフリカ（最高はニジェール6.8）で高い割合」<br><br>
+        → 「<strong>2.1基準が必要</strong>」に対して、世界全体は「2.4」。これは<strong>基準を上回っている</strong>＝<strong>課題を満たしている</strong>。<br>
+        → <em>meets this challenge</em>「この課題を満たす」が完璧。<br><br>
+        ※ <em>still</em>「まだ」がポイント。「<strong>まだ</strong>満たしている」＝今は満たしているが、いずれは満たさなくなるかもしれない、というニュアンスで、次段以降の議論（低下傾向）への伏線になっている。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜直後のコロン以下の数値</div>
+        <div class="ev-bd">
+          <div class="ev-q">The world as a whole still ＿＿1＿＿: <span class="h">in 2020 the world TFR was 2.4</span>, with high rates still seen in Africa (the highest was Niger, with a TFR of 6.8).</div>
+          <strong>コロン (:) の役割</strong>＝直前の表現を<strong>具体化・説明</strong>する記号。<br>
+          → コロン以下の <em>the world TFR was 2.4</em>（2.4 ≥ 2.1）が、空所の内容を直接説明している。<br>
+          → 2.1基準を上回る2.4 ＝「課題を満たしている」 ＝ <em>meets this challenge</em><br><br>
+          ※旺文社の解説：「人口が安定するのに必要な合計特殊出生率（TFR）2.1に対して、空所直後で2020年度の世界の水準は2.4だったとあるので meets this challenge『この課題を満たす』が適当」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">1. challenges this figure</span>「この数字に異議を唱える／挑戦する」＝<strong>意味不明</strong>。世界全体が「2.1という数字に挑戦する」では、続く2.4（2.1超過）と論理的につながらない。さらに <em>challenge</em> を動詞「異議を唱える」で使うと、議論文脈になり不自然。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">2. makes the challenge</span>「課題を作る／挑戦する」＝<strong>意味不明</strong>。<em>make the challenge</em> は標準的な英語表現ではない。「課題を作る」とは何を意味するか不明確で、続く具体的な数値（2.4）の説明とつながらない。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">3. meets this challenge</span>「この課題を満たす」＝<em>meet a challenge</em>「課題に応える、要件を満たす」は標準熟語。続く2.4（≥2.1）と完璧に整合。「人口安定の課題（=TFR 2.1基準）を世界全体としては満たしている」と読める。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">4. fails to meet the challenge</span>「課題を満たすのに失敗する／満たせない」＝<strong>真逆</strong>。世界TFRが2.4で、2.1基準を上回っているのだから、「満たせない」は事実と矛盾。さらに「<strong>still</strong> fails」では「依然として失敗している」となり論理的にもおかしい（後の段落で低下リスクを論じる流れと矛盾）。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">熟語ポイント｜meet/face a challenge</div>
+        <strong>meet a challenge</strong>＝「課題に応える、要件を満たす」<br>
+        ・<em>The team met the challenge of the new project.</em>（チームは新プロジェクトの課題に応えた）<br>
+        ・<em>This product meets all safety requirements.</em>（この製品は全ての安全要件を満たす）<br><br>
+        <strong>face a challenge</strong>＝「課題に直面する」（直面しているだけで、解決はしていない）<br>
+        ・<em>We face the challenge of climate change.</em>（我々は気候変動の課題に直面している）<br><br>
+        ※ <em>challenge</em>（名詞）は本問では「課題、要件」の意味。動詞では「異議を唱える、挑戦する」だが、本問のような <em>meet/face/take up the challenge</em> のような熟語表現での意味と混同しないこと。
+      </div>
+    </div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">2</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">2</span> in Paragraph ②?</div>
+    </div>
+    <div class="qen">Elsewhere, however, worrying examples of decline in the TFR are not hard to find. In East Asia the trend is particularly <em><strong>＿＿2＿＿</strong></em>. Today, China seems set to experience again the low levels of TFR around 1.2, last seen in the 1990s. In 2020, the TFR in Singapore was 1.1 and Korea had reached 0.84.</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel2(this,'1')"><span class="cn">1.</span>pronounced</button>
+      <button class="cb" onclick="sel2(this,'2')"><span class="cn">2.</span>spoken</button>
+      <button class="cb" onclick="sel2(this,'3')"><span class="cn">3.</span>understandable</button>
+      <button class="cb" onclick="sel2(this,'4')"><span class="cn">4.</span>worried</button>
+    </div>
+    <button class="rev-btn" onclick="rev2()">答えを見る</button>
+
+    <div class="ans-block" id="ans2" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：1. pronounced</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺のロジック</div>
+        <strong>① 直前の文：</strong>「他地域では、TFR低下の懸念例は見つけるのに難しくない」（worrying examples of decline）<br>
+        <strong>② 空所：</strong>「東アジアでは傾向が特に <strong>＿＿</strong>」<br>
+        <strong>③ 直後の具体的数値：</strong>中国1.2、シンガポール1.1、韓国0.84（いずれも2.1基準を大きく下回る顕著な低水準）<br><br>
+        → 「特に <strong>＿＿</strong>」の空所には、「顕著な、目立つ、はっきりした」を意味する形容詞が入る。<br>
+        → <em>pronounced</em>「（傾向や特徴が）顕著な、際立った」が完璧。<br><br>
+        ※ <em>pronounce</em>「発音する」の過去分詞が形容詞化したもの。「<strong>はっきり発音された＝はっきりとした、顕著な</strong>」というメタファー的派生。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜直後の具体的数値（顕著な低下）</div>
+        <div class="ev-bd">
+          <div class="ev-q">In East Asia the trend is particularly ＿＿2＿＿. Today, <span class="h">China seems set to experience again the low levels of TFR around 1.2 ... In 2020, the TFR in Singapore was 1.1 and Korea had reached 0.84.</span></div>
+          人口維持に必要な2.1に対して：<br>
+          • 中国 1.2（2.1の <strong>57%</strong>）<br>
+          • シンガポール 1.1（<strong>52%</strong>）<br>
+          • 韓国 0.84（<strong>40%</strong>）<br>
+          いずれも <strong>2.1基準を大きく下回る顕著な数値</strong>。「他地域より低下が<strong>顕著だ</strong>」と表現するための形容詞 <em>pronounced</em> が文脈にぴったり。<br><br>
+          ※旺文社の解説：「空所直後で TFR の低下が顕著に（pronounced）になっている実例が提示されている」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">1. pronounced</span>「顕著な、際立った」（形容詞）＝<em>particularly</em>「特に」と並んで「特に顕著な」と意味的に強い表現。直後の極端な数値（1.2、1.1、0.84）と完璧に整合。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">2. spoken</span>「話される、口頭の」（過去分詞・形容詞）＝<strong>意味が違う</strong>。<em>spoken English</em>「話し言葉の英語」のような用法。「東アジアでは傾向が特に話される」では意味が成立しない。<em>pronounced</em>（発音される→顕著）と <em>spoken</em>（話される）を混同させる罠。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">3. understandable</span>「理解できる」＝意味が違う。「東アジアでは傾向が特に理解できる」は不自然（傾向は理解する対象ではなく、観察する対象）。さらに、直後の数値説明は「理解する」とつながらず「顕著だ」とつながる。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">4. worried</span>「心配している」（人の感情）＝<strong>主語との不整合</strong>。<em>worried</em> は「人」が主語のときに使う感情形容詞（「私は心配している＝I'm worried」）。本問の主語は <em>the trend</em>「傾向」＝物事なので、「傾向が心配している」では意味不明。<em>worrying</em>「心配させる」なら物事が主語で使えるが、選択肢にあるのは <em>worried</em>。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">語彙ポイント｜「顕著な、目立つ」を表す形容詞</div>
+        <strong>pronounced</strong>＝「顕著な、はっきりした」（傾向・特徴・違いに使う）<br>
+        ・<em>a pronounced decline</em>（顕著な低下）<br>
+        ・<em>a pronounced accent</em>（強いなまり）<br>
+        ・<em>a pronounced effect</em>（顕著な効果）<br><br>
+        類義語：<br>
+        ・<em>marked</em>「際立った、著しい」<br>
+        ・<em>noticeable</em>「目立つ」<br>
+        ・<em>striking</em>「印象的な、目立つ」<br>
+        ・<em>conspicuous</em>「目立つ、顕著な」<br>
+        ・<em>significant</em>「相当な、重要な」<br><br>
+        ※ <em>pronounce</em>「発音する／宣言する」の派生だが、形容詞 <em>pronounced</em> は「顕著な」の意味で頻出。慶應レベルでは確実におさえたい語彙。
+      </div>
+    </div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">3</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">3</span> in Paragraph ③?</div>
+    </div>
+    <div class="qen">In isolation, such situations are by no means new. Even in Roman times, Caesar Augustus placed a tax on unmarried men ... Similar measures were attempted in the US states of Missouri in 1927 and California in 1933. In the former Soviet Union, Stalin enacted a tax on childlessness ... <strong>Each of these was somewhat successful, even if to a limited degree.</strong> <em><strong>＿＿3＿＿</strong></em>. In 2020, the decline in fertility has become a global phenomenon, enhanced by the devastating impact of COVID-19.</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel3(this,'1')"><span class="cn">1.</span>Additionally, several other countries are affected</button>
+      <button class="cb" onclick="sel3(this,'2')"><span class="cn">2.</span>However, the scale of the problem has changed</button>
+      <button class="cb" onclick="sel3(this,'3')"><span class="cn">3.</span>Moreover, the totals have been alarming</button>
+      <button class="cb" onclick="sel3(this,'4')"><span class="cn">4.</span>Ultimately, this is a wholly modern disaster</button>
+    </div>
+    <button class="rev-btn" onclick="rev3()">答えを見る</button>
+
+    <div class="ans-block" id="ans3" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：2. However, the scale of the problem has changed</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺の段落構造（転換点）</div>
+        <strong>段落③の論理展開：</strong><br>
+        ① 第1文：<em>In isolation, such situations are by no means new.</em>「単独で見れば、このような状況は決して新しくない」<br>
+        ② 第2〜5文：歴史上の対策事例（古代ローマ・米国・ソ連）の列挙<br>
+        ③ 第6文（空所直前）：<em>Each of these was somewhat successful, even if to a limited degree.</em>「これらはいずれも限定的にだが、ある程度の成功を収めたと言える」<br>
+        ④ <strong>空所：＿＿3＿＿</strong><br>
+        ⑤ 空所直後：<em>In 2020, the decline in fertility has become a global phenomenon, enhanced by the devastating impact of COVID-19.</em>「2020年、出生率の低下は世界的現象となり、COVID-19の壊滅的な影響により悪化した」<br><br>
+        → 空所の前は<strong>「歴史上の対策は地域レベルで限定的にだが成功」</strong>、後は<strong>「2020年は世界的現象＝より深刻」</strong>。<br>
+        → これらをつなぐには<strong>「しかし、問題の規模が変化した」</strong>という<strong>転換</strong>が必要。<br>
+        → <em>However, the scale of the problem has changed</em> が完璧。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜段落の規模変化を示す論理展開</div>
+        <div class="ev-bd">
+          <strong>規模の対比：</strong><br>
+          <div class="ev-q" style="font-style:normal;">
+            <strong>空所前：</strong><span class="h">In isolation</span>「単独で（地域単位で）」＋ 古代ローマ／ミズーリ州／カリフォルニア州／ソ連 ＝<strong>地域・国家レベル</strong>の事例<br><br>
+            <strong>空所後：</strong><span class="h">a global phenomenon</span>「世界的現象」＋ COVID-19の壊滅的影響 ＝<strong>全世界レベル</strong>の規模
+          </div>
+          つまり、空所の前と後で<strong>規模（scale）</strong>が「<strong>地域・限定的 → 世界全体・規模拡大</strong>」と変化している。これを直接表現するのが <em>the scale of the problem has changed</em>「問題の規模が変化した」。<br><br>
+          ※旺文社の解説：「空所の前では TFR の低下は地域レベルであったが、直後は全世界レベルになっていることから、規模の変化があったことがわかる」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">1. Additionally, several other countries are affected</span>「さらに、他のいくつかの国も影響を受けている」＝<strong>論理が弱い</strong>。<em>Additionally</em>「さらに」は<strong>追加</strong>の合図で、転換ではない。直前の歴史的事例リストに「いくつかの国も影響を受けている」とつなぐと、次の <em>a global phenomenon</em>「<strong>世界的現象</strong>」との差が出ない。直後で「<strong>世界的</strong>」と言うなら、空所では<strong>規模の大きな変化</strong>を示すべき。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">2. However, the scale of the problem has changed</span>「しかし、問題の規模が変化した」＝<strong>逆接で「規模の変化」を明示</strong>。<em>However</em> で「歴史上の限定的成功 vs 現代の世界的規模」の対比を作り、直後 <em>a global phenomenon</em> へと自然に展開する。<strong>scale</strong>（規模）が論の核。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">3. Moreover, the totals have been alarming</span>「さらに、合計数値は警鐘を鳴らしている」＝<strong>論理が弱い、内容が不明確</strong>。<em>Moreover</em>「さらに」も追加の合図で、転換にならない。<em>totals</em>「合計」が何を指すか曖昧で、直後の <em>a global phenomenon</em> への論理転換を作れない。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">4. Ultimately, this is a wholly modern disaster</span>「結局これは完全に現代的な災害だ」＝<strong>前文と矛盾</strong>。第1文 <em>such situations are by no means new</em>「このような状況は決して新しくない」と完全に矛盾する（「完全に現代的」だと「新しくない」と相反する）。論理破綻の典型。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">論理ポイント｜段落内の「転換点」を見抜く</div>
+        <strong>長い段落の中の空所＝論理の「節目」</strong>になっていることが多い。<br>
+        本問の段落③は、次のような<strong>大きなUの字</strong>の論理：<br><br>
+        <strong>前半（歴史）：</strong>「対策の歴史は古い」「ローマ／米国／ソ連の例」「ある程度の成功」<br>
+        <strong>　　　　　　↓ 転換</strong><br>
+        <strong>後半（現代）：</strong>「2020年は世界的現象」「COVID-19で悪化」<br><br>
+        この<strong>転換</strong>を作るのが空所3の役割。「<strong>However</strong>」「<strong>scale has changed</strong>」（規模が変化）という2つのキーワードを含む選択肢2が完璧。<br><br>
+        ※選択肢1・3の <em>Additionally / Moreover</em>「追加」は、すでに直前の <em>Even in Roman times ... Similar measures ... In the former Soviet Union</em> という形で並列・追加が完了しているので、ここでさらに追加するのは論理的に冗長。<strong>段落の構造を読む力</strong>が問われる典型的な慶應タイプの問題。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p2')">← 段落構造</button>
+    <button class="btnp" onclick="goP('p4')">設問4・5 →</button>
+  </div>
+</div>
+
+<div class="pan" id="p4">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 4 — QUESTIONS 4-5</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">設問4・5｜原因論からフランスの成功事例へ</div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">段落④〜⑤に対応する2問。<strong>4</strong> は譲歩構文の選択、<strong>5</strong> は熟語 <em>make a difference</em> の選択。慶應らしい連語・熟語の知識と、文脈の論理的展開を読む力が試される。</div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">4</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">4</span> in Paragraph ④?</div>
+    </div>
+    <div class="qen">Many factors are behind this alarming trend. Economic uncertainties and the pandemic are merely the most visible of these. Environmental factors such as pollution could also be at work. Societal shifts, including the greater role played by women outside the home, might have further contributed. <em><strong>＿＿4＿＿</strong></em>, given the immense strains it has placed upon social systems, from healthcare to pensions, it is vital that governments respond.</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel4(this,'1')"><span class="cn">1.</span>Despite this factor</button>
+      <button class="cb" onclick="sel4(this,'2')"><span class="cn">2.</span>No matter the reason</button>
+      <button class="cb" onclick="sel4(this,'3')"><span class="cn">3.</span>Whatever matters</button>
+      <button class="cb" onclick="sel4(this,'4')"><span class="cn">4.</span>Whichever cases might arise</button>
+    </div>
+    <button class="rev-btn" onclick="rev4()">答えを見る</button>
+
+    <div class="ans-block" id="ans4" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：2. No matter the reason</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺のロジック</div>
+        <strong>段落④の論理展開：</strong><br>
+        ① 第1文：<em>Many factors are behind this alarming trend.</em>「この憂慮すべき傾向には多くの要因がある」<br>
+        ② 第2〜4文：<strong>原因の列挙</strong><br>
+        　・経済の不安定性とパンデミック（最も目に見える）<br>
+        　・公害などの環境要因<br>
+        　・社会変化（女性の社会進出）<br>
+        ③ <strong>空所：＿＿4＿＿</strong><br>
+        ④ 空所後：<em>given the immense strains it has placed upon social systems, from healthcare to pensions, it is vital that governments respond</em>「社会システム（医療から年金まで）に強いている計り知れない負担を考えると、政府の対応は不可欠だ」<br><br>
+        → 空所は<strong>「原因が多々ある」</strong>列挙の<strong>総括</strong>として、「<strong>その原因が何であれ</strong>」と<strong>譲歩的につないで結論に進む</strong>役割。<br>
+        → <em>No matter the reason</em>「理由が何であれ」が完璧。<br><br>
+        ※ <em>No matter A</em>＝「Aが何であれ」（譲歩表現）。<em>No matter what / who / when / where</em> などのバリエーション。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜直前の複数原因列挙と直後の結論</div>
+        <div class="ev-bd">
+          <strong>直前の論理：</strong>原因を4つ並べる<br>
+          <div class="ev-q" style="font-style:normal;">
+            • <span class="h">Economic uncertainties and the pandemic</span>「経済的不安定とパンデミック」<br>
+            • <span class="h">Environmental factors such as pollution</span>「公害などの環境要因」<br>
+            • <span class="h">Societal shifts, including the greater role played by women</span>「社会変化（女性の役割）」
+          </div>
+          ↓<br>
+          <strong>空所：＿＿4＿＿,</strong><br>
+          ↓<br>
+          <strong>直後の結論：</strong><em>it is vital that governments respond</em>「政府の対応は不可欠」<br><br>
+          複数の原因を挙げた後で、「<strong>理由が何であろうと、政府の対応が必要</strong>」と<strong>譲歩 → 結論</strong>に進む構造。これを表現するのが <em>No matter the reason</em>「理由が何であれ」。<br><br>
+          ※旺文社の解説：「空所の前で TFR の低下の理由が複数提示されており、空所で『その理由が何であれ』とすると、『政府の対応が肝要である』という後続の内容と論理的につながる」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">1. Despite this factor</span>「この要因にもかかわらず」＝<strong>論理が不適切</strong>。直前は<strong>複数</strong>の要因を列挙しているのに、<em>this factor</em>（単数の指示語「この要因」）では指示対象が定まらない。さらに <em>Despite</em>「〜にもかかわらず」は<strong>譲歩</strong>だが、直後 <em>it is vital that governments respond</em> という結論は「<strong>原因が何であれ対応が必要</strong>」の方向で、「〜にもかかわらず必要」とは違う論理。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">2. No matter the reason</span>「理由が何であれ」＝<strong>複数原因列挙の総括</strong>として完璧。<em>no matter</em>「〜であれ」が譲歩を作り、直後の「政府の対応が必要」と完璧に連動する。「<strong>原因の特定はさておき、対応は不可欠</strong>」というロジックが成立。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">3. Whatever matters</span>「何が重要であれ」＝<strong>文法構造が不自然</strong>。<em>Whatever</em>＋<em>matters</em>（動詞「重要である」）で「何が重要であろうと」と読めるが、本問の前文脈は「<strong>原因</strong>の列挙」であり「重要性」の議論ではない。<em>matter</em>を名詞「事柄」と解釈すると <em>Whatever matters</em>「どんな事柄も」となるが、続く文との論理がつながらない。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">4. Whichever cases might arise</span>「どのケースが生じるとしても」＝<strong>意味的に不適切</strong>。<em>cases might arise</em>「ケースが生じる」は未来予測の意味だが、本問の前文脈は<strong>すでに観察された原因</strong>の列挙。「これから何が起きるか」ではなく「<strong>すでに挙がっている原因</strong>のうちどれが本当の原因か」を譲歩する場面。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">構文ポイント｜No matter A の譲歩構文</div>
+        <strong>No matter A, SV</strong>＝「Aが何であれ、SVだ」（譲歩構文）<br><br>
+        【代表的なパターン】<br>
+        ・<em>No matter <strong>what</strong> happens, I'll stay with you.</em>（何が起きても、私はあなたのそばにいる）<br>
+        ・<em>No matter <strong>who</strong> calls, don't answer.</em>（誰が電話してきても、出るな）<br>
+        ・<em>No matter <strong>when</strong> you arrive, I'll be there.</em>（いつ来ても、私はそこにいる）<br>
+        ・<em>No matter <strong>the reason</strong>, we must act.</em>（理由が何であれ、行動しなければならない）← 本問<br><br>
+        ※ <em>No matter the reason</em> は <em>no matter what the reason is</em> の省略形（<em>what ... is</em> の省略）。<br><br>
+        類似表現：<br>
+        ・<em>Whatever the reason (may be)</em>「理由が何であれ」<br>
+        ・<em>Regardless of the reason</em>「理由に関係なく」<br><br>
+        ※ 慶應レベルでは、こうした<strong>譲歩構文と結論への接続</strong>の感覚を養っておきたい。
+      </div>
+    </div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">5</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">5</span> in Paragraph ⑤?</div>
+    </div>
+    <div class="qen">Yet, can government initiatives really be effective? France provides a good illustration of how government policies may indeed <em><strong>＿＿5＿＿</strong></em>. France's total fertility rate stood at close to 1.9 in 2019, making it one of Europe's most successful countries in this respect. Government policies aimed explicitly at family life and children's well-being ... have been at the heart of this success.</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel5(this,'1')"><span class="cn">1.</span>make a difference</button>
+      <button class="cb" onclick="sel5(this,'2')"><span class="cn">2.</span>mark an impact</button>
+      <button class="cb" onclick="sel5(this,'3')"><span class="cn">3.</span>stand no reason</button>
+      <button class="cb" onclick="sel5(this,'4')"><span class="cn">4.</span>take a chance</button>
+    </div>
+    <button class="rev-btn" onclick="rev5()">答えを見る</button>
+
+    <div class="ans-block" id="ans5" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：1. make a difference</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺のロジック</div>
+        <strong>① 段落冒頭の疑問：</strong><em>Yet, can government initiatives really be effective?</em>「しかし、政府の取り組みは本当に効果があるのか？」<br>
+        <strong>② 空所を含む文：</strong><em>France provides a good illustration of how government policies may indeed ＿＿5＿＿.</em>「フランスは、政府の政策が確かに〜うることの良い例証となる」<br>
+        <strong>③ 直後の証拠：</strong><em>France's total fertility rate stood at close to 1.9 in 2019, making it one of Europe's most successful countries in this respect.</em>「フランスのTFRは2019年に1.9に達し、この点でヨーロッパで最も成功した国の一つになった」<br><br>
+        → 空所には<strong>「効果がある／違いを生む／重要な役割を果たす」</strong>を意味する表現が入る。<br>
+        → <em>make a difference</em>「違いを生む、重要な意味を持つ、効果がある」が完璧。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜段落冒頭の問いと直後の成功例</div>
+        <div class="ev-bd">
+          <strong>論理の流れ：</strong><br>
+          <div class="ev-q" style="font-style:normal;">
+            問題提起：<span class="h">can government initiatives really be effective?</span>「政府の取り組みは本当に効果があるか？」<br>
+            ↓<br>
+            答え（の導入）：<em>France provides a good illustration of how government policies may indeed ＿＿5＿＿.</em><br>
+            ↓<br>
+            証拠：<span class="h">France's total fertility rate stood at close to 1.9 in 2019</span>「TFR 1.9に達した」<br>
+            ↓<br>
+            <span class="h">one of Europe's most successful countries</span>「ヨーロッパで最も成功した国の一つ」
+          </div>
+          つまり、空所は <em>effective</em>「効果がある」とパラレルな表現が入る場所。<br>
+          → <em>make a difference</em>「違いを生む、効果がある、重要な意味を持つ」（重要熟語）が完璧。<br><br>
+          ※旺文社の解説：「空所直後でフランス政府の対策が成功を収めていることが述べられているので、make a difference『重要である、相違を生じる』が適当」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">1. make a difference</span>「違いを生む、重要な意味を持つ、効果がある」＝<em>effective</em>「効果がある」の完璧な言い換え。直前の疑問「政府の取り組みは本当に効果があるか？」に対して「フランスは政府の政策が確かに<strong>違いを生み得る</strong>ことの良い例だ」と<strong>肯定的に答える</strong>形になる。標準英熟語。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">2. mark an impact</span>＝<strong>標準英語ではない</strong>。<em>have an impact</em>「影響を与える」、<em>leave an impact</em>「印象を残す」は正しい表現だが、<em>mark an impact</em> は連語として誤り。慶應レベルでは、こうした<strong>不自然なコロケーション（語の組み合わせ）</strong>を見抜く力が必要。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">3. stand no reason</span>＝<strong>意味不明・標準英語ではない</strong>。<em>stand to reason</em>「道理にかなう、当然である」という熟語はあるが、<em>stand no reason</em> は標準的でない。意味も「理由がない」と取ると、続くフランスの成功例と完全に矛盾。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">4. take a chance</span>「思い切ってやる、賭けに出る、リスクを取る」＝<strong>意味が違う</strong>。「政府の政策が思い切ってやり得ることの例」では意味が成立しない。<em>take a chance</em> は「リスクを冒す」の意味で、政府の<strong>成功</strong>を説明する文脈には合わない。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">熟語ポイント｜make a difference（重要熟語）</div>
+        <strong>make a difference</strong>＝「違いを生む、影響を与える、重要な意味を持つ、効果がある」<br><br>
+        【例文】<br>
+        ・<em>One person can make a difference.</em>（一人でも違いを生むことができる）<br>
+        ・<em>Education makes a difference in our lives.</em>（教育は人生に重要な意味を持つ）<br>
+        ・<em>Your support really made a difference.</em>（あなたの支援は本当に大きな違いを生んだ）<br><br>
+        【関連表現】<br>
+        ・<em>make all the difference</em>「決定的な違いを生む」<br>
+        ・<em>make a big difference</em>「大きな違いを生む」<br>
+        ・<em>It makes no difference (to me).</em>「（私には）どうでもいい」（否定形）<br><br>
+        【類義表現】<br>
+        ・<em>have an impact</em>「影響を与える」<br>
+        ・<em>matter</em>「重要である」（動詞）<br>
+        ・<em>count</em>「重要である」（動詞）<br>
+        ・<em>be significant</em>「意義がある」<br><br>
+        ※ <em>make a difference</em> は<strong>受験英語の最重要熟語</strong>の一つ。「<strong>違いを生むことができる＝意味を持つ／効果がある</strong>」と覚えると応用が利く。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p3')">← 設問1〜3</button>
+    <button class="btnp" onclick="goP('p5')">設問6・7 →</button>
+  </div>
+</div>
+
+<div class="pan" id="p5">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 5 — QUESTIONS 6-7</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">設問6・7｜税制優遇と結論部の強調</div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">段落⑥・⑧に対応する2問。<strong>6</strong> は税制の仕組みを表す比例関係の表現、<strong>7</strong> は結論部の強調を作る形容詞。本文最後の重要箇所なので、細部まで丁寧に確認する。</div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">6</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">6</span> in Paragraph ⑥?</div>
+    </div>
+    <div class="qen">However, an indirect approach has been found to be the most productive. Tax breaks, therefore, form one of the cornerstones of the French family policy system: income subject to taxes can be <em><strong>＿＿6＿＿</strong></em> in family size. <strong>This means the larger the family the lower the tax burden.</strong> In addition, France grants universal family allowances to parents with at least two children ...</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel6(this,'1')"><span class="cn">1.</span>increased with each addition</button>
+      <button class="cb" onclick="sel6(this,'2')"><span class="cn">2.</span>lowered with each reduction</button>
+      <button class="cb" onclick="sel6(this,'3')"><span class="cn">3.</span>modified with each reduction</button>
+      <button class="cb" onclick="sel6(this,'4')"><span class="cn">4.</span>reduced with each increase</button>
+    </div>
+    <button class="rev-btn" onclick="rev6()">答えを見る</button>
+
+    <div class="ans-block" id="ans6" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：4. reduced with each increase</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺のロジック</div>
+        <strong>① 直前の文脈：</strong>「税制優遇（tax breaks）はフランス家族政策の柱の一つ」<br>
+        <strong>② 空所を含む文：</strong><em>income subject to taxes can be ＿＿6＿＿ in family size</em><br>
+        　＝「課税対象となる所得は、家族規模の点で〜され得る」<br>
+        <strong>③ 直後の説明：</strong><em>This means the larger the family the lower the tax burden.</em><br>
+        　＝「これは、<strong>家族が多ければ多いほど税負担が低い</strong>という意味だ」<br><br>
+        → 「家族が増えるほど税負担が減る」を空所の表現に逆算すると：<br>
+        　・「家族規模が<strong>増加</strong>するごとに（with each <strong>increase</strong>）」<br>
+        　・「課税所得が<strong>減らされ</strong>（<strong>reduced</strong>）」<br>
+        ＝ <em>reduced with each increase</em> が完璧。<br><br>
+        ※ <em>This means ...</em>「これは〜という意味だ」が空所を直接言い換えているので、ここから空所の意味を逆算するのが最短ルート。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜直後の This means ... 構文との対応</div>
+        <div class="ev-bd">
+          <div class="ev-q">income subject to taxes can be <strong>reduced with each increase</strong> in family size. <span class="h">This means the larger the family the lower the tax burden.</span></div>
+          <strong>対応関係の分析：</strong><br>
+          • 空所 <em>reduced</em>「減らされる」 ＝ <em>This means</em> 後の <em>the lower the tax burden</em>「税負担が低い」<br>
+          • 空所 <em>with each increase in family size</em>「家族規模の増加ごとに」 ＝ <em>This means</em> 後の <em>the larger the family</em>「家族が多いほど」<br><br>
+          つまり、<strong>「家族が増える → 税が減る」という比例関係</strong>を空所と直後文の両方で表現している。<br><br>
+          ※旺文社の解説：「空所の直後で家族が増えれば増えるほど税金の負担が軽くなると述べられている」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">1. increased with each addition</span>「追加ごとに増やされる」＝<strong>真逆</strong>。これだと「家族が一人増えるごとに課税対象所得が<strong>増える</strong>」になり、続く「家族が多いほど税負担が低い」と完全に矛盾する。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">2. lowered with each reduction</span>「減少ごとに低くされる」＝<strong>関連変数が逆</strong>。「家族規模の<strong>減少</strong>（reduction）」と「税負担の低下」を結びつけてしまうので、本文の「<strong>家族増加</strong>と税負担低下」の方向と逆。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">3. modified with each reduction</span>「減少ごとに修正される」＝<strong>方向性不明＋関連変数も逆</strong>。<em>modified</em>「修正される」は変化の方向を示さないし、<em>with each reduction</em>「減少ごとに」は本文の「家族<strong>増加</strong>」方向と逆。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">4. reduced with each increase</span>「増加ごとに減らされる」＝直後の <em>the larger the family the lower the tax burden</em>「家族が多いほど税負担が低い」と完全に整合。<em>increase</em>（家族規模の増加）と <em>reduced</em>（課税所得の減少）が反比例関係。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">構文ポイント｜the 比較級, the 比較級</div>
+        <strong>The 比較級 ..., the 比較級 ...</strong>＝「〜であればあるほど、〜だ」（比例構文）<br><br>
+        本問の直後文がこの構文：<br>
+        <em><strong>The larger the family, the lower the tax burden.</strong></em><br>
+        ＝「家族が大きければ大きいほど、税負担は低い」<br><br>
+        【その他の例】<br>
+        ・<em><strong>The harder you study, the better your grades will be.</strong></em>（一生懸命勉強するほど、成績は良くなる）<br>
+        ・<em><strong>The older we get, the more we learn.</strong></em>（年を取るほど、多くを学ぶ）<br>
+        ・<em><strong>The sooner, the better.</strong></em>（早ければ早いほど良い）<br><br>
+        ※ この構文は<strong>2つの要素の比例関係</strong>を強く示す。本問では「家族規模」と「税負担」の反比例を、空所と直後文の両方で表現することで、強調しているわけだ。
+      </div>
+    </div>
+  </div>
+
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:12px;">
+      <div class="qnum-badge">7</div>
+      <div class="qtext">Which of the following would best fill the gap at <span class="blank-box" style="background:#fff;border-color:var(--ac);color:var(--ac);">7</span> in Paragraph ⑧?</div>
+    </div>
+    <div class="qen">Leaving society without support when it comes to creating and nourishing children is to abandon the government's duty to govern and is a disastrous refusal to take responsibility for the future of the <em><strong>＿＿7＿＿</strong></em> societies whom they claim to represent.</div>
+
+    <div class="choices">
+      <button class="cb" onclick="sel7(this,'1')"><span class="cn">1.</span>ideal</button>
+      <button class="cb" onclick="sel7(this,'2')"><span class="cn">2.</span>real</button>
+      <button class="cb" onclick="sel7(this,'3')"><span class="cn">3.</span>so-called</button>
+      <button class="cb" onclick="sel7(this,'4')"><span class="cn">4.</span>very</button>
+    </div>
+    <button class="rev-btn" onclick="rev7()">答えを見る</button>
+
+    <div class="ans-block" id="ans7" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：4. very</div>
+
+      <div class="co co-b" style="margin-top:10px;">
+        <div class="co-lbl">空所周辺のロジック</div>
+        <strong>① 結論部の文構造：</strong><br>
+        <em>Leaving society without support ... is to abandon the government's duty to govern and is a disastrous refusal to take responsibility for the future of the ＿＿7＿＿ societies whom they claim to represent.</em><br><br>
+        ＝「子供を産み育てることに支援なく社会を放置することは、政府の統治義務の放棄であり、政府が代表すると主張する＿＿社会の未来に対する責任を取ることを拒む悲惨な行為である」<br><br>
+        <strong>② 空所の位置：</strong><em>the ＿＿7＿＿ societies whom they claim to represent</em><br>
+        ＝<em>societies</em> を修飾する形容詞の位置。<em>whom they claim to represent</em>「政府が代表していると主張する」が関係代名詞節で <em>societies</em> をさらに限定修飾。<br><br>
+        <strong>③ 文脈：</strong>この文は本文の<strong>結論</strong>で、政府の責務放棄を強く非難するトーン。「政府が代表していると主張する<strong>まさにその</strong>社会」を強調すれば、皮肉と非難のトーンが効く。<br>
+        → <em>very</em>（形容詞「まさにその」）が完璧。<br><br>
+        ※ <em>very</em> は副詞「とても」だけでなく、<strong>形容詞「まさにその、ちょうどその」</strong>の用法がある。<em>the very ... that ...</em>「〜するまさにその…」は強調構文。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜文末の関係代名詞節との連動</div>
+        <div class="ev-bd">
+          <div class="ev-q">a disastrous refusal to take responsibility for the future of the <span class="h">very societies whom they claim to represent</span>.</div>
+          <strong>論理：</strong><br>
+          ・「政府は<strong>societies</strong>を代表すると主張する（claim to represent）」<br>
+          ・「その<strong>societies</strong>の未来に責任を取ることを拒む」＝矛盾・偽善<br>
+          ・この矛盾を<strong>強調</strong>するのが <em>very</em>。「<strong>まさに代表すると主張するその社会</strong>の未来を放棄するのは、悲惨である」と<strong>強烈な皮肉</strong>を込める。<br><br>
+          ※ <em>the very societies whom they claim to represent</em>＝「政府が代表すると主張するまさにその社会」。「<strong>その当の社会</strong>を見捨てるとは何事か」という<strong>非難の核</strong>を表現する。<br><br>
+          ※旺文社の解説：「形容詞の very『まさにその』が文脈に合う」
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の○×</div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">1. ideal</span>「理想の」＝<strong>文脈に合わない</strong>。「政府が代表すると主張する<strong>理想の</strong>社会」では、皮肉や非難の含意がなくなる。実在の社会に対する責任放棄を批判する文脈なので、「理想の」（架空・抽象的）の意味は不適切。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">2. real</span>「現実の、本物の」＝<strong>論理的に不自然</strong>。<em>real societies</em>「現実の社会」は意味が成り立つが、わざわざ「現実の」と修飾する理由が文脈にない（社会はそもそも現実のもの）。<em>very</em> のような<strong>「まさにその」</strong>という強調のニュアンスが欠ける。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ng">✗</div>
+          <div class="ca-bd"><span class="ca-key ng-clr">3. so-called</span>「いわゆる、〜と呼ばれる」＝<strong>意味が違う</strong>。<em>so-called</em> は「他者が〜と呼んでいるが、実際はそうでない」という<strong>軽蔑的・疑問的</strong>なニュアンス。本文では「政府が代表すると主張する社会」を否定する意図ではなく、<strong>その社会を見捨てる政府の矛盾</strong>を批判する文脈なので不適切。</div>
+        </div>
+
+        <div class="ca-row">
+          <div class="ca-mark ok">✓</div>
+          <div class="ca-bd"><span class="ca-key ok-clr">4. very</span>「まさにその、ちょうどその」（形容詞）＝<em>the very societies whom they claim to represent</em>「政府が代表すると主張するまさにその社会」となり、政府の<strong>矛盾</strong>（代表すると主張する社会を見捨てる）を<strong>強烈に皮肉</strong>る。結論部の強い非難のトーンに最も合う。</div>
+        </div>
+      </div>
+
+      <div class="co co-t" style="margin-top:12px;">
+        <div class="co-lbl">語彙ポイント｜形容詞 very の用法</div>
+        <strong>very</strong>＝「まさにその、ちょうどその、本当の」（形容詞の用法）<br><br>
+        【典型パターン】<em>the very + 名詞 + (関係代名詞節)</em><br>
+        ・<em>This is the very book I was looking for.</em>（これがまさに私が探していた本だ）<br>
+        ・<em>You are the very person I wanted to see.</em>（あなたこそ私が会いたかったまさにその人だ）<br>
+        ・<em>at the very moment</em>（まさにその瞬間に）<br>
+        ・<em>the very societies whom they claim to represent</em>（政府が代表すると主張するまさにその社会）← 本問<br><br>
+        【強調の意味】<br>
+        ・<em>The very thought of it makes me sick.</em>（それを考えるだけで気分が悪くなる ※「まさに考えること自体が」）<br>
+        ・<em>from the very beginning</em>（最初のまさにそのときから）<br>
+        ・<em>in the very heart of the city</em>（街のまさに中心に）<br><br>
+        ※ <em>very</em>は副詞「とても」が圧倒的に多いが、形容詞「まさにその」も重要な用法。特に <em>the very ... that ...</em> の<strong>強調構文</strong>として頻出。慶應レベルでは確実におさえたい。
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="border-color:#9fe1cb;background:var(--tll);margin-top:20px;">
+    <div class="lbl" style="color:var(--tld);">この試験から学ぶ｜慶應の出題傾向</div>
+    <div style="display:flex;flex-direction:column;gap:7px;font-size:13.5px;">
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--ac);">
+        <strong>段落の論理転換点を作る空所が頻出：</strong>設問3は段落③の<strong>転換点</strong>（地域レベル → 世界規模）に置かれた典型例。慶應では「<strong>段落の構造を読む力</strong>」を問う問題が必ず出る。逆接（However）・帰結（Therefore）・追加（Moreover）など接続表現の論理機能を熟知しておくこと。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--am);">
+        <strong>「直後文との照合」で多くが解ける：</strong>設問1（直後にコロン以下の数値）、設問5（直後にフランスの成功例）、設問6（直後の This means 文と完全対応）など、<strong>空所直後の文</strong>が決定的根拠になるパターンが多い。<strong>空所の前後3〜4行を必ず確認する</strong>習慣をつけること。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--tl);">
+        <strong>慣用表現・連語の知識が直接問われる：</strong>設問1 <em>meet a challenge</em>、設問5 <em>make a difference</em>、設問7形容詞 <em>very</em> など、<strong>標準的な熟語・連語の知識</strong>で得点できる問題が含まれる。日頃から熟語集を地道に積み上げる学習が効く。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--pu);">
+        <strong>「不自然な連語」を見抜く力が試される：</strong>設問5の <em>mark an impact</em>（×）、<em>stand no reason</em>（×）など、<strong>標準英語ではない不自然な選択肢</strong>を混ぜることで、暗記英語ではなく<strong>自然な英語感覚</strong>を試す。多読・多聴で英語の<strong>「正しい音」</strong>を養うことが大切。
+      </div>
+      <div style="padding:9px 12px;background:var(--sf);border-radius:var(--r);border-left:3px solid var(--rd);">
+        <strong>譲歩構文・比較構文の応用力：</strong>設問4 <em>No matter the reason</em>、設問6 <em>the larger ... the lower ...</em>（the 比較級, the 比較級）など、<strong>構文の応用力</strong>が問われる。基本構文を覚えるだけでなく、<strong>文章中でどう機能するか</strong>を理解する深い学習が必要。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p4')">← 設問4・5</button>
+    <button class="btnp" onclick="goP('p6')">全文和訳 →</button>
+  </div>
+</div>
+
+<div class="pan" id="p6">
+
+  <div class="card" style="background:linear-gradient(135deg,#0a1628,#1a3354);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">FULL TRANSLATION</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;line-height:1.3;margin-bottom:8px;">全文和訳<br><span style="font-size:13px;opacity:.85;font-weight:400;">— 英文と訳を一文ずつ照合できる対訳形式</span></div>
+    <div style="font-size:13px;opacity:.85;line-height:1.75;">原文の構造をできるだけ保ちながら、自然な日本語に訳した完訳。各段落の末尾に <strong>訳のポイント</strong> を付記しているので、関係詞・分詞構文・倒置・<em>meet a challenge</em>／<em>No matter A</em>／<em>make a difference</em>／<em>the 比較級, the 比較級</em>／<em>形容詞 very</em> などの構造把握ポイントを自分の訳と照らし合わせて確認できる。</div>
+  </div>
+
+  <!-- ─── 第1段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">1</span>
+      <span style="margin-left:6px;">第1段落 — 世界の現状（導入）</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Across the world, governments are increasingly concerned about falling fertility rates. To ensure stability in any population, the total fertility rate (TFR), which is the average number of children each woman gives birth to over her lifetime, needs to be 2.1. The world as a whole still meets this challenge: in 2020 the world TFR was 2.4, with high rates still seen in Africa (the highest was Niger, with a TFR of 6.8).
+      </div>
+      <div class="tr-jp">
+        世界各地で、出生率の低下に対する政府の<em>懸念がますます強まっている</em>。<em>どのような人口においても</em>安定性を確保するためには、合計特殊出生率（TFR）— すなわち、<em>一人の女性が生涯に産む子供の平均数</em> — が2.1である必要がある。世界全体としては、まだこの<em>課題を満たしている</em>。2020年の世界全体のTFRは2.4であり、アフリカでは依然として高い割合が見られる（最高はニジェールで、TFRは6.8であった）。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>increasingly concerned about A</strong>＝「Aについてますます懸念している」。<em>increasingly</em>「ますます」が <em>concerned</em>「懸念している」を修飾。問題の重要性を強調する論説文の典型的導入。<br>
+      ② <strong>To ensure stability in any population</strong>＝「いかなる人口においても安定性を確保するために」。<em>To do</em>＝to不定詞の副詞用法（目的）「〜するために」。<em>any population</em>「どのような人口でも」は<em>any</em>「任意の」の典型的な使い方。<br>
+      ③ <strong>the total fertility rate (TFR), which is the average number of children each woman gives birth to over her lifetime, needs to be 2.1</strong>＝関係代名詞 <em>which</em>の非制限用法。<em>which</em> 以下が TFR の<strong>定義を補足</strong>している（カンマで挟む）。「TFR（一人の女性が生涯に産む子供の平均数）は2.1である必要がある」。<br>
+      ④ <strong>each woman gives birth to over her lifetime</strong>＝関係代名詞 that の省略＋前置詞 <em>to</em> の残留。<em>the average number of children [that] each woman gives birth to over her lifetime</em>。<em>give birth to A</em>「Aを産む」の <em>to</em> が末尾に残った形。<br>
+      ⑤ <strong>meets this challenge</strong>＝「この課題（人口維持基準2.1）を満たす」（設問1の答え）。<em>meet a challenge / requirement</em>「課題・要件を満たす」は重要熟語。<br>
+      ⑥ <strong>with high rates still seen in Africa</strong>＝<em>with + 名詞 + 過去分詞</em>「Aが〜される状態で」（付帯状況）。「アフリカでは依然として高い割合が見られる状態で」。<br>
+      ⑦ <strong>the highest was Niger, with a TFR of 6.8</strong>＝<em>with + 名詞 + 前置詞句</em>「TFRが6.8という状態で」（付帯状況）。
+    </div>
+  </div>
+
+  <!-- ─── 第2段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">2</span>
+      <span style="margin-left:6px;">第2段落 — 東アジアの低下</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Elsewhere, however, worrying examples of decline in the TFR are not hard to find. In East Asia the trend is particularly pronounced. Today, China seems set to experience again the low levels of TFR around 1.2, last seen in the 1990s. In 2020, the TFR in Singapore was 1.1 and Korea had reached 0.84. At 1.36, Japan seems slightly better, but considering that the figure is still well below the rate required to keep the population stable, there can be no cause for optimism in any of these countries.
+      </div>
+      <div class="tr-jp">
+        <em>しかし、それ以外の地域では</em>、TFRの低下が心配される事例も少なくない。特に東アジアでは、その傾向が<em>顕著である</em>。現在、中国は1990年代に最後に見られた1.2前後という低水準のTFRを再び経験することになりそうだ。2020年には、シンガポールのTFRは1.1、韓国は0.84に達していた。日本は1.36と<em>やや良好だが</em>、人口を安定的に維持するために必要な率を<em>はるかに下回っている</em>ことを考えると、これらのどの国も<em>楽観視はできない</em>であろう。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>Elsewhere, however</strong>＝「しかし、他の地域では」（段落冒頭の重要な対比シグナル）。<em>elsewhere</em>「他の場所で」（副詞）＋ <em>however</em>「しかし」（逆接）。<br>
+      ② <strong>worrying examples of decline ... are not hard to find</strong>＝「TFR低下の懸念される事例は見つけるのが難しくない」＝「容易に見つかる」。二重否定の婉曲表現。<em>worrying</em>「懸念させるような」は現在分詞の形容詞用法。<br>
+      ③ <strong>particularly pronounced</strong>＝「特に顕著な」（設問2の答え）。<em>pronounced</em>＝「顕著な、際立った」（形容詞）。<br>
+      ④ <strong>China seems set to experience again the low levels of TFR around 1.2, last seen in the 1990s</strong>＝<em>seem set to do</em>「〜することになりそうだ」（成り行きが決まっている感じ）。<em>last seen in the 1990s</em>＝過去分詞の後置修飾「1990年代に最後に見られた」（<em>the low levels of TFR</em> を修飾）。<br>
+      ⑤ <strong>At 1.36, Japan seems slightly better</strong>＝<em>At 1.36</em>＝前置詞句で文頭に置かれる副詞句「1.36という数値で」。<em>slightly better</em>＝「やや良好」（比較級＋slightly）。<br>
+      ⑥ <strong>considering that SV</strong>＝「SVを考えると、SVを考慮すると」（分詞構文）。<em>considering</em>「〜を考えると」は<strong>独立分詞構文</strong>の慣用表現。<br>
+      ⑦ <strong>well below the rate required to keep the population stable</strong>＝「人口を安定に保つために必要な率をはるかに下回って」。<em>well below</em>「はるかに下回って」（<em>well</em>＝副詞「はるかに」）。<em>required</em>＝過去分詞の後置修飾「必要とされる」が <em>the rate</em> を修飾。<em>keep A stable</em>＝「Aを安定に保つ」（第5文型）。<br>
+      ⑧ <strong>there can be no cause for optimism</strong>＝「楽観のための理由はない」＝「楽観視できない」。<em>cause for A</em>「Aの理由」の慣用表現。
+    </div>
+  </div>
+
+  <!-- ─── 第3段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">3</span>
+      <span style="margin-left:6px;">第3段落 — 歴史的視点と転換点</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        In isolation, such situations are by no means new. Even in Roman times, Caesar Augustus placed a tax on unmarried men — via the Lex Papia Poppaea — apparently in the hope of raising the birth rate. Similar measures were attempted in the US states of Missouri in 1927 and California in 1933. In the former Soviet Union, Stalin enacted a tax on childlessness, helping reverse the devastating losses suffered during WWII. Each of these was somewhat successful, even if to a limited degree. However, the scale of the problem has changed. In 2020, the decline in fertility has become a global phenomenon, enhanced by the devastating impact of COVID-19.
+      </div>
+      <div class="tr-jp">
+        <em>単独で見れば</em>、このような状況は<em>決して新しいものではない</em>。ローマ時代でさえ、カエサル・アウグストゥスは明らかに出生率を上げることを目的として、「パピウス・ポパエウス法」によって未婚の男性に税金をかけた。1927年にはアメリカのミズーリ州で、1933年にはカリフォルニア州で同様の措置がとられた。旧ソビエト連邦では、スターリンが<em>子供のない状態に対する課税</em>を制定し、第二次世界大戦で被った<em>壊滅的な損失</em>を回復するのに<em>貢献した</em>。これらはいずれも限定的ではあるが、ある程度の成功を収めたと言える。<em>しかし、問題の規模は変化している</em>。2020年、出生率の低下は世界的な現象となっており、COVID-19の壊滅的な影響により、その現象はさらに加速した。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>In isolation</strong>＝「単独で見れば」（地域・時期を分けて個別に見れば、の意味）。<em>isolation</em>「孤立、単独」。<br>
+      ② <strong>by no means new</strong>＝「決して新しくない」。<em>by no means</em>＝「決して〜ない」（強い否定）。同類表現：<em>not at all</em>、<em>in no way</em>、<em>far from</em>。<br>
+      ③ <strong>placed a tax on unmarried men</strong>＝「未婚の男性に税金をかけた」。<em>place a tax on A</em>＝「Aに課税する」。<em>tax on childlessness</em>「子供のない状態への課税」も同じパターン。<br>
+      ④ <strong>apparently in the hope of raising the birth rate</strong>＝「明らかに、出生率を上げることを期待して」。<em>in the hope of doing</em>「〜することを期待して」＋<em>apparently</em>「明らかに」（推量の副詞）。<br>
+      ⑤ <strong>helping reverse the devastating losses suffered during WWII</strong>＝分詞構文（付帯状況・結果）「第二次世界大戦中に被った壊滅的な損失を逆転させるのに貢献しながら」。<em>help do</em>「〜するのに役立つ」（toなし）。<em>suffered during WWII</em>＝過去分詞の後置修飾「第二次大戦中に被った」が <em>losses</em> を修飾。<br>
+      ⑥ <strong>somewhat successful, even if to a limited degree</strong>＝「限定的にではあるが、ある程度成功した」。<em>somewhat</em>「いくぶん、ある程度」、<em>even if</em>「たとえ〜でも」、<em>to a limited degree</em>「限定的な程度に」。<br>
+      ⑦ <strong>However, the scale of the problem has changed</strong>＝「しかし、問題の規模は変化した」（設問3の答え）。段落内の<strong>転換点</strong>。<br>
+      ⑧ <strong>enhanced by the devastating impact of COVID-19</strong>＝過去分詞の後置修飾「COVID-19の壊滅的な影響によって悪化した」（<em>a global phenomenon</em> を修飾）。<em>enhance</em>＝通常「向上させる」だが、ここは<strong>「（負の事象を）悪化させる、強める」</strong>の意味で使われている（文脈で否定的なものを増幅させる場合に使う特殊用法）。
+    </div>
+  </div>
+
+  <!-- ─── 第4段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">4</span>
+      <span style="margin-left:6px;">第4段落 — 原因分析と政府対応の必要性</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Many factors are behind this alarming trend. Economic uncertainties and the pandemic are merely the most visible of these. Environmental factors such as pollution could also be at work. Societal shifts, including the greater role played by women outside the home, might have further contributed. No matter the reason, given the immense strains it has placed upon social systems, from healthcare to pensions, it is vital that governments respond.
+      </div>
+      <div class="tr-jp">
+        この憂慮すべき傾向の背景には、<em>さまざまな要因がある</em>。経済の不安定性やパンデミックは、その中でも最も目に見えるものに過ぎない。公害などの環境要因も影響している可能性がある。また、家庭外で女性がより大きな役割を担うなど、社会的変化もさらに影響したことであろう。<em>理由が何であれ</em>、医療から年金に至るまで、社会システムに大きな負担を強いている以上、政府の対応は<em>極めて重要</em>である。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>Many factors are behind this alarming trend</strong>＝「この警戒すべき傾向の背景には多くの要因がある」。<em>be behind A</em>＝「Aの背後にある／原因である」。<em>alarming</em>「警戒させるような、憂慮すべき」は現在分詞の形容詞用法。<br>
+      ② <strong>merely the most visible of these</strong>＝「これら（要因）の中で、単に最も目に見えるものに過ぎない」。<em>merely</em>「単に〜に過ぎない」、<em>the most visible</em>「最も目に見える」。「目に見えるものはほかにもあるよ」というニュアンスを補う表現。<br>
+      ③ <strong>could also be at work</strong>＝「（要因として）働いている可能性もある」。<em>be at work</em>＝「働いている、作用している」。<em>could</em>「〜の可能性がある」。<br>
+      ④ <strong>Societal shifts, including the greater role played by women outside the home, might have further contributed</strong>＝<em>including A</em>「Aを含めて」が <em>shifts</em> を補足。<em>the greater role played by women outside the home</em>「家庭外で女性が果たすより大きな役割」（<em>played by women outside the home</em>＝過去分詞の後置修飾）。<em>might have done</em>＝過去の推量「〜したかもしれない」、<em>further</em>「さらに」、<em>contribute</em>「貢献する」（ここでは負の結果に「寄与する」の意味）。<br>
+      ⑤ <strong>No matter the reason</strong>＝「理由が何であれ」（設問4の答え）。<em>No matter A</em>＝「Aが何であれ」（譲歩構文）。<em>No matter what the reason is</em>「理由が何であろうと」の省略形と考えると分かりやすい。<br>
+      ⑥ <strong>given the immense strains it has placed upon social systems</strong>＝「（出生率の低下が）社会システムに強いている計り知れない負担を考えると」。<em>given A</em>＝「Aを考えると、Aを前提として」（前置詞）。<em>it has placed upon social systems</em> は関係代名詞 that の省略＋<em>place A upon B</em>「BにAを置く／課す」。代名詞 <em>it</em> は <em>this alarming trend</em> または <em>the decline in fertility</em> を指す。<br>
+      ⑦ <strong>from healthcare to pensions</strong>＝「医療から年金に至るまで」（<em>from A to B</em>「AからBまで」、社会システムの具体的範囲を列挙）。<br>
+      ⑧ <strong>it is vital that governments respond</strong>＝「政府が対応することは極めて重要である」。形式主語 <em>it</em>、真主語が <em>that</em> 節。<em>vital</em>「極めて重要な、必須の」。<em>that governments respond</em> の <em>respond</em> は<strong>仮定法現在</strong>（提案・要求などを表す形容詞 <em>vital, essential, important</em> の後の that 節では動詞の原形を使う）。
+    </div>
+  </div>
+
+  <!-- ─── 第5段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">5</span>
+      <span style="margin-left:6px;">第5段落 — フランスの成功事例</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        Yet, can government initiatives really be effective? France provides a good illustration of how government policies may indeed make a difference. France's total fertility rate stood at close to 1.9 in 2019, making it one of Europe's most successful countries in this respect. Government policies aimed explicitly at family life and children's well-being (as opposed to those emphasizing gender equality, like in Sweden) have been at the heart of this success. The French family policy model is built on generous cash transfers towards families combined with an extensive childcare provision, without regard to social class.
+      </div>
+      <div class="tr-jp">
+        しかし、政府の取り組みは本当に効果があるのだろうか？ フランスは、政府の政策が確かに<em>違いを生む可能性</em>があることを示すよい例証となる。フランスの合計特殊出生率は2019年に1.9に迫り、この点でフランスはヨーロッパで最も成功した国の1つとなった。この成功の中心には、家族生活と子供の幸福を<em>明確に目指した</em>政府の政策（スウェーデンのような男女平等を強調する政策<em>とは異なる</em>）がある。フランスの家族政策モデルは、社会階層に関係なく、家族への手厚い現金給付と<em>充実した保育の提供</em>で成り立っている。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>Yet, can government initiatives really be effective?</strong>＝「しかし、政府の取り組みは本当に効果があるのだろうか？」段落冒頭の<strong>疑問形</strong>で議論を進める手法。<em>Yet</em>「しかし」は <em>But</em> よりやや書き言葉的。<br>
+      ② <strong>France provides a good illustration of how government policies may indeed make a difference</strong>＝「フランスは、政府の政策が実際に違いを生む可能性があることのよい例証を提供する」。<em>provide an illustration of A</em>「Aの例示を提供する」＋<em>of how SV</em>「SVがどう〜かについて」（<em>of</em> の目的語が間接疑問文）。<em>may indeed make a difference</em>＝設問5の答え。<em>indeed</em>「確かに、実際に」（強調）。<br>
+      ③ <strong>France's total fertility rate stood at close to 1.9 in 2019, making it one of Europe's most successful countries</strong>＝<em>stand at A</em>「Aの値である、Aで止まる」＋<em>close to A</em>「Aに近い」。<em>making it ...</em>は分詞構文（付帯状況・結果）「それによってフランスをヨーロッパで最も成功した国の一つにしている」。<em>making</em> の主語は文全体（前文の出来事）、<em>it</em>＝<em>France</em>。<br>
+      ④ <strong>Government policies aimed explicitly at family life and children's well-being</strong>＝<em>aimed at A</em>＝過去分詞の後置修飾「Aを目指した」が <em>policies</em> を修飾。<em>explicitly</em>「明示的に、明確に」。「家族生活と子供の幸福を明示的に目指した政府の政策」。<br>
+      ⑤ <strong>(as opposed to those emphasizing gender equality, like in Sweden)</strong>＝<em>as opposed to A</em>「Aと対照的に、Aとは違って」。<em>those</em>＝<em>policies</em>（前出の名詞を指す指示代名詞）、<em>emphasizing</em>＝現在分詞の後置修飾「強調する」が <em>those</em> を修飾。「（スウェーデンのような）男女平等を強調する政策とは対照的に」。<br>
+      ⑥ <strong>at the heart of this success</strong>＝「この成功の中心に」。<em>at the heart of A</em>＝「Aの中心に、Aの核心に」（重要熟語）。<br>
+      ⑦ <strong>generous cash transfers towards families combined with an extensive childcare provision</strong>＝<em>combined with A</em>＝過去分詞の後置修飾「Aと組み合わされて」が <em>cash transfers</em> を修飾。「家族への寛大な現金給付と、充実した育児サービスの提供との組み合わせ」。<em>extensive</em>「広範な、充実した」、<em>provision</em>「提供」。<br>
+      ⑧ <strong>without regard to social class</strong>＝「社会階層に関係なく」。<em>without regard to A</em>＝「Aに関係なく、Aを問わず」（重要熟語）。
+    </div>
+  </div>
+
+  <!-- ─── 第6段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">6</span>
+      <span style="margin-left:6px;">第6段落 — 税制優遇の仕組み</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        In France, these cash transfers have a pro-birth character and are directed foremost towards large families. However, an indirect approach has been found to be the most productive. Tax breaks, therefore, form one of the cornerstones of the French family policy system: income subject to taxes can be reduced with each increase in family size. This means the larger the family the lower the tax burden. In addition, France grants universal family allowances to parents with at least two children, special allowances for poor families, and extra housing allowances.
+      </div>
+      <div class="tr-jp">
+        フランスでは、これらの現金給付は<em>出産を促進する性格を持ち</em>、<em>とりわけ大家族に多く向けられている</em>。しかし、<em>間接的なアプローチが最も生産的である</em>ことが判明している。したがって減税措置は、フランスの家族政策システムの<em>基盤の1つである</em>。家族の人数が増えるごとに、課税対象となる所得を減らすことができる。<em>つまり、家族が多ければ多いほど税負担が軽くなる</em>。さらにフランスでは、<em>少なくとも2人の子供を持つ親全員に家族手当</em>、貧しい家庭への特別手当、住宅手当が追加で支給される。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>have a pro-birth character</strong>＝「出産促進的な性格を持つ」。<em>pro-A</em>＝「Aを支持する／促進する」（接頭辞）。⇔ <em>anti-A</em>「Aに反対する」。<em>pro-birth</em>「出産促進的な」。<br>
+      ② <strong>are directed foremost towards large families</strong>＝「とりわけ大家族に向けられている」。<em>direct A towards B</em>「AをBに向ける」の受動。<em>foremost</em>「とりわけ、主に」（副詞）。<br>
+      ③ <strong>an indirect approach has been found to be the most productive</strong>＝「間接的なアプローチが最も生産的であると分かっている」。<em>have been found to be A</em>＝「Aであることが判明している」（受動態＋to不定詞補文）。<em>productive</em>「生産的な、効果的な」。<br>
+      ④ <strong>Tax breaks, therefore, form one of the cornerstones</strong>＝「したがって減税は基盤の1つを構成する」。<em>tax break</em>＝「減税措置、税制優遇」、<em>cornerstone</em>＝「礎石、基盤」（建築用語の比喩）。<br>
+      ⑤ <strong>income subject to taxes can be reduced with each increase in family size</strong>＝「課税対象となる所得は、家族規模の増加ごとに減らされ得る」（設問6の答え）。<em>income subject to taxes</em>＝<em>subject to A</em>「Aの対象となる」（後置修飾）「税の対象となる所得＝課税所得」。<em>with each increase in A</em>＝「Aの増加ごとに」。<br>
+      ⑥ <strong>This means the larger the family the lower the tax burden</strong>＝「これは、家族が大きいほど税負担が低いという意味だ」。<strong>the 比較級 + S + V, the 比較級 + S + V</strong> 構文（比例関係）。<em>the larger the family (is), the lower the tax burden (is)</em> の be 動詞省略形。<br>
+      ⑦ <strong>grants A to B</strong>＝「BにAを与える／支給する」。<em>universal family allowances to parents with at least two children</em>「少なくとも2人の子供を持つ親全員への家族手当」（<em>universal</em>「普遍的な、全員に向けた」）。<br>
+      ⑧ <strong>extra housing allowances</strong>＝「追加の住宅手当」。<em>extra</em>「追加の」、<em>allowance</em>「手当、支給金」。
+    </div>
+  </div>
+
+  <!-- ─── 第7段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">7</span>
+      <span style="margin-left:6px;">第7段落 — 育児サービスと労働環境</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        The French are not reluctant to have children largely because of their well-organized system of childcare services. This system has allowed more women to participate in the labor force. The childcare system has also benefited from a shorter working week, with 35 hours as standard. Although the French work week was mainly shortened to reduce unemployment, a secondary result of this reform was to improve work-family balance.
+      </div>
+      <div class="tr-jp">
+        フランス人が子供を産むことに消極的でないのは、<em>育児サービス制度が整っていることが大きい</em>。この制度により、<em>より多くの女性が労働力に参加できるようになった</em>。育児制度は、<em>35時間労働を標準とする週労働時間短縮の恩恵</em>も受けている。フランスの週労働時間短縮は、主に失業率を下げるために導入されたのだが、この改革の<em>副次的な成果として</em>、仕事と家庭のバランスの改善があった。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>The French</strong>＝「フランス人（全体）」。<em>the + 国民を表す形容詞</em>で「その国民全体」を意味する集合名詞的用法。<em>The Japanese</em>「日本人」、<em>The British</em>「イギリス人」と同じ。<br>
+      ② <strong>are not reluctant to do</strong>＝「〜することに消極的ではない」。<em>reluctant to do</em>＝「〜することに気が進まない、消極的な」。<em>not reluctant</em>「消極的でない」＝「進んで〜する」の婉曲表現。<br>
+      ③ <strong>largely because of A</strong>＝「主にAのために、Aに大きく起因して」。<em>largely</em>「主に、大部分は」、<em>because of A</em>「Aのために、Aの理由で」。<br>
+      ④ <strong>well-organized system of childcare services</strong>＝「うまく組織された育児サービス制度」。<em>well-organized</em>＝「うまく組織された、よく整備された」（複合形容詞）。<br>
+      ⑤ <strong>has allowed more women to participate in the labor force</strong>＝<em>allow A to do</em>「Aが〜することを可能にする」。<em>the labor force</em>「労働力、労働人口」。<br>
+      ⑥ <strong>has also benefited from a shorter working week, with 35 hours as standard</strong>＝<em>benefit from A</em>「Aから恩恵を受ける」。<em>with 35 hours as standard</em>＝<em>with + 名詞 + as + 補語</em>「Aを基準として」（付帯状況）「35時間を標準として」。<br>
+      ⑦ <strong>Although the French work week was mainly shortened to reduce unemployment</strong>＝<em>Although SV</em>「SVだが、SVにもかかわらず」（譲歩）。<em>to reduce unemployment</em>＝to不定詞の副詞用法（目的）。<br>
+      ⑧ <strong>a secondary result of this reform was to improve work-family balance</strong>＝「この改革の副次的な成果は仕事と家庭のバランスを改善することだった」。<em>secondary</em>「二次的な、副次的な」⇔ <em>primary</em>「主要な」。<em>was to improve</em>＝to不定詞の名詞用法（補語）「〜することだった」。
+    </div>
+  </div>
+
+  <!-- ─── 第8段落 ─── -->
+  <div class="card">
+    <div class="tr-section-title">
+      <span class="tr-pnum" style="margin-right:0;">8</span>
+      <span style="margin-left:6px;">第8段落 — 結論と他国への提言</span>
+    </div>
+    <div class="tr-row">
+      <div class="tr-en">
+        The consistent and generous family policy package in France can be considered an important reason for its relatively high fertility. Moreover, it is not the sole government to achieve success: Canada and Estonia, to give just two examples, also experienced some modest fertility growth by offering baby bonuses and a "mother's salary." Similarly, other governments need to take action. Leaving society without support when it comes to creating and nourishing children is to abandon the government's duty to govern and is a disastrous refusal to take responsibility for the future of the very societies whom they claim to represent.
+      </div>
+      <div class="tr-jp">
+        フランスの<em>一貫した寛大な家族政策パッケージ</em>は、その比較的高い出生率の重要な理由と考えることができる。さらに、（フランス）政府だけが成功を収めたわけではない。例を2つだけ挙げると、カナダやエストニアも、ベビーボーナスや「母親の給料」を提供することで、<em>緩やかな出生率の上昇</em>を経験している。同様に、他の政府も<em>行動を起こす必要がある</em>。子供を産み育てることに何の支援もない社会を放置することは、政府の<em>統治義務を放棄すること</em>であり、政府が代表していると主張する<em>まさにその社会の未来</em>に責任を持つことを拒否する<em>悲惨なこと</em>である。
+      </div>
+    </div>
+    <div class="tr-points">
+      <strong>訳のポイント：</strong><br>
+      ① <strong>The consistent and generous family policy package</strong>＝「一貫した、寛大な家族政策パッケージ」。<em>consistent</em>「一貫した」、<em>generous</em>「気前のよい、寛大な」。<br>
+      ② <strong>can be considered an important reason for A</strong>＝「Aの重要な理由と考えることができる」。<em>consider A B</em>「AをBと見なす」の受動 <em>A is considered B</em>。<br>
+      ③ <strong>it is not the sole government to achieve success</strong>＝「成功を収めた唯一の政府ではない」。<em>sole</em>「唯一の」、<em>to achieve</em>＝to不定詞の形容詞用法（<em>government</em> を修飾）。<br>
+      ④ <strong>to give just two examples</strong>＝「ほんの2つだけ例を挙げると」（独立不定詞・挿入句）。<em>to do</em> の慣用的挿入：<em>to be honest</em>「正直に言うと」、<em>to be sure</em>「確かに」など。<br>
+      ⑤ <strong>experienced some modest fertility growth</strong>＝「ある程度の控えめな出生率の上昇を経験した」。<em>modest</em>「控えめな、緩やかな」（謙虚な、ではなくここでは「程度がさほど大きくない」の意味）。<br>
+      ⑥ <strong>by offering A and B</strong>＝<em>by + 動名詞</em>「〜することによって」（手段）。<em>a "mother's salary"</em>「『母親の給料』」（注：エストニアの育児給付制度で、専業母親に対しても支給される）。<br>
+      ⑦ <strong>Leaving society without support when it comes to creating and nourishing children</strong>＝<em>Leaving</em>＝動名詞で文の主語。<em>leave A without B</em>「AをBなしで放置する」。<em>when it comes to A</em>＝「Aに関しては、Aといえば」（重要熟語）。<em>creating and nourishing children</em>「子供を作り、育てること」（<em>nourish</em>「養育する」）。<br>
+      ⑧ <strong>is to abandon the government's duty to govern</strong>＝「政府の統治義務を放棄することである」。<em>to abandon</em>＝to不定詞の名詞用法（補語）。<em>duty to do</em>「〜する義務」（to不定詞の形容詞用法）。<em>govern</em>＝動詞「統治する」。<br>
+      ⑨ <strong>a disastrous refusal to take responsibility for the future of the very societies whom they claim to represent</strong>＝「政府が代表していると主張するまさにその社会の未来に対する責任を取ることを拒む悲惨な行為」。<br>
+      　・<em>disastrous</em>「悲惨な、壊滅的な」<br>
+      　・<em>refusal to do</em>「〜することの拒否」<br>
+      　・<em>take responsibility for A</em>「Aの責任を取る」<br>
+      　・<em>the very societies</em>＝<strong>形容詞 very「まさにその」</strong>（設問7の答え）<br>
+      　・<em>whom they claim to represent</em>＝関係代名詞 whom が <em>societies</em> を修飾「政府が代表すると主張する（社会）」（<em>claim to do</em>「〜すると主張する」）。
+    </div>
+  </div>
+
+  <!-- ─── 文章全体の流れ振り返り ─── -->
+  <div class="card" style="background:linear-gradient(135deg,var(--tll),#e0f7ee);border-color:#9fe1cb;">
+    <div class="lbl" style="color:var(--tld);">和訳を通して見える文章全体の流れ</div>
+    <div style="font-size:13px;line-height:1.85;color:var(--tld);">
+      <p style="margin-bottom:10px;">この論説文は、<strong>世界の現状提示 → 東アジアの危機 → 歴史的視点と転換 → 原因分析と政府対応の必要性 → フランスの成功事例 → 結論・他国への提言</strong>、という<strong>6段階の論理展開</strong>で「出生率低下と政府の役割」というテーマを多角的に論じている。</p>
+
+      <p style="margin-bottom:10px;">序盤の<strong>P1〜P2</strong>は「問題提起のセクション」。<strong>P1で世界全体としては基準を満たしている → P2で東アジアでは顕著な低下</strong>、という<em>対比</em>がきれいに進行する。段落冒頭の <em>Elsewhere, however</em>「他の地域では、しかし」が強い対比シグナル。</p>
+
+      <p style="margin-bottom:10px;">中盤の<strong>P3〜P5</strong>は「分析と提案」のセクション。P3で<em>歴史的視点</em>（古代ローマからスターリンまで）→ <em>However, the scale has changed</em> で「問題の規模が変化した」と<strong>転換</strong>、P4で<em>原因分析</em>（経済・パンデミック・環境・社会変化）→ <em>No matter the reason</em> で「政府対応必要」、P5で<em>フランスの成功例</em>と続く。</p>
+
+      <p style="margin-bottom:10px;">終盤の<strong>P6〜P8</strong>は「フランスの政策詳細と結論」のセクション。P6で<em>税制優遇</em>（家族規模に応じた減税）、P7で<em>育児サービスと労働時間短縮</em>、P8で<em>結論</em>と<em>他国への提言</em>（カナダ・エストニアの例＋政府の義務）。最終文の <em>the very societies whom they claim to represent</em>「政府が代表すると主張するまさにその社会」で<strong>政府の矛盾</strong>を皮肉る強烈な締めくくり。</p>
+
+      <p style="margin-bottom:0;">和訳ができたら、<strong>「各段落がどの論証ブロックに属するか」</strong>まで再構成してみよう。<strong>「Elsewhere, however」「In isolation」「However, the scale has changed」「No matter the reason」「Yet, can ...」「In France」「However, an indirect approach」「The French are not reluctant」「The consistent and generous ... Moreover」</strong> といった<strong>段落冒頭の論理シグナル</strong>に着目すれば、文章の骨格が見えてくる。これができれば、慶應タイプの空所補充問題の根拠探しも一気にスピードアップする。</p>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p5')">← 設問6・7</button>
+    <button class="btnp" onclick="goP('p1')">最初から復習 ↺</button>
+  </div>
+</div>
+
+</div><!-- /.wrap -->
+
+<script>
+// ─── ページ切替 ───
+var idx={p1:0,p2:1,p3:2,p4:3,p5:4,p6:5};
+function goP(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  var btns=document.querySelectorAll('.pn');
+  btns.forEach(function(b,i){
+    b.classList.remove('active');
+    if(i<idx[id]){b.classList.add('done');}
+    else{b.classList.remove('done');}
+  });
+  btns[idx[id]].classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ─── 共通ヘルパー：単一選択 ───
+function singleSel(el,key,correctKey){
+  var btns=el.parentNode.querySelectorAll('.cb');
+  btns.forEach(function(b){b.classList.remove('sel','ok','ng');});
+  if(key===correctKey){
+    el.classList.add('ok');
+  }else{
+    el.classList.add('ng');
+    btns.forEach(function(b){
+      var oc=b.getAttribute('onclick');
+      if(oc&&oc.indexOf("'"+correctKey+"'")>-1){b.classList.add('ok');}
+    });
+  }
+}
+
+// ─── 共通ヘルパー：解答ブロック表示＋全選択肢色分け ───
+function revealAns(qblockIdx,correctKey,ansId){
+  document.getElementById(ansId).classList.add('show');
+  var qb=document.querySelectorAll('.qblock')[qblockIdx].querySelectorAll('.cb');
+  qb.forEach(function(b){
+    var oc=b.getAttribute('onclick');
+    if(oc&&oc.indexOf("'"+correctKey+"'")>-1){
+      b.classList.remove('ng');
+      b.classList.add('ok');
+    }else if(!b.classList.contains('ok')){
+      b.classList.add('ng');
+    }
+  });
+}
+
+// ─── 設問1 ─ 正解 3 (meets this challenge) ───
+function sel1(el,key){singleSel(el,key,'3');}
+function rev1(){revealAns(0,'3','ans1');}
+
+// ─── 設問2 ─ 正解 1 (pronounced) ───
+function sel2(el,key){singleSel(el,key,'1');}
+function rev2(){revealAns(1,'1','ans2');}
+
+// ─── 設問3 ─ 正解 2 (However, the scale of the problem has changed) ───
+function sel3(el,key){singleSel(el,key,'2');}
+function rev3(){revealAns(2,'2','ans3');}
+
+// ─── 設問4 ─ 正解 2 (No matter the reason) ───
+function sel4(el,key){singleSel(el,key,'2');}
+function rev4(){revealAns(3,'2','ans4');}
+
+// ─── 設問5 ─ 正解 1 (make a difference) ───
+function sel5(el,key){singleSel(el,key,'1');}
+function rev5(){revealAns(4,'1','ans5');}
+
+// ─── 設問6 ─ 正解 4 (reduced with each increase) ───
+function sel6(el,key){singleSel(el,key,'4');}
+function rev6(){revealAns(5,'4','ans6');}
+
+// ─── 設問7 ─ 正解 4 (very) ───
+function sel7(el,key){singleSel(el,key,'4');}
+function rev7(){revealAns(6,'4','ans7');}
+</script>
+</body>
+</html>

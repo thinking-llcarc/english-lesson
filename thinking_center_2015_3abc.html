@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>センター試験 2015年 第3問A〜C｜完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;
+  --bd:#ddd9d0;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;
+  --ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;
+  --tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;
+  --am:#92560c;--aml:#fef3c7;--amd:#78350f;
+  --rd:#991b1b;--rdl:#fee2e2;
+  --pu:#4c3ab3;--pul:#ede9fe;
+  --r:10px;--rl:16px;
+}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+
+.qnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.qn{padding:10px 13px;font-size:11px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.qn:hover{color:var(--tx);}
+.qn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.qn.done{color:var(--tl);}
+.qn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.qn.active .qn-num{background:var(--ac);color:#fff;}
+.qn.done .qn-num{background:var(--tl);color:#fff;}
+
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.ph{display:none;}
+.ph.show{display:block;animation:fi .3s ease;}
+.ph-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:20px;font-size:11.5px;font-weight:700;margin-bottom:14px;}
+.ph1{background:var(--acl);color:var(--acd);}
+.ph2{background:var(--aml);color:var(--amd);}
+.ph3{background:var(--tll);color:var(--tld);}
+
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+
+/* CONV */
+.conv{display:flex;flex-direction:column;gap:5px;font-family:'Source Serif 4',serif;font-size:14.5px;line-height:1.95;padding:16px 18px;background:var(--s2);border-radius:var(--rl);border:.5px solid var(--bd);margin:12px 0;}
+.cl{display:flex;gap:11px;align-items:flex-start;padding:5px 0;}
+.csp{font-size:11.5px;font-weight:700;font-family:'Noto Sans JP',sans-serif;flex-shrink:0;width:66px;text-align:right;padding-top:2px;color:var(--t2);}
+.ctx{flex:1;line-height:1.9;}
+.bl{display:inline-flex;align-items:center;justify-content:center;min-width:46px;padding:1px 8px;background:var(--acd);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:11px;font-weight:700;border-radius:4px;margin:0 3px;vertical-align:middle;}
+
+.hl-k{background:#fff3cd;border-radius:2px;padding:0 2px;font-weight:700;}
+.hl-sig{color:var(--rd);font-weight:700;background:var(--rdl);border-radius:2px;padding:0 2px;}
+.hl-tl{color:var(--tld);font-weight:700;background:var(--tll);border-radius:2px;padding:0 2px;}
+.hl-am{color:var(--amd);font-weight:700;background:var(--aml);border-radius:2px;padding:0 2px;}
+.hl-ac{color:var(--acd);font-weight:700;background:var(--acl);border-radius:2px;padding:0 2px;}
+
+/* PARA */
+.para{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.15;padding:16px 18px;background:var(--s2);border-radius:var(--rl);border:.5px solid var(--bd);margin:12px 0;}
+.sent-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--ac);color:#fff;font-family:'Noto Sans JP',sans-serif;font-size:10px;font-weight:700;margin-right:5px;vertical-align:middle;flex-shrink:0;}
+
+/* LOGIC FLOW */
+.lflow{display:flex;flex-direction:column;gap:0;margin:12px 0;}
+.lf-item{display:flex;gap:0;align-items:stretch;}
+.lf-sp{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.lf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.lf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.lf-body{flex:1;padding:0 0 16px 13px;}
+.ltag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.lf-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.75;margin-bottom:3px;}
+.lf-ja{font-size:12.5px;color:var(--t2);line-height:1.7;}
+.lf-note{font-size:12px;font-weight:700;padding:5px 10px;border-radius:6px;margin-top:5px;line-height:1.6;}
+.arr-mid{text-align:center;font-size:15px;color:var(--ac);font-weight:700;margin:-4px 0;padding-left:21px;}
+
+/* CHOICES */
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:10px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:16px;}
+.rev{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev:hover{background:var(--acd);}
+.ans{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans.show{display:block;}
+
+/* CALLOUT */
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+
+/* PROOF */
+.proof{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.proof-hdr{padding:9px 14px;font-size:12px;font-weight:700;color:#fff;}
+.proof-body{padding:13px 14px;font-size:13px;line-height:1.8;}
+
+/* TRANS */
+.trans{border-radius:var(--rl);overflow:hidden;margin:10px 0;}
+.trans-hdr{padding:9px 15px;font-size:11px;font-weight:700;background:var(--tld);color:#fff;}
+.trans-body{padding:13px 15px;font-size:13.5px;line-height:1.95;background:var(--tll);color:var(--tld);font-family:'Noto Sans JP',sans-serif;}
+.trans-en{font-family:'Source Serif 4',serif;font-size:13px;color:var(--t2);margin-bottom:4px;line-height:1.7;}
+.trans-sp{display:inline-block;font-size:11px;font-weight:700;background:rgba(255,255,255,.6);padding:1px 8px;border-radius:4px;margin-right:6px;color:var(--tld);}
+
+/* NAV */
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:14px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:10px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:8px 16px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+
+.section-divider{margin:18px 0;padding:9px 14px;background:linear-gradient(90deg,var(--acd),#0d2545);border-radius:var(--r);color:#fff;font-size:12px;font-weight:700;letter-spacing:.08em;text-align:center;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜センター試験 完全解説</div>
+      <div class="brand-s">2015年 第3問A〜C — 全7問 / 論理で根拠を掴む</div>
+    </div>
+  </div>
+  <span class="badge">2015年 第3問</span>
+</div>
+
+<div class="qnav">
+  <button class="qn active" onclick="goQ('q0')" id="qb0"><span class="qn-num">★</span>核心の読み方</button>
+  <button class="qn" onclick="goQ('q27')" id="qb27"><span class="qn-num">27</span>That reminds me</button>
+  <button class="qn" onclick="goQ('q28')" id="qb28"><span class="qn-num">28</span>テニス決勝</button>
+  <button class="qn" onclick="goQ('q29')" id="qb29"><span class="qn-num">29</span>切手収集</button>
+  <button class="qn" onclick="goQ('q30')" id="qb30"><span class="qn-num">30</span>塩がお金</button>
+  <button class="qn" onclick="goQ('q31')" id="qb31"><span class="qn-num">31</span>テレビ時間ずらし</button>
+  <button class="qn" onclick="goQ('q32')" id="qb32"><span class="qn-num">32</span>迷信の定義</button>
+  <button class="qn" onclick="goQ('q33')" id="qb33"><span class="qn-num">33</span>偶然と迷信</button>
+  <button class="qn" onclick="goQ('q34')" id="qb34"><span class="qn-num">34</span>鳩の実験</button>
+</div>
+
+<div class="wrap">
+
+<!-- ★ 核心の読み方 -->
+<div class="pan active" id="q0">
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);color:#fff;border:none;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:7px;">2015年 第3問 — 7問完全解説</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;line-height:1.25;margin-bottom:10px;">3種類の問題 × 1つの読み方<br>論理で必ず根拠が取れる</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">A会話文（問27・28）・B段落整序（問29〜31）・C議論文（問32〜34）。<br>形式は違っても、全て「<strong>前後の文の論理的つながり</strong>」で必ず根拠が取れる。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">3つの問題形式 × 共通の読み方</div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--acd);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">第3問A 会話文（問27・28）</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--acl);">
+          空所の<strong>後の文</strong>から逆算する。「I have to go to the dry cleaner's」「Now I know it's important to...」が答え合わせ。
+        </div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--am);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">第3問B 段落整序（問29〜31）</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--aml);">
+          段落の<strong>テーマから論理が外れる文</strong>を抜く。「テーマ語の繰り返し」を追えば異物が浮き上がる。
+        </div>
+      </div>
+      <div style="border-radius:var(--r);overflow:hidden;border:.5px solid var(--bd);">
+        <div style="background:var(--tl);padding:8px 13px;color:#fff;font-size:12px;font-weight:700;">第3問C 議論文（問32〜34）</div>
+        <div style="padding:10px 13px;font-size:13px;line-height:1.8;background:var(--tll);">
+          Moderator の「So, you are saying that...」は<strong>直前の発言の要約</strong>。発言中のキーワードを抽出して選択肢と対応させる。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">考え方を理解したら問題へ</span>
+    <button class="btnp" onclick="goQ('q27')">問27から始める →</button>
+  </div>
+</div>
+
+<!-- ══ 問27 ══ -->
+<div class="pan" id="q27">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--ac);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">27</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Hiro と David — ジャケットの話で思い出す</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">I bought a new jacket → 空所 → I have to go to the dry cleaner's. I need to pick up my own jacket.</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q27p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      David「新しいジャケットを買った」→ 空所 → Hiro「クリーニング屋に行かないと。<strong>自分のジャケットを取りに行く必要がある</strong>」<br>
+      Davidのジャケットの話で → Hiroが自分のジャケットを思い出した<br>
+      → 「それで思い出した」という表現が入る。
+    </div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Hiro:</span><span class="ctx">What did you do this weekend?</span></div>
+      <div class="cl"><span class="csp">David:</span><span class="ctx">I went to the shopping mall. They were having a big spring sale.</span></div>
+      <div class="cl"><span class="csp">Hiro:</span><span class="ctx">Did you buy anything good?</span></div>
+      <div class="cl"><span class="csp">David:</span><span class="ctx">Yeah, I bought a new jacket.</span></div>
+      <div class="cl"><span class="csp">Hiro:</span><span class="ctx"><span class="bl">27</span> I have to go to the dry cleaner's. I need to pick up my own jacket.</span></div>
+    </div>
+    <div class="choices" id="q27c">
+      <button class="cb" onclick="sel('q27c',1)"><span class="cn">①</span>I can't remember.</button>
+      <button class="cb" onclick="sel('q27c',2)"><span class="cn">②</span>I remember that.</button>
+      <button class="cb" onclick="sel('q27c',3)"><span class="cn">③</span>Remind yourself.</button>
+      <button class="cb" onclick="sel('q27c',4)"><span class="cn">④</span>That reminds me.</button>
+    </div>
+    <button class="rev" onclick="showPh('q27p1','q27p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q27p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--ac);">前</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">David の発言</span>
+          <div class="lf-en">"I bought a new <span class="hl-k">jacket</span>."</div>
+          <div class="lf-ja">新しいジャケットを買った（キーワード：jacket）</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Hiro はジャケットの話を聞いて</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">空所の役割</span>
+          <div class="lf-en">→ Hiroは何かを思い出した</div>
+          <div class="lf-ja">空所には「（あなたの話で）思い出した」という意味の表現が入る</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 空所の後（答え合わせ）</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">Hiro の続き（決定的根拠）</span>
+          <div class="lf-en">"I have to go to the dry cleaner's. I need to pick up <span class="hl-tl">my own jacket</span>."</div>
+          <div class="lf-ja">クリーニング屋に行く必要がある。<strong>自分のジャケット</strong>を取りに。<br>→ Davidのjacketの話で<strong>自分のjacketのことを思い出した</strong></div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ That reminds me.（それで思い出した）= 直前の話題が「思い出すきっかけ」</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q27p2','q27p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q27p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：④ That reminds me.（それで思い出した）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>That reminds me.</strong>＝「それで思い出した」<br>
+          <strong>That</strong>＝直前の相手の話題（David の jacket の話）<br>
+          <strong>remind A of B</strong>＝AにBを思い出させる → That reminds me (of something)<br><br>
+          会話で何かを聞いて関連する自分の話を思い出した時の定型表現。<br>
+          ジャケット → 自分のジャケットのクリーニングを思い出した、という連想。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> I can't remember.（思い出せない）→ Hiroは「クリーニング屋に行く必要がある」と<strong>思い出している</strong>。逆方向。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> I remember that.（それを覚えている）→ Davidの発言の何を「覚えている」のか不明。文脈に合わない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> Remind yourself.（あなた自身に思い出させて）→ 命令文でDavidに何かを思い出すよう促す意味。文脈と合わない。
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">Hiro</span>週末は何してた？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">David</span>ショッピングモールに行ったよ。大きな春のセールをやっていてね。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Hiro</span>何かいいもの買った？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">David</span>うん、新しいジャケットを買ったよ。</div>
+        <div><span class="trans-sp">Hiro</span><strong>それで思い出した</strong>。クリーニング屋に行かなきゃ。自分のジャケットを取りに行かないと。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q0')">← 核心の読み方</button>
+      <button class="btnp" onclick="markDone('q27');goQ('q28')">問28へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問28 ══ -->
+<div class="pan" id="q28">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--am);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">28</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Amy と Miki — テニス決勝に負けた</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">It's OK. → 空所 → Now I know it's important to rest and relax before a big match next time.</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q28p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Miki：「決勝で負けた」「It's OK.（大丈夫）」→ 空所 →「次回は試合前に休んで落ち着くことが大切だとわかった」<br>
+      → 試合に負けたが、それを<strong>前向きな学び</strong>として捉えている内容が入る。
+    </div>
+    <div class="conv">
+      <div class="cl"><span class="csp">Amy:</span><span class="ctx">How was the tennis tournament? Did you win the championship?</span></div>
+      <div class="cl"><span class="csp">Miki:</span><span class="ctx">No. I lost the final match because I was exhausted and too nervous.</span></div>
+      <div class="cl"><span class="csp">Amy:</span><span class="ctx">I'm sorry to hear that.</span></div>
+      <div class="cl"><span class="csp">Miki:</span><span class="ctx">It's OK. <span class="bl">28</span> Now I know it's important to rest and relax before a big match next time.</span></div>
+      <div class="cl"><span class="csp">Amy:</span><span class="ctx">I'm sure you'll play better next year.</span></div>
+    </div>
+    <div class="choices" id="q28c">
+      <button class="cb" onclick="sel('q28c',1)"><span class="cn">①</span>I was very close to losing the final match.</button>
+      <button class="cb" onclick="sel('q28c',2)"><span class="cn">②</span>It turned out to be a good lesson for me.</button>
+      <button class="cb" onclick="sel('q28c',3)"><span class="cn">③</span>It was the easiest game I've ever had.</button>
+      <button class="cb" onclick="sel('q28c',4)"><span class="cn">④</span>I've totally given up playing tennis.</button>
+    </div>
+    <button class="rev" onclick="showPh('q28p1','q28p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q28p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 論理の流れを可視化</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--rd);">事実</div>
+          <div class="lf-line" style="background:linear-gradient(var(--rd),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--rdl);color:var(--rd);">Miki の状況</span>
+          <div class="lf-en">"<span class="hl-k">I lost the final match</span> because I was exhausted and too nervous."</div>
+          <div class="lf-ja">決勝で負けた（疲労と緊張のせい）</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ It's OK.（大丈夫）→ 前向きに捉えている</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">空所</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">空所の役割</span>
+          <div class="lf-en">「It's OK.」と「Now I know it's important to...」の橋渡し</div>
+          <div class="lf-ja">→ 負けたが、何か<strong>学び・教訓</strong>があった、という内容</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ Now I know（今となってはわかる）= 学んだことの説明</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">後</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">空所の後（決定的根拠）</span>
+          <div class="lf-en">"<span class="hl-tl">Now I know</span> it's important to rest and relax before a big match <span class="hl-tl">next time</span>."</div>
+          <div class="lf-ja">今なら<strong>次回</strong>のために重要なことがわかる<br>→ 負けた経験から<strong>学んだ</strong>（= lesson）</div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ It turned out to be a good lesson for me.（自分にとっていい教訓になった）</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q28p2','q28p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q28p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② It turned out to be a good lesson for me.（私にとっていい教訓になった）</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>turn out to be 〜</strong>＝「結局〜であることがわかる」<br>
+          <strong>a good lesson</strong>＝「いい教訓」<br><br>
+          <strong>論理の流れ：</strong><br>
+          「決勝で負けた」→「It's OK」→<strong>「いい教訓になった」</strong>→「次回は休むことが大切だとわかる」<br>
+          → 「教訓になった」と「次回のために学んだ」が完璧に対応。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> I was very close to losing the final match.（決勝で負けそうだった）→ 既に「I lost」と明言している。「負けそうだった」は事実と矛盾。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> It was the easiest game I've ever had.（今までで一番楽な試合だった）→ 「疲労と緊張」で負けた話と矛盾。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> I've totally given up playing tennis.（テニスを完全に諦めた）→ Amyの「来年はもっと上手にプレーできるはず」という発言と矛盾。
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳</div>
+      <div class="trans-body">
+        <div style="margin-bottom:8px;"><span class="trans-sp">Amy</span>テニスの大会はどうだった？優勝した？</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Miki</span>ううん。決勝で負けたの。疲れすぎて、緊張もしすぎてたから。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Amy</span>それは残念だね。</div>
+        <div style="margin-bottom:8px;"><span class="trans-sp">Miki</span>大丈夫だよ。<strong>いい教訓になったから</strong>。次の大事な試合の前には休んで落ち着くことが大切だってわかったわ。</div>
+        <div><span class="trans-sp">Amy</span>来年はもっとうまくプレーできるって信じてるよ。</div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q27')">← 問27</button>
+      <button class="btnp" onclick="markDone('q28');goQ('q29')">問29へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問29 段落整序：切手収集 ══ -->
+<div class="pan" id="q29">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--tl);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">29</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">段落整序 — 切手収集の趣味としての魅力</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">テーマ：趣味としての切手収集の<strong>利点</strong></div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q29p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      第1文：「切手収集は安価で好きな時に楽しめる教育的な趣味」→ テーマ＝<strong>趣味としての切手収集の利点</strong><br>
+      最後の文：「新しい趣味を探しているなら切手収集が向いているかも」→ 利点を並べてオススメする段落<br>
+      → 「利点」と関係ない情報を抜く
+    </div>
+    <div class="para">
+      <span class="sent-num" style="background:#374151;">T</span>Stamp collecting is an educational hobby that can be inexpensive and enjoyed whenever you want.<br>
+      <span class="sent-num">①</span>It provides a nice and practical way of learning about history, geography, famous people, and customs of various countries worldwide.<br>
+      <span class="sent-num">②</span>This hobby began soon after the world saw the first postage stamp issued in Great Britain in 1840.<br>
+      <span class="sent-num">③</span>You can also get started without spending money by saving the stamps on envelopes you receive.<br>
+      <span class="sent-num">④</span>In addition, you are able to work on your collection any time, rain or shine.<br>
+      <span style="font-size:13px;color:var(--t2);">If you are looking for a new hobby, stamp collecting might be right for you!</span>
+    </div>
+    <div class="choices" id="q29c">
+      <button class="cb" onclick="sel('q29c',1)"><span class="cn">①</span>It provides a nice and practical way of learning about history...</button>
+      <button class="cb" onclick="sel('q29c',2)"><span class="cn">②</span>This hobby began soon after the world saw the first postage stamp issued in Great Britain in 1840.</button>
+      <button class="cb" onclick="sel('q29c',3)"><span class="cn">③</span>You can also get started without spending money by saving the stamps...</button>
+      <button class="cb" onclick="sel('q29c',4)"><span class="cn">④</span>In addition, you are able to work on your collection any time, rain or shine.</button>
+    </div>
+    <button class="rev" onclick="showPh('q29p1','q29p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q29p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — テーマと各文の関係を整理</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:10px 0;font-size:13px;">
+      <div style="padding:9px 13px;background:var(--acl);border-radius:var(--r);border:.5px solid #93c5fd;">
+        <strong>テーマ文：</strong>切手収集は <strong>educational / inexpensive / enjoyed whenever you want</strong>（教育的・安い・好きな時に楽しめる）→ テーマ＝<strong>趣味としての利点</strong>
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓①</strong> 歴史・地理・有名人・各国の習慣を学べる → <strong>educationalの具体例</strong>（テーマの「教育的」と一致）
+      </div>
+      <div style="padding:9px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+        <strong style="color:var(--rd);">×②</strong> この趣味は1840年にイギリスで最初の切手が発行された直後に始まった → <strong>歴史的な事実</strong>。「趣味としての利点」とは関係ない！
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓③</strong> 受け取った封筒の切手を保存することで<strong>お金をかけずに</strong>始められる → <strong>inexpensiveの具体例</strong>
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓④</strong> いつでも（雨でも晴れでも）コレクションに取り組める → <strong>enjoyed whenever you wantの具体例</strong>
+      </div>
+    </div>
+    <div class="co co-r">
+      <div class="co-lbl">論理が外れる文を発見</div>
+      テーマ文の3つの利点「educational・inexpensive・enjoyed whenever you want」に対して、①③④はそれぞれが具体例になっている。<br>
+      ②だけ「歴史」の話で、趣味としての利点を語っていない → 異物。
+    </div>
+    <button class="rev" onclick="showPh('q29p2','q29p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q29p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② This hobby began soon after the world saw the first postage stamp issued in Great Britain in 1840.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          段落のテーマは「切手収集の<strong>趣味としての利点</strong>」。①③④は全てテーマ文の3つの利点（educational / inexpensive / enjoyed whenever you want）の具体例になっている。<br>
+          ②だけが「1840年にイギリスで」という<strong>歴史的事実</strong>を述べていて、利点ではない → 異物。
+        </div>
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳（②を除いた完成版）</div>
+      <div class="trans-body">
+        切手収集は、安価で好きな時に楽しめる教育的な趣味だ。①これは、世界中の様々な国の歴史、地理、有名人、習慣について学ぶ素敵で実用的な方法を提供する。③また、受け取った封筒の切手を保存することで、お金をかけずに始めることもできる。④さらに、雨でも晴れでもいつでもコレクションに取り組むことができる。新しい趣味を探しているなら、切手収集はあなたにぴったりかもしれない！
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q28')">← 問28</button>
+      <button class="btnp" onclick="markDone('q29');goQ('q30')">問30へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問30 塩がお金 ══ -->
+<div class="pan" id="q30">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--am);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">30</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">段落整序 — 塩がお金として使われた理由</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">テーマ：塩がお金に適していた<strong>特性</strong></div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q30p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      テーマ文：「塩がお金として使われた<strong>いくつかの理由</strong>がある」<br>
+      最後の文：「塩はお金として適した特性がある」<br>
+      → 段落は「<strong>塩がお金として適した理由・特性</strong>」を列挙する構造<br>
+      → お金としての特性と関係ない文を抜く
+    </div>
+    <div class="para">
+      <span class="sent-num" style="background:#374151;">T</span>Until relatively recently, people in some parts of the world continued to use salt as a form of cash. There are several reasons why salt was used as money. Salt was given an economic value because there were so few places that produced it in large quantities.<br>
+      <span class="sent-num">①</span>Another reason is that salt is fairly light and easy to carry for trading purposes.<br>
+      <span class="sent-num">②</span>Additionally, salt can be measured, so we can easily calculate its value based on its weight.<br>
+      <span class="sent-num">③</span>Furthermore, salt stays in good condition for a very long period of time, so it holds its value.<br>
+      <span class="sent-num">④</span>Last but not least, salt has many other uses such as melting ice on roads in snowy regions.<br>
+      <span style="font-size:13px;color:var(--t2);">In short, salt has certain characteristics that make it suitable as a form of money.</span>
+    </div>
+    <div class="choices" id="q30c">
+      <button class="cb" onclick="sel('q30c',1)"><span class="cn">①</span>Another reason is that salt is fairly light and easy to carry...</button>
+      <button class="cb" onclick="sel('q30c',2)"><span class="cn">②</span>Additionally, salt can be measured, so we can easily calculate its value...</button>
+      <button class="cb" onclick="sel('q30c',3)"><span class="cn">③</span>Furthermore, salt stays in good condition for a very long period...</button>
+      <button class="cb" onclick="sel('q30c',4)"><span class="cn">④</span>Last but not least, salt has many other uses such as melting ice on roads...</button>
+    </div>
+    <button class="rev" onclick="showPh('q30p1','q30p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q30p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — テーマと各文の関係を整理</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:10px 0;font-size:13px;">
+      <div style="padding:9px 13px;background:var(--acl);border-radius:var(--r);border:.5px solid #93c5fd;">
+        <strong>テーマ：</strong>塩がお金（money）として適した<strong>特性</strong>を列挙
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓①</strong> Another reason：塩は軽く運びやすい→<strong>取引（trading）に適する</strong>＝お金としての特性
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓②</strong> Additionally：重さで測れる→<strong>価値計算が容易</strong>＝お金としての特性
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓③</strong> Furthermore：長期間良い状態を保つ→<strong>価値が維持される</strong>＝お金としての特性
+      </div>
+      <div style="padding:9px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+        <strong style="color:var(--rd);">×④</strong> Last but not least：塩には<strong>道路の雪を溶かす</strong>などの他の用途がある<br>→ これは「お金としての特性」ではなく「<strong>他の用途</strong>」。テーマから完全に外れる！
+      </div>
+    </div>
+    <div class="co co-r">
+      <div class="co-lbl">論理が外れる文を発見</div>
+      ④の「Last but not least」は「最後だが重要な」という接続詞で並列の最後の項目に使う表現。だが内容は「お金としての特性」ではなく<strong>道路の雪を溶かすなどの別の用途</strong>。<br>
+      テーマ「塩のお金としての特性」に合わない → 異物。
+    </div>
+    <button class="rev" onclick="showPh('q30p2','q30p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q30p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：④ Last but not least, salt has many other uses such as melting ice on roads in snowy regions.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          段落全体は「塩が<strong>お金として</strong>使われた理由」を列挙する構造。①「運びやすい」②「測れる」③「保存できる」は全て<strong>お金としての特性</strong>。<br>
+          ④の「道路の雪を溶かす」は<strong>お金とは別の用途</strong>で、テーマから外れる。<br><br>
+          <strong>注意：</strong>「Last but not least」という接続詞があるからといって正しいとは限らない。接続詞ではなく<strong>内容</strong>を見る！
+        </div>
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳（④を除いた完成版）</div>
+      <div class="trans-body">
+        比較的最近まで、世界のいくつかの地域では塩を現金の一形態として使い続けていた。塩がお金として使われたのには<strong>いくつかの理由</strong>がある。塩は大量に生産される場所が非常に少なかったため、経済的価値を与えられた。①もう一つの理由は、塩はかなり軽くて、取引のために運びやすいことだ。②さらに、塩は計量できるので、重さに基づいて簡単にその価値を計算できる。③加えて、塩は非常に長い間良い状態を保つので、価値が維持される。要するに、塩にはお金の一形態として適した特定の特性がある。
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q29')">← 問29</button>
+      <button class="btnp" onclick="markDone('q30');goQ('q31')">問31へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問31 テレビ時間 ══ -->
+<div class="pan" id="q31">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--pu);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">31</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">段落整序 — テレビ番組の時間ずらし戦略</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">テーマ：テレビ局が時間をずらす戦略の<strong>説明</strong></div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q31p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      第1文：「昔の日本のテレビ番組は時間ちょうどに始まり終わった」→ テーマ＝<strong>テレビ番組の開始・終了時間の戦略</strong><br>
+      最後の文：「視聴者を失うのが怖いから続けている」<br>
+      → 段落は「時間をずらす戦略」の<strong>理由・効果・現状</strong>を説明<br>
+      → 時間戦略と関係ない情報を抜く
+    </div>
+    <div class="para">
+      <span class="sent-num" style="background:#374151;">T</span>In the past, most Japanese TV shows started and ended exactly on the hour.<br>
+      <span class="sent-num">①</span>While TV shows vary from station to station, on the whole, early morning hours are dominated by news programs and evening hours by variety shows.<br>
+      <span class="sent-num">②</span>Because of competition, some networks tried to gain an advantage over their rivals by starting their programs a little earlier.<br>
+      <span class="sent-num">③</span>Many people start channel surfing near the end of a program, and the networks thought that if their show started a couple of minutes earlier, people would start watching it.<br>
+      <span class="sent-num">④</span>Another strategy was to end a popular show a little after the hour so that people would stick to one channel and miss the beginning of shows on other channels.<br>
+      <span style="font-size:13px;color:var(--t2);">Now that many stations have adopted these strategies, the advantage for any one station is lost. Even so, they continue this practice because they are afraid of losing viewers.</span>
+    </div>
+    <div class="choices" id="q31c">
+      <button class="cb" onclick="sel('q31c',1)"><span class="cn">①</span>While TV shows vary from station to station, on the whole, early morning hours are dominated by news programs...</button>
+      <button class="cb" onclick="sel('q31c',2)"><span class="cn">②</span>Because of competition, some networks tried to gain an advantage by starting their programs a little earlier.</button>
+      <button class="cb" onclick="sel('q31c',3)"><span class="cn">③</span>Many people start channel surfing near the end of a program, and the networks thought that if their show started a couple of minutes earlier...</button>
+      <button class="cb" onclick="sel('q31c',4)"><span class="cn">④</span>Another strategy was to end a popular show a little after the hour so that people would stick to one channel...</button>
+    </div>
+    <button class="rev" onclick="showPh('q31p1','q31p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q31p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — テーマと各文の関係を整理</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:10px 0;font-size:13px;">
+      <div style="padding:9px 13px;background:var(--acl);border-radius:var(--r);border:.5px solid #93c5fd;">
+        <strong>テーマ：</strong>テレビ局が番組の<strong>開始・終了時間をずらす戦略</strong>の説明
+      </div>
+      <div style="padding:9px 13px;background:var(--rdl);border-radius:var(--r);border:.5px solid #fca5a5;">
+        <strong style="color:var(--rd);">×①</strong> 番組は局ごとに違うが、早朝はニュース、夜はバラエティが多い<br>→ <strong>番組の時間帯ごとのジャンル</strong>の話。「時間ずらし戦略」と関係ない！
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓②</strong> 競争のため、一部の局は番組を<strong>少し早く始める</strong>戦略をとった → 第1戦略の説明
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓③</strong> 番組終わり頃にチャンネルサーフィンを始める人が多い→数分早く始めれば見てもらえる → ②の戦略の<strong>理由</strong>
+      </div>
+      <div style="padding:9px 13px;background:var(--tll);border-radius:var(--r);border:.5px solid #6ee7b7;">
+        <strong style="color:var(--tl);">✓④</strong> もう一つの戦略は人気番組を<strong>時間より少し後に終わらせる</strong> → 第2戦略の説明
+      </div>
+    </div>
+    <div class="co co-r">
+      <div class="co-lbl">論理が外れる文を発見</div>
+      ②③④は「時間ずらし戦略」の<strong>具体的な内容と理由</strong>を説明している。<br>
+      ①だけ「早朝はニュース、夜はバラエティ」という<strong>時間帯ごとのジャンル</strong>の話で、時間ずらし戦略の話と無関係 → 異物。
+    </div>
+    <button class="rev" onclick="showPh('q31p2','q31p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q31p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：① While TV shows vary from station to station, on the whole, early morning hours are dominated by news programs and evening hours by variety shows.</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          段落のテーマは「テレビ局が<strong>時間をずらす戦略</strong>」。②③④は全てその戦略の説明と理由になっている。<br>
+          ①は「番組のジャンル」の話で、時間ずらし戦略と無関係 → 異物。<br><br>
+          <strong>罠：</strong>「TV shows」という同じテーマ語が出てくるので一見繋がっているように見える。<br>
+          しかし<strong>テーマは「時間」</strong>であって「ジャンル」ではない。
+        </div>
+      </div>
+    </div>
+
+    <div class="trans">
+      <div class="trans-hdr">和訳（①を除いた完成版）</div>
+      <div class="trans-body">
+        昔、日本のテレビ番組のほとんどは時間ちょうどに始まり終わっていた。②競争のため、いくつかのテレビ局はライバルに対する優位を得ようと、番組を少し早く始めようとした。③多くの人は番組の終わり頃にチャンネルサーフィン（チャンネルを次々変えて見る）を始める。テレビ局は、もし番組が数分早く始まれば、人々が見始めるだろうと考えた。④もう一つの戦略は、人気番組を時間より少し後に終わらせることで、人々が一つのチャンネルに留まり、他のチャンネルの番組の冒頭を見逃すようにすることだった。多くの局がこれらの戦略を採用した今、特定の局の優位は失われている。それでも、視聴者を失うのを恐れて、彼らはこの慣行を続けている。
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q30')">← 問30</button>
+      <button class="btnp" onclick="markDone('q31');goQ('q32')">問32へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 第3問C — 公開講座「迷信」══ -->
+<div class="pan" id="q32">
+
+  <div class="section-divider">第3問 C — 公開講座「迷信とは何か、なぜ人は信じるのか」</div>
+
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--ac);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">32</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Joseph の発言を要約 — 迷信とは何か</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">Moderator: "So, it is your view that ___"</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q32p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Joseph の発言から核心キーワードを拾う：<br>
+      ①「迷信＝合理的根拠のない信念」<br>
+      ②「日付・数字で迷信を信じる」（具体例）<br>
+      ③「<strong>異常な出来事に意味づけする方法の1つ</strong>」「人を幸不幸を感じさせる」<br>
+      → 「迷信は<strong>身の回りの異常な出来事を説明する</strong>方法」というのが核心
+    </div>
+
+    <div class="conv" style="font-size:13.5px;">
+      <div class="cl"><span class="csp">Joseph:</span><span class="ctx">Superstitions are beliefs for which there is no obvious rational basis. For example, there are various dates and numbers that people are superstitious about. ... A superstitious person believes that actions such as choosing or avoiding certain numbers can influence future events even though there is no direct connection between them. <span class="hl-am">Believing in superstitions is one of the ways humans can make sense of a set of unusual events which cause someone to feel lucky or unlucky.</span> This seems to have been true throughout history, regardless of race or cultural background.</span></div>
+      <div class="cl"><span class="csp">Mod:</span><span class="ctx">So, it is your view that <span class="bl">32</span>.</span></div>
+    </div>
+
+    <div class="choices" id="q32c">
+      <button class="cb" onclick="sel('q32c',1)"><span class="cn">①</span>superstitions are rationally based on certain dates and numbers</button>
+      <button class="cb" onclick="sel('q32c',2)"><span class="cn">②</span>superstitions can be used to explain strange happenings around us</button>
+      <button class="cb" onclick="sel('q32c',3)"><span class="cn">③</span>superstitious people believe race and culture are related to luck</button>
+      <button class="cb" onclick="sel('q32c',4)"><span class="cn">④</span>superstitious people tend to have identical beliefs regarding history</button>
+    </div>
+    <button class="rev" onclick="showPh('q32p1','q32p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q32p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — Joseph の発言の核心を抽出</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--ac);">①</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">迷信の定義</span>
+          <div class="lf-en">"Superstitions are beliefs for which there is <span class="hl-sig">no obvious rational basis</span>"</div>
+          <div class="lf-ja">迷信＝合理的根拠のない信念</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ For example（具体例）</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">②</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">具体例</span>
+          <div class="lf-en">Friday the 13th, 4 and 9 (unlucky), Lucky 7 など</div>
+          <div class="lf-ja">日付や数字に関する迷信</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 核心の主張</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">③</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">Joseph の主張のコア</span>
+          <div class="lf-en">"Believing in superstitions is one of the ways humans can <span class="hl-tl">make sense of</span> a set of <span class="hl-tl">unusual events</span>"</div>
+          <div class="lf-ja">迷信を信じることは、人間が<strong>異常な出来事を理解する</strong>方法の1つ</div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ make sense of unusual events = explain strange happenings（言い換え）</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q32p2','q32p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q32p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② superstitions can be used to explain strange happenings around us</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>Josephの発言 ⇔ 選択肢②の対応：</strong><br><br>
+          ・make sense of → <strong>explain</strong>（説明する・意味づける）<br>
+          ・unusual events → <strong>strange happenings around us</strong>（身の回りの異常な出来事）<br>
+          ・one of the ways humans... → <strong>can be used to</strong><br><br>
+          Josephの主張：迷信は身の回りの不思議な出来事を理解する手段 → ②が完全一致。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> rationally based on certain dates and numbers → Joseph は「<strong>no obvious rational basis</strong>（合理的根拠がない）」と言っている。逆。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> race and culture are related to luck → Joseph は「regardless of race or cultural background（人種・文化に関わらず）」と言っており、人種・文化と運の関係を否定している。逆。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> identical beliefs regarding history → 「歴史を通じて同じ」と「歴史についての同一の信念」は意味が違う。Joseph は「歴史を通じて人間がそういう傾向を持っている」と言っている。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q31')">← 問31</button>
+      <button class="btnp" onclick="markDone('q32');goQ('q33')">問33へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問33 ══ -->
+<div class="pan" id="q33">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--pu);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">33</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Joseph の発言 — 偶然と迷信</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">Moderator: "So, you are saying that ___"</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q33p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Joseph の発言を要約：<br>
+      ①「原始的な信念体系」は人間がパターンを探す傾向から発達<br>
+      ②「偶然の出来事がパターンと誤認される」（ラッキーペンシルの例）<br>
+      ③「自分も Ame-otoko（雨男）と呼ばれた経験」（具体例）<br>
+      ④ 「<strong>原始的信念 + 偶然</strong> = 迷信を作る」（結論）<br>
+      → 「<strong>偶然の出来事が迷信を生む</strong>」が核心
+    </div>
+
+    <div class="conv" style="font-size:13.5px;">
+      <div class="cl"><span class="csp">Joseph:</span><span class="ctx">A primitive belief system develops from the natural human tendency to look for patterns in the world around us. However, sometimes <span class="hl-am">chance or coincidental events are mistaken for a pattern</span>... I experienced this myself when I was called "Ame-otoko" ... <span class="hl-am">our primitive belief system, combined with coincidence, creates a superstition</span> around the "Rain-man."</span></div>
+      <div class="cl"><span class="csp">Mod:</span><span class="ctx">How interesting! So, you are saying that <span class="bl">33</span>.</span></div>
+    </div>
+
+    <div class="choices" id="q33c">
+      <button class="cb" onclick="sel('q33c',1)"><span class="cn">①</span>an "Ame-otoko" or "Rain-man" causes rain to fall from the sky</button>
+      <button class="cb" onclick="sel('q33c',2)"><span class="cn">②</span>coincidental events or chance patterns can create superstitions</button>
+      <button class="cb" onclick="sel('q33c',3)"><span class="cn">③</span>looking for patterns is an unnatural action for humans</button>
+      <button class="cb" onclick="sel('q33c',4)"><span class="cn">④</span>primitive belief systems create coincidental events</button>
+    </div>
+    <button class="rev" onclick="showPh('q33p1','q33p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q33p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — Joseph の論理を追う</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--ac);">①</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">人間の傾向</span>
+          <div class="lf-en">"natural human tendency to <span class="hl-ac">look for patterns</span>"</div>
+          <div class="lf-ja">人間はパターンを探す傾向がある</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ However（しかし）</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">②</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">問題点</span>
+          <div class="lf-en">"<span class="hl-am">chance or coincidental events</span> are mistaken for a pattern"</div>
+          <div class="lf-ja">偶然の出来事がパターンと誤認される（ラッキーペンシル・雨男の例）</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 結論（核心）</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">③</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">主張のコア</span>
+          <div class="lf-en">"primitive belief system, <span class="hl-tl">combined with coincidence, creates a superstition</span>"</div>
+          <div class="lf-ja">原始的信念体系と偶然が組み合わさって<strong>迷信を作り出す</strong></div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ coincidence + chance → create superstitions = ②</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q33p2','q33p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q33p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：② coincidental events or chance patterns can create superstitions</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>Josephの発言 ⇔ 選択肢②の対応：</strong><br><br>
+          ・chance or coincidental events → <strong>coincidental events or chance patterns</strong>（同じ語の組み合わせ）<br>
+          ・creates a superstition → <strong>can create superstitions</strong><br><br>
+          Joseph の主張：偶然の出来事から迷信が生まれる → ②が直接的に一致。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×①</strong> "Ame-otoko" causes rain to fall → Joseph は「Rationally speaking, we know that <strong>nobody can make rain fall</strong>」と否定している。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> looking for patterns is an unnatural action → Joseph は「<strong>natural human tendency</strong>（人間の自然な傾向）」と言っている。逆。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> primitive belief systems create coincidental events → 因果関係が逆。「信念が偶然を作る」ではなく「偶然が誤認される」。
+      </div>
+    </div>
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q32')">← 問32</button>
+      <button class="btnp" onclick="markDone('q33');goQ('q34')">問34へ →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ 問34 ══ -->
+<div class="pan" id="q34">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;">
+    <div style="width:44px;height:44px;border-radius:12px;background:var(--tl);color:#fff;font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;display:flex;align-items:center;justify-content:center;">34</div>
+    <div>
+      <div style="font-size:16px;font-weight:700;">Lily の発言 — 鳩の迷信実験</div>
+      <div style="font-size:11px;color:var(--t2);margin-top:2px;">Moderator: "So, that psychologist thought from the experiment that ___"</div>
+    </div>
+  </div>
+
+  <div class="ph show" id="q34p1">
+    <div class="ph-badge ph1">📖 PHASE 1 — まず自分で考える</div>
+    <div class="co co-b" style="margin-bottom:12px;">
+      <div class="co-lbl">考えるポイント</div>
+      Lily の発言を要約：<br>
+      ①「Superstition in the Pigeon」という実験で鳩がエサに対して特定の動作を繰り返す<br>
+      ②「心理学者は<strong>人間も同じことをする</strong>と推測した」<br>
+      ③「迷信深い人間も、迷信深い鳩と同じく、論理的繋がりがない行動を結果と結びつける」<br>
+      → <strong>鳩も人間も「迷信的行動」をする</strong>というのが心理学者の結論
+    </div>
+
+    <div class="conv" style="font-size:13.5px;">
+      <div class="cl"><span class="csp">Lily:</span><span class="ctx">"Superstition in the Pigeon" on a group of hungry birds. ... The psychologist observed that the pigeons began to repeat the specific body movements... He believed that the pigeons were trying to influence the machine. <span class="hl-am">He assumed that we humans also do the same and try to influence future events by performing non-logical actions.</span> <span class="hl-am">Superstitious humans, just like the "superstitious" pigeons, associate an action with an outcome</span> even though there is no logical connection.</span></div>
+      <div class="cl"><span class="csp">Mod:</span><span class="ctx">So, that psychologist thought from the experiment that <span class="bl">34</span>.</span></div>
+    </div>
+
+    <div class="choices" id="q34c">
+      <button class="cb" onclick="sel('q34c',1)"><span class="cn">①</span>pigeons and humans both perform superstitious actions</button>
+      <button class="cb" onclick="sel('q34c',2)"><span class="cn">②</span>pigeons and humans both tend to influence machines</button>
+      <button class="cb" onclick="sel('q34c',3)"><span class="cn">③</span>the pigeons knew when the food would be delivered</button>
+      <button class="cb" onclick="sel('q34c',4)"><span class="cn">④</span>the pigeons' repeated actions influenced the food delivery</button>
+    </div>
+    <button class="rev" onclick="showPh('q34p1','q34p2')">自分で選んだ → 論理の流れを確認 ▶</button>
+  </div>
+
+  <div class="ph" id="q34p2">
+    <div class="ph-badge ph2">🔍 PHASE 2 — 心理学者の結論を追う</div>
+    <div class="lflow">
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--ac);">①</div>
+          <div class="lf-line" style="background:linear-gradient(var(--ac),var(--am));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--acl);color:var(--acd);">実験観察</span>
+          <div class="lf-en">"pigeons began to <span class="hl-ac">repeat specific body movements</span>"</div>
+          <div class="lf-ja">鳩が特定の動作を繰り返した（エサを呼び寄せようとして）</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 心理学者の推測</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--am);">②</div>
+          <div class="lf-line" style="background:linear-gradient(var(--am),var(--tl));"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--aml);color:var(--amd);">人間との比較</span>
+          <div class="lf-en">"He assumed that <span class="hl-am">we humans also do the same</span> and try to influence future events by performing <span class="hl-am">non-logical actions</span>"</div>
+          <div class="lf-ja">人間も同じことをする＝<strong>論理的でない行動</strong>で未来に影響を与えようとする</div>
+        </div>
+      </div>
+      <div class="arr-mid">↓ 結論</div>
+      <div class="lf-item">
+        <div class="lf-sp">
+          <div class="lf-dot" style="background:var(--tl);">③</div>
+          <div class="lf-line" style="background:transparent;"></div>
+        </div>
+        <div class="lf-body">
+          <span class="ltag" style="background:var(--tll);color:var(--tld);">心理学者の結論</span>
+          <div class="lf-en">"<span class="hl-tl">Superstitious humans, just like the "superstitious" pigeons</span>, associate an action with an outcome"</div>
+          <div class="lf-ja">迷信深い人間も鳩と同じく行動と結果を結びつける<br>→ <strong>鳩も人間も迷信的な行動をする</strong></div>
+          <div class="lf-note" style="background:var(--tll);color:var(--tld);">→ non-logical actions = superstitious actions（言い換え）</div>
+        </div>
+      </div>
+    </div>
+    <button class="rev" onclick="showPh('q34p2','q34p3')">論理OK → 完全解説 ▶</button>
+  </div>
+
+  <div class="ph" id="q34p3">
+    <div class="ph-badge ph3">✅ PHASE 3 — 完全解説</div>
+    <div class="proof" style="border:.5px solid #9fe1cb;">
+      <div class="proof-hdr" style="background:var(--tl);">🎯 正解：① pigeons and humans both perform superstitious actions</div>
+      <div class="proof-body" style="background:var(--tll);">
+        <div style="font-size:13px;line-height:1.8;">
+          <strong>心理学者の結論 ⇔ 選択肢①の対応：</strong><br><br>
+          ・Superstitious humans, just like the "superstitious" pigeons → <strong>pigeons and humans both</strong>（両方）<br>
+          ・non-logical actions / associate an action with an outcome → <strong>superstitious actions</strong>（迷信的な行動）<br><br>
+          心理学者の主張：<strong>鳩も人間も迷信的な行動をする</strong>。①が完全一致。
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;font-size:13px;margin-top:8px;">
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×②</strong> both tend to influence machines → 「機械に影響を与える」は鳩が<strong>そう信じている</strong>だけで、心理学者は人間が機械に影響を与えると主張しているのではない。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×③</strong> pigeons knew when food would be delivered → 文中に「regular time intervals（一定の間隔）」とあるが、「鳩が時間を知っていた」とは書かれていない。むしろ鳩は<strong>自分の動作のせいでエサが来ると勘違い</strong>している。
+      </div>
+      <div style="padding:8px 12px;background:var(--rdl);border-radius:var(--r);">
+        <strong>×④</strong> repeated actions influenced food delivery → 実際は「automatic time intervals（自動で一定間隔）」で配給されている。鳩の動作は<strong>影響しない</strong>。これは鳩の「迷信」であって事実ではない。
+      </div>
+    </div>
+
+    <!-- 全問まとめ -->
+    <div style="background:#0a1628;border-radius:var(--rl);padding:22px;color:#fff;margin-top:16px;">
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;margin-bottom:12px;">全7問を通じて証明されたこと</div>
+      <div style="display:flex;flex-direction:column;gap:9px;font-size:13.5px;">
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>会話文（問27・28）：</strong>空所の後の発言が答え合わせ。「dry cleaner's / my own jacket」→ That reminds me / 「Now I know it's important」→ a good lesson
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>段落整序（問29〜31）：</strong>テーマと無関係な文を抜く。①切手の歴史（利点の段落で異物）/ ④雪を溶かす別の用途（お金の段落で異物）/ ①番組ジャンル（時間ずらしの段落で異物）
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.07);border-radius:var(--r);">
+          <strong>議論文（問32〜34）：</strong>「make sense of unusual events = explain strange happenings」「chance + coincidence creates superstitions」「non-logical actions = superstitious actions」と<strong>言い換え</strong>で対応。
+        </div>
+        <div style="padding:10px 13px;background:rgba(255,255,255,.15);border-radius:var(--r);border:1px solid rgba(255,255,255,.18);">
+          <strong>「なんとなく」ではなく「前後の論理的つながり」で根拠が取れる</strong> — 全7問が証明済み。
+        </div>
+      </div>
+    </div>
+
+    <div class="navrow">
+      <button class="btns" onclick="goQ('q33')">← 問33</button>
+      <button class="btnp" onclick="markDone('q34');goQ('q0')">核心の読み方に戻る ↺</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+var ans={q27c:4,q28c:2,q29c:2,q30c:4,q31c:1,q32c:2,q33c:2,q34c:1};
+var sm={};
+var doneList=[];
+
+function goQ(id){
+  document.querySelectorAll('.pan').forEach(function(p){p.classList.remove('active');});
+  document.getElementById(id).classList.add('active');
+  document.querySelectorAll('.qn').forEach(function(b){b.classList.remove('active');});
+  var btn=document.getElementById('qb'+id.replace('q',''));
+  if(btn)btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function sel(qid,n){
+  sm[qid]=n;
+  document.querySelectorAll('#'+qid+' .cb').forEach(function(b){b.classList.remove('sel','ok','ng');});
+  document.querySelector('#'+qid+' .cb:nth-child('+n+')').classList.add('sel');
+}
+
+function showPh(from,to){
+  var f=document.getElementById(from);
+  var t=document.getElementById(to);
+  if(f)f.classList.remove('show');
+  if(t){t.classList.add('show');setTimeout(function(){t.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+}
+
+function markDone(qid){
+  if(doneList.indexOf(qid)<0)doneList.push(qid);
+  var btn=document.getElementById('qb'+qid);
+  if(btn)btn.classList.add('done');
+  var cid=qid+'c';
+  if(ans[cid]){
+    var c=ans[cid],my=sm[cid];
+    document.querySelectorAll('#'+cid+' .cb').forEach(function(b,i){
+      b.classList.remove('sel','ok','ng');
+      if(i+1===c)b.classList.add('ok');
+      if(my&&i+1===my&&my!==c)b.classList.add('ng');
+    });
+  }
+}
+</script>
+</body>
+</html>
