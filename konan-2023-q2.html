@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>甲南大学 2023年 大問2｜英語 完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;--bd:#ddd9d0;--bd2:#ccc8be;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;--ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;--tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;--am:#92560c;--aml:#fef3c7;--amd:#78350f;--rd:#991b1b;--rdl:#fee2e2;--pu:#4c3ab3;--pul:#ede9fe;--r:10px;--rl:16px;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.hdr-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+.pnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.pn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.pn:hover{color:var(--tx);}
+.pn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.pn.done{color:var(--tl);}
+.pn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pn.active .pn-num{background:var(--ac);color:#fff;}
+.pn.done .pn-num{background:var(--tl);color:#fff;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+.passage{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.2;color:var(--tx);}
+.passage p{margin-bottom:1em;}
+.passage em{font-style:italic;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--acd);color:#fff;font-size:10px;font-weight:700;margin-right:6px;vertical-align:middle;font-family:'Space Grotesk',sans-serif;}
+.ul{border-bottom:1.5px solid var(--ac);padding-bottom:1px;}
+.uln{font-size:9px;font-weight:700;color:var(--ac);vertical-align:super;margin-right:1px;font-family:'Noto Sans JP',sans-serif;line-height:0;}
+.blank{display:inline-block;background:var(--aml);color:var(--amd);font-weight:700;padding:1px 12px;border-radius:6px;font-size:13px;border:1px dashed var(--am);font-family:'Noto Sans JP',sans-serif;vertical-align:middle;}
+.qblock{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qnum-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:30px;padding:0 11px;border-radius:16px;background:var(--ac);color:#fff;font-size:13px;font-weight:700;margin-right:8px;vertical-align:middle;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;}
+.qtext{font-size:14px;font-weight:700;line-height:1.6;display:inline;vertical-align:middle;}
+.qjp{font-size:12px;font-weight:500;color:var(--t2);margin-top:6px;line-height:1.6;}
+.qen{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin:10px 0;padding:12px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);}
+.qen .hl{background:#fef08a;font-weight:700;padding:0 2px;border-radius:2px;}
+.qen em{font-style:italic;}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:10px 13px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13.5px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:11px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:18px;font-family:'Noto Sans JP',sans-serif;}
+.cb.sel .cn,.cb.ok .cn{color:var(--ac);}
+.cb.ng .cn{color:var(--rd);}
+.cb-en{font-family:'Source Serif 4',serif;}
+.cb-jp{font-family:'Noto Sans JP',sans-serif;}
+.rev-btn{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev-btn:hover{background:var(--acd);}
+.ans-block{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans-block.show{display:block;}
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+.co em{font-style:italic;}
+.ev{background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);padding:0;margin:10px 0;overflow:hidden;}
+.ev-hd{background:var(--acd);color:#fff;padding:7px 13px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:7px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;}
+.ev-bd{padding:12px 14px;font-size:13px;line-height:1.85;}
+.ev-bd em{font-style:italic;}
+.ev-q{font-family:'Source Serif 4',serif;font-style:italic;color:var(--acd);background:var(--acl);padding:8px 12px;border-radius:6px;border-left:3px solid var(--ac);margin:6px 0;font-size:13px;}
+.ev-q .h{background:#fef08a;font-style:normal;font-weight:700;padding:0 2px;border-radius:2px;}
+.choice-anal{margin-top:14px;}
+.ca-row{display:flex;gap:0;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex-shrink:0;width:36px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--tl);}
+.ca-mark.ng{background:var(--rd);}
+.ca-bd{padding:9px 13px;font-size:12.5px;line-height:1.75;flex:1;}
+.ca-bd em{font-style:italic;}
+.ca-bd .ca-key{font-weight:700;display:block;margin-bottom:2px;font-size:12.5px;}
+.ca-bd .ca-key.ok-clr{color:var(--tld);}
+.ca-bd .ca-key.ng-clr{color:var(--rd);}
+.pflow{display:flex;flex-direction:column;}
+.pf-item{display:flex;gap:0;align-items:stretch;margin-bottom:4px;}
+.pf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.pf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+.pf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.pf-body{flex:1;padding:0 0 18px 13px;}
+.pf-body em{font-style:italic;}
+.rtag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.bridge{font-size:11.5px;color:var(--t2);margin:5px 0 0 0;padding:6px 10px;background:var(--s2);border-radius:6px;line-height:1.6;}
+.bridge::before{content:"→ ";color:var(--ac);font-weight:700;}
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:11px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:9px 17px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+.tr-row{display:grid;grid-template-columns:1fr;gap:0;border-radius:var(--rl);overflow:hidden;border:.5px solid var(--bd);margin-bottom:14px;}
+.tr-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.95;padding:14px 18px;background:var(--sf);color:var(--tx);}
+.tr-jp{font-family:'Noto Sans JP',sans-serif;font-size:13.5px;line-height:2;padding:14px 18px;background:var(--s2);color:var(--tx);border-top:.5px solid var(--bd);}
+.tr-en em{font-style:italic;}
+.tr-en .ul{border-bottom:1.5px solid var(--ac);}
+.tr-en .blank{font-size:12px;}
+.tr-jp em{font-style:normal;font-weight:700;color:var(--ac);}
+.tr-section-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.tr-section-title::before{content:"";width:24px;height:1px;background:var(--bd);}
+.tr-section-title::after{content:"";flex:1;height:1px;background:var(--bd);}
+.tr-points{margin-top:8px;padding:11px 14px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);font-size:12.5px;line-height:1.8;}
+.tr-points strong{color:var(--acd);}
+.tr-points em{font-style:italic;}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.tbl th{padding:9px 12px;text-align:left;font-weight:700;}
+.tbl td{padding:8px 12px;border:.5px solid var(--bd);}
+.gl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.gl td{padding:7px 11px;border:.5px solid var(--bd);vertical-align:top;line-height:1.6;}
+.gl td:first-child{font-family:'Source Serif 4',serif;font-weight:600;white-space:nowrap;background:var(--s2);color:var(--acd);width:1%;}
+.pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;font-family:'Noto Sans JP',sans-serif;}
+.pill-hi{background:var(--tll);color:var(--tld);}
+.pill-lo{background:var(--rdl);color:var(--rd);}
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:.5px solid var(--bd2);padding:11px 12px;text-align:center;vertical-align:middle;}
+.mtx thead th{background:var(--acd);color:#fff;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--s2);text-align:left;font-weight:700;color:var(--acd);font-size:12px;line-height:1.5;}
+@media(min-width:720px){.tr-row{grid-template-columns:1fr 1fr;}.tr-jp{border-top:none;border-left:.5px solid var(--bd);}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜大学入試 完全解説</div>
+      <div class="brand-s">甲南大学 2023年 英語 大問2</div>
+    </div>
+  </div>
+  <span class="hdr-badge">甲南大学 2023｜論説文</span>
+</div>
+
+<div class="pnav">
+  <button class="pn active" onclick="goP('p1')" id="pb1"><span class="pn-num">1</span>英文を読む</button>
+  <button class="pn" onclick="goP('p2')" id="pb2"><span class="pn-num">2</span>文章の構造</button>
+  <button class="pn" onclick="goP('p3')" id="pb3"><span class="pn-num">3</span>問1・問2</button>
+  <button class="pn" onclick="goP('p4')" id="pb4"><span class="pn-num">4</span>問3〜問5</button>
+  <button class="pn" onclick="goP('p5')" id="pb5"><span class="pn-num">5</span>全文和訳</button>
+</div>
+
+<div class="wrap">
+
+<!-- ============ PHASE 1 ============ -->
+<div class="pan active" id="p1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 1 — READ THE PASSAGE</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">英文を読む｜マシュマロ実験と、その再検証</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">子供のころ「マシュマロを我慢できるか」は、将来の成功を予測するのか？── 心理学者<strong>ミシェルの有名な「マシュマロ実験」</strong>と、<strong>2018年の再検証（NY大）</strong>をめぐる論説文です。設問は語句言い換え（問1）・空所補充（問2）・内容一致（問3〜5）。<strong>賛否（予測できる派 vs 懐疑派）</strong>と<strong>1960年代 vs 2018年</strong>の対比を押さえるのがカギです。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">この文章の読み方</div>
+    <div style="display:flex;flex-direction:column;gap:9px;">
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--acd);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">問い [1]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>問題提起。</strong>子供の反応は将来を予測するか？ 簡単なテストで「健康・裕福・賢明」がわかるか？ <strong>予測できる派</strong>と<strong>懐疑派</strong>がいる。</div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--ac);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">実験 [2][3]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>ミシェルのマシュマロ実験（1960年代）。</strong>今すぐ1個 vs 待って2個。<strong>長く待てた子（高遅延者）</strong>は、10代・成人後に学業・社会技能・健康など多くの面で優れていた。</div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--am);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">再検証 [4]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>2018年・NY大の再検証。</strong>数百人で、親の教育背景などの<strong>社会的要因も統制</strong>。すると相関は<strong>はるかに弱かった</strong>。</div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--pu);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">新解釈 [5]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>結論。</strong>我慢する力は「生まれつきの意志力」より<strong>家庭の状況</strong>（将来の報酬の約束を信頼できるか）による。成功は意志力だけでなく<strong>前もっての計画</strong>と誘惑回避による。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">下線部・空所と設問の対応</div>
+    <table class="tbl">
+      <tr style="background:var(--acd);color:#fff;"><th style="border-radius:6px 0 0 0;">箇所</th><th>内容</th><th style="border-radius:0 6px 0 0;">設問</th></tr>
+      <tr><td style="font-weight:700;color:var(--ac);text-align:center;">(1)〜(4)</td><td>下線の語句の言い換え</td><td style="color:var(--t2);">問1</td></tr>
+      <tr><td style="font-weight:700;color:var(--am);text-align:center;">(5)</td><td>ダッシュ直後の談話標識</td><td style="color:var(--t2);">問2</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">内容</td><td>実験の設定（第2段落）</td><td style="color:var(--t2);">問3</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">内容</td><td>高遅延者の優位（第3段落）</td><td style="color:var(--t2);">問4</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">内容</td><td>再検証と新解釈（第4・5段落）</td><td style="color:var(--t2);">問5（2つ選択）</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="lbl">本文（全5段落）</div>
+    <div class="passage">
+      <p><span class="pnum">1</span>Do your responses to situations as a child predict how you will turn out as an adult? Is it possible to determine who will turn out to be "healthy, wealthy and wise" from a simple test? Some psychologists believe that it is — at least, the "healthy" and "wealthy" parts — while others are more doubtful. Let us consider the evidence.</p>
+
+      <p><span class="pnum">2</span>In the 1960s, the American psychologist Walter Mischel began a series of classic experiments that involved challenging several dozen young children to sit alone with a marshmallow for around 15 minutes and resist eating it. Mischel and his colleagues were interested in strategies that preschool children used to resist temptation. They presented four-year-olds with a marshmallow and told the children that they had two options: (a) ring a bell at any point to call the experimenter and eat the marshmallow, or (b) wait until the experimenter returned (about 15 minutes later), in which case they would earn two marshmallows. The message was: "small reward now, bigger reward later." Some children <span class="ul"><span class="uln">1</span>broke down</span> and ate the marshmallow, whereas others were able to delay gratification and earn the two marshmallows.</p>
+
+      <p><span class="pnum">3</span>The high delayers, that is, the children who had waited longer, when re-examined as teenagers and adults, demonstrated an impressive range of advantages over the other children in the group. As teenagers, they had higher academic scores, more developed social skills, self-confidence and self-worth, and were rated by their parents as more mature, better able to <span class="ul"><span class="uln">2</span>cope with</span> stress, and more likely to plan ahead. They were less likely to have conduct disorders or high levels of impatience and aggressiveness. As adults, they were less likely to have drug problems or alcohol dependency, to get divorced, or to be overweight.</p>
+
+      <p><span class="pnum">4</span>But not all psychologists were <span class="ul"><span class="uln">3</span>persuaded</span> by Mischel's results. In 2018 researchers at New York University conducted the first attempt to replicate the marshmallow study, this time using data from hundreds of children. Unlike in the original research, the researchers also controlled for a large number of social and situational factors, such as parental educational background and how responsive parents were to their kids. The team found that the correlation between delay of gratification and later success was far weaker than in the original research, especially when the researchers took into account the social and family factors.</p>
+
+      <p><span class="pnum">5</span>The interpretation given by the New York University researchers was that a child's ability to resist the marshmallow has less to do with their natural willpower, and more to do with their <span class="ul"><span class="uln">4</span>domestic</span> circumstances — <span class="blank">( 5 )</span>, whether the child had learned to trust being promised greater rewards in the future or not. This is consistent with other research that has found that adults succeed at their goals through forward planning and avoiding temptation, rather than through willpower alone.</p>
+    </div>
+    <div style="font-size:11px;color:var(--t3);margin-top:10px;line-height:1.7;">注：gratification 喜び／aggressiveness 攻撃性／replicate 再検証する／responsive ＜ respond／willpower 意志力</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">語注</div>
+    <table class="gl">
+      <tr><td>response to ~</td><td>〜への反応</td></tr>
+      <tr><td>predict</td><td>予測する</td></tr>
+      <tr><td>turn out (to be) ~</td><td>（結果的に）〜になる、判明する</td></tr>
+      <tr><td>determine</td><td>見極める、決定する</td></tr>
+      <tr><td>healthy, wealthy and wise</td><td>健康で裕福で賢い（英語のことわざ的表現）</td></tr>
+      <tr><td>doubtful</td><td>懐疑的な</td></tr>
+      <tr><td>a series of ~</td><td>一連の〜</td></tr>
+      <tr><td>classic experiment</td><td>古典的な（有名な）実験</td></tr>
+      <tr><td>involve doing</td><td>〜することを伴う</td></tr>
+      <tr><td>challenge A to do</td><td>Aに〜するよう挑ませる</td></tr>
+      <tr><td>several dozen</td><td>数十の</td></tr>
+      <tr><td>resist doing</td><td>〜するのを我慢する</td></tr>
+      <tr><td>strategy</td><td>戦略</td></tr>
+      <tr><td>preschool children</td><td>就学前の子供</td></tr>
+      <tr><td>temptation</td><td>誘惑</td></tr>
+      <tr><td>present A with B</td><td>AにBを提示する</td></tr>
+      <tr><td>experimenter</td><td>実験者</td></tr>
+      <tr><td>earn</td><td>得る、稼ぐ</td></tr>
+      <tr><td>reward</td><td>報酬</td></tr>
+      <tr><td>break down</td><td>（我慢できず）くずれる、挫折する</td></tr>
+      <tr><td>whereas</td><td>〜だが一方で</td></tr>
+      <tr><td>delay gratification</td><td>満足（喜び）を遅らせる</td></tr>
+      <tr><td>high delayer</td><td>満足を長く遅らせられる子</td></tr>
+      <tr><td>that is</td><td>すなわち</td></tr>
+      <tr><td>re-examine</td><td>再調査する</td></tr>
+      <tr><td>an impressive range of ~</td><td>目を見張るほど幅広い〜</td></tr>
+      <tr><td>advantage over ~</td><td>〜に対する優位</td></tr>
+      <tr><td>rate A as B</td><td>AをBと評価する</td></tr>
+      <tr><td>mature</td><td>成熟した</td></tr>
+      <tr><td>cope with ~</td><td>〜に対処する</td></tr>
+      <tr><td>plan ahead</td><td>前もって計画する</td></tr>
+      <tr><td>conduct disorder</td><td>行為障害</td></tr>
+      <tr><td>impatience</td><td>短気</td></tr>
+      <tr><td>alcohol dependency</td><td>アルコール依存</td></tr>
+      <tr><td>get divorced</td><td>離婚する</td></tr>
+      <tr><td>overweight</td><td>太りすぎの</td></tr>
+      <tr><td>persuade</td><td>納得させる</td></tr>
+      <tr><td>attempt to do</td><td>〜する試み</td></tr>
+      <tr><td>control for ~</td><td>〜（の影響）を統制する、考慮に入れる</td></tr>
+      <tr><td>situational factor</td><td>状況的要因</td></tr>
+      <tr><td>parental educational background</td><td>親の教育的背景</td></tr>
+      <tr><td>responsive</td><td>反応がよい、よく応える</td></tr>
+      <tr><td>correlation between A and B</td><td>AとBの相関</td></tr>
+      <tr><td>take into account ~</td><td>〜を考慮に入れる</td></tr>
+      <tr><td>interpretation</td><td>解釈</td></tr>
+      <tr><td>have (less/more) to do with ~</td><td>〜と（あまり/より）関係がある</td></tr>
+      <tr><td>domestic circumstances</td><td>家庭の状況</td></tr>
+      <tr><td>trust</td><td>信頼する</td></tr>
+      <tr><td>be promised ~</td><td>〜を約束される</td></tr>
+      <tr><td>consistent with ~</td><td>〜と一致する</td></tr>
+      <tr><td>forward planning</td><td>前もっての計画</td></tr>
+    </table>
+  </div>
+
+  <div class="card" style="background:var(--aml);border-color:var(--am);">
+    <div class="lbl" style="color:var(--am);">読みながら意識すること</div>
+    <div style="font-size:13.5px;line-height:1.9;color:var(--tx);">
+      <strong>① 賛否の対立構造：</strong>子供の自制心が将来を予測するか。<em>Some psychologists believe … while others are more doubtful</em>「信じる人もいれば懐疑的な人もいる」。本文は<strong>両論</strong>を示す。<br>
+      <strong>② 1960s（ミシェル）vs 2018（NY大）の対比：</strong>1960年代＝数十人・相関あり。2018年＝<strong>数百人・社会的要因を統制</strong>→相関は<strong>はるかに弱い</strong>。<em>Unlike … / far weaker</em> が対比の合図。<br>
+      <strong>③ 「statistically control for」≠「除外」：</strong>2018年は社会的要因を<strong>統制（考慮に入れて分析）</strong>した。「無関係として除外した」のではない（問5Bの罠）。<br>
+      <strong>④ 新解釈の核心：</strong>我慢する力は「意志力」より<strong>家庭の状況</strong>＝<strong>子供が（大人の）約束を信頼できるか</strong>による。主語は<strong>子供が信頼する</strong>（問5Dの主客の罠に注意）。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">Phase 1 / 5</span>
+    <button class="btnp" onclick="goP('p2')">文章の構造へ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 2 ============ -->
+<div class="pan" id="p2">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 2 — STRUCTURE</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">文章の構造｜実験・再検証・新解釈</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">この論説文は「<strong>問い → 実験（1960年代）→ 結果 → 再検証（2018年）→ 新解釈</strong>」の流れ。設問の核は、実験の<strong>設定</strong>（問3）、高遅延者の<strong>優位</strong>（問4）、そして<strong>1960年代 vs 2018年の対比</strong>と<strong>新解釈</strong>（問5）。図で整理します。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">論理の流れ</div>
+    <div class="pflow">
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--acd);">1</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--s2);color:var(--acd);">[1] 問い</span>
+          <div style="font-size:13px;line-height:1.7;">子供の反応は将来を予測するか？ 簡単なテストで「健康・裕福・賢明」がわかるか？ <strong>予測できる派</strong>と<strong>懐疑派</strong>がいる。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--ac);">2</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--ac);">[2] 実験（1960年代）</span>
+          <div style="font-size:13px;line-height:1.7;">ミシェルが数十人の4歳児に、マシュマロを15分我慢させる実験。<strong>今すぐ1個 vs 待って2個</strong>。一部は我慢できず食べ、他は待って2個を得た。</div>
+          <div class="bridge">問3の核心：待った子は2倍（2個）もらえる。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--tl);">3</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--tll);color:var(--tld);">[3] 結果（高遅延者の優位）</span>
+          <div style="font-size:13px;line-height:1.7;">長く待った子（高遅延者）は、10代・成人後に学業・社会技能・自信・健康など<strong>多くの面で優れていた</strong>。</div>
+          <div class="bridge">問4の核心：高遅延者は優れた社会技能を示した。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--am);">4</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">[4] 再検証（2018年）</span>
+          <div style="font-size:13px;line-height:1.7;">NY大が数百人で再現を試み、<strong>社会的要因も統制</strong>。すると相関は<strong>はるかに弱かった</strong>。</div>
+          <div class="bridge">問5の核心：新実験（A）・強い関係は出ず（C）。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--pu);">5</div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--pul);color:var(--pu);">[5] 新解釈</span>
+          <div style="font-size:13px;line-height:1.7;">我慢する力は「意志力」より<strong>家庭の状況</strong>（将来の報酬の約束を信頼できるか）による。成功は意志力だけでなく<strong>前もっての計画</strong>＋誘惑回避による。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">図解①｜マシュマロ実験の設定（問3の核心）</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0 6px;">
+      <div style="border:.5px solid var(--rd);border-radius:10px;padding:13px 15px;background:var(--rdl);">
+        <div style="font-size:12px;font-weight:700;color:var(--rd);margin-bottom:5px;">(a) ベルを鳴らす</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--rd);">いつでもベルを鳴らして実験者を呼び、<strong>すぐマシュマロを食べる</strong><br>＝小さな報酬を<strong>今すぐ</strong>（1個）</div>
+      </div>
+      <div style="border:.5px solid var(--tl);border-radius:10px;padding:13px 15px;background:var(--tll);">
+        <div style="font-size:12px;font-weight:700;color:var(--tld);margin-bottom:5px;">(b) 約15分待つ</div>
+        <div style="font-size:12.5px;line-height:1.6;color:var(--tld);">実験者が戻るまで我慢して待つ<br>＝より大きな報酬を<strong>後で</strong>（<strong>2個</strong>）</div>
+      </div>
+    </div>
+    <div style="text-align:center;font-size:12.5px;color:var(--t2);font-style:italic;margin:8px 0;">メッセージ："small reward now, bigger reward later"</div>
+    <div class="co co-b" style="margin-bottom:0;">
+      <div class="co-lbl">結果と問3</div>
+      一部の子は<strong>我慢できず食べた</strong>（<em>broke down</em>）。他の子は<strong>満足を遅らせて2個を得た</strong>（<em>delay gratification</em>）。<br>
+      問3の正解Dは「時間切れまで待った子は<strong>2倍（2個）</strong>もらえた」＝(b)の内容。ベルを鳴らす(a)は「すぐ<strong>別の</strong>マシュマロをもらう」ではない点に注意（選択肢C）。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">図解②｜高遅延者の「優位」（問4の核心）</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:10px;">
+      <div style="border:.5px solid var(--bd);border-radius:10px;padding:13px 15px;background:var(--sf);">
+        <div style="font-size:12px;font-weight:700;color:var(--ac);margin-bottom:5px;">10代のとき（teenagers）</div>
+        <div style="font-size:12.5px;line-height:1.7;">学業成績↑・<strong>社会技能↑</strong>・自信／自尊心↑・（親の評価で）成熟↑・<strong>ストレス対処↑</strong>・計画性↑／行為障害・短気・攻撃性↓</div>
+      </div>
+      <div style="border:.5px solid var(--bd);border-radius:10px;padding:13px 15px;background:var(--sf);">
+        <div style="font-size:12px;font-weight:700;color:var(--ac);margin-bottom:5px;">成人後（adults）</div>
+        <div style="font-size:12.5px;line-height:1.7;">薬物問題・アルコール依存↓・離婚↓・肥満↓（＝これらに<strong>なりにくい</strong>）</div>
+      </div>
+    </div>
+    <div class="co co-b" style="margin-bottom:0;">
+      <div class="co-lbl">問4の核心</div>
+      正解Bは「長く待った子は、非遅延者と比べ<strong>優れた社会技能</strong>を示した」＝第2文 <em>more developed social skills</em>。<br>
+      ※成人後は薬物・肥満などが「<strong>少ない（less likely）</strong>」。「多い」とする選択肢Dは逆。また「親が子を成熟と評価」であって「子が親を成熟と考えた」のではない（選択肢Cの主客の罠）。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">図解③｜1960年代 vs 2018年（問5の核心）</div>
+    <table class="mtx">
+      <thead>
+        <tr><th style="text-align:left;">観点</th><th>1960年代（ミシェル）</th><th>2018年（NY大）</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="cond">参加者の数</td><td>数十人（several dozen）</td><td><strong>数百人</strong>（hundreds）</td></tr>
+        <tr><td class="cond">社会的・家庭的要因</td><td>統制せず</td><td><strong>統制した</strong>（親の教育背景など）</td></tr>
+        <tr><td class="cond">遅延と成功の相関</td><td><span class="pill pill-hi">あり</span></td><td><span class="pill pill-lo">はるかに弱い</span></td></tr>
+      </tbody>
+    </table>
+    <div class="co co-b" style="margin-bottom:0;">
+      <div class="co-lbl">問5（A・C が正解）と、罠（B・D・E）</div>
+      <strong>A</strong>（新実験・より多くの子供）＝第4段落第2文に一致。<strong>C</strong>（強い関係は出なかった）＝第4段落第4文に一致。<br>
+      <strong>B</strong>＝2018年は要因を「<strong>統制した（controlled for）</strong>」のであって「無関係として<strong>除外した（exclude）</strong>」ではない → 矛盾。<br>
+      <strong>D</strong>＝本文は「<strong>子供が（大人の）約束を信頼する</strong>」。Dは「親が子供の約束を信頼する」と主客が逆 → 矛盾。<br>
+      <strong>E</strong>＝前もっての計画は成功の<strong>手段</strong>。「限られた計画が成功の<strong>結果</strong>」は逆 → 矛盾。
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--pul);border-color:var(--pu);">
+    <div class="lbl" style="color:var(--pu);">この論説文の解き方</div>
+    <div style="font-size:13.5px;line-height:1.9;color:var(--tx);">
+      <strong>① 賛否と対比を表で整理：</strong>予測できる派 vs 懐疑派、1960年代 vs 2018年。<strong>何がどう違うか</strong>を押さえると内容一致が速い。<br>
+      <strong>② 段落対応＋言い換えで照合：</strong>各設問の段落を特定し、本文の言い換え（<em>waited longer</em>→high delayers、<em>more developed social skills</em>→superior social skills）を確認。<br>
+      <strong>③ <em>control for</em> の意味：</strong>統計で「要因を<strong>統制する（考慮に入れて影響を除く）</strong>」。「無関係として除外する（exclude）」とは違う（問5B）。<br>
+      <strong>④ 主語・方向の逆転に注意：</strong>問4C（親が子を評価 ⇄ 子が親を評価）、問5D（子が約束を信頼 ⇄ 親が子の約束を信頼）、問4D（少ない ⇄ 多い）。<strong>誰が・どちら向きか</strong>を必ず確認。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p1')">← 英文を読む</button>
+    <button class="btnp" onclick="goP('p3')">問1・問2へ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 3 ============ -->
+<div class="pan" id="p3">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 3 — QUESTIONS 1 &amp; 2</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">問1・問2｜語句の言い換えと、空所補充</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;"><strong>問1</strong>は下線部(1)〜(4)の<strong>語句言い換え</strong>（イディオム・多義語が中心）。<strong>問2</strong>は空所(5)（ダッシュ以下が<strong>具体例</strong>になっている）。各設問をタップで答えが出ます。</div>
+  </div>
+
+  <!-- Q1 -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">問1</div>
+      <div class="qtext">下線部(1)〜(4)に代わる語句として最も適切なものを選べ。</div>
+    </div>
+
+    <!-- (1) -->
+    <div style="margin-top:8px;">
+      <div style="font-family:'Source Serif 4',serif;font-size:14px;font-weight:700;color:var(--acd);margin-bottom:3px;">(1) <em>broke down</em></div>
+      <div style="font-size:11.5px;color:var(--t2);margin-bottom:8px;">文脈：Some children <em>broke down</em> and ate the marshmallow.</div>
+      <div class="choices">
+        <button class="cb cb-en" onclick="sel11(this,'A')"><span class="cn">A</span>cried（泣いた）</button>
+        <button class="cb cb-en" onclick="sel11(this,'B')"><span class="cn">B</span>gave in（屈した・負けた）</button>
+        <button class="cb cb-en" onclick="sel11(this,'C')"><span class="cn">C</span>resigned（辞めた・断念した）</button>
+        <button class="cb cb-en" onclick="sel11(this,'D')"><span class="cn">D</span>split up（別れた）</button>
+      </div>
+      <button class="rev-btn" onclick="rev11()">答えを見る</button>
+      <div class="ans-block" id="ans11" style="background:var(--tll);border-left:3px solid var(--tl);">
+        <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：B — gave in</div>
+        <em>break down</em>「（我慢できず）くずれる、挫折する」。ここでは「誘惑に負けてマシュマロを食べた」。＝<em>give in</em>「（誘惑・圧力に）<strong>屈する・負ける</strong>」（B）。<br>
+        <span style="color:var(--rd);">✗ cried（泣く）／resigned（辞職・断念）／split up（別れる・解散する）は意味が違う。</span>
+      </div>
+    </div>
+
+    <!-- (2) -->
+    <div style="margin-top:16px;padding-top:14px;border-top:.5px solid var(--bd2);">
+      <div style="font-family:'Source Serif 4',serif;font-size:14px;font-weight:700;color:var(--acd);margin-bottom:3px;">(2) <em>cope with</em></div>
+      <div style="font-size:11.5px;color:var(--t2);margin-bottom:8px;">文脈：better able to <em>cope with</em> stress</div>
+      <div class="choices">
+        <button class="cb cb-en" onclick="sel12(this,'A')"><span class="cn">A</span>accept（受け入れる）</button>
+        <button class="cb cb-en" onclick="sel12(this,'B')"><span class="cn">B</span>deny（否定する）</button>
+        <button class="cb cb-en" onclick="sel12(this,'C')"><span class="cn">C</span>manage（対処する）</button>
+        <button class="cb cb-en" onclick="sel12(this,'D')"><span class="cn">D</span>suffer（苦しむ）</button>
+      </div>
+      <button class="rev-btn" onclick="rev12()">答えを見る</button>
+      <div class="ans-block" id="ans12" style="background:var(--tll);border-left:3px solid var(--tl);">
+        <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：C — manage</div>
+        <em>cope with ~</em>「〜にうまく<strong>対処する</strong>」。<em>manage</em> も「（困難などに）対処する・うまくやる」の意味があり、<em>manage stress</em>「ストレスに対処する」と言える（C）。<br>
+        <span style="color:var(--rd);">✗ accept（受け入れる）は対処ではない／deny（否定）は逆／suffer（苦しむ）は対処ではなく被害。</span>
+      </div>
+    </div>
+
+    <!-- (3) -->
+    <div style="margin-top:16px;padding-top:14px;border-top:.5px solid var(--bd2);">
+      <div style="font-family:'Source Serif 4',serif;font-size:14px;font-weight:700;color:var(--acd);margin-bottom:3px;">(3) <em>persuaded</em></div>
+      <div style="font-size:11.5px;color:var(--t2);margin-bottom:8px;">文脈：not all psychologists were <em>persuaded</em> by Mischel's results</div>
+      <div class="choices">
+        <button class="cb cb-en" onclick="sel13(this,'A')"><span class="cn">A</span>believed（信じた）</button>
+        <button class="cb cb-en" onclick="sel13(this,'B')"><span class="cn">B</span>convinced（納得した）</button>
+        <button class="cb cb-en" onclick="sel13(this,'C')"><span class="cn">C</span>impressed（感銘を受けた）</button>
+        <button class="cb cb-en" onclick="sel13(this,'D')"><span class="cn">D</span>interested（興味を持った）</button>
+      </div>
+      <button class="rev-btn" onclick="rev13()">答えを見る</button>
+      <div class="ans-block" id="ans13" style="background:var(--tll);border-left:3px solid var(--tl);">
+        <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：B — convinced</div>
+        <em>persuade</em>「（人）を<strong>納得させる</strong>」。受動 <em>were persuaded by ~</em>「〜によって納得させられた」。<em>convince</em>「納得させる・確信させる」が最も近く、<em>were convinced by ~</em>「〜に納得した」（B）。<br>
+        <span style="color:var(--rd);">✗ believed（信じた）は自動詞的で「説得して納得させる」とずれる／impressed（感銘）・interested（興味）は意味が違う。</span>
+      </div>
+    </div>
+
+    <!-- (4) -->
+    <div style="margin-top:16px;padding-top:14px;border-top:.5px solid var(--bd2);">
+      <div style="font-family:'Source Serif 4',serif;font-size:14px;font-weight:700;color:var(--acd);margin-bottom:3px;">(4) <em>domestic</em></div>
+      <div style="font-size:11.5px;color:var(--t2);margin-bottom:8px;">文脈：more to do with their <em>domestic</em> circumstances</div>
+      <div class="choices">
+        <button class="cb cb-en" onclick="sel14(this,'A')"><span class="cn">A</span>familiar（よく知られた・親しい）</button>
+        <button class="cb cb-en" onclick="sel14(this,'B')"><span class="cn">B</span>home（家庭の）</button>
+        <button class="cb cb-en" onclick="sel14(this,'C')"><span class="cn">C</span>national（国家の・国内の）</button>
+        <button class="cb cb-en" onclick="sel14(this,'D')"><span class="cn">D</span>personal（個人的な）</button>
+      </div>
+      <button class="rev-btn" onclick="rev14()">答えを見る</button>
+      <div class="ans-block" id="ans14" style="background:var(--tll);border-left:3px solid var(--tl);">
+        <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：B — home</div>
+        <em>domestic</em>「<strong>家庭の</strong>・家庭内の」。<em>domestic circumstances</em>「家庭の状況」＝<em>home circumstances</em>。<em>home</em> は形容詞で「家庭の」（B）。<br>
+        <span style="color:var(--rd);">✗ familiar（よく知られた）／personal（個人的な）は意味が違う。national（国内の）は domestic の別義だが、ここは「家庭の」。</span>
+      </div>
+    </div>
+
+    <div class="co co-t" style="margin-top:16px;">
+      <div class="co-lbl">読解ポイント｜文脈での意味・多義語に注意</div>
+      語句言い換えは<strong>文脈での意味</strong>を取る。<em>break down</em>＝give in、<em>cope with</em>＝manage、<em>persuade</em>＝convince は<strong>イディオム・類義語</strong>として押さえる。<br>
+      多義語に特に注意：<em>domestic</em>（①家庭の ②国内の）はここでは <em>domestic circumstances</em>「家庭の状況」なので「家庭の」＝home。文脈で意味を1つに絞る。
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">問2</div>
+      <div class="qtext">空所 ( 5 ) に入る最も適切なものを選べ。</div>
+    </div>
+    <div class="qen">… more to do with their domestic circumstances — <span class="hl">( 5 )</span>, whether the child had learned to trust being promised greater rewards in the future or not.</div>
+
+    <div class="choices">
+      <button class="cb cb-en" onclick="sel2(this,'A')"><span class="cn">A</span>by contrast（対照的に）</button>
+      <button class="cb cb-en" onclick="sel2(this,'B')"><span class="cn">B</span>consequently（結果として）</button>
+      <button class="cb cb-en" onclick="sel2(this,'C')"><span class="cn">C</span>for instance（例えば）</button>
+      <button class="cb cb-en" onclick="sel2(this,'D')"><span class="cn">D</span>therefore（したがって）</button>
+    </div>
+    <button class="rev-btn" onclick="rev2()">答えを見る</button>
+
+    <div class="ans-block" id="ans2" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：C — for instance（例えば）</div>
+
+      <div class="co co-b">
+        <div class="co-lbl">なぜCが正解か｜ダッシュ以下は具体例</div>
+        ダッシュ（—）の<strong>前</strong>は <em>their domestic circumstances</em>「家庭の状況」（抽象）。ダッシュの<strong>後</strong>は <em>whether the child had learned to trust being promised greater rewards</em>「子供が、将来より大きな報酬を約束されることを信頼することを学んだかどうか」（具体例）。<br><br>
+        ＝ダッシュ以下は domestic circumstances の<strong>具体例</strong>。だから「<strong>例えば（for instance）</strong>」＝C。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜本文の該当箇所</div>
+        <div class="ev-bd">
+          <div class="ev-q">more to do with their domestic circumstances — <span class="h">( 5 )</span>, whether the child had learned to trust being promised greater rewards …</div>
+          ・ダッシュ前＝<em>domestic circumstances</em>（抽象）／ダッシュ後＝具体例（約束を信頼するか）<br>
+          ・抽象 → 具体の言い換え＝<em>for instance</em>（例えば）。
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">A. by contrast（対照的に）</span>＝対比ではない。前後は同じ内容（抽象→具体）。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">B. consequently（結果として）</span>＝因果ではない。</div></div>
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">C. for instance（例えば）</span>＝<strong>正解</strong>。domestic circumstances の具体例を挙げている。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">D. therefore（したがって）</span>＝因果ではない。</div></div>
+      </div>
+
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜ダッシュと談話標識</div>
+        ダッシュ（—）はしばしば<strong>言い換え・具体例・補足</strong>を導く。ここはダッシュの前が抽象（家庭の状況）、後が具体（約束を信頼するか）。<strong>抽象 → 具体</strong>の関係なので「例えば（for instance）」。<br>
+        談話標識は、前後が<strong>対比か・因果か・具体例か</strong>を見て選ぶ。ここは具体例なので C。
+      </div>
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p2')">← 文章の構造</button>
+    <button class="btnp" onclick="goP('p4')">問3〜問5へ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 4 ============ -->
+<div class="pan" id="p4">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 4 — QUESTIONS 3-5</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">問3〜問5｜内容一致</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;"><strong>問3</strong>は実験の設定（第2段落）、<strong>問4</strong>は高遅延者の優位（第3段落）、<strong>問5</strong>は再検証と新解釈（第4・5段落・<strong>2つ選択</strong>）。本文との細かいズレ（<strong>除外≠統制</strong>、<strong>主客の逆転</strong>、<strong>手段≠結果</strong>）を見抜くのがカギ。問5は各選択肢をタップすると○×が出ます。</div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">問3</div>
+      <div class="qtext">第2パラグラフの内容と一致するものを一つ選べ。</div>
+    </div>
+    <div class="qen">(b) wait until the experimenter returned (about 15 minutes later), in which case they would <span class="hl">earn two marshmallows</span>.</div>
+
+    <div class="choices">
+      <button class="cb cb-en" onclick="sel3(this,'A')"><span class="cn">A</span>Around twenty children took part in Walter Mischel's original experiment.（約20人が実験に参加した）</button>
+      <button class="cb cb-en" onclick="sel3(this,'B')"><span class="cn">B</span>Mischel and his colleagues were mainly concerned with why children found the marshmallows so hard to resist.（なぜ子供が我慢しにくいと感じたかに主に関心があった）</button>
+      <button class="cb cb-en" onclick="sel3(this,'C')"><span class="cn">C</span>Children were given an option of ringing a bell to have the experimenter bring them another marshmallow straightaway.（ベルを鳴らしてすぐ別のマシュマロを持ってこさせる選択肢があった）</button>
+      <button class="cb cb-en" onclick="sel3(this,'D')"><span class="cn">D</span>Children that managed to resist temptation until the time was up were rewarded with double the number of marshmallows.（時間切れまで抵抗できた子は2倍のマシュマロをもらえた）</button>
+    </div>
+    <button class="rev-btn" onclick="rev3()">答えを見る</button>
+
+    <div class="ans-block" id="ans3" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：D — 時間切れまで抵抗できた子は2倍のマシュマロをもらえた</div>
+
+      <div class="co co-b">
+        <div class="co-lbl">なぜDが正解か｜選択肢(b)の内容</div>
+        第2段落の選択肢(b)：<em>wait until the experimenter returned (about 15 minutes later), in which case they would earn two marshmallows</em>「実験者が戻るまで（約15分後）待てば、2つのマシュマロをもらえる」。<br><br>
+        → 誘惑に抵抗して時間切れまで待った子は、<strong>2倍（2個）</strong>のマシュマロをもらえた＝D。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜本文の該当箇所</div>
+        <div class="ev-bd">
+          <div class="ev-q">(b) wait until the experimenter returned … in which case they would <span class="h">earn two marshmallows</span>.</div>
+          ・待った子は<strong>2個</strong>もらえる（earn two marshmallows）<br>
+          ・＝時間切れまで抵抗した子は2倍の報酬（D）。
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">A. 約20人</span>＝<em>several dozen</em>（数十人）。「約20人」ではない。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">B. なぜ我慢しにくいかに関心</span>＝<em>interested in strategies … used to resist temptation</em>「誘惑に抵抗する<strong>戦略</strong>に関心」。「なぜ我慢しにくいか」ではない。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">C. ベルですぐ別のマシュマロ</span>＝ベル(a)＝実験者を呼んでマシュマロを食べる（1個）。「すぐ<strong>別の（another）</strong>マシュマロを持ってこさせる」ではない。</div></div>
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">D. 時間切れまで待った子は2倍</span>＝<strong>正解</strong>。<em>earn two marshmallows</em> と一致。</div></div>
+      </div>
+
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜2択を正確に</div>
+        実験設定の<strong>2択</strong>を正確に：(a) ベル→今すぐ1個／(b) 待つ→2個。Dは(b)「待った子は2倍」で一致。<br>
+        誤答は数字（several dozen≠約20人、A）、関心の対象（strategies≠なぜ我慢しにくいか、B）、選択肢の中身（ベルは「別のマシュマロ」ではない、C）のすり替え。
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">問4</div>
+      <div class="qtext">第3パラグラフの内容と一致するものを一つ選べ。</div>
+    </div>
+    <div class="qen">As teenagers, they had higher academic scores, <span class="hl">more developed social skills</span>, self-confidence and self-worth, and were <span class="hl">rated by their parents as more mature</span> …</div>
+
+    <div class="choices">
+      <button class="cb cb-en" onclick="sel4(this,'A')"><span class="cn">A</span>The children from Mischel's experiment were asked to take the same test, at later stages in their lives.（後の人生段階で同じテストを受けるよう求められた）</button>
+      <button class="cb cb-en" onclick="sel4(this,'B')"><span class="cn">B</span>The children that had waited longer typically displayed superior social skills, compared with the 'non-delayers'.（長く待った子は、非遅延者と比べ優れた社会技能を示した）</button>
+      <button class="cb cb-en" onclick="sel4(this,'C')"><span class="cn">C</span>The high delayers also considered their parents to be more mature and respected their planning abilities more than the other children did.（高遅延者は親をより成熟と考え、他の子より親の計画能力を尊重した）</button>
+      <button class="cb cb-en" onclick="sel4(this,'D')"><span class="cn">D</span>Being a high delayer was shown to correlate with higher levels of drug dependency and unhealthy eating, as adults.（高遅延者は成人後、薬物依存・不健康な食事の高いレベルと相関した）</button>
+    </div>
+    <button class="rev-btn" onclick="rev4()">答えを見る</button>
+
+    <div class="ans-block" id="ans4" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：B — 長く待った子は、非遅延者と比べ優れた社会技能を示した</div>
+
+      <div class="co co-b">
+        <div class="co-lbl">なぜBが正解か｜第3段落第2文</div>
+        第3段落第2文：<em>As teenagers, they had higher academic scores, more developed social skills …</em>「10代のとき、彼ら（高遅延者）はより高い学業成績、<strong>より発達した社会技能</strong>…を持っていた」。<br><br>
+        → 長く待った子（高遅延者）は、他の子（非遅延者）と比べ<strong>優れた社会技能</strong>を示した＝B。
+      </div>
+
+      <div class="ev">
+        <div class="ev-hd">根拠｜本文の該当箇所</div>
+        <div class="ev-bd">
+          <div class="ev-q">As teenagers, they had higher academic scores, <span class="h">more developed social skills</span>, self-confidence and self-worth, and were <span class="h">rated by their parents as more mature</span> …</div>
+          ・高遅延者は10代で <em>more developed social skills</em>（より発達した社会技能）<br>
+          ・<em>rated by their parents as more mature</em>＝<strong>親が子を</strong>成熟と評価（子が親を、ではない）。
+        </div>
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">A. 同じテストを受けた</span>＝<em>re-examined as teenagers and adults</em>「10代・成人として再調査された」だが、「<strong>同じテスト（same test）</strong>を受けた」とは書いていない。</div></div>
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">B. 優れた社会技能</span>＝<strong>正解</strong>。<em>more developed social skills</em> と一致。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">C. 親を成熟と考え、親の計画能力を尊重</span>＝<em>rated by their parents as more mature</em>「<strong>親によって</strong>成熟と評価された」＝親が子を評価。<strong>主客が逆</strong>。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">D. 薬物依存・不健康な食事と相関（高い）</span>＝<em>less likely to have drug problems … to be overweight</em>「薬物問題…肥満が<strong>少ない</strong>」。<strong>逆</strong>。</div></div>
+      </div>
+
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜主語・方向の逆転に注意</div>
+        正解は本文 <em>more developed social skills</em> を <em>superior social skills</em> と<strong>言い換え</strong>。<br>
+        誤答の罠：A（再調査≠同じテスト）、C（<strong>親が子を</strong>評価 ⇄ 子が親を評価の主客逆転）、D（薬物・肥満が<strong>少ない</strong> ⇄ 多いの逆転）。<strong>誰が・どちら向きか</strong>を必ず確認する。
+      </div>
+    </div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">問5</div>
+      <div class="qtext">第4・5パラグラフの内容と一致するものを<strong>二つ</strong>選べ。（各選択肢をタップすると○×が出ます）</div>
+    </div>
+
+    <div class="choices">
+      <button class="cb cb-en" onclick="mark5(this,'1')"><span class="cn">A</span>A new experiment investigating the same question was carried out in 2018, this time involving a considerably larger number of children.（同じ問いの新実験が2018年に行われ、今回はかなり多くの子供が参加した）</button>
+      <button class="cb cb-en" onclick="mark5(this,'0')"><span class="cn">B</span>Unlike the 1960s experiment, the 2018 researchers took care to exclude unrelated factors, such as the educational level of the children's parents.（1960年代と違い、2018年の研究者は親の教育レベルなどの無関係な要因を除外するよう注意した）</button>
+      <button class="cb cb-en" onclick="mark5(this,'1')"><span class="cn">C</span>The 2018 study failed to yield any strong relationship between delayed gratification and future success in life.（2018年の研究は、満足の遅延と将来の成功の間に強い関係を見出せなかった）</button>
+      <button class="cb cb-en" onclick="mark5(this,'0')"><span class="cn">D</span>The New York University researchers concluded that children are more influenced by whether or not their parents can trust their promises than by willpower.（NY大は、子供は意志力より、親が子供の約束を信頼できるかに影響されると結論づけた）</button>
+      <button class="cb cb-en" onclick="mark5(this,'0')"><span class="cn">E</span>Other research has also found that limited forward planning is the most important result of success.（他の研究も、限られた前もっての計画が成功の最も重要な結果だと見出した）</button>
+    </div>
+    <button class="rev-btn" onclick="rev5()">答え合わせ・解説を見る</button>
+
+    <div class="ans-block" id="ans5" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：A・C（2つ）</div>
+
+      <div class="co co-b">
+        <div class="co-lbl">解き方｜本文との細かいズレを消す</div>
+        内容一致（2つ選択）は、第4・5段落と1語ずつ照合する。本文の言い換えを正しく捉え、<strong>すり替え（除外≠統制）・主客の逆転（子が信頼⇄親が信頼）・因果の逆転（手段⇄結果）</strong>を見抜く。正解はA・C。
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">A.</span>「新実験・より多くの子供」＝<strong>第4段落第2文</strong>に一致。<em>In 2018 researchers … conducted the first attempt to replicate … using data from hundreds of children</em>（数百人のデータで再現を試みた）。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">B.</span>「無関係な要因を<strong>除外した</strong>」＝<strong>第4段落第3文に矛盾</strong>。本文は <em>controlled for … social and situational factors</em>「要因を<strong>統制した（考慮に入れた）</strong>」。<em>exclude</em>（除外）ではない。しかもそれらは「無関係」ではなく重要な要因。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">C.</span>「強い関係を見出せなかった」＝<strong>第4段落第4文</strong>に一致。<em>the correlation … was far weaker than in the original research</em>（相関は元の研究よりはるかに弱かった）。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">D.</span>「<strong>親が子供の</strong>約束を信頼できるか」＝<strong>第5段落第1文に矛盾</strong>。本文は <em>whether the child had learned to trust being promised greater rewards</em>「<strong>子供が</strong>（大人の）約束を信頼するか」。主客が逆。（「親が約束を<strong>守る</strong>かどうか」なら趣旨に近いが、trust の向きが誤り。）</div></div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">E.</span>「限られた前もっての計画が成功の<strong>結果</strong>」＝<strong>第5段落最終文に矛盾</strong>。本文は <em>adults succeed … through forward planning</em>「前もっての計画<strong>によって</strong>成功する」＝計画は成功の<strong>手段</strong>。手段と結果が逆。</div></div>
+      </div>
+
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜ズレの3パターン</div>
+        2つ選ぶ問題は、<strong>本文との細かいズレ</strong>を1語ずつ照合する。頻出のズレは ①<em>controlled for</em>「統制」を「<strong>除外（exclude）</strong>」にすり替え（B）②「<strong>子供が</strong>約束を信頼」を「<strong>親が子供の</strong>約束を信頼」と<strong>主客逆転</strong>（D）③前もっての計画は成功の「<strong>手段</strong>」なのに「成功の<strong>結果</strong>」と<strong>因果逆転</strong>（E）。<br>
+        正解A・Cは、第4段落の記述（数百人・相関が弱い）に素直に一致する。
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--tll);border-color:var(--tl);">
+    <div class="lbl" style="color:var(--tl);">問1〜問5 解答まとめ</div>
+    <table class="tbl">
+      <tr style="background:var(--tld);color:#fff;"><th style="border-radius:6px 0 0 0;">設問</th><th>正解</th><th style="border-radius:0 6px 0 0;">一言根拠</th></tr>
+      <tr><td style="font-weight:700;text-align:center;">問1(1)</td><td style="font-weight:700;color:var(--tld);text-align:center;">B</td><td>broke down＝gave in（屈する・負ける）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問1(2)</td><td style="font-weight:700;color:var(--tld);text-align:center;">C</td><td>cope with＝manage（対処する）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問1(3)</td><td style="font-weight:700;color:var(--tld);text-align:center;">B</td><td>persuaded＝convinced（納得した）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問1(4)</td><td style="font-weight:700;color:var(--tld);text-align:center;">B</td><td>domestic＝home（家庭の）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問2</td><td style="font-weight:700;color:var(--tld);text-align:center;">C</td><td>ダッシュ以下は具体例＝for instance</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問3</td><td style="font-weight:700;color:var(--tld);text-align:center;">D</td><td>待った子は2倍（2個）もらえる（第2段落）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問4</td><td style="font-weight:700;color:var(--tld);text-align:center;">B</td><td>高遅延者は優れた社会技能（第3段落第2文）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">問5</td><td style="font-weight:700;color:var(--tld);text-align:center;">A, C</td><td>新実験・多人数（第4段落）／相関は弱い（第4段落）</td></tr>
+    </table>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p3')">← 問1・問2</button>
+    <button class="btnp" onclick="goP('p5')">全文和訳へ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 5 ============ -->
+<div class="pan" id="p5">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 5 — FULL TRANSLATION</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">全文和訳｜本文を最初から最後まで</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">左が英文、右が日本語訳です（スマホでは上が英文・下が和訳）。「<strong>問い → 実験 → 再検証 → 新解釈</strong>」の流れを段落ごとに対訳で確認できます。下線部(1)〜(4)・空所(5)に印を残し、各所に設問対応のポイントを添えました。</div>
+  </div>
+
+  <div class="card">
+    <div class="tr-section-title">問い [1]</div>
+    <div class="tr-row">
+      <div class="tr-en">Do your responses to situations as a child predict how you will turn out as an adult? Is it possible to determine who will turn out to be "healthy, wealthy and wise" from a simple test? Some psychologists believe that it is — at least, the "healthy" and "wealthy" parts — while others are more doubtful. Let us consider the evidence.</div>
+      <div class="tr-jp">子供のころの状況への反応は、大人になったときにどうなるかを<em>予測する</em>のでしょうか？　簡単なテストから、誰が「健康で裕福で賢明」になるかを見極めることは可能なのでしょうか？　可能だと<em>信じる心理学者</em>もいます──少なくとも「健康」と「裕福」の部分については──が、より<em>懐疑的な心理学者</em>もいます。その証拠を検討してみましょう。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tr-section-title">実験と結果 [2]-[3]</div>
+
+    <div class="tr-row">
+      <div class="tr-en">In the 1960s, the American psychologist Walter Mischel began a series of classic experiments that involved challenging several dozen young children to sit alone with a marshmallow for around 15 minutes and resist eating it. Mischel and his colleagues were interested in strategies that preschool children used to resist temptation. They presented four-year-olds with a marshmallow and told the children that they had two options: (a) ring a bell at any point to call the experimenter and eat the marshmallow, or (b) wait until the experimenter returned (about 15 minutes later), in which case they would earn two marshmallows. The message was: "small reward now, bigger reward later." Some children <span class="ul">broke down</span> and ate the marshmallow, whereas others were able to delay gratification and earn the two marshmallows.</div>
+      <div class="tr-jp">1960年代、アメリカの心理学者ウォルター・ミシェルは、<em>数十人</em>の幼い子供たちに、マシュマロと一緒に15分ほど一人で座って、それを食べるのを我慢するよう挑ませる、一連の有名な実験を始めました。ミシェルと同僚たちは、就学前の子供が誘惑に抵抗するために使う<em>戦略</em>に関心がありました。彼らは4歳児にマシュマロを提示し、2つの選択肢があると伝えました。(a) いつでもベルを鳴らして実験者を呼び、<em>マシュマロを食べる</em>、または (b) 実験者が戻る（約15分後）まで待つ、その場合は<em>2つのマシュマロをもらえる</em>、というものです。メッセージは「今すぐ小さな報酬か、後でより大きな報酬か」でした。一部の子供は<em>我慢できずに</em>マシュマロを食べてしまいましたが、他の子供は満足を遅らせて2つのマシュマロを得ることができました。</div>
+    </div>
+
+    <div class="tr-row">
+      <div class="tr-en">The high delayers, that is, the children who had waited longer, when re-examined as teenagers and adults, demonstrated an impressive range of advantages over the other children in the group. As teenagers, they had higher academic scores, more developed social skills, self-confidence and self-worth, and were rated by their parents as more mature, better able to <span class="ul">cope with</span> stress, and more likely to plan ahead. They were less likely to have conduct disorders or high levels of impatience and aggressiveness. As adults, they were less likely to have drug problems or alcohol dependency, to get divorced, or to be overweight.</div>
+      <div class="tr-jp">高遅延者、すなわち<em>長く待った子供</em>たちは、10代や成人として再調査されたとき、グループの他の子供たちに対して、目を見張るほど幅広い優位性を示しました。10代のとき、彼らはより高い学業成績、<em>より発達した社会技能</em>、自信と自尊心を持ち、<em>親からは</em>より成熟していて、ストレスにうまく対処でき、前もって計画を立てる傾向が強いと評価されました。彼らは行為障害や、高いレベルの短気・攻撃性を持つ可能性が低くなっていました。成人としては、薬物問題やアルコール依存を抱えたり、離婚したり、太りすぎになったりする可能性が<em>低くなって</em>いました。</div>
+    </div>
+
+    <div class="tr-points">
+      <strong>ポイント｜[2]-[3]＝問1(1)(2)・問3・問4</strong><br>
+      実験の2択（今すぐ1個 vs 待って2個）＝問3（待った子は2倍）。高遅延者の優位＝問4（<em>more developed social skills</em>＝優れた社会技能）。下線部(1)broke down・(2)cope with＝問1。成人後は薬物・肥満などが「<strong>少ない（less likely）</strong>」点に注意。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tr-section-title">再検証と新解釈 [4]-[5]</div>
+
+    <div class="tr-row">
+      <div class="tr-en">But not all psychologists were <span class="ul">persuaded</span> by Mischel's results. In 2018 researchers at New York University conducted the first attempt to replicate the marshmallow study, this time using data from hundreds of children. Unlike in the original research, the researchers also controlled for a large number of social and situational factors, such as parental educational background and how responsive parents were to their kids. The team found that the correlation between delay of gratification and later success was far weaker than in the original research, especially when the researchers took into account the social and family factors.</div>
+      <div class="tr-jp">しかし、すべての心理学者がミシェルの結果に<em>納得した</em>わけではありませんでした。2018年、ニューヨーク大学の研究者たちが、今回は<em>数百人</em>の子供のデータを使って、マシュマロ研究を再現する初めての試みを行いました。元の研究とは違い、研究者たちは、親の教育的背景や、親が子供にどれだけよく応えるかといった、多くの社会的・状況的要因も<em>統制しました</em>。チームが見出したのは、満足の遅延と後の成功との相関は、特に社会的・家庭的要因を考慮に入れたとき、元の研究よりも<em>はるかに弱かった</em>ということでした。</div>
+    </div>
+
+    <div class="tr-row">
+      <div class="tr-en">The interpretation given by the New York University researchers was that a child's ability to resist the marshmallow has less to do with their natural willpower, and more to do with their <span class="ul">domestic</span> circumstances — <span class="blank">( 5 )</span>, whether the child had learned to trust being promised greater rewards in the future or not. This is consistent with other research that has found that adults succeed at their goals through forward planning and avoiding temptation, rather than through willpower alone.</div>
+      <div class="tr-jp">ニューヨーク大学の研究者たちが与えた解釈は、子供がマシュマロを我慢する能力は、<em>生まれつきの意志力</em>よりも、<em>家庭の状況</em>──例えば、<em>子供が</em>、将来より大きな報酬を約束されることを信頼することを学んでいたかどうか──に関係している、というものでした。これは、大人が目標を達成するのは、意志力だけによってではなく、<em>前もって計画を立て、誘惑を避けることによって</em>である、と見出した他の研究とも一致しています。</div>
+    </div>
+
+    <div class="tr-points">
+      <strong>ポイント｜[4]-[5]＝問1(3)(4)・問2・問5</strong><br>
+      2018年の再検証（<em>hundreds of children</em>・要因を<em>controlled for</em>・相関は<em>far weaker</em>）＝問5A・C。新解釈は「意志力より家庭の状況＝<strong>子供が</strong>約束を信頼するか」＝問5D（主客の罠）。下線部(3)persuaded・(4)domestic＝問1、空所(5)＝問2（for instance）。成功は前もっての計画＝<strong>手段</strong>（問5Eの罠）。
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--pul);border-color:var(--pu);">
+    <div class="co co-p" style="margin:0;">
+      <div class="co-lbl">文章全体の流れ｜振り返り</div>
+      この論説文は「<strong>問い → 実験 → 結果 → 再検証 → 新解釈</strong>」の流れです。問い（[1]）で「子供の自制心が将来の成功を予測するか」という賛否を提示し、実験（[2][3]）でミシェルのマシュマロ実験と、高遅延者が10代・成人後に多くの面で優れていたことを示します。再検証（[4]）で2018年のNY大が<strong>数百人・社会的要因を統制</strong>すると相関は<strong>はるかに弱かった</strong>ことを示し、新解釈（[5]）で「我慢する力は意志力より<strong>家庭の状況</strong>（子供が約束を信頼できるか）による」と結論づけます。<br>
+      設問は、語句言い換え（問1）・空所補充（問2）・内容一致（問3〜5）。<strong>対比（1960年代 vs 2018年）</strong>を押さえ、<strong>すり替え（除外≠統制）・主客の逆転（子が信頼⇄親が信頼）・因果の逆転（手段⇄結果）</strong>の罠を見抜けば、全問が見通しよく解けます。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p4')">← 問3〜問5</button>
+    <button class="btnp" onclick="goP('p1')">最初に戻る ↑</button>
+  </div>
+</div>
+<!-- /wrap -->
+</div>
+
+<script>
+var ORDER=['p1','p2','p3','p4','p5'];
+function goP(pid){
+  var i,p,b;
+  for(i=0;i<ORDER.length;i++){
+    p=document.getElementById(ORDER[i]);
+    if(p)p.classList.remove('active');
+    b=document.getElementById('pb'+(i+1));
+    if(b){b.classList.remove('active');b.classList.remove('done');}
+  }
+  var cur=document.getElementById(pid);
+  if(cur)cur.classList.add('active');
+  var idx=ORDER.indexOf(pid);
+  for(i=0;i<ORDER.length;i++){
+    b=document.getElementById('pb'+(i+1));
+    if(!b)continue;
+    if(i===idx)b.classList.add('active');
+    else if(i<idx)b.classList.add('done');
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function pick(el,chosen,correct){
+  var box=el.parentNode;
+  var btns=box.querySelectorAll('.cb');
+  var i,b,key,m;
+  for(i=0;i<btns.length;i++){
+    b=btns[i];
+    b.classList.remove('sel','ok','ng');
+    m=(b.getAttribute('onclick')||'').match(/,\s*'([A-Za-z])'/);
+    key=m?m[1]:null;
+    if(key===correct)b.classList.add('ok');
+  }
+  el.classList.add('sel');
+  if(chosen!==correct)el.classList.add('ng');
+}
+function sel11(el,k){pick(el,k,'B');}
+function sel12(el,k){pick(el,k,'C');}
+function sel13(el,k){pick(el,k,'B');}
+function sel14(el,k){pick(el,k,'B');}
+function sel2(el,k){pick(el,k,'C');}
+function sel3(el,k){pick(el,k,'D');}
+function sel4(el,k){pick(el,k,'B');}
+function mark5(el,ok){
+  el.classList.remove('ok','ng');
+  if(ok==='1')el.classList.add('ok');
+  else el.classList.add('ng');
+}
+function toggle(id){
+  var e=document.getElementById(id);
+  if(e)e.classList.toggle('show');
+}
+function rev11(){toggle('ans11');}
+function rev12(){toggle('ans12');}
+function rev13(){toggle('ans13');}
+function rev14(){toggle('ans14');}
+function rev2(){toggle('ans2');}
+function rev3(){toggle('ans3');}
+function rev4(){toggle('ans4');}
+function rev5(){toggle('ans5');}
+</script>
+</body></html>
