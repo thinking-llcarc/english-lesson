@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>関西学院大学 2023年 大問2｜英語 完全解説｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#f7f5f0;--sf:#fff;--s2:#f0ede6;--s3:#e8e4dc;--bd:#ddd9d0;--bd2:#ccc8be;--tx:#1a1814;--t2:#6b6760;--t3:#a8a49e;--ac:#2c5f8a;--acl:#dbeafe;--acd:#1e3a5f;--tl:#0f6e56;--tll:#d1fae5;--tld:#064e3b;--am:#92560c;--aml:#fef3c7;--amd:#78350f;--rd:#991b1b;--rdl:#fee2e2;--pu:#4c3ab3;--pul:#ede9fe;--r:10px;--rl:16px;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);line-height:1.7;font-size:15px;min-height:100vh;}
+.hdr{background:var(--acd);padding:13px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;position:sticky;top:0;z-index:200;}
+.logo{width:36px;height:36px;border-radius:9px;background:var(--ac);color:#fff;font-size:18px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.brand{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;color:#fff;}
+.brand-s{font-size:10px;color:rgba(255,255,255,.45);margin-top:1px;}
+.hdr-badge{font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.15);color:rgba(255,255,255,.85);}
+.pnav{background:var(--sf);border-bottom:.5px solid var(--bd);display:flex;overflow-x:auto;}
+.pn{padding:11px 15px;font-size:11.5px;font-family:'Noto Sans JP',sans-serif;font-weight:500;color:var(--t2);cursor:pointer;border:none;border-bottom:2.5px solid transparent;background:none;white-space:nowrap;display:flex;align-items:center;gap:5px;transition:all .2s;}
+.pn:hover{color:var(--tx);}
+.pn.active{color:var(--ac);border-bottom-color:var(--ac);font-weight:700;}
+.pn.done{color:var(--tl);}
+.pn-num{width:18px;height:18px;border-radius:50%;background:var(--bd);color:var(--t2);font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.pn.active .pn-num{background:var(--ac);color:#fff;}
+.pn.done .pn-num{background:var(--tl);color:#fff;}
+.wrap{max-width:900px;margin:0 auto;padding:24px 16px 100px;}
+.pan{display:none;}
+.pan.active{display:block;animation:fi .25s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.card{background:var(--sf);border-radius:var(--rl);border:.5px solid var(--bd);padding:20px;margin-bottom:12px;}
+.lbl{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--t3);margin-bottom:10px;}
+.passage{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2.2;color:var(--tx);}
+.passage p{margin-bottom:1em;}
+.passage em{font-style:italic;}
+.pnum{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:var(--acd);color:#fff;font-size:10px;font-weight:700;margin-right:6px;vertical-align:middle;font-family:'Space Grotesk',sans-serif;}
+.ul{border-bottom:1.5px solid var(--ac);padding-bottom:1px;}
+.uln{font-size:9px;font-weight:700;color:var(--ac);vertical-align:super;margin-right:1px;font-family:'Noto Sans JP',sans-serif;line-height:0;}
+.blank{display:inline-block;background:var(--aml);color:var(--amd);font-weight:700;padding:1px 12px;border-radius:6px;font-size:13px;border:1px dashed var(--am);font-family:'Noto Sans JP',sans-serif;vertical-align:middle;}
+.qblock{background:var(--s2);border-radius:var(--rl);padding:18px;margin-bottom:12px;border:.5px solid var(--bd);}
+.qnum-badge{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:30px;padding:0 11px;border-radius:16px;background:var(--ac);color:#fff;font-size:13px;font-weight:700;margin-right:8px;vertical-align:middle;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;}
+.qtext{font-size:14px;font-weight:700;line-height:1.6;display:inline;vertical-align:middle;}
+.qjp{font-size:12px;font-weight:500;color:var(--t2);margin-top:6px;line-height:1.6;}
+.qen{font-family:'Source Serif 4',serif;font-size:14.5px;line-height:2;margin:10px 0;padding:12px 14px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);}
+.qen .hl{background:#fef08a;font-weight:700;padding:0 2px;border-radius:2px;}
+.qen em{font-style:italic;}
+.choices{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.cb{display:flex;align-items:flex-start;gap:8px;padding:10px 13px;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);cursor:pointer;font-size:13.5px;font-family:'Noto Sans JP',sans-serif;line-height:1.6;transition:all .15s;text-align:left;width:100%;}
+.cb:hover{border-color:var(--ac);background:var(--acl);}
+.cb.sel{border-color:var(--ac);background:var(--acl);}
+.cb.ok{background:var(--tll);border-color:var(--tl);font-weight:700;color:var(--tld);}
+.cb.ng{background:var(--rdl);border-color:var(--rd);color:var(--rd);opacity:.7;}
+.cn{font-size:11px;font-weight:700;color:var(--t3);flex-shrink:0;margin-top:2px;min-width:18px;font-family:'Noto Sans JP',sans-serif;}
+.cb.sel .cn,.cb.ok .cn{color:var(--ac);}
+.cb.ng .cn{color:var(--rd);}
+.cb-en{font-family:'Source Serif 4',serif;}
+.cb-jp{font-family:'Noto Sans JP',sans-serif;}
+.rev-btn{padding:7px 17px;background:var(--ac);color:#fff;border:none;border-radius:20px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:8px;}
+.rev-btn:hover{background:var(--acd);}
+.ans-block{display:none;margin-top:10px;padding:13px 15px;border-radius:var(--r);font-size:13px;line-height:1.8;}
+.ans-block.show{display:block;}
+.co{border-radius:var(--r);padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.75;}
+.co-b{background:var(--acl);border-left:3px solid var(--ac);}
+.co-t{background:var(--tll);border-left:3px solid var(--tl);}
+.co-a{background:var(--aml);border-left:3px solid var(--am);}
+.co-r{background:var(--rdl);border-left:3px solid var(--rd);}
+.co-p{background:var(--pul);border-left:3px solid var(--pu);}
+.co-lbl{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co-b .co-lbl{color:var(--ac);}
+.co-t .co-lbl{color:var(--tl);}
+.co-a .co-lbl{color:var(--am);}
+.co-r .co-lbl{color:var(--rd);}
+.co-p .co-lbl{color:var(--pu);}
+.co em{font-style:italic;}
+.ev{background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);padding:0;margin:10px 0;overflow:hidden;}
+.ev-hd{background:var(--acd);color:#fff;padding:7px 13px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:7px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:#fff;}
+.ev-bd{padding:12px 14px;font-size:13px;line-height:1.85;}
+.ev-bd em{font-style:italic;}
+.ev-q{font-family:'Source Serif 4',serif;font-style:italic;color:var(--acd);background:var(--acl);padding:8px 12px;border-radius:6px;border-left:3px solid var(--ac);margin:6px 0;font-size:13px;}
+.ev-q .h{background:#fef08a;font-style:normal;font-weight:700;padding:0 2px;border-radius:2px;}
+.choice-anal{margin-top:14px;}
+.ca-row{display:flex;gap:0;background:var(--sf);border-radius:var(--r);border:.5px solid var(--bd);margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex-shrink:0;width:36px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--tl);}
+.ca-mark.ng{background:var(--rd);}
+.ca-bd{padding:9px 13px;font-size:12.5px;line-height:1.75;flex:1;}
+.ca-bd em{font-style:italic;}
+.ca-bd .ca-key{font-weight:700;display:block;margin-bottom:2px;font-size:12.5px;}
+.ca-bd .ca-key.ok-clr{color:var(--tld);}
+.ca-bd .ca-key.ng-clr{color:var(--rd);}
+.pflow{display:flex;flex-direction:column;}
+.pf-item{display:flex;gap:0;align-items:stretch;margin-bottom:4px;}
+.pf-spine{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:44px;}
+.pf-dot{width:30px;height:30px;border-radius:50%;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:'Space Grotesk',sans-serif;}
+.pf-line{width:2px;flex:1;min-height:10px;margin:3px auto;}
+.pf-body{flex:1;padding:0 0 18px 13px;}
+.pf-body em{font-style:italic;}
+.rtag{font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:5px;}
+.bridge{font-size:11.5px;color:var(--t2);margin:5px 0 0 0;padding:6px 10px;background:var(--s2);border-radius:6px;line-height:1.6;}
+.bridge::before{content:"→ ";color:var(--ac);font-weight:700;}
+.navrow{display:flex;justify-content:space-between;align-items:center;margin-top:24px;padding-top:16px;border-top:.5px solid var(--bd);flex-wrap:wrap;gap:10px;}
+.btnp{display:inline-flex;align-items:center;gap:5px;padding:11px 22px;background:var(--ac);color:#fff;border:none;border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;cursor:pointer;}
+.btnp:hover{background:var(--acd);}
+.btns{display:inline-flex;align-items:center;gap:5px;padding:9px 17px;background:var(--sf);color:var(--tx);border:.5px solid var(--bd);border-radius:var(--r);font-family:'Noto Sans JP',sans-serif;font-size:13px;cursor:pointer;}
+.btns:hover{background:var(--s2);}
+.tr-row{display:grid;grid-template-columns:1fr;gap:0;border-radius:var(--rl);overflow:hidden;border:.5px solid var(--bd);margin-bottom:14px;}
+.tr-en{font-family:'Source Serif 4',serif;font-size:13.5px;line-height:1.95;padding:14px 18px;background:var(--sf);color:var(--tx);}
+.tr-jp{font-family:'Noto Sans JP',sans-serif;font-size:13.5px;line-height:2;padding:14px 18px;background:var(--s2);color:var(--tx);border-top:.5px solid var(--bd);}
+.tr-en em{font-style:italic;}
+.tr-en .ul{border-bottom:1.5px solid var(--ac);}
+.tr-jp em{font-style:normal;font-weight:700;color:var(--ac);}
+.tr-section-title{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.tr-section-title::before{content:"";width:24px;height:1px;background:var(--bd);}
+.tr-section-title::after{content:"";flex:1;height:1px;background:var(--bd);}
+.tr-points{margin-top:8px;padding:11px 14px;background:var(--acl);border-radius:var(--r);border-left:3px solid var(--ac);font-size:12.5px;line-height:1.8;}
+.tr-points strong{color:var(--acd);}
+.tr-points em{font-style:italic;}
+.tbl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.tbl th{padding:9px 12px;text-align:left;font-weight:700;}
+.tbl td{padding:8px 12px;border:.5px solid var(--bd);}
+.gl{width:100%;border-collapse:collapse;font-size:12.5px;}
+.gl td{padding:7px 11px;border:.5px solid var(--bd);vertical-align:top;line-height:1.6;}
+.gl td:first-child{font-family:'Source Serif 4',serif;font-weight:600;white-space:nowrap;background:var(--s2);color:var(--acd);width:1%;}
+.pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 9px;border-radius:20px;font-family:'Noto Sans JP',sans-serif;}
+.pill-hi{background:var(--tll);color:var(--tld);}
+.pill-lo{background:var(--rdl);color:var(--rd);}
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:.5px solid var(--bd2);padding:11px 12px;text-align:center;vertical-align:middle;}
+.mtx thead th{background:var(--acd);color:#fff;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--s2);text-align:left;font-weight:700;color:var(--acd);font-size:12px;line-height:1.5;}
+@media(min-width:720px){.tr-row{grid-template-columns:1fr 1fr;}.tr-jp{border-top:none;border-left:.5px solid var(--bd);}}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div class="logo">T</div>
+    <div>
+      <div class="brand">THINKING｜大学入試 完全解説</div>
+      <div class="brand-s">関西学院大学 2023年 英語 大問2</div>
+    </div>
+  </div>
+  <span class="hdr-badge">関西学院大学 2023｜論説文</span>
+</div>
+
+<div class="pnav">
+  <button class="pn active" onclick="goP('p1')" id="pb1"><span class="pn-num">1</span>英文を読む</button>
+  <button class="pn" onclick="goP('p2')" id="pb2"><span class="pn-num">2</span>文章の構造</button>
+  <button class="pn" onclick="goP('p3')" id="pb3"><span class="pn-num">3</span>設問A</button>
+  <button class="pn" onclick="goP('p4')" id="pb4"><span class="pn-num">4</span>設問B・C</button>
+  <button class="pn" onclick="goP('p5')" id="pb5"><span class="pn-num">5</span>全文和訳</button>
+</div>
+
+<div class="wrap">
+
+<!-- ============ PHASE 1 ============ -->
+<div class="pan active" id="p1">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 1 — READ THE PASSAGE</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">英文を読む｜コミュニケーションの本質</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">強いリーダーになるには、優れた語り手になる必要がある── コミュニケーションの本質を説く論説文です。「コミュニケーションは<strong>言葉そのもの</strong>ではなく、相手にどう<strong>“解釈”されるか</strong>」が一貫したテーマ。設問は下線部言い換え（A）・内容理解（B）・内容一致（C）。下線部(ア)〜(オ)の言い換えと、本文の主張（<strong>目的＝反応</strong>／<strong>誤解の原因＝調子</strong>）を正確に追いましょう。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">この文章の読み方</div>
+    <div style="display:flex;flex-direction:column;gap:9px;">
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--acd);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">主張 [1]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>コミュニケーションには目的がある。</strong>「言葉の習得だけで十分」という思い込みを否定。話すたびに<strong>反応（reaction）を生み出す意図</strong>がある。ショー曰く「最大の問題は<strong>うまくいったという錯覚</strong>」。</div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--ac);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">本質 [2]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>コミュニケーションは言葉ではない。</strong>大事なのは<strong>受け取られるメッセージ</strong>と<strong>聞き手に起こる反応</strong>で、どちらも<strong>解釈（interpretation）</strong>に依存する。伝えたつもりが、誤解を生む。</div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--am);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">原因 [3]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>誤解は「調子（tone）」から生じる。</strong>調子は<strong>内なる感情を表現する声の質</strong>。言葉より<strong>声の調子</strong>が誤解を生むことが多い。失礼に聞こえたのは、調子のせい。</div>
+      </div>
+      <div style="display:flex;gap:11px;align-items:flex-start;">
+        <span style="background:var(--pu);color:#fff;font-weight:700;font-size:11px;padding:4px 10px;border-radius:20px;flex-shrink:0;font-family:'Space Grotesk',sans-serif;white-space:nowrap;">展開 [4]</span>
+        <div style="font-size:13.5px;line-height:1.75;"><strong>言葉を超えた伝達。</strong>メッセージが意図どおりに解釈されない他の原因は？ 言葉以外のあらゆる伝達手段を探究する必要がある。</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">下線部・設問の対応</div>
+    <table class="tbl">
+      <tr style="background:var(--acd);color:#fff;"><th style="border-radius:6px 0 0 0;">箇所</th><th>内容</th><th style="border-radius:0 6px 0 0;">設問</th></tr>
+      <tr><td style="font-weight:700;color:var(--ac);text-align:center;">(ア)〜(オ)</td><td>下線の語句の言い換え</td><td style="color:var(--t2);">設問A</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">(i)</td><td>コミュニケーションの目的（第1段落）</td><td style="color:var(--t2);">設問B</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">(ii)</td><td>ショーの言葉（第1段落最終文）</td><td style="color:var(--t2);">設問B</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">(iii)</td><td>調子（tone）について（第3段落）</td><td style="color:var(--t2);">設問B</td></tr>
+      <tr><td style="color:var(--t2);text-align:center;">内容</td><td>本文と一致するもの（第2・3段落）</td><td style="color:var(--t2);">設問C（2つ選択）</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="lbl">本文（全4段落）</div>
+    <div class="passage">
+      <p><span class="pnum">1</span>Becoming a strong leader requires becoming a powerful storyteller. Stories capture the imagination, explain complicated issues in simple ways and <span class="ul"><span class="uln">ア</span>engage an audience with your vision</span>. However, it's easy to assume that communication is just what we say to each other, in either spoken or written form. Under this premise, becoming an effective communicator requires only a mastery of words. But communication always has a purpose. Every time we speak there's an intention to create a reaction. We want our audience to do something, gain an understanding, or feel some form of emotion, such as laughter, happiness, excitement, or sadness. Communication without a reaction is like <span class="ul"><span class="uln">イ</span>speaking to an empty hall</span> — you're sending a message but nobody is listening. Truly effective communication happens only when our message is heard, interpreted as we intended, understood, remembered, and put into action as we want it to be. As George Bernard Shaw* once said, 'The greatest problem in communication is the illusion that it has been accomplished.'</p>
+
+      <p><span class="pnum">2</span>Communication is not about the words you say; it is about the message that is received and the reaction it causes in the listener, both of which rely on interpretation. <span class="ul"><span class="uln">ウ</span>Too often we think we've delivered a message</span> without actually checking if it was understood as we intended. These misunderstandings are a very common cause of confusion, frustration, and wasted effort.</p>
+
+      <p><span class="pnum">3</span>Misunderstandings often arise through tone. Tone is <em>how</em> you say something. It is the quality in your voice that expresses your inner feelings or thoughts, such as sympathy, anger, interest, modesty, shock, or urgency. Very often it is not the words that cause a message to be misinterpreted but rather the tone of voice in which it is delivered. Can you think of a time when someone made a comment to you that sounded rude? Did they intend to insult you? Probably not, but their inappropriate tone may have <span class="ul"><span class="uln">エ</span>left you with that impression</span>. The reason you know someone is in a bad mood is because their tone frames your entire conversation with them.</p>
+
+      <p><span class="pnum">4</span>What are the other ways a message <span class="ul"><span class="uln">オ</span>might fail to be interpreted as expected</span>? To understand this requires exploration of all the ways in which we communicate beyond the words we speak.</p>
+    </div>
+    <div style="font-size:11px;color:var(--t3);margin-top:10px;line-height:1.7;">注：*George Bernard Shaw＝ジョージ・バーナード・ショー（アイルランド生まれの英国の劇作家・批評家）</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">語注</div>
+    <table class="gl">
+      <tr><td>storyteller</td><td>語り手、ストーリーを語る人</td></tr>
+      <tr><td>capture the imagination</td><td>想像力をかき立てる</td></tr>
+      <tr><td>engage A with B</td><td>AをBで引き込む・引きつける</td></tr>
+      <tr><td>audience</td><td>聞き手、聴衆</td></tr>
+      <tr><td>vision</td><td>ビジョン、展望</td></tr>
+      <tr><td>assume</td><td>思い込む、想定する</td></tr>
+      <tr><td>spoken or written form</td><td>話し言葉か書き言葉の形</td></tr>
+      <tr><td>premise</td><td>前提</td></tr>
+      <tr><td>mastery of words</td><td>言葉の習得・熟達</td></tr>
+      <tr><td>purpose</td><td>目的</td></tr>
+      <tr><td>intention</td><td>意図</td></tr>
+      <tr><td>create a reaction</td><td>反応を生み出す</td></tr>
+      <tr><td>gain an understanding</td><td>理解を得る</td></tr>
+      <tr><td>empty hall</td><td>誰もいない会場・公会堂</td></tr>
+      <tr><td>interpret</td><td>解釈する</td></tr>
+      <tr><td>put into action</td><td>実行に移す</td></tr>
+      <tr><td>illusion</td><td>錯覚、思い込み</td></tr>
+      <tr><td>accomplish</td><td>成し遂げる</td></tr>
+      <tr><td>rely on ~</td><td>〜に依存する</td></tr>
+      <tr><td>interpretation</td><td>解釈</td></tr>
+      <tr><td>deliver a message</td><td>メッセージを伝える</td></tr>
+      <tr><td>get ~ across</td><td>〜を（相手に）伝える</td></tr>
+      <tr><td>misunderstanding</td><td>誤解</td></tr>
+      <tr><td>confusion / frustration</td><td>混乱／いらだち</td></tr>
+      <tr><td>wasted effort</td><td>無駄な努力</td></tr>
+      <tr><td>arise through ~</td><td>〜から生じる</td></tr>
+      <tr><td>tone</td><td>（声の）調子、トーン</td></tr>
+      <tr><td>quality</td><td>質</td></tr>
+      <tr><td>inner feelings</td><td>内なる感情</td></tr>
+      <tr><td>sympathy / modesty / urgency</td><td>共感／謙虚さ／切迫感</td></tr>
+      <tr><td>misinterpret</td><td>誤解する</td></tr>
+      <tr><td>tone of voice</td><td>声の調子</td></tr>
+      <tr><td>insult</td><td>侮辱する</td></tr>
+      <tr><td>inappropriate</td><td>不適切な</td></tr>
+      <tr><td>leave A with B</td><td>AにBを残す</td></tr>
+      <tr><td>impression</td><td>印象</td></tr>
+      <tr><td>in a bad mood</td><td>不機嫌で</td></tr>
+      <tr><td>frame</td><td>枠づける、形作る</td></tr>
+      <tr><td>fail to do</td><td>〜しそこなう、〜できない</td></tr>
+      <tr><td>exploration</td><td>探究</td></tr>
+      <tr><td>beyond ~</td><td>〜を超えて</td></tr>
+    </table>
+  </div>
+
+  <div class="card" style="background:var(--aml);border-color:var(--am);">
+    <div class="lbl" style="color:var(--am);">読みながら意識すること</div>
+    <div style="font-size:13.5px;line-height:1.9;color:var(--tx);">
+      <strong>① 一貫したテーマ：</strong>コミュニケーションは「<strong>言葉そのもの</strong>」ではなく「相手にどう<strong>解釈・受け取られるか</strong>」。<em>not about the words … but about the message … received</em> が核心（第2段落）。<br>
+      <strong>② 目的＝反応を引き出す：</strong>話すたびに <em>reaction</em>（反応）を生み出す意図がある（設問B-i／本文の <em>reaction</em> が選択肢では <em>response</em> に言い換え）。<br>
+      <strong>③ ショーの言葉：</strong>最大の問題は「<strong>うまくいったという錯覚</strong>」（<em>illusion that it has been accomplished</em>）＝設問B-ii。<br>
+      <strong>④ 誤解の原因＝調子（tone）：</strong>言葉より声の調子が誤解を生む。調子は感情を「<strong>表現する（expresses）</strong>」もの。「偽装する（disguises）」は真逆（設問B-iii・C-e）。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <span style="font-size:12px;color:var(--t3);">Phase 1 / 5</span>
+    <button class="btnp" onclick="goP('p2')">文章の構造へ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 2 ============ -->
+<div class="pan" id="p2">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 2 — STRUCTURE</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">文章の構造｜言葉から、解釈へ</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">この論説文の主張は一貫して「<strong>コミュニケーションは言葉ではなく、相手にどう解釈されるか</strong>」。論理の流れと、3つの核心（<strong>本質＝解釈</strong>／<strong>伝えたつもりのギャップ</strong>／<strong>誤解の原因＝調子</strong>）を図で整理します。</div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">論理の流れ</div>
+    <div class="pflow">
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--acd);">1</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--s2);color:var(--acd);">[1] 主張</span>
+          <div style="font-size:13px;line-height:1.7;">リーダー＝語り手。コミュニケーションには<strong>目的</strong>がある（反応を生む）。「言葉の習得だけで十分」は思い込み。ショー「最大の問題は<strong>うまくいったという錯覚</strong>」。</div>
+          <div class="bridge">設問B-i（目的＝反応）・B-ii（ショーの言葉）の核心。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--ac);">2</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--acl);color:var(--ac);">[2] 本質</span>
+          <div style="font-size:13px;line-height:1.7;">コミュニケーションは<strong>言葉ではない</strong>。大事なのは<strong>受け取られるメッセージ</strong>と<strong>聞き手の反応</strong>＝どちらも<strong>解釈</strong>に依存。「伝えたつもり」で確認しない。</div>
+          <div class="bridge">設問C-d（本質＝解釈）・設問A-ウ（伝えたつもり）の核心。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--am);">3</div><div class="pf-line" style="background:var(--bd);"></div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--aml);color:var(--amd);">[3] 原因</span>
+          <div style="font-size:13px;line-height:1.7;">誤解は<strong>調子（tone）</strong>から生じる。調子は<strong>内なる感情を表現する</strong>声の質。言葉より<strong>声の調子</strong>が誤解を生むことが多い。</div>
+          <div class="bridge">設問B-iii（toneの性質）・設問C-e（言葉より調子）の核心。</div>
+        </div>
+      </div>
+      <div class="pf-item">
+        <div class="pf-spine"><div class="pf-dot" style="background:var(--pu);">4</div></div>
+        <div class="pf-body">
+          <span class="rtag" style="background:var(--pul);color:var(--pu);">[4] 展開</span>
+          <div style="font-size:13px;line-height:1.7;">メッセージが意図どおりに解釈されない他の原因は？ <strong>言葉を超えた</strong>あらゆる伝達手段を探究する必要がある（と問いかけて締める）。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">図解①｜コミュニケーションの本質（設問B-i・C-d）</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:10px;">
+      <div style="border:.5px solid var(--rd);border-radius:10px;padding:13px 15px;background:var(--rdl);">
+        <div style="font-size:12px;font-weight:700;color:var(--rd);margin-bottom:4px;">✗ 誤った前提</div>
+        <div style="font-size:13px;line-height:1.7;color:var(--rd);">コミュニケーション＝<strong>言葉（words）</strong>そのもの。効果的な伝え手には<strong>言葉の習得だけ</strong>が必要。</div>
+      </div>
+      <div style="text-align:center;color:var(--t3);font-size:13px;font-weight:700;">↓ 否定（But …）</div>
+      <div style="border:.5px solid var(--tl);border-radius:10px;padding:13px 15px;background:var(--tll);">
+        <div style="font-size:12px;font-weight:700;color:var(--tld);margin-bottom:4px;">✓ 本文の主張</div>
+        <div style="font-size:13px;line-height:1.7;color:var(--tld);">コミュニケーション＝<strong>受け取られるメッセージ</strong>＋<strong>聞き手に起こる反応</strong>。どちらも<strong>解釈（interpretation）</strong>に依存する。目的は<strong>反応（reaction）を引き出す</strong>こと。</div>
+      </div>
+    </div>
+    <div class="co co-b" style="margin-bottom:0;">
+      <div class="co-lbl">設問への接続</div>
+      <strong>設問B-i</strong>：目的＝聞き手から<strong>反応（reaction＝response）</strong>を引き出す（選択肢d）。<br>
+      <strong>設問C-d</strong>：本質は<strong>言葉の選択ではなく、解釈されるメッセージ</strong>にある（第2段落第1文に一致）。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">図解②｜「伝えたつもり」のギャップ（設問A-ウ・C-c）</div>
+    <div style="display:flex;flex-direction:column;gap:7px;margin:12px 0 6px;">
+      <div style="background:var(--acl);border-radius:9px;padding:10px 14px;font-size:13px;line-height:1.55;"><strong>話し手：</strong>メッセージを「伝えた」と思う（<em>think we've delivered a message / get across</em>）</div>
+      <div style="text-align:center;color:var(--rd);font-size:15px;font-weight:700;">↓ でも確認しない</div>
+      <div style="background:var(--rdl);border-radius:9px;padding:10px 14px;font-size:13px;line-height:1.55;color:var(--rd);"><strong>実際：</strong>意図どおりに理解されたか確かめない → <strong>誤解</strong> → 混乱・いらだち・無駄な努力</div>
+    </div>
+    <div class="co co-b" style="margin-bottom:0;">
+      <div class="co-lbl">設問への接続</div>
+      <strong>設問A-ウ</strong>：<em>Too often we think we've delivered a message</em>「あまりにしばしばメッセージを伝えたと思う」＝<em>We frequently assume we've gotten a message across</em>（選択肢a）。<em>deliver</em>＝<em>get across</em>。<br>
+      <strong>設問C-c</strong>は、この因果を<strong>逆</strong>にした罠（後述）。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="lbl">図解③｜誤解の原因「調子（tone）」（設問B-iii・C-e）</div>
+    <table class="mtx">
+      <thead>
+        <tr><th style="text-align:left;">調子（tone）とは</th><th>本文の記述</th><th>設問</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="cond">何か</td><td><em>how</em> you say something（どう言うか）</td><td>B-iii b（true）</td></tr>
+        <tr><td class="cond">働き</td><td>内なる感情を<strong>表現する</strong>（expresses）</td><td>B-iii c（<span class="pill pill-lo">真逆=NOT true</span>）</td></tr>
+        <tr><td class="cond">影響</td><td>言葉より<strong>誤解を生む</strong>（misinterpret）</td><td>B-iii a（true）／C-e（一致）</td></tr>
+        <tr><td class="cond">例</td><td>失礼な印象を残す＝<strong>調子のせい</strong></td><td>B-iii d（true）</td></tr>
+      </tbody>
+    </table>
+    <div class="co co-b" style="margin-bottom:0;">
+      <div class="co-lbl">設問への接続</div>
+      <strong>設問B-iii</strong>は「toneについて<strong>正しくない</strong>もの」を選ぶ。本文は調子が感情を「<strong>表現する（expresses）</strong>」と述べる。選択肢c「<strong>偽装する（disguises）</strong>」は真逆＝NOT true＝正解。<br>
+      <strong>設問C-e</strong>：会話では<strong>言葉より声の調子で誤解する可能性が高い</strong>（第3段落第3文に一致）。
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--pul);border-color:var(--pu);">
+    <div class="lbl" style="color:var(--pu);">この論説文の解き方</div>
+    <div style="font-size:13.5px;line-height:1.9;color:var(--tx);">
+      <strong>① テーマを軸に判断：</strong>コミュニケーション＝<strong>言葉でなく解釈</strong>。この軸で全選択肢の正誤を見極める。<br>
+      <strong>② 言い換えを見抜く（設問A）：</strong><em>engage ~ with</em>＝attract、<em>empty hall</em>＝talk to nobody、<em>get across</em>＝deliver、<em>leave ~ with</em>＝give、<em>fail to be interpreted as expected</em>＝understood differently。<strong>イディオム</strong>の意味を正確に。<br>
+      <strong>③ 本文語の言い換え（設問B）：</strong><em>reaction</em>＝response（B-i）、<em>illusion that it has been accomplished</em>＝mistaken belief that it has been successful（B-ii）。<br>
+      <strong>④ 逆・矛盾・本文にない、の罠：</strong>expresses ⇄ disguises（B-iii c）、因果の逆転（C-c）、本文にない記述（C-b, f）。<strong>逆・無の選択肢</strong>を確実に切る。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p1')">← 英文を読む</button>
+    <button class="btnp" onclick="goP('p3')">設問Aへ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 3 ============ -->
+<div class="pan" id="p3">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 3 — SECTION A</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">設問A｜下線部の言い換え</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">下線部(ア)〜(オ)が文中で表す内容に最も近いものを選ぶ。<strong>イディオム</strong>（engage with／get across／leave with）と<strong>多義語</strong>（hall／fail）の正確な意味がカギ。各下線部をタップすると答えが出ます。</div>
+  </div>
+
+  <!-- ア -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">ア</div>
+      <div class="qtext">engage an audience with your vision</div>
+    </div>
+    <div class="qen">Stories capture the imagination, explain complicated issues in simple ways and <span class="hl">engage an audience with your vision</span>.</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sa1(this,'a')"><span class="cn">a</span>surprise an audience with your vision（ビジョンで聞き手を驚かせる）</button>
+      <button class="cb cb-en" onclick="sa1(this,'b')"><span class="cn">b</span>attract an audience to your vision（聞き手をビジョンに引きつける）</button>
+      <button class="cb cb-en" onclick="sa1(this,'c')"><span class="cn">c</span>exclude an audience from your vision（聞き手をビジョンから排除する）</button>
+      <button class="cb cb-en" onclick="sa1(this,'d')"><span class="cn">d</span>confuse an audience with your vision（ビジョンで聞き手を混乱させる）</button>
+    </div>
+    <button class="rev-btn" onclick="ra1()">答えを見る</button>
+    <div class="ans-block" id="ansa1" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：b — attract an audience to your vision</div>
+      <em>engage A with B</em>「AをBで<strong>引き込む・引きつける</strong>」。<em>engage an audience with your vision</em>「聞き手をあなたのビジョンで引き込む」＝<em>attract an audience to your vision</em>（聞き手をビジョンに引きつける）＝b。<br>
+      <span style="color:var(--rd);">✗ a. surprise（驚かせる）／c. exclude（排除する＝逆）／d. confuse（混乱させる）は意味が違う。</span>
+    </div>
+  </div>
+
+  <!-- イ -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">イ</div>
+      <div class="qtext">speaking to an empty hall</div>
+    </div>
+    <div class="qen">Communication without a reaction is like <span class="hl">speaking to an empty hall</span> — you're sending a message but nobody is listening.</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sa2(this,'a')"><span class="cn">a</span>chatting in an empty hallway（誰もいない廊下でおしゃべりする）</button>
+      <button class="cb cb-en" onclick="sa2(this,'b')"><span class="cn">b</span>speaking outwardly（外に向かって話す）</button>
+      <button class="cb cb-en" onclick="sa2(this,'c')"><span class="cn">c</span>talking to nobody（誰にも話していない）</button>
+      <button class="cb cb-en" onclick="sa2(this,'d')"><span class="cn">d</span>saying nothing to the public（公衆に何も言わない）</button>
+    </div>
+    <button class="rev-btn" onclick="ra2()">答えを見る</button>
+    <div class="ans-block" id="ansa2" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：c — talking to nobody</div>
+      <em>empty hall</em>「誰もいない<strong>会場・公会堂</strong>」。<em>speaking to an empty hall</em>「誰もいない会場に向かって話す」＝<em>talking to nobody</em>（誰にも話していない）＝c。直後に <em>nobody is listening</em>「誰も聞いていない」とある。<br>
+      <span style="color:var(--rd);">✗ a. <em>hallway</em>（廊下）は <em>hall</em>（会場）と別物／b. outwardly（外向きに）は違う／d. saying nothing（何も言わない）は違う（話してはいる、聞き手がいないだけ）。</span>
+    </div>
+  </div>
+
+  <!-- ウ -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">ウ</div>
+      <div class="qtext">Too often we think we've delivered a message</div>
+    </div>
+    <div class="qen"><span class="hl">Too often we think we've delivered a message</span> without actually checking if it was understood as we intended.</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sa3(this,'a')"><span class="cn">a</span>We frequently assume we've gotten a message across.（メッセージを伝えたと思い込むことが多い）</button>
+      <button class="cb cb-en" onclick="sa3(this,'b')"><span class="cn">b</span>We sometimes feel we've sent a message too many times.（メッセージを何度も送りすぎたと感じることがある）</button>
+      <button class="cb cb-en" onclick="sa3(this,'c')"><span class="cn">c</span>We often believe we've realized what the listener wants to say.（聞き手が言いたいことを理解したと信じることが多い）</button>
+      <button class="cb cb-en" onclick="sa3(this,'d')"><span class="cn">d</span>We are too quick to admit we've received a secret message.（秘密のメッセージを受け取ったと認めるのが早すぎる）</button>
+    </div>
+    <button class="rev-btn" onclick="ra3()">答えを見る</button>
+    <div class="ans-block" id="ansa3" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：a — We frequently assume we've gotten a message across.</div>
+      <em>deliver a message</em>「メッセージを伝える」＝<em>get a message across</em>（メッセージを伝える）。<em>Too often</em>「あまりにしばしば」＝<em>frequently</em>。＝a。<br>
+      <span style="color:var(--rd);">✗ b. too many times（送りすぎ）は違う／c. realize what the listener wants to say（聞き手が言いたいことを理解＝主客が違う）／d. received a secret message（受け取る＝こちらは送る側で逆）。</span>
+    </div>
+  </div>
+
+  <!-- エ -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">エ</div>
+      <div class="qtext">left you with that impression</div>
+    </div>
+    <div class="qen">Probably not, but their inappropriate tone may have <span class="hl">left you with that impression</span>.</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sa4(this,'a')"><span class="cn">a</span>renewed your impression（あなたの印象を新たにした）</button>
+      <button class="cb cb-en" onclick="sa4(this,'b')"><span class="cn">b</span>ignored your impression（あなたの印象を無視した）</button>
+      <button class="cb cb-en" onclick="sa4(this,'c')"><span class="cn">c</span>given you that impression（あなたにその印象を与えた）</button>
+      <button class="cb cb-en" onclick="sa4(this,'d')"><span class="cn">d</span>taken you away from that impression（あなたをその印象から遠ざけた）</button>
+    </div>
+    <button class="rev-btn" onclick="ra4()">答えを見る</button>
+    <div class="ans-block" id="ansa4" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：c — given you that impression</div>
+      <em>leave A with B</em>「AにBを<strong>残す</strong>」。<em>left you with that impression</em>「あなたにその印象を残した」＝<em>given you that impression</em>（あなたにその印象を与えた）＝c。<br>
+      <span style="color:var(--rd);">✗ a. renewed（新たにした）／b. ignored（無視した）／d. taken away（遠ざけた＝逆）は意味が違う。</span>
+    </div>
+  </div>
+
+  <!-- オ -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">オ</div>
+      <div class="qtext">might fail to be interpreted as expected</div>
+    </div>
+    <div class="qen">What are the other ways a message <span class="hl">might fail to be interpreted as expected</span>?</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sa5(this,'a')"><span class="cn">a</span>might fall within the expected scope（予想される範囲内に収まるかもしれない）</button>
+      <button class="cb cb-en" onclick="sa5(this,'b')"><span class="cn">b</span>might no longer be considered as a failure（もはや失敗とみなされないかもしれない）</button>
+      <button class="cb cb-en" onclick="sa5(this,'c')"><span class="cn">c</span>might have a meaning similar to what we predicted（予測したのと似た意味を持つかもしれない）</button>
+      <button class="cb cb-en" onclick="sa5(this,'d')"><span class="cn">d</span>might be understood by others differently from our intention（意図と異なって他人に理解されるかもしれない）</button>
+    </div>
+    <button class="rev-btn" onclick="ra5()">答えを見る</button>
+    <div class="ans-block" id="ansa5" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:6px;font-size:13.5px;">✓ 正解：d — might be understood by others differently from our intention</div>
+      <em>fail to do</em>「〜しそこなう・〜できない」。<em>fail to be interpreted as expected</em>「予想どおりに解釈され<strong>ない</strong>」＝<em>understood differently from our intention</em>（意図と異なって理解される）＝d。<br>
+      <span style="color:var(--rd);">✗ a. fall within the expected scope（予想範囲内＝逆）／b. <em>failure</em>「失敗」と取る誤読／c. similar to what we predicted（予測どおり＝逆）。</span>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--tll);border-color:var(--tl);">
+    <div class="co co-t" style="margin:0;">
+      <div class="co-lbl">読解ポイント｜イディオム・多義語・逆の選択肢</div>
+      下線部言い換えは<strong>イディオム・多義語</strong>の正確な意味がカギ。<em>engage with</em>＝引きつける、<em>get across</em>＝伝える、<em>leave with</em>＝残す＝与える。<br>
+      特に注意：<em>empty hall</em>「会場」を hallway「廊下」と混同しない（イ）。<em>fail to do</em>「〜しそこなう」の <em>fail</em> を名詞「失敗」と取らない（オ）。<strong>逆・否定の選択肢</strong>（exclude／taken away／fall within／similar to predicted）を確実に切る。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p2')">← 文章の構造</button>
+    <button class="btnp" onclick="goP('p4')">設問B・Cへ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 4 ============ -->
+<div class="pan" id="p4">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 4 — SECTION B &amp; C</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">設問B・C｜内容理解と、内容一致</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;"><strong>設問B</strong>は内容理解3問（目的・ショーの言葉・tone）。<strong>設問C</strong>は内容一致2つ。本文語の<strong>言い換え</strong>（reaction＝response／illusion accomplished＝mistaken belief successful）と、<strong>逆・無・因果逆転</strong>の罠を見抜くのがカギ。</div>
+  </div>
+
+  <!-- B-i -->
+  <div class="qblock">
+    <div style="margin-bottom:6px;">
+      <div style="display:flex;align-items:center;margin-bottom:4px;">
+        <div class="qnum-badge">i</div>
+        <div class="qtext">According to the passage, what is the purpose of communication?</div>
+      </div>
+      <div class="qjp" style="margin-left:54px;">本文によると、コミュニケーションの目的は何か？</div>
+    </div>
+    <div class="qen">But communication always has a purpose. Every time we speak there's an intention to <span class="hl">create a reaction</span>.</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sb1(this,'a')"><span class="cn">a</span>Its purpose is to control the communicator's emotional state.（伝え手の感情状態を制御すること）</button>
+      <button class="cb cb-en" onclick="sb1(this,'b')"><span class="cn">b</span>Its purpose is to ensure that both sides take different positions.（双方が異なる立場をとることを保証すること）</button>
+      <button class="cb cb-en" onclick="sb1(this,'c')"><span class="cn">c</span>Its purpose is to maintain a healthy relationship with others.（他者と健全な関係を保つこと）</button>
+      <button class="cb cb-en" onclick="sb1(this,'d')"><span class="cn">d</span>Its purpose is to encourage a certain response from the audience.（聞き手からある反応を引き出すこと）</button>
+    </div>
+    <button class="rev-btn" onclick="rb1()">答えを見る</button>
+    <div class="ans-block" id="ansb1" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：d — 聞き手からある反応を引き出すこと</div>
+      <div class="co co-b">
+        <div class="co-lbl">なぜdが正解か｜第1段落第5・6文</div>
+        <em>But communication always has a purpose. Every time we speak there's an intention to create a reaction</em>「コミュニケーションには常に目的がある。話すたびに反応を生み出す意図がある」。<br><br>
+        → 目的＝聞き手から<strong>反応（reaction）を引き出す</strong>こと。選択肢dでは reaction が <strong>response</strong> に言い換えられている＝d。
+      </div>
+      <div class="ev">
+        <div class="ev-hd">根拠｜本文の該当箇所</div>
+        <div class="ev-bd">
+          <div class="ev-q">Every time we speak there's an intention to <span class="h">create a reaction</span>.</div>
+          ・目的＝<em>create a reaction</em>（反応を生み出す）／<em>reaction</em>＝<em>response</em>（反応）＝d。
+        </div>
+      </div>
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">a. 感情状態を制御</span>＝本文にない。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">b. 異なる立場をとる</span>＝本文にない。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">c. 健全な関係を保つ</span>＝本文にない。</div></div>
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">d. 聞き手から反応を引き出す</span>＝<strong>正解</strong>。create a reaction（reaction＝response）。</div></div>
+      </div>
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜reaction＝response の言い換え</div>
+        本文の <em>reaction</em> が選択肢では <em>response</em> に<strong>言い換え</strong>られている。同義語の対応に気づけば即決。a・b・cはいずれも<strong>本文にない</strong>内容。
+      </div>
+    </div>
+  </div>
+
+  <!-- B-ii -->
+  <div class="qblock">
+    <div style="margin-bottom:6px;">
+      <div style="display:flex;align-items:center;margin-bottom:4px;">
+        <div class="qnum-badge">ii</div>
+        <div class="qtext">What did George Bernard Shaw say about communication?</div>
+      </div>
+      <div class="qjp" style="margin-left:54px;">ショーはコミュニケーションについて何と言ったか？</div>
+    </div>
+    <div class="qen">'The greatest problem in communication is <span class="hl">the illusion that it has been accomplished</span>.'</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sb2(this,'a')"><span class="cn">a</span>Its major issue is the mistaken belief that it has been successful.（大きな問題は、うまくいったという誤った信念だ）</button>
+      <button class="cb cb-en" onclick="sb2(this,'b')"><span class="cn">b</span>It resolves the biggest challenge of mutual understanding.（相互理解の最大の課題を解決する）</button>
+      <button class="cb cb-en" onclick="sb2(this,'c')"><span class="cn">c</span>Its primary concern is the fact that we cannot stop talking.（主な関心は、話すのを止められないことだ）</button>
+      <button class="cb cb-en" onclick="sb2(this,'d')"><span class="cn">d</span>It is problematic because it invents imaginary conversations.（想像上の会話を生み出すので問題だ）</button>
+    </div>
+    <button class="rev-btn" onclick="rb2()">答えを見る</button>
+    <div class="ans-block" id="ansb2" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：a — 大きな問題は、うまくいったという誤った信念だ</div>
+      <div class="co co-b">
+        <div class="co-lbl">なぜaが正解か｜第1段落最終文</div>
+        ショーの言葉：<em>The greatest problem in communication is the illusion that it has been accomplished</em>「コミュニケーションにおける最大の問題は、それが<strong>達成されたという錯覚</strong>だ」。<br><br>
+        → <em>illusion that it has been accomplished</em>「達成された（うまくいった）という錯覚」＝<em>mistaken belief that it has been successful</em>「うまくいったという誤った信念」＝a。
+      </div>
+      <div class="ev">
+        <div class="ev-hd">根拠｜本文の該当箇所</div>
+        <div class="ev-bd">
+          <div class="ev-q">'The greatest problem in communication is <span class="h">the illusion that it has been accomplished</span>.'</div>
+          ・<em>illusion</em>「錯覚」＝<em>mistaken belief</em>「誤った信念」／<em>accomplished</em>「達成された」＝<em>successful</em>「うまくいった」＝a。
+        </div>
+      </div>
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">a. うまくいったという誤った信念</span>＝<strong>正解</strong>。illusion that it has been accomplished の言い換え。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">b. 課題を解決する</span>＝<strong>逆</strong>。ショーは問題を指摘している。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">c. 話すのを止められない</span>＝本文にない。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">d. 想像上の会話を生み出す</span>＝本文にない。</div></div>
+      </div>
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜2つの言い換え</div>
+        <strong>illusion＝mistaken belief</strong>（錯覚＝誤った信念）、<strong>accomplished＝successful</strong>（達成された＝うまくいった）の2つの言い換えに気づく。bは「解決する」で逆、c・dは本文にない。
+      </div>
+    </div>
+  </div>
+
+  <!-- B-iii -->
+  <div class="qblock">
+    <div style="margin-bottom:6px;">
+      <div style="display:flex;align-items:center;margin-bottom:4px;">
+        <div class="qnum-badge">iii</div>
+        <div class="qtext">Which of the following is NOT true about tone?</div>
+      </div>
+      <div class="qjp" style="margin-left:54px;">調子（tone）について<strong>正しくない</strong>ものはどれか？</div>
+    </div>
+    <div class="qen">It is the quality in your voice that <span class="hl">expresses your inner feelings or thoughts</span>, such as sympathy, anger, interest, modesty, shock, or urgency.</div>
+    <div class="choices">
+      <button class="cb cb-en" onclick="sb3(this,'a')"><span class="cn">a</span>It causes misunderstanding.（誤解を引き起こす）</button>
+      <button class="cb cb-en" onclick="sb3(this,'b')"><span class="cn">b</span>It is the way you talk about something.（何かについて話す方法だ）</button>
+      <button class="cb cb-en" onclick="sb3(this,'c')"><span class="cn">c</span>It disguises your inner feelings.（内なる感情を偽装する）</button>
+      <button class="cb cb-en" onclick="sb3(this,'d')"><span class="cn">d</span>It can make you sound rude.（失礼に聞こえさせることがある）</button>
+    </div>
+    <button class="rev-btn" onclick="rb3()">答えを見る</button>
+    <div class="ans-block" id="ansb3" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：c（NOT true）— 内なる感情を偽装する</div>
+      <div class="co co-b">
+        <div class="co-lbl">なぜcが正解（＝NOT true）か｜第3段落</div>
+        これは「正しく<strong>ない</strong>もの」を選ぶ問題。第3段落第3文：<em>It is the quality in your voice that expresses your inner feelings or thoughts</em>「調子は、内なる感情や考えを<strong>表現する</strong>声の質だ」。<br><br>
+        選択肢cは「<em>disguises</em> your inner feelings（内なる感情を<strong>偽装する</strong>）」。本文の「表現する（expresses）」と<strong>真逆</strong>＝NOT true＝正解c。
+      </div>
+      <div class="ev">
+        <div class="ev-hd">根拠｜本文の該当箇所</div>
+        <div class="ev-bd">
+          <div class="ev-q">It is the quality in your voice that <span class="h">expresses your inner feelings or thoughts</span> …</div>
+          ・調子は感情を<strong>表現する（expresses）</strong>／選択肢c「<em>disguises</em>（偽装する）」は真逆＝NOT true。
+        </div>
+      </div>
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合（true／NOT true）</div>
+        <div class="ca-row"><div class="ca-mark ok">○</div><div class="ca-bd"><span class="ca-key ok-clr">a. 誤解を引き起こす（true）</span>＝<em>Misunderstandings often arise through tone</em>（誤解は調子から生じる）。正しいので選ばない。</div></div>
+        <div class="ca-row"><div class="ca-mark ok">○</div><div class="ca-bd"><span class="ca-key ok-clr">b. 話す方法だ（true）</span>＝<em>Tone is how you say something</em>（調子はどう言うか）。正しいので選ばない。</div></div>
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">c. 感情を偽装する（NOT true）</span>＝本文は <em>expresses</em>（表現する）。真逆＝<strong>これが正解</strong>。</div></div>
+        <div class="ca-row"><div class="ca-mark ok">○</div><div class="ca-bd"><span class="ca-key ok-clr">d. 失礼に聞こえさせる（true）</span>＝<em>inappropriate tone may have left you with that impression</em>。正しいので選ばない。</div></div>
+      </div>
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜NOT true 問題＋反対語</div>
+        「<strong>NOT true</strong>（正しくないもの）」を選ぶ。a・b・dは本文と一致する＝正しいので<strong>選ばない</strong>。cだけが本文の <em>expresses</em>「表現する」と真逆の <em>disguises</em>「偽装する＝隠す」＝NOT true＝正解。<strong>expresses ⇄ disguises</strong> の反対関係を見抜く。
+      </div>
+    </div>
+  </div>
+
+  <!-- C -->
+  <div class="qblock">
+    <div style="display:flex;align-items:center;margin-bottom:6px;">
+      <div class="qnum-badge">設問C</div>
+      <div class="qtext">本文の内容と一致するものを<strong>2つ</strong>選べ（順序は問わない）。各選択肢をタップすると○×が出ます。</div>
+    </div>
+
+    <div class="choices">
+      <button class="cb cb-en" onclick="markc(this,'0')"><span class="cn">a</span>We tend to think lightly of the words we speak or write when communicating, and we tend not to improve our communication skills.（言葉を軽く考えがちで、スキルを向上させない傾向がある）</button>
+      <button class="cb cb-en" onclick="markc(this,'0')"><span class="cn">b</span>What is expected of the audience is to pause for a moment, empty their minds, and pay attention to the speaker's reaction.（聞き手に期待されるのは、立ち止まり、頭を空にし、話し手の反応に注意を向けること）</button>
+      <button class="cb cb-en" onclick="markc(this,'0')"><span class="cn">c</span>Perfect communication hardly ever takes place because the audience receives the communicator's message as intended.（完璧なコミュニケーションはめったに起こらない、聞き手が意図どおりに受け取るから）</button>
+      <button class="cb cb-en" onclick="markc(this,'1')"><span class="cn">d</span>The essence of communication does not lie in the choice of words but in the message as it is interpreted.（本質は言葉の選択ではなく、解釈されるメッセージにある）</button>
+      <button class="cb cb-en" onclick="markc(this,'1')"><span class="cn">e</span>In a conversation, we are much more likely to misinterpret a message by the tone of voice than by the words.（会話では、言葉より声の調子でメッセージを誤解する可能性がはるかに高い）</button>
+      <button class="cb cb-en" onclick="markc(this,'0')"><span class="cn">f</span>You can tell when a person is not in a good mood because the entire conversation is filled with rude comments.（人が不機嫌だとわかるのは、会話全体が失礼なコメントで満ちているから）</button>
+    </div>
+    <button class="rev-btn" onclick="rc()">答え合わせ・解説を見る</button>
+
+    <div class="ans-block" id="ansc" style="background:var(--tll);border-left:3px solid var(--tl);">
+      <div style="font-weight:700;color:var(--tld);margin-bottom:8px;font-size:14px;">✓ 正解：d・e（2つ）</div>
+
+      <div class="co co-b">
+        <div class="co-lbl">解き方｜テーマに沿って1つずつ照合</div>
+        内容一致（2つ選択）は、本文と1つずつ照合する。テーマ（<strong>言葉でなく解釈</strong>）に沿い、<strong>矛盾・逆・本文にない</strong>記述を切る。正解はd・e。
+      </div>
+
+      <div class="choice-anal">
+        <div style="font-size:11px;font-weight:700;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px;">全選択肢の本文照合</div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">a.</span>「言葉を<strong>軽く考えがち</strong>」＝<strong>第1段落第3・4文に矛盾</strong>。本文は「コミュニケーション＝言葉だと<em>思い込みがち</em>」「効果的な伝え手には<em>言葉の習得だけ</em>が必要（という前提）」＝むしろ言葉を重視しすぎる考え。「スキルを向上させない」も本文にない。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">b.</span>「聞き手は立ち止まり頭を空にする…」＝<strong>本文に言及なし</strong>。聞き手が何をすべきかは書かれていない。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">c.</span>「完璧なコミュニケーションはめったに起こらない、聞き手が<strong>意図どおりに受け取るから</strong>」＝<strong>因果が逆</strong>。本文は「意図どおりに受け取られ<strong>ない</strong>」から完璧が難しい。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">d.</span>「本質は<strong>言葉の選択ではなく、解釈されるメッセージ</strong>にある」＝<strong>第2段落第1文に一致</strong>。<em>Communication is not about the words … it is about the message that is received … rely on interpretation</em>。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd"><span class="ca-key ok-clr">e.</span>「<strong>言葉より声の調子</strong>で誤解する可能性が高い」＝<strong>第3段落第3文に一致</strong>。<em>it is not the words that cause a message to be misinterpreted but rather the tone of voice</em>。</div></div>
+
+        <div class="ca-row"><div class="ca-mark ng">✗</div><div class="ca-bd"><span class="ca-key ng-clr">f.</span>「会話全体が<strong>失礼なコメントで満ちている</strong>から不機嫌とわかる」＝<strong>本文に言及なし</strong>。本文は <em>their tone frames your entire conversation</em>「<strong>調子</strong>が会話全体を枠づける」で、コメントの内容ではない。</div></div>
+      </div>
+
+      <div class="co co-t">
+        <div class="co-lbl">読解ポイント｜逆・無・因果逆転の3パターン</div>
+        正解d・eは本文の核心（<strong>本質＝解釈</strong>＝第2段落／<strong>誤解の原因＝調子</strong>＝第3段落）に素直に一致する。<br>
+        誤答の罠：a（言葉を軽く考える＝<strong>逆</strong>）、b・f（<strong>本文にない</strong>）、c（<strong>因果の逆転</strong>＝「意図どおりに受け取る<em>から</em>完璧でない」は矛盾）。<strong>逆・無・因果逆転</strong>の3パターンを確実に切る。
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--tll);border-color:var(--tl);">
+    <div class="lbl" style="color:var(--tl);">設問A・B・C 解答まとめ</div>
+    <table class="tbl">
+      <tr style="background:var(--tld);color:#fff;"><th style="border-radius:6px 0 0 0;">設問</th><th>正解</th><th style="border-radius:0 6px 0 0;">一言根拠</th></tr>
+      <tr><td style="font-weight:700;text-align:center;">A (ア)</td><td style="font-weight:700;color:var(--tld);text-align:center;">b</td><td>engage with＝attract（引きつける）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">A (イ)</td><td style="font-weight:700;color:var(--tld);text-align:center;">c</td><td>empty hall＝talk to nobody（誰もいない会場）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">A (ウ)</td><td style="font-weight:700;color:var(--tld);text-align:center;">a</td><td>deliver a message＝get across（伝える）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">A (エ)</td><td style="font-weight:700;color:var(--tld);text-align:center;">c</td><td>leave with＝give（その印象を残す＝与える）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">A (オ)</td><td style="font-weight:700;color:var(--tld);text-align:center;">d</td><td>fail to be interpreted as expected＝意図と異なって理解される</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">B (i)</td><td style="font-weight:700;color:var(--tld);text-align:center;">d</td><td>目的＝反応を引き出す（reaction＝response）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">B (ii)</td><td style="font-weight:700;color:var(--tld);text-align:center;">a</td><td>ショー＝うまくいった錯覚（illusion＝mistaken belief）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">B (iii)</td><td style="font-weight:700;color:var(--tld);text-align:center;">c</td><td>NOT true＝感情を「偽装」（本文は「表現」）</td></tr>
+      <tr><td style="font-weight:700;text-align:center;">C</td><td style="font-weight:700;color:var(--tld);text-align:center;">d, e</td><td>本質＝解釈（第2段落）／言葉より調子で誤解（第3段落）</td></tr>
+    </table>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p3')">← 設問A</button>
+    <button class="btnp" onclick="goP('p5')">全文和訳へ進む →</button>
+  </div>
+</div>
+
+<!-- ============ PHASE 5 ============ -->
+<div class="pan" id="p5">
+
+  <div class="card" style="background:linear-gradient(135deg,var(--acd),#0d2545);border:none;color:#fff;margin-bottom:16px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-bottom:6px;">PHASE 5 — FULL TRANSLATION</div>
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;line-height:1.3;margin-bottom:8px;">全文和訳｜本文を最初から最後まで</div>
+    <div style="font-size:13px;opacity:.88;line-height:1.8;">左が英文、右が日本語訳です（スマホでは上が英文・下が和訳）。「<strong>主張 → 本質 → 原因 → 展開</strong>」の流れを段落ごとに対訳で確認できます。下線部(ア)〜(オ)に印を残し、各所に設問対応のポイントを添えました。</div>
+  </div>
+
+  <div class="card">
+    <div class="tr-section-title">主張｜コミュニケーションの目的 [1]</div>
+    <div class="tr-row">
+      <div class="tr-en">Becoming a strong leader requires becoming a powerful storyteller. Stories capture the imagination, explain complicated issues in simple ways and <span class="ul">engage an audience with your vision</span>. However, it's easy to assume that communication is just what we say to each other, in either spoken or written form. Under this premise, becoming an effective communicator requires only a mastery of words. But communication always has a purpose. Every time we speak there's an intention to create a reaction. We want our audience to do something, gain an understanding, or feel some form of emotion, such as laughter, happiness, excitement, or sadness. Communication without a reaction is like <span class="ul">speaking to an empty hall</span> — you're sending a message but nobody is listening. Truly effective communication happens only when our message is heard, interpreted as we intended, understood, remembered, and put into action as we want it to be. As George Bernard Shaw once said, 'The greatest problem in communication is the illusion that it has been accomplished.'</div>
+      <div class="tr-jp">強いリーダーになるには、力強い<em>語り手</em>になる必要があります。物語は想像力をかき立て、複雑な問題を分かりやすく説明し、聞き手をあなたのビジョンに<em>引き込みます</em>。しかし、コミュニケーションとは、話し言葉であれ書き言葉であれ、単にお互いに言うことだと<em>思い込みがち</em>です。この前提のもとでは、効果的な伝え手になるには、<em>言葉を使いこなす力だけ</em>が必要だということになります。しかし、コミュニケーションには常に<em>目的</em>があります。私たちが話すたびに、<em>反応を生み出そうとする意図</em>があるのです。私たちは聞き手に、何かをしてほしい、理解を得てほしい、あるいは笑い・幸福・興奮・悲しみといった何らかの感情を抱いてほしいと思っています。反応のないコミュニケーションは、<em>誰もいない会場に向かって話す</em>ようなものです──メッセージを送っているのに、誰も聞いていないのです。本当に効果的なコミュニケーションは、私たちのメッセージが聞かれ、<em>意図したとおりに解釈され</em>、理解され、記憶され、望むとおりに実行に移されたときにのみ起こります。ジョージ・バーナード・ショーがかつて言ったように、「コミュニケーションにおける最大の問題は、それが<em>達成されたという錯覚</em>である」のです。</div>
+    </div>
+    <div class="tr-points">
+      <strong>ポイント｜[1]＝設問A(ア)(イ)・B-i・B-ii</strong><br>
+      下線部(ア)engage with＝引きつける・(イ)empty hall＝誰もいない会場＝設問A。コミュニケーションの目的＝<em>create a reaction</em>（反応を生む）＝設問B-i。ショーの言葉「<em>illusion that it has been accomplished</em>（うまくいった錯覚）」＝設問B-ii。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tr-section-title">本質｜言葉ではなく解釈 [2]</div>
+    <div class="tr-row">
+      <div class="tr-en">Communication is not about the words you say; it is about the message that is received and the reaction it causes in the listener, both of which rely on interpretation. <span class="ul">Too often we think we've delivered a message</span> without actually checking if it was understood as we intended. These misunderstandings are a very common cause of confusion, frustration, and wasted effort.</div>
+      <div class="tr-jp">コミュニケーションは、あなたが言う<em>言葉</em>に関するものではありません。それは、<em>受け取られるメッセージ</em>と、それが聞き手に引き起こす<em>反応</em>に関するものであり、そのどちらも<em>解釈に依存</em>しています。私たちはあまりにもしばしば、意図したとおりに理解されたかどうかを実際に確認しないまま、<em>メッセージを伝えたと思い込んで</em>しまいます。こうした誤解は、混乱・いらだち・無駄な努力の非常によくある原因なのです。</div>
+    </div>
+    <div class="tr-points">
+      <strong>ポイント｜[2]＝設問A(ウ)・C-d</strong><br>
+      下線部(ウ)<em>think we've delivered a message</em>＝伝えたと思い込む＝設問A。第1文「コミュニケーションは<strong>言葉ではなく、受け取られるメッセージと反応＝解釈に依存</strong>」＝設問C-d（本質＝解釈）の根拠。
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="tr-section-title">原因｜誤解と調子 [3]-[4]</div>
+
+    <div class="tr-row">
+      <div class="tr-en">Misunderstandings often arise through tone. Tone is <em>how</em> you say something. It is the quality in your voice that expresses your inner feelings or thoughts, such as sympathy, anger, interest, modesty, shock, or urgency. Very often it is not the words that cause a message to be misinterpreted but rather the tone of voice in which it is delivered. Can you think of a time when someone made a comment to you that sounded rude? Did they intend to insult you? Probably not, but their inappropriate tone may have <span class="ul">left you with that impression</span>. The reason you know someone is in a bad mood is because their tone frames your entire conversation with them.</div>
+      <div class="tr-jp">誤解はしばしば<em>調子（トーン）</em>から生じます。調子とは、何かを「<em>どのように</em>」言うかということです。それは、共感・怒り・関心・謙虚さ・衝撃・切迫感といった、あなたの内なる感情や考えを<em>表現する声の質</em>です。メッセージが誤解される原因は、言葉ではなく、むしろそれが伝えられるときの<em>声の調子</em>であることが非常に多いのです。誰かがあなたに失礼に聞こえるコメントをした時のことを思い出せますか？　その人はあなたを侮辱するつもりだったのでしょうか？　おそらく違いますが、その人の不適切な調子が、あなたに<em>そのような印象を残した</em>のかもしれません。誰かが不機嫌だとわかるのは、その人の<em>調子が会話全体を枠づけている</em>からです。</div>
+    </div>
+
+    <div class="tr-row">
+      <div class="tr-en">What are the other ways a message <span class="ul">might fail to be interpreted as expected</span>? To understand this requires exploration of all the ways in which we communicate beyond the words we speak.</div>
+      <div class="tr-jp">メッセージが<em>予想どおりに解釈されない</em>ことになる、他の原因は何でしょうか？　これを理解するには、私たちが話す<em>言葉を超えて</em>コミュニケーションをとる、あらゆる方法を探究する必要があります。</div>
+    </div>
+
+    <div class="tr-points">
+      <strong>ポイント｜[3]-[4]＝設問A(エ)(オ)・B-iii・C-e</strong><br>
+      下線部(エ)<em>left you with that impression</em>＝印象を残す・(オ)<em>fail to be interpreted as expected</em>＝意図と異なって理解される＝設問A。調子は感情を「<strong>表現する（expresses）</strong>」＝設問B-iii（cの「偽装する」は真逆）。「言葉より声の調子で誤解」＝設問C-e。
+    </div>
+  </div>
+
+  <div class="card" style="background:var(--pul);border-color:var(--pu);">
+    <div class="co co-p" style="margin:0;">
+      <div class="co-lbl">文章全体の流れ｜振り返り</div>
+      この論説文は「<strong>主張 → 本質 → 原因 → 展開</strong>」の流れです。主張（[1]）でコミュニケーションには<strong>目的（反応を生む）</strong>があり、ショーの「うまくいったという錯覚が最大の問題」を引きます。本質（[2]）でコミュニケーションは<strong>言葉ではなく、受け取られるメッセージと反応＝解釈に依存</strong>すると述べます。原因（[3]）で誤解の主因は「<strong>調子（tone）</strong>」であり、調子は感情を表現すると説明。展開（[4]）で<strong>言葉を超えた</strong>伝達手段の探究を促して締めます。<br>
+      一貫したテーマは「<strong>コミュニケーションは言葉でなく解釈</strong>」。設問は下線部言い換え（A）・内容理解（B）・内容一致（C）で、<strong>言い換え</strong>（reaction＝response／illusion accomplished＝mistaken belief）と、<strong>逆・無・因果逆転</strong>の罠を見抜けば、全問が見通しよく解けます。
+    </div>
+  </div>
+
+  <div class="navrow">
+    <button class="btns" onclick="goP('p4')">← 設問B・C</button>
+    <button class="btnp" onclick="goP('p1')">最初に戻る ↑</button>
+  </div>
+</div>
+<!-- /wrap -->
+</div>
+
+<script>
+var ORDER=['p1','p2','p3','p4','p5'];
+function goP(pid){
+  var i,p,b;
+  for(i=0;i<ORDER.length;i++){
+    p=document.getElementById(ORDER[i]);
+    if(p)p.classList.remove('active');
+    b=document.getElementById('pb'+(i+1));
+    if(b){b.classList.remove('active');b.classList.remove('done');}
+  }
+  var cur=document.getElementById(pid);
+  if(cur)cur.classList.add('active');
+  var idx=ORDER.indexOf(pid);
+  for(i=0;i<ORDER.length;i++){
+    b=document.getElementById('pb'+(i+1));
+    if(!b)continue;
+    if(i===idx)b.classList.add('active');
+    else if(i<idx)b.classList.add('done');
+  }
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function pick(el,chosen,correct){
+  var box=el.parentNode;
+  var btns=box.querySelectorAll('.cb');
+  var i,b,key,m;
+  for(i=0;i<btns.length;i++){
+    b=btns[i];
+    b.classList.remove('sel','ok','ng');
+    m=(b.getAttribute('onclick')||'').match(/,\s*'([A-Za-z])'/);
+    key=m?m[1]:null;
+    if(key===correct)b.classList.add('ok');
+  }
+  el.classList.add('sel');
+  if(chosen!==correct)el.classList.add('ng');
+}
+function sa1(el,k){pick(el,k,'b');}
+function sa2(el,k){pick(el,k,'c');}
+function sa3(el,k){pick(el,k,'a');}
+function sa4(el,k){pick(el,k,'c');}
+function sa5(el,k){pick(el,k,'d');}
+function sb1(el,k){pick(el,k,'d');}
+function sb2(el,k){pick(el,k,'a');}
+function sb3(el,k){pick(el,k,'c');}
+function markc(el,ok){
+  el.classList.remove('ok','ng');
+  if(ok==='1')el.classList.add('ok');
+  else el.classList.add('ng');
+}
+function toggle(id){
+  var e=document.getElementById(id);
+  if(e)e.classList.toggle('show');
+}
+function ra1(){toggle('ansa1');}
+function ra2(){toggle('ansa2');}
+function ra3(){toggle('ansa3');}
+function ra4(){toggle('ansa4');}
+function ra5(){toggle('ansa5');}
+function rb1(){toggle('ansb1');}
+function rb2(){toggle('ansb2');}
+function rb3(){toggle('ansb3');}
+function rc(){toggle('ansc');}
+</script>
+</body></html>
