@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜愛知学院大学 2024 大問3（機械翻訳と語学学習）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">愛</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>愛知学院大学 2024 ／ 大問3</span></div>
+    <div class="top-meta">機械翻訳と語学学習<br>全6問・空所(1)(2)(4)／下線部(3)</div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-in" id="navIn">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>OVERVIEW</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>LOGIC</small>論の骨格</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>SOLUTIONS</small>設問解説</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>READING</small>全訳マップ</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>翻訳ソフトがあれば語学はいらない?<br>― 筆者の答えは、たった一語。「Wrong.」</h1>
+    <p>テーマは機械翻訳と外国語学習。冒頭の問いを即座に否定し、「語学学習＝世界の見方を変えること」という一貫した主張で進む論説。空所・下線部・内容一致・タイトルまで、すべて主張の一本線から根拠が取れる。</p>
+    <div class="thesis"><b>一貫する主張：</b>翻訳ソフトは便利。だが語学学習は<b>世界の見方を変え</b>、機械が苦手な<b>あいまいさ</b>を人間として処理する力を育てる。だから機械に語学学習を止めさせるな。</div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>段落構成</span></div>
+      <div class="stat"><b>6</b><span>設問</span></div>
+      <div class="stat"><b>3</b><span>空所補充</span></div>
+      <div class="stat"><b>1</b><span>タイトル選択</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">この大問の設問構成（型で分類）</h2>
+  <p class="lead">愛知学院のこの長文は「空所補充（語彙・文脈）」「下線部の指示内容」「内容一致（不一致選択）」「タイトル選択」の4型。いずれも<em>本文の主張とズレた選択肢を消す</em>のが基本動作になる。</p>
+  <table>
+    <thead><tr><th style="width:26%">型</th><th>問われ方</th><th style="width:22%">該当設問</th></tr></thead>
+    <tbody>
+      <tr><td class="c">① 空所・語彙</td><td>文脈とコロケーションで最適な語句を選ぶ</td><td>問1・問2・問4</td></tr>
+      <tr><td class="c">② 指示語</td><td>下線部 it が指す名詞句を直前・主題から確認</td><td>問3</td></tr>
+      <tr><td class="c">③ 内容一致（不一致）</td><td>本文と<em>一致しない</em>選択肢を1つ選ぶ（主語すり替えに注意）</td><td>問5</td></tr>
+      <tr><td class="c">④ タイトル</td><td>全体の主張を一言で表す見出しを選ぶ</td><td>問6</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">合格者の解く順序</h2>
+  <div class="grid2">
+    <div class="box navy"><span class="lab">STEP 1</span>冒頭の <em>Wrong.</em> で筆者の立場を確定。「翻訳ソフト≠語学不要」という主張を頭に置いて読む。</div>
+    <div class="box gold"><span class="lab">STEP 2</span>空所は<em>前後のコロケーションと文脈の方向（肯定/否定）</em>で絞る。同じ語を含む紛らわしい選択肢に注意。</div>
+    <div class="box teal"><span class="lab">STEP 3</span>下線部 it は直近の名詞に飛びつかず、<em>文の主題（the world around us）</em>を確認する。</div>
+    <div class="box verm"><span class="lab">STEP 4</span>内容一致・タイトルは最後。<em>主語のすり替え・逆・言い過ぎ</em>を機械的に消す。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;">
+    <span class="lab">この解説の使い方</span>
+    各設問カードは<strong>選択肢をタップすると自分で解ける</strong>。「答え・根拠を表示」で正解／<strong>根拠（本文の該当箇所）</strong>／全選択肢の✓✗／語法・コロケーションまで開きます。手元の過去問と並べて使ってください。
+  </div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 5段落の要旨と、空所・下線部の在りか<span class="sub">各段落が本文で何を言っているか。空所(1)(2)(4)／下線部(3)がどこに埋め込まれているかを俯瞰する。</span></h1>
+  <div class="rule"></div>
+
+  <div class="para"><div class="para-n"><b>1</b><span>問題提起</span></div><div class="para-b">
+    <div class="theme">翻訳ソフトがあるから語学は不要? ― <span class="k">「Wrong.」</span></div>
+    <p>冒頭で問いを立て、即「間違い」と否定。近年、機械翻訳は大きな進歩をとげ、ほぼどんな言語にも即座に翻訳できる。海外旅行では確かに便利。</p>
+    <div class="tags"><span class="utag blank">空所(1) amazing advances</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>2</b><span>本質</span></div><div class="para-b">
+    <div class="theme">逆接 ― 外国語学習は<span class="k">「世界の見方を変える」</span>こと</div>
+    <p>しかし外国語を学ぶことは、単にウェブページを理解したりLAでアイスを買うことではない。それは世界の見方を変えることだ。</p>
+    <div class="tags"><span class="utag blank">空所(2) learning</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>3</b><span>理由①・認識</span></div><div class="para-b">
+    <div class="theme">言語が<span class="k">世界の認識</span>を形づくる</div>
+    <p>周りの世界の理解は、それを処理するのに使う言語に大きく由来する。1言語なら視点は1つ。追加の言語は、デバイスを介さず直接より多くの人とやりとりでき、同じ現象を別の考え方で見せてくれる。</p>
+    <div class="tags"><span class="utag">下線部(3) it ＝ the world around us</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>4</b><span>理由②・実用</span></div><div class="para-b">
+    <div class="theme">機械が苦手な<span class="k">「あいまいさ」</span>を人間は処理できる</div>
+    <p>世界理解に興味がなくても、翻訳ソフト頼みより語学を学ぶ実用的理由がある。言語にはあいまいさが多く機械は苦手（日本語は主語省略、英語も多義）。raise/raze は同音だが反対、cleave は両義。理解には文脈・知識・表情・声のトーンが要る＝人間のように振る舞う必要がある。</p>
+    <div class="tags"><span class="utag blank">空所(4) have opposite meanings</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>5</b><span>結論</span></div><div class="para-b">
+    <div class="theme">機械翻訳は素晴らしい。<span class="k">だがまだ完全に人間的ではない</span></div>
+    <p>最後の2文で主張を締める。機械翻訳は fantastic。だが not quite human yet。ここがタイトル(問6)の根拠。</p>
+    <div class="tags"><span class="utag">→ 問5 内容一致 ／ 問6 タイトル</span></div>
+  </div></div>
+
+  <div class="pnav"><button class="btns" data-go="0">← この英文の攻略</button><span class="sp"></span><button class="btnp" data-go="2">論の骨格へ進む →</button></div>
+</section><section class="panel" id="p2">
+  <div class="eyebrow">Argument Flow</div>
+  <h1 class="head">論の骨格 ― 「否定 → 本質 → 2つの理由 → 結論」<span class="sub">冒頭で問いを否定し、語学学習の意義を「認識」と「実用（あいまいさ）」の2本柱で支え、最後にトーンを和らげて締める。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">論の背骨</h2>
+  <div class="flow">
+    <div class="fnode"><div class="fdot">1</div><div class="fbody"><b>問いを即否定</b><p>「翻訳ソフトがあるから語学不要?」→ <em>Wrong.</em> 一語で立場を宣言。読者の常識を裏返すつかみ。</p></div></div>
+    <div class="fnode"><div class="fdot">2</div><div class="fbody"><b>本質の提示</b><p>語学学習は実用（ウェブ理解・買い物）の話ではなく、<em>世界の見方を変える</em>ことだと再定義。</p></div></div>
+    <div class="fnode"><div class="fdot">3</div><div class="fbody"><b>理由①：認識</b><p>言語が世界の理解を形づくる。追加言語＝直接のコミュニケーション＋<em>同じ現象への別の思考</em>。</p></div></div>
+    <div class="fnode"><div class="fdot">4</div><div class="fbody"><b>理由②：実用（あいまいさ）</b><p>機械はあいまいさに弱い（主語省略・同音異義・多義）。人間は<em>文脈・知識・非言語情報</em>で処理できる。</p></div></div>
+    <div class="fnode"><div class="fdot">5</div><div class="fbody"><b>結論（譲歩つき）</b><p>機械翻訳は素晴らしい。<em>だがまだ完全には人間的でない</em>。全否定せず、人間の優位を残して締める。</p></div></div>
+  </div>
+
+  <div class="box teal"><span class="lab">この構造が効く設問</span>
+    問2（本質＝learning）・問5（理由①のすり替えを見抜く）・問6（結論＝タイトル）は、この骨格を掴んでいれば根拠が即座に取れる。空所も「主張の方向（肯定的な進歩／否定でない）」で絞れる。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問解説へ進む →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問解説 ― 問1〜問6<span class="sub">選択肢をタップして自力で判定 → 「答え・根拠を表示」で根拠・全選択肢の✓✗・語法を開く。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxA"></div>
+  <div id="qWrapA"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 論の骨格</button><span class="sp"></span><button class="btnp" data-go="4">全訳マップへ進む →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳マップ ― 段落ごとの読み筋とキー構文<span class="sub">本文（手元の過去問）を読み直すときの「訳の骨」。各段落の要旨と、そこで効いている語法・構文を並べた。</span></h1>
+  <div class="rule"></div>
+
+  <div class="tmap"><div class="h"><b>1</b><span>翻訳ソフト時代に語学は不要か → Wrong.</span></div>
+    <p style="font-size:14px;color:#3a4048;">問いを立てて即否定。近年、機械翻訳は大きく進歩し、ほぼどんな言語にも即座に翻訳できる。海外では便利。</p>
+    <div class="key">◆ 効いている語法</div>
+    <ul>
+      <li><em>advances (are) made in the field of ~</em>「〜の分野で進歩がなされる」<span class="qbadge">問1</span></li>
+      <li><em>turn A into B</em>「AをBに変える」／<em>Now that S V</em>「今やSはVなので」</li>
+    </ul>
+  </div>
+  <div class="tmap"><div class="h"><b>2</b><span>語学学習＝世界の見方を変えること</span></div>
+    <p style="font-size:14px;color:#3a4048;">逆接。外国語を学ぶことは、単なる実用（ウェブ理解・買い物）ではなく、世界の見方を変えることだ。</p>
+    <div class="key">◆ 効いている語法</div>
+    <ul>
+      <li><em>learning a foreign language is not simply about ~</em>「外国語を学ぶことは単に〜ではない」<span class="qbadge">問2</span></li>
+      <li><em>the way in which S V</em>「SがVする方法」</li>
+    </ul>
+  </div>
+  <div class="tmap"><div class="h"><b>3</b><span>言語が世界の認識を形づくる</span></div>
+    <p style="font-size:14px;color:#3a4048;">周りの世界の理解は、それを処理する言語に大きく由来する。追加の言語は、直接のコミュニケーションと、同じ現象への別の思考を与える。</p>
+    <div class="key">◆ 効いている構文</div>
+    <ul>
+      <li>指示語 <em>it</em>（process it）＝the world around us<span class="qbadge">問3</span></li>
+      <li><em>not only … , (but) they also …</em>「〜だけでなく…もまた」</li>
+    </ul>
+  </div>
+  <div class="tmap"><div class="h"><b>4</b><span>機械が苦手なあいまいさ</span></div>
+    <p style="font-size:14px;color:#3a4048;">実用的理由。言語のあいまいさに機械は弱い（主語省略・同音異義・多義）。raise/raze は同音で反対、cleave は両義。理解には文脈・知識・非言語情報が要る。</p>
+    <div class="key">◆ 効いている語法</div>
+    <ul>
+      <li><em>raise/raze … have opposite meanings</em>：go up ↔ pull down の対比<span class="qbadge">問4</span></li>
+      <li><em>while</em>「〜する一方で」（対比）／<em>struggle with</em>「〜に苦労する」</li>
+    </ul>
+  </div>
+  <div class="tmap"><div class="h"><b>5</b><span>機械翻訳は素晴らしいが、まだ人間的でない</span></div>
+    <p style="font-size:14px;color:#3a4048;">結論。機械翻訳は fantastic。だが not quite human yet。譲歩しつつ人間の優位を残す。</p>
+    <div class="key">◆ 効いている語法・主旨</div>
+    <ul>
+      <li><em>not quite ~ yet</em>「まだ完全には〜でない」＝タイトルの根拠<span class="qbadge">問6</span></li>
+      <li>主張＝機械に語学学習を止めさせるな<span class="qbadge">問5</span></li>
+    </ul>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="3">← 設問解説</button><span class="sp"></span><button class="btnp" data-go="5">総まとめへ進む →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 正解一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">正解一覧</h2>
+  <div class="sheet" id="answerSheet"></div>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>空所・語彙で外した人（問1・問2・問4）</b><p>空所は「前後のコロケーション」と「文脈の方向（肯定/否定・対比）」で絞る。<em>同じ語を含む紛らわしい選択肢</em>（changing など）に飛びつかない。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>指示語で外した人（問3）</b><p>it は直近の名詞に飛びつかず、<em>文の主題</em>を確認。ここでは the world around us。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>内容一致で外した人（問5）</b><p>「一致しないもの」を選ぶ点をまず確認。<em>主語のすり替え</em>（追加言語の効果を翻訳アプリの効果にした選択肢c）を機械的に消す。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>タイトルで外した人（問6）</b><p>タイトルは<em>全体の主張</em>を一言に。結論文（fantastic but not quite human yet）と冒頭 Wrong. が根拠。一例（両義語）や逆（機械＞人間）を選ばない。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    「冒頭で立場を掴む→主張の方向で空所を絞る→すり替え・逆を消す」という手順は、私大の論説長文でそのまま効く。1本ずつ根拠を指さして解き直せば、読解は「設計」で安定します。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="4">← 全訳マップ</button></div>
+</section>
+</div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は愛知学院大学2024年英語（大問3）の学習用解説です。本文・設問の著作権は出題者・原著者に帰属します。要旨・解説・図表はTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+
+const Q = [
+ { id:"問1", group:"A", type:"空所補充・語彙", lbl:"空所 (1)", en:"there have been ( 1 ) made in the field of machine translation",
+   ask:"空所(1)に入れるのにもっとも適当なものをa〜dから1つ選びなさい。", answer:"a",
+   choices:[{t:"amazing advances（目覚ましい進歩）", ok:true},{t:"terrible translations（ひどい翻訳）", ok:false},{t:"unfortunate users（不運な利用者）", ok:false},{t:"wonderful words（素晴らしい言葉）", ok:false}],
+   ev:{q:'you can use a computer to turn a text into <span class="h">almost any language you might want</span>', jp:"直後に「ほぼどんな言語にも翻訳できる」と肯定的な進歩の内容が続く。空所は「（機械翻訳の分野で）進歩がなされた」。"},
+   co:[{c:"nav",l:"なぜaか｜文脈は肯定方向",h:"直後の「即座に翻訳できる」は進歩の説明。advances（進歩）が文意に合う。"},
+       {c:"gold",l:"語法｜advances made in the field",h:"make advances「進歩をとげる」。there have been advances made in ~「〜で進歩がなされてきた」。"}],
+   sol:[{m:"o",n:"a",t:"正解。「進歩がなされた」＋直後の「ほぼどんな言語にも翻訳」に一致。"},
+        {m:"x",n:"b",t:"terrible translations（否定的）は、直後の肯定的な内容と方向が逆。"},
+        {m:"x",n:"c",t:"users（利用者）は made（なされる）と結びつかない。"},
+        {m:"x",n:"d",t:"wonderful words では「進歩」の文意にならない。"}] },
+
+ { id:"問2", group:"A", type:"空所補充・語彙", lbl:"空所 (2)", en:"( 2 ) a foreign language is not simply about understanding a web page",
+   ask:"空所(2)に入れるのにもっとも適当なものをa〜dから1つ選びなさい。", answer:"c",
+   choices:[{t:"acting in（〜で演じる）", ok:false},{t:"changing（〜を変える）", ok:false},{t:"learning（〜を学ぶ）", ok:true},{t:"relying on（〜に頼る）", ok:false}],
+   ev:{q:'It is about <span class="h">changing the way in which we see the world</span>', jp:"文全体は「外国語を〜することの意義」。主題は語学学習で、次文「世界の見方を変えること」へつながる。"},
+   co:[{c:"nav",l:"なぜcか｜主語は「語学学習」",h:"learning a foreign language「外国語を学ぶこと」が主語。本文全体（＝語学学習の意義）と一致。"},
+       {c:"verm",l:"罠｜b changing",h:"次文の changing the way に引っ張られる罠。ここで「外国語を変える」は意味不明。"}],
+   sol:[{m:"x",n:"a",t:"acting in a language は不自然。"},
+        {m:"x",n:"b",t:"changing a foreign language「外国語を変える」で意味が通らない。"},
+        {m:"o",n:"c",t:"正解。learning a foreign language＝主題（語学学習の意義）と一致。"},
+        {m:"x",n:"d",t:"relying on（頼る）は文意に合わない。"}] },
+
+ { id:"問3", group:"A", type:"指示語", lbl:"下線部 (3)", en:"the language we use to process it",
+   ask:"下線部(3) it の内容としてもっとも適当なものをa〜dから1つ選びなさい。", answer:"c",
+   choices:[{t:"a foreign language（外国語）", ok:false},{t:"an ice cream（アイスクリーム）", ok:false},{t:"the world around us（私たちの周りの世界）", ok:true},{t:"translation software（翻訳ソフト）", ok:false}],
+   ev:{q:'Our understanding of <span class="h">the world around us</span> comes largely from the language we use to process it', jp:"「周りの世界の理解は、それを処理する言語に由来する」。process it の it ＝ the world around us。"},
+   co:[{c:"nav",l:"なぜcか｜主題を確認",h:"process の目的語は、文頭の the world around us。「世界を処理する言語」。"},
+       {c:"verm",l:"罠｜直近の名詞に飛びつかない",h:"直前の language に飛びつくと誤り。文の主題（周りの世界）を受ける。"}],
+   sol:[{m:"x",n:"a",t:"a foreign language は it の指示対象ではない。"},
+        {m:"x",n:"b",t:"アイスは前段落の買い物の例。無関係。"},
+        {m:"o",n:"c",t:"正解。文頭 the world around us を process it が受ける。"},
+        {m:"x",n:"d",t:"translation software は指示対象でない。"}] },
+
+ { id:"問4", group:"A", type:"空所補充・文脈（対比）", lbl:"空所 (4)", en:"raise and raze … ( 4 ): Raise means to make something go up, while raze means to pull it down",
+   ask:"空所(4)に入れるのにもっとも適当なものをa〜dから1つ選びなさい。", answer:"b",
+   choices:[{t:"have identical meanings（同一の意味を持つ）", ok:false},{t:"have opposite meanings（反対の意味を持つ）", ok:true},{t:"mean the same as cleave（cleave と同じ意味だ）", ok:false},{t:"rely on translation software（翻訳ソフトに頼る）", ok:false}],
+   ev:{q:'Raise means to make something <span class="h">go up</span>, while raze means to <span class="h">pull it down</span>', jp:"コロン以下が空所の説明。go up ↔ pull down は正反対。よって「反対の意味を持つ」。"},
+   co:[{c:"nav",l:"なぜbか｜コロン後が説明",h:"go up（上げる）↔ pull down（下げる）の対比。反対の意味。"},
+       {c:"verm",l:"罠｜a identical",h:"直前の sound identical（発音が同じ）に引っ張られる罠。発音は同じでも意味は反対。"},
+       {c:"gold",l:"語法｜while",h:"対比の while「〜する一方で」。前後を反対に結ぶ目印。"}],
+   sol:[{m:"x",n:"a",t:"発音は同じ（sound identical）だが意味は反対。identical は誤り。"},
+        {m:"o",n:"b",t:"正解。go up ↔ pull down で反対の意味。"},
+        {m:"x",n:"c",t:"cleave は別に挙げられた例。ここでの説明ではない。"},
+        {m:"x",n:"d",t:"翻訳ソフトの話ではない。"}] },
+
+ { id:"問5", group:"A", type:"内容一致（一致しないもの）", lbl:"内容一致", en:"本文の内容と 一致しない ものを選ぶ",
+   ask:"本文の内容と一致しないものをa〜dから1つ選びなさい。", answer:"c",
+   choices:[{t:"言語のあいまいさが、ソフトウェアが正しく翻訳することを難しくしている。", ok:false},{t:"外国語を学ぶことで、他者と直接コミュニケーションをとることができる。", ok:false},{t:"スマートフォンの翻訳アプリは、同じ現象について異なる考え方を与えてくれる。", ok:true},{t:"人間は状況・知識・表情から判断して、相手の言っていることを十分に理解する。", ok:false}],
+   ev:{q:'<span class="h">Additional languages</span> … also give us different ways of thinking about the same phenomenon', jp:"「同じ現象への別の考え方」を与えるのは追加の言語であって、スマホの翻訳アプリではない。cは主語のすり替え。"},
+   co:[{c:"verm",l:"急所｜cは主語のすり替え",h:"「異なる考え方を与える」主体は additional languages（追加言語）。translation apps ではない。→一致しない＝正解。"},
+       {c:"teal",l:"a・b・dの照合",h:"a＝ambiguity, which machines can still struggle with に一致／b＝communicate directly with more people に一致／d＝existing knowledge・facial expressions and tone of voice に一致。"}],
+   sol:[{m:"o",n:"a",t:"一致。あいまいさに機械が苦戦、に一致。"},
+        {m:"o",n:"b",t:"一致。追加言語で直接コミュニケーションできる、に一致。"},
+        {m:"x",n:"c",t:"<b>一致しない＝正解</b>。別の思考を与えるのは追加言語。翻訳アプリにすり替えている。"},
+        {m:"o",n:"d",t:"一致。文脈・知識・表情・声のトーンで理解する、に一致。"}] },
+
+ { id:"問6", group:"A", type:"タイトル選択", lbl:"タイトル", en:"英文のタイトルとしてもっとも適当なもの",
+   ask:"英文のタイトルとしてもっとも適当なものをa〜dから1つ選びなさい。", answer:"a",
+   choices:[{t:"Don't Let Machines Stop You From Learning a Language!（機械に語学学習を止めさせるな!）", ok:true},{t:"Machine Translators Are Better Than Humans（機械翻訳は人間より優れている）", ok:false},{t:"Some Words Have Two Meanings That Are Different（一部の語は異なる2つの意味を持つ）", ok:false},{t:"Understanding the World Using Our Smartphones（スマホで世界を理解する）", ok:false}],
+   ev:{q:'Machine translation is fantastic. But <span class="h">it is not quite human yet</span>', jp:"冒頭の Wrong. と結論「まだ完全に人間的でない」から、主張＝翻訳ソフトがあっても語学は学ぶべき。"},
+   co:[{c:"nav",l:"なぜaか｜全体の主張",h:"翻訳ソフトを理由に語学をやめるな、が一貫した主張。タイトルに直結。"},
+       {c:"verm",l:"罠｜b・c・d",h:"b（機械＞人間）は結論と逆。c（両義語）は一例にすぎない。d（スマホで理解）は「翻訳ソフト頼み」を戒める本文と逆。"}],
+   sol:[{m:"o",n:"a",t:"正解。主張（機械に語学学習を止めさせるな）と一致。"},
+        {m:"x",n:"b",t:"逆。not quite human yet（まだ人間的でない）と矛盾。"},
+        {m:"x",n:"c",t:"raise/raze は一例。全体の主題ではない。"},
+        {m:"x",n:"d",t:"逆。翻訳ソフト頼みを戒める本文と合わない。"}] },
+];
+
+const SHEET = [
+ {q:"問1",v:"a"},{q:"問2",v:"c"},{q:"問3",v:"c"},{q:"問4",v:"b"},{q:"問5",v:"c"},{q:"問6",v:"a"},
+];
+
+function buildChoice(c, idx){
+  return `<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${idx+1}</span><span>${c.t}</span><span class="mk"></span></button>`;
+}
+function buildCA(rows){
+  return rows.map(r=>{
+    if(r.n===0) return `<div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd">${r.t}</div></div>`;
+    const cls = r.m==='o'?'ok':'ng';
+    return `<div class="ca-row"><div class="ca-mark ${cls}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`;
+  }).join('');
+}
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+
+function buildQ(q){
+  const focusEn = q.en2 ? `${q.en}<br><span style="color:var(--muted);font-size:13px">▶ ${q.en2}</span>` : q.en;
+  let inner = `<div class="q-head"><div class="q-no">${q.id}</div><div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${focusEn}</span></div><span class="q-type">${q.type}</span></div>`;
+  inner += `<div class="q-body"><div class="askjp">${q.ask}</div>`;
+  if(q.isText){
+    inner += `<div class="box navy" style="margin:0 0 4px"><span class="lab">抜き出し問題</span>本文から該当語群を復元し、最初と最後の1語を答える。まず下の「答え・根拠を表示」で確認しよう。</div>`;
+  } else if(q.isDesc){
+    inner += `<div class="box teal" style="margin:0 0 4px"><span class="lab">記述問題</span>25字以内×2。理由の要点2つを本文から拾い、要素を落とさず圧縮する。</div>`;
+  } else {
+    inner += `<div class="choices">${q.choices.map(buildChoice).join('')}</div>`;
+  }
+  inner += `<button class="reveal-btn">答え・根拠を表示 ▼</button>`;
+
+  let sol = `<div class="solution">`;
+  if(q.isDesc){
+    sol += `<div class="ans-badge">模範解答（各25字以内）</div>`;
+    q.descAns.forEach(a=>{ sol += `<div class="desc-write"><span class="cnt">${a.c}</span><div class="modelans">${a.t}</div></div>`; });
+    sol += buildEV(q.ev) + buildCO(q.co);
+  } else {
+    const ansTxt = q.isText ? q.answer : `${q.answer}`;
+    sol += `<div class="ans-badge">正解 <span class="c">${ansTxt}</span></div>`;
+    sol += buildEV(q.ev);
+    sol += `<div class="chy-h">全選択肢の照合</div>${buildCA(q.sol)}`;
+    sol += buildCO(q.co);
+  }
+  sol += `</div></div>`;
+  inner += sol;
+
+  const el = document.createElement('div'); el.className='q'; el.id='q'+q.id; el.innerHTML = inner;
+  return el;
+}
+function renderGroup(group, wrapId, idxId){
+  const wrap=document.getElementById(wrapId), idx=document.getElementById(idxId);
+  Q.filter(q=>q.group===group).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id;
+    j.addEventListener('click',()=>document.getElementById('q'+q.id).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+}
+renderGroup('A','qWrapA','qidxA');
+if(document.getElementById('qWrapB')) renderGroup('B','qWrapB','qidxB');
+
+document.querySelectorAll('.q').forEach(card=>{
+  const choiceBtns=card.querySelectorAll('.choices .ch');
+  choiceBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      choiceBtns.forEach(b=>b.classList.remove('picked'));
+      btn.classList.add('picked','reveal');
+      btn.classList.add(btn.dataset.ok==='1'?'correct':'wrong');
+      btn.querySelector('.mk').textContent=btn.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open) choiceBtns.forEach(b=>{ b.classList.add('reveal'); b.classList.add(b.dataset.ok==='1'?'correct':'wrong'); b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×'; });
+  });
+});
+
+const sheetEl=document.getElementById('answerSheet');
+SHEET.forEach(s=>{ const c=document.createElement('div'); c.className='acell'+(s.txt?' txt':''); c.innerHTML=`<div class="qn">${s.q}</div><div class="av">${s.v}</div>`; sheetEl.appendChild(c); });
+
+/* TAB + PANEL NAV */
+const tabs=document.querySelectorAll('.tab');
+const panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on'));
+  panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]');
+  t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+</script>
+</body>
+</html>

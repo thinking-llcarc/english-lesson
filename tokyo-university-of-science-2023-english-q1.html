@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜東京理科大学 2023 大問1（近代科学の歴史）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">理</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>東京理科大学 2023 ／ 大問1</span></div>
+    <div class="top-meta">近代科学の歴史（62点）<br>全15問・下線部ア〜シ／空所Ⅰ・Ⅱ</div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-in" id="navIn">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>OVERVIEW</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>LOGIC</small>論理構造</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>Q1–8</small>設問解説 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>Q9–15</small>設問解説 後半</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>READING</small>全訳マップ</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ============ PANEL 0 ============ -->
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>「科学革命」は根性では読めない。<br>論の設計を見抜けば、15問は落ちる。</h1>
+    <p>テーマは近代科学の成立史（アリストテレス→コペルニクス→ケプラー→ガリレオ→デカルト）。抽象度は高いが、論の流れは一直線。段落構造を地図にすれば、下線部・空所・内容一致はすべて根拠が本文に落ちている。</p>
+    <div class="thesis"><b>一貫する主張：</b>旧世界観（アリストテレス主義）を<b>否定</b>し、天文の<b>転換</b>を経て、ガリレオの「数学的記述＋実験」という方法革命が科学革命を<b>加速</b>させた。</div>
+    <div class="stats">
+      <div class="stat"><b>6</b><span>段落構成</span></div>
+      <div class="stat"><b>15</b><span>設問</span></div>
+      <div class="stat"><b>62</b><span>配点</span></div>
+      <div class="stat"><b>1</b><span>記述（25字×2）</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">この大問の設問構成（型で分類）</h2>
+  <p class="lead">東京理科大の長文は「下線部の内容・意味を問う選択」「省略復元（空所補充）」「段落内容一致」「主題一致」「日本語記述」の5型に集約される。まず何型かを判定する。</p>
+  <table>
+    <thead><tr><th style="width:26%">型</th><th>問われ方</th><th style="width:26%">該当設問</th></tr></thead>
+    <tbody>
+      <tr><td class="c">① 下線部の内容</td><td>下線部の意味内容に最も近い選択肢。言い換えと因果を照合</td><td>(1)(5)(8)(12)(13)</td></tr>
+      <tr><td class="c">② 下線部の意味</td><td>語・イディオムの同義句。文脈と品詞・極性で絞る</td><td>(4)(6)(9)</td></tr>
+      <tr><td class="c">③ 指示語</td><td>代名詞 it が指す名詞句。直前を確認</td><td>(3)</td></tr>
+      <tr><td class="c">④ 省略復元（空所）</td><td>倒置・分詞構文の省略を補い、抜き出し／選択</td><td>(2)(7)</td></tr>
+      <tr><td class="c">⑤ 段落・主題一致</td><td>段落／本文全体と合致・不一致を判定</td><td>(10)(14)(15)</td></tr>
+      <tr><td class="c">⑥ 日本語記述</td><td>理由を字数内で要素圧縮</td><td>(11)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">合格者の解く順序</h2>
+  <div class="grid2">
+    <div class="box navy"><span class="lab">STEP 1</span>設問を先読みし、下線部ア〜シと空所Ⅰ・Ⅱの位置を本文に印づけ。何型かを各設問に書き込む。</div>
+    <div class="box gold"><span class="lab">STEP 2</span>段落を頭から読み、各段落の「言いたいこと一言」を掴む。下線語・指示語は<em>出会った瞬間に処理</em>。</div>
+    <div class="box teal"><span class="lab">STEP 3</span>内容一致・記述は該当段落へ戻り、<em>根拠の一文を指さして</em>から答える。記憶で解かない。</div>
+    <div class="box verm"><span class="lab">STEP 4</span>主題一致(15)は最後。全段落の論旨を俯瞰し、「言い過ぎ・すり替え・逆」の選択肢を消す。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;">
+    <span class="lab">この解説の使い方</span>
+    各設問カードは<strong>選択肢をタップすると自分で解ける</strong>ようになっています。「答え・根拠を表示」で正解／<strong>根拠（本文の該当箇所）</strong>／全選択肢の✓✗／構文・語法まで一気に開きます。手元の過去問（本文）と並べて使ってください。
+  </div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section>
+
+<!-- ============ PANEL 1 ============ -->
+<section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 6段落の要旨と、下線部・空所の在りか<span class="sub">各段落が本文で何を言っているか。下線部ア〜シ／空所Ⅰ・Ⅱがどこに埋め込まれているかを俯瞰する。</span></h1>
+  <div class="rule"></div>
+
+  <div class="para"><div class="para-n"><b>1</b><span>導入・否定</span></div><div class="para-b">
+    <div class="theme">科学革命は<span class="k">「無から」生じたのではない</span></div>
+    <p>近代科学の起源は約1500〜1750年のヨーロッパの急速な発展期＝「科学革命」。ただし科学的探求は古代・中世にもあった。それ以前を支配したのがアリストテレス主義（物理・生物・天文・宇宙論の詳細な理論）。だがその考え方も<em>探求方法も</em>現代の科学者には奇妙に映る（例＝万物は土・火・空気・水の4元素）。</p>
+    <div class="tags"><span class="utag">ア did not come from nowhere</span><span class="utag">イ as would his methods…</span><span class="utag blank">→ 空所Ⅰ</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>2</b><span>転換①</span></div><div class="para-b">
+    <div class="theme">コペルニクス的転回 ― 地球は<span class="k">「中心」の座を失う</span></div>
+    <p>近代的世界観への第一歩。1542年コペルニクスが天動説（＝プトレマイオス天文学。アリストテレス的世界観の核で、1800年間ほぼ揺るがなかった）を批判し、地動説を提唱。地球は「ただの惑星の1つ」となり、伝統が与えた唯一無二の地位を失う。抵抗にあい（とりわけ教会が禁書に）、だが100年内に正統説に。</p>
+    <div class="tags"><span class="utag">ウ …in orbit around it</span><span class="utag">エ had gone largely unchallenged</span><span class="utag">オ the unique status</span><span class="utag">カ not least</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>3</b><span>転換②</span></div><div class="para-b">
+    <div class="theme">ケプラーとガリレオ ― 天文学の<span class="k">精密化と説得</span></div>
+    <p>コペルニクスの革新は間接的に近代物理学へ。ケプラー＝惑星は円でなく楕円軌道（第1法則）、第2・第3法則で速度を規定。3法則を<em>合わせると</em>惑星運動の成功理論に。ガリレオ＝生涯のコペルニクス支持者で望遠鏡の先駆者。月の山・無数の星・黒点・木星の衛星を発見し、アリストテレス宇宙論と矛盾させ、科学界の転向に決定的役割。</p>
+    <div class="tags"><span class="utag">キ Taken together</span><span class="utag blank">→ 空所Ⅱ</span><span class="utag">ク played a pivotal role…</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>4</b><span>核心・力学</span></div><div class="para-b">
+    <div class="theme">ガリレオ最大の貢献は<span class="k">天文でなく力学</span></div>
+    <p>「重い物体ほど速く落ちる」というアリストテレス説を反証。代わりに、重さに関係なくすべての物体は同じ速さで落ちると反直感的に主張（実際は空気抵抗のため。真空なら同時に落ちる）。等加速で自由落下する＝自由落下の法則。これに<em>説得力はあるが決定的ではない</em>証拠を与えた。</p>
+    <div class="tags"><span class="utag">ケ In place of</span><span class="utag">→ 設問(10) 段落一致</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>5</b><span>核心・方法</span></div><div class="para-b">
+    <div class="theme">ガリレオが<span class="k">「初の近代物理学者」</span>とされる2つの理由</div>
+    <p>理由①＝数学の言語で物質（落下物・投射物）の動きを記述できると初めて示した。当時、数学は純粋に抽象的で物質的実在には適用不可と見なされていた。理由②＝仮説を実験で検証することを重視。当時、実験は知識獲得の信頼できる手段とは見なされていなかった。この実験重視が経験的アプローチの起点。</p>
+    <div class="tags"><span class="utag">コ …first modern physicist</span><span class="utag">→ 記述(11)</span><span class="utag">サ mathematics was widely regarded…</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>6</b><span>加速・帰結</span></div><div class="para-b">
+    <div class="theme">ガリレオの死後、科学革命は<span class="k">一気に加速</span>する</div>
+    <p>デカルトが機械論哲学を提唱＝物質世界は不活性な粒子（corpuscles）の相互作用・衝突からなる。その運動を支配する法則が宇宙の構造理解の鍵。観察可能な全現象を粒子の運動で説明でき、17世紀後半に支配的視点に。ホイヘンス・ガッサンディ・フック・ボイルらが支持し、アリストテレス的世界観は完全に失墜。ある程度は現代にも残る。</p>
+    <div class="tags"><span class="utag">シ The period following Galileo's death…</span><span class="utag">→ 設問(14)(15)</span></div>
+  </div></div>
+
+  <div class="pnav"><button class="btns" data-go="0">← この英文の攻略</button><span class="sp"></span><button class="btnp" data-go="2">論理構造へ進む →</button></div>
+</section>
+
+<!-- ============ PANEL 2 ============ -->
+<section class="panel" id="p2">
+  <div class="eyebrow">Argument Flow</div>
+  <h1 class="head">論理構造 ― 「否定 → 転換 → 加速」の一本道<span class="sub">この英文は反論・逆接がほとんどなく、時系列に沿って科学的世界観が入れ替わる。流れを掴めば根拠段落は即座に特定できる。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">論の背骨</h2>
+  <div class="flow">
+    <div class="fnode"><div class="fdot">1</div><div class="fbody"><b>前提の否定</b><p>科学革命は突然生まれたのではない。前にはアリストテレス主義という「古い設計図」があった（＝これから壊される旧世界観の提示）。</p></div></div>
+    <div class="fnode"><div class="fdot">2</div><div class="fbody"><b>転換の第一歩</b><p>コペルニクスが天動説を否定→地動説。地球＝中心という「特権」を剥奪。旧世界観の中心が崩れる。</p></div></div>
+    <div class="fnode"><div class="fdot">3</div><div class="fbody"><b>精密化と決定打</b><p>ケプラーが軌道を楕円で精密化。ガリレオが望遠鏡の観測でアリストテレス宇宙論を矛盾させ、科学界を新説へ転向させる。</p></div></div>
+    <div class="fnode"><div class="fdot">4</div><div class="fbody"><b>核心＝力学と方法</b><p>ガリレオの真価は天文でなく力学（自由落下）。さらに「数学で記述」「実験で検証」という<em>方法の革命</em>を持ち込む。ここが本文の主眼。</p></div></div>
+    <div class="fnode"><div class="fdot">5</div><div class="fbody"><b>加速と完成</b><p>ガリレオの死後、デカルトの機械論が旧世界観にとどめを刺す。近代科学的視点が主流に。</p></div></div>
+  </div>
+
+  <h2 class="sec">登場する科学者の系譜（内容一致の照合表）</h2>
+  <p>設問(15)などの主題一致は、この4人の「誰が・何を」を取り違えさせる作りが多い。役割を固定しておく。</p>
+  <div class="sci">
+    <div class="who"><div class="yr"><b>〜古代</b>Aristotle</div><div class="desc"><b>アリストテレス</b><p>旧世界観の代表。4元素説など。プトレマイオス天文学（天動説）が彼の世界観の中核。これから覆される側。</p></div></div>
+    <div class="who"><div class="yr"><b>1543</b>没</div><div class="desc"><b>コペルニクス</b><p>地動説（太陽中心）を提唱。ただし軌道は<em>円</em>と考えていた点に注意（設問(15)の罠）。</p></div></div>
+    <div class="who"><div class="yr"><b>1571</b>–1630</div><div class="desc"><b>ケプラー</b><p>惑星の軌道は円でなく<em>楕円</em>（第1法則）。第2・第3法則で速度を規定。3法則で惑星運動の理論を完成。</p></div></div>
+    <div class="who"><div class="yr"><b>1564</b>–1642</div><div class="desc"><b>ガリレオ</b><p>望遠鏡で観測（発見の手段は落下理論の応用<em>ではない</em>）。力学＝自由落下。数学的記述＋実験重視で「初の近代物理学者」。</p></div></div>
+    <div class="who"><div class="yr"><b>1596</b>–1650</div><div class="desc"><b>デカルト</b><p>機械論哲学。粒子（corpuscles）の運動・衝突で全現象を説明。ある程度は現代にも残る。</p></div></div>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問解説 前半へ進む →</button></div>
+</section>
+
+<!-- ============ PANEL 3 ============ -->
+<section class="panel" id="p3">
+  <div class="eyebrow">Solutions 01</div>
+  <h1 class="head">設問解説 前半 ― (1)〜(8)<span class="sub">選択肢をタップして自力で判定 → 「答え・根拠を表示」で根拠・全選択肢の✓✗・構文を開く。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxA"></div>
+  <div id="qWrapA"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 論理構造</button><span class="sp"></span><button class="btnp" data-go="4">設問解説 後半へ進む →</button></div>
+</section>
+
+<!-- ============ PANEL 4 ============ -->
+<section class="panel" id="p4">
+  <div class="eyebrow">Solutions 02</div>
+  <h1 class="head">設問解説 後半 ― (9)〜(15)<span class="sub">記述(11)と、段落・主題一致(10)(14)(15)が得点の分かれ目。根拠段落を必ず指さすこと。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxB"></div>
+  <div id="qWrapB"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問解説 前半</button><span class="sp"></span><button class="btnp" data-go="5">全訳マップへ進む →</button></div>
+</section>
+
+<!-- ============ PANEL 5 ============ -->
+<section class="panel" id="p5">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳マップ ― 段落ごとの読み筋とキー構文<span class="sub">本文（手元の過去問）を読み直すときの「訳の骨」。各段落の要旨と、そこで効いている構文・語法を並べた。</span></h1>
+  <div class="rule"></div>
+
+  <div class="tmap"><div class="h"><b>①</b><span>科学革命は無から生まれたのではない</span></div>
+    <p style="font-size:14px;color:#3a4048;">近代科学の起源＝1500〜1750年の急速な発展期を「科学革命」と呼ぶ。だが探求は古代・中世にもあり、当時はアリストテレス主義が支配的だった。彼の考えも探求方法も、現代の科学者には奇妙に見える。</p>
+    <div class="key">◆ 効いている構文</div>
+    <ul>
+      <li><em>come from nowhere</em>「どこからともなく現れる」＋not＝「無から生じたのではない」<span class="qbadge">(1)</span></li>
+      <li>倒置 <em>as would his methods of enquiry</em>：as＋助動詞＋主語。前文の述部の反復省略<span class="qbadge">(2)</span></li>
+      <li><em>at odds with</em>「〜と食い違って」</li>
+    </ul>
+  </div>
+
+  <div class="tmap"><div class="h"><b>②</b><span>コペルニクス的転回</span></div>
+    <p style="font-size:14px;color:#3a4048;">近代的世界観への決定的第一歩。1542年、コペルニクスが天動説を批判する本を出版。天動説＝プトレマイオス天文学はアリストテレス的世界観の核で1800年間ほぼ揺るがなかった。地動説では地球は一惑星にすぎず、中心という唯一無二の地位を失う。抵抗（とりわけ教会）にあうが、100年以内に正統説となる。</p>
+    <div class="key">◆ 効いている構文・語法</div>
+    <ul>
+      <li>指示語 <em>it</em>（in orbit around it）＝中心の静止した地球<span class="qbadge">(3)</span></li>
+      <li><em>had gone largely unchallenged</em>「大部分は問題にされずにきた」<span class="qbadge">(4)</span></li>
+      <li><em>not least from the Catholic Church</em>「とりわけ教会から」<span class="qbadge">(6)</span></li>
+      <li><em>the unique status</em>「唯一無二の地位」＝宇宙の中心<span class="qbadge">(5)</span>／<em>contravene</em>「〜に反する」・<em>orthodoxy</em>「正統説」</li>
+    </ul>
+  </div>
+
+  <div class="tmap"><div class="h"><b>③</b><span>ケプラーとガリレオ</span></div>
+    <p style="font-size:14px;color:#3a4048;">コペルニクスの革新は間接的に近代物理学を生む。ケプラーは軌道が楕円だと発見（第1法則）、第2・第3法則で速度を規定。3法則を合わせると惑星運動の成功理論になる。ガリレオは望遠鏡で月の山・無数の星・黒点・木星の衛星を発見し、アリストテレス宇宙論と矛盾させ、科学界を新説へ転向させた。</p>
+    <div class="key">◆ 効いている構文</div>
+    <ul>
+      <li>分詞構文 <em>Taken together</em>「（それらを）まとめると」：意味上の主語＝主節主語 Kepler's laws<span class="qbadge">(7)</span></li>
+      <li><em>play a pivotal role in converting A to B</em>「AをBに転向させるのに極めて重要な役割を果たす」<span class="qbadge">(8)</span></li>
+      <li><em>confound</em>「〜を困惑させる」</li>
+    </ul>
+  </div>
+
+  <div class="tmap"><div class="h"><b>④</b><span>ガリレオの力学＝自由落下</span></div>
+    <p style="font-size:14px;color:#3a4048;">ガリレオ最大の貢献は天文でなく力学。「重い物体ほど速く落ちる」というアリストテレス説を反証し、重さに関係なく同じ速さで落ちると主張した（実際は空気抵抗による。真空なら同時）。等加速で自由落下する＝自由落下の法則。これに説得力はあるが決定的ではない証拠を与えた。</p>
+    <div class="key">◆ 効いている構文・語法</div>
+    <ul>
+      <li><em>In place of this theory</em>「この理論の代わりに」＝instead of<span class="qbadge">(9)</span></li>
+      <li><em>irrespective of their weight</em>「重さに関係なく」</li>
+      <li><em>persuasive though not conclusive</em>「説得力はあるが決定的でない」<span class="qbadge">(10)</span></li>
+    </ul>
+  </div>
+
+  <div class="tmap"><div class="h"><b>⑤</b><span>「初の近代物理学者」の2つの根拠</span></div>
+    <p style="font-size:14px;color:#3a4048;">ガリレオは一般に初の近代物理学者とされる。①数学の言語で物質の動きを記述できると初めて示した（当時、数学は純粋に抽象的で物質的実在には適用不可とされた）。②仮説を実験で検証することを重視した（当時、実験は信頼できる知識獲得手段とされていなかった）。この実験重視が経験的アプローチの始まり。</p>
+    <div class="key">◆ 効いている構文・語法</div>
+    <ul>
+      <li>理由①②の位置：下線部コの直後＝理由①、<em>Another innovative aspect…</em>＝理由②<span class="qbadge">(11)</span></li>
+      <li><em>regarded as dealing with … , hence inapplicable to …</em>「〜を扱う→ゆえに〜には適用不可と見なされた」<span class="qbadge">(12)</span></li>
+      <li><em>a reliable means of doing</em>「〜する信頼できる手段」</li>
+    </ul>
+  </div>
+
+  <div class="tmap"><div class="h"><b>⑥</b><span>デカルトと機械論哲学</span></div>
+    <p style="font-size:14px;color:#3a4048;">ガリレオの死後、科学革命は急加速。デカルトが機械論哲学を提唱＝物質世界は不活性な粒子の相互作用・衝突からなり、その運動を支配する法則が宇宙の構造理解の鍵。全現象を粒子運動で説明でき、17世紀後半に支配的視点に。ホイヘンスらが支持し、アリストテレス的世界観は完全に失墜。ある程度は現代にも残る。</p>
+    <div class="key">◆ 効いている構文・語法</div>
+    <ul>
+      <li>無生物主語＋see：<em>The period … saw the scientific revolution gain in momentum</em>「その時代に科学革命は勢いを増した」<span class="qbadge">(13)</span></li>
+      <li><em>held the key to understanding …</em>「〜を理解する鍵を握っていた」<span class="qbadge">(14)</span></li>
+      <li><em>to some extent it is still with us today</em>「ある程度は今も残る」＝partly<span class="qbadge">(15)</span></li>
+    </ul>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="4">← 設問解説 後半</button><span class="sp"></span><button class="btnp" data-go="6">総まとめへ進む →</button></div>
+</section>
+
+<!-- ============ PANEL 6 ============ -->
+<section class="panel" id="p6">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 正解一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">正解一覧</h2>
+  <div class="sheet" id="answerSheet"></div>
+  <div class="box gold"><span class="lab">記述(11)の模範</span>
+    ① 数学言語で物質の動きを説明できることを示した。（23字）／② 仮説を実験により確かめることを重要視した。（21字）<br>いずれも句読点込みで25字以内。「①数学で記述／②実験で検証」の2要素が入っていれば得点になる。</div>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>下線部の内容で外した人（(1)(5)(8)(12)(13)）</b><p>「下線部＝直後／直前の言い換え」を疑う癖をつける。選択肢は本文の言い換えなので、<em>同じ単語を多用した選択肢ほど引っかけ</em>。意味の一致で選ぶ。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>省略復元で外した人（(2)(7)）</b><p>倒置の as／分詞構文は「省略された部分＝直前文・主節と同じ」が原則。声に出して省略を戻す練習を。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>段落・主題一致で外した人（(10)(14)(15)）</b><p>選択肢ごとに根拠の一文を本文で指さす。「言い過ぎ(all/only)」「主語のすり替え」「程度違い(not conclusive を無視)」を機械的に消去。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>記述(11)で外した人</b><p>理由記述は「要素の数＝得点」。①数学的記述②実験検証の2要素をまず箇条で洗い出し、字数内に圧縮する手順を固定化する。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    この英文で使った「否定→転換→加速」の構造読みと、下線部＝言い換えの原則は、他の私大長文でもそのまま効く。同じ手順で1本ずつ根拠を指さして解き直せば、読解は「設計」で安定します。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="5">← 全訳マップ</button></div>
+</section>
+
+</div>
+
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は東京理科大学2023年英語（大問1）の学習用解説です。本文・設問の著作権は出題者・原著者に帰属します。要旨・解説・図表はTHINKINGによるオリジナルです。</div>
+</footer>
+
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+  { id:1, group:"A", type:"下線部の内容", lbl:"下線部 ア", en:"the scientific revolution did not come from nowhere",
+    ask:"下線部(ア)の内容としてもっとも適切なものを1つ選びなさい。", answer:1,
+    choices:[
+      {t:"科学革命は、前時代の科学的探求なしには起こらなかった。", ok:true},
+      {t:"科学革命は、今ここで始まるのではない。", ok:false},
+      {t:"科学革命は、いかなる科学的知識の土台もなく奇跡的に起きた。", ok:false},
+      {t:"科学革命は突然起き、当時ほとんどの人が気づかなかった。", ok:false}],
+    ev:{q:'…investigations were pursued in <span class="h">ancient and medieval times too</span>', jp:"下線部の直後で「探求は古代・中世にもあった」と述べる＝科学革命は無から生じたのではない。"},
+    co:[{c:"nav",l:"なぜ1か｜二重否定",h:"not＋come from nowhere＝「無から現れたのではない」。前時代の科学的探求という土台の上に立つ、が主旨。"},
+        {c:"gold",l:"語法｜come from nowhere",h:"「どこからともなく現れる」。not と結び「前時代の探求を土台にする」を含意する。"}],
+    sol:[{m:"o",n:1,t:"正解。第①段落が続けて古代・中世にも探求があったと述べ、前時代の土台の上に立つことを示す。"},
+         {m:"x",n:2,t:"here and now（今ここ）という時間・場所の話にすり替え。nowhere を「今ここでない」と誤読させる罠。"},
+         {m:"x",n:3,t:"「土台なく奇跡的に」は本文と真逆。むしろ土台があったという主張。"},
+         {m:"x",n:4,t:"「突然・誰も気づかず」は本文に記述なし。"}] },
+
+  { id:2, group:"A", type:"省略復元（空所Ⅰ・抜き出し）", lbl:"下線部 イ", en:"as would his methods of enquiry", en2:"as his methods of enquiry would (　Ⅰ　)",
+    ask:"言葉を省略せずに述べると空所Ⅰに入る語群になる。その最初の1語と最後の1語を本文中から抜き出しなさい。", answer:"seem / scientist", isText:true,
+    ev:{q:'Aristotle\'s ideas would <span class="h">seem very strange to a modern scientist</span>', jp:"前文の述部。倒置の as節がこれを反復して省略している。"},
+    co:[{c:"nav",l:"復元の手順",h:"as would his methods = as his methods would ＋［前文の述部の反復］。復元＝as his methods of enquiry would <b>seem very strange to a modern scientist</b>。最初＝seem／最後＝scientist。"},
+        {c:"gold",l:"構文｜様態の as ＋倒置",h:"as＋助動詞＋主語の倒置（as would his methods）。省略は前文の述部の反復。「彼の探求方法も同様に奇妙に見えるだろう」。"}],
+    sol:[{m:"o",n:0,t:"<b>最初＝seem／最後＝scientist</b>。前文の述部 “seem very strange to a modern scientist” が反復・省略されている。"}] },
+
+  { id:3, group:"A", type:"指示語", lbl:"下線部 ウ", en:"…the planets and the sun in orbit around it",
+    ask:"下線部(ウ) it が指すものとしてもっとも適切なものを1つ選びなさい。", answer:2,
+    choices:[{t:"the geocentric model（天動説モデル）", ok:false},{t:"the stationary earth（静止した地球）", ok:true},{t:"the sun（太陽）", ok:false},{t:"the universe（宇宙）", ok:false}],
+    ev:{q:'placed the <span class="h">stationary earth</span> at the centre … with the planets and the sun in orbit around it', jp:"天動説は静止した地球を中心に据える。around it の it＝中心の静止した地球。"},
+    co:[{c:"nav",l:"なぜ2か｜指示語は直前を確認",h:"geocentric（地球中心）モデルで、惑星と太陽が回る中心＝the stationary earth。"},
+        {c:"verm",l:"罠｜3 the sun",h:"太陽は「回る側」。回られる中心ではない。"}],
+    sol:[{m:"x",n:1,t:"モデルそのものの「周りを回る」では意味が通らない。"},{m:"o",n:2,t:"正解。中心の静止した地球の周りを惑星と太陽が回る＝天動説。"},{m:"x",n:3,t:"太陽は回る側。中心ではない。"},{m:"x",n:4,t:"宇宙の周りを回るのではない。"}] },
+
+  { id:4, group:"A", type:"下線部の意味", lbl:"下線部 エ", en:"had gone largely unchallenged",
+    ask:"下線部(エ)の意味にもっとも近いものを1つ選びなさい。", answer:4,
+    choices:[{t:"had been partly proved（一部証明されていた）", ok:false},{t:"had gone too far（行き過ぎていた）", ok:false},{t:"had not been well approved（あまり承認されていなかった）", ok:false},{t:"had remained unquestioned for the most part（大部分は疑問視されないままだった）", ok:true}],
+    ev:{q:'lay at the heart of the Aristotelian world view … had gone largely unchallenged <span class="h">for 1,800 years</span>', jp:"天動説は1800年間ほぼ異議を唱えられずにきた。"},
+    co:[{c:"gold",l:"語法｜言い換え",h:"unchallenged「異議を唱えられない＝問題にされない」≒unquestioned／largely「大部分は」≒for the most part。"},
+        {c:"verm",l:"罠｜approve と混同",h:"3 approve（承認）は論点がずれる。challenge（異議）が焦点で、意味方向も逆。"}],
+    sol:[{m:"x",n:1,t:"prove（証明）の話ではない。"},{m:"x",n:2,t:"go too far（行き過ぎ）は無関係。"},{m:"x",n:3,t:"approve（承認）でなく challenge（異議）が論点。方向も逆。"},{m:"o",n:4,t:"正解。unchallenged≒unquestioned、largely≒for the most part の言い換え。"}] },
+
+  { id:5, group:"A", type:"下線部の内容", lbl:"下線部 オ", en:"the unique status that tradition had accorded it",
+    ask:"下線部(オ)の内容としてもっとも適切なものを1つ選びなさい。", answer:3,
+    choices:[{t:"being a planet in orbit around the sun（太陽を回る惑星であること）", ok:false},{t:"being one of the planets in the solar system（太陽系の惑星の1つであること）", ok:false},{t:"being the centre of the universe（宇宙の中心であること）", ok:true},{t:"being the only planet that moves around the sun（太陽を回る唯一の惑星であること）", ok:false}],
+    ev:{q:'the earth is regarded as <span class="h">just another planet</span>, and so loses the unique status', jp:"地動説で地球は「ただの惑星の1つ」になり、伝統が与えた唯一無二の地位を失う＝元は宇宙の中心。"},
+    co:[{c:"nav",l:"なぜ3か｜地位の中身を直前から補う",h:"失う地位＝天動説での「宇宙の中心」。"},
+        {c:"verm",l:"罠｜2 惑星の1つ",h:"just another planet はまさに「地位を失った後」の姿。地位そのものではない。"}],
+    sol:[{m:"x",n:1,t:"太陽を回る惑星は、地位を失った<em>後</em>の姿。"},{m:"x",n:2,t:"「惑星の1つ」＝just another planet で、失った地位ではない。"},{m:"o",n:3,t:"正解。伝統が与えた唯一無二の地位＝宇宙の中心。"},{m:"x",n:4,t:"「唯一の惑星」は地位の内容と無関係。"}] },
+
+  { id:6, group:"A", type:"下線部の意味", lbl:"下線部 カ", en:"not least from the Catholic Church",
+    ask:"下線部(カ)の意味にもっとも近いものを1つ選びなさい。", answer:4,
+    choices:[{t:"in some degree（ある程度）", ok:false},{t:"not at all（まったく〜ない）", ok:false},{t:"not only（〜だけでなく）", ok:false},{t:"particularly（特に）", ok:true}],
+    ev:{q:'met with much resistance, <span class="h">not least</span> from the Catholic Church', jp:"強い抵抗にあった、とりわけ教会から。"},
+    co:[{c:"gold",l:"語法｜not least",h:"「特に・とりわけ」の強調イディオム。least を含むが最上級（最も少ない）の意味ではない。"}],
+    sol:[{m:"x",n:1,t:"「ある程度」では強調が出ない。"},{m:"x",n:2,t:"not at all は全否定。文意と逆。"},{m:"x",n:3,t:"not only は相関表現「〜だけでなく」。ここは単独の強調。"},{m:"o",n:4,t:"正解。not least＝とりわけ。教会から特に強い抵抗を受けた。"}] },
+
+  { id:7, group:"A", type:"省略復元（空所Ⅱ）", lbl:"下線部 キ", en:"Taken together, Kepler's laws provided…", en2:"when (　Ⅱ　) taken together",
+    ask:"言葉を省略せずに述べると空所Ⅱに入る。もっとも適切なものを1つ選びなさい。", answer:2,
+    choices:[{t:"Copernicus' innovation was", ok:false},{t:"Kepler's laws were", ok:true},{t:"Kepler's second and third laws were", ok:false},{t:"the planets were", ok:false}],
+    ev:{q:'Taken together, <span class="h">Kepler\'s laws</span> provided a successful planetary theory', jp:"分詞構文 Taken together の意味上の主語＝直後の主節主語 Kepler's laws。"},
+    co:[{c:"nav",l:"復元",h:"when Kepler's laws were taken together。分詞構文の意味上の主語は主節と一致するのが原則。"},
+        {c:"verm",l:"罠｜3 第2・第3法則",h:"「まとめると」の対象は第1〜第3法則すべて。第2・第3だけに限定するのは誤り。"}],
+    sol:[{m:"x",n:1,t:"主節主語はコペルニクスの革新ではない。"},{m:"o",n:2,t:"正解。主節主語 Kepler's laws が分詞構文の意味上の主語。"},{m:"x",n:3,t:"3法則すべてが対象。限定は誤り。"},{m:"x",n:4,t:"the planets は主節主語ではない。"}] },
+
+  { id:8, group:"A", type:"下線部の内容", lbl:"下線部 ク", en:"played a pivotal role in converting the scientific community to Copernicanism",
+    ask:"下線部(ク)の内容としてもっとも適切なものを1つ選びなさい。", answer:3,
+    choices:[{t:"科学者たちにコペルニクス説へ疑問を投げかけるよう積極的に促した", ok:false},{t:"コペルニクスが他の科学者について考える手助けをした", ok:false},{t:"科学者たちにコペルニクス説を納得させるのに大きく貢献した", ok:true},{t:"科学者にコペルニクス的思考を拒否させる決定的証拠を与えた", ok:false}],
+    ev:{q:'played a pivotal role in <span class="h">converting the scientific community to Copernicanism</span>', jp:"ガリレオの発見が科学界をコペルニクス説へ転向させた。"},
+    co:[{c:"gold",l:"語法｜言い換え",h:"play a pivotal role in doing「〜するのに極めて重要な役割を果たす」≒make a major contribution／convert A to B「AをBに転向させる」≒persuade 人 of 説。"},
+        {c:"verm",l:"罠｜逆向き選択肢",h:"1「疑問視を促した」4「拒否させた」は転向の逆。"}],
+    sol:[{m:"x",n:1,t:"cast questions on（疑問視）で意味が反転。転向の逆。"},{m:"x",n:2,t:"科学界の転向を、コペルニクス個人を助ける意味に取り違え。"},{m:"o",n:3,t:"正解。convert A to B ≒ persuade 人 of 説。科学界を新説へ転向させた。"},{m:"x",n:4,t:"「拒否させる」は真逆。転向＝受け入れさせること。"}] },
+
+  { id:9, group:"B", type:"下線部の意味", lbl:"下線部 ケ", en:"In place of this theory",
+    ask:"下線部(ケ)の意味にもっとも近いものを次の1〜4から1つ選びなさい。", answer:3,
+    choices:[{t:"because of（〜のために）", ok:false},{t:"inspired by（〜に触発されて）", ok:false},{t:"instead of（〜の代わりに）", ok:true},{t:"thanks to（〜のおかげで）", ok:false}],
+    ev:{q:'<span class="h">In place of this theory</span>, Galileo made the counter-intuitive suggestion', jp:"旧理論（重い物体ほど速く落ちる）の代わりに、ガリレオは反直感的な提案をした。"},
+    co:[{c:"gold",l:"語法｜in place of",h:"＝instead of「〜の代わりに」。旧説を退けて別案を出す文脈。"}],
+    sol:[{m:"x",n:1,t:"因果（〜のために）ではない。"},{m:"x",n:2,t:"「触発されて」ではない。むしろ旧説を退けている。"},{m:"o",n:3,t:"正解。in place of＝instead of。"},{m:"x",n:4,t:"「〜のおかげで」は恩恵。文脈に合わない。"}] },
+
+  { id:10, group:"B", type:"段落一致（あてはまらないもの）", lbl:"第④段落", en:"第④段落で示されている事柄として あてはまらない ものを選ぶ",
+    ask:"第④段落で示されている事柄としてあてはまらないものを1つ選びなさい。", answer:2,
+    choices:[{t:"ガリレオによれば、実際には空気抵抗が物体を同じ速さで落下させない。", ok:false},{t:"ガリレオは自由落下の法則についてこれ以上の証拠の余地を残さなかった。", ok:true},{t:"落下物についてのガリレオの主張は、私たちの通常の予想に反する。", ok:false},{t:"ガリレオの最も重要な発見は、自由落下する物体に関する規則である。", ok:false}],
+    ev:{q:'Galileo provided <span class="h">persuasive though not conclusive</span> evidence for this law', jp:"自由落下の法則に「説得力はあるが決定的でない」証拠を与えた＝さらなる証拠の余地は残る。"},
+    co:[{c:"verm",l:"急所｜not conclusive",h:"選択肢2「これ以上の証拠の余地を残さなかった」は本文と矛盾＝あてはまらない＝正解。"},
+        {c:"teal",l:"設問の向き",h:"「あてはまらないもの」を選ぶ。○のものを消していく消去法で。"}],
+    sol:[{m:"o",n:1,t:"あてはまる。真空なら羽根と砲丸は同時に落ちる＝実際は空気抵抗が同速落下を妨げる、に一致。"},{m:"x",n:2,t:"<b>あてはまらない＝正解</b>。not conclusive（決定的でない）＝さらなる証拠の余地あり。矛盾する。"},{m:"o",n:3,t:"あてはまる。counter-intuitive suggestion（反直感的）に一致。"},{m:"o",n:4,t:"あてはまる。自由落下の法則が his mechanics の centrepiece（中心）。"}] },
+
+  { id:11, group:"B", type:"日本語記述（25字以内×2）", lbl:"下線部 コ", en:"Galileo is generally regarded as the first modern physicist.",
+    ask:"筆者が下線部(コ)のように述べる理由が2つある。その2つの理由の要点をそれぞれ25字以内の日本語で記しなさい（句読点も字数に含む）。", answer:"下記模範解答2つ", isDesc:true,
+    descAns:[{t:"数学言語で物質の動きを説明できることを示した。", c:"23字"},{t:"仮説を実験により確かめることを重要視した。", c:"21字"}],
+    ev:{q:'He was the first to show that <span class="h">the language of mathematics could be used…</span>', jp:"理由①は下線部コの直後。理由②は同段落の「Another innovative aspect…（実験重視）」に示される。"},
+    co:[{c:"nav",l:"2要素で採点",h:"①数学で物質の動きを記述／②実験で仮説を検証。この2要素が入っていれば得点。"},
+        {c:"teal",l:"記述の作法",h:"理由記述は「要素の数＝得点」。要素を箇条で洗い出し、25字に圧縮する。きれいな日本語より要素の網羅を優先。"}] },
+
+  { id:12, group:"B", type:"下線部の内容", lbl:"下線部 サ", en:"mathematics was widely regarded as dealing with purely abstract entities, hence inapplicable to physical reality",
+    ask:"下線部(サ)の内容としてもっとも適切なものを1つ選びなさい。", answer:3,
+    choices:[{t:"抽象的思考を提供することで、数学は実在の探求を助けると広く信じられていた。", ok:false},{t:"数学には主に実用的な用途があると広く信じられていた。", ok:false},{t:"概念的な研究である数学は、物質的実態の調査には不向きだと広く信じられていた。", ok:true},{t:"数学は現実世界で起きる複数の現象を考えるための実用的手段だと広く信じられていた。", ok:false}],
+    ev:{q:'dealing with purely abstract entities, <span class="h">hence inapplicable to physical reality</span>', jp:"数学は純粋に抽象的なものを扱う→物質的実在には適用不可、と広く見なされていた。"},
+    co:[{c:"gold",l:"語法｜hence inapplicable to",h:"「ゆえに〜には適用できない」。abstract（抽象的）↔physical reality（物質的実在）の対比。"},
+        {c:"verm",l:"罠｜1・4",h:"「実在の探求を助ける／実用的手段」は本文と逆方向。"}],
+    sol:[{m:"x",n:1,t:"「実在の探求を助ける」は本文と逆（適用不可とされた）。"},{m:"x",n:2,t:"「実用的用途」は本文にない。"},{m:"o",n:3,t:"正解。純粋に抽象的→物質的実在には適用不可、に一致。"},{m:"x",n:4,t:"「実世界の現象を考える実用的手段」も逆方向。"}] },
+
+  { id:13, group:"B", type:"下線部の内容", lbl:"下線部 シ", en:"The period following Galileo's death saw the scientific revolution rapidly gain in momentum.",
+    ask:"下線部(シ)の内容としてもっとも適切なものを1つ選びなさい。", answer:3,
+    choices:[{t:"科学革命を前進させたのは、ガリレオの死だった。", ok:false},{t:"ガリレオの死の前に、科学革命は世間の注目を集めた。", ok:false},{t:"ガリレオの死後の時代に、科学革命は加速した。", ok:true},{t:"ガリレオは死に瀕しながら、科学革命が著しく成長するのを見た。", ok:false}],
+    ev:{q:'The period <span class="h">following Galileo\'s death</span> saw the scientific revolution rapidly gain in momentum', jp:"無生物主語＋see。「その時代が科学革命の加速を目撃した」＝死後に加速した。"},
+    co:[{c:"nav",l:"構文｜時＋see＋O＋do",h:"「（時）に〜が起こる」。following＝subsequent to（〜の後）、gain in momentum＝勢いを増す。"},
+        {c:"verm",l:"罠｜2 前後逆",h:"following を prior（前）と取り違えると2を選ぶ。"}],
+    sol:[{m:"x",n:1,t:"「死が原因で前進」ではない。saw は因果を主張しない無生物主語構文。"},{m:"x",n:2,t:"following（後）を prior（前）と取り違え。前後が逆。"},{m:"o",n:3,t:"正解。ガリレオの死後の時代に科学革命は加速した。"},{m:"x",n:4,t:"主語の取り違え。主語は the period（ガリレオではない）。"}] },
+
+  { id:14, group:"B", type:"段落一致", lbl:"第⑥段落", en:"第⑥段落から読み取れるもの",
+    ask:"第⑥段落から読み取れるものとしてもっとも適切なものを1つ選びなさい。", answer:2,
+    choices:[{t:"デカルトは、不活性な粒子が互いに結合・衝突することを考慮しなかった。", ok:false},{t:"デカルトは、動く不活性な粒子に関する規則の発見が、宇宙の仕組みを理解するのに大いに役立つと考えた。", ok:true},{t:"科学者たちがデカルトの理論を受け入れるには長い時間がかかった。", ok:false},{t:"デカルトの機械論哲学は、新しくも急進的でもないので人々を驚かせなかった。", ok:false}],
+    ev:{q:'The laws governing the motion of these particles <span class="h">held the key to understanding the structure of the universe</span>, Descartes believed', jp:"粒子の運動を支配する法則が宇宙理解の鍵、とデカルトは信じた。"},
+    co:[{c:"nav",l:"なぜ2か",h:"粒子運動の法則＝宇宙の仕組み理解の鍵、が選択肢2の言い換え。"},
+        {c:"verm",l:"罠｜1・3・4はすべて逆",h:"粒子は相互作用・衝突する／すぐ支配的になった（quickly）／急進的で新しい（radical new）、と本文にある。"}],
+    sol:[{m:"x",n:1,t:"逆。粒子が相互作用・衝突するとまさに述べている。"},{m:"o",n:2,t:"正解。held the key to understanding the structure of the universe に一致。"},{m:"x",n:3,t:"逆。quickly became the dominant vision（すぐに支配的に）。"},{m:"x",n:4,t:"逆。radical new（急進的で新しい）とある。"}] },
+
+  { id:15, group:"B", type:"本文全体・主題一致", lbl:"総合", en:"本文で述べられている科学者たちの学説・功績についての説明",
+    ask:"本文で述べられている科学者たちの学説や功績についての説明としてもっとも適切なものを1つ選びなさい。", answer:1,
+    choices:[{t:"デカルトが示した機械論哲学は、今日の世界で部分的に受け入れられている。", ok:true},{t:"天文学において、ガリレオは落下物の理論を夜空で観測される現象に適用して重要な発見をした。", ok:false},{t:"惑星の太陽周回軌道が円でなく楕円だと示したのは、コペルニクスだけでなくケプラーもだった。", ok:false},{t:"プトレマイオスの理論（天動説）は、アリストテレス的世界観とは無関係だった。", ok:false}],
+    ev:{q:'to some extent <span class="h">it is still with us today</span>', jp:"デカルトの機械論はある程度は現代にも残る＝部分的に受け入れられている（partly accepted）。"},
+    co:[{c:"nav",l:"なぜ1か",h:"to some extent＝partly（部分的に）。第⑥段落末と一致。"},
+        {c:"verm",l:"罠の型｜②手段すり替え／③主体取り違え／④逆",h:"2 ガリレオは望遠鏡で発見（落下理論の応用でない）／3 楕円はケプラーのみ（コペルニクスは円軌道）／4 天動説はアリストテレスの核（無関係でない）。"}],
+    sol:[{m:"o",n:1,t:"正解。to some extent it is still with us today ＝部分的に受け入れられている、に合致。"},{m:"x",n:2,t:"発見は<em>望遠鏡による観測</em>。落下理論の天文応用ではない（手段のすり替え）。"},{m:"x",n:3,t:"楕円を示したのは<em>ケプラーのみ</em>。コペルニクスは軌道を<em>円</em>と考えた。"},{m:"x",n:4,t:"逆。天動説はアリストテレス的世界観の<em>核</em>（at the heart of）にあった。"}] },
+];
+
+const SHEET = [
+  {q:"(1)",v:"1"},{q:"(2)",v:"seem / scientist",txt:true},{q:"(3)",v:"2"},{q:"(4)",v:"4"},{q:"(5)",v:"3"},
+  {q:"(6)",v:"4"},{q:"(7)",v:"2"},{q:"(8)",v:"3"},{q:"(9)",v:"3"},{q:"(10)",v:"2"},
+  {q:"(11)",v:"記述2要素",txt:true},{q:"(12)",v:"3"},{q:"(13)",v:"3"},{q:"(14)",v:"2"},{q:"(15)",v:"1"},
+];
+
+function buildChoice(c, idx){
+  return `<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${idx+1}</span><span>${c.t}</span><span class="mk"></span></button>`;
+}
+function buildCA(rows){
+  return rows.map(r=>{
+    if(r.n===0) return `<div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd">${r.t}</div></div>`;
+    const cls = r.m==='o'?'ok':'ng';
+    return `<div class="ca-row"><div class="ca-mark ${cls}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`;
+  }).join('');
+}
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+
+function buildQ(q){
+  const focusEn = q.en2 ? `${q.en}<br><span style="color:var(--muted);font-size:13px">▶ ${q.en2}</span>` : q.en;
+  let inner = `<div class="q-head"><div class="q-no">${q.id}</div><div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${focusEn}</span></div><span class="q-type">${q.type}</span></div>`;
+  inner += `<div class="q-body"><div class="askjp">${q.ask}</div>`;
+  if(q.isText){
+    inner += `<div class="box navy" style="margin:0 0 4px"><span class="lab">抜き出し問題</span>本文から該当語群を復元し、最初と最後の1語を答える。まず下の「答え・根拠を表示」で確認しよう。</div>`;
+  } else if(q.isDesc){
+    inner += `<div class="box teal" style="margin:0 0 4px"><span class="lab">記述問題</span>25字以内×2。理由の要点2つを本文から拾い、要素を落とさず圧縮する。</div>`;
+  } else {
+    inner += `<div class="choices">${q.choices.map(buildChoice).join('')}</div>`;
+  }
+  inner += `<button class="reveal-btn">答え・根拠を表示 ▼</button>`;
+
+  let sol = `<div class="solution">`;
+  if(q.isDesc){
+    sol += `<div class="ans-badge">模範解答（各25字以内）</div>`;
+    q.descAns.forEach(a=>{ sol += `<div class="desc-write"><span class="cnt">${a.c}</span><div class="modelans">${a.t}</div></div>`; });
+    sol += buildEV(q.ev) + buildCO(q.co);
+  } else {
+    const ansTxt = q.isText ? q.answer : `${q.answer}`;
+    sol += `<div class="ans-badge">正解 <span class="c">${ansTxt}</span></div>`;
+    sol += buildEV(q.ev);
+    sol += `<div class="chy-h">全選択肢の照合</div>${buildCA(q.sol)}`;
+    sol += buildCO(q.co);
+  }
+  sol += `</div></div>`;
+  inner += sol;
+
+  const el = document.createElement('div'); el.className='q'; el.id='q'+q.id; el.innerHTML = inner;
+  return el;
+}
+function renderGroup(group, wrapId, idxId){
+  const wrap=document.getElementById(wrapId), idx=document.getElementById(idxId);
+  Q.filter(q=>q.group===group).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id;
+    j.addEventListener('click',()=>document.getElementById('q'+q.id).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+}
+renderGroup('A','qWrapA','qidxA');
+renderGroup('B','qWrapB','qidxB');
+
+document.querySelectorAll('.q').forEach(card=>{
+  const choiceBtns=card.querySelectorAll('.choices .ch');
+  choiceBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      choiceBtns.forEach(b=>b.classList.remove('picked'));
+      btn.classList.add('picked','reveal');
+      btn.classList.add(btn.dataset.ok==='1'?'correct':'wrong');
+      btn.querySelector('.mk').textContent=btn.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open) choiceBtns.forEach(b=>{ b.classList.add('reveal'); b.classList.add(b.dataset.ok==='1'?'correct':'wrong'); b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×'; });
+  });
+});
+
+const sheetEl=document.getElementById('answerSheet');
+SHEET.forEach(s=>{ const c=document.createElement('div'); c.className='acell'+(s.txt?' txt':''); c.innerHTML=`<div class="qn">${s.q}</div><div class="av">${s.v}</div>`; sheetEl.appendChild(c); });
+
+/* TAB + PANEL NAV */
+const tabs=document.querySelectorAll('.tab');
+const panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on'));
+  panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]');
+  t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+</script>
+</body>
+</html>

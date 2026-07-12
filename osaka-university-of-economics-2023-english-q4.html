@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜大阪経済大学 2023 大問4（空所補充）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">経</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>大阪経済大学 2023 ／ 大問4</span></div>
+    <div class="top-meta">空所補充 A・B（29〜38）<br>文A：バナナを剥くロボット／文B：SNS</div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-in" id="navIn">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>OVERVIEW</small>この大問の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>PASSAGE A</small>文A・29〜33</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>PASSAGE B</small>文B・34〜38</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>READING</small>全訳マップ</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Cloze Strategy</div>
+    <h1>空所補充は「勘」で埋めない。<br>品詞 → 文法 → 意味の3層で、10問を確実に取る。</h1>
+    <p>大問4は短い2文章（A＝バナナを剥くロボット／B＝SNS）の空所補充10問。長文読解というより、動名詞・関係詞・語法・接続詞・並列・熟語といった<em>文法と語彙の運用</em>が問われる。空所ごとに「何が試されているか」を型で判定すれば落とさない。</p>
+    <div class="thesis"><b>解き筋の型：</b>①<b>品詞</b>（前置詞の後→動名詞、など空所の形を決める）→②<b>文法</b>（関係詞・時制・並列・語法 enable O to do）→③<b>意味</b>（文脈・コロケーション）。この順で絞る。</div>
+    <div class="stats">
+      <div class="stat"><b>10</b><span>空所（29–38）</span></div>
+      <div class="stat"><b>2</b><span>文章 A・B</span></div>
+      <div class="stat"><b>4</b><span>択（①〜④）</span></div>
+      <div class="stat"><b>3</b><span>解き筋の層</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">空所10問の型分類</h2>
+  <p class="lead">各空所は「何を試しているか」がはっきり決まっている。型が分かれば、選択肢を機械的に絞れる。</p>
+  <table>
+    <thead><tr><th style="width:20%">型</th><th>判定のしかた</th><th style="width:24%">該当空所</th></tr></thead>
+    <tbody>
+      <tr><td class="c">動名詞・準動詞</td><td>前置詞・助動詞の後で動詞の形を決める</td><td>29（of doing）・34（並列の p.p.）</td></tr>
+      <tr><td class="c">関係詞</td><td>後ろが完全文か不完全文か＋先行詞</td><td>30（where）</td></tr>
+      <tr><td class="c">接続詞</td><td>前後の論理（譲歩・対比・因果）</td><td>32（While）</td></tr>
+      <tr><td class="c">語法</td><td>動詞の型（enable O to do／自動詞＋for）</td><td>35・36・37</td></tr>
+      <tr><td class="c">語彙・副詞</td><td>文脈に合う意味・コロケーション</td><td>31・33</td></tr>
+      <tr><td class="c">談話標識・熟語</td><td>段落の役割（結論など）</td><td>38（In conclusion）</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">空所補充の鉄則</h2>
+  <div class="grid2">
+    <div class="box navy"><span class="lab">RULE 1</span>まず<em>空所の前後の形</em>を見る。前置詞の後なら動名詞、後ろが完全文なら関係副詞、と<em>意味を考える前に形で絞る</em>。</div>
+    <div class="box gold"><span class="lab">RULE 2</span>動詞は<em>型</em>で決まる。enable O to do／make O do／apply for／prepare for など、後ろの語（to do・for）が決め手。</div>
+    <div class="box teal"><span class="lab">RULE 3</span>語彙・副詞は<em>文脈の方向</em>で。人手不足を「緩和したい」なら「高度に依存する」工場、のように前後の論旨に合わせる。</div>
+    <div class="box verm"><span class="lab">RULE 4</span>接続詞・談話標識は<em>前後の論理関係</em>で。逆方向なら While（譲歩）、締めなら In conclusion。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;">
+    <span class="lab">この解説の使い方</span>
+    各空所カードは<strong>選択肢をタップすると自分で解ける</strong>。「答え・根拠を表示」で正解／<strong>根拠（本文の該当箇所）</strong>／全選択肢の✓✗／文法・語法まで開きます。手元の過去問と並べて使ってください。
+  </div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">文A（29〜33）へ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage A</div>
+  <h1 class="head">文A ― バナナを剥くロボット<span class="sub">要旨を掴んでから、空所29〜33を「型」で解く。テーマは繊細な作業をこなすロボットの開発。</span></h1>
+  <div class="rule"></div>
+
+  <div class="card">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);margin-bottom:8px;">SUMMARY ― 文Aの要旨</div>
+    <p style="margin:0;font-size:14.5px;color:#3a4048;">日本のロボットは工場の単純作業や配膳が中心だったが、研究者が<strong>バナナの皮を（中身を潰さず）剥ける</strong>器用なロボットを公開した。成功率は57%だが、より繊細な作業の未来を示す。東大の研究者が「ディープ模倣学習」で訓練＝皮むき動作を数百回<strong>実演</strong>して学習データを作った。13時間超の訓練で成功率が向上。まだテスト中<strong>だが</strong>、Kuniyoshi はこの手法で様々な「人間的」単純作業を教えられ、<strong>人手に大きく依存する</strong>弁当・食品加工工場の労働力不足を緩和できると期待する。</p>
+    <div class="tags" style="margin-top:12px;">
+      <span class="utag blank">29 capable of __ing</span><span class="utag blank">30 a future __ (関係詞)</span><span class="utag blank">31 __ the action (語彙)</span><span class="utag blank">32 __ still testing (接続詞)</span><span class="utag blank">33 __ dependent (副詞)</span>
+    </div>
+  </div>
+
+  <div class="qindex" id="qidxA"></div>
+  <div id="qWrapA"></div>
+  <div class="pnav"><button class="btns" data-go="0">← この大問の攻略</button><span class="sp"></span><button class="btnp" data-go="2">文B（34〜38）へ進む →</button></div>
+</section><section class="panel" id="p2">
+  <div class="eyebrow">Passage B</div>
+  <h1 class="head">文B ― SNSの効用<span class="sub">要旨を掴んでから、空所34〜38を「型」で解く。テーマはSNSが学生の生活・学習・就活に与える好影響。</span></h1>
+  <div class="rule"></div>
+
+  <div class="card">
+    <div style="font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);margin-bottom:8px;">SUMMARY ― 文Bの要旨</div>
+    <p style="margin:0;font-size:14.5px;color:#3a4048;">多くの学生は、SNSのおかげで生活が良い方向に変わったと言う。自信がつき、家族・友人と近づき、社会問題への意識も<strong>高めた</strong>。学習面でも好影響で、オンライン授業や遠隔学習が普及し、メッセージやビデオチャットのツールが学生の共同作業を<strong>可能にする</strong>。就活の<strong>備え</strong>にもなり、企業研究・履歴書アップロード・求人への<strong>応募</strong>・オンライン面接ができる。<strong>結論として</strong>、適切に使えばSNSは強力なツールだ。</p>
+    <div class="tags" style="margin-top:12px;">
+      <span class="utag blank">34 __ them aware (並列)</span><span class="utag blank">35 __ students to work (語法)</span><span class="utag blank">36 __ for life (語彙)</span><span class="utag blank">37 __ for jobs (語彙)</span><span class="utag blank">38 In __ (熟語)</span>
+    </div>
+  </div>
+
+  <div class="qindex" id="qidxB"></div>
+  <div id="qWrapB"></div>
+  <div class="pnav"><button class="btns" data-go="1">← 文A（29〜33）</button><span class="sp"></span><button class="btnp" data-go="3">全訳マップへ進む →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳マップ ― 各文の読み筋とキーポイント<span class="sub">本文（手元の過去問）を読み直すときの骨。空所に入る語を戻した状態で、要旨と効いている文法・語法を確認する。</span></h1>
+  <div class="rule"></div>
+
+  <div class="tmap"><div class="h"><b>A</b><span>バナナを剥くロボット</span></div>
+    <p style="font-size:14px;color:#3a4048;">日本のロボットは単純作業が中心だったが、研究者が繊細な皮むきをこなすロボットを公開（成功率57%）。東大の研究者がディープ模倣学習で訓練し、13時間超で成功率向上。まだテスト中だが、人手不足の工場での活用が期待される。</p>
+    <div class="key">◆ 効いている文法・語法</div>
+    <ul>
+      <li><em>be capable of doing</em>「〜できる」（of＋動名詞）<span class="qbadge">29</span></li>
+      <li>関係副詞 <em>a future where S V</em>「SがVする未来」（完全文＋状況）<span class="qbadge">30</span></li>
+      <li><em>demonstrate the action</em>「動作を実演する」<span class="qbadge">31</span></li>
+      <li>譲歩の <em>While S V</em>「〜だが」<span class="qbadge">32</span></li>
+      <li><em>highly dependent on ~</em>「〜に大きく依存する」<span class="qbadge">33</span></li>
+    </ul>
+  </div>
+
+  <div class="tmap"><div class="h"><b>B</b><span>SNSの効用</span></div>
+    <p style="font-size:14px;color:#3a4048;">学生はSNSで生活が好転したと言う（自信・人間関係・社会意識）。学習にも好影響（オンライン授業・共同作業）。就活支援にもなる（企業研究・応募・面接）。結論、適切に使えば強力なツール。</p>
+    <div class="key">◆ 効いている文法・語法</div>
+    <ul>
+      <li>現在完了の並列 <em>has given / brought / made</em>（過去分詞）<span class="qbadge">34</span></li>
+      <li><em>enable O to do</em>「Oが〜するのを可能にする」<span class="qbadge">35</span></li>
+      <li><em>prepare for ~</em>「〜に備える」<span class="qbadge">36</span></li>
+      <li><em>apply for ~</em>「〜に応募する」<span class="qbadge">37</span></li>
+      <li><em>in conclusion</em>「結論として」（談話標識）<span class="qbadge">38</span></li>
+    </ul>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="2">← 文B（34〜38）</button><span class="sp"></span><button class="btnp" data-go="4">総まとめへ進む →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 正解一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">正解一覧</h2>
+  <div class="sheet" id="answerSheet"></div>
+
+  <h2 class="sec">空所補充・頻出ポイント早見</h2>
+  <table>
+    <thead><tr><th style="width:16%">空所</th><th style="width:30%">試された点</th><th>核になる知識</th></tr></thead>
+    <tbody>
+      <tr><td class="c">29</td><td>準動詞</td><td>be capable of <b>doing</b>（前置詞＋動名詞）</td></tr>
+      <tr><td class="c">30</td><td>関係詞</td><td>a future <b>where</b> S V（完全文＋状況の先行詞）</td></tr>
+      <tr><td class="c">31</td><td>語彙</td><td><b>demonstrate</b>「実演する」＝データ生成の文脈</td></tr>
+      <tr><td class="c">32</td><td>接続詞</td><td><b>While</b> S V「〜だが」（譲歩）</td></tr>
+      <tr><td class="c">33</td><td>副詞</td><td><b>highly</b> dependent on「大きく依存」</td></tr>
+      <tr><td class="c">34</td><td>並列</td><td>has given / brought / <b>made</b>（p.p.の並列）</td></tr>
+      <tr><td class="c">35</td><td>語法</td><td><b>enable</b> O <b>to do</b></td></tr>
+      <tr><td class="c">36</td><td>語法</td><td><b>prepare for</b>「備える」</td></tr>
+      <tr><td class="c">37</td><td>語法</td><td><b>apply for</b>「応募する」</td></tr>
+      <tr><td class="c">38</td><td>熟語</td><td>In <b>conclusion</b>「結論として」</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>準動詞・並列で外した（29・34）</b><p>前置詞・助動詞の後は<em>形で即決</em>。of の後は動名詞、has+p.p. の並列は過去分詞。意味を考える前に形を見る。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>関係詞・接続詞で外した（30・32）</b><p>関係詞は「後ろが完全文か」で判定（完全文＋状況→where）。接続詞は前後の論理（逆方向→譲歩 While）。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>語法で外した（35・36・37）</b><p>動詞は<em>型で暗記</em>。enable O to do／prepare for／apply for。後ろの to do・for が合図。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>語彙・副詞・熟語で外した（31・33・38）</b><p>文脈の方向に合う語を。データ生成→demonstrate、人手不足→highly dependent、締め→In conclusion。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    空所補充は「品詞→文法→意味」の3層で必ず絞れる。勘で埋めず、各空所に「何型か」を書き込む癖をつければ、この10問は安定して満点圏に入ります。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="3">← 全訳マップ</button></div>
+</section>
+</div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は大阪経済大学2023年英語（大問4）の学習用解説です。本文・設問の著作権は出題者・原著者に帰属します。要旨・解説・図表はTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+
+const Q = [
+ { id:29, group:"A", type:"準動詞（前置詞＋動名詞）", lbl:"空所 29", en:"a robot capable of ( 29 ) the delicate task of peeling a banana",
+   ask:"空所29に最も適切なものを①〜④から選べ。", answer:"④",
+   choices:[{t:"execute（原形）", ok:false},{t:"executes（三単現）", ok:false},{t:"executed（過去/過去分詞）", ok:false},{t:"executing（動名詞）", ok:true}],
+   ev:{q:'a robot capable of <span class="h">executing</span> the delicate task', jp:"be capable of doing「〜できる」。of は前置詞なので、後ろは動名詞 executing。"},
+   co:[{c:"nav",l:"文法核｜前置詞＋動名詞",h:"capable of の of は前置詞。前置詞の目的語になれる動詞の形は動名詞（-ing）。"},
+       {c:"verm",l:"罠｜①②③",h:"原形・三単現・過去形はいずれも前置詞の後に置けない。形で即座に④に絞れる。"}],
+   sol:[{m:"x",n:"①",t:"execute（原形）は前置詞の後に不可。"},{m:"x",n:"②",t:"executes（三単現）は前置詞の後に不可。"},{m:"x",n:"③",t:"executed は過去形／過去分詞。ここは能動の動名詞が必要。"},{m:"o",n:"④",t:"正解。executing（動名詞）が of の目的語。"}] },
+
+ { id:30, group:"A", type:"関係詞", lbl:"空所 30", en:"a future ( 30 ) machines undertake more subtle operations",
+   ask:"空所30に最も適切なものを①〜④から選べ。", answer:"③",
+   choices:[{t:"what", ok:false},{t:"who", ok:false},{t:"where", ok:true},{t:"which", ok:false}],
+   ev:{q:'a future <span class="h">where</span> machines undertake more subtle operations', jp:"先行詞 a future（時・状況）＋後ろが完全文（machines undertake operations）→関係副詞 where。"},
+   co:[{c:"nav",l:"文法核｜完全文なら関係副詞",h:"空所の後は S(machines)＋V(undertake)＋O(operations) で完全文。先行詞 future は状況を表すので where で受ける。"},
+       {c:"verm",l:"罠｜④which",h:"which は関係代名詞で、後ろが主語や目的語の欠けた不完全文でないと使えない。ここは完全文なので不可。who は人、what は先行詞をとらない。"}],
+   sol:[{m:"x",n:"①",t:"what は先行詞をとらない。"},{m:"x",n:"②",t:"who は人が先行詞。future は人でない。"},{m:"o",n:"③",t:"正解。完全文＋状況の先行詞→関係副詞 where。"},{m:"x",n:"④",t:"which は後ろが不完全文でないと不可。"}] },
+
+ { id:31, group:"A", type:"語彙（文脈）", lbl:"空所 31", en:"a process where they ( 31 ) the banana-peeling action hundreds of times to produce … data",
+   ask:"空所31に最も適切なものを①〜④から選べ。", answer:"②",
+   choices:[{t:"crushed（潰した）", ok:false},{t:"demonstrated（実演した）", ok:true},{t:"cleaned（洗った）", ok:false},{t:"stripped（剥ぎ取った）", ok:false}],
+   ev:{q:'( 31 ) the banana-peeling action hundreds of times <span class="h">to produce sufficient data for the robot to learn</span>', jp:"ロボットが学習するデータを作るため、皮むき動作を数百回「実演した／示した」。"},
+   co:[{c:"teal",l:"文脈｜データ生成のため",h:"目的は「学習データを作る」こと。動作を繰り返し示す＝demonstrate（実演する）。"},
+       {c:"verm",l:"罠｜①③④",h:"crushed（潰す）cleaned（洗う）stripped（剥ぐ）は、学習データ生成の文脈に合わない。"}],
+   sol:[{m:"x",n:"①",t:"crushed（潰す）は文意に合わない。"},{m:"o",n:"②",t:"正解。demonstrated（実演）＝動作を示してデータを生む。"},{m:"x",n:"③",t:"cleaned（洗う）は無関係。"},{m:"x",n:"④",t:"stripped（剥ぐ）はデータ生成の文脈に合わない。"}] },
+
+ { id:32, group:"A", type:"接続詞（譲歩）", lbl:"空所 32", en:"( 32 ) the robot is still undergoing more testing, Kuniyoshi believes his method can teach robots…",
+   ask:"空所32に最も適切なものを①〜④から選べ。", answer:"②",
+   choices:[{t:"However（しかし・副詞）", ok:false},{t:"While（〜だが）", ok:true},{t:"Instead（代わりに）", ok:false},{t:"Thus（したがって）", ok:false}],
+   ev:{q:'( 32 ) the robot is still undergoing more testing, <span class="h">Kuniyoshi believes</span> his method can teach robots…', jp:"前半「まだテスト中」と後半「期待している」は逆方向。譲歩の While「〜だが」。"},
+   co:[{c:"nav",l:"論理｜前後は逆方向",h:"「まだテスト中」だが「期待できる」＝譲歩。節と節を結ぶ接続詞 While が必要。"},
+       {c:"verm",l:"罠｜①④",h:"However・Thus は副詞で、2つの節を直接つなげない。Instead（代わりに）は文意に合わない。"}],
+   sol:[{m:"x",n:"①",t:"However は副詞。節と節を接続できない。"},{m:"o",n:"②",t:"正解。While「〜だが」で譲歩をつなぐ。"},{m:"x",n:"③",t:"Instead（代わりに）は文意不整合。"},{m:"x",n:"④",t:"Thus（だから）は因果で、逆方向。"}] },
+
+ { id:33, group:"A", type:"副詞（コロケーション）", lbl:"空所 33", en:"factories that are ( 33 ) dependent on human labor",
+   ask:"空所33に最も適切なものを①〜④から選べ。", answer:"③",
+   choices:[{t:"rarely（めったに〜ない）", ok:false},{t:"carefully（注意深く）", ok:false},{t:"highly（大いに）", ok:true},{t:"occasionally（時々）", ok:false}],
+   ev:{q:'ease Japan\'s labor shortage … factories that are <span class="h">highly</span> dependent on human labor', jp:"人手不足を緩和したい対象＝人手に「大きく」依存する工場。highly dependent。"},
+   co:[{c:"teal",l:"文脈｜人手不足の緩和対象",h:"労働力不足を助けたい相手は「人手に高度に依存する」工場。highly dependent が自然。"},
+       {c:"verm",l:"罠｜①④",h:"rarely・occasionally は「依存度が低い」ことになり、人手不足緩和の対象として矛盾。carefully は dependent と結びつかない。"}],
+   sol:[{m:"x",n:"①",t:"rarely（めったに〜ない）は文意が逆。"},{m:"x",n:"②",t:"carefully は dependent と結びつかない。"},{m:"o",n:"③",t:"正解。highly dependent on「大きく依存する」。"},{m:"x",n:"④",t:"occasionally（時々）は文意が逆。"}] },
+
+ { id:34, group:"B", type:"並列（現在完了の過去分詞）", lbl:"空所 34", en:"It has given them more confidence …, brought them closer …, and ( 34 ) them more aware of important social issues",
+   ask:"空所34に最も適切なものを①〜④から選べ。", answer:"③",
+   choices:[{t:"make（原形）", ok:false},{t:"making（分詞）", ok:false},{t:"made（過去分詞）", ok:true},{t:"be made（受動）", ok:false}],
+   ev:{q:'It has <span class="h">given</span> them …, <span class="h">brought</span> them …, and ( 34 ) them more aware', jp:"has given / brought / made の3つが and で並列する現在完了。過去分詞 made。"},
+   co:[{c:"nav",l:"文法核｜has ＋ p.p. の並列",h:"has given, (has) brought, and (has) made の並列。空所は過去分詞。"},
+       {c:"verm",l:"罠｜②④",h:"making（分詞）は並列に合わない。be made（受動）は them を目的語に取れず不整合。"}],
+   sol:[{m:"x",n:"①",t:"make（原形）は has の後の並列に不可。"},{m:"x",n:"②",t:"making（分詞）は並列にならない。"},{m:"o",n:"③",t:"正解。given/brought と並ぶ過去分詞 made。"},{m:"x",n:"④",t:"be made（受動）は them を目的語に取れない。"}] },
+
+ { id:35, group:"B", type:"語法（enable O to do）", lbl:"空所 35", en:"messaging and video chat tools ( 35 ) students to work on group projects",
+   ask:"空所35に最も適切なものを①〜④から選べ。", answer:"②",
+   choices:[{t:"make", ok:false},{t:"enable（可能にする）", ok:true},{t:"disable（できなくする）", ok:false},{t:"discourage（思いとどまらせる）", ok:false}],
+   ev:{q:'tools ( 35 ) students <span class="h">to work</span> on group projects', jp:"後ろが to work（to不定詞）。enable O to do「Oが〜するのを可能にする」。"},
+   co:[{c:"gold",l:"語法｜enable O to do",h:"後ろの to work が決め手。enable＋O＋to do の型。"},
+       {c:"verm",l:"罠｜①③④",h:"make は make O do（原形）で to を取らない。disable・discourage は「妨げる」で文意が逆。"}],
+   sol:[{m:"x",n:"①",t:"make は make O do（原形不定詞）で to を取らない。"},{m:"o",n:"②",t:"正解。enable O to do。共同作業を可能にする。"},{m:"x",n:"③",t:"disable（できなくする）は逆。"},{m:"x",n:"④",t:"discourage（思いとどまらせる）は逆。"}] },
+
+ { id:36, group:"B", type:"語法（自動詞＋for）", lbl:"空所 36", en:"social media helps students ( 36 ) for life after university",
+   ask:"空所36に最も適切なものを①〜④から選べ。", answer:"②",
+   choices:[{t:"propose（提案する）", ok:false},{t:"prepare（備える）", ok:true},{t:"repair（修理する）", ok:false},{t:"reduce（減らす）", ok:false}],
+   ev:{q:'helps students ( 36 ) <span class="h">for life after university</span>', jp:"prepare for ~「〜に備える」。大学卒業後の人生に備える。"},
+   co:[{c:"gold",l:"語法｜prepare for",h:"prepare for ~「〜に備える」。後ろの for が合図。"},
+       {c:"verm",l:"罠｜①③④",h:"propose・repair・reduce は for と結びつかず、文意（就活・将来への備え）にも合わない。"}],
+   sol:[{m:"x",n:"①",t:"propose（提案）は文意に合わない。"},{m:"o",n:"②",t:"正解。prepare for「備える」。"},{m:"x",n:"③",t:"repair（修理）は不整合。"},{m:"x",n:"④",t:"reduce（減らす）は不整合。"}] },
+
+ { id:37, group:"B", type:"語法（自動詞＋for）", lbl:"空所 37", en:"research companies, upload their resumes, ( 37 ) for jobs, and have online job interviews",
+   ask:"空所37に最も適切なものを①〜④から選べ。", answer:"①",
+   choices:[{t:"apply（応募する）", ok:true},{t:"rely（頼る）", ok:false},{t:"deny（否定する）", ok:false},{t:"imply（暗示する）", ok:false}],
+   ev:{q:'upload their resumes, ( 37 ) <span class="h">for jobs</span>, and have online job interviews', jp:"就活の流れ（企業研究→履歴書→応募→面接）。apply for「〜に応募する」。"},
+   co:[{c:"gold",l:"語法｜apply for",h:"apply for a job「仕事に応募する」。就活の一連の動作に一致。"},
+       {c:"verm",l:"罠｜②③④",h:"rely は rely on（for でない）。deny・imply は for jobs と結びつかない。"}],
+   sol:[{m:"o",n:"①",t:"正解。apply for jobs「求人に応募する」。"},{m:"x",n:"②",t:"rely は on を伴う（rely on）。"},{m:"x",n:"③",t:"deny（否定）は不整合。"},{m:"x",n:"④",t:"imply（暗示）は不整合。"}] },
+
+ { id:38, group:"B", type:"熟語（談話標識）", lbl:"空所 38", en:"In ( 38 ), social media is a powerful tool.",
+   ask:"空所38に最も適切なものを①〜④から選べ。", answer:"①",
+   choices:[{t:"conclusion（結論）", ok:true},{t:"contrast（対照）", ok:false},{t:"decision（決定）", ok:false},{t:"delivery（配達）", ok:false}],
+   ev:{q:'<span class="h">In conclusion</span>, social media is a powerful tool', jp:"最終文で全体をまとめる談話標識。In conclusion「結論として」。"},
+   co:[{c:"gold",l:"熟語｜in conclusion",h:"in conclusion「結論として」。段落・文章を締める定型。"},
+       {c:"verm",l:"罠｜②③④",h:"in contrast（対照的に）は逆接で文脈に合わない。in decision という熟語はない。delivery（配達）は無関係。"}],
+   sol:[{m:"o",n:"①",t:"正解。in conclusion「結論として」。締めの一文。"},{m:"x",n:"②",t:"in contrast（対照的に）は文脈に合わない。"},{m:"x",n:"③",t:"in decision という熟語はない。"},{m:"x",n:"④",t:"delivery（配達）は無関係。"}] },
+];
+
+const SHEET = [
+ {q:"29",v:"④"},{q:"30",v:"③"},{q:"31",v:"②"},{q:"32",v:"②"},{q:"33",v:"③"},
+ {q:"34",v:"③"},{q:"35",v:"②"},{q:"36",v:"②"},{q:"37",v:"①"},{q:"38",v:"①"},
+];
+
+function buildChoice(c, idx){
+  return `<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${idx+1}</span><span>${c.t}</span><span class="mk"></span></button>`;
+}
+function buildCA(rows){
+  return rows.map(r=>{
+    if(r.n===0) return `<div class="ca-row"><div class="ca-mark ok">✓</div><div class="ca-bd">${r.t}</div></div>`;
+    const cls = r.m==='o'?'ok':'ng';
+    return `<div class="ca-row"><div class="ca-mark ${cls}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`;
+  }).join('');
+}
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+
+function buildQ(q){
+  const focusEn = q.en2 ? `${q.en}<br><span style="color:var(--muted);font-size:13px">▶ ${q.en2}</span>` : q.en;
+  let inner = `<div class="q-head"><div class="q-no">${q.id}</div><div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${focusEn}</span></div><span class="q-type">${q.type}</span></div>`;
+  inner += `<div class="q-body"><div class="askjp">${q.ask}</div>`;
+  if(q.isText){
+    inner += `<div class="box navy" style="margin:0 0 4px"><span class="lab">抜き出し問題</span>本文から該当語群を復元し、最初と最後の1語を答える。まず下の「答え・根拠を表示」で確認しよう。</div>`;
+  } else if(q.isDesc){
+    inner += `<div class="box teal" style="margin:0 0 4px"><span class="lab">記述問題</span>25字以内×2。理由の要点2つを本文から拾い、要素を落とさず圧縮する。</div>`;
+  } else {
+    inner += `<div class="choices">${q.choices.map(buildChoice).join('')}</div>`;
+  }
+  inner += `<button class="reveal-btn">答え・根拠を表示 ▼</button>`;
+
+  let sol = `<div class="solution">`;
+  if(q.isDesc){
+    sol += `<div class="ans-badge">模範解答（各25字以内）</div>`;
+    q.descAns.forEach(a=>{ sol += `<div class="desc-write"><span class="cnt">${a.c}</span><div class="modelans">${a.t}</div></div>`; });
+    sol += buildEV(q.ev) + buildCO(q.co);
+  } else {
+    const ansTxt = q.isText ? q.answer : `${q.answer}`;
+    sol += `<div class="ans-badge">正解 <span class="c">${ansTxt}</span></div>`;
+    sol += buildEV(q.ev);
+    sol += `<div class="chy-h">全選択肢の照合</div>${buildCA(q.sol)}`;
+    sol += buildCO(q.co);
+  }
+  sol += `</div></div>`;
+  inner += sol;
+
+  const el = document.createElement('div'); el.className='q'; el.id='q'+q.id; el.innerHTML = inner;
+  return el;
+}
+function renderGroup(group, wrapId, idxId){
+  const wrap=document.getElementById(wrapId), idx=document.getElementById(idxId);
+  Q.filter(q=>q.group===group).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id;
+    j.addEventListener('click',()=>document.getElementById('q'+q.id).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+}
+renderGroup('A','qWrapA','qidxA');
+renderGroup('B','qWrapB','qidxB');
+
+document.querySelectorAll('.q').forEach(card=>{
+  const choiceBtns=card.querySelectorAll('.choices .ch');
+  choiceBtns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      choiceBtns.forEach(b=>b.classList.remove('picked'));
+      btn.classList.add('picked','reveal');
+      btn.classList.add(btn.dataset.ok==='1'?'correct':'wrong');
+      btn.querySelector('.mk').textContent=btn.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open) choiceBtns.forEach(b=>{ b.classList.add('reveal'); b.classList.add(b.dataset.ok==='1'?'correct':'wrong'); b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×'; });
+  });
+});
+
+const sheetEl=document.getElementById('answerSheet');
+SHEET.forEach(s=>{ const c=document.createElement('div'); c.className='acell'+(s.txt?' txt':''); c.innerHTML=`<div class="qn">${s.q}</div><div class="av">${s.v}</div>`; sheetEl.appendChild(c); });
+
+/* TAB + PANEL NAV */
+const tabs=document.querySelectorAll('.tab');
+const panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on'));
+  panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]');
+  t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+</script>
+</body>
+</html>
