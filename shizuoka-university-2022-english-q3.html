@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜静岡大学 2022 大問3（障害の2つの見方・全問記述）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">静</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>静岡大学 2022 ／ 大問3</span></div>
+    <div class="top-meta">障害の2つの見方（30点）<br>全6問・記述5問＋用語選択1問</div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-in" id="navIn">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>OVERVIEW</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>WRITING</small>記述の作法</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>CONTRAST</small>2つの見方</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>SOLUTIONS</small>設問解説</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>READING</small>全訳マップ</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading &amp; Writing Strategy</div>
+    <h1>国公立の記述は、訳す試験ではない。<br>「要素を落とさず組み立てる」設計の試験だ。</h1>
+    <p>テーマは障害（disability）に対する2つの見方 ― <em>traditional（医療モデル）</em>と<em>social（社会モデル）</em>。本文は最初にこの2軸を宣言し、以後すべてこの対比で進む。設問6問中5問が日本語記述。訳せるかではなく、<strong>設問が要求する要素を過不足なく入れられるか</strong>で得点が決まる。</p>
+    <div class="thesis"><b>一貫する主張：</b>障害は「本人の体の問題（traditional）」だけではない。<b>社会が障壁を作ることで障害を生む（social）</b>。どちらか一方ではなく<b>両方が必要</b>だ。</div>
+    <div class="stats">
+      <div class="stat"><b>6</b><span>段落構成</span></div>
+      <div class="stat"><b>6</b><span>設問</span></div>
+      <div class="stat"><b>5</b><span>日本語記述</span></div>
+      <div class="stat"><b>30</b><span>配点</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">この大問の設問構成（型で分類）</h2>
+  <p class="lead">静岡大の記述は「指示語」「内容説明」「列挙」「定義」「理由」「適用（判定）」の6型。<em>型が決まれば、探す場所と語尾が決まる</em>。ここを固定するのが最短ルート。</p>
+  <table>
+    <thead><tr><th style="width:20%">設問</th><th style="width:22%">型</th><th>要求されること</th></tr></thead>
+    <tbody>
+      <tr><td class="c">問1</td><td>指示語の内容説明</td><td>下線部 this の指す内容を、代入して意味が通る形で書く</td></tr>
+      <tr><td class="c">問2</td><td>内容説明（手段）</td><td>「どのように一歩進んだか」＝ by saying 以下の主張内容</td></tr>
+      <tr><td class="c">問3</td><td>列挙（残り2つ）</td><td>三例のうち手術以外の2つ（道具・特別な訓練）</td></tr>
+      <tr><td class="c">問4</td><td>定義（social view）</td><td>「社会が障壁を作って障害を生む」という見方の定義</td></tr>
+      <tr><td class="c">問5</td><td>適用・判定（英語）</td><td>2つの事例が traditional / social のどちらかを判定</td></tr>
+      <tr><td class="c">問6</td><td>理由</td><td>褒めることが不親切になりうる理由（本人の感じ方）</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">合格者の解く順序</h2>
+  <div class="grid2">
+    <div class="box navy"><span class="lab">STEP 1</span>第1段落で<em>traditional と social の2軸</em>を確定。これが全設問の判断軸になる。</div>
+    <div class="box gold"><span class="lab">STEP 2</span>設問文の疑問詞（What / How / Why）を丸で囲み、<em>解答の語尾を先に決める</em>。</div>
+    <div class="box teal"><span class="lab">STEP 3</span>該当箇所を特定 →<em>要素を箇条書きで抜き出す</em>（この時点ではまだ日本語を作らない）。</div>
+    <div class="box verm"><span class="lab">STEP 4</span>要素を並べて日本語に整形。<em>代名詞を残さない・主語を明示する・語尾を型に合わせる</em>。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;">
+    <span class="lab">この解説の使い方</span>
+    記述問題は<strong>4ステップの作成プロセス</strong>→<strong>模範解答</strong>→<strong>採点基準（要素点・自己採点つき）</strong>→<strong>NG解答例</strong>の順で開きます。自分の答案と照合して、<strong>入っていない要素にチェックを入れず</strong>、素点を出してください。
+  </div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">記述の作法へ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Writing Rules</div>
+  <h1 class="head">記述の作法 ― 「訳す」から「組み立てる」へ<span class="sub">国公立記述は、内容が合っていても書き方で削られる。逆に、型を守れば要素点は確実に拾える。ここが本大問の心臓部。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">大原則 ― 記述は「要素の数」で採点される</h2>
+  <p class="lead">採点者は美文を探していない。<strong>設問が要求する情報要素が入っているか</strong>を1つずつチェックしている。だから作文の前に、<em>入れるべき要素を箇条書きで洗い出す</em>。要素を出し切ってから、初めて日本語に整える。</p>
+
+  <div class="box navy"><span class="lab">記述の4ステップ</span>
+    ① <strong>設問要求の確認</strong>（疑問詞→語尾を先に決める）→ ② <strong>該当箇所の特定</strong>（本文のどこか、必ず指さす）→ ③ <strong>要素の抽出</strong>（箇条書きで漏れなく）→ ④ <strong>日本語に整形</strong>（代名詞を消す・主語を立てる・語尾を合わせる）</div>
+
+  <h2 class="sec">語尾テンプレート ― 疑問詞が語尾を決める</h2>
+  <p>設問の疑問詞に対して語尾がずれると、内容が合っていても減点される。ここは機械的に固定する。</p>
+  <table class="mtx">
+    <thead><tr><th style="width:28%">設問の形</th><th style="width:26%">解答の語尾</th><th>例</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">What does ~ refer to?</td><td><b>〜こと。／〜という内容。</b></td><td>「…が転落し、大けがをしたり死亡したりする<b>こと</b>。」</td></tr>
+      <tr><td class="cond">What is ~ ?（定義）</td><td><b>〜という見方。／〜ということ。</b></td><td>「社会が障壁を設けて障害を作り出す<b>という見方</b>。」</td></tr>
+      <tr><td class="cond">How have ~ ?（手段）</td><td><b>〜と主張することで。／〜と言うこと。</b></td><td>「…誰もが使いやすくすべきだ<b>と言うこと</b>。」</td></tr>
+      <tr><td class="cond">What are the other two ~ ?</td><td><b>〜こと。（を2つ並べる）</b></td><td>「道具を使う<b>こと</b>。特別な訓練をする<b>こと</b>。」</td></tr>
+      <tr><td class="cond">Why is it ~ ?（理由）</td><td><b>〜から。／〜ため。</b></td><td>「…と感じてしまいかねない<b>から</b>。」</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">得点を削られる5つの型（減点の常連）</h2>
+  <div class="grid2">
+    <div class="box verm"><span class="lab">NG 1</span><strong>代名詞を残す。</strong>「それを避けるため…」「彼らは…」。解答は<em>単独で読んで意味が通る</em>必要がある。指示語は必ず中身に置き換える。</div>
+    <div class="box verm"><span class="lab">NG 2</span><strong>主語が消える。</strong>「障壁を作って障害を生む」→誰が? <em>「社会が」</em>を必ず立てる。英語の主語を落とさない。</div>
+    <div class="box verm"><span class="lab">NG 3</span><strong>語尾のズレ。</strong>Why に「〜こと。」、What に「〜から。」で答える。内容が合っていても引かれる。</div>
+    <div class="box verm"><span class="lab">NG 4</span><strong>具体例を答えにする。</strong>設問が「主張の中身」を聞いているのに、後続の For example を書いてしまう（問2の典型）。</div>
+    <div class="box verm"><span class="lab">NG 5</span><strong>要素の欠落。</strong>「転落すること」だけで<em>けが・死亡</em>が抜ける（問1）。<em>結果まで</em>書いて初めて要素が揃う。</div>
+  </div>
+
+  <div class="box teal" style="margin-top:16px;"><span class="lab">直訳と説明の線引き</span>
+    記述は「英文の直訳」ではなく「日本語としての説明」。ただし<strong>勝手な言い換え・一般論の追加は禁物</strong>。本文にある情報だけで、日本語として自立させる ― これが正解の位置。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">← この英文の攻略</button><span class="sp"></span><button class="btnp" data-go="2">英文マップへ進む →</button></div>
+</section><section class="panel" id="p2">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 6段落の要旨と、下線部の在りか<span class="sub">各段落が何を言っているか。下線部(1)〜(4)と各設問の根拠段落を俯瞰する。</span></h1>
+  <div class="rule"></div>
+
+  <div class="para"><div class="para-n"><b>1</b><span>導入・枠組み</span></div><div class="para-b">
+    <div class="theme">障害には<span class="k">2つの見方</span>がある ― traditional と social</div>
+    <p>見る・聞く・自由に動くことができないと、人は障害を持つと言われる。障害は難しい話題だが、この話題についての人々の見方を考えることは、障害者にとっても周りの人にとっても重要。障害についての2つの見方を考えよう ― 伝統的および社会的な見方。どちらの見方も障害者の生活をよりよくすることにつながってきた。<em>どちらか一方を選ぶ必要はない ― むしろ両方が必要だ。</em></p>
+    <div class="tags"><span class="utag">全設問の判断軸をここで確定</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>2</b><span>事例・拡張</span></div><div class="para-b">
+    <div class="theme">ホーム転落事故 → 支援者は<span class="k">「さらに一歩」</span>進んだ</div>
+    <p>ここ数年、日本の駅で、目の不自由な多くの人が電車を待つ間にホームから転落し、大けがや死亡に至っている。そのため多くの人が、こうした事故を防ぐべくホームの安全性を高めるべきだと提案。障害者の支援者たちはさらに踏み込んで、電車やバスは障害の有無にかかわらず誰もが使いやすいものであるべきだと主張。例として、駅にもっとエレベーターを、とも言う。東京2020を前に議論が高まった。</p>
+    <div class="tags"><span class="utag">下線部(1) this → 問1</span><span class="utag">下線部(2) gone a step further → 問2</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>3</b><span>背景・潮流</span></div><div class="para-b">
+    <div class="theme">アクセシビリティ理解の広がりと<span class="k">バリアフリー</span></div>
+    <p>日本ではアクセシビリティ（誰もが使いやすくすること）の重要性を理解する人が増えている。これは障害への一般の理解と、障害者の気持ちへの理解が変化してきたため。少なくとも1960年代から、支援者たちは従来の支援法だけでは不十分だと示そうとしてきた。今、もう1つの方法＝社会全体をバリアフリーにすることが提案されている。</p>
+    <div class="tags"><span class="utag">socialの登場を予告する段落</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>4</b><span>見方① 医療モデル</span></div><div class="para-b">
+    <div class="theme"><span class="k">traditional（医療モデル）</span>＝障害は体の一部。本人が変わる</div>
+    <p>従来の見方（＝medical model）では、障害は人の体の一部であり、社会で生きていくには本人がなんとかして自分を変えなければならない。これは人によって様々な方法で行える。ここでは<em>3つの例</em>を挙げる。まず<em>医師が手術で目や耳を治す</em>。また<em>杖のような道具</em>を使えば移動が楽になる。最後に<em>特別な訓練</em>で障害をある程度コントロールできるようになる。</p>
+    <div class="tags"><span class="utag">下線部(3) change themselves → 問3</span><span class="utag">問5b の判定基準</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>5</b><span>見方② 社会モデル</span></div><div class="para-b">
+    <div class="theme"><span class="k">social（社会モデル）</span>＝社会が障壁を作り、障害を生む</div>
+    <p>これらは確かに役立つが、最初のステップにすぎない。支援者たちは従来の見方に加えて社会的な見方を提案。<em>この見方では、誰もが平等になることを難しくする障壁を設置することで、社会が障害を作り出している</em>という。例：階段を上がれないとき、従来は「杖を持たせて自力で上がらせる」。社会的見方では「誰もが使えるスロープやエレベーターを設置し、階段を不要にする」。この考えの賛同者は「みんな同じだ」とは言わないが、こうした障壁がなくなれば、人が障害者になる可能性は低くなると言う。要するに、社会も変わる必要がある。</p>
+    <div class="tags"><span class="utag">下線部(4) social view → 問4</span><span class="utag">問5a の判定基準</span></div>
+  </div></div>
+
+  <div class="para"><div class="para-n"><b>6</b><span>結論・態度</span></div><div class="para-b">
+    <div class="theme">「<span class="k">励まし方</span>」も変える ― 褒めることが不親切になりうる</div>
+    <p>最後に、障害者を「励ます」方法を変えることも大切。例えば、一般の人は障害者が日常のことをできることを褒めるかもしれないが、<em>これは障害者に、自分は他の人から隔てられていて、普通ではない存在だと感じさせてしまう可能性がある</em>。障害を克服したからといって障害者を特別視することは、ときにかわいそうだと思うのと同じくらい悪い。誰もが理解すべきは、私たちは皆、異なる能力を持ち、その違いが私たちを人間らしくしているということだ。</p>
+    <div class="tags"><span class="utag">問6 の根拠（第2文 but 以下）</span></div>
+  </div></div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 記述の作法</button><span class="sp"></span><button class="btnp" data-go="3">2つの見方へ進む →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Core Contrast</div>
+  <h1 class="head">2つの見方 ― この対比表が、問3・問4・問5・問6の答えを全部作る<span class="sub">本文の全設問は、結局この1枚に還元される。ここを暗記すれば記述は迷わない。</span></h1>
+  <div class="rule"></div>
+
+  <div class="vs">
+    <div class="vs-col t">
+      <div class="vs-hd">従来の見方<small>TRADITIONAL / MEDICAL MODEL</small></div>
+      <div class="vs-bd">
+        <div class="r"><b>障害の所在</b>障害は<strong>人の体の一部</strong>（part of people's bodies）</div>
+        <div class="r"><b>誰が変わる?</b><strong>本人が変わる</strong>（change themselves）</div>
+        <div class="r"><b>3つの方法</b>① 手術で体を治す ② 杖などの<strong>道具</strong>を使う ③ <strong>特別な訓練</strong>を受ける</div>
+        <div class="r"><b>階段の例</b>杖を渡して<strong>自力で</strong>上がらせる</div>
+        <div class="r"><b>キーワード</b>medical model／fix bodies／equipment／special training</div>
+        <div class="r"><b>判定のコツ</b>「<strong>個人の身体能力に働きかける</strong>」ならこちら（問5b メガネ＝道具＝本人を変える）</div>
+      </div>
+    </div>
+    <div class="vs-col s">
+      <div class="vs-hd">社会的な見方<small>SOCIAL MODEL</small></div>
+      <div class="vs-bd">
+        <div class="r"><b>障害の所在</b><strong>社会が障害を作り出す</strong>（society creates disabilities）</div>
+        <div class="r"><b>誰が変わる?</b><strong>社会が変わる</strong>（society needs to change）</div>
+        <div class="r"><b>仕組み</b>誰もが<strong>平等になることを難しくする障壁</strong>を社会が設置している</div>
+        <div class="r"><b>階段の例</b>誰もが使える<strong>スロープ・エレベーター</strong>を設け、階段を不要にする</div>
+        <div class="r"><b>キーワード</b>barriers／equal／barrier free／accessibility／everyone can use</div>
+        <div class="r"><b>判定のコツ</b>「<strong>誰もが使える環境を整える</strong>」ならこちら（問5a 音声録音＝誰でも利用可）</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="box gold"><span class="lab">最重要の一行</span>
+    <strong>social＝「誰もが（everyone）平等に使える」／traditional＝「本人（the person）を変える」。</strong>問5の判定はこの一行だけで機械的に決まる。メガネは「道具で本人の能力を上げる」→traditional。音声録音は「誰でも利用できる環境」→social。</div>
+
+  <div class="box navy"><span class="lab">筆者の立場（問6・全体主旨につながる）</span>
+    筆者はsocialだけを推してはいない。第1段落で<strong>「どちらか一方を選ぶ必要はない。両方が必要だ」</strong>と明言している。だから内容説明で「従来の見方は誤りだ」と書くと本文とズレる。最終段落の「励まし方を変える」も、<strong>特別視も同情も同じく相手を傷つけうる</strong>という態度の話である。</div>
+
+  <div class="pnav"><button class="btns" data-go="2">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="4">設問解説へ進む →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問解説 ― 問1〜問6<span class="sub">記述は「作成プロセス → 模範解答 → 採点基準（自己採点） → NG例」の順。自分の答案と照合して素点を出そう。</span></h1>
+  <div class="rule"></div>
+  <div class="box navy" style="margin-top:0"><span class="lab">自己採点のしかた</span>
+    答え合わせのとき、<strong>自分の答案に入っていた要素だけ</strong>にチェックを入れてください。合計点が自動で出ます。<em>「だいたい合ってる」で丸をつけない</em>のが伸びる人の採点です。（配点は非公表のため、要素配分は学習用の目安です）</div>
+  <div class="qindex" id="qidxA"></div>
+  <div id="qWrapA"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 2つの見方</button><span class="sp"></span><button class="btnp" data-go="5">全訳マップへ進む →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と訳出ポイント<span class="sub">THINKINGオリジナル訳（全32文）。番号①②③…は本文の文の順番に対応する。各段落の下に、訳出で差がつく構文・語法をまとめた。</span></h1>
+  <div class="rule"></div>
+
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳のままでは答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙って作った。<em>構文の骨（主語・目的語・修飾関係）は保ったまま、日本語として自立させている</em>――記述の解答を書くときの言い回しの見本として使ってほしい。<strong>赤字</strong>は設問や主張に直結する急所。</div>
+
+  <div class="tr-sec"><b>第1段落</b>｜障害の2つの見方（枠組みの提示）　</div>
+  <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">目が見えない、耳が聞こえない、あるいは体を自由に動かせないとき、その人は「障害がある」と言われる。</div></div><div class="jpline"><div class="n">②</div><div class="s">障害は扱いの難しい主題だ。しかし、この主題について人々がどのような見方をしているのかを考えることは、障害者（障害のある人々）にとっても、その周りの人々にとっても大切なことである。</div></div><div class="jpline"><div class="n">③</div><div class="s">ここでは、障害についての2つの見方――<em>従来の見方</em>と<em>社会的な見方</em>――について考えてみよう。</div></div><div class="jpline"><div class="n">④</div><div class="s">どちらの見方も、障害のある人々の生活をより良いものにすることにつながってきた。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">私たちは、このどちらか一方を選ばなければならないわけではない。<em>むしろ、両方が必要なのだ。</em></div></div></div>
+  <div class="tr-points"><div class="pl">訳出ポイント｜第1段落</div>
+    <ul>
+      <li><b>be said to have a disability</b>「障害が<em>あると言われる</em>」。〈be said to do〉は「〜と言われる」。第1文は障害の<b>定義</b>を与える文。</li>
+    <li><b>both for the disabled and those around them</b>「障害者にとっても、その周りの人にとっても」。<em>宛先が二重</em>であることが、この英文全体のスタンス（当事者だけの問題ではない）を示す。</li>
+    <li><b>the traditional and the social</b>＝〈the＋形容詞〉で「従来の見方／社会的な見方」。<em>この2軸が全設問の判断基準になる</em>ので、ここで必ず線を引く。</li>
+    <li><b>We do not have to choose one — rather, both are necessary.</b> ダッシュ＋rather は<em>前を打ち消して言い直す</em>合図。「一方を選ぶ必要はない → むしろ両方必要」。<u>筆者の立場はここで確定</u>。「従来の見方は間違い」と読むと全問ズレる。</li>
+    </ul>
+  </div>
+
+  <div class="tr-sec"><b>第2段落</b>｜ホーム転落事故と「さらに一歩」の主張　<span class="qbadge">問1</span> <span class="qbadge">問2</span></div>
+  <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ここ数年、日本の駅では、<em>目の不自由な人が電車を待っている間にホームから転落し、その結果、重傷を負ったり死亡したりする</em>事故が相次いでいる。</div></div><div class="jpline"><div class="n">②</div><div class="s">そのため、<em>このような事故</em>を防ぐことができるように、障害のある人々にとってホームをより安全なものにすべきだ、と多くの人が提案してきた。</div></div><div class="jpline"><div class="n">③</div><div class="s">障害者を支援する人々は、<em>電車やバスは全般に、障害の有無にかかわらず、誰にとっても使いやすいものである必要がある</em>と主張することによって、そこからさらに一歩踏み込んでいる。</div></div><div class="jpline"><div class="n">④</div><div class="s">たとえば、駅にもっとエレベーターを設置することもできる、と彼らは言う。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">この問題をめぐる議論は、東京2020オリンピック・パラリンピックを前にして高まった。この大会には海外から多くの人が訪れると見込まれており、その中には障害のある人も多く、都市のバスや鉄道の路線を使いこなす必要があるだろうと考えられたからである。</div></div></div>
+  <div class="tr-points"><div class="pl">訳出ポイント｜第2段落</div>
+    <ul>
+      <li><b>leading to serious hurt or death</b>＝<em>結果を表す分詞構文</em>。「転落する、<em>その結果</em>重傷や死に至る」と<b>訳し下ろす</b>のがコツ。<u>問1では、この「結果」まで書かないと要素落ち</u>になる。</li>
+    <li><b>have suggested that platforms <em>be</em> made safer</b>＝suggest that S <em>(should) be</em> … の<b>仮定法現在</b>。be が原形のまま残る点に注意。「〜すべきだと提案してきた」。</li>
+    <li><b>so that ~ can be avoided</b>「〜を防げるように」＝目的の so that。</li>
+    <li><b>accidents like (1)this</b>「このような事故」。this は<em>直前1文の内容全体</em>（転落→重傷・死亡）を指す。<span class="qbadge">問1</span></li>
+    <li><b>go a step further by doing</b>「〜することで、さらに一歩踏み込む」。<u>by 以下が「一歩進んだ」中身そのもの</u>。<span class="qbadge">問2</span></li>
+    <li><b>whether they are disabled or not</b>「障害の有無にかかわらず」。<u>問2の核</u>。〈ホーム→交通機関全般〉〈障害者→誰も〉という<b>2重の拡張</b>が「一歩先」の正体。</li>
+    </ul>
+  </div>
+
+  <div class="tr-sec"><b>第3段落</b>｜アクセシビリティの浸透とバリアフリー　</div>
+  <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">日本では、<em>アクセシビリティ（あらゆる人にとって物事を使いやすくすること）</em>の重要性を理解する人がますます増えている。そしてこれは、障害についての人々の一般的な理解と、障害のある人々の気持ちに対する理解が変化してきたためである。</div></div><div class="jpline"><div class="n">②</div><div class="s">この変化は、長い時間をかけてようやく訪れたものだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">少なくとも1960年代以降、障害者を支援する人々は、障害のある人々を助ける<em>従来のやり方だけでは不十分だ</em>ということを示そうとしてきた。</div></div><div class="jpline"><div class="n">④</div><div class="s">そして今、障害のある人々を助けるための、<em>もう1つの方法</em>が提案されている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">すなわち、<em>社会全体をバリアフリーにすることができる</em>、という考え方である。</div></div></div>
+  <div class="tr-points"><div class="pl">訳出ポイント｜第3段落</div>
+    <ul>
+      <li><b>accessibility (making things easy for everyone to use)</b>＝<em>本文が自分で与えた定義</em>。「誰もが使いやすくすること」。これは後の <b>social view</b> の言い換えとして働く。<u>問5aの判定はここが効く</u>。</li>
+    <li><b>This change has been a long time coming.</b> <em>a long time coming</em>「実現までに長くかかった」。直訳の「長い時間来ている」では意味が通らない<b>熟語</b>。</li>
+    <li><b>traditional ways … are not enough</b>「従来のやり方では<em>不十分</em>」。<u>否定はしていない（＝役には立つが足りない）</u>点が重要。第5段落の「確かに役立つが最初の一歩にすぎない」と対応する。</li>
+    <li><b>society as a whole can be <em>made</em> barrier free</b>＝〈make O C〉の受動態。「社会全体をバリアフリーに<em>される</em>ことができる」→自然には「社会全体をバリアフリーにできる」。</li>
+    </ul>
+  </div>
+
+  <div class="tr-sec"><b>第4段落</b>｜従来の見方＝医療モデル（3つの方法）　<span class="qbadge">問3</span> <span class="qbadge">問5b</span></div>
+  <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>「医療モデル」としても知られる従来の障害観</em>によれば、障害とは人の身体の一部であり、障害のある人は社会の中で生きていけるように、なんとかして<em>自分自身を変え</em>なければならない。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは、人によってさまざまな方法で行うことができる。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>ここでは3つの例を挙げよう。</em></div></div><div class="jpline"><div class="n">④</div><div class="s"><em>第一に</em>、医師が手術によって人の身体を治し、目をより見えるように、あるいは耳をより聞こえるようにすることができる。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>また</em>、杖のような道具が助けになることもある。杖とは、人がより楽に移動するために使うものである。</div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>最後に</em>、特別な訓練によって、障害のある人が自分の障害をある程度コントロールできるようになることもある。</div></div></div>
+  <div class="tr-points"><div class="pl">訳出ポイント｜第4段落</div>
+    <ul>
+      <li><b>also known as the "medical model"</b>「いわゆる『医療モデル』」。<u>traditional＝medical model</u> がここで確定する。<span class="qbadge">問5b</span></li>
+    <li><b>they have to somehow (3)change themselves</b>「なんとかして<em>自分自身を変え</em>なければならない」。<u>traditional の本質＝変わるのは「本人」</u>。social（変わるのは「社会」）との決定的な違い。</li>
+    <li><b>Here are three examples. First … Also … Finally …</b>＝<em>列挙の合図</em>。①手術 ②道具（杖） ③特別な訓練。<u>問3は First（手術）が設問文で除外済みなので、Also と Finally の2つを書く</u>。<span class="qbadge">問3</span></li>
+    <li><b>operations that make people's eyes or ears <em>better able to</em> see or hear</b>＝〈make O C〉。C＝better able to do「よりよく〜できる」。</li>
+    <li><b>give a disabled person <em>some</em> control over a disability</b>：この some は<em>「ある程度の」</em>。<u>「いくつかの」と訳すと誤訳</u>。「障害をある程度コントロールできるようにする」。</li>
+    </ul>
+  </div>
+
+  <div class="tr-sec"><b>第5段落</b>｜社会的な見方＝社会が障害を作り出す　<span class="qbadge">問4</span> <span class="qbadge">問5a</span></div>
+  <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">こうしたことは、人々がより自由で満ち足りた生活を送るのに<em>確かに役立つ</em>ことが多い。しかし、それらは<em>最初の一歩にすぎない</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">障害者を支援する人々は、<em>社会的な見方</em>を提唱することによって、従来の障害観に新たな視点を付け加えてきた。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>この見方によれば、誰もが平等になることを難しくするような障壁を設けることによって、社会が障害を作り出している</em>のだという。</div></div><div class="jpline"><div class="n">④</div><div class="s">たとえば、階段を上がれない人がいる場合、従来の助け方であれば、<em>自力で上がれるように杖を与える</em>ことになるだろう。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>一方、社会的な見方であれば</em>、そもそも階段を上がること自体を不要にすべきだと提案するだろう。たとえば、<em>誰もが使えるスロープやエレベーター</em>を設けることによって、である。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">この見方に賛同する人々は、誰もが同じだと言っているわけではない。しかし、<em>このような障壁がひとたび取り除かれれば、人が障害者になる可能性は低くなる</em>とは確かに言うのである。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">要するに、<em>社会の側も変わる必要がある</em>ということだ。</div></div></div>
+  <div class="tr-points"><div class="pl">訳出ポイント｜第5段落</div>
+    <ul>
+      <li><b>These things often <em>do</em> help</b>＝<em>強調の do</em>。「確かに役立ちはする」。<u>従来の方法を全否定していない</u>（＝第1段落「両方が必要」と一貫）。</li>
+    <li><b>society creates disabilities by putting up barriers that make it hard for everyone to be equal</b>＝<u>問4の答えそのもの</u>。主語 <em>society</em> を絶対に落とさない。<span class="qbadge">問4</span></li>
+    <li><b>make <em>it</em> hard <em>for everyone</em> <em>to be equal</em></b>＝<b>形式目的語</b>構文。it が形式目的語、to be equal が真の目的語、for everyone がその意味上の主語。「誰もが平等になることを難しくする」。</li>
+    <li><b>a traditional way … would be to give them a cane</b> vs <b>The social view … a slope or elevator that <em>everyone</em> can use</b>：<u>階段の例で2つの見方が真正面から対比される</u>。<em>本人に杖（traditional）／誰もが使える設備（social）</em>。<span class="qbadge">問5a</span></li>
+    <li><b>people are <em>less likely to be</em> disabled</b>「人が障害者に<em>なる可能性が低くなる</em>」。<u>「障害が減る」ではない</u>――障害は社会が作るという立場だから、この訳の差は本質的。</li>
+    <li><b>In short, society needs to change.</b>「要するに、社会が変わる必要がある」＝social view の結論。</li>
+    </ul>
+  </div>
+
+  <div class="tr-sec"><b>第6段落</b>｜「励まし方」を変える（結論）　<span class="qbadge">問6</span></div>
+  <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">最後に、人々が障害者を<em>「励ます」やり方</em>を変えることも重要である。</div></div><div class="jpline"><div class="n">②</div><div class="s">たとえば、世間の人々は、障害のある人が日常的なことをこなしたというだけで褒めるかもしれない。<em>しかしこれは、障害のある人に、自分は他のみんなから切り離された存在であり、普通ではない存在なのだと感じさせてしまいかねない。</em></div></div><div class="jpline"><div class="n">③</div><div class="s">障害を克服したからといって障害者を特別な存在とみなすことは、ときに<em>彼らをかわいそうだと思うのと同じくらい悪い</em>ことになりうる。</div></div><div class="jpline"><div class="n">④</div><div class="s">誰もが理解しなければならないのは、<em>私たちは皆それぞれ異なる能力を持っている</em>ということ、そして<em>その違いこそが私たちを人間たらしめている</em>ということである。</div></div></div>
+  <div class="tr-points"><div class="pl">訳出ポイント｜第6段落</div>
+    <ul>
+      <li><b>this can make the disabled [feel separate from everyone else] and [something other than normal]</b>＝<b>make + O + C</b>。O＝the disabled、<u>C が2つ</u>を and が結ぶ。<u>問6で C を1つしか書かないと要素落ち</u>。<span class="qbadge">問6</span></li>
+    <li><b>something other than normal</b>「普通ではない<em>存在</em>」。other than normal が something を<em>後ろから修飾</em>。feel の補語として separate と並列。</li>
+    <li><b>can be <em>as bad as</em> feeling sorry for them</b>「かわいそうに思うのと<em>同じくらい悪い</em>」＝as ~ as の同等比較。<u>特別視と同情が同列に置かれる</u>のがこの段落の主張。</li>
+    <li><b>What everyone needs to understand is that …</b>＝<em>関係代名詞 what の名詞節が主語</em>。「誰もが理解すべきことは、〜ということだ」。</li>
+    <li><b>these differences <em>make us human</em></b>＝〈make O C〉（C＝形容詞 human）。「その違いが私たちを人間らしくしている」。<u>結びの一文＝本文の主題</u>。</li>
+    </ul>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="4">← 設問解説</button><span class="sp"></span><button class="btnp" data-go="6">総まとめへ進む →</button></div>
+</section>
+
+
+<section class="panel" id="p6">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <div class="card">
+    <div class="model" style="margin-top:0">
+      <div class="mlab">問1｜下線部(1) this の指す内容</div>
+      <div class="mtext">日本の駅で、目の不自由な人が電車を待っている間にホームから転落し、大けがをしたり死亡したりすること。</div>
+    </div>
+    <div class="model">
+      <div class="mlab">問2｜支援者はどのように「さらに一歩進んだ」か</div>
+      <div class="mtext">電車やバスは、障害のあるなしにかかわらず、誰もが利用しやすいようにする必要があると主張したこと。</div>
+    </div>
+    <div class="model">
+      <div class="mlab">問3｜手術以外の残り2つの方法</div>
+      <div class="mtext">杖のような道具を使うこと。／特別な訓練をすること。</div>
+    </div>
+    <div class="model">
+      <div class="mlab">問4｜障害に対する社会的な見方とは</div>
+      <div class="mtext">誰もが平等になることを難しくするような障壁を設置することで、社会が障害を作り出しているという見方。</div>
+    </div>
+    <div class="model">
+      <div class="mlab">問5｜traditional / social の判定（英語で解答）</div>
+      <div class="mtext">a. social ／ b. traditional</div>
+    </div>
+    <div class="model">
+      <div class="mlab">問6｜障害を克服した人を褒めることが不親切になりうる理由</div>
+      <div class="mtext">障害者が、自分は他の人とは違う、普通ではない存在だと感じてしまいかねないから。</div>
+    </div>
+  </div>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>指示語・内容説明で外した（問1・問2）</b><p>指示語は<em>代入して意味が通るか</em>を必ず確認。問2は「一歩進んだ＝対象の拡大（ホーム→交通機関全般／障害者→誰も）」という<em>拡張の2軸</em>が核。後続の For example（エレベーター）を答えにしない。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>列挙・定義で外した（問3・問4）</b><p>列挙は <em>First / Also / Finally</em> の合図を拾う。定義は直後の <em>This view says that …</em> をそのまま骨にする。問4は<em>「社会が」主語</em>と<em>「障壁の設置」手段</em>の2要素が必須。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>判定で外した（問5）</b><p>基準は一行。<em>本人を変える＝traditional／誰もが使える環境＝social</em>。メガネは道具（本人を変える）でtraditional。「道具だから社会的」と思ったら対比表に戻る。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>理由で外した（問6）</b><p>理由は<em>「〜から。」</em>で締める。核は<em>本人の感じ方</em>（他と隔てられている・普通でない存在）。「かわいそうに思うのと同じくらい悪い」は次文の補足で、理由の中心ではない。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    記述は才能ではなく手順です。<strong>疑問詞→語尾を決める／該当箇所を指さす／要素を箇条書き／日本語に整形</strong>。この4手を毎回同じ順で回せば、点は安定します。国公立英語は「設計」で取れます。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="5">← 全訳マップ</button></div>
+</section>
+</div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は静岡大学2022年英語（大問3）の学習用解説です。本文・設問の著作権は出題者・原著者に帰属します。要旨・解説・図表・採点基準はTHINKINGによるオリジナルです（配点は非公表のため、要素配分は学習用の目安）。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+ { id:"問1", type:"指示語の内容説明", lbl:"下線部 (1) this", en:"accidents like (1)this can be avoided",
+   ask:"What does (1)this refer to?（下線部(1)が指す内容を日本語で説明せよ）",
+   steps:[
+     {t:"設問要求を確認 → 語尾を決める", d:"refer to（何を指すか）＝<b>内容説明</b>。this は名詞相当なので、解答は<b>「〜こと。」</b>で終える。「事故のこと。」のような中身のない答えは0点。"},
+     {t:"該当箇所を特定する", d:"下線部は accidents like this「このような事故」。<b>直前の第2段落第1文</b>が、その「事故」の中身を述べている。", cite:'a number of people who are blind have <span class="h">fallen from platforms while waiting for the train</span>, leading to <span class="h">serious hurt or death</span>'},
+     {t:"要素を箇条書きで抜き出す", d:"① 日本の駅で（場所）／② 目の不自由な人が／③ 電車を待っている間にホームから転落し／④ 大けがをしたり死亡したりする（<b>結果まで</b>）。④を落とす答案が非常に多い。"},
+     {t:"日本語に整形する", d:"代名詞を残さず、時系列（待つ→転落→けが・死）で並べる。語尾は「〜こと。」。"}],
+   model:["日本の駅で、目の不自由な人が電車を待っている間にホームから転落し、大けがをしたり死亡したりすること。"],
+   mnote:"「事故」という語を使わずに、事故の<b>中身</b>を書き切るのがポイント。",
+   rubric:[
+     {t:"<b>目の不自由な人（視覚障害者）が</b>という主体", p:2, must:true},
+     {t:"<b>電車を待っている間にホームから転落する</b>という出来事", p:3, must:true},
+     {t:"<b>大けがをしたり死亡したりする</b>という結果", p:3, must:true},
+     {t:"日本の駅で、という場所・状況の明示", p:1, must:false},
+     {t:"語尾が「〜こと。」で、単独で意味が通る", p:1, must:false}],
+   total:10,
+   ng:[
+     {bad:"このような事故のこと。", why:"内容ゼロ。指示語問題で「事故」と言い換えただけでは説明になっていない。"},
+     {bad:"目の不自由な人がホームから転落すること。", why:"<b>結果（大けが・死亡）が欠落</b>。leading to serious hurt or death まで書いて要素が揃う。"},
+     {bad:"ホームの安全性を高める必要があること。", why:"それは<b>事故を受けた提案</b>であって、this（事故そのもの）の中身ではない。"}] },
+
+ { id:"問2", type:"内容説明（手段）", lbl:"下線部 (2) gone a step further", en:"Supporters of the disabled have (2)gone a step further by saying that…",
+   ask:"How have supporters of the disabled (2)gone a step further?（支援者たちはどのようにして「さらに一歩進んだ」か）",
+   steps:[
+     {t:"設問要求を確認 → 語尾を決める", d:"How（どのように）＝<b>手段・方法</b>を問う。本文は <b>by saying that …</b>「〜と言うことによって」。よって語尾は<b>「〜と主張したこと。／〜と言うこと。」</b>。"},
+     {t:"該当箇所を特定する", d:"下線部の<b>直後の by saying 以下</b>がそのまま答え。前の文（ホームを安全に）と比べて何が「一歩先」なのかを見る。", cite:'gone a step further <span class="h">by saying that trains and buses in general need to be easier to use for everyone, whether they are disabled or not</span>'},
+     {t:"要素を箇条書きで抜き出す", d:"① 電車やバス（交通機関全般）は／② 障害の有無にかかわらず／③ 誰もが利用しやすくする必要がある／④ と主張することによって。<br><b>「一歩先」の正体＝対象の拡大2軸</b>：場所が〈ホーム→交通機関全般〉、対象者が〈障害者→誰も〉。"},
+     {t:"日本語に整形する", d:"「〜と主張したこと。」で締める。<b>後続の For example（エレベーター増設）は書かない</b>。"}],
+   model:["電車やバスは、障害のあるなしにかかわらず、誰もが利用しやすいようにする必要があると主張したこと。"],
+   mnote:"「一歩進んだ」＝<b>対象を広げた</b>こと。ホームだけ→交通機関全般、障害者だけ→誰にとっても。",
+   rubric:[
+     {t:"<b>電車やバス（交通機関全般）</b>という対象", p:2, must:true},
+     {t:"<b>障害の有無にかかわらず</b>（whether disabled or not）", p:3, must:true},
+     {t:"<b>誰もが利用しやすくする必要がある</b>という主張内容", p:3, must:true},
+     {t:"「〜と主張することで」という<b>手段の形</b>で答えている", p:2, must:false}],
+   total:10,
+   ng:[
+     {bad:"駅にもっとエレベーターを設置すべきだと言ったこと。", why:"それは <b>For example</b> で挙がる具体例。設問が問うのは「一歩進んだ」主張の<b>中身</b>そのもの。"},
+     {bad:"ホームをより安全にすべきだと主張したこと。", why:"それは<b>一歩手前（many people の提案）</b>。支援者はそこから<b>さらに進んだ</b>のだから逆。"},
+     {bad:"誰もが使いやすくすべきだと言ったこと。", why:"惜しいが<b>「障害の有無にかかわらず」が欠落</b>。ここが「一歩先」の核なので要素落ちで大きく減点。"}] },
+
+ { id:"問3", type:"列挙（残り2つ）", lbl:"下線部 (3) change themselves", en:"…people with disabilities (3)change themselves to be able to live in society",
+   ask:"Getting an operation is one of the traditional ways… What are the other two ways?（手術以外の残り2つの方法は何か）",
+   steps:[
+     {t:"設問要求を確認 → 語尾を決める", d:"「other two ways（他の2つの方法）」＝<b>方法を2つ</b>。語尾は<b>「〜こと。」を2つ</b>並べる。1つしか書かなければ半分しか取れない。"},
+     {t:"該当箇所を特定する", d:"第4段落に <b>Here are three examples.</b> という列挙の合図。以下 <b>First … Also … Finally …</b> と3つ続く。設問で除外された手術が First なので、<b>Also と Finally</b> が答え。", cite:'<span class="h">Also</span>, equipment can help, such as a cane, which people use to move more easily. <span class="h">Finally</span>, special training can give a disabled person some control over a disability.'},
+     {t:"要素を箇条書きで抜き出す", d:"① 杖のような<b>道具（器具）を使う</b>こと（→移動が楽になる）／② <b>特別な訓練</b>を受けること（→障害をある程度コントロールできる）。"},
+     {t:"日本語に整形する", d:"2つを明確に分けて書く。効果（移動が楽・コントロール）まで添えると、内容の裏づけとして安全。"}],
+   model:["杖のような道具を使うこと。（それによって移動が楽になる）","特別な訓練を受けること。（それによって障害をある程度コントロールできるようになる）"],
+   mnote:"列挙問題は <b>First / Also / Finally</b> の合図を拾えば機械的に取れる。設問で除外された項目を書かないこと。",
+   rubric:[
+     {t:"<b>道具（杖など）を使うこと</b>", p:4, must:true},
+     {t:"<b>特別な訓練を受けること</b>", p:4, must:true},
+     {t:"それぞれの効果（移動が楽になる／障害をコントロールできる）に触れている", p:2, must:false}],
+   total:10,
+   ng:[
+     {bad:"手術を受けること。特別な訓練をすること。", why:"手術は<b>設問文で除外済み</b>（Getting an operation is one of…）。設問文をきちんと読めていない典型。"},
+     {bad:"スロープやエレベーターを設置すること。", why:"それは<b>social view</b> の内容。設問は<b>traditional（本人が変わる）</b>の方法を聞いている。<b>見方の取り違え</b>で0点。"},
+     {bad:"道具を使うこと。", why:"1つしか書いていない。設問は <b>other two ways</b>。要素の半分が欠落。"}] },
+
+ { id:"問4", type:"定義（social view）", lbl:"下線部 (4) social view", en:"…by suggesting a (4)social view",
+   ask:"What is the (4)social view of disability?（障害に対する社会的な見方とは何か）",
+   steps:[
+     {t:"設問要求を確認 → 語尾を決める", d:"What is ~?（定義）＝<b>「〜という見方。／〜ということ。」</b>で締める。単なる例（スロープ）ではなく<b>定義</b>を書く。"},
+     {t:"該当箇所を特定する", d:"下線部の<b>直後の文</b>（第5段落第3文）が定義そのもの。<b>This view says that …</b> は「定義がここにある」という合図。", cite:'This view says that <span class="h">society creates disabilities by putting up barriers that make it hard for everyone to be equal</span>.'},
+     {t:"要素を箇条書きで抜き出す", d:"① <b>社会が</b>（主語を絶対に落とさない）／② <b>誰もが平等になることを難しくする障壁を設置することで</b>（手段）／③ <b>障害を作り出している</b>（結論）。<br><b>構文注意：</b>make <u>it</u> hard <u>for everyone</u> <u>to be equal</u> ＝ it は形式目的語、to be equal が真の目的語、for everyone はその意味上の主語。"},
+     {t:"日本語に整形する", d:"「社会が〜障壁を設置することで、障害を作り出しているという見方。」の骨で組む。"}],
+   model:["誰もが平等になることを難しくするような障壁を設置することで、社会が障害を作り出しているという見方。"],
+   mnote:"定義問題は <b>This view says that …</b>／<b>known as …</b> のような<b>定義マーカー</b>の直後を狙う。",
+   rubric:[
+     {t:"<b>社会が</b>（主体）", p:3, must:true},
+     {t:"<b>障壁（バリア）を設置することによって</b>（手段）", p:3, must:true},
+     {t:"<b>障害を作り出している</b>（結論）", p:2, must:true},
+     {t:"障壁の説明＝<b>誰もが平等になることを難しくする</b>", p:2, must:false}],
+   total:10,
+   ng:[
+     {bad:"スロープやエレベーターを設置すべきだという見方。", why:"それは<b>具体例</b>。定義（社会が障壁を作って障害を生む）を書いていない。"},
+     {bad:"障壁を作ることで障害が生まれるという見方。", why:"<b>主語「社会が」が欠落</b>。誰が障壁を作るのかが最重要。無生物主語のまま流さない。"},
+     {bad:"社会全体をバリアフリーにすべきだという見方。", why:"それは<b>帰結・提案</b>であって、social view の<b>定義</b>ではない。定義→帰結の順序を混同している。"}] },
+
+ { id:"問5", type:"適用・判定（英語で解答）", lbl:"traditional or social", en:"Write “traditional” or “social.”",
+   ask:"次の各状況は traditional / social どちらの見方を示すか。英語で答えよ。",
+   isSelect:true,
+   subs:[
+     {label:"a", situation:"ある自治体が、ホームページやパンフレットに掲載されているサービスの印刷情報を音声で録音している。その音声は<b>誰でも利用できる</b>。",
+      answer:"social",
+      why:"<b>social</b>。判定基準は「誰もが（everyone）使えるように<b>環境の側</b>を整えているか」。音声録音は誰でも利用でき、情報にアクセスできない<b>障壁を社会が取り除いている</b>。設問4の定義（誰もが平等になれるようにする）と一致。",
+      trap:"「障害者向けサービスだから医療モデル?」と迷わない。<b>対象が誰か（everyone）</b>が決め手。"},
+     {label:"b", situation:"生まれつき視力が非常に悪い幼児に、<b>視力を向上させる強力なメガネを装着する</b>。",
+      answer:"traditional",
+      why:"<b>traditional</b>。第4段落の医療モデル（medical model）＝<b>本人の身体能力に働きかけて本人を変える</b>。メガネは <b>equipment such as a cane</b>（杖などの道具）と同じカテゴリ。",
+      trap:"「メガネ＝便利な道具だから社会的?」は誤り。本文では<b>道具（equipment）は traditional の3例の1つ</b>と明記されている。"}],
+   rubric:[
+     {t:"a. <b>social</b> と答えている", p:5, must:true},
+     {t:"b. <b>traditional</b> と答えている", p:5, must:true}],
+   total:10,
+   ng:[
+     {bad:"a. traditional", why:"音声録音は<b>誰でも利用できる</b>環境整備。social の定義（誰もが平等に）に合致する。"},
+     {bad:"b. social", why:"メガネは<b>本人に装着して能力を上げる道具</b>。本文で道具（杖）は traditional の例として挙げられている。"}] },
+
+ { id:"問6", type:"理由説明", lbl:"最終段落", en:"…why is it sometimes unkind to praise disabled people who overcome their disabilities?",
+   ask:"最終段落によれば、障害を克服した障害者を褒めることが、なぜ時に不親切になるのか。",
+   steps:[
+     {t:"設問要求を確認 → 語尾を決める", d:"Why（なぜ）＝<b>理由</b>。語尾は<b>「〜から。／〜ため。」</b>で必ず締める。「〜こと。」で終えると語尾ズレで減点。"},
+     {t:"該当箇所を特定する", d:"最終段落の<b>第2文の but 以下</b>。「褒めるかもしれない、<b>しかし</b>これは〜」の逆接以降が理由の核。", cite:'the general public may praise disabled people for doing everyday things, <span class="h">but this can make the disabled feel separate from everyone else and something other than normal</span>'},
+     {t:"要素を箇条書きで抜き出す", d:"① <b>障害者が</b>（誰がそう感じるのか＝主語）／② <b>他のみんなから隔てられている（自分は他の人とは違う）</b>と感じ／③ <b>普通ではない存在だ</b>と感じてしまいかねない。<br><b>構文注意：</b>make + O + C の構文で、O＝the disabled、C が <u>feel separate from everyone else</u> と <u>something other than normal</u> の<b>2つ</b>を and が結んでいる。<b>C を1つしか訳さない答案が頻出</b>。"},
+     {t:"日本語に整形する", d:"「障害者が、〜と感じてしまいかねないから。」の骨。<b>2つの感じ方（隔絶感＋普通でない感）を両方入れる</b>。"}],
+   model:["障害者が、自分は他の人とは違う、普通ではない存在だと感じてしまいかねないから。"],
+   mnote:"理由は<b>「褒める側」ではなく「褒められる側の感じ方」</b>にある。ここを取り違えない。",
+   rubric:[
+     {t:"<b>障害者が（本人が）そう感じてしまう</b>という主体", p:2, must:true},
+     {t:"<b>他の人から隔てられている／他の人とは違う</b>と感じる", p:3, must:true},
+     {t:"<b>普通ではない存在だ</b>と感じる", p:3, must:true},
+     {t:"語尾が「〜から。／〜ため。」で理由の形になっている", p:2, must:false}],
+   total:10,
+   ng:[
+     {bad:"障害者をかわいそうに思うのと同じくらい悪いから。", why:"それは<b>次の文の補足</b>。設問が問う「なぜ不親切か」の<b>核（本人の感じ方）</b>を書いていない。"},
+     {bad:"障害者が特別扱いされてしまうから。", why:"本文の語（separate / something other than normal）に対応していない。<b>2つの感じ方</b>を具体的に書く。"},
+     {bad:"障害者が、自分は他の人とは違うと感じてしまうこと。", why:"内容は半分合っているが<b>語尾が「こと。」＝理由になっていない</b>＋<b>「普通ではない存在」が欠落</b>。二重の減点。"}] },
+];
+
+
+/* ===== RENDER ===== */
+function esc(id){ return String(id).replace(/[^0-9A-Za-z]/g,''); }
+
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">記述の作成プロセス</div><div class="dsteps">' + steps.map((s,i)=>`
+    <div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('') + '</div>';
+}
+function buildModel(q){
+  if(!q.model) return '';
+  return `<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+}
+function buildSubs(q){
+  if(!q.subs) return '';
+  return q.subs.map(s=>`
+    <div class="ev"><div class="ev-hd">${s.label}｜状況の判定</div><div class="ev-bd">
+      <p style="margin:0 0 8px">${s.situation}</p>
+      <div class="ans-badge">正解 <span class="c">${s.answer}</span></div>
+      <div class="co nav"><div class="co-lbl">なぜそう判定するか</div>${s.why}</div>
+      <div class="co verm"><div class="co-lbl">罠</div>${s.trap}</div>
+    </div></div>`).join('');
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid = 'rb'+esc(q.id);
+  const rows = q.rubric.map((r,i)=>`
+    <div class="rub-row" data-rid="${rid}" data-pt="${r.p}">
+      <div class="rub-cb"></div>
+      <div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div>
+      <div class="rub-pt">${r.p}点</div>
+    </div>`).join('');
+  return `<div class="chy-h">採点基準（自己採点）</div>
+    <div class="rub" id="${rid}">
+      <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+      ${rows}
+      <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（各問10点換算）。<b>必須</b>要素が1つでも欠けたら、書き直して再提出するつもりで復習を。</div>
+    </div>`;
+}
+function buildNG(q){
+  if(!q.ng) return '';
+  return `<div class="ng"><div class="nlab">✗ NG解答例 ― この書き方で落とす</div>${
+    q.ng.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildQ(q){
+  const el=document.createElement('div');
+  el.className='q'; el.id='q'+esc(q.id);
+  let h = `<div class="q-head"><div class="q-no">${q.id.replace('問','')}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span></div>
+    <span class="q-type">${q.type}</span></div><div class="q-body">
+    <div class="askjp">${q.ask}</div>
+    <div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の答案を紙に書いてから</strong>「答え・根拠を表示」を押すこと。書かずに読むと、記述力は伸びません。</div>
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">
+      ${buildSteps(q.steps)}
+      ${buildSubs(q)}
+      ${buildModel(q)}
+      ${buildRubric(q)}
+      ${buildNG(q)}
+    </div></div>`;
+  el.innerHTML=h;
+  return el;
+}
+
+const wrap=document.getElementById('qWrapA'), idx=document.getElementById('qidxA');
+Q.forEach(q=>{
+  wrap.appendChild(buildQ(q));
+  const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id.replace('問','');
+  j.addEventListener('click',()=>document.getElementById('q'+esc(q.id)).scrollIntoView({behavior:'smooth'}));
+  idx.appendChild(j);
+});
+
+/* reveal */
+document.querySelectorAll('.q').forEach(card=>{
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+  });
+});
+
+/* rubric self-scoring */
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let sum=0;
+    rub.querySelectorAll('.rub-row.on').forEach(r=>sum+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=sum;
+  });
+});
+
+/* tabs */
+const tabs=document.querySelectorAll('.tab');
+const panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on'));
+  panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]');
+  t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+</script>
+</body>
+</html>

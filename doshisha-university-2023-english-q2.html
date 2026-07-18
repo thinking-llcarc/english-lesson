@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜同志社大学 2023 大問2（牙のないゾウと進化の代償）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">同</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>同志社大学 2023 ／ 大問2</span></div>
+    <div class="top-meta">牙のないゾウと進化の代償（73点）<br>Ⅱ-A〜Ⅱ-F ／ 目安35分</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>攻略と得点戦略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>SCIENCE</small>遺伝の仕組み</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>Ⅱ-A・Ⅱ-B</small>空所・語彙</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>Ⅱ-C・Ⅱ-D</small>語句解釈・整序</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>Ⅱ-E・Ⅱ-F</small>内容一致・和訳</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Strategy — 35 min</div>
+    <h1>「進化して強くなった」は誤読。<br>この英文の主題は、進化が奪った<br>命の代償である。</h1>
+    <p>モザンビーク内戦の密猟が、ゾウを<em>牙のない個体</em>へと進化させた。だがその突然変異は<em>オスにとって致死的</em>だった。英文は「傷跡はゲノムに残る」という比喩で始まり、「選択には常に代償が伴う。その代償とは命だ」で閉じる。<strong>この一本の線を掴めば、内容一致もタイトルも語句解釈も一気に決まる。</strong></p>
+    <div class="thesis"><b>一貫する主題：</b>密猟という<b>人為的な選択圧</b>が、わずか一世代でゾウを牙なしへと進化させた。<b>しかしそれは成功談ではない</b>――その形質はオスを殺し、個体群全体を蝕んでいる。</div>
+    <div class="stats">
+      <div class="stat"><b>11</b><span>段落構成</span></div>
+      <div class="stat"><b>16</b><span>設問</span></div>
+      <div class="stat"><b>73</b><span>配点</span></div>
+      <div class="stat"><b>35</b><span>目安（分）</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">難易度マップ ― 正答率データから戦略を立てる</h2>
+  <p class="lead">この大問は<strong>難易度がはっきり割れている</strong>。すべてを等しく戦うのは非効率。<em>「確実に取る問題」「差がつく問題」「勝負をかける問題」</em>を最初に仕分けておく。</p>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">設問</th><th style="width:16%">正答率</th><th style="width:16%">位置づけ</th><th>方針</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">Ⅱ-D 語句整序</td><td class="tr"><b style="color:var(--verm)">25.0%</b></td><td class="tr"><b>最難関</b></td><td>4人に3人が落とす。<b>ここを取れれば決定的な差</b>。what ~ is like の一撃で決まるので、<u>知っていれば一瞬、知らなければ手も足も出ない</u>典型。</td></tr>
+      <tr><td class="cond">Ⅱ-A (Y) at play<br>Ⅱ-B (a) spare / (b) consequences<br>Ⅱ-C (ウ) come away</td><td><b style="color:var(--gold-d)">約50%</b></td><td><b>差がつく</b></td><td>いずれも<u>「知っている語の、知らない語義」</u>が問われる。spare＝救う、consequences＝結果、come away thinking＝結論づける。<b>ここが合否ライン</b>。</td></tr>
+      <tr><td class="cond">Ⅱ-E 内容一致</td><td><b style="color:var(--gold-d)">約65%</b></td><td><b>差がつく</b></td><td>8択から3つ。<u>数値・性別・用語のすり替え</u>を機械的に消す。段落を指させれば取れる。</td></tr>
+      <tr><td class="cond">Ⅱ-B (c)(d)(e)(f)(g)(h)<br>Ⅱ-C (ア)(イ)／Ⅱ-A (Z)／Ⅱ-F</td><td class="so"><b style="color:var(--teal)">高め</b></td><td class="so"><b>確実に取る</b></td><td>標準的な語彙・構文。<b>ここを落とすと勝負にならない</b>。massive／odds／adjacent などは即答したい。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box verm"><span class="lab">結論：どこで勝つか</span>
+    <strong>「確実に取る」群を全部取り切ったうえで、50%群（A(Y)・B(a)(b)・C(ウ)）を拾い、最後にD（25%）を仕留める。</strong>Dは配点以上に<em>心理的な差</em>を生む。逆にDに時間を溶かして基本語彙を落とすのが最悪パターン。<u>Dは最後に回す</u>。</div>
+
+  <h2 class="sec">35分の時間配分</h2>
+  <div class="grid2">
+    <div class="box navy"><span class="lab">0–8分｜通読</span>設問を見ずに一気に読む。<em>「密猟→牙なしへ進化→だがオスが死ぬ→成功談ではない」</em>の線だけ掴む。段落ごとに一言メモ。</div>
+    <div class="box gold"><span class="lab">8–17分｜Ⅱ-B・Ⅱ-A</span>語彙10問。<em>1問1分以内</em>。迷ったら文脈の<u>方向（プラス／マイナス）</u>で決めて次へ。</div>
+    <div class="box teal"><span class="lab">17–24分｜Ⅱ-C・Ⅱ-E</span>語句解釈3問＋内容一致。<em>内容一致は必ず本文の一文を指さす</em>。記憶で解かない。</div>
+    <div class="box verm"><span class="lab">24–35分｜Ⅱ-F・Ⅱ-D</span>和訳を先に確保（取りやすい）。<em>残り時間すべてをDに投入</em>。what ~ is like に気づけるかの勝負。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードには<strong>正答率バー</strong>が付いています。<em>赤＝最難関／金＝差がつく／緑＝確実に取る</em>。選択肢をタップすれば自分で解け、「答え・根拠を表示」で根拠・全選択肢の✓✗・語法まで開きます。Ⅱ-DとⅡ-Fは<strong>解答プロセスと自己採点</strong>つき。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 11段落の流れと設問の在りか<span class="sub">各段落が何を言い、どの設問がどこに埋まっているかを俯瞰する。この地図があれば、内容一致で本文を探し回らずに済む。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入・比喩</span></div><div class="para-b">
+      <div class="theme">傷跡はゲノムに残る</div><p>内戦の密猟で、ゾウは<em>わずか一世代で「牙なし」へ進化</em>したように見える。冒頭の「傷跡 vs ゲノムの痕跡」の比喩が全体を貫く。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>研究の核</span></div><div class="para-b">
+      <div class="theme">歯の遺伝子＋オス致死</div><p>『サイエンス』論文＝<em>歯を形成する遺伝子が関与</em>、しかも<em>その突然変異はオスに致死的</em>。密猟から救うが長期的な悪影響が残る。</p><div class="tags"><span class="utag">B(a)</span><span class="utag">B(b)</span><span class="utag">E-1</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>現象</span></div><div class="para-b">
+      <div class="theme">牙なしが有利になる逆転</div><p>通常は雌雄とも牙あり。だが密猟下では<em>牙のない少数派のほうが遺伝子を残せる</em>。ゴロンゴーザでは牙なしが普通の光景に――<u>ただしメスだけ</u>。牙のないオスは誰も見ていない。</p><div class="tags"><span class="utag">F</span><span class="utag">B(c)</span><span class="utag">E-2</span><span class="utag">E-3</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>データ</span></div><div class="para-b">
+      <div class="theme">戦前から2割は牙なし</div><p>戦前のビデオ映像から、<em>戦前でさえメスの5頭に1頭近くが牙なし</em>と判明。保護された個体群では2%まで下がる。</p><div class="tags"><span class="utag">E-2</span><span class="utag">E-4</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>証明</span></div><div class="para-b">
+      <div class="theme">自然選択・優性・オス致死</div><p>今日メスの半数が牙なし。<em>数学的モデリングが自然選択を裏づけ</em>。戦時中、牙なしメスの生存率は5倍以上。<u>優性・メス保因・オス致死</u>で、息子の半分は生まれる前に死ぬ。</p><div class="tags"><span class="utag">C(ア)</span><span class="utag">B(d)</span><span class="utag">E-5</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>解析</span></div><div class="para-b">
+      <div class="theme">自然選択の「痕跡」を探す</div><p>牙なしメス11頭・牙ありメス7頭のゲノムを比較。<em>自然選択の痕跡（signature）</em>を示す箇所を探し、<em>作用している2つの遺伝子</em>を発見。</p><div class="tags"><span class="utag">B(e)</span><span class="utag">A(Y)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>特定</span></div><div class="para-b">
+      <div class="theme">AMELXとX染色体</div><p>有力候補は<em>AMELX</em>。X染色体上にあり、<u>ヒトの歯の症候群にも関与</u>。オスを死なせうる重要遺伝子群に<em>隣接</em>している。</p><div class="tags"><span class="utag">B(f)</span><span class="utag">E-6</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>次の問い</span></div><div class="para-b">
+      <div class="theme">牙のないゾウの暮らし</div><p>研究者は<em>牙のないゾウにとって生活がどのようなものか</em>を知りたい。牙は餌・水・防御の道具。<u>それを失った分をどう補うのか</u>。</p><div class="tags"><span class="utag">D</span><span class="utag">C(イ)</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>波及</span></div><div class="para-b">
+      <div class="theme">個体群全体への影響</div><p>オスが減っている以上、影響は<em>個体群全体</em>に及ぶ。第三者の専門家も「完成度の高い研究」と評価。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>10</b><span>比較事例</span></div><div class="para-b">
+      <div class="theme">ビッグホーンの角</div><p>狩猟者が大きな角のオスを狙い、ヒツジは<em>小さな角へ進化</em>。ただし変化は<u>わずか</u>で、ゾウの「牙の完全喪失」とは違う。遺伝的変化は問題を<em>かえって悪化</em>させた。</p><div class="tags"><span class="utag">B(g)</span><span class="utag">B(h)</span><span class="utag">A(Z)</span><span class="utag">E-7</span></div></div></div><div class="para"><div class="para-n"><b>11</b><span>結論</span></div><div class="para-b">
+      <div class="theme">進化は成功談ではない</div><p>「進化したからもう大丈夫」と<em>結論づけて立ち去る</em>のは誤り。<u>種は急速な進化に代償を払う</u>。「選択には常に代償が伴う。その代償とは<em>命</em>だ」。</p><div class="tags"><span class="utag">C(ウ)</span><span class="utag">E-8</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← 攻略と得点戦略</button><span class="sp"></span><button class="btnp" data-go="2">遺伝の仕組みへ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">The Science</div>
+  <h1 class="head">遺伝の仕組み ― ここを図で掴めば、内容一致は落とせない<span class="sub">「優性・メス保因・オス致死」。この3語が分かれば、第5段落の数字も、E-3・E-6の誤りも一瞬で見抜ける。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">なぜ「牙のないオス」は1頭もいないのか</h2>
+  <div class="flow">
+    <div class="fnode"><div class="fdot">1</div><div class="fbody"><b>密猟という選択圧</b><p>内戦下、象牙目当ての密猟が激化。<em>牙のあるゾウが殺される</em>。</p></div></div>
+    <div class="fnode"><div class="fdot">2</div><div class="fbody"><b>牙なしが生き残る</b><p>牙のない少数派は狙われず生存。<u>戦時中、牙なしメスの生存率は5倍以上</u>。結果、その遺伝子が広がる。</p></div></div>
+    <div class="fnode"><div class="fdot">3</div><div class="fbody"><b>変異はX染色体上にある（AMELX）</b><p>牙なしの原因遺伝子はX染色体上。<em>優性</em>なので、変異を1つ持つだけで牙が生えない。</p></div></div>
+    <div class="fnode"><div class="fdot">4</div><div class="fbody"><b>オスには致死的</b><p>オスはX染色体を1本しか持たない。その1本に変異があると、<u>隣接する重要遺伝子ごと機能を失い死ぬ</u>（おそらく出生前に）。</p></div></div>
+    <div class="fnode"><div class="fdot">5</div><div class="fbody"><b>だから「牙のないオス」は生まれてこない</b><p>牙がない＝変異あり＝オスなら死ぬ。<em>生きて観察される牙なし個体はメスだけ</em>。<u>E-3の誤りはここで即座に消せる</u>。</p></div></div>
+  </div>
+
+  <h2 class="sec">牙のないメスから生まれる子ども（第5段落の数字）</h2>
+  <div class="vs">
+    <div class="vs-col s"><div class="vs-hd">娘（メス）<small>DAUGHTERS</small></div><div class="vs-bd">
+      <div class="r"><b>半数</b>牙を持つ（変異を受け継がない）</div>
+      <div class="r"><b>半数</b>牙を持たない（変異を受け継ぐ）＝<strong>生きる</strong></div>
+      <div class="r"><b>結果</b>牙なしメスが世代を追って<em>増えていく</em></div>
+    </div></div>
+    <div class="vs-col t"><div class="vs-hd">息子（オス）<small>SONS</small></div><div class="vs-bd">
+      <div class="r"><b>半数</b>牙を持つ（変異を受け継がない）</div>
+      <div class="r"><b>半数</b>変異を受け継ぐ → <strong>死ぬ</strong>（おそらく出生前）</div>
+      <div class="r"><b>結果</b>生まれるオスが<em>減り続ける</em>＝個体群全体への打撃</div>
+    </div></div>
+  </div>
+
+  <div class="box gold"><span class="lab">数字の整理（内容一致で狙われる）</span>
+    <strong>戦争前：メスの約20%（5頭に1頭）が牙なし ／ 現在：メスの50%が牙なし ／ 十分に保護された個体群：2%</strong><br>
+    <u>「2%」は正常値であって、「戦争で2%減った」ではない</u>（E-4の罠）。牙なしは<em>減ったのではなく増えている</em>。</div>
+
+  <div class="box navy"><span class="lab">この構造が答えを作る設問</span>
+    <strong>E-3</strong>（牙のないオスが大量に見つかる→×）／<strong>E-5</strong>（半数が牙なし＋自然選択→○）／<strong>E-6</strong>（AMELXはヒトに見られない→×、しかも「染色体」ではなく「遺伝子」）／<strong>E-8</strong>（楽観的→×）。<u>仕組みを理解していれば、本文を探さずに切れる</u>。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">Ⅱ-A・Ⅱ-Bへ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">Ⅱ-A 空所補充 ／ Ⅱ-B 語彙<span class="sub">語彙10問。<b>(a) spare と (b) consequences が正答率50%</b>の関門。「知っている語の、知らない語義」が問われる。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 遺伝の仕組み</button><span class="sp"></span><button class="btnp" data-go="4">Ⅱ-C・Ⅱ-Dへ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">Ⅱ-C 語句解釈 ／ Ⅱ-D 語句整序<span class="sub"><b>Ⅱ-Dは正答率25.0%。この大問の天王山</b>。what ~ is like を知っているかどうかで、ここだけで大差がつく。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← Ⅱ-A・Ⅱ-B</button><span class="sp"></span><button class="btnp" data-go="5">Ⅱ-E・Ⅱ-Fへ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">Ⅱ-E 内容一致 ／ Ⅱ-F 英文和訳<span class="sub">内容一致は8択から3つ（正答率約65%）。誤答は<b>数値・性別・用語のすり替え／態度の逆転</b>の4型に整理できる。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← Ⅱ-C・Ⅱ-D</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と訳出ポイント<span class="sub">THINKINGオリジナル訳（全48文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>は設問・主張に直結する急所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳では答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙った。<em>構文の骨（主語・修飾関係・比較）は保ったまま、日本語として自立させている</em>――Ⅱ-Fの和訳を書くときの言い回しの見本として使ってほしい。</div><div class="tr-sec"><b>第1段落</b>｜傷跡はゲノムに残る ― モザンビーク内戦とゾウ　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">十分に深い傷は<em>傷跡</em>を残す。しかし、ある動物の個体群の歴史における、深い痛手となる出来事は、<em>ゲノムそのものに痕跡を残す</em>ことがある。</div></div><div class="jpline"><div class="n">②</div><div class="s">1977年から1992年にかけてのモザンビーク内戦の間、人間は金儲けになる象牙を目当てにあまりに多くのゾウを殺したため、ゾウは<em>わずか一世代のうちに進化した</em>ように見える。</div></div><div class="jpline"><div class="n">③</div><div class="s">その結果、現在では<em>多数のゾウが生まれつき牙を持たない</em>状態になっている。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第1段落</div><ul><li><b>a traumatic event … may leave a mark on the genome itself</b>：第1文は<em>「体に残る傷跡」→「ゲノムに残る痕跡」</em>という<b>比喩の対比</b>。この一文が英文全体のテーマを予告している。</li>
+    <li><b>killed <em>so</em> many elephants … <em>that</em> the animals seem to have evolved</b>＝<b>so ~ that … 構文</b>「あまりに多くのゾウを殺したので、〜したように見える」。</li>
+    <li><b>seem to <em>have evolved</em></b>＝完了不定詞。「（すでに）進化してしまったように見える」と<em>時のズレ</em>を出す。</li>
+    <li><b>in the space of a generation</b>「わずか一世代のうちに」。<em>space＝「（時間の）間」</em>。進化の速さを強調する句。</li>
+    <li><b>naturally tuskless</b>「生まれつき牙がない」。<em>naturally＝「自然に／生まれつき」</em>。「当然」ではない。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜『サイエンス』論文 ― 歯の遺伝子とオス致死　<span class="qbadge">B(a)</span> <span class="qbadge">B(b)</span> <span class="qbadge">E-1</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">木曜日に『サイエンス』誌に発表された論文は、<em>歯を形成する遺伝子が関与している</em>可能性が高いこと、そしてゾウにおいては<em>その突然変異がオスにとって致死的である</em>ことを明らかにした。</div></div><div class="jpline"><div class="n">②</div><div class="s">牙のないように進化することは、生き残った一部のゾウを<em>密猟者から救う</em>かもしれないが、その個体群には<em>長期的な影響</em>が及ぶ可能性が高い。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第2段落</div><ul><li><b>(a)spare some surviving elephants <em>from</em> poachers</b>＝<b>spare A from B</b>「AをBから免れさせる・救う」。<u>「割く／惜しむ」ではない</u>。同義語は <em>save</em>。<span class="qbadge">B(a)</span></li>
+    <li><b>Although evolving … might spare …, there will likely be long-term (b)consequences</b>：<em>譲歩→主節</em>の型。「救うかもしれない<b>が</b>、長期的な<b>結果（悪影響）</b>が出る」。<u>consequences は「結果・影響」＝effects</u>。<span class="qbadge">B(b)</span></li>
+    <li><b>the mutation is lethal to males</b>「その突然変異はオスにとって致死的だ」。<u>この一文が英文全体の鍵</u>。以後すべてここに戻る。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜通常は牙がある ― だが密猟下では牙なしが有利に　<span class="qbadge">B(c)</span> <span class="qbadge">F</span> <span class="qbadge">E-2</span> <span class="qbadge">E-3</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">通常、アフリカゾウはオスもメスも牙を持っており、その牙は実のところ<em>一対の巨大な歯</em>である。</div></div><div class="jpline"><div class="n">②</div><div class="s">しかし、<em>わずかながら牙を持たずに生まれてくる</em>ゾウもいる。</div></div><div class="jpline"><div class="n">③</div><div class="s">激しい密猟のもとでは、<em>牙のないそれらの少数のゾウのほうが、自分の遺伝子を伝える可能性が高い</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">研究者たちはこの現象を、モザンビークのゴロンゴーザ国立公園で目にしてきた。この公園では今や、牙のないゾウはありふれた光景となっている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">ただし、<em>メスのゾウに限っての話</em>である。</div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>この公園で誰も目にしたことがないもの、それは牙のないオスである。</em></div></div><div class="jpline"><div class="n">⑦</div><div class="s">「漠然とした予感はあった」と、プリンストン大学の進化生物学者シェーン・キャンベル＝ステイトンは言う。これらのゾウから牙を奪った遺伝的突然変異が何であれ、<em>それは同時にオスをも死なせている</em>のだ、と。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第3段落</div><ul><li><b>tusks, which are really a pair of (c)massive teeth</b>：<em>非制限用法の which</em>。「牙、それは実は一対の<b>巨大な</b>歯だ」。massive＝<em>huge</em>。<span class="qbadge">B(c)</span></li>
+    <li><b><u>those few elephants without ivory are more likely to pass on their genes</u></b>＝<b>Ⅱ-Fの和訳箇所</b>。<em>those few「それらの少数の〜」</em>／<em>be more likely to do</em>は比較級で、<u>than those with tusks（牙のあるゾウより）が省略</u>されている。だから訳は「〜<b>のほうが</b>可能性が高い」。<span class="qbadge">F</span></li>
+    <li><b>Female elephants, that is.</b>「＝メスのゾウの話だが」。<em>that is＝「つまり」</em>。前文をあとから限定する<b>短い挿入的一文</b>。ここを読み飛ばすとE-3を落とす。</li>
+    <li><b>What no one has seen … is a tuskless male.</b>＝<em>関係代名詞 what の名詞節が主語</em>。「誰も見たことがないもの＝牙のないオス」＝<u>牙のないオスは存在しない</u>。<span class="qbadge">E-3</span></li>
+    <li><b>whatever genetic mutation took away … was also killing males</b>：<em>whatever＋名詞</em>「どんな〜であろうと」。この節が said の内容（同格の that 節）。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜戦前データ ― 戦争前から2割は牙なしだった　<span class="qbadge">E-2</span> <span class="qbadge">E-4</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">さらに詳しく知るために、キャンベル＝ステイトン博士と共著者たちは、ゴロンゴーザのゾウを写した<em>戦前のビデオ映像</em>を含む長期的なデータから研究を始めた。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らの計算によれば、<em>戦争前でさえ、メスの5頭に1頭近くが牙を持っていなかった</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">これは、それ以前の紛争や密猟の圧力を反映しているのかもしれない、とキャンベル＝ステイトン博士は述べた。</div></div><div class="jpline"><div class="n">④</div><div class="s">十分に保護されたゾウの個体群では、<em>牙のない個体の割合は2パーセントという低さ</em>になることもある。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第4段落</div><ul><li><b>nearly one in five females were tuskless</b>「メスの5頭に1頭近く（＝約20%）が牙なし」。<u>「戦前は例外なく全頭に牙があった」わけではない</u>。<span class="qbadge">E-2</span></li>
+    <li><b>tusklessness can be <em>as low as</em> 2 percent</b>「2パーセントという<em>低さ</em>になりうる」＝<b>as ~ as で数値の低さを強調</b>。<u>この2%は「十分に保護された個体群」の話であって、「戦争で2%減った」ではない</u>。<span class="qbadge">E-4</span></li>
+    <li>数字の整理：<em>戦前 約20% → 現在 50%（第5段落）／保護下の正常値 2%</em>。<u>増えている</u>のであって減っていない。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜自然選択の証明 ― 優性・メス保因・オス致死　<span class="qbadge">C(ア)</span> <span class="qbadge">B(d)</span> <span class="qbadge">E-5</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">今日、<em>ゴロンゴーザのメスゾウの半数が牙を持たない</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">戦争を生き延びたメスたちが、その形質を娘たちに伝えているのである。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>数学的モデリングが示したところによれば、この変化はほぼ確実に自然選択によるもの</em>であって、単なる偶然のまぐれではなかった。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>戦争が続いた数十年の間</em>、牙のないメスは<em>生き残る可能性が5倍以上高かった</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">そして、家系内における牙のなさの現れ方は、科学者たちの直感を裏づけた。すなわちそれは、<em>メスによって受け継がれ、オスにとっては致死的な優性形質</em>らしいのだ。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">つまり、牙のない突然変異遺伝子を1つ持つメスは、牙を持たないということである。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">その娘たちの半数は牙を持ち、半数は牙を持たないことになる。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">しかし息子たちの場合は、半数は牙を持つが、<em>残りの半数は、おそらく生まれる前に死んでしまう</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第5段落</div><ul><li><b>(ア)the decades <em>spanning</em> the war</b>＝<b>span「（期間）に及ぶ・またがる」</b>。「戦争が続いていた間の数十年」。<u>the decades over which the war continued</u> が言い換え。<span class="qbadge">C(ア)</span></li>
+    <li><b>more than five times greater (d)odds of survival</b>「生存の<em>見込み</em>が5倍以上高い」。<b>odds＝chances（可能性）</b>。<u>「賭け率」と直訳しない</u>。<span class="qbadge">B(d)</span></li>
+    <li><b>a dominant trait, carried by females, that's lethal to males</b>＝<em>優性形質・メスが保因・オスには致死</em>。この3点セットが、次の「娘は半々／息子は半分死ぬ」の計算根拠。</li>
+    <li><b>Mathematical modeling showed this change was … because of natural selection, and not a random fluke.</b><u>E-5の根拠</u>（第1文＋第3文）。<em>associate A with B</em>「AをBと関連づける」で言い換えられている。<span class="qbadge">E-5</span></li></ul></div><div class="tr-sec"><b>第6段落</b>｜ゲノム解析 ― 自然選択の「痕跡」を探す　<span class="qbadge">B(e)</span> <span class="qbadge">A(Y)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">研究チームは、<em>牙のないメス11頭と牙のあるメス7頭のゲノムを解析し</em>、両グループの違いを探した。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らはまた、時間の経過とともに起こるDNAのランダムな組み換えを伴わない、<em>最近の自然選択の痕跡</em>を示すゲノム上の箇所も探した。</div></div><div class="jpline"><div class="n">③</div><div class="s">そして、<em>作用していると思われる2つの遺伝子</em>を見つけ出した。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第6段落</div><ul><li><b>the (e)signature of recent natural selection</b>＝ここでの signature は<em>「署名」ではなく「特徴的な痕跡・しるし」</em>。同義語は <b>mark</b>。<u>比喩的用法を見抜けるかが勝負</u>。<span class="qbadge">B(e)</span></li>
+    <li><b>two genes that seemed to be ( Y ) play</b>＝<b>at play</b>「作用している・働いている」。<u>be at play で「影響を及ぼしている」</u>。of/off/with は不可。<span class="qbadge">A(Y)</span></li>
+    <li><b>looking for differences …</b>＝<em>付帯状況の分詞構文</em>「〜を探しながら」。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜AMELX ― X染色体上の歯の遺伝子　<span class="qbadge">B(f)</span> <span class="qbadge">E-6</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">どちらの遺伝子も歯の形成に関わっている。</div></div><div class="jpline"><div class="n">②</div><div class="s">自然界で科学者たちが目にしたパターンを最もよく説明する遺伝子は<em>AMELX</em>と呼ばれ、チームの予想どおり<em>X染色体上にある</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>この遺伝子はまた、歯が極端に小さくなったり形が崩れたりすることのある、まれなヒトの症候群にも関与している</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">AMELXは、<em>X染色体から欠けるとオスを死に至らしめうる、他の重要な遺伝子群に隣接している</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">ゾウのゲノムについては、「その2つの遺伝子のどちらにおいても、牙の喪失を引き起こしている具体的な変化が何なのかは、まだわかっていない」とキャンベル＝ステイトン博士は言う。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">それこそが、研究者たちが次に解明したいと考えていることの1つである。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第7段落</div><ul><li><b>That gene is also involved in a rare <em>human</em> syndrome</b>：<u>E-6の根拠</u>。AMELXは<b>ヒトにも関与している</b>。「ヒトには決して見られない」は<em>真逆</em>。<span class="qbadge">E-6</span></li>
+    <li><b>AMELX is (f)adjacent to other crucial genes</b>＝<b>adjacent to＝next to「〜に隣接して」</b>。<u>parallel（平行な）と混同しない</u>。<span class="qbadge">B(f)</span></li>
+    <li><b>genes <em>whose</em> absence from the X chromosome can kill males</b>＝<em>所有格の関係代名詞 whose</em>。「それらが X染色体から欠けると、オスを死に至らしめうる遺伝子」。<u>ここが「オス致死」の分子的な説明</u>。</li>
+    <li><b>in either one of those genes</b>「その2つの遺伝子の<em>どちらにおいても</em>」。否定文中の either＝「どちらも〜ない」。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜次の問い ― 牙のないゾウの「暮らし」　<span class="qbadge">D 語句整序</span> <span class="qbadge">C(イ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>彼らはまた、牙のないゾウにとって生活がどのようなものなのかを知りたいと思っている。</em></div></div><div class="jpline"><div class="n">②</div><div class="s">ゾウは普通、餌となる木の皮をはぎ取り、水を求めて穴を掘り、身を守るために牙を使う。</div></div><div class="jpline"><div class="n">③</div><div class="s">「この重要な道具を持っていないとしたら、<em>それを埋め合わせるために</em>、どのように行動を変えなければならないのか」とキャンベル＝ステイトン博士は述べた。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第8段落</div><ul><li><b>They also want to (learn)(what)(life) is (like) for a tuskless elephant.</b>＝<b>Ⅱ-Dの完成文</b>。<u>what ~ is like「〜がどのようなものか」</u>が骨格。<span class="qbadge">D</span></li>
+    <li><b>use their tusks <em>to</em> strip …, dig …, and defend …</b>＝<em>目的のto不定詞が3つ並列</em>。「はぎ取る／掘る／身を守る」＝牙は<b>生存の道具</b>。この列挙が(イ)の伏線。</li>
+    <li><b>(イ)in order to compensate</b>「（牙がない分を）<em>埋め合わせる</em>ために」→<u>「生き延びるための代わりの方法を見つけるために」</u>。<em>compliment（褒める）と混同しない</em>。<span class="qbadge">C(イ)</span></li></ul></div><div class="tr-sec"><b>第9段落</b>｜個体群全体への影響 ― 生まれるオスが減る　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">そして、牙のない個体の増加は、<em>生まれてくるオスが減っている</em>以上、個々のゾウだけでなく<em>個体群全体にも影響を及ぼしうる</em>、とキャンベル＝ステイトン博士は述べた。</div></div><div class="jpline"><div class="n">②</div><div class="s">「とても見事な研究だと思う」と、ケベックのシェルブルック大学の個体群生物学者ファニー・ペルティエは言う。彼女はこの研究には関わっていないが、『サイエンス』誌に付随する論説を書いた人物である。</div></div><div class="jpline"><div class="n">③</div><div class="s">「非常に完成度の高い研究でもある。必要な要素がすべてそろっている」と彼女は語った。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第9段落</div><ul><li><b>not just individual elephants, but the population as a whole</b>＝<em>not just A but B</em>「AだけでなくBも」。<u>個体 → 個体群へと議論のスケールが上がる</u>。</li>
+    <li><b>since fewer males are being born</b>＝理由の since。<em>fewer（比較級）＋現在進行の受動</em>「より少ないオスしか生まれてきていない」。</li>
+    <li><b>who was not involved in the research but wrote an accompanying article</b>：<u>第三者の専門家によるコメント</u>という科学記事の定型。「研究に関与していない＝客観的評価」という含み。</li></ul></div><div class="tr-sec"><b>第10段落</b>｜比較 ― ビッグホーンの角は「わずか」に縮んだ　<span class="qbadge">B(g)</span> <span class="qbadge">B(h)</span> <span class="qbadge">A(Z)</span> <span class="qbadge">E-7</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ペルティエ博士は自身の研究で、カナダの<em>ビッグホーン（オオツノヒツジ）</em>を調べてきた。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>遊興を目的とする狩猟者たちが最も大きな角を持つオスを狙ったため、このヒツジはより小さな角を持つように進化した</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">ヒツジに起きた変化は、ゾウが牙を完全に失ったのとは違い、<em>わずかなもの</em>だと彼女は言う。</div></div><div class="jpline"><div class="n">④</div><div class="s">そして、ゾウの遺伝的変化は実のところ、<em>彼らの問題をかえって大きくしてしまった</em>、とペルティエ博士は述べた。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">たとえ密猟が明日やんだとしても、牙のなさは<em>間接的にオスを殺し続ける</em>だろうし、<em>この形質の頻度が通常の水準まで下がるには長い時間がかかりうる</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第10段落</div><ul><li><b>As trophy hunters targeted the males with the biggest horns, the sheep evolved to have smaller horns.</b><u>E-7の根拠</u>。<em>人間の狩猟が進化を引き起こした</em>点でゾウと同じ構造。<span class="qbadge">E-7</span></li>
+    <li><b>The change in sheep is (g)subtle … <em>unlike</em> the elephants' total loss of tusks</b>：<u>unlike との対比が答えの決め手</u>。「牙の<b>完全な</b>喪失」と違い、角の変化は<b>わずか（slight）</b>。<em>sensitive（敏感な）は別語義の罠</em>。<span class="qbadge">B(g)</span></li>
+    <li><b>has actually (h)compounded their problems</b>＝<b>compound＝「（問題）をいっそう悪化させる・大きくする」</b>。同義は <em>increased</em>。<u>caused（引き起こした）ではない</u>――問題はもともとある。<span class="qbadge">B(h)</span></li>
+    <li><b>it could take a long time ( Z ) the frequency … to drop</b>＝<b>it takes time <em>for</em> A to do</b>「Aが〜するのに時間がかかる」。<u>形式主語 it ＋ for A to do</u>。<span class="qbadge">A(Z)</span></li></ul></div><div class="tr-sec"><b>第11段落</b>｜結論 ― 「進化した」は成功談ではない　<span class="qbadge">C(ウ)</span> <span class="qbadge">E-8</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">キャンベル＝ステイトン博士も、ゾウは密猟者から身を守れるように進化したとはいえ、<em>これは成功談ではない</em>という見方に同意した。</div></div><div class="jpline"><div class="n">②</div><div class="s">「このような話を聞くと、『ああ、万事うまくいっている。彼らは進化し、今はより良くなって、対処できるのだ』と<em>結論づけて立ち去ってしまいがち</em>だと思う」と彼は言う。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし実のところ、<em>種は急速な進化に対して代償を払っている</em>のである。</div></div><div class="jpline"><div class="n">④</div><div class="s">「選択には常に代償が伴う」と彼は言った。「<em>そしてその代償とは、命なのだ</em>」</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第11段落</div><ul><li><b>agreed that <em>although</em> the elephants have evolved to be safer …, this <em>isn't</em> a success story</b>：<u>E-8の根拠</u>。<b>楽観的どころか「成功談ではない」と明言</b>している。<span class="qbadge">E-8</span></li>
+    <li><b>(ウ)come away thinking, '…'</b>＝<b>come away＋分詞</b>「（ある考えを抱いて）その場を去る」→<u>「〜と結論づける」（respond by concluding）</u>。引用符の中身は<em>「万事OK」という楽観的な結論</em>。<span class="qbadge">C(ウ)</span></li>
+    <li><b>species pay a price for rapid evolution</b>／<b>Selection always comes at a cost</b>＝<em>pay a price / come at a cost</em>「代償を払う／代償を伴う」。<u>この2文が英文全体の主題</u>。</li>
+    <li><b>and that cost is lives</b>「そしてその代償とは<em>命</em>だ」。<u>結びの一文</u>――lives（複数）は「（オスたちの）命」。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← Ⅱ-E・Ⅱ-F</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。正答率データと照らして、自分がどこで落としたかを特定する。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:16%">設問</th><th style="width:26%">解答</th><th>ひとことポイント</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">Ⅱ-A</td><td><b>(Y) 1 at ／ (Z) 2 for</b></td><td>be at play「作用している」／it takes time <b>for</b> A to do</td></tr>
+      <tr><td class="cond">Ⅱ-B</td><td><b>(a)2 (b)2 (c)2 (d)1<br>(e)3 (f)3 (g)3 (h)2</b></td><td>spare＝save／consequences＝effects／massive＝huge／odds＝chances／signature＝mark／adjacent＝next／subtle＝slight／compounded＝increased</td></tr>
+      <tr><td class="cond">Ⅱ-C</td><td><b>(ア)4 (イ)2 (ウ)3</b></td><td>span＝（期間）に及ぶ／compensate＝埋め合わせる／come away thinking＝結論づける</td></tr>
+      <tr><td class="cond">Ⅱ-D</td><td><b>(い) 7 what ／ (え) 5 like</b></td><td>learn <b>what life is like</b> for a tuskless elephant（正答率25%）</td></tr>
+      <tr><td class="cond">Ⅱ-E</td><td><b>1・5・7</b></td><td>誤答は数値(4)・性別(3)・用語(6)のすり替えと態度の逆転(8)</td></tr>
+      <tr><td class="cond">Ⅱ-F</td><td colspan="2"><b>牙のないそれらの少数のゾウのほうが、自分の遺伝子を伝える可能性が高い。</b></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>語彙で落とした（Ⅱ-B）</b><p>この英文の語彙問題は<em>「知っている語の、知らない語義」</em>が中心。<b>spare（救う）／consequences（結果）／signature（痕跡）／compound（悪化させる）／subtle（わずかな）</b>。<u>多義語は「文脈の方向（プラス／マイナス）」で決める</u>訓練を。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>語句解釈で落とした（Ⅱ-C）</b><p>(ウ) come away thinking が最難（50%）。<u>引用符の中身が答えを決める</u>――「万事OK」という<em>楽観的な結論</em>を抱く、だから conclude。<b>直後の But に注目</b>すれば方向は確定する。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>整序で落とした（Ⅱ-D／正答率25%）</b><p><b>what ~ is like「〜がどのようなものか」</b>を暗記する。<u>is の直後に空所が残っている＝like を要求している</u>という「空所の数からの逆算」が決め手。how を選んだ人は<em>空所が余ることに気づけなかった</em>。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>内容一致で落とした（Ⅱ-E）</b><p>「遺伝の仕組み」パネルに戻る。<u>優性・メス保因・オス致死</u>を理解していれば、3（牙なしオスが大量）と6（AMELXはヒトにない）は<em>本文を探さずに切れる</em>。数値（20%→50%、保護下2%）も暗記しておく。</p></div></div>
+  <div class="route"><div class="rn">E</div><div><b>和訳で落とした（Ⅱ-F）</b><p><b>those few（それらの少数の）</b>と<b>more likely（〜のほうが可能性が高い）</b>の2要素が命。<u>比較級は than が省略されていても訳に出す</u>。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    同志社の長文は、<strong>①多義語の語義選択 ②イディオム ③整序 ④内容一致</strong>という構成がほぼ固定。<u>語彙は「方向」で、整序は「型」で、内容一致は「根拠の一文」で</u>――この3原則を毎回同じ手順で回せば、点は設計で安定します。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は同志社大学2023年英語（大問2）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・図表・採点基準はTHINKINGによるオリジナルです（正答率は公表データに基づく参考値、配点は非公表のため要素配分は学習用の目安）。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+/* ===== 設問データ ===== */
+const Q = [
+/* ---------- Ⅱ-A 空所補充 ---------- */
+{id:"A-Y", grp:"AB", type:"空所補充（イディオム）", rate:50, lbl:"空所 (Y)", en:"They found two genes that seemed to be ( Y ) play.",
+ ask:"空所(Y)に入るもっとも適切なものを1〜4から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"at", ok:true},{t:"of", ok:false},{t:"off", ok:false},{t:"with", ok:false}],
+ ev:{q:'They found two genes that seemed to be <span class="h">at</span> play.', jp:"「作用していると思われる2つの遺伝子を見つけた」。be at play で「働いている・影響を及ぼしている」。"},
+ co:[{c:"gold",l:"語法｜at play",h:"<b>be at play</b>「作用している・働いている」。at work とほぼ同義。<em>「遊んでいる」ではない</em>のがポイント。ゲノム解析で「関与している遺伝子」の意。"},
+     {c:"verm",l:"なぜ落とすか（正答率50%）",h:"熟語を知らないと文法で決められない。<em>at＋抽象名詞</em>で「〜の状態にある」（at work / at rest / at play）の型で覚える。"}],
+ sol:[{m:"o",n:"1",t:"正解。be at play「作用している」。"},{m:"x",n:"2",t:"of play という熟語はない。"},{m:"x",n:"3",t:"off は「離れて」。意味が通らない。"},{m:"x",n:"4",t:"with play も不可。"}]},
+
+{id:"A-Z", grp:"AB", type:"空所補充（構文）", rate:75, lbl:"空所 (Z)", en:"it could take a long time ( Z ) the frequency of this trait to drop to normal levels",
+ ask:"空所(Z)に入るもっとも適切なものを1〜4から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"at", ok:false},{t:"for", ok:true},{t:"in", ok:false},{t:"of", ok:false}],
+ ev:{q:'it could take a long time <span class="h">for</span> the frequency of this trait <span class="h">to drop</span> to normal levels', jp:"「この形質の頻度が通常の水準まで下がるには長い時間がかかりうる」。"},
+ co:[{c:"nav",l:"構文｜it takes time for A to do",h:"<b>形式主語 it ＋ take＋時間＋for A to do</b>「Aが〜するのに時間がかかる」。後ろの <em>to drop</em> が見えた瞬間に for が確定する。"},
+     {c:"gold",l:"決め手",h:"空所の後ろに〈名詞＋to不定詞〉がある → <em>to不定詞の意味上の主語を導く for</em>。"}],
+ sol:[{m:"x",n:"1",t:"at は時刻・地点。to不定詞の意味上の主語を導けない。"},{m:"o",n:"2",t:"正解。for A to do の for。"},{m:"x",n:"3",t:"in は不可。"},{m:"x",n:"4",t:"of は不可。"}]},
+
+/* ---------- Ⅱ-B 語彙 ---------- */
+{id:"B-a", grp:"AB", type:"同意語（動詞）", rate:50, lbl:"下線部 (a) spare", en:"evolving to be tuskless might (a)spare some surviving elephants from poachers",
+ ask:"(a) spare の意味にもっとも近いものを選べ。", answer:"2", kind:"choice",
+ choices:[{t:"distinguish（区別する）", ok:false},{t:"save（救う）", ok:true},{t:"steal（盗む）", ok:false},{t:"take（奪う）", ok:false}],
+ ev:{q:'might <span class="h">spare</span> some surviving elephants <span class="h">from</span> poachers', jp:"「生き残った一部のゾウを密猟者から救う（免れさせる）かもしれない」。"},
+ co:[{c:"gold",l:"語法｜spare A from B",h:"<b>spare A from B</b>「AをBから免れさせる・救う」。<u>後ろの from が最大のヒント</u>。同義は save A from B。"},
+     {c:"verm",l:"なぜ落とすか（正答率50%）",h:"spare の別語義「（時間・金を）割く」「惜しむ」に引っ張られて <em>4 take（奪う）</em> を選ぶ答案が多い。<u>意味の方向（救う／奪う）が真逆</u>。文脈は「牙がないおかげで密猟を免れる」＝プラス方向。"}],
+ sol:[{m:"x",n:"1",t:"distinguish（区別する）は文意に合わない。"},{m:"o",n:"2",t:"正解。spare A from B ＝ save A from B「AをBから救う」。"},{m:"x",n:"3",t:"steal（盗む）はマイナス方向で逆。"},{m:"x",n:"4",t:"take（奪う）は逆。密猟者<em>から</em>救うのが文意。"}]},
+
+{id:"B-b", grp:"AB", type:"同意語（名詞）", rate:50, lbl:"下線部 (b) consequences", en:"there will likely be long-term (b)consequences for the population",
+ ask:"(b) consequences の意味にもっとも近いものを選べ。", answer:"2", kind:"choice",
+ choices:[{t:"consideration（考慮）", ok:false},{t:"effects（影響・結果）", ok:true},{t:"groundwork（下準備）", ok:false},{t:"reasons（理由）", ok:false}],
+ ev:{q:'Although evolving to be tuskless might spare …, there will likely be long-term <span class="h">consequences</span> for the population.', jp:"「〜かもしれないが、個体群には長期的な結果（悪影響）が及ぶ可能性が高い」。"},
+ co:[{c:"gold",l:"語義｜consequence＝結果・影響",h:"<b>consequence「（行為の）結果・影響」</b>。とくに<em>好ましくない結果</em>を指すことが多い。＝effects。"},
+     {c:"verm",l:"なぜ落とすか（正答率50%）",h:"<em>4 reasons（理由）</em>を選ぶ答案が多い。<u>「結果」と「原因・理由」を取り違える典型</u>。Although の譲歩構造から「救う<b>が</b>→悪い<b>結果</b>も出る」と読めば方向は明らか。"}],
+ sol:[{m:"x",n:"1",t:"consideration（考慮）は無関係。"},{m:"o",n:"2",t:"正解。consequences ＝ effects「結果・影響」。"},{m:"x",n:"3",t:"groundwork（下準備）は無関係。"},{m:"x",n:"4",t:"reasons（理由）は<em>原因側</em>。結果と原因が逆。"}]},
+
+{id:"B-c", grp:"AB", type:"同意語（形容詞）", rate:80, lbl:"下線部 (c) massive", en:"tusks, which are really a pair of (c)massive teeth",
+ ask:"(c) massive の意味にもっとも近いものを選べ。", answer:"2", kind:"choice",
+ choices:[{t:"communicative（伝達の）", ok:false},{t:"huge（巨大な）", ok:true},{t:"minute（極小の）", ok:false},{t:"proportional（比例した）", ok:false}],
+ ev:{q:'tusks, which are really a pair of <span class="h">massive</span> teeth', jp:"「牙は実のところ一対の巨大な歯である」。"},
+ co:[{c:"gold",l:"語義",h:"<b>massive＝huge「巨大な」</b>。<em>3 minute</em> は名詞なら「分」だが、形容詞では<u>/maɪˈnjuːt/「極微の」</u>＝正反対。ここが唯一のひっかけ。"}],
+ sol:[{m:"x",n:"1",t:"communicative は無関係。"},{m:"o",n:"2",t:"正解。massive＝huge。"},{m:"x",n:"3",t:"minute（形容詞）は「極小の」で真逆。"},{m:"x",n:"4",t:"proportional（比例した）は無関係。"}]},
+
+{id:"B-d", grp:"AB", type:"同意語（名詞）", rate:80, lbl:"下線部 (d) odds", en:"tuskless females had more than five times greater (d)odds of survival",
+ ask:"(d) odds の意味にもっとも近いものを選べ。", answer:"1", kind:"choice",
+ choices:[{t:"chances（可能性・見込み）", ok:true},{t:"ends（終わり）", ok:false},{t:"impossibilities（不可能）", ok:false},{t:"obstacles（障害）", ok:false}],
+ ev:{q:'tuskless females had more than five times greater <span class="h">odds of survival</span>', jp:"「牙のないメスは生存の見込みが5倍以上高かった」。"},
+ co:[{c:"gold",l:"語義｜odds of ~",h:"<b>odds＝chances「可能性・見込み」</b>。odds of survival「生存率・生き残る見込み」。<em>「賭け率」と直訳しない</em>。"},
+     {c:"verm",l:"罠",h:"<em>3 impossibilities</em> は意味が逆（生存の見込みが「高い」文脈）。<em>greater</em> というプラス方向の比較級が決め手。"}],
+ sol:[{m:"o",n:"1",t:"正解。odds＝chances。"},{m:"x",n:"2",t:"ends（終わり）は無関係。"},{m:"x",n:"3",t:"impossibilities は方向が逆。"},{m:"x",n:"4",t:"obstacles（障害）は無関係。"}]},
+
+{id:"B-e", grp:"AB", type:"同意語（比喩的名詞）", rate:70, lbl:"下線部 (e) signature", en:"places in the genome showing the (e)signature of recent natural selection",
+ ask:"(e) signature の意味にもっとも近いものを選べ。", answer:"3", kind:"choice",
+ choices:[{t:"damage（損傷）", ok:false},{t:"insignificance（重要でないこと）", ok:false},{t:"mark（痕跡・しるし）", ok:true},{t:"naming（命名）", ok:false}],
+ ev:{q:'places in the genome showing the <span class="h">signature</span> of recent natural selection', jp:"「最近の自然選択の痕跡を示すゲノム上の箇所」。"},
+ co:[{c:"gold",l:"語義｜比喩の signature",h:"signature は「署名」だが、ここでは<b>「（何かが起きたことを示す）特徴的な痕跡・しるし」</b>＝<em>mark</em>。<u>第1段落の leave a mark on the genome と呼応</u>している。"},
+     {c:"teal",l:"読解のコツ",h:"<em>4 naming</em> は「署名＝名前」からの短絡。<u>本文冒頭の比喩（傷跡＝痕跡）を覚えていれば mark が自然に選べる</u>。"}],
+ sol:[{m:"x",n:"1",t:"damage（損傷）ではない。選択の「痕跡」であって傷ではない。"},{m:"x",n:"2",t:"insignificance は無関係。"},{m:"o",n:"3",t:"正解。signature＝mark「痕跡・しるし」。"},{m:"x",n:"4",t:"naming（命名）は「署名」からの誤連想。"}]},
+
+{id:"B-f", grp:"AB", type:"同意語（形容詞）", rate:75, lbl:"下線部 (f) adjacent", en:"AMELX is (f)adjacent to other crucial genes",
+ ask:"(f) adjacent の意味にもっとも近いものを選べ。", answer:"3", kind:"choice",
+ choices:[{t:"additional（追加の）", ok:false},{t:"horizontal（水平の）", ok:false},{t:"next（隣の）", ok:true},{t:"parallel（平行の）", ok:false}],
+ ev:{q:'AMELX is <span class="h">adjacent to</span> other crucial genes', jp:"「AMELXは他の重要な遺伝子群に隣接している」。"},
+ co:[{c:"gold",l:"語法｜adjacent to＝next to",h:"<b>adjacent to ~「〜に隣接した」</b>。後ろの <em>to</em> がヒント（next to と同じ形）。"},
+     {c:"verm",l:"罠",h:"<em>4 parallel（平行の）</em>は「並んでいる」イメージからの誤連想。<u>染色体上で「隣り合う」＝next</u>。"}],
+ sol:[{m:"x",n:"1",t:"additional（追加の）は違う。"},{m:"x",n:"2",t:"horizontal（水平の）は違う。"},{m:"o",n:"3",t:"正解。adjacent to＝next to。"},{m:"x",n:"4",t:"parallel（平行の）は位置関係が別。"}]},
+
+{id:"B-g", grp:"AB", type:"同意語（形容詞）", rate:70, lbl:"下線部 (g) subtle", en:"The change in sheep is (g)subtle … unlike the elephants' total loss of tusks",
+ ask:"(g) subtle の意味にもっとも近いものを選べ。", answer:"3", kind:"choice",
+ choices:[{t:"direct（直接的な）", ok:false},{t:"sensitive（敏感な）", ok:false},{t:"slight（わずかな）", ok:true},{t:"widespread（広範囲の）", ok:false}],
+ ev:{q:'The change in sheep is <span class="h">subtle</span>, she said, <span class="h">unlike the elephants\' total loss of tusks</span>.', jp:"「ヒツジの変化は、ゾウが牙を完全に失ったのとは違い、わずかなものだ」。"},
+ co:[{c:"nav",l:"決め手｜unlike の対比",h:"<b>unlike the elephants' <em>total</em> loss</b>「牙の<u>完全な</u>喪失とは違って」。<u>total（完全）の反対＝slight（わずか）</u>。<em>対比の目印 unlike が答えを決める</em>。"},
+     {c:"verm",l:"罠｜sensitive",h:"subtle には「微妙な・繊細な」の語義もあるため <em>2 sensitive</em> を選びやすい。<u>だが文脈は「変化の大きさ」の話</u>。語義ではなく対比構造で決める。"}],
+ sol:[{m:"x",n:"1",t:"direct（直接的な）は無関係。"},{m:"x",n:"2",t:"sensitive（敏感な）は別語義への誤連想。ここは変化の「大きさ」。"},{m:"o",n:"3",t:"正解。total loss との対比で slight「わずかな」。"},{m:"x",n:"4",t:"widespread（広範囲の）は無関係。"}]},
+
+{id:"B-h", grp:"AB", type:"同意語（動詞）", rate:65, lbl:"下線部 (h) compounded", en:"the elephants' genetic change has actually (h)compounded their problems",
+ ask:"(h) compounded の意味にもっとも近いものを選べ。", answer:"2", kind:"choice",
+ choices:[{t:"caused（引き起こした）", ok:false},{t:"increased（大きくした・悪化させた）", ok:true},{t:"solved（解決した）", ok:false},{t:"tackled（取り組んだ）", ok:false}],
+ ev:{q:'the elephants\' genetic change has <span class="h">actually compounded</span> their problems', jp:"「ゾウの遺伝的変化は実のところ、彼らの問題をかえって大きくしてしまった」。"},
+ co:[{c:"gold",l:"語義｜compound a problem",h:"<b>compound＝「（問題）をいっそう悪化させる・増大させる」</b>＝increased。「複合する」から「積み重なって悪化する」と押さえる。"},
+     {c:"verm",l:"罠｜caused",h:"<em>1 caused</em>は「問題を<u>引き起こした</u>」＝問題の発生。しかし本文では<u>問題はすでにある（密猟・オス致死）</u>。それを<b>さらに大きくした</b>のだから increased。<em>3 solved・4 tackled は方向が逆</em>（直後に「密猟がやんでもオスは死に続ける」と続く）。"}],
+ sol:[{m:"x",n:"1",t:"caused（引き起こした）は「発生」。本文は既存の問題の<em>悪化</em>。"},{m:"o",n:"2",t:"正解。compound＝increase「悪化させる」。"},{m:"x",n:"3",t:"solved（解決した）は真逆。"},{m:"x",n:"4",t:"tackled（取り組んだ）も方向が逆。"}]},
+
+/* ---------- Ⅱ-C 語句解釈 ---------- */
+{id:"C-ア", grp:"CD", type:"語句解釈", rate:70, lbl:"波線部 (ア)", en:"the decades spanning the war",
+ ask:"(ア) the decades spanning the war の意味をもっとも的確に示すものを選べ。", answer:"4", kind:"choice",
+ choices:[{t:"the decades after the war ended（戦争終結後の数十年）", ok:false},{t:"the decades before the war started（戦争開始前の数十年）", ok:false},{t:"the decades in which the war was banned（戦争が禁じられていた数十年）", ok:false},{t:"the decades over which the war continued（戦争が続いていた数十年）", ok:true}],
+ ev:{q:'In <span class="h">the decades spanning the war</span>, tuskless females had more than five times greater odds of survival.', jp:"「戦争が続いた数十年の間、牙のないメスは生存の見込みが5倍以上高かった」。"},
+ co:[{c:"gold",l:"語義｜span",h:"<b>span＝「（期間）にわたる・及ぶ」</b>（名詞なら「期間・範囲」）。<em>the decades spanning the war</em>＝「戦争にまたがる数十年」＝<u>戦争が続いていた期間</u>。"},
+     {c:"teal",l:"内容からの裏づけ",h:"密猟が激しい<b>戦時中</b>だからこそ、牙のないメスの生存率が跳ね上がる。<u>「戦後」「戦前」では因果が成立しない</u>。"}],
+ sol:[{m:"x",n:"1",t:"after（戦後）では、密猟圧の説明と合わない。"},{m:"x",n:"2",t:"before（戦前）も同様に合わない。"},{m:"x",n:"3",t:"ban（禁止）は span と無関係。音の似た語への誤反応。"},{m:"o",n:"4",t:"正解。span＝「（戦争の期間）にわたる」。"}]},
+
+{id:"C-イ", grp:"CD", type:"語句解釈", rate:70, lbl:"波線部 (イ)", en:"in order to compensate",
+ ask:"(イ) in order to compensate の意味をもっとも的確に示すものを選べ。", answer:"2", kind:"choice",
+ choices:[{t:"so that you can compliment one another（互いに褒め合えるように）", ok:false},{t:"so that you can find an alternative way to survive（生き延びるための代わりの方法を見つけられるように）", ok:true},{t:"so that you can let everything go and just forget（すべて手放して忘れられるように）", ok:false},{t:"so that you can recreate exactly the same tool（まったく同じ道具を作り直せるように）", ok:false}],
+ ev:{q:'"If you don\'t have this key tool, how do you have to adjust your behavior <span class="h">in order to compensate</span>?"', jp:"「この重要な道具（牙）がないとしたら、それを埋め合わせるためにどう行動を変えねばならないか」。"},
+ co:[{c:"gold",l:"語義｜compensate",h:"<b>compensate「埋め合わせる・補う」</b>。<em>牙という道具を失った分を、行動でどう補うか</em>＝代わりの手段を見つける。"},
+     {c:"verm",l:"罠｜compliment",h:"<em>1 compliment（褒める）</em>は<b>綴りが酷似</b>した別語。complement（補完する）／compliment（褒める）／compensate（埋め合わせる）を区別する。"},
+     {c:"teal",l:"文脈の裏づけ",h:"直前に「ゾウは牙で<u>皮をはぎ、穴を掘り、身を守る</u>」＝<b>生存の道具</b>。だから「補う」＝<u>生き延びるための代替手段</u>。4「同じ道具を作り直す」は不可能（牙は生えない）。"}],
+ sol:[{m:"x",n:"1",t:"compliment（褒める）は綴りの似た別語。文脈にも合わない。"},{m:"o",n:"2",t:"正解。牙の欠如を補う＝生存の代替手段を見つける。"},{m:"x",n:"3",t:"「忘れる」は文意と無関係。"},{m:"x",n:"4",t:"同じ道具を作り直すことはできない。"}]},
+
+{id:"C-ウ", grp:"CD", type:"語句解釈", rate:50, lbl:"波線部 (ウ)", en:"come away thinking, 'Oh everything's fine, …'",
+ ask:"(ウ) come away thinking の意味をもっとも的確に示すものを選べ。", answer:"3", kind:"choice",
+ choices:[{t:"avoid questioning（問うことを避ける）", ok:false},{t:"keep on worrying（心配し続ける）", ok:false},{t:"respond by concluding（〜と結論づけて反応する）", ok:true},{t:"start seriously criticizing（本気で批判し始める）", ok:false}],
+ ev:{q:'it\'s easy … to <span class="h">come away thinking</span>, \'Oh everything\'s fine, they evolved and now they\'re better …\'', jp:"「『万事うまくいっている、彼らは進化してもう大丈夫だ』と結論づけて（その場を）立ち去ってしまいがちだ」。"},
+ co:[{c:"gold",l:"語法｜come away ＋ 分詞",h:"<b>come away thinking …</b>「〜と<u>思いながら（その場を）去る</u>」＝話を聞いた結果、ある結論を抱いて終わる。<em>＝respond by concluding</em>。"},
+     {c:"verm",l:"なぜ落とすか（正答率50%）",h:"come away を「立ち去る＝逃げる・避ける」と取ると <em>1 avoid questioning</em> を選ぶ。<u>だが引用符の中身は「万事OK」という<b>肯定的な結論</b></u>。<b>引用の中身が答えを決める</b>――結論を「抱いた」のだから conclude。"},
+     {c:"teal",l:"文脈",h:"直後に「<em>But the truth is</em> …（しかし実際には代償を払っている）」と続く。<u>楽観的な結論に飛びつくな、という筆者の警告</u>。2（心配し続ける）4（批判する）では But の逆接が成立しない。"}],
+ sol:[{m:"x",n:"1",t:"「問うのを避ける」ではない。積極的に結論を抱いている。"},{m:"x",n:"2",t:"「心配し続ける」は引用の楽観的内容と真逆。"},{m:"o",n:"3",t:"正解。〜と結論づけてしまう。引用符の中身＝その結論。"},{m:"x",n:"4",t:"「批判し始める」も引用内容と合わない。"}]},
+
+/* ---------- Ⅱ-D 語句整序 ---------- */
+{id:"D", grp:"CD", type:"語句整序（最難関）", rate:25, lbl:"二重下線部", en:"They also want to ( あ )( い )( う ) is ( え ) for a tuskless elephant.",
+ ask:"(あ)〜(え)に1〜7から語を入れて完成させたとき、(い)と(え)に入る語の番号を記せ。同じ語は二度使えない。選択肢には使われないものが三つ含まれる。",
+ kind:"order", answer:"(い) 7 what ／ (え) 5 like",
+ pool:["1 focus","2 how","3 learn","4 life","5 like","6 unlike","7 what"],
+ slots:[{k:"あ",v:"3 learn"},{k:"い",v:"7 what",hit:true},{k:"う",v:"4 life"},{k:"え",v:"5 like",hit:true}],
+ full:"They also want to <b>learn what life</b> is <b>like</b> for a tuskless elephant.",
+ fullJp:"彼らはまた、牙のないゾウにとって<b>生活がどのようなものか</b>を知りたいと思っている。",
+ steps:[
+  {t:"骨格を確認する（to の後は原形）", d:"<b>They also want to ( あ ) …</b>。<em>want to do</em> なので、<u>(あ)には動詞の原形</u>が入る。候補は <b>focus</b> と <b>learn</b> の2つだけ。focus は <em>focus on</em> と on が必要だが、on は選択肢にない。→ <b>(あ)＝learn</b>。"},
+  {t:"文中の is と文末の for に注目する", d:"空所の並びは <b>( い )( う ) is ( え ) for …</b>。<u>is の直後に(え)がある</u>。ここで思い出すべき定型が <b>what ~ is like</b>「〜がどのようなものか」。→ <b>(え)＝like</b>。", cite:'They also want to learn <span class="h">what life is like</span> for a tuskless elephant.'},
+  {t:"learn の目的語＝名詞節を作る", d:"learn の後ろには<em>名詞節</em>が来る。名詞節を導き、かつ <b>is like</b> の<u>like の目的語が欠けた不完全文</u>を作れるのは <b>what</b>。→ <b>(い)＝what</b>。"},
+  {t:"名詞節の主語を置く", d:"残った名詞は <b>life</b>。<em>what ＋ life ＋ is ＋ like</em> で「生活がどのようなものか」。→ <b>(う)＝life</b>。完成："},
+ ],
+ traps:[
+  {bad:"(い) に how を入れる", why:"<b>how life is for ~</b> なら文法上は成立するが、<u>その場合 is の直後の(え)が埋まらない</u>。<b>is ( え )</b> という形が残っている以上、<em>like を要求する what</em> でなければならない。<u>how を選ぶ＝空所の数が合わないことに気づいていない</u>。これが正答率25%の最大要因。"},
+  {bad:"(あ) に focus を入れる", why:"focus は自動詞的に <em>focus on</em> で使う。<u>on が選択肢にない</u>ので不可。"},
+  {bad:"(え) に unlike を入れる", why:"unlike は「〜と違って」。<b>what ~ is unlike</b> という言い方はしない。"},
+ ],
+ rubric:[{t:"(い) に <b>7 what</b>", p:5, must:true},{t:"(え) に <b>5 like</b>", p:5, must:true}],
+ total:10},
+
+/* ---------- Ⅱ-E 内容一致 ---------- */
+{id:"E", grp:"EF", type:"内容一致（8択から3つ）", rate:65, lbl:"本文の意味・内容に合致するもの", en:"次の1〜8から三つ選べ。",
+ ask:"本文の意味・内容に合致するものを1〜8から三つ選びなさい。", kind:"multi", answer:"1・5・7",
+ items:[
+  {n:1, t:"『サイエンス』に発表された論文によれば、歯を形成する遺伝子は、モザンビークのゾウに起きていることと関係がある。", ok:true,
+   ev:"第2段落 第1文：論文は「歯を形成する遺伝子が関与している可能性が高い」と示した（第1段落 第2・3文の内戦→牙なし化を受ける）。",
+   why:"<b>一致</b>。tooth-building genes are likely involved がそのまま <em>have something to do with</em> に言い換えられている。"},
+  {n:2, t:"アフリカゾウは雌雄ともにすべて牙を持ち、モザンビーク内戦の前でさえ例外はなかった。", ok:false,
+   ev:"第4段落 第2文：「戦争前でさえ、メスの5頭に1頭近くが牙を持っていなかった」。第3段落 第2文にも「わずかながら牙なしで生まれる個体がいる」。",
+   why:"<b>矛盾</b>。<em>no exception（例外なし）</em>が誤り。戦前から約20%のメスが牙なしだった。"},
+  {n:3, t:"今日、ゴロンゴーザ国立公園では、牙のないオスのゾウが非常に多く見つかる。", ok:false,
+   ev:"第3段落 第6文：「この公園で誰も目にしたことがないもの、それは牙のないオスである」。",
+   why:"<b>矛盾</b>。牙がないのは<em>メス</em>だけ。牙のないオスは<u>そもそも存在しない（オス致死だから）</u>。<b>Female elephants, that is.</b> の一文を読み飛ばすと落とす。"},
+  {n:4, t:"長期データの研究により、戦争の結果、牙のないメスゾウの数が2パーセント減少したことがわかった。", ok:false,
+   ev:"第4段落 第2文・第4文：戦前で約20%が牙なし。「2パーセント」は<em>十分に保護された個体群</em>における値。",
+   why:"<b>矛盾</b>。2%は<u>「保護下の正常値」であって「戦争による減少幅」ではない</u>。しかも牙なしは<em>増えている</em>（20%→50%）。数値のすり替え。"},
+  {n:5, t:"今日、ゴロンゴーザ国立公園のメスゾウの半数は牙がなく、数学的モデリングはこれを自然選択と関連づけている。", ok:true,
+   ev:"第5段落 第1文：「メスゾウの半数が牙を持たない」。第3文：「数学的モデリングは、この変化がほぼ確実に自然選択によるものだと示した」。",
+   why:"<b>一致</b>。関係代名詞 which の先行詞は <em>Today … have no tusks</em> の内容全体。<em>associate A with B</em>「AをBと関連づける」。"},
+  {n:6, t:"キャンベル＝ステイトン博士らの研究によれば、AMELXと呼ばれる染色体はヒトには決して見られず、ゾウの歯にとって決定的に重要である。", ok:false,
+   ev:"第7段落 第3文：「この遺伝子はまた、まれな<em>ヒトの症候群</em>にも関与している」。",
+   why:"<b>矛盾</b>。<u>ヒトにも見られる</u>。さらに AMELX は「染色体」ではなく<em>X染色体上の遺伝子</em>（chromosome と gene のすり替え）。<b>誤りが二重</b>。"},
+  {n:7, t:"ペルティエ博士の研究によれば、進化的変化はカナダのビッグホーンにも起こり、それは遊興目的の狩猟者によって引き起こされた。", ok:true,
+   ev:"第10段落 第2文：「遊興を目的とする狩猟者が最大の角を持つオスを狙ったため、ヒツジは小さな角を持つように進化した」。",
+   why:"<b>一致</b>。<em>人間の選択的な狩猟が進化を引き起こす</em>という、ゾウと同じ構造の事例。"},
+  {n:8, t:"キャンベル＝ステイトン博士は、ゾウはどんな進化的変化も生き延びられるほど十分に安全だと信じているため、モザンビークのゾウの未来について楽観的である。", ok:false,
+   ev:"第11段落 第1文：博士は「ゾウは密猟者から安全になるよう進化したが、<em>これは成功談ではない</em>」という考えに同意している。",
+   why:"<b>矛盾</b>。<em>optimistic（楽観的）</em>が真逆。結びは「選択には常に代償が伴う。その代償とは命だ」。"},
+ ],
+ co:[{c:"nav",l:"内容一致の解き筋（正答率65%）",h:"8択から3つ。<u>①段落を特定 → ②本文の一文を指さす → ③言い換えか、すり替えかを判定</u>。この英文の誤答は<b>「数値のすり替え」（4）「性別のすり替え」（3）「用語のすり替え」（6）「態度の逆転」（8）</b>の4型に整理できる。"},
+     {c:"verm",l:"最頻の落とし穴",h:"<b>3 と 6</b>。3は「牙なし＝メスだけ」を押さえていれば即消せる。6は <em>chromosome（染色体）と gene（遺伝子）</em> のすり替えに加え、<em>never found in humans</em> が本文と正反対。"}]},
+
+/* ---------- Ⅱ-F 和訳 ---------- */
+{id:"F", grp:"EF", type:"英文和訳（記述）", rate:70, lbl:"太い下線部", en:"those few elephants without ivory are more likely to pass on their genes",
+ ask:"本文中の太い下線部を日本語に訳しなさい。", kind:"desc", answer:"下記模範解答",
+ steps:[
+  {t:"主語の範囲を確定する", d:"<b>those few elephants without ivory</b> までが主語。<em>without ivory</em>（牙のない）は<u>前の名詞 elephants を後ろから修飾する形容詞句</u>。「象牙<b>なしで</b>遺伝子を伝える」と副詞的に訳すと<b>誤訳</b>。"},
+  {t:"those few を正しく処理する", d:"<b>those＝前文を受ける指示語</b>「（前文で述べた）それらの」。<em>few＝「少数の」</em>。直前の文「<u>わずかながら牙を持たずに生まれる個体もいる</u>」を受けている。「あれらの」「ほとんどない」と訳さない。", cite:'But a few are born without them. Under heavy poaching, <span class="h">those few elephants without ivory</span> are more likely to pass on their genes.'},
+  {t:"more likely の比較を訳出する", d:"<b>be likely to do</b>「〜する可能性が高い」が<u>比較級 more likely になっている</u>。<em>than those with tusks（牙のあるゾウより）が省略</em>されている。→ 日本語では「<b>〜のほうが</b>可能性が高い」と<u>比較のニュアンスを出す</u>のが得点の分かれ目。"},
+  {t:"pass on を正しく訳す", d:"<b>pass on their genes</b>「自分の遺伝子を（次世代に）伝える」。<em>pass on＝受け渡す</em>。「通り過ぎる」ではない。"},
+ ],
+ model:["牙のないそれらの少数のゾウのほうが、自分の遺伝子を伝える可能性が高い。"],
+ mnote:"比較級 more likely の<b>「〜のほうが」</b>を出せるかどうかで差がつく。省略された than 以下（＝牙のあるゾウ）を意識する。",
+ rubric:[
+  {t:"<b>those few（それらの少数の）</b>＝前文の「牙なしで生まれるわずかな個体」を受けている", p:3, must:true},
+  {t:"<b>without ivory（牙のない）</b>が elephants を修飾していると訳せている", p:2, must:true},
+  {t:"<b>more likely（〜のほうが可能性が高い）</b>＝比較のニュアンスを出せている", p:3, must:true},
+  {t:"<b>pass on their genes（自分の遺伝子を伝える）</b>", p:2, must:true}],
+ total:10,
+ ng:[
+  {bad:"象牙なしで、これらの少数のゾウは自分の遺伝子を伝えやすい。", why:"<b>without ivory を副詞的に訳している</b>（正しくは elephants を修飾）。また <em>those</em>「それらの」を「これらの」としている。"},
+  {bad:"牙のないゾウは、自分の遺伝子を伝える可能性が高い。", why:"<b>those few（それらの少数の）が消えている</b>＋<b>比較級 more の訳出がない</b>。内容はほぼ合っていても<u>要素が2つ欠落</u>。"},
+  {bad:"象牙を持たないわずかなゾウは、遺伝子を通り過ぎる可能性が高い。", why:"<b>pass on を「通り過ぎる」と誤訳</b>。pass on ＝（次世代に）受け渡す。"},
+ ]},
+];
+
+
+/* ===== ENGINE ===== */
+function esc(id){ return 'q'+String(id).replace(/[^0-9A-Za-z\u3041-\u30ff]/g,'_'); }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+</script>
+</body>
+</html>
