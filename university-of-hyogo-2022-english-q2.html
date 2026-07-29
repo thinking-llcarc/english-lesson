@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜兵庫県立大学 2022 大問2（成功と幸福）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">兵</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>兵庫県立大学 2022 ／ 大問2</span></div>
+    <div class="top-meta">成功と幸福<br>問1 語義5／問2 空所4／問3 和訳</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>CONTRAST</small>成功と幸福</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>問1</small>語義</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>問2</small>空所</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>問3</small>和訳</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>成功は「外」で測られ、<br>幸福は「内」でしか起きない。<br>この一行が、全設問の軸になる。</h1>
+    <p>筆者は自らのどん底体験（家も車も失った時期に初めて本当の幸福を得た）を語りながら、<em>成功≠幸福</em>を論証する。成功は外面で測る「旅」、幸福は内面の「状態」。だから幸福は他人任せ（outside-in）ではなく、自分で取り戻す（inside-out）もの――この主題が、語義問題も空所も和訳もすべて貫いている。</p>
+    <div class="thesis"><b>一貫する主張：</b>成功と幸福は別物で、セットでは来ない。<b>成功は外側で見せかけられるが、幸福は内側でしか生まれない</b>。だから幸福は「外から来る（outside-in）」のではなく「内から作る（inside-out）」もので、自分でコントロールを取り戻せる。</div>
+    <div class="stats">
+      <div class="stat"><b>10</b><span>段落構成</span></div>
+      <div class="stat"><b>10</b><span>設問</span></div>
+      <div class="stat"><b>5+4</b><span>語義＋空所</span></div>
+      <div class="stat"><b>1</b><span>和訳（内容補充）</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">設問構成 ― 3タイプ、それぞれ攻め方が違う</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:20%">設問</th><th style="width:24%">タイプ</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1 (1)〜(5)</td><td>語義（文脈判断）</td><td>単語の知識だけでは危険。<b>文脈の方向</b>と<u>直後の具体化</u>で決める。frugal（質素）・look the part（それらしく見える）・flip side（裏面）が山。</td></tr>
+      <tr><td class="cond">問2 (ア)〜(エ)</td><td>空所（つなぎ表現）</td><td>4語（even if／contrary to／on the other hand／similar to）を割り振る。<b>①後ろが節か名詞か（品詞）→②論理（逆接・対比・譲歩・類似）</b>の2段で確定。</td></tr>
+      <tr><td class="cond">問3</td><td>和訳（内容補充）</td><td><b>an outside-in job の中身を言葉で補う</b>のが指示。直訳のままでは不可。fail to＝「できない」も落とさない。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">この英文で差がつくポイント</h2>
+  <div class="grid2">
+    <div class="box verm"><span class="lab">frugal の正体（問1-3）</span>古着・ボロ車の老人は<em>実は銀行のオーナー</em>。frugal は「貧乏」でも「裕福」でもなく<u>「金はあるが使わない＝質素」</u>。見た目に釣られない。</div>
+    <div class="box gold"><span class="lab">look the part（問1-4）</span>part を「部分」と直訳して誤答しない。<u>the part＝「役柄」</u>で「それらしく見える」。</div>
+    <div class="box teal"><span class="lab">空所は品詞で半分決まる（問2）</span><em>後ろが節（S V）なら even if</em>。名詞なら contrary to / similar to。挿入句なら on the other hand。<u>意味の前に形</u>。</div>
+    <div class="box navy"><span class="lab">問3は「補って訳す」</span>outside-in job を<em>「他人・外部が自分を幸せにしてくれるという考え」</em>と説明する。直訳『外から内への仕事』では点が来ない。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは<strong>選択肢をタップすると自分で解ける</strong>。「答え・根拠を表示」で正解／<strong>根拠（本文の該当箇所）</strong>／全選択肢の✓✗／語法まで開きます。問3の和訳は<strong>解答プロセス＋自己採点ルーブリック＋NG例</strong>つき。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 10段落の流れと設問の在りか<span class="sub">「主張→自らの体験→定義→事例（どんでん返し）→核心→結論」。筆者の実体験が論を貫く。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">手の届きそうで届かない目的地</div><p>成功と幸福＝多くの人が生涯かけて追うが<em>あと一歩で届かない</em>もの。筆者は自らの体験と他者の観察から語り始める。</p><div class="tags"><span class="utag">問1(1)</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>主張①</span></div><div class="para-b">
+      <div class="theme">成功≠幸福、セットでは来ない</div><p><em>一般常識に反して</em>、一方を持っても他方は保証されない。成功と幸福は「手を携えては進まない」。</p><div class="tags"><span class="utag">問2(ア)</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>体験の告白</span></div><div class="para-b">
+      <div class="theme">成功者が惨め、貧者が幸福</div><p>「金では幸福は買えない」。筆者自身、家も車も失った<em>どん底でこそ初めて本当の幸福</em>を得た。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>定義①</span></div><div class="para-b">
+      <div class="theme">成功＝価値ある理想への前進（旅）</div><p>辞書の定義＝「試みの好ましい結末」。だがナイチンゲールは<em>「価値ある理想の段階的実現」＝旅</em>と定義。</p><div class="tags"><span class="utag">問1(2)</span><span class="utag">問2(イ)</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>定義②</span></div><div class="para-b">
+      <div class="theme">幸福＝満足という状態（動き不要）</div><p>成功は動き（前進）を要するが、<em>幸福は状態</em>で前進を要さない。だからどん底でも幸福を得られた。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>事例</span></div><div class="para-b">
+      <div class="theme">銀行の女性重役と質素な老人</div><p>幸福は<em>お金など外部から来る</em>と多くの人は考える。豪華な車の女性重役が、ボロ車の老人を見下し目立たぬ場所へ移させようとする。</p><div class="tags"><span class="utag">問1(3)</span><span class="utag">問1(4)</span><span class="utag">問2(ウ)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>どんでん返し</span></div><div class="para-b">
+      <div class="theme">老人こそ銀行のオーナー</div><p>見苦しい老人は<em>銀行と10支店のオーナー</em>だった。質素だが幸福そう。<u>他方、重役は成功に見えて不幸そう</u>。</p><div class="tags"><span class="utag">問1(4)</span><span class="utag">問2(ウ)</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>核心</span></div><div class="para-b">
+      <div class="theme">成功は外・幸福は内</div><p><em>成功は外面で測られ、幸福は内面でしか起きない</em>。成功は見せかけられる（たとえ本当は違っても）が、幸福は装えない。</p><div class="tags"><span class="utag">問2(エ)</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>結論</span></div><div class="para-b">
+      <div class="theme">幸福を『外任せ』にする誤り</div><p>幸福を達成できない理由＝<em>「外から来る（outside-in）」と信じる</em>から。他人任せにすると、自分の心の主導権を外部に明け渡してしまう。</p><div class="tags"><span class="utag">問1(5)</span><span class="utag">問3</span></div></div></div><div class="para"><div class="para-n"><b>10</b><span>提言</span></div><div class="para-b">
+      <div class="theme">幸福は内から作る。主導権を取り戻せ</div><p>幸福は<em>inside-out（内から外へ）の仕事</em>。第一歩は主導権を取り戻すこと。筆者は無一文でも幸福になる方法を見つけた。</p><div class="tags"><span class="utag">問3</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← この英文の攻略</button><span class="sp"></span><button class="btnp" data-go="2">成功と幸福の対比へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Core Contrast</div>
+  <h1 class="head">成功と幸福 ― この対比表が全設問の軸<span class="sub">本文の主張はすべてこの1枚に還元される。特に「外／内」「見せかけ可／不可」を押さえれば、問2(ウ)(エ)と問3が一気に見える。</span></h1>
+  <div class="rule"></div>
+
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">成功<small>SUCCESS</small></div><div class="vs-bd">
+      <div class="r"><b>本質</b>価値ある理想へ<strong>前進していく「旅」</strong>（動きが要る）</div>
+      <div class="r"><b>どこで測る?</b><strong>外面</strong>（what's on the outside）</div>
+      <div class="r"><b>見せかけ</b><strong>できる</strong>（look successful, even if we aren't）</div>
+      <div class="r"><b>象徴</b>豪華な車・パワースーツの女性重役</div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">幸福<small>HAPPINESS</small></div><div class="vs-bd">
+      <div class="r"><b>本質</b>満足によって特徴づけられる<strong>「状態」</strong>（動き不要）</div>
+      <div class="r"><b>どこで起きる?</b><strong>内面</strong>（on the inside）</div>
+      <div class="r"><b>見せかけ</b><strong>できない</strong>（内側は装えない）</div>
+      <div class="r"><b>象徴</b>質素だが本物の笑顔の老人（=銀行オーナー）</div>
+    </div></div>
+  </div>
+
+  <div class="box gold"><span class="lab">最重要の一行</span>
+    <strong>成功は「外」で測られ見せかけられる。幸福は「内」でしか起きず装えない。</strong>だから幸福を<em>outside-in（外から来る）</em>と考えると他人任せになり、<em>inside-out（内から作る）</em>と考えて初めて自分で取り戻せる。<u>問3の和訳（outside-in job）は、この対比の理解がそのまま採点対象</u>になる。</div>
+
+  <div class="box navy"><span class="lab">2人の登場人物の対比（第6〜7段落）</span>
+    <strong>女性重役</strong>＝豪華な車・パワースーツ＝<em>成功して見える</em>が、不機嫌で<em>幸福には見えない</em>。<br>
+    <strong>質素な老人</strong>＝古着・ボロ車で<em>成功者に見えない</em>（frugal）が、実は<em>銀行のオーナー</em>で、笑顔が本物＝<em>幸福</em>。<br>
+    <u>「見た目（外）」と「中身（内）」が食い違う</u>この対比が、問1(3)(4)・問2(ウ)の土台。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問1 語義へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問1 ― 下線部の語義（(1)〜(5)）<span class="sub">単語帳の意味を当てるだけでは危険。<b>文脈の方向</b>と<b>直後の具体化</b>で決める。frugal・look the part・flip side が勝負。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxQ1"></div>
+  <div id="qWrapQ1"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 成功と幸福</button><span class="sp"></span><button class="btnp" data-go="4">問2 空所へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問2 ― 空所に入るつなぎ表現（(ア)〜(エ)）<span class="sub">4つの表現（even if／contrary to／on the other hand／similar to）を割り振る。<b>まず品詞（後ろが節か名詞か）、次に論理</b>の2段で確定する。</span></h1>
+  <div class="rule"></div>
+  <div class="box navy" style="margin-top:0"><span class="lab">2段構えの解き筋</span>
+    ① <strong>後ろが節（S V）なら even if</strong>（唯一の接続詞）。② 後ろが<strong>名詞句なら contrary to / similar to</strong>。③ コンマで挟まれた<strong>挿入なら on the other hand</strong>。品詞で候補を絞ってから、逆接・類似・対比・譲歩の論理で1つに決める。</div>
+  <div class="qindex" id="qidxQ2"></div>
+  <div id="qWrapQ2"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問1 語義</button><span class="sp"></span><button class="btnp" data-go="5">問3 和訳へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問3 ― 下線部(A)の和訳（内容補充つき）<span class="sub">設問の指示は<b>「an outside-in job の内容がわかるように」</b>。直訳では点が来ない。中身を言葉で補うのが得点条件。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxQ3"></div>
+  <div id="qWrapQ3"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 問2 空所</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と訳出ポイント<span class="sub">THINKINGオリジナル訳（全52文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>は設問・主張に直結する急所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳では答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙った。<em>構文の骨（主語・対比・比喩）は保ったまま、日本語として自立させている</em>――問3の和訳を書くときの言い回しの見本として使ってほしい。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― 成功と幸福は「手の届きそうで届かない」目的地　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ああ、成功と幸福よ！</div></div><div class="jpline"><div class="n">②</div><div class="s">世界中で、これほど多くの人が、人生をかけて何らかのかたちで手に入れようと努めながら、なお<em>あと一歩のところで手が届かないままになっている</em>ものが、ほかにあるだろうか。私にはそうは思えない。</div></div><div class="jpline"><div class="n">③</div><div class="s">私自身、そうした経験もしてきたし、他の何千もの人々が、彼らが<em>究極の目的地</em>だと考えるもの――すなわち成功と幸福――にたどり着こうともがくのを見てもきた。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第1段落</div><ul><li><b>(1)ultimate</b>「<em>究極の・最終的な</em>」。ここでは「最終的にたどり着きたい目的地」の意。<u>問1(1)の答え＝「最終的な」（a）</u>。<span class="qbadge">問1(1)</span></li>
+    <li><b>which manage to remain just beyond their reach</b>「かろうじて<em>手の届く範囲のすぐ外に</em>とどまっている」。<em>manage to do</em>「なんとか〜する」がここでは皮肉に効く。</li>
+    <li><b>I've had that experience and I've also seen …</b>：筆者の<em>体験＋観察</em>という語りの枠組み。以後「私は経験から語る」が繰り返される。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜主張① ― 成功と幸福は別物で、手を取り合わない　<span class="qbadge">問2(ア)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">しかし、成功と幸福は、ハリウッド（映画）や天国のように扱うことはできない。それらは目的地ではないのだ。</div></div><div class="jpline"><div class="n">②</div><div class="s">また、<em>一般的な考え方とは違い</em>、どちらか一方を持っていても、もう一方が保証されるわけではない。それらは手を携えて（セットで）やってくるものではないのである。</div></div><div class="jpline"><div class="n">③</div><div class="s">ほとんどの人は、成功を手に入れれば幸福も見つけられると信じている。</div></div><div class="jpline"><div class="n">④</div><div class="s">しかし、成功と幸福は結婚していない（＝結びついていない）。私は、それらがお互いの面識さえないのではないかとさえ思っている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">だからこそ、どちらか一方の場所に行っても、その両方を見つけられるわけではないのだ。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第2段落</div><ul><li><b>(ア)contrary to popular opinion</b>「<em>世間一般の考えに反して</em>」。<u>問2(ア)＝contrary to（b）</u>。直後で「一方を持っても他方は保証されない」と<em>常識をひっくり返す</em>合図。<span class="qbadge">問2(ア)</span></li>
+    <li><b>they don't go hand in hand</b>「手を携えて進みはしない＝セットではない」。<u>成功≠幸福</u>という本文の背骨。</li>
+    <li><b>success and happiness aren't married</b>「結婚していない」＝<em>擬人化した比喩</em>。「面識さえない」と畳みかける。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜体験の告白 ― 成功者が惨めで、失敗者が幸福なこともある　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私たちは皆、惨めな成功者――友だちもおらず、人生に本当の喜びもない人――の話を聞いたことがある。</div></div><div class="jpline"><div class="n">②</div><div class="s">そして、<em>「お金では幸福は買えない」</em>という有名な言葉も、誰もが聞いたことがあるだろう。</div></div><div class="jpline"><div class="n">③</div><div class="s">一方で、多くの成功していない貧しい人々が、なんとか幸福を見つけ出している。</div></div><div class="jpline"><div class="n">④</div><div class="s">私は経験から語っている。なぜなら、私自身がそのような人間の1人であったからだ。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">ちょうど10年前、ローンを返済できず、家を追い出され、最後の車まで銀行に差し押さえられたとき、私は、誰も成功とは呼ばないような状態にいた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">そして、そのような状況で幸福が可能だとは、ほとんど誰も信じないだろう。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">しかし実際には、私が人生で初めて<em>本当の幸福</em>を手にしたのは、まさにその人生のどん底の時期だったのである。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第3段落</div><ul><li><b>"money doesn't buy happiness"</b>「金では幸福は買えない」＝<em>有名な格言</em>の引用。第2段落の主張を裏づける。</li>
+    <li><b>I speak from experience because I was one of those people.</b>「私は経験から語る。私自身がその1人だった」。<u>この英文の語り手は「どん底で本当の幸福を得た」当事者</u>。</li>
+    <li><b>during my darkest days …</b>「人生の最も暗い日々のあいだに（こそ）」。<em>逆説</em>――最悪の時期に初めて本当の幸福を得た。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜定義① ― 成功は「価値ある理想へ前進していく旅」　<span class="qbadge">問1(2)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">成功と幸福について論じるには、それぞれの語の定義に合意しておくことが重要である。</div></div><div class="jpline"><div class="n">②</div><div class="s">ほとんどの人は、Dictionary.com による成功の定義――すなわち<em>「試みや努力の、好ましい、あるいは成功した結末」</em>――に似たものを信じている。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかしアール・ナイチンゲールは、成功とは人が最終的に「到達する」場所ということには同意していない。</div></div><div class="jpline"><div class="n">④</div><div class="s">彼は成功を<em>「価値ある理想へと前進していくこと」</em>と説明している。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">このほうが、成功とは（目的地ではなく）<em>旅</em>であることを、より正確に言い表している。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第4段落</div><ul><li><b>(2)worthy</b>「<em>価値のある・立派な・尊敬に値する</em>」。a worthy ideal「価値ある（追い求めるに足る）理想」。<u>問1(2)の正解は c「尊敬に値する」</u>。worth（価値）と同語源で「〜に値する」の意。<span class="qbadge">問1(2)</span></li>
+    <li><b>the progressive realization of a worthy ideal</b>「価値ある理想の、段階的な実現」＝ナイチンゲールの成功の定義。<u>「成功＝到達点」ではなく「前進の過程」</u>。</li>
+    <li><b>success as a journey, not a destination</b>「成功は目的地ではなく<em>旅</em>」。第1段落の「目的地」の否定と呼応。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜定義② ― 幸福は「（満足という）状態」であって前進を要さない　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">アールの成功の定義（前進していく実現）は、なんらかの<em>動き（前進）を前提</em>としているが、幸福は単に1つの<em>状態</em>である。</div></div><div class="jpline"><div class="n">②</div><div class="s">幸福は、いかなる種類の前進や動きも必要としない。</div></div><div class="jpline"><div class="n">③</div><div class="s">幸福は、ある種の<em>満足によって特徴づけられる状態</em>を前提としている。</div></div><div class="jpline"><div class="n">④</div><div class="s">だからこそ私は、人生のみじめな見かけ（外見）にもかかわらず、幸福を手に入れることができたのである。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第5段落</div><ul><li><b>presupposes … movement</b>「〜（動き）を前提とする」。<em>成功＝動きが要る／幸福＝状態で動きは不要</em>、という<u>対比</u>が第5段落の骨。</li>
+    <li><b>a state of being marked by certain contentment</b>「ある種の満足によって特徴づけられた状態」。<em>contentment＝満足</em>。幸福の定義。</li>
+    <li><b>in spite of the miserable appearances of my life</b>「人生の惨めな<em>見かけ</em>にもかかわらず」。第3段落のどん底体験と接続。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜事例 ― 銀行の女性重役と、質素な老人　<span class="qbadge">問1(3)</span> <span class="qbadge">問1(4)</span> <span class="qbadge">問2(ウ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">絶え間ないメディアのイメージにさらされているせいで、ほとんどの人は、成功と幸福は<em>お金や所有物のような外部のものから得られる</em>と考えている。次のような例は、あまりにも頻繁に起きている。</div></div><div class="jpline"><div class="n">②</div><div class="s">新しく採用された銀行の女性重役が、豪華な車から降りてきて、ブリーフケースを持って銀行への歩道を歩いていく。</div></div><div class="jpline"><div class="n">③</div><div class="s">彼女はパワースーツのしわを伸ばしながら、散水装置のスイッチを入れつつ口笛を吹いている年配の男のほうへ顔を向ける。</div></div><div class="jpline"><div class="n">④</div><div class="s">その男の20年物の使い古された車は、歩道のすぐ隣、最前列に停められている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">彼は70年代の服を着ていて、ズボンはぶかぶかでだらしなく、色あせて第一ボタンまで留めたシャツはすり切れた襟をしている。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">その男は明るくほほ笑み、おはようと声をかけるが、女性の重役は不愉快そうな顔でただうなずくだけで、<em>そのトラックをもっと目立たない場所に停めさせ、芝生管理会社に営業時間外に手を打たせられないか、心の中に書き留める</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第6段落</div><ul><li><b>external things, like money and possessions</b>「お金や所有物のような<em>外部のもの</em>」。<u>この英文の敵役＝「幸福は外から来る」という考え</u>。問3の an outside-in job につながる。</li>
+    <li><b>(3)faded / threadbare … a (3)frugal man</b>※注意：問1(3)は<b>frugal</b>「<em>質素な・倹約家の</em>」。<u>問1(3)＝「質素な」(b)</u>。この後の第7段落で老人が実は大富豪だと判明する伏線。<span class="qbadge">問1(3)</span></li>
+    <li><b>power suit</b>（注：地位・能力を印象づけるスーツ）。女性重役＝<em>外見で成功を誇示</em>する側。</li>
+    <li><b>making a mental note to …</b>「〜しようと心に留める」＝<em>付帯状況の分詞構文</em>。彼女が老人を見下している描写。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜どんでん返し ― 質素な老人こそ銀行のオーナー　<span class="qbadge">問1(4)</span> <span class="qbadge">問2(エ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">女性重役は自分の懸念を銀行の頭取に伝えるが、頭取はすぐに笑い出す。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼女は次第に、その見苦しい年配の男こそが、その銀行と10の支店のオーナーであることに気づき始める。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>質素な男</em>である彼は、自動車や衣類も含め、新しいものを買うことはめったになかった。</div></div><div class="jpline"><div class="n">④</div><div class="s">彼はとても成功していたが、<em>まったくそれらしく（成功者らしく）は見えなかった</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">しかし、彼のほほ笑みは温かくて本物で、彼が幸せだということを示していた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">一方、その銀行の女性重役は成功しているように見えたが、<em>幸福には見えなかった</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第7段落</div><ul><li><b>(4)look the part</b>「<em>（その役・地位に）ふさわしく見える／それらしく見える</em>」。didn't look the part＝「成功者らしく見えなかった」。<u>問1(4)＝「それらしく見える」(a)</u>。<span class="qbadge">問1(4)</span></li>
+    <li><b>(ウ) On the other hand</b>「他方で・一方では」。<u>問2(ウ)＝on the other hand（c）</u>。<em>老人（成功して見えないが幸福）↔女性重役（成功して見えるが不幸）</em>の対比を導く。<span class="qbadge">問2(ウ)</span></li>
+    <li><b>a frugal man, he rarely bought himself anything new</b>：<em>frugal（質素）</em>の具体化。外見と成功が一致しない例。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜核心 ― 成功は「外」、幸福は「内」でしか起きない　<span class="qbadge">問2(エ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">それはなぜだろうか。</div></div><div class="jpline"><div class="n">②</div><div class="s">私が思うにその理由は、<em>成功は一般に外面（外側）で測られるのに対し、幸福は内面でしか起こり得ない</em>からである。</div></div><div class="jpline"><div class="n">③</div><div class="s">私たちは、成功しているように<em>見せかける</em>ことを選べる。<em>たとえ実際にはそうでなくても</em>、そう見せることはできる。</div></div><div class="jpline"><div class="n">④</div><div class="s">しかし幸福は、<em>「内面で装う」ことがずっと難しい</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第8段落</div><ul><li><b>success is typically measured by what's on the outside, and happiness can only occur on the inside</b>：<u>この英文の主題文</u>。<em>成功＝外／幸福＝内</em>。問3の inside-out / outside-in の土台。</li>
+    <li><b>(エ) even if we aren't</b>「<em>たとえ実際にはそうでなくても</em>」。<u>問2(エ)＝even if（a）</u>。「成功して見せかけられる、たとえ本当は成功していなくても」。<span class="qbadge">問2(エ)</span></li>
+    <li><b>fake it inside out</b>「内側から装う」。<em>幸福は見せかけられない</em>＝内面の問題だから。</li></ul></div><div class="tr-sec"><b>第9段落</b>｜結論 ― 幸福は『内から外へ』の仕事。だから自分で取り戻せる　<span class="qbadge">問1(5)</span> <span class="qbadge">問2(イ)</span> <span class="qbadge">問3</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>人々が本当の幸福な状態を達成できない1つの理由は、幸福とは「外から内へ入ってくる仕事」だと信じているからである。</em></div></div><div class="jpline"><div class="n">②</div><div class="s">「あなたは私をとても幸せにしてくれる」というのは、古い『ブラッド・スウェット・アンド・ティアーズ』の歌の1節だ。</div></div><div class="jpline"><div class="n">③</div><div class="s">それは、他の人が自分を幸せにできるということを暗に意味している。</div></div><div class="jpline"><div class="n">④</div><div class="s">そして、それを信じることにすると、その<em>裏面（反対の側面）</em>も信じなくてはならなくなる。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">つまり、他の人は自分を怒らせたり、悲しませたりもできるのだ、と。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">実際、「君には腹が立つ！」とは、多くの人がよく言う言葉だ。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">このような思考では、自分の精神状態に関する力を全部、外部にゆだねることになり、自分の人生を自分でコントロールできないことになってしまう！</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第9段落</div><ul><li><b>(A)One reason people fail to achieve … is because they believe it's an outside-in job.</b>＝<u>問3の和訳箇所</u>。<em>fail to do</em>「〜できない」／<em>an outside-in job</em>＝「（幸福は）外から内へ入ってくる仕事＝他人や外部が自分を幸せにしてくれる、という考え方」。<b>この内容を補って訳す</b>のが問3の要求。<span class="qbadge">問3</span></li>
+    <li><b>(5)the flip side</b>「<em>裏面・反対の側面</em>」。<u>問1(5)＝「不都合な側面」(a)</u>。「他人が幸せにできる」と信じれば、その裏返しで「他人が不幸にもできる」と信じることになる。<span class="qbadge">問1(5)</span></li>
+    <li><b>(イ) something similar to</b>「〜に似た何か」。<u>問2(イ)＝similar to（d）</u>（第4段落の Dictionary.com の定義の箇所）。<span class="qbadge">問2(イ)</span></li>
+    <li><b>shifts all of the power … to an outside source</b>「力の全部を外部にゆだねる」＝outside-in の帰結。<u>自分で人生を制御できなくなる</u>。</li></ul></div><div class="tr-sec"><b>第10段落</b>｜提言 ― 幸福は『内から外へ』。第一歩は自分で主導権を取り戻すこと　<span class="qbadge">問3</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">そうである必要はないのだ！</div></div><div class="jpline"><div class="n">②</div><div class="s">幸福とは、他人や外部の影響に関係なく、いつでも、どこでも手に入れられるものである。</div></div><div class="jpline"><div class="n">③</div><div class="s">幸福は<em>内側から外への（inside-out の）仕事</em>なので、それを達成する第一歩は、それに対する<em>コントロール（主導権）を取り戻す</em>ことである。</div></div><div class="jpline"><div class="n">④</div><div class="s">私は1997年に家も車もないときに、自分の幸福をコントロールした。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">私は、ほとんどの人が定義する意味では成功はしていなかったが、<em>幸福になる方法は見つけた</em>のである。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第10段落</div><ul><li><b>an inside-out job</b>「<em>内から外への仕事</em>」＝(A)の an outside-in job の<u>正反対</u>。幸福は自分の内側から生み出すもの。</li>
+    <li><b>regain our control over it</b>「それに対する主導権を<em>取り戻す</em>」。<em>regain＝取り戻す</em>。outside-in（力を外にゆだねる）からの脱却。</li>
+    <li><b>I wasn't successful … but I found a way to be happy.</b>「成功していなかったが、幸福になる方法は見つけた」。<u>第3段落のどん底体験と完全に呼応する結び</u>。成功≠幸福、という主題の完成。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 問3 和訳</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:16%">設問</th><th style="width:16%">解答</th><th>ひとことポイント</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1(1)</td><td><b>a 最終的な</b></td><td>ultimate destination＝最終目的地</td></tr>
+      <tr><td class="cond">問1(2)</td><td><b>c 尊敬に値する</b></td><td>worthy＝価値がある・〜に値する（worth＋y）</td></tr>
+      <tr><td class="cond">問1(3)</td><td><b>b 質素な</b></td><td>frugal＝倹約家。金はあるが使わない（実は大富豪）</td></tr>
+      <tr><td class="cond">問1(4)</td><td><b>a それらしく見える</b></td><td>look the part。part＝「役柄」（「部分」でない）</td></tr>
+      <tr><td class="cond">問1(5)</td><td><b>a 不都合な側面</b></td><td>the flip side＝裏面。ここでは怒り・悲しみ</td></tr>
+      <tr><td class="cond">問2(ア)</td><td><b>b contrary to</b></td><td>常識に反して（後ろは名詞句）</td></tr>
+      <tr><td class="cond">問2(イ)</td><td><b>d similar to</b></td><td>something similar to（〜に似た何か）</td></tr>
+      <tr><td class="cond">問2(ウ)</td><td><b>c on the other hand</b></td><td>老人↔重役の対比（挿入句）</td></tr>
+      <tr><td class="cond">問2(エ)</td><td><b>a even if</b></td><td>譲歩。後ろが節（we aren't）</td></tr>
+      <tr><td class="cond">問3</td><td colspan="2"><b>人々が本当の幸福な状態を達成できない1つの理由は、幸福とは外部（他人・環境）から自分の内側にもたらされるものだと信じているからである。</b></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>語義で外した（問1）</b><p><em>単語帳の第一義に飛びつかない</em>。frugal は見た目（ボロ服）に釣られず<u>直後の「新しい物を買わない」＋大富豪という事実</u>で「質素」に決める。look the part の part は「役柄」、flip side は文脈のマイナス内容から「不都合な側面」。<b>文脈の方向で決める</b>。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>空所で外した（問2）</b><p><u>まず品詞</u>。後ろが<em>節（S V）なら even if</em>（エ）。<em>名詞句なら contrary to / similar to</em>（ア・イ）。<em>挿入なら on the other hand</em>（ウ）。品詞で2〜3択に絞ってから、逆接／類似／対比の論理で1つに。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>和訳で外した（問3）</b><p>設問の指示<em>「内容がわかるように」</em>を最優先。<b>an outside-in job＝「幸福は外部（他人・環境）が自分にもたらすものだ、という考え」</b>と補って訳す。直訳『外から内への仕事』は不可。<u>fail to achieve＝「達成できない」</u>も要注意（「失敗して達成」ではない）。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    兵庫県立大の長文は<strong>①文脈依存の語義 ②つなぎ表現 ③内容補充和訳</strong>が軸。<u>語義は「方向」で、空所は「品詞→論理」で、和訳は「指示語・比喩の中身を補う」で</u>――この3原則を毎回同じ順で回せば、設計で安定して取れます。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は兵庫県立大学2022年英語（大問2）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・図表・採点基準はTHINKINGによるオリジナルです（配点は非公表のため、要素配分は学習用の目安）。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問1 語義（文脈）a〜d ===== */
+{id:"問1(1)", grp:"Q1", type:"語義（文脈）", lbl:"下線部 (1) ultimate", en:"the place they think is their (1)ultimate destination: Success and Happiness",
+ ask:"下線部(1) ultimate の意味としてもっともふさわしいものを a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"最終的な", ok:true},{t:"現実的な", ok:false},{t:"義務的な", ok:false},{t:"空想的な", ok:false}],
+ ev:{q:'the place they think is their <span class="h">ultimate</span> destination: Success and Happiness', jp:"「彼らが究極の（＝最終的にたどり着きたい）目的地だと考える場所＝成功と幸福」。"},
+ co:[{c:"gold",l:"語義｜ultimate",h:"<b>ultimate＝「究極の・最終の」</b>。ultimate destination＝<u>最終目的地</u>。「これ以上先はない、行き着く先」のイメージ。"},
+     {c:"verm",l:"罠",h:"つづりから <em>ultimate ≒ ultra</em> と連想して「最先端／空想的」に流れない。destination（目的地）と結びつく語義は「最終」。"}],
+ sol:[{m:"o",n:"a",t:"正解。ultimate destination＝最終目的地。"},{m:"x",n:"b",t:"「現実的な」の意味はない。"},{m:"x",n:"c",t:"「義務的な」は無関係。"},{m:"x",n:"d",t:"「空想的な」ではない。"}]},
+
+{id:"問1(2)", grp:"Q1", type:"語義（文脈）", lbl:"下線部 (2) worthy", en:"the progressive realization of a (2)worthy ideal",
+ ask:"下線部(2) worthy の意味としてもっともふさわしいものを a〜d から選べ。", answer:"c", kind:"choice",
+ choices:[{t:"時勢に乗った", ok:false},{t:"最先端の", ok:false},{t:"尊敬に値する", ok:true},{t:"利用価値のない", ok:false}],
+ ev:{q:'the progressive realization of a <span class="h">worthy</span> ideal', jp:"「価値ある（追い求めるに足る）理想の、段階的な実現」＝成功。worthy＝価値がある・尊敬に値する。"},
+ co:[{c:"gold",l:"語義｜worthy",h:"<b>worthy＝「価値のある・〜に値する・立派な」</b>。<u>worth（価値）＋-y</u> と同語源。ここでは「追い求めるに足る立派な理想」。選択肢では『尊敬に値する』が最も近い。"},
+     {c:"verm",l:"罠｜d 利用価値のない",h:"<em>-worthy</em>（trustworthy 等）は「〜に値する」でプラス方向。<u>「価値のない」(d)は正反対</u>。a/b はつづりの雰囲気に引っ張られた誤り。"}],
+ sol:[{m:"x",n:"a",t:"「時勢に乗った」は無関係。"},{m:"x",n:"b",t:"「最先端の」は worthy の語義でない。"},{m:"o",n:"c",t:"正解。worthy＝価値がある・尊敬に値する。"},{m:"x",n:"d",t:"「利用価値のない」は正反対。"}]},
+
+{id:"問1(3)", grp:"Q1", type:"語義（文脈）", lbl:"下線部 (3) frugal", en:"A (3)frugal man, he rarely bought himself anything new",
+ ask:"下線部(3) frugal の意味としてもっともふさわしいものを a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"貧乏な", ok:false},{t:"質素な", ok:true},{t:"陰険な", ok:false},{t:"裕福な", ok:false}],
+ ev:{q:'A <span class="h">frugal</span> man, he rarely bought himself anything new, including automobiles and clothing.', jp:"「質素な男である彼は、車も服も含め、新しいものをめったに買わなかった」。"},
+ co:[{c:"nav",l:"文脈で決める",h:"直後が根拠＝<em>「新しいものをめったに買わない」</em>。しかも彼は<u>銀行のオーナーで大富豪</u>（第7段落）。だから『貧乏(a)』でも『裕福(d)』でもなく、<b>お金はあるが使わない＝質素・倹約(b)</b>。"},
+     {c:"verm",l:"最大の罠｜a 貧乏 / d 裕福",h:"見た目（古着・ボロ車）だけなら『貧乏』に見えるが、正体は大富豪。<u>frugal は『財力の有無』ではなく『使い方（倹約）』の語</u>。"}],
+ sol:[{m:"x",n:"a",t:"貧乏ではない。実は銀行のオーナー。"},{m:"o",n:"b",t:"正解。frugal＝質素・倹約家。金はあるが使わない。"},{m:"x",n:"c",t:"「陰険な」は無関係。"},{m:"x",n:"d",t:"「裕福な」は事実だが、frugal の語義そのものではない（使い方の語）。"}]},
+
+{id:"問1(4)", grp:"Q1", type:"語義（イディオム）", lbl:"下線部 (4) look the part", en:"He was very successful, but certainly didn't (4)look the part.",
+ ask:"下線部(4) look the part の意味としてもっともふさわしいものを a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"それらしく見える", ok:true},{t:"役割を認識する", ok:false},{t:"部分的に正しく見える", ok:false},{t:"重要性に気づく", ok:false}],
+ ev:{q:'He was very successful, but certainly <span class="h">didn\'t look the part</span>.', jp:"「彼はとても成功していたが、まったくそれらしく（成功者らしく）は見えなかった」。"},
+ co:[{c:"gold",l:"イディオム｜look the part",h:"<b>look the part＝「（その役・地位に）ふさわしく見える／それらしく見える」</b>。the part は「役柄」。didn't look the part＝<u>成功者には見えなかった</u>。"},
+     {c:"verm",l:"罠｜c 部分的に",h:"part を「部分」と直訳して『部分的に正しく見える』に飛びつかない。<u>ここの part は『役柄』</u>。"}],
+ sol:[{m:"o",n:"a",t:"正解。look the part＝それらしく見える。"},{m:"x",n:"b",t:"「役割を認識する」ではない。"},{m:"x",n:"c",t:"part を「部分」と誤解した罠。"},{m:"x",n:"d",t:"「重要性に気づく」は無関係。"}]},
+
+{id:"問1(5)", grp:"Q1", type:"語義（イディオム）", lbl:"下線部 (5) the flip side", en:"…we also have to believe (5)the flip side, implying that another person can also make you very angry",
+ ask:"下線部(5) the flip side の意味としてもっともふさわしいものを a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"不都合な側面", ok:true},{t:"利用できる側面", ok:false},{t:"現実的でない側面", ok:false},{t:"期待できる側面", ok:false}],
+ ev:{q:'we also have to believe <span class="h">the flip side</span>, implying that another person can also make you very angry or sad', jp:"「他人が自分を幸せにできる」と信じるなら、その裏返し＝「他人が自分を怒らせ悲しませもできる」も信じねばならない。"},
+ co:[{c:"nav",l:"語義｜the flip side",h:"<b>the flip side＝「（コインなどの）裏面・反対の側面」</b>。flip＝ひっくり返す。ここでは<u>「他人が幸せにできる」の裏返し＝「他人が不幸にもできる」</u>という<b>望ましくない側面</b>。"},
+     {c:"teal",l:"なぜ『不都合な側面』か",h:"直後 implying 以下＝<em>怒らせる・悲しませる</em>という<u>マイナスの内容</u>。だから選択肢では『不都合な側面』が最適。"}],
+ sol:[{m:"o",n:"a",t:"正解。裏面＝ここでは怒り・悲しみという不都合な側面。"},{m:"x",n:"b",t:"「利用できる」ではない。"},{m:"x",n:"c",t:"「現実的でない」ではない。"},{m:"x",n:"d",t:"「期待できる」は方向が逆（マイナス内容）。"}]},
+
+/* ===== 問2 空所（つなぎ表現）a〜d ===== */
+{id:"問2(ア)", grp:"Q2", type:"空所（つなぎ表現）", lbl:"空所 (ア)", en:"( ア ) popular opinion, having one doesn't ensure the other",
+ ask:"空所(ア)に入れるのにもっとも適切な表現を a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"even if（たとえ〜でも）", ok:false},{t:"contrary to（〜に反して）", ok:true},{t:"on the other hand（他方で）", ok:false},{t:"similar to（〜に似て）", ok:false}],
+ ev:{q:'<span class="h">Contrary to</span> popular opinion, having one doesn\'t ensure the other — they don\'t go hand in hand.', jp:"「一般的な考えに反して、一方を持っても他方は保証されない」。"},
+ co:[{c:"nav",l:"論理｜常識をひっくり返す",h:"<b>contrary to popular opinion</b>「世間の常識に反して」。<u>直後に『一方を持っても他方は保証されない（＝常識と逆）』</u>が続くので、逆接の contrary to。"},
+     {c:"gold",l:"語法",h:"空所の後ろは名詞句 popular opinion。<em>even if は節（S V）を要求</em>するので不可。similar to では文意が逆（常識どおり）になる。"}],
+ sol:[{m:"x",n:"a",t:"even if は節を導く。後ろが名詞句なので不可。"},{m:"o",n:"b",t:"正解。contrary to popular opinion「常識に反して」。"},{m:"x",n:"c",t:"on the other hand は副詞句で前置詞的に名詞を続けられない。"},{m:"x",n:"d",t:"similar to だと『常識どおり』になり文意が逆。"}]},
+
+{id:"問2(イ)", grp:"Q2", type:"空所（つなぎ表現）", lbl:"空所 (イ)", en:"Most people believe in something ( イ ) Dictionary.com's definition of success",
+ ask:"空所(イ)に入れるのにもっとも適切な表現を a〜d から選べ。", answer:"d", kind:"choice",
+ choices:[{t:"even if（たとえ〜でも）", ok:false},{t:"contrary to（〜に反して）", ok:false},{t:"on the other hand（他方で）", ok:false},{t:"similar to（〜に似て）", ok:true}],
+ ev:{q:'Most people believe in something <span class="h">similar to</span> Dictionary.com\'s definition of success', jp:"「ほとんどの人は、Dictionary.com の成功の定義に似たものを信じている」。"},
+ co:[{c:"gold",l:"語法｜something similar to",h:"<b>something similar to ~</b>「〜に似た何か」。<u>something を後ろから修飾</u>する形容詞句。後ろは名詞句（辞書の定義）なので similar to がはまる。"},
+     {c:"verm",l:"罠",h:"直後で辞書の定義が肯定的に引かれる（＝反対していない）ので、contrary to は不可。"}],
+ sol:[{m:"x",n:"a",t:"even if は節を導く。不可。"},{m:"x",n:"b",t:"contrary to では『定義に反する』になり文意が逆。"},{m:"x",n:"c",t:"on the other hand は名詞を直接続けられない。"},{m:"o",n:"d",t:"正解。something similar to「〜に似た何か」。"}]},
+
+{id:"問2(ウ)", grp:"Q2", type:"空所（つなぎ表現）", lbl:"空所 (ウ)", en:"The bank executive, ( ウ ), looked successful, but … didn't appear to be happy.",
+ ask:"空所(ウ)に入れるのにもっとも適切な表現を a〜d から選べ。", answer:"c", kind:"choice",
+ choices:[{t:"even if（たとえ〜でも）", ok:false},{t:"contrary to（〜に反して）", ok:false},{t:"on the other hand（他方で）", ok:true},{t:"similar to（〜に似て）", ok:false}],
+ ev:{q:'his smile was warm and genuine … The bank executive, <span class="h">on the other hand</span>, looked successful, but … didn\'t appear to be happy.', jp:"（成功者に見えないが幸福な老人）に対し、「他方、女性重役は成功して見えたが幸福には見えなかった」。"},
+ co:[{c:"nav",l:"論理｜対比の合図",h:"直前は<em>老人（成功して見えないが幸福）</em>、空所の文は<em>女性重役（成功して見えるが不幸）</em>。<u>正反対の2者を並べる</u>ので <b>on the other hand「他方で」</b>。"},
+     {c:"gold",l:"語法",h:"前後にコンマで挟まれた<em>挿入句</em>。文と文の対比をつなぐ副詞句が入る。even if / similar to / contrary to はいずれも後ろに名詞や節を要し、この挿入位置に合わない。"}],
+ sol:[{m:"x",n:"a",t:"even if は節を導く接続詞。挿入句にならない。"},{m:"x",n:"b",t:"contrary to は後ろに名詞が必要。"},{m:"o",n:"c",t:"正解。on the other hand で老人と重役を対比。"},{m:"x",n:"d",t:"similar to では対比にならない。"}]},
+
+{id:"問2(エ)", grp:"Q2", type:"空所（つなぎ表現）", lbl:"空所 (エ)", en:"We can choose to look like we are successful, ( エ ) we aren't.",
+ ask:"空所(エ)に入れるのにもっとも適切な表現を a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"even if（たとえ〜でも）", ok:true},{t:"contrary to（〜に反して）", ok:false},{t:"on the other hand（他方で）", ok:false},{t:"similar to（〜に似て）", ok:false}],
+ ev:{q:'We can choose to look like we are successful, <span class="h">even if</span> we aren\'t.', jp:"「たとえ実際にはそうでなくても、私たちは成功しているように見せることを選べる」。"},
+ co:[{c:"nav",l:"論理｜譲歩",h:"「成功して<em>見せられる</em>／<em>たとえ本当は成功していなくても</em>」＝<b>譲歩</b>。空所の後ろは節（we aren't）なので<u>接続詞 even if</u>。"},
+     {c:"gold",l:"決め手｜後ろが節",h:"空所の後ろは <b>we aren't</b>（S＋V）＝<em>節</em>。節を導けるのは even if だけ（他は前置詞句・副詞句）。"}],
+ sol:[{m:"o",n:"a",t:"正解。even if we aren't「たとえ実際はそうでなくても」。後ろが節。"},{m:"x",n:"b",t:"contrary to は後ろに名詞。節は不可。"},{m:"x",n:"c",t:"on the other hand は節を導けない。"},{m:"x",n:"d",t:"similar to は節を導けない。"}]},
+
+/* ===== 問3 和訳（内容補充つき記述） ===== */
+{id:"問3", grp:"Q3", type:"英文和訳（内容補充つき）", lbl:"下線部 (A)", en:"One reason people fail to achieve a state of real happiness is because they believe it's an outside-in job.",
+ ask:"下線部(A)を、an outside-in job の内容がわかるようにして、日本語に直しなさい。", kind:"desc", answer:"下記模範解答",
+ steps:[
+  {t:"骨格をつかむ", d:"<b>One reason (S) … is because …（V＋C）</b>「〜する1つの理由は、…だからである」。<em>reason … because</em> は口語的だが「理由は〜だから」で処理する。"},
+  {t:"fail to do を正しく訳す", d:"<b>fail to achieve</b>「達成<em>できない</em>／達成し<em>そこなう</em>」。<u>「失敗して達成する」ではない</u>。fail to do＝「〜しない・できない」。"},
+  {t:"an outside-in job の中身を補う（設問の核心）", d:"設問は<em>「内容がわかるように」</em>訳せと要求。<b>outside-in job＝『幸福は外から内へ入ってくる（外部＝他人や環境が自分を幸せにしてくれる）ものだ』という考え方・仕事</b>。<u>この説明を訳の中に織り込む</u>のが得点条件。直後の『他の影響が幸福を作る（outside influences create happiness）』が根拠。", cite:'They mistakenly act on the belief that <span class="h">outside influences create happiness</span>.'},
+  {t:"日本語に整える", d:"「人々が本当の幸福な状態を達成できない1つの理由は、<u>幸福とは外部（他人や周囲）が自分にもたらしてくれるものだ</u>と信じているからである」。<em>it＝happiness</em> を明示すると読みやすい。"},
+ ],
+ model:["人々が本当の幸福な状態を達成できない1つの理由は、幸福とは外部から（＝他人や周囲の影響によって）自分の内側にもたらされるものだと信じているからである。"],
+ mnote:"<b>outside-in job の中身を必ず言葉で補う</b>のが設問の指示。『外から内へ＝他人・外部が自分を幸せにしてくれるという考え』を訳に入れる。fail to＝「できない」も落とさない。",
+ rubric:[
+  {t:"<b>One reason … is because（〜する1つの理由は…だからだ）</b>の骨格", p:2, must:true},
+  {t:"<b>fail to achieve real happiness（本当の幸福を達成できない）</b>＝fail to を「できない」と訳す", p:2, must:true},
+  {t:"<b>an outside-in job の中身を補足</b>＝「幸福は外部（他人・環境）から与えられる／外から内へ入ってくるものだ」と説明できている", p:4, must:true},
+  {t:"<b>believe it's ~（〜だと信じている）</b>＝理由の締め（〜から／〜ため）", p:2, must:false}],
+ total:10,
+ ng:[
+  {bad:"人々が本当の幸福を達成できない理由の1つは、それが外から内への仕事だと信じているからだ。", why:"<b>an outside-in job を『外から内への仕事』と直訳したまま</b>で、設問の指示『内容がわかるように』を満たしていない。<u>「他人や外部が自分を幸せにしてくれる、という考え」まで補う</u>必要がある。"},
+  {bad:"人々が本当の幸福を達成しそこなうのは、外部の影響が幸福を作ると信じることに失敗するからだ。", why:"<b>fail の位置を取り違えて二重に誤訳</b>。fail to achieve＝『達成できない』であって、『信じることに失敗』ではない。"},
+  {bad:"人々が本当の幸福な状態を得る1つの理由は、幸福が外から来るものだと信じるからだ。", why:"<b>fail（できない）を落として意味が正反対</b>に。『達成<u>できない</u>理由』が『得る理由』になってしまっている。"},
+ ]},
+];
+
+
+/* ===== ENGINE ===== */
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['Q1','qWrapQ1','qidxQ1'],['Q2','qWrapQ2','qidxQ2'],['Q3','qWrapQ3','qidxQ3']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+</script>
+</body>
+</html>

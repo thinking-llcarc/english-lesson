@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜青山学院大学 2024 大問3（ボトル水とブランドの幻想）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">青</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>青山学院大学 2024 ／ 大問3</span></div>
+    <div class="top-meta">ボトル水とブランドの幻想<br>設問A 内容一致10問＋設問B 和訳</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>LOGIC</small>論の骨格</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>Q11–15</small>設問A 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>Q16–20</small>設問A 後半</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>設問B</small>和訳</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>7ドルの水は、裏の蛇口から出ていた。<br>この英文は「ブランド＝幻想」を暴く<br>論説である。</h1>
+    <p>水道水をフランス語の名前で7ドルで売る ― この掴みから始まり、「ボトル水の1/4は水道水」「サンペレグリノとペリエは同じネスレ」「ランコムとメイベリンは同じ工場」と証拠を積み上げ、<strong>「私たちの選択肢は、思っているよりずっと少ない」</strong>という結論へ至る。設問はすべて、この一本の論旨から根拠が取れる。</p>
+    <div class="thesis"><b>一貫する主張：</b>私たちが払っているのは<b>品質ではなくイメージ</b>だ。少数の巨大企業が競合ブランドごと支配し、<b>多様性の「幻想」</b>を作っている。だから質的に異なる選択肢は、実際には非常に少ない。</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>段落構成</span></div>
+      <div class="stat"><b>11</b><span>設問</span></div>
+      <div class="stat"><b>10</b><span>内容一致</span></div>
+      <div class="stat"><b>1</b><span>和訳</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">この大問の設問構成 ― 8割が「内容一致」、その中身を分類する</h2>
+  <p class="lead">設問Aは全10問が内容一致だが、<strong>問い方は4タイプ</strong>に分かれる。タイプごとに解き筋が違う。まず何を問われているかを見極める。</p>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:22%">該当設問</th><th>解き筋</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">NOT問題</td><td>⑪ ⑫ ⑬</td><td><b>本文にあるものを消す</b>。残った「本文にない／逆のもの」が答え。<u>設問文の NOT を見落とさない</u>のが最重要。</td></tr>
+      <tr><td class="cond">含意（implied）</td><td>⑯ ⑰</td><td>明言されていないが<b>本文の事実から論理的に必ず言えること</b>。想像・願望は不可。</td></tr>
+      <tr><td class="cond">事実・定義</td><td>⑬ ⑭ ⑮ ⑱</td><td>本文の該当箇所を<b>指さして</b>確認。数値は<u>必ず計算</u>（⑭）、定義は<u>カラクリを理解</u>（⑮）。</td></tr>
+      <tr><td class="cond">語句・内容一致</td><td>⑲ ⑳</td><td>⑲は real ↔ manufactured の対比。⑳は<b>各選択肢を本文と照合</b>し、本文にない・逆の記述を消す。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">この英文で落とすポイント</h2>
+  <div class="grid2">
+    <div class="box verm"><span class="lab">NOTの見落とし</span>⑪⑫⑬は<em>「〜でないもの」</em>を選ぶ。急いで「合っているもの」を選ぶと全滅する。<u>設問文の NOT に丸をつけてから解く</u>。</div>
+    <div class="box gold"><span class="lab">impliedの飛躍</span>⑯⑰は<em>「本文から必ず言えるか」</em>で判定。それらしいだけの選択肢（願望・比較）を消す。</div>
+    <div class="box teal"><span class="lab">数値は計算</span>⑭は 27.6÷5.7≒4.8＝<em>ほぼ5倍</em>。桁の印象で「約10倍」に飛びつかない。</div>
+    <div class="box navy"><span class="lab">本文にある/ない</span>⑳は各選択肢を本文と照合。1「マウント・フジが安っぽい」は本文にない（むしろ高級）。<em>2「ランコムは裕福な客向け」が本文と合致</em>。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは<strong>選択肢をタップすると自分で解ける</strong>。「答え・根拠を表示」で正解／<strong>根拠（本文の該当箇所）</strong>／全選択肢の✓✗／解き筋まで開きます。設問Bの和訳は<strong>解答プロセス＋自己採点ルーブリック＋NG例</strong>つき。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 8段落の流れと設問の在りか<span class="sub">「掴み → 広告戦略 → 種明かし → 寡占 → 幻想 → 結論」。証拠を積み上げる論説。どの設問がどこに埋まっているかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入・掴み</span></div><div class="para-b">
+      <div class="theme">水ソムリエのいたずら</div><p>一流レストランで<em>水道水をフランス語の名前で7ドル</em>で提供。客は「より新鮮・滑らか」と絶賛。実は全部<u>裏の蛇口の水</u>。『ロー・デュ・ロビネ』＝「水道水」のフランス語。</p><div class="tags"><span class="utag">⑪</span><span class="utag">⑫</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>広告戦略</span></div><div class="para-b">
+      <div class="theme">『違いがある』の刷り込み</div><p>買う人の半数は<em>水道水の安全性への懸念</em>から買う。ラベルは「純粋・新鮮・自然」を誇り、<u>ボトル入り以外は不純・危険</u>だと含意。1987年5.7→2007年27.6ガロンへ急増。</p><div class="tags"><span class="utag">⑬</span><span class="utag">⑭</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>種明かし</span></div><div class="para-b">
+      <div class="theme">4分の1は水道水</div><p>ボトル水は<em>1ガロン1,000倍</em>の値段。だが<u>ブランドの1/4は水道水</u>。ポーランドスプリングは駐車場の下から汲む。定義上は「泉」でも自然の場所ではない。</p><div class="tags"><span class="utag">⑮</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>自由市場の幻想</span></div><div class="para-b">
+      <div class="theme">敵は見逃すほうが得</div><p>自由市場は悪い製品から守ってくれるはず ― と思いがち。だが<em>ライバルを叩くより見逃すほうが利益</em>になる。<u>同じ会社所有なら協力さえする</u>。</p><div class="tags"><span class="utag">⑯</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>寡占の実態</span></div><div class="para-b">
+      <div class="theme">ネスレの独占</div><p>サンペレグリノもペリエも<em>ネスレ所有</em>。だから<u>コーラ対ペプシのような競争は起きない</u>。シリアルも化粧品も少数の大企業に集約。</p><div class="tags"><span class="utag">⑰</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>多様性の幻想</span></div><div class="para-b">
+      <div class="theme">同じ水に別ラベル</div><p>メガ企業が<em>多様性の幻想</em>を作る。1.30ドルのクリスタルガイザーと1ドルの365は<u>同じ水源</u>。ジェネリック薬は<u>同じ工場の同じ錠剤を安く</u>売る。</p><div class="tags"><span class="utag">⑱</span><span class="utag">⑲</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>化粧品の例</span></div><div class="para-b">
+      <div class="theme">同じ工場・同じ中身</div><p>ランコムとメイベリンは<em>どちらもロレアル</em>。同じ工場・ほぼ同じ組成・性能差なし。37ドルと8.99ドルの差は<u>品質以外</u>。</p><div class="tags"><span class="utag">⑳</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>結論</span></div><div class="para-b">
+      <div class="theme">選択肢は思うほど多くない</div><p>企業は<em>製品も競合ブランドも支配</em>する。高い＝高品質と思い込むが、<u>質的に異なる選択肢は認識よりずっと少ない</u>。</p><div class="tags"><span class="utag">設問B</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← この英文の攻略</button><span class="sp"></span><button class="btnp" data-go="2">論の骨格へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Argument Flow</div>
+  <h1 class="head">論の骨格 ― 「具体例 → 一般化 → 結論」の積み上げ<span class="sub">この英文は、身近な事例を次々と示して読者の常識を崩し、最後に一般的な結論へ持ち上げる構成。事例と結論の対応を掴めば、⑯〜⑳と和訳が一気に見える。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">論の背骨</h2>
+  <div class="flow">
+    <div class="fnode"><div class="fdot">1</div><div class="fbody"><b>掴み（水ソムリエ）</b><p>水道水を高級水と信じて絶賛する客。<em>「イメージにだまされる」</em>という主題を体感させる。</p></div></div>
+    <div class="fnode"><div class="fdot">2</div><div class="fbody"><b>広告戦略の分析</b><p>ラベルの自然イメージが<em>「ボトル以外は不純」</em>と刷り込む。消費は5倍に急増。</p></div></div>
+    <div class="fnode"><div class="fdot">3</div><div class="fbody"><b>種明かし</b><p>1/4は水道水。「泉」も駐車場の下。<u>ラベルの約束は中身を伴わない</u>。</p></div></div>
+    <div class="fnode"><div class="fdot">4</div><div class="fbody"><b>一般化①：市場の逆説</b><p>自由市場は守ってくれない。<em>ライバルを見逃すほうが得</em>。同一資本なら協力さえする。</p></div></div>
+    <div class="fnode"><div class="fdot">5</div><div class="fbody"><b>一般化②：寡占</b><p>ネスレ、ロレアル、ケロッグ…。<u>少数の巨大企業が競合ブランドごと支配</u>。</p></div></div>
+    <div class="fnode"><div class="fdot">6</div><div class="fbody"><b>結論：多様性の幻想</b><p>作られるのは<em>イメージの違い</em>だけ。中身は同じ。<b>質的に異なる選択肢は、思うよりずっと少ない</b>。</p></div></div>
+  </div>
+
+  <div class="box gold"><span class="lab">「本物の違い」と「作られた違い」</span>
+    この英文の背骨は<strong>real differences（本物の違い） ↔ manufactured differences（作られた違い）</strong>の対比。<u>企業が最大化するのは image の違いだけ</u>（中身・品質・水源は同じ）。⑲はこの対比そのもの、和訳(B)もここに帰結する。⑳は化粧品の段落（異なる客層）と照合する。</div>
+
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">私たちの思い込み<small>WHAT WE ASSUME</small></div><div class="vs-bd">
+      <div class="r"><b>市場</b>自由競争が悪い製品から守ってくれる</div>
+      <div class="r"><b>価格</b>高い製品ほど品質が高い</div>
+      <div class="r"><b>選択</b>幅広い選択肢がある</div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">本文が示す現実<small>THE REALITY</small></div><div class="vs-bd">
+      <div class="r"><b>市場</b>競合を見逃すほうが利益。同一資本は協力さえする</div>
+      <div class="r"><b>価格</b>差はイメージ代。中身・性能は同じ</div>
+      <div class="r"><b>選択</b>質的に異なる選択肢はずっと少ない</div>
+    </div></div>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問A 前半へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">設問A 前半 ― ⑪〜⑮<span class="sub"><b>⑪⑫⑬はNOT問題</b>。「〜でないもの」を選ぶことを最初に確認。⑭は計算、⑮は「泉」の定義のカラクリ。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxA1"></div>
+  <div id="qWrapA1"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 論の骨格</button><span class="sp"></span><button class="btnp" data-go="4">設問A 後半へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">設問A 後半 ― ⑯〜⑳<span class="sub"><b>⑯⑰は含意（implied）問題</b>。本文から論理的に必ず言えるかで判定。⑳は各選択肢を本文と照合する（1は本文になく、2が合致）。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxA2"></div>
+  <div id="qWrapA2"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問A 前半</button><span class="sp"></span><button class="btnp" data-go="5">設問B 和訳へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">設問B ― 下線部(B)の和訳<span class="sub">本文の結論そのもの。<b>far fewer … than</b>（ずっと少ない）と <b>qualitatively</b>（質的に）の2点で差がつく。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxB"></div>
+  <div id="qWrapB"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 設問A 後半</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と訳出ポイント<span class="sub">THINKINGオリジナル訳（全45文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>は設問・主張に直結する急所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳では答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙った。<em>構文の骨（主語・修飾・比較・譲歩）は保ったまま、日本語として自立させている</em>――設問Bの和訳を書くときの言い回しの見本として使ってほしい。</div><div class="tr-sec"><b>第1段落</b>｜『ペン＆テラー』の実験 ― 水ソムリエのいたずら　<span class="qbadge">⑪</span> <span class="qbadge">⑫</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">テレビ番組『ペン＆テラー』が、ボトル入り飲料水業界を取り上げた。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らは俳優を1人雇い、一流レストランで<em>「ウォーターソムリエ」</em>を演じさせた。</div></div><div class="jpline"><div class="n">③</div><div class="s">その仕事は、<em>『マウント・フジ』や『ロー・デュ・ロビネ』といった名前のついたボトル入り飲料水を、革張りのメニューにして、疑うことを知らない客に提示する</em>ことだった。1本あたり7ドルもする水である。</div></div><div class="jpline"><div class="n">④</div><div class="s">彼はさまざまな銘柄の長所を説明した。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">客が水を買うと決めると、彼はその水を客のグラスに注ぎ、残りのボトルをテーブルの脇に置いた氷入りのワインクーラーに入れた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">彼が味の感想を尋ねると、客たちは、その水が水道水よりも明らかに優れていることに同意し、<em>「より新鮮」で「より滑らか」だ</em>と評した。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">ところが実際には、その水は世界中のエキゾチックな場所でボトル詰めされたものではなく、<em>すべて、レストランの裏手の屋外の蛇口から汲まれたもの</em>だった。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">『ロー・デュ・ロビネ』とは、<em>「水道水」を意味するフランス語</em>にすぎない。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第1段落</div><ul><li><b>hire O to play …</b>「Oを雇って〜を演じさせる」。to present … diners は「客に提示する（のが仕事）」。</li>
+    <li><b>unsuspecting diners</b>「（仕掛けだと）<em>疑っていない客</em>」。⑪⑫の鍵。<u>狙いは「人がいかにイメージに影響されるか」を示すこと</u>。</li>
+    <li><b>rather than having been bottled …, all … came from an outdoor tap</b>：<em>rather than＋完了動名詞</em>「〜されたのではなく」。実は全部ただの水道水、というオチ。<span class="qbadge">⑳</span></li>
+    <li><b>L'eau du Robinet is just French for "tap water."</b>「＝『水道水』のフランス語にすぎない」。<u>フランス語だと高級に響く前提を利用</u>。⑫の直接根拠。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜『違いがある』という広告戦略　<span class="qbadge">⑬</span> <span class="qbadge">⑭</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">もしあなたが、ボトル入り飲料水のほうが水道水より清潔だと信じてボトル入りの水を好むとしても、そう思うのはあなた1人ではない。</div></div><div class="jpline"><div class="n">②</div><div class="s">ボトル入り飲料水を飲む人のほぼ半数が、<em>水道水の安全性への懸念から、一部あるいは専らその理由で</em>、その製品を買っている。</div></div><div class="jpline"><div class="n">③</div><div class="s">彼らは、クリスタルガイザー・ナチュラル・アルパインスプリング・ウォーターのボトルに描かれたようなイメージに触発されているのだ。</div></div><div class="jpline"><div class="n">④</div><div class="s">片側には手つかずのオシビー山脈が描かれ、反対側には<em>「品質・味・新鮮さを保つため、常に源泉でボトル詰めされる。そこには違いがある」</em>と書かれている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">ほぼすべてのボトル入り飲料水のラベルは、その製品が<em>「純粋」「新鮮」あるいは「自然」であると誇り</em>、山・泉・その他の手つかずの自然の水源のイメージで飾られている。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">そこに含意されているのは、<em>そのようなボトルに入っていない水は、おそらく不純で不自然、ことによると危険なほどだ</em>ということである。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">この広告戦略は、これまで途方もなくうまくいってきた。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">1987年、アメリカ人は1年に平均5.7ガロンのボトル入り飲料水を飲んでいた。20年後、その数字は27.6ガロンへと跳ね上がった。これは<em>牛乳やビールの平均消費量をも上回る</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第2段落</div><ul><li><b>partly or only because of concerns about tap-water safety</b>「安全性への懸念から、<em>一部あるいは専ら</em>」。⑬の根拠。<u>「より安全・清潔だと思われている」＝一般的な思い込み</u>。</li>
+    <li><b>THERE IS A DIFFERENCE.</b>「違いがある」＝広告コピー。<u>本文全体の皮肉の的</u>――実は「違い」はイメージだけ。</li>
+    <li><b>The implication is that …</b>「含意は〜」。<em>ボトル入り以外は不純・危険</em>という刷り込み。</li>
+    <li><b>soared to 27.6 gallons</b>：<em>soar「急上昇」</em>。5.7→27.6 は<u>約4.8倍＝ほぼ5倍</u>。⑭の数値。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜種明かし ― 4分の1は水道水　<span class="qbadge">⑮</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ボトル入り飲料水の顧客は、<em>1ガロンあたりで換算すると、水道水の1,000倍もの金額</em>を支払っている。</div></div><div class="jpline"><div class="n">②</div><div class="s">ところが実際には、<em>ボトル入り飲料水ブランドの4分の1は、家庭や公共の水道に供給するのと同じ水源から汲み上げられた水道水</em>なのである。</div></div><div class="jpline"><div class="n">③</div><div class="s">残りの製品については、ラベルは法律的には正しいが、<em>製品はしばしば、暗に示された約束を満たしていない</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">たとえばポーランドスプリングは、<em>駐車場の下などを含む人工的な水源から水を汲み上げている</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">それらは定義上は「泉（スプリング）」だが、<em>ボトルのラベルが思い起こさせるような自然の場所で見つかるものでは決してない</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第3段落</div><ul><li><b>1,000 times more on a per-gallon basis</b>「1ガロン換算で1,000倍」。<em>on a ~ basis</em>「〜を基準に」。</li>
+    <li><b>a quarter of bottled water brands are tap water</b>「ブランドの4分の1は水道水」＝<u>種明かしの核</u>。</li>
+    <li><b>Though "springs" by definition, they sure aren't found in the natural locations …</b>：⑮の根拠。<b>spring の定義＝「地下から水が湧き出る場所」</b>だから<u>駐車場の下の人工の穴でも"spring"を名乗れる</u>。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜自由市場の幻想 ― 敵は見逃すほうが得　<span class="qbadge">⑯</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私たちは、自由市場は低品質あるいは不必要な製品から私たちを守るように機能すると考えがちだ。</div></div><div class="jpline"><div class="n">②</div><div class="s">というのも、個々のブランドがすべて互いに競争しているのであれば、成功するには、人々が必要とする優れた製品を開発する必要がある、と思えるからである。</div></div><div class="jpline"><div class="n">③</div><div class="s">そして、<em>あるブランドによる虚偽の、あるいは誤解を招く広告は、ライバルブランドによって指摘され、挑戦されると期待していないだろうか</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>そうではない――「敵」を見逃すほうが、製品そのものの背後にある考え全体に異議を唱えるよりも利益になる場合には、そうはならないのだ</em>。あなた自身も同じその製品を売っているのだから。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">異なるブランドどうしが、同じ会社に所有されている場合には、<em>互いに積極的に協力し合うことさえある</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第4段落</div><ul><li><b>We like to think that the free market … protects us</b>「〜と考えたがる」。<u>「素朴な期待 → 現実は逆」の構図</u>。</li>
+    <li><b>Not when overlooking the "enemy" is more profitable than objecting …</b>：<em>前文の期待を Not で打ち消す</em>省略。「〜な場合には（期待どおりに）ならない」。⑯の答え＝<b>競合を見逃すほうが利益になるとき</b>。<span class="qbadge">⑯</span></li>
+    <li><b>the product you are also selling</b>「あなた<em>もまた</em>売っている製品」。ライバルを叩けば自分の首も絞まる。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜ネスレの独占 ― コーラ対ペプシとの違い　<span class="qbadge">⑰</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">実は、サンペレグリノとペリエは、どちらもネスレが所有しており、その他にも28のボトル入り飲料水ブランドをネスレは持っている。</div></div><div class="jpline"><div class="n">②</div><div class="s">その結果、<em>コカ・コーラとペプシの間で見られるような広告競争は、両者の間では見られない</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">この現象は、決してボトル入り飲料水に限らない。</div></div><div class="jpline"><div class="n">④</div><div class="s">スーパーマーケットのシリアルの大部分は、ケロッグやゼネラルミルズ社によって生産されており、美容製品の大部分もロレアルかエスティ・ローダーにたどり着くことができる。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第5段落</div><ul><li><b>San Pellegrino and Perrier are both owned by Nestlé</b>：⑰の根拠。<u>コーラとペプシは激しく競争する＝別会社に所有されている</u>と示唆される。<span class="qbadge">⑰</span></li>
+    <li><b>you won't see the same level of advertising competition</b>「同レベルの広告競争は<em>見られない</em>」。同一資本＝競争しない。</li>
+    <li><b>can be traced back to either A or B</b>「AかBに起源をたどれる」＝<em>寡占</em>の例示。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜多様性の幻想 ― 同じ水に別ラベル　<span class="qbadge">⑱</span> <span class="qbadge">⑲</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ほとんどあらゆる商業分野で、生産者は合併したり、買収されたり、ブランド名を売却したりしている。</div></div><div class="jpline"><div class="n">②</div><div class="s">その結果、<em>これら少数のメガコーポレーションが、自社ブランドの提供する多様性を正確に決定しており、真の多様性を生み出すことは彼らの利益にはならない</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">むしろ彼らは、<em>イメージの違いを最大限に引き出し、それによって多様性の幻想を作り出す</em>ことを目指している。</div></div><div class="jpline"><div class="n">④</div><div class="s">1.30ドルのクリスタルガイザーのボトルは、ホールフーズの365オーガニックウォーター・ブランドの1ドルのボトルと<em>同じ水源から得られた水</em>であり、実は、スーパーの多くの店舗ブランドは、<em>ラベルだけでしか区別できない</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">ジェネリック医薬品は、ときには同じ会社が製造しているにもかかわらず、有名ブランドよりも安価だ。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">たとえば、薬のシンバスタチンはメルク製薬によって『ゾコール』としてブランド化されているが、メルクの研究所で製造された<em>まったく同じ錠剤</em>が、メルクのロゴを付けたまま、ジェネリック形式でドクター・レディース・ラボラトリーズを通じて販売されている。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第6段落</div><ul><li><b>it is not in their interest to create true variety</b>「真の多様性を生むのは利益にならない」＝⑲「manufactured differences」の核心。</li>
+    <li><b>maximize differences in image, thereby creating the illusion of variety</b>：⑲の直接根拠。<u>本物の違いではなく<b>イメージの違い</b>＝「作られた違い」</u>。<span class="qbadge">⑲</span></li>
+    <li><b>the same pills … sold in generic form through Dr. Reddy's</b>：⑱の根拠。<u>ドクター・レディースはメルク製の同一の薬を<b>ジェネリック（安価）</b>で売る</u>。<span class="qbadge">⑱</span></li></ul></div><div class="tr-sec"><b>第7段落</b>｜化粧品の例 ― 同じ工場・同じ中身　<span class="qbadge">⑳</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">生産者が同一でなくても、意外に似ている場合がある。</div></div><div class="jpline"><div class="n">②</div><div class="s">化粧品のランコムとメイベリンのブランドは、非常に異なるイメージを持ち、異なる消費者をターゲットにしているが、<em>どちらもロレアルが所有している</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">彼らのマットファンデーションは、<em>同じ工場で製造されており、その組成はほぼ同じで、性能にはわずかな違いもない</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">8.99ドルのメイベリン・ニューヨークのドリーム・マット・ムース・ファンデーションではなく、37ドルのランコムのマジック・マット・ソフト-マット-パーフェクティング・ムース・メイクアップを購入するとき、あなたは<em>品質以外のものにお金を払っている</em>のである。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第7段落</div><ul><li><b>they may still be more similar than we would expect</b>「（生産者が違っても）<em>思っている以上に似ている</em>」。前段落からのさらに一歩。</li>
+    <li><b>made in the same factories, nearly identical in their composition, no detectable difference in performance</b>：<u>同じ工場・ほぼ同じ組成・性能差なし</u>の三点セット。⑳選択肢2の根拠。<span class="qbadge">⑳</span></li>
+    <li><b>you're paying for something other than quality</b>「品質<em>以外</em>のものに払っている」＝ブランドイメージ代。<u>本文の主題そのもの</u>。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜結論 ― 選択肢は思うほど多くない　<span class="qbadge">設問B</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">企業がこれをやってのけられるのは、<em>特定の製品だけでなく、競合するブランドもコントロールしている</em>からである。</div></div><div class="jpline"><div class="n">②</div><div class="s">そのため、どの違いが本物で、どの違いが作り出されたものなのかを判断するのが非常に難しくなる。</div></div><div class="jpline"><div class="n">③</div><div class="s">私たちは、<em>より高価な製品は品質が高いと思い込みがち</em>だ。もし安い製品が同じように効果的であれば、メーカーはその事実を宣伝するチャンスを逃さないはずだ、と考えてしまう。</div></div><div class="jpline"><div class="n">④</div><div class="s">しかし、両方のブランドがどちらも同じ会社によって製造されている場合は、<em>同じ製品を異なるブランドで異なる価格で販売する方が利益は上がり</em>、ぶ厚い財布を持つ人々をだまして高く売るほうが、より利益が上がる。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>私たちは幅広い選択肢を持っていると感じがちだが、実際には、質的に異なる選択肢は、認識しているよりもずっと少ないのである。</em></div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第8段落</div><ul><li><b>they control not just a particular product but also its competing brands</b>「特定の製品<em>だけでなく</em>競合ブランド<em>も</em>支配」。からくりが成立する理由。</li>
+    <li><b>【設問B】Even though we may feel we have a wide variety of choices, we actually have far fewer qualitatively different options than we realize.</b><br>＝<em>Even though</em>（譲歩）＋主節。<b>far fewer … than we realize</b>＝<u>far は比較級 fewer の強調「はるかに」</u>。「認識しているよりずっと少ない」。<span class="qbadge">設問B</span></li>
+    <li><b>qualitatively different options</b>「<em>質的に</em>異なる選択肢」＝<u>見かけの数ではなく中身が本当に違う数</u>が少ない。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 設問B</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">設問</th><th style="width:12%">解答</th><th>ひとことポイント</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">⑪</td><td class="tr"><b>3</b></td><td>NOT。目的は「良い水の提供」ではない（裏の水道水）</td></tr>
+      <tr><td class="cond">⑫</td><td class="tr"><b>3</b></td><td>NOT。ラベルで正体がバレたら仕掛けが成立しない</td></tr>
+      <tr><td class="cond">⑬</td><td class="tr"><b>1</b></td><td>NOT。「安い」は思い込みでない（実際1,000倍高い）</td></tr>
+      <tr><td class="cond">⑭</td><td><b>1</b></td><td>27.6÷5.7≒4.8＝ほぼ5倍</td></tr>
+      <tr><td class="cond">⑮</td><td><b>2</b></td><td>spring＝地下から水が湧く場所（人工でも可）</td></tr>
+      <tr><td class="cond">⑯</td><td><b>1</b></td><td>同一メガ企業所有 → 虚偽広告が放置される</td></tr>
+      <tr><td class="cond">⑰</td><td><b>1</b></td><td>implied：激しく競争＝コーラとペプシは別会社</td></tr>
+      <tr><td class="cond">⑱</td><td><b>2</b></td><td>ドクター・レディース＝同じ薬を安く（ジェネリック）</td></tr>
+      <tr><td class="cond">⑲</td><td><b>1</b></td><td>manufactured＝イメージの違い（illusion of variety）</td></tr>
+      <tr><td class="cond">⑳</td><td><b>2</b></td><td>ランコム(37ドル)＞メイベリン(8.99ドル)。高価なランコムが裕福な客向け</td></tr>
+      <tr><td class="cond">設問B</td><td colspan="2"><b>私たちは幅広い選択肢を持っていると感じがちだが、実際には、質的に異なる選択肢は、認識しているよりもずっと少ないのである。</b></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>NOT問題で外した（⑪⑫⑬）</b><p>設問文の<em>NOT／NOT an aim</em>にまず丸をつける。<u>本文に書いてある選択肢を消していき、残った「本文にない／逆」を選ぶ</u>。「合っているもの」を選ぶと必ず外す。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>含意問題で外した（⑯⑰）</b><p>implied は<em>「本文の事実から論理的に必ず言えるか」</em>。⑰は『同一資本は競争しない→コーラとペプシは激しく競争する→ゆえに別会社』という<u>対偶的な推論</u>。願望（3）や無根拠の比較（2）を消す。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>事実・定義で外した（⑭⑮⑱）</b><p>数値は<em>必ず割り算</em>（⑭）。定義は<u>本文のカラクリ</u>を押さえる（⑮＝人工の穴でも「泉」）。⑱はジェネリック＝安い、を取り違えない。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>主旨・語句で外した（⑲⑳）</b><p><em>real ↔ manufactured（イメージ）</em>の対比が⑲の核。⑳は<u>各選択肢を本文と照合</u>し、本文にない・逆の記述（1）を消す。2は「異なる客層・37ドル対8.99ドル」に合致。</p></div></div>
+  <div class="route"><div class="rn">E</div><div><b>和訳で外した（設問B）</b><p><b>far fewer than</b>（ずっと少ない）＝far は比較級の強調。<b>qualitatively</b>（質的に）を落とさない。<u>Even though の譲歩と feel／actually の対比</u>を訳に出す。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    青学の長文は<strong>内容一致が主戦場</strong>。<u>①設問タイプ（NOT／implied／事実／主旨）を見極める ②本文の一文を必ず指さす ③選択肢の「すり替え・逆・言い過ぎ・部分事実」を消す</u>。この3手を固定すれば、内容一致は設計で安定します。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は青山学院大学2024年英語（大問3）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・図表・採点基準はTHINKINGによるオリジナルです（配点は非公表のため、要素配分は学習用の目安）。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+{id:"⑪", grp:"A1", type:"NOT問題（目的）", lbl:"設問A ⑪", en:"Which was NOT an aim of the water sommelier in Penn & Teller?",
+ ask:"『ペン＆テラー』の水ソムリエの目的で なかった ものはどれか。", answer:"3", kind:"choice",
+ choices:[{t:"人がいかに簡単に影響されるかを調べること。", ok:false},{t:"客をだますこと。", ok:false},{t:"客に最高の水を提供すること。", ok:true}],
+ ev:{q:'all the apparently high-end water came from <span class="h">an outdoor tap behind the restaurant</span>', jp:"出された「高級水」は全部レストラン裏の水道水。番組の狙いは「人は簡単に思い込む」ことの実証であり、良い水の提供ではない。"},
+ co:[{c:"nav",l:"NOT問題の解き筋",h:"「目的でなかったもの」を選ぶ。<u>本文にある目的を消していく</u>。番組の目的＝①いかに簡単に影響されるか実証、②客をだます（仕掛ける）。<b>③「最高の水を提供」は真逆</b>＝水道水を出していた。"},
+     {c:"verm",l:"なぜ3か",j:"",h:"高級水に見せかけて実際は水道水。<em>良い水を出す意図はゼロ</em>。よって3が「目的でない」＝正解。"}],
+ sol:[{m:"o",n:"1",t:"目的である。人がイメージにいかに влияさ…（影響され）やすいかを示す実験。→NOTではない。"},
+      {m:"o",n:"2",t:"目的である。unsuspecting diners（疑わない客）を仕掛けにかけている。→NOTではない。"},
+      {m:"x",n:"3",t:"<b>目的でない＝正解</b>。出したのは裏の水道水。最高の水を提供する意図はない。"}]},
+
+{id:"⑫", grp:"A1", type:"NOT問題（前提）", lbl:"設問A ⑫", en:"…did NOT assume when he named one bottled water L'eau du Robinet?",
+ ask:"ソムリエがボトル水を『ロー・デュ・ロビネ』と名づけたとき、前提として いなかった ことはどれか。", answer:"3", kind:"choice",
+ choices:[{t:"フランス語のほうが上品に聞こえる。", ok:false},{t:"客はフランス語を知らない。", ok:false},{t:"ラベルがそれは水道水だと客に知らせる。", ok:true}],
+ ev:{q:'L\'eau du Robinet is just French for <span class="h">"tap water."</span>', jp:"『ロー・デュ・ロビネ』＝フランス語で「水道水」。客がフランス語を知らず、かつフランス語＝上品と感じることを見込んだ命名。"},
+ co:[{c:"nav",l:"なぜ3か",h:"命名の前提は<em>①フランス語は上品に響く ②客はフランス語がわからない</em>。この2つがあってこそ「水道水」という名でだませる。<b>③「ラベルが水道水だと教える」なら、そもそも仕掛けが成立しない</b>＝前提でない＝正解。"},
+     {c:"verm",l:"論理の急所",h:"3が前提なら「客に正体がバレる」＝いたずらが破綻する。<u>だから3こそ「前提としていない」もの</u>。"}],
+ sol:[{m:"o",n:"1",t:"前提である。フランス語＝高級というイメージを利用。"},
+      {m:"o",n:"2",t:"前提である。客がフランス語を解さないから成立する。"},
+      {m:"x",n:"3",t:"<b>前提でない＝正解</b>。正体が客に伝わったら仕掛けが成り立たない。"}]},
+
+{id:"⑬", grp:"A1", type:"NOT問題（一般的思い込み）", lbl:"設問A ⑬", en:"Which is NOT a general assumption about bottled water?",
+ ask:"ボトル入り飲料水についての一般的な思い込みで ないもの はどれか。", answer:"1", kind:"choice",
+ choices:[{t:"水道水より安い。", ok:true},{t:"水道水より清潔だ。", ok:false},{t:"水道水より安全だ。", ok:false}],
+ ev:{q:'Bottled water customers pay <span class="h">1,000 times more</span> … than they do for tap water', jp:"ボトル水は水道水の1,000倍高い。「安い」は思い込みではなく事実に反する。清潔・安全は本文が挙げる一般的な思い込み。"},
+ co:[{c:"nav",l:"なぜ1か",h:"本文が挙げる一般的な思い込み＝<em>cleaner（より清潔）／safer（より安全）</em>。<b>「安い」はむしろ逆（1,000倍高い）</b>なので、そんな思い込みは存在しない＝NOT＝正解。"}],
+ sol:[{m:"x",n:"1",t:"<b>思い込みでない＝正解</b>。実際は1,000倍高い。「安い」という思い込みはない。"},
+      {m:"o",n:"2",t:"思い込みである。cleaner だと信じて買う人が多い（第2段落）。"},
+      {m:"o",n:"3",t:"思い込みである。tap-water safety への懸念から buy する（第2段落）。"}]},
+
+{id:"⑭", grp:"A1", type:"数値", lbl:"設問A ⑭", en:"how many times more … in 2007 than in 1987?",
+ ask:"1987年と比べて2007年、アメリカ人は平均何倍のボトル水を消費したか。", answer:"1", kind:"choice",
+ choices:[{t:"ほぼ5倍。", ok:true},{t:"約10倍。", ok:false},{t:"ほぼ7倍。", ok:false}],
+ ev:{q:'In 1987 … 5.7 gallons … 20 years later, that number soared to <span class="h">27.6 gallons</span>', jp:"1987年＝5.7ガロン、その20年後（2007年）＝27.6ガロン。27.6÷5.7 ≒ 4.8 ≒ ほぼ5倍。"},
+ co:[{c:"gold",l:"計算",h:"<b>27.6 ÷ 5.7 ≒ 4.84</b> → ほぼ5倍。<em>20 years later＝1987＋20＝2007</em> を落とさない。"},
+     {c:"verm",l:"罠",h:"数字の桁だけ見て「約10倍／7倍」に飛びつかない。割り算で確認する。"}],
+ sol:[{m:"o",n:"1",t:"正解。約4.8倍＝ほぼ5倍。"},{m:"x",n:"2",t:"約10倍にはならない。"},{m:"x",n:"3",t:"ほぼ7倍でもない。"}]},
+
+{id:"⑮", grp:"A1", type:"語の定義", lbl:"設問A ⑮", en:"the technical definition of the word spring",
+ ask:"spring（泉）という語の技術的な定義はどれか。", answer:"2", kind:"choice",
+ choices:[{t:"ボトル水が汲まれる場所。", ok:false},{t:"地下から水が湧き出る場所。", ok:true},{t:"人々が純粋な水を飲める田園地帯。", ok:false}],
+ ev:{q:'draws its water from man-made sources, including <span class="h">one beneath a parking lot</span>. Though "springs" by definition …', jp:"駐車場の下の人工水源でも定義上は「泉」。つまり spring の定義は「（自然か人工かを問わず）地下から水が出てくる場所」。"},
+ co:[{c:"nav",l:"なぜ2か",h:"ポーランドスプリングは<em>駐車場の下</em>から汲んでも定義上「泉」。だから spring の technical definition は<b>「地下から水が湧き上がる場所」</b>＝自然の景勝地とは限らない。"},
+     {c:"verm",l:"罠｜1・3",h:"1「ボトル水が汲まれる場所」は循環定義。3「田園地帯」はラベルのイメージであって定義ではない。<u>本文はまさに『定義は満たすが自然の場所とは限らない』というカラクリを説明</u>している。"}],
+ sol:[{m:"x",n:"1",t:"循環的で定義になっていない。"},{m:"o",n:"2",t:"正解。地下から湧き出る場所。人工の穴でも該当する。"},{m:"x",n:"3",t:"ラベルが喚起するイメージであって定義ではない。"}]},
+
+{id:"⑯", grp:"A2", type:"内容一致（条件）", lbl:"設問A ⑯", en:"Under what circumstances do false ads go unchallenged?",
+ ask:"どのような状況で、虚偽の広告が問題にされずに済むか。", answer:"1", kind:"choice",
+ choices:[{t:"競合ブランドが同じメガコーポレーションに所有されているとき。", ok:true},{t:"それらに異議を唱えるより見逃すほうが利益になるとき。", ok:false},{t:"ライバル会社によって指摘されるとき。", ok:false}],
+ ev:{q:'Different brands may even actively cooperate … when they are <span class="h">owned by the same megacorporation</span>', jp:"同じ大企業が所有していると、ブランドどうしは互いを叩かず協力さえする＝虚偽広告が見逃される。"},
+ co:[{c:"nav",l:"2 と 1 の関係を整理",h:"「見逃すほうが利益になる（2）」のは<u>結果</u>で、その<b>根本原因＝同じ大企業が両ブランドを所有している（1）</b>。設問は circumstances（状況・条件）を問うので、<em>より本質的な条件である1が正解</em>。"},
+     {c:"verm",l:"罠｜2",h:"2は本文の表現に近く見えるが、『profitable だから見逃す』のは<u>1（同一資本）という条件の下で起きること</u>。設問の『どんな状況で』には1が答え。3は逆（指摘されたら challenged される）。"}],
+ sol:[{m:"o",n:"1",t:"正解。同一のメガ企業所有 → 競争せず、虚偽広告も放置。"},{m:"x",n:"2",t:"それは結果・動機。『状況』としては同一資本(1)が根本。"},{m:"x",n:"3",t:"逆。ライバルに指摘されれば challenged される。"}]},
+
+{id:"⑰", grp:"A2", type:"含意（implied）", lbl:"設問A ⑰", en:"Which is implied from the passage?",
+ ask:"本文から示唆されるものはどれか。", answer:"1", kind:"choice",
+ choices:[{t:"コカ・コーラとペプシは別々の企業に所有されている。", ok:true},{t:"コカ・コーラとペプシはボトル水より売れている。", ok:false},{t:"コカ・コーラとペプシはネスレに所有されるべきだ。", ok:false}],
+ ev:{q:'you won\'t see the same level of advertising competition between them as you do <span class="h">between Coke and Pepsi</span>', jp:"同一資本のサンペレグリノ／ペリエは競争しない。それと対比して『コーラ対ペプシ』が激しく競争する例に使われている＝コーラとペプシは別会社。"},
+ co:[{c:"nav",l:"implied の読み筋",h:"『同じ会社が持つと競争しない』のに<em>コーラとペプシは激しく競争する</em>例として挙がる。<u>ということは、コーラとペプシは<b>別々の会社</b>に所有されている</u>、と論理的に導ける（明言はされていない＝implied）。"},
+     {c:"verm",l:"罠",h:"2（売上比較）3（ネスレが持つべき）は本文に根拠なし。<em>implied は「書いてある事実から論理的に必ず言えること」</em>で、想像や願望ではない。"}],
+ sol:[{m:"o",n:"1",t:"正解。激しく競争する＝同一資本でない＝別会社、と示唆される。"},{m:"x",n:"2",t:"売上の比較は本文にない。"},{m:"x",n:"3",t:"『ネスレが持つべき』という主張はない。"}]},
+
+{id:"⑱", grp:"A2", type:"内容一致（事実）", lbl:"設問A ⑱", en:"Which is true about Dr. Reddy's Laboratories?",
+ ask:"ドクター・レディース・ラボラトリーズについて正しいものはどれか。", answer:"2", kind:"choice",
+ choices:[{t:"名の通ったブランド薬だけを売っている。", ok:false},{t:"メルクより安い薬を売っている。", ok:true},{t:"メルクより高品質の薬を売っている。", ok:false}],
+ ev:{q:'Generic drugs are <span class="h">cheaper</span> than the name brands … sold in generic form through Dr. Reddy\'s Laboratories', jp:"ドクター・レディースはジェネリック（＝有名ブランドより安い）を売る。中身はメルク製の同じ薬。"},
+ co:[{c:"nav",l:"なぜ2か",h:"ジェネリック薬は<em>name brand より安い（cheaper）</em>。ドクター・レディースはその<u>ジェネリック</u>を売る会社。よって『メルクより安い薬を売る』が正しい。"},
+     {c:"verm",l:"罠｜1・3",h:"1『ブランド薬だけ』は逆（ジェネリック）。3『高品質』は誤り――<u>中身は同一（same pills）だが安いだけ</u>で、高品質ではない。"}],
+ sol:[{m:"x",n:"1",t:"逆。ジェネリック（後発・無名）を売っている。"},{m:"o",n:"2",t:"正解。同じ薬をジェネリックとして安く売る。"},{m:"x",n:"3",t:"中身は同一。高品質ではない。"}]},
+
+{id:"⑲", grp:"A2", type:"語句解釈", lbl:"設問A ⑲", en:'what does the author mean by "manufactured" differences?',
+ ask:"筆者が言う『作り出された（manufactured）』違いとは何を指すか。", answer:"1", kind:"choice",
+ choices:[{t:"イメージの違い。", ok:true},{t:"価格の違い。", ok:false},{t:"品質の違い。", ok:false}],
+ ev:{q:'they aim to maximize differences in <span class="h">image</span>, thereby creating the illusion of variety', jp:"企業は『イメージの違い』を最大化し、多様性の幻想を作る。manufactured differences＝人為的に作られた＝イメージの違い。"},
+ co:[{c:"nav",l:"real vs manufactured",h:"本文は<em>real（本物の）違い ↔ manufactured（作り出された）違い</em>を対比。作り出されるのは<b>イメージの違い</b>（中身・品質は同じ）。"},
+     {c:"verm",l:"罠｜3 品質",h:"品質の違いは<em>本物なら real</em>。だが本文では『性能差なし・組成ほぼ同じ』＝品質は違わない。manufactured なのは image。"}],
+ sol:[{m:"o",n:"1",t:"正解。illusion of variety を生む『イメージの違い』。"},{m:"x",n:"2",t:"価格差はイメージ操作の手段だが、manufactured differences の語義そのものではない。"},{m:"x",n:"3",t:"品質差はむしろ『ない』。作られるのはイメージ。"}]},
+
+{id:"⑳", grp:"A2", type:"内容一致（best agrees）", lbl:"設問A ⑳", en:"Which statement best agrees with the passage?",
+ ask:"本文にもっともよく合致する文はどれか。", answer:"2", kind:"choice",
+ choices:[{t:"『マウント・フジ』と表示されたボトル水は、安っぽいイメージになるだろう。", ok:false},{t:"ランコムのマジック・マット・ムースは、メイベリンのドリーム・マット・ムース・ファンデより裕福な客に向けられている。", ok:true},{t:"安物買いの銭失い（penny wise and pound foolish）。", ok:false}],
+ ev:{q:'The Lancôme and Maybelline brands … have very different images and <span class="h">targeting different consumers</span> … Lancôme … at $37 instead of Maybelline … at $8.99', jp:"ランコムとメイベリンは異なる消費者をターゲットにしている。ランコムは37ドル、メイベリンは8.99ドル。高価なランコムがより裕福な客に向けられている、と読める。"},
+ co:[{c:"nav",l:"なぜ2か",h:"第7段落＝ランコムとメイベリンは<em>異なる消費者をターゲットにしている（targeting different consumers）</em>。価格は<b>ランコム37ドル ↔ メイベリン8.99ドル</b>。よって<u>高価なランコムのほうが裕福な客向け</u>＝本文と合致。中身（組成・性能）は同じでも、狙う客層は違う、という記述に一致する。"},
+     {c:"verm",l:"罠｜1 Mount Fuji",h:"本文に『マウント・フジは7ドルもする高級（high-end）』とはあるが、<u>「安っぽいイメージになる」とは書かれていない</u>（むしろ逆で高級イメージ）。<b>本文にない・逆の内容</b>なので不可。"},
+     {c:"teal",l:"3 について",h:"『安物買いの銭失い（安物を買って結局損する）』は本文の主旨（高い物を買っても中身は同じ）とかみ合わず、本文の記述として合致しない。"}],
+ sol:[{m:"x",n:"1",t:"『マウント・フジ』は7ドルの高級品として登場する。『安っぽいイメージになる』は本文になく、むしろ逆。"},{m:"o",n:"2",t:"正解。ランコムとメイベリンは異なる客層向け（targeting different consumers）で、ランコム37ドル＞メイベリン8.99ドル。高価なランコムがより裕福な客に向けられている、に合致。"},{m:"x",n:"3",t:"諺の意味が本文の主旨とかみ合わない。"}]},
+
+/* ---------- 設問B 和訳 ---------- */
+{id:"B", grp:"B", type:"英文和訳（記述）", lbl:"設問B 下線部(B)", en:"Even though we may feel we have a wide variety of choices, we actually have far fewer qualitatively different options than we realize.",
+ ask:"下線部(B)を和訳しなさい。", kind:"desc", answer:"下記模範解答",
+ steps:[
+  {t:"骨格をつかむ（譲歩＋主節）", d:"<b>Even though S V, S V.</b>「たとえ〜だとしても、…」。前半＝譲歩（感じ方）、後半＝実際（事実）。<em>この対比を訳に出す</em>。"},
+  {t:"far fewer … than … を処理する", d:"<b>far＋比較級 fewer</b>＝「はるかに（ずっと）少ない」。<u>far は比較級を強める副詞</u>で「遠く」ではない。<b>than we realize</b>「私たちが認識しているよりも」。→「認識しているよりずっと少ない」。", cite:'we actually have <span class="h">far fewer</span> qualitatively different options <span class="h">than we realize</span>'},
+  {t:"qualitatively を訳し込む", d:"<b>qualitatively different options</b>「<em>質的に</em>異なる選択肢」。<u>『選択肢の見かけの数』ではなく『中身が本当に違う数』</u>が少ない、という主旨。ここを落とすと本文の要点が消える。"},
+  {t:"日本語に整える", d:"「私たちは幅広い選択肢があると<b>感じ</b>がちだが、<b>実際には</b>、質的に異なる選択肢は、認識しているよりずっと少ない」。<em>feel（感じる）と actually（実際には）の対比</em>を明確に。"},
+ ],
+ model:["私たちは幅広い選択肢を持っていると感じがちだが、実際には、質的に異なる選択肢は、認識しているよりもずっと少ないのである。"],
+ mnote:"<b>far fewer than</b>（ずっと少ない）と <b>qualitatively</b>（質的に）の2点が得点の分かれ目。Even though の譲歩も明示する。",
+ rubric:[
+  {t:"<b>Even though（〜と感じても／〜だが）</b>の譲歩を訳出", p:2, must:true},
+  {t:"<b>we may feel we have a wide variety of choices（幅広い選択肢があると感じる）</b>", p:2, must:true},
+  {t:"<b>far fewer … than we realize（認識しているよりずっと少ない）</b>＝far＋比較級を強調して訳す", p:3, must:true},
+  {t:"<b>qualitatively different options（質的に異なる選択肢）</b>", p:3, must:true}],
+ total:10,
+ ng:[
+  {bad:"私たちは多くの選択肢があると感じるが、実際には認識しているより少ない選択肢しかない。", why:"<b>far（ずっと・はるかに）の強調が消えている</b>＋<b>qualitatively（質的に）が欠落</b>。要素が2つ落ちている。"},
+  {bad:"幅広い選択肢を持っていると感じても、実際には、遠くの異なる選択肢は私たちが実現するより少ない。", why:"<b>far を「遠くの」と誤訳</b>（far fewer で『はるかに少ない』）。<b>realize を「実現する」と誤訳</b>（ここは『認識する・気づく』）。"},
+  {bad:"私たちは幅広い選択肢を持っているが、質的に異なる選択肢は少ない。", why:"<b>Even though（譲歩）を単なる逆接『が』で流し、feel（感じる）を落としている</b>。『実際に持っている』と『持っていると感じる』の区別が消える。"},
+ ]},
+];
+
+
+/* ===== ENGINE ===== */
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['A1','qWrapA1','qidxA1'],['A2','qWrapA2','qidxA2'],['B','qWrapB','qidxB']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+</script>
+</body>
+</html>
