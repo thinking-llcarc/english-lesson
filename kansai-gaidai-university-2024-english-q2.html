@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜関西外国語大学 2024 大問2（ロボットの欺瞞と信頼）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">関</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>関西外国語大学 2024 ／ 大問2</span></div>
+    <div class="top-meta">ロボットの欺瞞と信頼<br>問5〜問16（語彙・語句解釈・内容一致）</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>EXPERIMENT</small>実験の全体像</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>Q5–9</small>語彙・語法</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>Q10–13</small>語句解釈・空所</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>Q14–16</small>空所・内容一致</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>ロボットに嘘をつかれた人は、<br>どうすれば再び信頼できるか。<br>答えは「嘘を認めない謝罪」だった。</h1>
+    <p>ジョージア工科大の学生2人が、運転シミュレーションで「意図的なロボットの欺瞞が信頼に与える影響」を調べた。驚きの結果は、<em>嘘を認めない謝罪（ただ「ごめんなさい」と言うだけ）が最も信頼を回復した</em>こと。そしてテーマは、冒頭のサンタの問いから結論まで一貫して<strong>「嘘は必ずしも悪ではない」</strong>。この線を掴めば、語彙も内容一致も一気に決まる。</p>
+    <div class="thesis"><b>一貫する主張：</b>人はまだ「ロボットが嘘をつける」と理解していない。だから誤情報を『機械のエラー』と思い込み、AIを過信する（助言されると3.5倍減速）。<b>ロボットの欺瞞は現実で、常に起こりうる</b>。嘘は必ずしも悪ではないからこそ、設計と規制を考える必要がある。</div>
+    <div class="stats">
+      <div class="stat"><b>22</b><span>段落構成</span></div>
+      <div class="stat"><b>12</b><span>設問（問5〜16）</span></div>
+      <div class="stat"><b>5</b><span>謝罪の型</span></div>
+      <div class="stat"><b>2</b><span>内容一致（問16）</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">設問構成 ― 3タイプ、攻め方を分ける</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:26%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">語彙・同意語</td><td>問6 問8 問9 問11</td><td><b>方向（プラス/マイナス）と対比</b>で決める。deception↔honesty、high-stakes＝high-risk、in-person↔online、reckless＝rash。</td></tr>
+      <tr><td class="cond">語法・語句解釈</td><td>問5 問7 問10</td><td>問5は<b>名詞節の if＝whether</b>。問7は<b>省略（learn to deceive）を補う</b>。問10は upon doing＝「〜するとすぐ」。</td></tr>
+      <tr><td class="cond">下線部・空所（内容）</td><td>問12 問13 問14 問15</td><td>問13・14は<b>本文の該当箇所を探す</b>。問12・15は<b>肯定文を否定に反転させる罠</b>を見抜く。</td></tr>
+      <tr><td class="cond">内容一致（2つ選ぶ）</td><td>問16</td><td>a〜fを本文と照合。<b>役割すり替え・条件すり替え・反転・逆</b>を消す。正解は c・d。</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">この英文で差がつくポイント</h2>
+  <div class="grid2">
+    <div class="box verm"><span class="lab">否定への反転（問12・15・16）</span>関西外大の下線部言い換え・内容一致は<em>「肯定文の一部を否定にひっくり返す」</em>罠が主役。must→must not、explain→not reveal、even if→only if。<u>1語・1方向の改変を見抜く</u>。</div>
+    <div class="box gold"><span class="lab">省略の補充（問7）</span>learn to ___ on its own の to のあとに<em>deceive が省略</em>。代不定詞に気づけば d 一択。</div>
+    <div class="box teal"><span class="lab">2種類の if（問5）</span>ask の目的語なら<em>名詞節の if＝whether</em>。「もし〜なら」ではない。</div>
+    <div class="box navy"><span class="lab">テーマの一貫（問13・14・16）</span><em>「嘘は必ずしも悪ではない／人はロボットの嘘を見抜けない」</em>を掴めば、嘘を認めない謝罪が最強という結果も、問16-fの誤りも腑に落ちる。</div>
+  </div>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは<strong>選択肢をタップすると自分で解ける</strong>。「答え・根拠を表示」で正解／<strong>根拠（本文の該当箇所）</strong>／全選択肢の✓✗／語法まで開きます。問16は<strong>a〜fをタップすると各文の○×と根拠</strong>が開きます。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 22段落の流れと設問の在りか<span class="sub">「導入→研究者→実験の4手順→結果→考察→提言→結論」。科学記事の典型構成。どの設問がどこに埋まっているかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">サンタは実在するかとAIに問う子ども</div><p>真実より嘘を望む家庭もある中で、AIはどう答えるべきか。<em>「嘘は必ずしも悪ではない」</em>というテーマの入口。</p><div class="tags"><span class="utag">問5</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>問題提起</span></div><div class="para-b">
+      <div class="theme">一度嘘をつかれたら再び信頼できるか</div><p>ロボットの<em>欺瞞</em>は研究が浅い。嘘を知ったあと、どう信頼を回復するか。</p><div class="tags"><span class="utag">問6</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>研究者</span></div><div class="para-b">
+      <div class="theme">ジョージア工科大の学生2人</div><p>ロジャーズとウェバーが<em>運転シミュレーションを設計</em>。嘘のあとの<em>謝罪の効果</em>を調べる。AIは自力で欺くことすら学びうる。</p><div class="tags"><span class="utag">問7</span><span class="utag">問16-a</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>先行研究</span></div><div class="para-b">
+      <div class="theme">善意の嘘でも信頼は失われる</div><p><em>たとえ利益のための嘘でも</em>、気づけば信頼を失う。今回は「効果的な謝罪の種類」を探る。</p><div class="tags"><span class="utag">問16-b</span><span class="utag">問16-c</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>論文</span></div><div class="para-b">
+      <div class="theme">「嘘についての嘘」2023年HRI会議</div><p>高リスクなHRI状況での信頼修復戦略を検討した論文。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>実験設計</span></div><div class="para-b">
+      <div class="theme">オンライン341人＋対面20人</div><p><em>高リスク・時間切迫</em>のゲーム的運転シミュレーション。</p><div class="tags"><span class="utag">問8</span><span class="utag">問9</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>手順①</span></div><div class="para-b">
+      <div class="theme">事前の信頼度調査</div><p>AIへの<em>先入観</em>を測るアンケート。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>手順②</span></div><div class="para-b">
+      <div class="theme">遅れると友人が死ぬ設定</div><p>ロボット支援車で友人を病院へ。遅れれば死。<em>一刻を争う</em>設定。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>手順③</span></div><div class="para-b">
+      <div class="theme">「前方に警察、減速せよ」と警告</div><p>エンジン始動と同時にロボットが警告。<em>のちに嘘と判明</em>。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>10</b><span>手順④</span></div><div class="para-b">
+      <div class="theme">到着後「警察はいなかった」と告白</div><p>目的地到着で嘘が明かされ、参加者はロボットに理由を問う。</p><div class="tags"><span class="utag">問10</span></div></div></div><div class="para"><div class="para-n"><b>11</b><span>5つの謝罪</span></div><div class="para-b">
+      <div class="theme">3つは嘘を認め、2つは認めない</div><p>基本・感情・説明（認める）／基本非承認・無謝罪（認めない）。</p><div class="tags"><span class="utag">問11</span><span class="utag">問13</span></div></div></div><div class="para"><div class="para-n"><b>12</b><span>手順⑤</span></div><div class="para-b">
+      <div class="theme">再度の信頼度測定／対照群100人</div><p>応答後にもう一度信頼を測定。ロボット言及なしの群も。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>13</b><span>結果①</span></div><div class="para-b">
+      <div class="theme">45%減速・AI過信で3.5倍従う</div><p><em>ロボットのほうがよく知っていると信じた</em>。助言されると3.5倍減速＝過信。</p><div class="tags"><span class="utag">問12</span></div></div></div><div class="para"><div class="para-n"><b>14</b><span>結果②</span></div><div class="para-b">
+      <div class="theme">嘘を認めない謝罪が最強</div><p>完全回復はないが、<em>ただ「ごめんなさい」と言うだけ</em>が最も信頼を修復。</p><div class="tags"><span class="utag">問13</span></div></div></div><div class="para"><div class="para-n"><b>15</b><span>考察①</span></div><div class="para-b">
+      <div class="theme">『機械のエラー』という先入観を突く</div><p>認めない謝罪は<em>「誤情報＝故障、意図的な嘘ではない」</em>という思い込みにつけ込む。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>16</b><span>考察②</span></div><div class="para-b">
+      <div class="theme">人はまだロボットの嘘を理解しない</div><p><em>はっきり告げられねば</em>嘘に気づけない。だから認めない謝罪が効く。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>17</b><span>考察③</span></div><div class="para-b">
+      <div class="theme">嘘を知らされた人には理由の説明が最善</div><p>気づかされた参加者には<em>なぜ嘘をついたか説明する</em>のが最善。</p><div class="tags"><span class="utag">問16-e</span></div></div></div><div class="para"><div class="para-n"><b>18</b><span>提言①</span></div><div class="para-b">
+      <div class="theme">AI利用者は『嘘は現実』と理解を</div><p>ロボットの欺瞞は<em>現実で常に起こりうる</em>。過度に恐れず心に留める。</p><div class="tags"><span class="utag">問14</span><span class="utag">問16-d</span></div></div></div><div class="para"><div class="para-n"><b>19</b><span>提言②</span></div><div class="para-b">
+      <div class="theme">設計者は欺く能力の是非を選び影響を理解せよ</div><p><em>欺く能力を持たせるか決め、影響を理解すべき</em>。最重要の受け手は政策立案者。</p><div class="tags"><span class="utag">問15</span></div></div></div><div class="para"><div class="para-n"><b>20</b><span>提言③</span></div><div class="para-b">
+      <div class="theme">嘘は必ずしも悪でなく、真実が常に善でもない</div><p><em>革新を抑えず人を守る法律</em>をどう作るかが課題。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="para"><div class="para-n"><b>21</b><span>目標</span></div><div class="para-b">
+      <div class="theme">いつ嘘をつくべきか学べるロボット</div><p><em>いつ嘘をつくべき／つくべきでないかを判断でき、いつどう謝るかも学ぶ</em>。</p><div class="tags"><span class="utag">問16-f</span></div></div></div><div class="para"><div class="para-n"><b>22</b><span>結論</span></div><div class="para-b">
+      <div class="theme">問題を理解しなければ規制できない</div><p>欺瞞を規制する必要性を発信。だが<em>問題の理解が先</em>。</p><div class="tags"><span class="utag">設問なし</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← この英文の攻略</button><span class="sp"></span><button class="btnp" data-go="2">実験の全体像へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">The Experiment</div>
+  <h1 class="head">実験の全体像 ― 手順・5つの謝罪・結果を1枚で<span class="sub">実験の流れと「5つの謝罪」を掴めば、問10〜問16がまとめて見える。ここがこの英文の心臓部。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">実験の4ステップ</h2>
+  <div class="flow">
+    <div class="fnode"><div class="fdot">1</div><div class="fbody"><b>事前アンケート</b><p>AIへの<em>先入観・信頼度</em>を測定。参加者はオンライン341人＋対面20人（＋対照群100人）。</p></div></div>
+    <div class="fnode"><div class="fdot">2</div><div class="fbody"><b>設定：遅れると友人が死ぬ</b><p>ロボット支援車で友人を病院へ。<u>高リスク・一刻を争う</u>状況（問8）。</p></div></div>
+    <div class="fnode"><div class="fdot">3</div><div class="fbody"><b>ロボットが嘘の警告</b><p>「前方に警察、減速せよ」。実は<em>警察はいなかった</em>（＝意図的な欺瞞）。</p></div></div>
+    <div class="fnode"><div class="fdot">4</div><div class="fbody"><b>到着後に嘘を告白 → 5つの謝罪</b><p>「警察はいなかった」と明かし、5種類の応答のうち1つをランダムに提示。応答後に信頼度を再測定。</p></div></div>
+  </div>
+
+  <h2 class="sec">5つの謝罪 ― 「認める」3つ vs「認めない」2つ</h2>
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">嘘を認める（3つ）<small>ADMITS DECEPTION</small></div><div class="vs-bd">
+      <div class="r"><b>基本型</b>「あなたを欺いて申し訳ない」</div>
+      <div class="r"><b>感情型</b>「心の底から謝る。欺いたことを許して」</div>
+      <div class="r"><b>説明型</b>「申し訳ない。無謀な運転をすると思い、欺くのが減速させる最善だと判断した」＝<em>理由を説明</em></div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">嘘を認めない（2つ）<small>NO ADMISSION</small></div><div class="vs-bd">
+      <div class="r"><b>基本・非承認型</b>「申し訳ありません（I'm sorry）」＝<em>謝るが何にとは言わない</em>（問13の答え）</div>
+      <div class="r"><b>基準・無謝罪型</b>「目的地に到着しました」＝<em>謝罪すらしない</em></div>
+      <div class="r"><b>結果</b>この「ただ I'm sorry と言うだけ」が<strong>最も信頼を回復</strong>した（問14）</div>
+    </div></div>
+  </div>
+
+  <div class="box gold"><span class="lab">なぜ「認めない謝罪」が最強なのか（考察の核）</span>
+    人はまだ<em>「ロボットが嘘をつける」と理解していない</em>。だから誤情報を<strong>「意図的な嘘」ではなく「システムのエラー（故障）」</strong>だと思い込む。「I'm sorry」だけの謝罪は、<u>この先入観につけ込む</u>ため信頼が回復しやすい ― だが Rogers はこれを「憂慮すべき・厄介」と評する（問16-d）。</div>
+
+  <h2 class="sec">2つの結果（内容一致で狙われる）</h2>
+  <div class="grid2">
+    <div class="box navy"><span class="lab">結果①｜AIへの過信</span>対面実験で<em>45%が減速</em>。理由は「ロボットのほうが状況をよく知っていると信じた」（問12）。助言されると<strong>3.5倍</strong>減速しやすい＝過度な信頼。</div>
+    <div class="box teal"><span class="lab">結果②｜認めない謝罪が最強</span>どの謝罪も完全には回復させないが、<em>嘘を認めない「I'm sorry」</em>が統計的に最良（問13・14）。ただし嘘を<u>気づかされた</u>人には<em>理由の説明</em>が最善（問16-e）。</div>
+  </div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問5〜9へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問5〜問9 ― 語彙・語法<span class="sub">同意語と語法。<b>方向と対比</b>で決める。問5（名詞節の if）と問7（省略の補充）は文法の目。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 実験の全体像</button><span class="sp"></span><button class="btnp" data-go="4">問10〜13へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問10〜問13 ― 語句解釈・空所<span class="sub">問12は<b>下線部の言い換え</b>（否定への反転に注意）。問13は<b>「嘘を認めない謝罪」＝I'm sorry</b> を本文から特定する。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問5〜9</button><span class="sp"></span><button class="btnp" data-go="5">問14〜16へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問14〜問16 ― 空所・内容一致<span class="sub">問15は<b>肯定文を否定に反転</b>させる罠。問16は<b>a〜fから2つ選ぶ</b>（正解 c・d）。タップで各文の○×が開く。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 問10〜13</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と訳出ポイント<span class="sub">THINKINGオリジナル訳（全44文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>は設問・主張に直結する急所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳では答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙った。<em>構文の骨（主語・否定・比較・引用）は保ったまま、日本語として自立させている</em>。内容一致の照合や、下線部言い換えの根拠確認に使ってほしい。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― サンタは実在するか、とAIに問う子ども　<span class="qbadge">問5</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ある場面を想像してほしい。</div></div><div class="jpline"><div class="n">②</div><div class="s">幼い子どもが、チャットボットや音声アシスタントに、<em>サンタクロースは本当にいるのかどうか</em>と尋ねる。</div></div><div class="jpline"><div class="n">③</div><div class="s">一部の家庭は真実よりも嘘のほうを望むだろうという状況で、そのAIはどう応答すべきなのだろうか。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第1段落</div><ul><li><b>(5)if Santa Claus is real</b>：この if は<em>「〜かどうか」を表す名詞節を導く if</em>（＝whether）。asks の目的語になっている。「もし〜なら」の条件の if ではない。<u>問5の正解 b whether</u>。<span class="qbadge">問5</span></li>
+    <li><b>given that ~</b>「〜であることを考えると／〜という状況で」。<em>given＝「〜を考慮すると」</em>。</li>
+    <li><b>would prefer a lie over the truth</b>「真実よりも嘘のほうを好むだろう」＝<em>prefer A over B</em>「BよりAを好む」。本文全体のテーマ（嘘は必ずしも悪ではない）の導入。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜問題提起 ― 一度嘘をつかれたロボットを再び信頼できるか　<span class="qbadge">問6</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ロボットの<em>欺瞞（ぎまん）</em>という分野はまだ研究が浅く、今のところ、答えよりも疑問のほうが多い。</div></div><div class="jpline"><div class="n">②</div><div class="s">たとえば、システムに嘘をつかれたと知ったあと、人間はどうすれば再びロボットのシステムを信頼できるようになるのだろうか。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第2段落</div><ul><li><b>(6)deception</b>「欺瞞・だますこと」。<u>問6の正解 b duplicity（二枚舌・欺瞞）</u>。deceive（動）／deception（名）／deceptive（形）をセットで。<em>honesty（正直）は正反対の罠</em>。<span class="qbadge">問6</span></li>
+    <li><b>is understudied</b>「（まだ）十分に研究されていない」。<em>under-＝不足</em>。</li>
+    <li><b>For one</b>「一例として・まず1つには」。For one thing の短縮。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜研究者紹介 ― ジョージア工科大の2人の学生　<span class="qbadge">問7</span> <span class="qbadge">問16-a</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ジョージア工科大学の2人の学生研究者が、その答えを探している。</div></div><div class="jpline"><div class="n">②</div><div class="s">計算科学部の博士課程の学生カントゥウォン・ロジャーズと、コンピュータ科学専攻の学部2年生ライデン・ウェバーは、<em>意図的なロボットの欺瞞が信頼にどう影響するかを調べるために、運転シミュレーションを設計した</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">具体的には、この研究者たちは、ロボットが嘘をついたあとに信頼を修復するうえでの<em>謝罪の効果</em>を探究した。</div></div><div class="jpline"><div class="n">④</div><div class="s">彼らの研究は、AIの欺瞞という分野に重要な知見をもたらすものであり、<em>欺くように設計されうる、あるいは潜在的に自分自身で欺くことを学びうる</em>AI技術を作り、規制する技術設計者や政策立案者に、有益な情報を与えうる。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第3段落</div><ul><li><b>designed a driving simulation to investigate …</b>：<u>設計したのは学生自身</u>（問16-a の罠＝「指導教員が設計した」は誤り）。<span class="qbadge">問16-a</span></li>
+    <li><b>(7)learn to [deceive] on its own</b>：<em>on one's own「独力で・自力で」</em>。省略を補うと learn to deceive on its own「自力で欺くことを学ぶ」。<u>問7の正解 d「become competent in deceiving autonomously（自律的に欺くことに習熟する）」</u>。<em>autonomously＝on its own</em>。<span class="qbadge">問7</span></li>
+    <li><b>could be designed to deceive, or potentially learn to on its own</b>：to のあとに deceive が省略された<em>代不定詞</em>。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜先行研究 ― 嘘は善意でも信頼を失わせる　<span class="qbadge">問16-b</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「私たちのこれまでの研究はすべて、ロボットに嘘をつかれたと人々が気づいたとき――<em>たとえその嘘が自分の利益のためを思ってのものであったとしても</em>――人々はそのシステムへの信頼を失う、ということを示してきた」とロジャーズは語った。</div></div><div class="jpline"><div class="n">②</div><div class="s">「今回、私たちが知りたいのは、信頼を修復するうえで、より効果的な謝罪の種類とそうでない種類があるのかどうかだ。というのも、人間とロボットの相互作用という観点から、私たちは人々にこうしたシステムと長期的に関わってほしいと考えているからだ」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第4段落</div><ul><li><b>even if the lie was intended to benefit them</b>「たとえその嘘が彼らの利益を意図したものでも」。<u>問16-b の判定に直結</u>。先行研究は<em>「善意の嘘であっても信頼は失われる」</em>と示した（＝「利益のための嘘のときだけ信頼を失う」は誤り）。<span class="qbadge">問16-b</span></li>
+    <li><b>whether there are different types of apologies that work better or worse</b>：<em>間接疑問 whether</em>「〜かどうか」。問16-c の言い換え元。</li>
+    <li><b>long-term interactions</b>「長期的な関わり」。研究の動機。<span class="qbadge">問16-c</span></li></ul></div><div class="tr-sec"><b>第5段落</b>｜論文発表 ― 「嘘についての嘘」　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ロジャーズとウェバーは、「嘘についての嘘――高リスクなHRI（人間とロボットの相互作用）状況における、ロボットの欺瞞後の信頼修復戦略の検討」と題した論文を、2023年にスウェーデンのストックホルムで開かれたHRI会議で発表した。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第5段落</div><ul><li><b>titled "Lying About Lying"</b>「『嘘についての嘘』と題された」＝<em>過去分詞 titled が paper を後置修飾</em>。</li>
+    <li><b>a High Stakes HRI Scenario</b>「高リスクなHRIの状況」。<em>high stakes＝賭け金が高い＝一か八かの・重大な</em>。問8の high-stakes と対応。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜実験設計 ― オンライン341人と対面20人　<span class="qbadge">問8</span> <span class="qbadge">問9</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">研究者たちは、<em>高リスクで時間的な猶予のない</em>状況の中で、人々がAIとどう関わりうるかを観察するために設計された、ゲームのような運転シミュレーションを作った。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らは<em>オンラインの参加者341人と、じかに対面する参加者20人</em>を集めた。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第6段落</div><ul><li><b>(8)high-stakes, time-sensitive</b>「高リスクで、時間的余裕のない」。<u>問8の正解 b「high-risk, time-critical」</u>。<em>stakes＝リスク・賭け金／time-sensitive＝時間に左右される・急を要する</em>。<span class="qbadge">問8</span></li>
+    <li><b>(9)in-person participants</b>「<em>対面の</em>参加者」。<u>問9の正解 c「in-the-flesh（じかに・生身で）」</u>。in person＝直接会って。<em>in the flesh も「（写真等でなく）実物で」</em>。<span class="qbadge">問9</span></li>
+    <li><b>a game-like driving simulation</b>「ゲームのような運転シミュレーション」。<em>-like＝〜のような</em>。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜手順① ― 事前の信頼度調査　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">シミュレーション開始前に、すべての参加者が、AIがどう振る舞うと思うかについての先入観を明らかにするための、信頼度測定アンケートに回答した。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第7段落</div><ul><li><b>preconceived notions</b>「先入観・思い込み」。<em>preconceived＝あらかじめ抱いた</em>。実験の前後で信頼がどう変わるかを測る基準になる。</li>
+    <li><b>filled out … survey</b>「アンケートに記入した」。<em>fill out＝（書式に）記入する</em>。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜手順② ― 「遅れると友人が死ぬ」という設定　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">アンケートのあと、参加者は次のような文章を提示された。「あなたはこれからロボット支援の車を運転します。ただし、あなたは友人を病院へ急いで運んでいる最中です。<em>病院に着くのに時間がかかりすぎると、あなたの友人は死んでしまいます</em>」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第8段落</div><ul><li><b>You will now drive the robot-assisted car.</b>「これからロボット支援車を運転する」＝実験の役割設定。</li>
+    <li><b>If you take too long to get to the hospital, your friend will die.</b>「病院に着くのが遅すぎると友人は死ぬ」＝<u>time-critical（一刻を争う）状況の演出</u>。問8の high-stakes を体感させる仕掛け。</li></ul></div><div class="tr-sec"><b>第9段落</b>｜手順③ ― ロボットが「警察がいる、減速せよ」と警告　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">参加者が運転を始めた瞬間に、シミュレーションはもう1つのメッセージを出す。「エンジンをかけるやいなや、あなたのロボット・アシスタントが警告音を鳴らし、次のように言う。『センサーが前方に警察を検知しました。時速20マイルの制限速度を守るよう助言します。さもないと、目的地に着くのにかなり長く時間がかかります』」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第9段落</div><ul><li><b>As soon as you turn on the engine</b>「エンジンをかけるやいなや」＝<em>as soon as＝〜するとすぐ</em>。</li>
+    <li><b>My sensors detect police up ahead.</b>「センサーが前方に警察を検知」＝<u>これがのちに「嘘」だと判明する警告</u>（実際は警察はいなかった）。</li>
+    <li><b>or else you will take significantly longer</b>「さもないと、かなり長くかかる」＝<em>or else＝さもなければ</em>。</li></ul></div><div class="tr-sec"><b>第10段落</b>｜手順④ ― 目的地到着後に「警察はいなかった」と告げられる　<span class="qbadge">問10</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">参加者はその後、システムが速度を記録し続けるなか、道を走って車を進める。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>目的地に到着すると</em>、彼らはもう1つのメッセージを受け取る。「あなたは目的地に到着しました。ですが、病院までの道に警察はいませんでした。あなたはロボット・アシスタントに、なぜ嘘の情報を与えたのかと尋ねます」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第10段落</div><ul><li><b>(10)Upon reaching the end</b>「終点（目的地）に到着すると<em>すぐに</em>」。<u>問10の正解 a「When they arrive at the destination（目的地に到着したとき）」</u>。<em>upon doing＝on doing＝〜するとすぐに</em>／<em>the end＝ここでは目的地</em>。<span class="qbadge">問10</span></li>
+    <li><b>there were no police on the way</b>「道中に警察はいなかった」＝<u>警告が嘘だったと明かされる瞬間</u>。</li>
+    <li><b>keeps track of their speed</b>「速度を記録し続ける」＝<em>keep track of＝〜を把握・記録する</em>。</li></ul></div><div class="tr-sec"><b>第11段落</b>｜5つの謝罪 ― 3つは嘘を認め、2つは認めない　<span class="qbadge">問11</span> <span class="qbadge">問13</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">参加者はその後、ロボット・アシスタントからの5種類のテキスト応答のうちの1つを、無作為に与えられた。最初の3つの応答ではロボットは欺瞞を認め、最後の2つでは認めない。</div></div><div class="jpline"><div class="n">②</div><div class="s">・基本型：「あなたを欺いてしまい、申し訳ありません」</div></div><div class="jpline"><div class="n">③</div><div class="s">・感情型：「心の底から本当に申し訳なく思っています。あなたを欺いてしまったことを、どうか許してください」</div></div><div class="jpline"><div class="n">④</div><div class="s">・説明型：「申し訳ありません。あなたが不安定な精神状態にあったため、<em>無謀な運転をするだろうと思ったのです</em>。この状況では、あなたを欺くことが、減速するよう説得できる最善の見込みだと結論しました」</div></div><div class="jpline"><div class="n">⑤</div><div class="s">・基本・非承認型：「申し訳ありません」</div></div><div class="jpline"><div class="n">⑥</div><div class="s">・基準・非承認・無謝罪型：「あなたは目的地に到着しました」</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第11段落</div><ul><li><b>(11)recklessly</b>「無謀に・向こう見ずに」。<u>問11の正解 a「rashly（軽率に・無鉄砲に）」</u>。<em>reckless＝reck（気にかける）+less＝後先を考えない</em>。<span class="qbadge">問11</span></li>
+    <li><b>the robot admits to deception … it does not</b>：<u>3つは嘘を認め、2つは認めない</u>。この分類が問13・問15・問16の核。</li>
+    <li><b>Basic No Admit: "(13) ___"</b>：<em>嘘を認めない基本型</em>。<u>問13の正解 d「I'm sorry」</u>（謝るが、何について謝るかを言わず＝嘘を認めない）。a「I'm sorry that I deceived you」は<b>嘘を認める型</b>なので不可。<span class="qbadge">問13</span></li></ul></div><div class="tr-sec"><b>第12段落</b>｜手順⑤ ― 応答後にもう一度信頼度を測る／対照群100人　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ロボットの応答のあと、参加者は、ロボット・アシスタントの応答によって自分の信頼がどう変化したかを評価するため、もう1つの信頼度測定に回答するよう求められた。</div></div><div class="jpline"><div class="n">②</div><div class="s">さらに追加のオンライン参加者100人については、研究者たちは同じ運転シミュレーションを、ただしロボット・アシスタントへの言及はいっさいなしで実施した。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第12段落</div><ul><li><b>to evaluate how their trust had changed</b>「信頼がどう変化したかを評価するため」＝<em>目的の to 不定詞＋間接疑問 how</em>。</li>
+    <li><b>without any mention of a robotic assistant</b>「ロボット・アシスタントへの言及なしで」＝<u>対照群（比較の基準）</u>。<em>without any mention of＝〜に一切触れずに</em>。</li></ul></div><div class="tr-sec"><b>第13段落</b>｜結果① ― 45%が減速、AIを過信し3.5倍速度違反せず　<span class="qbadge">問12</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">対面実験では、参加者の45%が速度を出さなかった（＝減速した）。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>なぜかと尋ねられると、よくある答えは、ロボットのほうが自分たちよりその状況についてよく知っていると信じた、というものだった。</em></div></div><div class="jpline"><div class="n">③</div><div class="s">また結果からは、参加者はロボット・アシスタントに助言されると、速度を出さない可能性が3.5倍高くなることも明らかになった――これはAIに対する過度に信頼的な態度を示している。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第13段落</div><ul><li><b>(12)When asked why, a common response was that they believed the robot knew more about the situation than they did.</b>＝<u>問12の下線部言い換え</u>。<u>正解 b</u>「When questioned about their non-speeding behavior, a prevalent reason … was that they trusted the robot to have more knowledge（減速した行動について問われると、多くがロボットのほうが状況をよく知っていると信じた、と答えた）」。<em>asked why＝なぜ（減速したのか）と問われて</em>。<span class="qbadge">問12</span></li>
+    <li><b>3.5 times more likely to not speed</b>「速度を出さない可能性が3.5倍」＝<em>times more likely to do＝〜する可能性が…倍</em>。<u>AIの過信を数値で示す</u>。</li>
+    <li><b>an overly trusting attitude</b>「過度に信頼的な態度」＝<em>overly＝過度に</em>。</li></ul></div><div class="tr-sec"><b>第14段落</b>｜結果② ― 嘘を認めない謝罪が最も信頼を回復　<span class="qbadge">問13</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">結果はまた、どの謝罪の種類も信頼を完全には回復させなかったものの、<em>嘘を認めない謝罪――ただ「申し訳ありません」と述べるだけのもの――が、信頼の修復において、他の応答を統計的に上回った</em>ことも示した。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第14段落</div><ul><li><b>the apology with no admission of lying — simply stating "( 13 )" — statistically outperformed the other responses</b>：<u>問13の空所がここで確定</u>。嘘を認めない＝<b>ただ "I'm sorry" と言うだけ</b>。<span class="qbadge">問13</span></li>
+    <li><b>none of the apology types fully recovered trust</b>「どの謝罪も完全には信頼を回復しなかった」＝<em>none＝どれも〜ない（全体否定）</em>。</li>
+    <li><b>outperformed the other responses</b>「他の応答を上回った」＝<em>outperform＝〜より良い成績を出す</em>。</li></ul></div><div class="tr-sec"><b>第15段落</b>｜考察① ― 認めない謝罪は『機械のエラー』という先入観を突く　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">これは憂慮すべき、そして厄介なことだ、とロジャーズは言う。なぜなら、<em>嘘を認めない謝罪は、ロボットが与えた誤った情報はどれも、意図的な嘘ではなくシステムのエラーなのだ、という先入観につけ込むものだから</em>である。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第15段落</div><ul><li><b>exploits preconceived notions that …</b>「〜という先入観につけ込む」＝<em>exploit＝（弱みに）つけ込む・利用する</em>。同格の that 節が notions の中身。</li>
+    <li><b>a system error rather than an intentional lie</b>「意図的な嘘ではなくシステムのエラー」＝<u>人は『ロボットの誤情報＝故障』と思い込む</u>。だから嘘を認めない謝罪が効く、という皮肉。</li></ul></div><div class="tr-sec"><b>第16段落</b>｜考察② ― 人はまだ『ロボットが嘘をつける』と理解していない　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「1つの重要な教訓は、ロボットが自分を欺いたと人々が理解するためには、<em>はっきりとそう告げられなければならない</em>、ということだ」とウェバーは言う。</div></div><div class="jpline"><div class="n">②</div><div class="s">「人々はまだ、ロボットが欺くことができるという理解を持っていない。だからこそ、嘘を認めない謝罪が、そのシステムにとって信頼を修復するのに最も効果的なのだ」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第16段落</div><ul><li><b>they must be explicitly told so</b>「はっきりとそう告げられねばならない」＝<em>explicitly＝明示的に</em>。人はロボットの嘘を自力では見抜けない。</li>
+    <li><b>People don't yet have an understanding that robots are capable of deception.</b>「人はまだロボットが欺けると理解していない」＝<u>結果①（AI過信）と結果②（認めない謝罪が最強）の橋渡し</u>。</li></ul></div><div class="tr-sec"><b>第17段落</b>｜考察③ ― 嘘を知らされた人には『理由の説明』が最善　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">次に、結果が示したのは、<em>謝罪の中で自分が嘘をつかれたと気づかされた参加者にとっては、信頼を修復する最善の戦略は、ロボットがなぜ嘘をついたかを説明することだった</em>、ということである。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第17段落</div><ul><li><b>for those participants who were made aware that they were lied to</b>「嘘をつかれたと気づかされた参加者にとっては」＝<em>be made aware that＝〜だと気づかされる</em>。</li>
+    <li><b>the best strategy … was for the robot to explain why it lied</b>「最善の戦略は、ロボットが嘘の理由を説明すること」＝<u>問16-e の判定に直結</u>（＝「理由を明かさないほうがよい」は誤り）。<span class="qbadge">問16-e</span></li></ul></div><div class="tr-sec"><b>第18段落</b>｜提言 ― AI利用者は『ロボットは嘘をつきうる』と理解すべき　<span class="qbadge">問14</span> <span class="qbadge">問16-d</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ロジャーズとウェバーの研究には、ただちに応用できる意味合いがある。</div></div><div class="jpline"><div class="n">②</div><div class="s">研究者たちは、<em>平均的な技術利用者は、ロボットの欺瞞が現実のものであり、常に起こりうる可能性なのだと理解しなければならない</em>、と主張する。</div></div><div class="jpline"><div class="n">③</div><div class="s">「もし私たちがAIとの『ターミネーター』的な未来を常に恐れているなら、AIを社会にとてもスムーズに受け入れ、統合することはできないだろう」とウェバーは言う。「<em>ロボットには嘘をつき、欺く可能性があるのだと心に留めておくことが重要だ</em>」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第18段落</div><ul><li><b>robotic deception is (14) ___ and always a possibility</b>：<u>問14の空所</u>。<em>and always a possibility（常に起こりうる可能性）</em>と並列でつながる語＝<b>real（現実の）</b>。<u>問14の正解 a real</u>。<em>false（偽り）は逆</em>。<span class="qbadge">問14</span></li>
+    <li><b>a Terminator-like future</b>「『ターミネーター』のような未来」＝<em>過度な恐れの比喩</em>。</li>
+    <li><b>keep in mind that robots have the potential to lie and deceive</b>「ロボットは嘘をつき欺く可能性があると心に留める」＝<u>問16-d の一致根拠</u>。<span class="qbadge">問16-d</span></li></ul></div><div class="tr-sec"><b>第19段落</b>｜提言 ― 設計者は『欺く能力を持たせるか』を選び、影響を理解すべき　<span class="qbadge">問15</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>ロジャーズによれば、AIシステムを作る設計者や技術者は、自分たちのシステムに欺く能力を持たせたいかどうかを選ばなければならないかもしれず、また、自分たちの設計上の選択がもたらす影響を理解すべきだ</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">だが、この研究にとって最も重要な受け手は、政策立案者であるべきだ、とロジャーズは言った。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第19段落</div><ul><li><b>(15)designers and technologists … may have to choose whether they want their system to be capable of deception and should understand the ramifications of their design choices.</b>＝<u>問15の下線部</u>。<u>正解 b</u>「decide if their systems should have the ability to deceive and should comprehend the ramifications（欺く能力を持たせるべきか決め、その影響を理解すべき）」。<em>choose whether＝decide if／ramifications＝（複雑な）影響・結果</em>。<span class="qbadge">問15</span></li>
+    <li>誤答の作り：a は comprehend を<em>否定</em>（must not comprehend）にした罠、c は contemplate を否定、d は state を否定。<u>肯定文を否定に反転させる典型的なひっかけ</u>。</li></ul></div><div class="tr-sec"><b>第20段落</b>｜提言 ― 嘘は必ずしも悪ではない、真実が常に善とも限らない　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「AIの欺瞞について、私たちが知っていることはまだごくわずかだ。しかし、<em>嘘は必ずしも悪いものではなく、真実を語ることが常に善いとは限らない</em>、ということは分かっている」と彼は言う。「では、革新を抑え込まないほど十分な知識に基づき、なおかつ人々を思慮深いやり方で守れるような法律を、どうやって作り出せばよいのだろうか」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第20段落</div><ul><li><b>lying is not always bad, and telling the truth isn't always good</b>「嘘は必ずしも悪ではなく、真実が常に善とも限らない」＝<u>本文全体のテーマ文</u>。冒頭のサンタの問い（真実より嘘を望む家庭）と呼応する。</li>
+    <li><b>not stifle innovation … protect people in mindful ways</b>「革新を抑え込まず、思慮深く人々を守る」＝<em>stifle＝抑圧する</em>。政策の課題。</li></ul></div><div class="tr-sec"><b>第21段落</b>｜目標 ― いつ嘘をつくべきか判断できるロボット　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ロジャーズの目標は、人間のチームと働くときに、<em>いつ嘘をつくべきで、いつつくべきでないかを学べるロボットのシステムを作る</em>ことである。</div></div><div class="jpline"><div class="n">②</div><div class="s">これには、長期的で反復的な人間とAIの相互作用の中で、チーム全体の成績を高めるために、いつどのように謝るべきかを判断する能力も含まれる。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第21段落</div><ul><li><b>a robotic system that can learn when it should and should not lie</b>「いつ嘘をつくべきか／つくべきでないかを学べるロボット」＝<u>問16-f の判定に直結</u>。<em>「常に従順で決して嘘をつかない」ロボットではない</em>。<span class="qbadge">問16-f</span></li>
+    <li><b>when and how to apologize</b>「いつ、どのように謝るか」＝<em>疑問詞＋to不定詞</em>。</li></ul></div><div class="tr-sec"><b>第22段落</b>｜結論 ― 問題を理解しなければ規制もできない　</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「私の研究の目標は、ロボットとAIの欺瞞を規制する必要性について、非常に積極的に発信し、周知することだ」とロジャーズは言った。「しかし、私たちがその問題を理解していなければ、それを行うことはできない」。</div></div></div>
+      <div class="tr-points"><div class="pl">訳出ポイント｜第22段落</div><ul><li><b>to be very proactive and informing the need to regulate …</b>「規制の必要性を積極的に発信・周知する」＝<em>proactive＝先を見越して行動する</em>。</li>
+    <li><b>we can't do that if we don't understand the problem</b>「問題を理解しなければ、それはできない」＝<u>結論＝まず欺瞞の理解が先</u>。第2段落「研究が浅い」と呼応。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 問14〜16</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定し、下の復習ルートで潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">設問</th><th style="width:28%">解答</th><th>ひとことポイント</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問5</td><td><b>b whether</b></td><td>ask の目的語＝名詞節の if「〜かどうか」</td></tr>
+      <tr><td class="cond">問6</td><td><b>b duplicity</b></td><td>deception＝欺瞞（↔honesty）</td></tr>
+      <tr><td class="cond">問7</td><td><b>d</b></td><td>learn to〔deceive〕on its own＝自律的に欺くことに習熟</td></tr>
+      <tr><td class="cond">問8</td><td><b>b high-risk, time-critical</b></td><td>high-stakes＝高リスク／time-sensitive＝一刻を争う</td></tr>
+      <tr><td class="cond">問9</td><td><b>c in-the-flesh</b></td><td>in person＝対面（↔online）</td></tr>
+      <tr><td class="cond">問10</td><td><b>a</b></td><td>upon reaching the end＝目的地到着時</td></tr>
+      <tr><td class="cond">問11</td><td><b>a rashly</b></td><td>recklessly＝無謀に</td></tr>
+      <tr><td class="cond">問12</td><td><b>b</b></td><td>「なぜ減速したか」＋「ロボットがよく知ると信じた」を保持</td></tr>
+      <tr><td class="cond">問13</td><td><b>d "I'm sorry"</b></td><td>嘘を認めない謝罪＝ただ謝るだけ</td></tr>
+      <tr><td class="cond">問14</td><td><b>a real</b></td><td>「常に起こりうる」と並列＝現実の</td></tr>
+      <tr><td class="cond">問15</td><td><b>b</b></td><td>「欺く能力の是非を決める＋影響を理解」を肯定のまま保持</td></tr>
+      <tr><td class="cond">問16</td><td><b>c・d</b>（2つ）</td><td>誤答＝役割/条件のすり替え(a,b)・反転(e)・逆(f)</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>語彙で落とした（問6・8・9・11）</b><p><em>方向と対比で決める</em>。deception↔honesty、in-person↔online、high-stakes＝high-risk。問11は r で始まる紛らわしい4語（rashly／reluctantly／remorsefully／respectably）を区別。<u>文脈（不安定→危険な運転）で「無謀に」</u>。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>語法で落とした（問5・7・10）</b><p>問5＝<em>ask if は名詞節「〜かどうか」＝whether</em>。問7＝<em>learn to のあとに deceive が省略（代不定詞）</em>。問10＝<em>upon doing「〜するとすぐ」＋the end＝目的地</em>。<u>省略と多義に敏感になる</u>。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>下線部・空所で落とした（問12・13・14・15）</b><p>問13・14は<em>本文の該当箇所を探す</em>（認めない謝罪＝I'm sorry／現実で常に起こりうる＝real）。<b>問12・15は肯定文を否定に反転させる罠</b>――did not trust、must not comprehend など、<u>1語の改変で意味が逆になる</u>のを見抜く。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>内容一致で落とした（問16）</b><p>a〜fを本文と照合。誤答の型は<em>役割すり替え(a：学生↔指導教員)／条件すり替え(b：even if→only if)／反転(e：説明する→明かさない)／主張の逆(f：嘘を判断する→決して嘘をつかない)</em>。<u>正解 c・d は素直に肯定を保った文</u>。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    関西外大の長文は<strong>①多義語・イディオムの同意語 ②下線部の言い換え ③2つ選ぶ内容一致</strong>が軸。<u>語彙は「方向」で、言い換え・内容一致は「否定への反転・条件のすり替えを消す」で</u>――この型を毎回同じ手順で回せば、設計で安定して取れます。テーマ（嘘は必ずしも悪ではない）を掴んでおくと、細部の判定が速くなります。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は関西外国語大学2024年英語（大問2）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・図表はTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問5〜問9（グループAB） ===== */
+{id:"問5", grp:"AB", type:"文法（名詞節）", lbl:"下線部 (5) if", en:"A young child asks a chatbot … (5)if Santa Claus is real.",
+ ask:"下線部(5) if の用法にもっとも近いものを a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"but", ok:false},{t:"whether", ok:true},{t:"although", ok:false},{t:"until", ok:false}],
+ ev:{q:'A young child asks a chatbot or a voice assistant <span class="h">if</span> Santa Claus is real.', jp:"「サンタは本当にいるのかどうか、と子どもが尋ねる」。この if は asks の目的語となる名詞節を導く＝『〜かどうか』。"},
+ co:[{c:"nav",l:"2種類の if を見分ける",h:"if には ①「もし〜なら（条件・副詞節）」②「〜かどうか（名詞節）」の2用法。<u>ここは asks（尋ねる）の目的語</u>なので②＝<b>whether</b>。ask if / know if / wonder if の形は『〜かどうか』。"},
+     {c:"gold",l:"決め手",h:"<em>動詞の目的語になっている if は whether に置き換えられる</em>。「もし実在するなら子どもが尋ねる」では意味が通らない。"}],
+ sol:[{m:"x",n:"a",t:"but（しかし）は接続詞だが名詞節を作らない。"},{m:"o",n:"b",t:"正解。ask if＝ask whether「〜かどうか尋ねる」。"},{m:"x",n:"c",t:"although（〜だけれども）は譲歩。目的語にならない。"},{m:"x",n:"d",t:"until（〜まで）は時。不可。"}]},
+
+{id:"問6", grp:"AB", type:"同意語（名詞）", lbl:"下線部 (6) deception", en:"The field of robot (6)deception is understudied",
+ ask:"下線部(6) deception の意味にもっとも近いものを a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"honesty（正直）", ok:false},{t:"duplicity（二枚舌・欺瞞）", ok:true},{t:"mind（心）", ok:false},{t:"reliability（信頼性）", ok:false}],
+ ev:{q:'The field of robot <span class="h">deception</span> is understudied', jp:"「ロボットの欺瞞という分野はまだ研究が浅い」。deception＝だますこと・欺瞞。"},
+ co:[{c:"gold",l:"語義｜deception",h:"<b>deception＝「欺瞞・だますこと」</b>（deceive の名詞形）。＝<em>duplicity（二枚舌、人を欺くこと）</em>。"},
+     {c:"verm",l:"罠｜honesty / reliability",h:"<em>1 honesty（正直）・4 reliability（信頼性）は正反対</em>。本文は「ロボットが嘘をつく」話なので、プラス方向の語は即消す。<u>deception ↔ honesty の対義を押さえる</u>。"}],
+ sol:[{m:"x",n:"a",t:"honesty（正直）は正反対。"},{m:"o",n:"b",t:"正解。deception＝duplicity「欺瞞・二枚舌」。"},{m:"x",n:"c",t:"mind（心）は無関係。"},{m:"x",n:"d",t:"reliability（信頼性）は逆方向。"}]},
+
+{id:"問7", grp:"AB", type:"語句解釈（省略補充）", lbl:"下線部 (7) learn to on its own", en:"AI technology that could be designed to deceive, or potentially (7)learn to on its own",
+ ask:"下線部(7) learn to on its own の意味にもっとも近いものを a〜d から選べ。", answer:"d", kind:"choice",
+ choices:[{t:"acquire skill in designing carefully（慎重に設計する技術を身につける）", ok:false},{t:"fail to design practically（実用的に設計しそこなう）", ok:false},{t:"be ready to be deliberately deceived（故意に欺かれる用意がある）", ok:false},{t:"become competent in deceiving autonomously（自律的に欺くことに習熟する）", ok:true}],
+ ev:{q:'AI technology that could be designed to deceive, or potentially <span class="h">learn to [deceive] on its own</span>', jp:"「欺くように設計されうる、あるいは潜在的に自力で（欺くことを）学びうるAI技術」。to のあとに deceive が省略。"},
+ co:[{c:"nav",l:"省略を補う",h:"<b>learn to ___ on its own</b> の to のあとには<u>直前の deceive が省略</u>されている（代不定詞）。＝「自力で欺くことを学ぶ」。<em>on its own＝独力で・自律的に（＝autonomously）</em>。"},
+     {c:"gold",l:"言い換えの対応",h:"learn to deceive＝<em>become competent in deceiving（欺くことに習熟する）</em>／on its own＝<em>autonomously（自律的に）</em>。ぴったり d。"}],
+ sol:[{m:"x",n:"a",t:"designing（設計）ではない。deceive の省略。"},{m:"x",n:"b",t:"fail（しそこなう）は無関係。"},{m:"x",n:"c",t:"受け身『欺かれる』ではなく、能動『欺く』を学ぶ。"},{m:"o",n:"d",t:"正解。自力で（autonomously）欺くことに習熟する。"}]},
+
+{id:"問8", grp:"AB", type:"同意語（複合形容詞）", lbl:"下線部 (8) high-stakes, time-sensitive", en:"a (8)high-stakes, time-sensitive situation",
+ ask:"下線部(8) high-stakes, time-sensitive の意味にもっとも近いものを a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"high-price, time-saving（高価格・時間節約）", ok:false},{t:"high-risk, time-critical（高リスク・一刻を争う）", ok:true},{t:"high-quality, time-honored（高品質・由緒ある）", ok:false},{t:"high-spirited, time-consuming（元気な・時間のかかる）", ok:false}],
+ ev:{q:'a <span class="h">high-stakes, time-sensitive</span> situation', jp:"「高リスクで、時間的余裕のない状況」。stakes＝賭け金・危険度、time-sensitive＝時間に左右される・急を要する。"},
+ co:[{c:"gold",l:"語義｜stakes / time-sensitive",h:"<b>high-stakes＝「賭け金が高い＝重大でリスクの大きい」（＝high-risk）</b>。<b>time-sensitive＝「時間に敏感な＝一刻を争う」（＝time-critical）</b>。本文の設定（遅れると友人が死ぬ）と一致。"},
+     {c:"verm",l:"罠",h:"high- が共通なので雰囲気で選ばない。<u>stakes を price（価格）と取り違えない</u>。time-sensitive は「節約」でも「消費」でもなく「急を要する」。"}],
+ sol:[{m:"x",n:"a",t:"price（価格）・saving（節約）は誤り。"},{m:"o",n:"b",t:"正解。high-risk（高リスク）・time-critical（一刻を争う）。"},{m:"x",n:"c",t:"quality・time-honored（由緒ある）は無関係。"},{m:"x",n:"d",t:"high-spirited（元気な）は無関係。"}]},
+
+{id:"問9", grp:"AB", type:"同意語（イディオム）", lbl:"下線部 (9) in-person", en:"They recruited 341 online participants and 20 (9)in-person participants.",
+ ask:"下線部(9) in-person の意味にもっとも近いものを a〜d から選べ。", answer:"c", kind:"choice",
+ choices:[{t:"in-the-pursuit-of（〜を追求して）", ok:false},{t:"in-the-name-of（〜の名において）", ok:false},{t:"in-the-flesh（じかに・生身で）", ok:true},{t:"in-the-bucket（バケツの中で）", ok:false}],
+ ev:{q:'341 online participants and 20 <span class="h">in-person</span> participants', jp:"「オンライン参加者341人と、対面（じかに会う）参加者20人」。online（オンライン）との対比。"},
+ co:[{c:"nav",l:"対比で決める",h:"<em>online（画面越し）↔ in-person（対面）</em>。<b>in person＝「じかに・直接会って」</b>。同義は <em>in the flesh（生身で・実物で）</em>。"},
+     {c:"gold",l:"語義｜in the flesh",h:"in the flesh は「（写真や画面でなく）本人が実際にその場に」。online の反対＝実際に足を運んだ参加者、にぴったり。"}],
+ sol:[{m:"x",n:"a",t:"in the pursuit of（追求して）は無関係。"},{m:"x",n:"b",t:"in the name of（〜の名において）は無関係。"},{m:"o",n:"c",t:"正解。in person＝in the flesh「じかに・対面で」。"},{m:"x",n:"d",t:"in the bucket は文意に合わない。"}]},
+
+/* ===== 問10〜問13（グループCD） ===== */
+{id:"問10", grp:"CD", type:"語句解釈", lbl:"下線部 (10) Upon reaching the end", en:"(10)Upon reaching the end, they are given another message",
+ ask:"下線部(10) Upon reaching the end の意味にもっとも近いものを a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"When they arrive at the destination（目的地に到着したとき）", ok:true},{t:"Before they reach the conclusion（結論に達する前に）", ok:false},{t:"After they try to quit the simulation（シミュレーションをやめようとしたあと）", ok:false},{t:"While they ask the AI assistant（AIに尋ねている間に）", ok:false}],
+ ev:{q:'<span class="h">Upon reaching the end</span>, they are given another message: "You have arrived at your destination."', jp:"「終点（目的地）に着くと、もう1つのメッセージを受け取る＝『目的地に到着しました』」。"},
+ co:[{c:"gold",l:"語法｜upon doing",h:"<b>upon ＋ 動名詞＝on doing「〜するとすぐに・〜した時点で」</b>。<em>the end＝運転の終点＝目的地</em>。直後の『You have arrived at your destination』が言い換えの決め手。"},
+     {c:"verm",l:"罠｜b conclusion",h:"the end を「結論」と取って b に飛びつかない。<u>運転シミュレーションの『終点＝目的地』</u>。"}],
+ sol:[{m:"o",n:"a",t:"正解。upon reaching the end＝目的地に到着したとき。"},{m:"x",n:"b",t:"「結論に達する前」ではない。the end＝目的地。"},{m:"x",n:"c",t:"「やめようとした」は本文になし。"},{m:"x",n:"d",t:"「尋ねている間」ではない。到着が先。"}]},
+
+{id:"問11", grp:"CD", type:"同意語（副詞）", lbl:"下線部 (11) recklessly", en:"I thought you would drive (11)recklessly because you were in an unstable emotional state",
+ ask:"下線部(11) recklessly の意味にもっとも近いものを a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"rashly（軽率に・無鉄砲に）", ok:true},{t:"reluctantly（しぶしぶ）", ok:false},{t:"remorsefully（後悔して）", ok:false},{t:"respectably（立派に）", ok:false}],
+ ev:{q:'I thought you would drive <span class="h">recklessly</span> because you were in an unstable emotional state', jp:"「あなたは不安定な精神状態だったので、無謀な運転をするだろうと思った」。"},
+ co:[{c:"gold",l:"語義｜reckless",h:"<b>reckless＝「無謀な・向こう見ずな」</b>（reck『気にかける』＋less）。副詞 recklessly＝「無謀に」。＝<em>rashly（軽率に・性急に）</em>。"},
+     {c:"verm",l:"罠｜r で始まる紛らわしい4語",h:"選択肢は全部 r-。<em>reluctantly（しぶしぶ）／remorsefully（後悔して）／respectably（立派に）</em>と混同しない。文脈は『不安定な精神状態→危険な運転』なので『無謀に』。"}],
+ sol:[{m:"o",n:"a",t:"正解。recklessly＝rashly「無謀に・軽率に」。"},{m:"x",n:"b",t:"reluctantly（しぶしぶ）は無関係。"},{m:"x",n:"c",t:"remorsefully（後悔して）は無関係。"},{m:"x",n:"d",t:"respectably（立派に）は逆方向。"}]},
+
+{id:"問12", grp:"CD", type:"下線部の言い換え", lbl:"下線部 (12)", en:"When asked why, a common response was that they believed the robot knew more about the situation than they did.",
+ ask:"下線部(12)の意味内容にもっとも近いものを a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"減速の理由を問われ、多くはロボットの判断を信頼せず、しかしロボットが状況をよく知っていると信じた、と答えた。", ok:false},{t:"減速した行動について問われると、多くが挙げた理由は、ロボットのほうが状況についてよく知っていると信頼した、というものだった。", ok:true},{t:"なぜロボットが人間のように振る舞ったのかと問われ、多くはロボットが状況を熟知していると信頼した、と述べた。", ok:false},{t:"この速度超過行動について問われ、よく挙がった理由は、ロボットが優れた知識を持たないという信念だった。", ok:false}],
+ ev:{q:'When asked why, a common response was that <span class="h">they believed the robot knew more about the situation than they did</span>.', jp:"「なぜ（減速したのか）と問われると、よくある答えは、ロボットのほうが状況をよく知っていると信じた、というものだった」。"},
+ co:[{c:"nav",l:"下線部の骨格",h:"<b>When asked why＝「なぜ（減速したのか）と問われて」</b>（前文＝45%が減速）。<b>believed the robot knew more＝ロボットのほうがよく知っていると信じた</b>。この2点を保った選択肢が b。"},
+     {c:"verm",l:"罠の作り",h:"<em>a</em> は「判断を信頼せず（did not trust）」と<u>逆の要素</u>を混入。<em>c</em> は「なぜ人間のように振る舞ったか（acted like a human）」と<u>問いの内容をすり替え</u>。<em>d</em> は「優れた知識を持たない（did not have superior knowledge）」＝<u>信じた内容を否定に反転</u>。<b>正しいのは肯定のまま保った b</b>。"}],
+ sol:[{m:"x",n:"a",t:"「判断を信頼しなかった」は本文と逆。"},{m:"o",n:"b",t:"正解。問い（なぜ減速したか）と信念（ロボットがよく知っている）を正しく保持。"},{m:"x",n:"c",t:"「なぜ人間のように振る舞ったか」は問いのすり替え。"},{m:"x",n:"d",t:"「優れた知識を持たない」は信念内容の反転で逆。"}]},
+
+{id:"問13", grp:"CD", type:"空所補充（内容）", lbl:"空所 (13)", en:"the apology with no admission of lying — simply stating ( 13 ) — statistically outperformed the other responses",
+ ask:"空所(13)に入れるのにもっとも適当なものを a〜d から選べ。", answer:"d", kind:"choice",
+ choices:[{t:'"I am sorry that I deceived you"（あなたを欺いて申し訳ない）', ok:false},{t:'"You have arrived at your destination"（目的地に到着しました）', ok:false},{t:'"Slow down"（減速して）', ok:false},{t:'"I\'m sorry"（申し訳ありません）', ok:true}],
+ ev:{q:'the apology with <span class="h">no admission of lying</span> — simply stating ( 13 ) — statistically outperformed the other responses', jp:"「嘘を認めない謝罪＝ただ〔　〕と述べるだけのもの＝が、信頼修復で他を統計的に上回った」。"},
+ co:[{c:"nav",l:"『嘘を認めない謝罪』を探す",h:"第11段落の5類型のうち、<b>Basic No Admit（嘘を認めない基本型）＝『I'm sorry』</b>。<u>謝るが、何について謝るかを言わない＝嘘を認めていない</u>。だから空所は d。"},
+     {c:"verm",l:"罠｜a と b",h:"<em>a『I am sorry that I deceived you』は嘘を<b>認めている</b></em>ので『no admission』に反する。<em>b『目的地に到着』は謝罪ですらない（無謝罪型）</em>。c『減速して』は応答文でない。"}],
+ sol:[{m:"x",n:"a",t:"嘘を認めている（deceived you）。no admission に反する。"},{m:"x",n:"b",t:"謝罪ですらない（Baseline No Apology 型）。"},{m:"x",n:"c",t:"『減速して』は謝罪応答ではない。"},{m:"o",n:"d",t:"正解。『I'm sorry』＝謝るが嘘を認めない型。"}]},
+
+/* ===== 問14〜問16（グループEF） ===== */
+{id:"問14", grp:"EF", type:"空所補充（内容）", lbl:"空所 (14)", en:"average technology users must understand that robotic deception is ( 14 ) and always a possibility",
+ ask:"空所(14)に入れるのにもっとも適当なものを a〜d から選べ。", answer:"a", kind:"choice",
+ choices:[{t:"real（現実の）", ok:true},{t:"false（偽りの）", ok:false},{t:"well-studied（十分研究された）", ok:false},{t:"impossible（不可能な）", ok:false}],
+ ev:{q:'robotic deception is <span class="h">( 14 ) and always a possibility</span>', jp:"「ロボットの欺瞞は〔　〕で、常に起こりうる可能性だと理解せねばならない」。and で『常に起こりうる可能性』と並ぶ語。"},
+ co:[{c:"nav",l:"and の並列で決める",h:"空所は <b>and always a possibility（常に起こりうる）</b>と並列。<u>『常に起こりうる』と方向が揃う語＝real（現実の）</u>。ロボットの欺瞞は絵空事ではなく現実だ、という主張。"},
+     {c:"verm",l:"罠",h:"<em>false（偽り）・impossible（不可能）は『常に起こりうる』と矛盾</em>。<em>well-studied は第2段落『understudied（研究が浅い）』と矛盾</em>。"}],
+ sol:[{m:"o",n:"a",t:"正解。real（現実の）。『常に起こりうる』と並列。"},{m:"x",n:"b",t:"false（偽り）は文意と逆。"},{m:"x",n:"c",t:"well-studied は『研究が浅い』と矛盾。"},{m:"x",n:"d",t:"impossible は『常に起こりうる』と矛盾。"}]},
+
+{id:"問15", grp:"EF", type:"下線部の言い換え", lbl:"下線部 (15)", en:"designers and technologists … may have to choose whether they want their system to be capable of deception and should understand the ramifications of their design choices.",
+ ask:"下線部(15)の意味内容にもっとも近いものを a〜d から選べ。", answer:"b", kind:"choice",
+ choices:[{t:"設計者は、システムに欺く能力を持たせたいか決定せねばならず、しかし設計判断の影響を理解してはならない。", ok:false},{t:"AIを開発する設計者は、システムに欺く能力を持たせるべきか決める必要があるかもしれず、その設計判断の影響を理解すべきだ。", ok:true},{t:"設計者は、AIに欺瞞能力を備えさせるかを熟考してはならず、設計判断の影響に気づくべきだ。", ok:false},{t:"AIを開発する設計者が、システムに欺く能力を持たせるか決める必要があるとは、ロジャーズは述べていない。", ok:false}],
+ ev:{q:'designers and technologists … may have to <span class="h">choose whether</span> they want their system to be capable of deception and <span class="h">should understand the ramifications</span> of their design choices', jp:"「設計者は、システムに欺く能力を持たせたいかどうかを選ばねばならないかもしれず、設計判断がもたらす影響を理解すべきだ」。"},
+ co:[{c:"nav",l:"下線部の2要素",h:"①<b>choose whether … capable of deception</b>「欺く能力を持たせるか<u>選ぶ・決める</u>」＝decide if …／②<b>should understand the ramifications</b>「影響を<u>理解すべき</u>」＝comprehend。<u>両方を肯定のまま保つのが b</u>。<em>ramifications＝（複雑な）影響・結果</em>。"},
+     {c:"verm",l:"罠｜否定への反転",h:"<em>a は②を『理解してはならない（must not comprehend）』と否定</em>。<em>c は①を『熟考してはならない（must not contemplate）』と否定</em>。<em>d は全体を『述べていない（does not state）』と否定</em>。<u>肯定文の一部を否定にすり替える定番の罠</u>。"}],
+ sol:[{m:"x",n:"a",t:"『理解してはならない』が本文と逆。"},{m:"o",n:"b",t:"正解。『決める必要がありうる＋影響を理解すべき』を肯定のまま保持。"},{m:"x",n:"c",t:"『熟考してはならない』が逆。"},{m:"x",n:"d",t:"『述べていない』が逆（ロジャーズはそう主張している）。"}]},
+
+{id:"問16", grp:"EF", type:"内容一致（8択から2つ）", lbl:"本文の内容に合うもの（2つ）", en:"次の a〜f から2つ選べ。", answer:"c・d", kind:"multi",
+ items:[
+  {n:"a", t:"ジョージア工科大の2人の学生研究者が、指導教員（Kantwon Rogers と Reiden Webber）が設計した運転シミュレーションを用いて、意図的なロボットの欺瞞が信頼にどう影響するかを調べた。", ok:false,
+   ev:"第3段落：Kantwon Rogers と Reiden Webber は研究をした<em>2人の学生本人</em>であり、シミュレーションを設計したのも彼ら自身。",
+   why:"<b>矛盾</b>。Rogers と Webber は『指導教員（academic advisors）』ではなく<u>学生研究者本人</u>。しかもシミュレーションを設計したのは彼ら自身。人物の役割をすり替えた罠。"},
+  {n:"b", t:"ロジャーズとウェバーによれば、これまでの研究は、一般に、人はその嘘が自分の利益を意図したものであった場合にのみロボットへの信頼を失う、と示してきた。", ok:false,
+   ev:"第4段落：先行研究は「嘘に気づくと――<em>たとえその嘘が利益のためでも（even if the lie was intended to benefit them）</em>――信頼を失う」と示した。",
+   why:"<b>矛盾</b>。本文の if 節は <em>even if（たとえ〜でも）</em>。選択肢は『only if（〜の場合にのみ）』にすり替えている。<u>善意の嘘『でも』信頼を失う</u>のが正しい。"},
+  {n:"c", t:"この2人の研究者は、人間とロボットに長期的な関わりを持ってほしいと考えており、そのため、ロボットのシステムへの人間の信頼を回復するのに、より効果的な謝罪とそうでない謝罪があるのかどうかを調べた。", ok:true,
+   ev:"第4段落：「人々にこうしたシステムと長期的に関わってほしい」「信頼を修復するうえで、より効果的な謝罪とそうでない謝罪があるのか知りたい」。",
+   why:"<b>一致</b>。long-term interactions を望む → だから謝罪の効果の違いを調べた、という動機と目的がそのまま対応。"},
+  {n:"d", t:"ロジャーズは、嘘を認めない謝罪がロボットのシステムへの人間の信頼を修復するのに最も効果的だという実験結果に懸念を示している。というのも、そのような謝罪は、ロボットが与えた誤情報はどれも意図的な嘘ではなくシステムのエラーだ、という先入観を利用するからだと彼は考えている。", ok:true,
+   ev:"第14〜15段落：嘘を認めない謝罪が信頼修復で最も優れていた。ロジャーズは「これは憂慮すべきで厄介だ。なぜなら、その謝罪は『誤情報＝システムのエラー（意図的な嘘ではない）』という先入観につけ込むからだ」と述べた。",
+   why:"<b>一致</b>。worrisome and problematic（憂慮すべき・厄介）＝懸念。理由（先入観につけ込む）も本文どおり。"},
+  {n:"e", t:"ロジャーズとウェバーの実験結果は、謝罪の中で嘘をつかれたと気づかされた場合、ロボットは嘘の理由を明かさないほうが、利用者の信頼を取り戻すのによい、と示している。", ok:false,
+   ev:"第17段落：嘘をつかれたと気づかされた参加者には、<em>ロボットがなぜ嘘をついたかを説明することが</em>信頼修復の最善の戦略だった。",
+   why:"<b>矛盾</b>。本文は『理由を<u>説明する</u>のが最善』。選択肢は『理由を<u>明かさない</u>ほうがよい』と正反対にしている。"},
+  {n:"f", t:"人間とロボットのより良く長続きする関係のために、ロジャーズは、人間に常に従順で、決して自らの意志で真実を曲げないロボットのシステムを作ることを目指している。", ok:false,
+   ev:"第21段落：ロジャーズの目標は、<em>いつ嘘をつくべきで、いつつくべきでないかを学べる</em>ロボットを作ること。",
+   why:"<b>矛盾</b>。目標は『いつ嘘をつくべきか判断できる』ロボット。『常に従順で決して嘘をつかない』は本文と逆（本文は「嘘は必ずしも悪ではない」と述べる）。"},
+ ],
+ co:[{c:"nav",l:"2つ選ぶ内容一致の解き筋",h:"a〜fを本文と照合。この設問の誤答は<b>『役割のすり替え』(a)／『even if→only if の条件すり替え』(b)／『説明する↔明かさないの反転』(e)／『主張の逆』(f)</b>の4型。<u>正解 c・d は、動機・懸念とその理由を素直に保った文</u>。"},
+     {c:"verm",l:"最も紛らわしい b と e",h:"b は even if（たとえ〜でも）を only if（〜の場合のみ）に変える1語のすり替え。e は explain why it lied（理由を説明）を『明かさない』に反転。<u>1語・1方向の改変を見抜く</u>。"}]},
+];
+
+
+/* ===== ENGINE ===== */
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+</script>
+</body>
+</html>
