@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜成蹊大学 2025 大問4（メアリー・セレスト号）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">成</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>成蹊大学 2025 ／ 大問4</span></div>
+    <div class="top-meta">メアリー・セレスト号（幽霊船）<br>空所4＋内容設問5</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>THEORIES</small>4つの仮説</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>(1)–(5)</small>設問 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>(6)–(9)</small>設問 後半</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>無人なのに無傷の幽霊船。<br>4つの仮説を「証拠でどう潰すか」を<br>追えば、設問はすべて解ける。</h1>
+    <p>1872年、乗員が誰もいないのにほぼ完璧な状態で発見されたメアリー・セレスト号。本文は<em>海の怪物説→海賊説→悪天候説→アルコール中毒説</em>と4つの仮説を挙げ、それぞれを証拠で検討していく。空所は<strong>前後のつなぎ・段落テーマ</strong>で、内容設問は<strong>根拠の一文を指す</strong>ことで決まる。最後は「完全には解明されない」で締めくくられる。</p>
+    <div class="thesis"><b>この英文の構造：</b>導入（数ある海難の中で最も不可解）→ 発見（無人だが無傷）→ 謎（積荷も所持品も手つかず）→ 4つの仮説（怪物・海賊・悪天候・アルコール）を証拠で検討 → 結論（永遠に解明されない）。<u>仮説はどれも「証拠と矛盾する」で退けられる</u>のがポイント。</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>段落構成</span></div>
+      <div class="stat"><b>9</b><span>設問</span></div>
+      <div class="stat"><b>4</b><span>つの仮説</span></div>
+      <div class="stat"><b>2</b><span>つ選ぶNOT(9)</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:24%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">空所補充（つなぎ）</td><td>(1) 空所1 ／ (4) 空所2 ／ (7) 空所4</td><td><b>前後のつながり・段落テーマ</b>で決める。(1)は「多くの例→最上級」、(4)は「諸説の最初の一例」、(7)は「アルコール→発狂」。</td></tr>
+      <tr><td class="cond">内容一致・文完成</td><td>(2)(3)(6)(8)</td><td><b>根拠の一文を指す</b>。無人だが無傷(2)／状態に驚いた(3)／大西洋は危険(6)／解明されない(8)。</td></tr>
+      <tr><td class="cond">指示語</td><td>(5)</td><td><b>this idea は直前を見る</b>＝海賊襲撃説。</td></tr>
+      <tr><td class="cond">内容一致（NOT・2つ）</td><td>(9)</td><td>7択から<b>言及ある5つを消す</b>。残った1（船の歴史）・5（アルコールの社会的危険）が答え。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。(9)は<strong>7択それぞれをタップ</strong>すると○×と根拠段落が開きます。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 8段落の流れと設問の在りか<span class="sub">「導入→発見→謎→4つの仮説→結論」。仮説はどれも証拠で退けられる。設問がどこに埋まっているかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">最も不可解な幽霊船</div><p>無敵艦隊・タイタニックなど数々の海難。<em>その中でも最も不可解</em>なのがメアリー・セレスト号。</p><div class="tags"><span class="utag">空所1</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>発見</span></div><div class="para-b">
+      <div class="theme">無人だが完璧な状態</div><p>1872年、アゾレス沖で発見。<em>ほぼ完璧な状態なのに人っ子ひとりいない</em>幽霊船。</p><div class="tags"><span class="utag">(2)</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>謎</span></div><div class="para-b">
+      <div class="theme">積荷も所持品も手つかず</div><p>中身も所持品も<em>すべて整然・手つかず</em>。暴力も略奪の跡もなし。高価な積荷（工業用アルコール）も残存。</p><div class="tags"><span class="utag">(3)</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>仮説①</span></div><div class="para-b">
+      <div class="theme">海の怪物説</div><p>諸説あるがどれも定説でない。<em>最初の一例＝巨大なタコに襲われた</em>という説。</p><div class="tags"><span class="utag">空所2</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>仮説②</span></div><div class="para-b">
+      <div class="theme">海賊襲撃説</div><p>海賊に襲われた説。だが<em>戦闘跡なし・無傷・高価な積荷が残る</em>＝矛盾。</p><div class="tags"><span class="utag">(5)</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>仮説③</span></div><div class="para-b">
+      <div class="theme">悪天候説</div><p>救命ボート1つが欠けている＝悪天候説。大西洋は極端な気象で悪名高い。<em>だが帆も無傷で緊急脱出の跡なし</em>＝矛盾。</p><div class="tags"><span class="utag">(6)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>仮説④</span></div><div class="para-b">
+      <div class="theme">アルコール中毒説</div><p><em>正気を失ったのか?</em> 工業用アルコールは発狂を招きうる。だが乗組員は積荷を盗む人間ではない＝これも欠点あり。</p><div class="tags"><span class="utag">空所4</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>結論</span></div><div class="para-b">
+      <div class="theme">永遠に解明されない謎</div><p>ニューヨーク→ジェノバの航海。<em>運命を知ることはまずない</em>が、海の危険を思い起こさせる。</p><div class="tags"><span class="utag">(8)</span><span class="utag">(9)</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">4つの仮説へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">The Four Theories</div>
+  <h1 class="head">4つの仮説 ― どれも「証拠と矛盾」で退けられる<span class="sub">この英文の骨格は「4つの仮説を1つずつ証拠で検討する」こと。各説とその反証を1枚で押さえると、設問(4)(5)(6)(7)がまとめて見える。</span></h1>
+  <div class="rule"></div>
+
+  <table class="mtx">
+    <thead><tr><th style="width:18%">仮説</th><th style="width:34%">内容</th><th>反証（なぜ退けられるか）</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">① 海の怪物説</td><td>巨大なタコが全員を食べた（諸説の最初の一例）</td><td>荒唐無稽。どの説も広くは受け入れられていない。</td></tr>
+      <tr><td class="cond">② 海賊襲撃説</td><td>海賊に襲われた（this idea＝設問(5)）</td><td><b>戦闘跡なし・無傷・高価な積荷が残っている</b>。海賊なら積荷を奪うはず。</td></tr>
+      <tr><td class="cond">③ 悪天候説</td><td>悪天候の犠牲。救命ボート1つが欠けている</td><td><b>帆も木造部も完璧で、緊急脱出の痕跡がない</b>。大西洋は危険だが、脱出の跡がない。</td></tr>
+      <tr><td class="cond">④ アルコール中毒説</td><td>工業用アルコールで発狂し海へ飛び込んだ?（最も可能性が高い）</td><td>乗組員は<b>優れた評判のプロで、積荷を盗む人間ではなかった</b>。これも欠点あり。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box gold"><span class="lab">共通する論理＝「証拠と矛盾する」</span>
+    4つの仮説はいずれも<em>not supported by the evidence（証拠に裏づけられない）／once again … in perfect condition（またしても無傷）</em>という形で退けられる。<u>「無人なのに、争い・略奪・緊急脱出の跡がまったくない」</u>という異様な事実が、あらゆる説を否定してしまう。だから最後は<strong>「完全には解明されない」</strong>で終わる（設問(8)）。</div>
+
+  <div class="box navy"><span class="lab">発見時の『手つかず』が全設問の土台</span>
+    第2〜3段落の<em>「無人（not a soul aboard）だが、ほぼ完璧な状態（near perfect condition）で、中身も積荷も手つかず（remained untouched）」</em>――この描写が、(2)無人だが無傷／(3)状態に驚いた／(5)海賊説の反証／(6)悪天候説の反証、すべての根拠になっている。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問前半へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">設問 前半 ― (1)〜(5)<span class="sub">空所1・2（つなぎ）、内容一致(2)(3)、指示語(5)。各カードに<b>解答プロセス</b>を付けた。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 4つの仮説</button><span class="sp"></span><button class="btnp" data-go="4">設問後半へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">設問 後半 ― (6)〜(9)<span class="sub">内容一致(6)、空所4(7)、文完成(8)、そして<b>2つ選ぶNOT問題(9)</b>。(9)は7択をタップして○×を確認。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問前半</button><span class="sp"></span><button class="btnp" data-go="5">全訳へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全29文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>が設問に直結する箇所。各段落の下に設問の根拠をまとめた。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳では答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙った。<em>構文の骨（主語・否定・仮説の検討・指示語）を保ったまま、日本語として自立させている</em>。内容一致の照合や、指示語(5)・つなぎ(1)(4)(7)の根拠確認に使ってほしい。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― 最も不可解な幽霊船の物語　<span class="qbadge">(1)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">歴史を通じて、海で危険や災害に遭遇した船の話は数え切れないほどある。</div></div><div class="jpline"><div class="n">②</div><div class="s">1588年7月のスペイン無敵艦隊による無謀なイングランド侵攻の試みから、1912年4月のタイタニック号沈没まで、海は「最後に勝つのは常に自然だ」ということを私たちに思い知らせてきた。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>だが、世界中に知られるあらゆる海事の物語の中でも</em>、おそらく最も不可解なのが、メアリー・セレスト号の物語である。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第1段落</div><ul><li><b>(1) But of all the maritime stories known across the globe</b>「だが、世界中に知られるあらゆる海事の物語の中でも」＝<u>空所1の正解</u>。<em>前文までの多くの海難の例（無敵艦隊・タイタニック）を受け、その中でも特に不可解な例へと話を絞る</em>つなぎ。<span class="qbadge">(1)</span></li>
+    <li><b>Nature will always have the last word</b>「最後に物を言う（勝つ）のは常に自然だ」＝<em>have the last word「最終的な決定権を持つ」</em>。導入の主題。</li>
+    <li><b>the most curious is the tale of the Mary Celeste</b>「最も不可解なのがメアリー・セレスト号の話」＝これ以降の中心。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜発見 ― 無人だが完璧な状態の船　<span class="qbadge">(2)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">1872年12月のある朝、この船はデイ・グラティア号の乗組員によって、当時ポルトガル領だったアゾレス諸島の沖およそ750キロの地点で発見された。</div></div><div class="jpline"><div class="n">②</div><div class="s">デイ・グラティア号の船長デービッド・モアハウスは、その船が何か問題を抱えているのではと心配し、状況を調べるために救命ボートを出すよう命じた。</div></div><div class="jpline"><div class="n">③</div><div class="s">デイ・グラティア号の船員たちがその船に乗り込むと、彼らはぞっとするような現実を目にした。</div></div><div class="jpline"><div class="n">④</div><div class="s">というのも、船はほぼ完璧な状態だったにもかかわらず、船内には人っ子ひとりいなかったのだ。船長も、船員も、乗客もいない。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">航海の途中のどこかで、メアリー・セレスト号は幽霊船になってしまっていた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">人々は皆どこへ消えたのか、そして何が彼らを逃げ出させたのか。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第2段落</div><ul><li><b>(2) There were no people on the Mary Celeste, but it was undamaged.</b>「船に人はいなかったが、船は無傷だった」＝<u>設問(2)の正解</u>。<em>in near perfect condition（ほぼ完璧な状態）＋not a soul aboard（人っ子ひとりいない）</em>が根拠（第4文）。<span class="qbadge">(2)</span></li>
+    <li><b>not a soul aboard</b>「船内に人っ子ひとりいない」＝<em>soul（人）</em>を使った強調表現。</li>
+    <li><b>had become a ghost ship</b>「幽霊船になってしまっていた」＝過去完了。発見時点より前に無人化していた。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜謎 ― 積荷も所持品も手つかず　<span class="qbadge">(3)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">困惑したモアハウス船長は、のちにこう報告した。発見時、メアリー・セレスト号の中身はすべて手つかずのままだった、と。</div></div><div class="jpline"><div class="n">②</div><div class="s">乗組員の所持品はすべて整然と、あるべき場所に収まっていた。</div></div><div class="jpline"><div class="n">③</div><div class="s">暴力の痕跡も、乗組員を制圧して船を乗っ取ろうとした形跡も、まったくなかった。</div></div><div class="jpline"><div class="n">④</div><div class="s">重要なことに、その積荷――ちょっとした財産になるほどの大量の工業用アルコール――も、手つかずのまま残されていた。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第3段落</div><ul><li><b>(3) surprised by the condition of the Mary Celeste</b>「船の（無傷の）状態に驚いた」＝<u>設問(3)の正解</u>。<em>中身も所持品も積荷もすべて手つかず・整然</em>という<u>異様な『無事さ』</u>に驚いた、という文脈（第1〜4文）。<span class="qbadge">(3)</span></li>
+    <li><b>remained untouched</b>「手つかずのまま」＝この段落のキーワード。<em>暴力・略奪・乗っ取りの形跡なし</em>。</li>
+    <li><b>a large quantity of industrial alcohol worth a small fortune</b>「ちょっとした財産になるほど大量の工業用アルコール」＝のちの『アルコール原因説』の伏線。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜仮説① ― 海の怪物説　<span class="qbadge">(4)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">この謎めいた出来事から150年の間に、乗組員失踪についていくつもの説が唱えられてきたが、どれも有力な原因として広く受け入れられてはいない。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>最初に示唆された理由の1つは</em>、メアリー・セレスト号が海の怪物――おそらく巨大なタコ――に襲われ、それが船上の全員を食べてしまったに違いない、というものだった。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第4段落</div><ul><li><b>(4) One of the first reasons suggested was that</b>「最初に示唆された理由の1つは〜というものだった」＝<u>空所2の正解</u>。<em>前文の several theories（いくつもの説）を受け、その最初の一例（海の怪物説）を導入する</em>。<span class="qbadge">(4)</span></li>
+    <li><b>none has been universally accepted</b>「どれも広くは受け入れられていない」＝<em>none＝全体否定</em>。だから諸説が続く。</li>
+    <li><b>a sea monster, perhaps a giant octopus</b>「海の怪物、おそらく巨大なタコ」＝最初の（荒唐無稽な）仮説。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜仮説② ― 海賊襲撃説　<span class="qbadge">(5)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">もう1つの広まった仮説は、船が海賊に襲われたというものだが、しかしこの考えもまた証拠と矛盾する。</div></div><div class="jpline"><div class="n">②</div><div class="s">船内に戦闘の跡はなく、船は完全に無傷だった。</div></div><div class="jpline"><div class="n">③</div><div class="s">さらに、もし目的が盗みだったのなら、なぜ盗人たちは船上に高価な積荷を残していくだろうか。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第5段落</div><ul><li><b>(5) this idea＝an attack by pirates</b>「この考え＝海賊による襲撃（説）」＝<u>設問(5)の下線部 this idea が指す内容</u>。<em>直前の文「船が海賊に襲われた（attacked by pirates）」を受ける</em>。<span class="qbadge">(5)</span></li>
+    <li><b>not supported by the evidence</b>「証拠に裏づけられない」＝<em>戦闘跡なし・無傷・高価な積荷が残っている</em>から海賊説は不成立。</li>
+    <li><b>why would the thieves leave the precious cargo</b>「なぜ盗人が高価な積荷を残すのか」＝反語。海賊なら積荷を奪うはず。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜仮説③ ― 悪天候説　<span class="qbadge">(6)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">のちに唱えられた、より現実的な説は、メアリー・セレスト号が悪天候の犠牲になったというもので、これは船の救命ボートの1つが失われていたという事実に裏づけられている。</div></div><div class="jpline"><div class="n">②</div><div class="s">大西洋は、巨大な波と強風という極端な気象条件で悪名高く、それが多くの船の沈没の原因となってきた。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし、これもまた矛盾する。船の帆や木造部分は完璧な状態で、乗組員が一瞬で逃げ出さねばならないような緊急事態の痕跡はなかったのだ。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第6段落</div><ul><li><b>(6) Sailors expect conditions in the Atlantic to be dangerous at times.</b>「船乗りは大西洋の状況が時に危険であることを予期している」＝<u>設問(6)の正解</u>。<em>大西洋は巨大な波・強風で悪名高い（well known for its extreme weather conditions）</em>が根拠（第2文）。<span class="qbadge">(6)</span></li>
+    <li><b>a theory supported by the fact that one of the ship's lifeboats was missing</b>「救命ボートが1つ失われていた事実に裏づけられる」＝悪天候説の根拠。</li>
+    <li><b>the ship's sails and woodwork were in perfect condition</b>「帆も木造部も完璧」＝<em>だが悪天候説も矛盾する（緊急脱出の痕跡なし）</em>。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜仮説④ ― アルコール中毒説と結論　<span class="qbadge">(7)</span> <span class="qbadge">(8)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">（　4　） 彼らは単に、海へ飛び込むことを決めたのだろうか。もしそうなら、なぜなのか。</div></div><div class="jpline"><div class="n">②</div><div class="s">専門家は、船の積荷である工業用アルコールを、その原因の可能性として指摘する。</div></div><div class="jpline"><div class="n">③</div><div class="s">通常の（飲用の）アルコールと違い、工業用アルコールは人間が摂取すると脳に深刻な損傷を与え、飲んだ人は幻覚を見るようになり、場合によってはついに発狂してしまうことがある。</div></div><div class="jpline"><div class="n">④</div><div class="s">おそらく最も可能性が高いとはいえ、この考えにも欠点はある。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">メアリー・セレスト号の乗組員は、船乗りの世界ではよく知られていた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">彼らは職務遂行にかけて優れた評判を持つプロフェッショナルであり、船の積荷を盗むような種類の人間ではなかった。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第7段落</div><ul><li><b>(4=空所) Could the crew of the Mary Celeste have lost their minds?</b>「メアリー・セレスト号の乗組員は正気を失ったのだろうか」＝<u>設問(7)の正解（空所4）</u>。<em>直後に『海へ飛び込んだのか』『工業用アルコールで発狂（madness）』が続く</em>ので、空所は<u>『正気を失ったのか』という問い</u>。<span class="qbadge">(7)</span></li>
+    <li><b>industrial alcohol can result in … madness</b>「工業用アルコールは（摂取すると）発狂に至りうる」＝アルコール中毒説の核。</li>
+    <li><b>this idea is nevertheless unsafe</b>「この説にも欠点がある」＝<em>乗組員は積荷を盗むような人間ではなかった</em>という反証。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜結論 ― 永遠に解明されない謎　<span class="qbadge">(8)</span> <span class="qbadge">(9)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">今日、その出来事から150年ほど経った今でも、ニューヨークからイタリアのジェノバへ向かう航海でメアリー・セレスト号に乗り出した人々の運命を、私たちが知ることはまずないだろう。</div></div><div class="jpline"><div class="n">②</div><div class="s">しかし、この幽霊船の物語は、強大な海洋が私たちに突きつけ続ける難題と、知りえない危険を、私たち全員に思い起こさせてくれるのである。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第8段落</div><ul><li><b>(8) will almost certainly never be fully understood</b>「ほぼ間違いなく、完全に解明されることは決してないだろう」＝<u>設問(8)の正解</u>。<em>we shall never learn the fate of the people（人々の運命を知ることはないだろう）</em>が根拠（第1文）。<span class="qbadge">(8)</span></li>
+    <li><b>(9) 本文で言及されていないもの2つ＝1と5</b>：<u>1「メアリー・セレスト号の歴史」・5「アルコール摂取が社会にもたらす危険」は本文に記述なし</u>。2（発見の経緯）3（発見時の状態）4（謎をめぐる諸説）6（発見時の航路）7（乗組員の人物像）は本文にある。<span class="qbadge">(9)</span></li>
+    <li><b>New York to Genoa, Italy</b>「ニューヨークからイタリアのジェノバへ」＝航路（設問(9)選択肢6の根拠）。</li></ul></div><div class="pnav"><button class="btns" data-go="4">← 設問後半</button><span class="sp"></span><button class="btnp" data-go="6">総まとめへ →</button></div></section><section class="panel" id="p6">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定して潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:16%">設問</th><th style="width:20%">解答</th><th>根拠</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">(1) 空所1</td><td><b>2</b></td><td>多くの海事の物語→その中でも最も不可解（最上級への橋渡し）</td></tr>
+      <tr><td class="cond">(2)</td><td><b>4</b></td><td>無人（not a soul aboard）だが無傷（near perfect condition）</td></tr>
+      <tr><td class="cond">(3)</td><td><b>1</b></td><td>無人なのに無傷・整然という『状態』に驚いた</td></tr>
+      <tr><td class="cond">(4) 空所2</td><td><b>3</b></td><td>諸説の『最初の一例』として怪物説を導く</td></tr>
+      <tr><td class="cond">(5)</td><td><b>3</b></td><td>this idea＝直前の『海賊に襲われた』説</td></tr>
+      <tr><td class="cond">(6)</td><td><b>1</b></td><td>大西洋は極端な気象で悪名高い＝時に危険と予期</td></tr>
+      <tr><td class="cond">(7) 空所4</td><td><b>2</b></td><td>『正気を失ったのか?』→飛び込み・発狂（madness）</td></tr>
+      <tr><td class="cond">(8)</td><td><b>4</b></td><td>運命を知ることはない＝完全には解明されない</td></tr>
+      <tr><td class="cond">(9)</td><td><b>1・5</b>（2つ）</td><td>言及なし＝1（船の歴史）・5（アルコールの社会的危険）</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>空所（つなぎ）で落とした（(1)(4)(7)）</b><p>空所は<em>前後のつながり・段落テーマ</em>で決まる。(1)は「多くの例→最も不可解」の橋渡し、(4)は「諸説の最初の一例」、(7)は「アルコール→発狂」という<u>段落の主題</u>に沿う問い。直前で『どの説も定説でない』とあれば、(4)で『ほぼ確実に真実』は選べない。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>内容一致・文完成で落とした（(2)(3)(6)(8)）</b><p><em>根拠の一文を必ず指す</em>。(2)near perfect condition／not a soul aboard、(6)大西洋は極端な気象で悪名高い、(8)we shall never learn the fate。<u>記憶でなく本文に戻って照合</u>。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>指示語(5)で落とした</b><p><b>this idea は直前の名詞句を指す</b>＝『海賊に襲われた（attacked by pirates）』説。<u>指示語は必ず直前に戻る</u>。『証拠の欠如』は idea を評する述部で、中身ではない。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>2つ選ぶNOT(9)で落とした</b><p><u>言及がある5つ（2発見の経緯・3発見時の状態・4諸説・6航路・7乗組員の人物像）を消す</u>→残った<b>1（船の歴史）と5（アルコールの社会的危険）</b>が答え。5は「アルコールの害」は書いてあるが<em>『社会への危険』という一般論にすり替わっていない</em>点に注意。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    仮説検討型の英文は、<u>各仮説と『その反証』をセットで押さえる</u>のが最短ルート。この英文なら「無人なのに争い・略奪・脱出の跡がない」が全仮説を潰す共通の反証でした。空所は<em>つなぎと段落テーマ</em>、内容設問は<em>根拠の一文</em>、指示語は<em>直前</em>――型どおりに追えば、長文でも安定して取れます。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="5">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は成蹊大学2025年英語（大問4）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+{id:"(1)", grp:"AB", type:"空所補充（つなぎ）", lbl:"空所 1", en:"( 1 ), perhaps the most curious is the tale of the Mary Celeste.",
+ ask:"空所1に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"Even though the Titanic was lost over a century ago（タイタニックが1世紀以上前に失われたとはいえ）", ok:false},{t:"But of all the maritime stories known across the globe（だが、世界中に知られるあらゆる海事の物語の中でも）", ok:true},{t:"Despite the power and fearsome strength of the oceans and seas（海の力と恐るべき強さにもかかわらず）", ok:false},{t:"Although both the Spanish and the English have lost hundreds of ships（スペインもイギリスも数百隻を失ったとはいえ）", ok:false}],
+ steps:[
+   {t:"前後のつながりを見る", d:"前：無敵艦隊・タイタニックなど<em>数々の海難の例</em>。空所の後：<b>perhaps the most curious is …（最も不可解なのが〜）</b>と<u>1つの例に話を絞る</u>。"},
+   {t:"『多くの中でも』のつなぎを探す", d:"多くの物語 → その<u>中でも最も不可解</u>、という流れ。<b>of all the maritime stories（あらゆる海事の物語の中でも）</b>がぴったり。"},
+   {t:"他を消す", d:"1（タイタニック限定）3（海の力にもかかわらず）4（スペイン・イギリスの喪失）は、いずれも<em>『多くの例→その中の最上級』という橋渡し</em>にならない。"}],
+ ev:{q:'<span class="h">But of all the maritime stories known across the globe</span>, perhaps the most curious is the tale of the Mary Celeste.', jp:"「だが、世界中に知られるあらゆる海事の物語の中でも、最も不可解なのがメアリー・セレスト号の話だ」。"},
+ co:[{c:"nav",l:"最上級への橋渡し",h:"<b>of all ~（〜すべての中でも）</b>は直後の<em>the most ~（最も〜）</em>と呼応する定番の型。前の『多くの例』を受けて1つに絞る。"}],
+ sol:[{m:"x",n:"1",t:"タイタニックだけに限定され、話を絞る流れにならない。"},{m:"o",n:"2",t:"正解。多くの物語の中でも最も不可解、と最上級につなぐ。"},{m:"x",n:"3",t:"「海の力にもかかわらず」は後続の最上級と噛み合わない。"},{m:"x",n:"4",t:"スペイン・イギリスの喪失に限定され、橋渡しにならない。"}]},
+
+{id:"(2)", grp:"AB", type:"内容一致", lbl:"設問 (2)", en:"Which of the statements is true?",
+ ask:"本文の内容として正しいものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"ポルトガルはアゾレス諸島の主要な貿易相手だった。", ok:false},{t:"デイ・グラティア号の船員は幽霊を怖がらなかった。", ok:false},{t:"モアハウス船長はメアリー・セレスト号を探していた。", ok:false},{t:"メアリー・セレスト号には誰もいなかったが、無傷だった。", ok:true}],
+ steps:[
+   {t:"根拠の一文を探す", d:"第2段落 <b>「ほぼ完璧な状態だったのに、船内には人っ子ひとりいなかった（in near perfect condition … not a soul aboard）」</b>。"},
+   {t:"選択肢と照合", d:"『無人だが無傷』＝選択肢4にそのまま一致。"},
+   {t:"他を消す", d:"1（ポルトガルが貿易相手）→本文になし。2（幽霊を怖がらない）→<em>a haunting reality を目にした（ぞっとする現実）</em>で逆。3（探していた）→<em>心配して調査を命じた</em>だけで探していたわけではない。"}],
+ ev:{q:'the ship was in near perfect condition, there was <span class="h">not a soul aboard</span>', jp:"「船はほぼ完璧な状態だったが、船内には人っ子ひとりいなかった」＝無人だが無傷。"},
+ co:[{c:"verm",l:"罠｜2・3",h:"2＝船員は<em>haunting reality（ぞっとする現実）</em>を目にしており『怖がらなかった』は逆。3＝モアハウスは<em>trouble を心配して調査を命じた</em>だけで、メアリー・セレスト号を『探していた』わけではない。"}],
+ sol:[{m:"x",n:"1",t:"ポルトガルとアゾレスの貿易関係は本文になし。"},{m:"x",n:"2",t:"船員は『ぞっとする現実』を見た。怖がらなかったは逆。"},{m:"x",n:"3",t:"船長は心配して調査を命じただけ。探してはいない。"},{m:"o",n:"4",t:"正解。無人だが無傷（near perfect condition／not a soul aboard）。"}]},
+
+{id:"(3)", grp:"AB", type:"文完成（理由）", lbl:"設問 (3)", en:"Captain Morehouse was surprised ___.",
+ ask:"モアハウス船長は何に驚いたか。もっとも適切なものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"メアリー・セレスト号の（無傷の）状態に", ok:true},{t:"船長が自分の船を捨てるとは、ということに", ok:false},{t:"乗組員が異様に几帳面で整頓好きだった、ということに", ok:false},{t:"メアリー・セレスト号の積荷の莫大な価値に", ok:false}],
+ steps:[
+   {t:"第3段落の主旨を掴む", d:"発見時、<b>中身も所持品も積荷もすべて手つかず・整然（remained untouched / in order and in their proper place）</b>。暴力も略奪の跡もない。"},
+   {t:"『驚き』の対象を特定", d:"人がいないのに<u>船が異様に無事・整然としている</u>――この<b>状態（condition）</b>にモアハウスは困惑・驚愕した。→ 選択肢1。"},
+   {t:"他を消す", d:"2（船長が船を捨てた）→そう明言する驚きではない。3（乗組員が几帳面）→整然は『無事さ』の描写で、性格への驚きではない。4（積荷の価値）→価値自体への驚きが主眼ではない。"}],
+ ev:{q:'the entire contents of the Mary Celeste <span class="h">remained untouched</span> … all in order and in their proper place', jp:"「船の中身はすべて手つかずで、整然とあるべき場所に収まっていた」＝無人なのに無事な『状態』に驚いた。"},
+ co:[{c:"nav",l:"驚きの対象＝condition",h:"無人 × 完璧な状態、という<em>矛盾した『状態（condition）』</em>こそ驚きの核。選択肢1の by the condition が的確。"}],
+ sol:[{m:"o",n:"1",t:"正解。無人なのに無傷・整然という『状態』に驚いた。"},{m:"x",n:"2",t:"『船長が船を捨てた』という驚きとは書かれていない。"},{m:"x",n:"3",t:"整然は『無事さ』の描写。性格への驚きではない。"},{m:"x",n:"4",t:"積荷の価値そのものへの驚きが主眼ではない。"}]},
+
+{id:"(4)", grp:"AB", type:"空所補充（つなぎ）", lbl:"空所 2", en:"( 2 ) the Mary Celeste must have been attacked by a sea monster",
+ ask:"空所2に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"It is almost certainly true that（〜はほぼ確実に真実だ）", ok:false},{t:"Scholars around the world quickly agreed（世界中の学者がすぐに同意した）", ok:false},{t:"One of the first reasons suggested was that（最初に示唆された理由の1つは〜だった）", ok:true},{t:"This is largely due to the fact that in reality（これは主に、実際には〜という事実による）", ok:false}],
+ steps:[
+   {t:"前文とのつながり", d:"直前：<em>several theories … none has been universally accepted（諸説あるがどれも定説ではない）</em>。空所の後：<b>海の怪物（巨大なタコ）に襲われたに違いない</b>という荒唐無稽な説。"},
+   {t:"『諸説の最初の一例』を導く", d:"諸説のうち<u>最初に出た説の1つ</u>として怪物説を紹介する流れ。<b>One of the first reasons suggested was that（最初に示唆された理由の1つは〜）</b>。"},
+   {t:"他を消す", d:"1（ほぼ確実に真実）→どれも定説でないと直前にあり矛盾。2（学者がすぐ同意）→矛盾。4（実際には〜という事実による）→怪物説は事実の説明ではない。"}],
+ ev:{q:'though none has been universally accepted … <span class="h">One of the first reasons suggested was that</span> the Mary Celeste must have been attacked by a sea monster', jp:"「どれも定説ではない…最初に示唆された理由の1つは、船が海の怪物に襲われたに違いない、というものだった」。"},
+ co:[{c:"verm",l:"罠｜1・2",h:"直前で<em>『どの説も広く受け入れられていない』</em>と述べているのに、1『ほぼ確実に真実』2『学者がすぐ同意』では<u>矛盾</u>。怪物説はあくまで諸説の一例。"}],
+ sol:[{m:"x",n:"1",t:"『どれも定説でない』と矛盾。"},{m:"x",n:"2",t:"『学者がすぐ同意』も矛盾。"},{m:"o",n:"3",t:"正解。諸説の『最初の一例』として怪物説を導く。"},{m:"x",n:"4",t:"怪物説は事実の説明ではない。"}]},
+
+{id:"(5)", grp:"AB", type:"指示語", lbl:"設問 (5)", en:"What does the phrase (3)this idea refer to?",
+ ask:"下線部(3) this idea が指す内容を 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"a lack of evidence（証拠の欠如）", ok:false},{t:"a failed robbery（失敗した強盗）", ok:false},{t:"an attack by pirates（海賊による襲撃）", ok:true},{t:"a completely undamaged ship（完全に無傷の船）", ok:false}],
+ steps:[
+   {t:"指示語は直前を見る", d:"<b>this idea（この考え）</b>の直前：<em>the ship had been attacked by pirates（船が海賊に襲われた）</em>。"},
+   {t:"指す内容を確定", d:"this idea＝<u>『海賊に襲われた』という説</u>＝an attack by pirates。選択肢3。"},
+   {t:"他を消す", d:"1（証拠の欠如）＝this idea が『証拠に裏づけられない』と述べる<u>述部</u>であって、idea の中身ではない。2（強盗失敗）4（無傷の船）は idea の指示対象ではない。"}],
+ ev:{q:'the ship had been attacked by pirates, though again, <span class="h">this idea</span> is not supported by the evidence', jp:"「船が海賊に襲われた（という説）だが、この考えもまた証拠に裏づけられない」＝this idea＝海賊襲撃説。"},
+ co:[{c:"nav",l:"指示語は直前の名詞句",h:"<b>this idea</b>＝直前で述べた<em>『海賊に襲われた』という仮説</em>。指示語問題は<u>直前を丁寧に戻る</u>のが鉄則。"}],
+ sol:[{m:"x",n:"1",t:"『証拠の欠如』は this idea を評する述部で、idea の中身ではない。"},{m:"x",n:"2",t:"『強盗失敗』は指示対象でない。"},{m:"o",n:"3",t:"正解。直前の『海賊に襲われた』という説を指す。"},{m:"x",n:"4",t:"『無傷の船』は指示対象でない。"}]},
+
+{id:"(6)", grp:"CD", type:"内容一致", lbl:"設問 (6)", en:"Which of the statements is true?",
+ ask:"本文の内容として正しいものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"船乗りは、大西洋の状況が時に危険だと予期している。", ok:true},{t:"メアリー・セレスト号の人々は、おそらく嵐の前に脱出した。", ok:false},{t:"強風にもかかわらず、メアリー・セレスト号は無傷のままだった。", ok:false},{t:"熟練の乗組員は、悪天候から自分たちの船を守ることができた。", ok:false}],
+ steps:[
+   {t:"根拠の一文を探す", d:"第6段落 <b>「大西洋は巨大な波と強風という極端な気象で悪名高く、多くの船の沈没の原因となってきた（well known for its extreme weather conditions）」</b>。"},
+   {t:"選択肢に結ぶ", d:"大西洋は時に危険＝<u>船乗りはそれを予期している</u>。選択肢1に一致。"},
+   {t:"他を消す", d:"2（嵐の前に脱出）→<em>緊急脱出の痕跡はなかった</em>ので×。3（強風でも無傷）→無傷は事実だが『強風にもかかわらず』という因果は本文が否定（悪天候説は矛盾）×。4（船を守れた）→乗組員が守った描写はない×。"}],
+ ev:{q:'The Atlantic Ocean is <span class="h">well known for its extreme weather conditions with enormous waves and winds</span>', jp:"「大西洋は巨大な波と強風という極端な気象で悪名高い」＝船乗りは大西洋が時に危険だと予期している。"},
+ co:[{c:"verm",l:"罠｜3",h:"『無傷』自体は事実だが、本文は<em>悪天候説を『矛盾する』と否定</em>している。『強風にもかかわらず無傷』という因果の主張は本文にない。"}],
+ sol:[{m:"o",n:"1",t:"正解。大西洋は極端な気象で悪名高い＝時に危険と予期される。"},{m:"x",n:"2",t:"緊急脱出の痕跡はなく、『嵐の前に脱出』は支持されない。"},{m:"x",n:"3",t:"無傷は事実だが『強風にもかかわらず』の因果は本文が否定。"},{m:"x",n:"4",t:"乗組員が船を守ったという記述はない。"}]},
+
+{id:"(7)", grp:"CD", type:"空所補充（問いかけ）", lbl:"空所 4", en:"( 4 ) Could they have simply decided to jump overboard and into the ocean, and if so, why?",
+ ask:"空所4に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"Was the ship's crew terrified by the bad weather?（乗組員は悪天候に怯えたのか?）", ok:false},{t:"Could the crew of the Mary Celeste have lost their minds?（乗組員は正気を失ったのか?）", ok:true},{t:"Did pirates force the crew to jump off the ship and into the sea?（海賊が乗組員を海へ飛び込ませたのか?）", ok:false},{t:"What made the people on board so thirsty that they drank the alcohol?（船上の人々をアルコールを飲むほど喉が渇かせたのは何か?）", ok:false}],
+ steps:[
+   {t:"空所の直後・直前を読む", d:"空所の後：<em>「彼らは単に海へ飛び込むことを決めたのか、もしそうならなぜ?」</em>。さらに後：<b>工業用アルコールで幻覚・発狂（madness）に至りうる</b>。"},
+   {t:"段落テーマ＝アルコールによる発狂", d:"この段落は<u>アルコール中毒説</u>。飛び込み・発狂につながる問い＝<b>『乗組員は正気を失ったのか?（lost their minds）』</b>。"},
+   {t:"他を消す", d:"1（悪天候に怯え）→前段落の悪天候説は否定済み。3（海賊が飛び込ませた）→海賊説も否定済み。4（喉が渇いて飲んだ）→工業用アルコールを『喉が渇いて飲む』話ではない。"}],
+ ev:{q:'<span class="h">Could the crew of the Mary Celeste have lost their minds?</span> Could they have simply decided to jump overboard … industrial alcohol can result in … madness', jp:"「乗組員は正気を失ったのか? 単に海へ飛び込んだのか?」→工業用アルコールで発狂しうる、と続く。"},
+ co:[{c:"nav",l:"空所は段落テーマに従う",h:"この段落は<em>アルコール→発狂（madness）</em>説。空所は<u>『正気を失ったのか』という問い</u>で、直後の『飛び込んだのか』と自然につながる。"}],
+ sol:[{m:"x",n:"1",t:"悪天候説は前段落で否定済み。"},{m:"o",n:"2",t:"正解。『正気を失ったのか』→飛び込み・発狂（madness）につながる。"},{m:"x",n:"3",t:"海賊説も否定済み。"},{m:"x",n:"4",t:"工業用アルコールを『喉が渇いて飲む』話ではない。"}]},
+
+{id:"(8)", grp:"CD", type:"文完成（結論）", lbl:"設問 (8)", en:"What happened to the Mary Celeste ___.",
+ ask:"メアリー・セレスト号に何が起きたのか。文を完成させるのにもっとも適切なものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"大西洋が危険なほど呪われた場所だと私たちに思い出させる", ok:false},{t:"人類がより大きな偉業に挑もうとする気を起こさせうる", ok:false},{t:"ポルトガルとイタリア両国の研究者に調査されてきた", ok:false},{t:"ほぼ間違いなく、完全に解明されることは決してないだろう", ok:true}],
+ steps:[
+   {t:"最終段落の結論を掴む", d:"<b>「150年経った今でも、乗り出した人々の運命を私たちが知ることはまずないだろう（it is more than likely that we shall never learn the fate）」</b>。"},
+   {t:"文完成に当てはめる", d:"『何が起きたのか』＝<u>ほぼ確実に完全には解明されない</u>。選択肢4に一致。"},
+   {t:"他を消す", d:"1（呪われた場所）→本文にそんな断定はない。2（偉業に挑む気を起こさせる）→本文になし。3（両国の研究者が調査）→本文になし。"}],
+ ev:{q:'it is more than likely that <span class="h">we shall never learn the fate of the people</span> that set sail aboard the Mary Celeste', jp:"「乗り出した人々の運命を、私たちが知ることはまずないだろう」＝完全に解明されることは決してない。"},
+ co:[{c:"nav",l:"結論の言い換え",h:"<em>we shall never learn the fate（運命を知ることはない）</em>＝<b>will almost certainly never be fully understood（完全には解明されない）</b>。同じ内容の言い換え。"}],
+ sol:[{m:"x",n:"1",t:"『呪われた場所』という断定は本文にない。"},{m:"x",n:"2",t:"『偉業に挑む気を起こさせる』は本文になし。"},{m:"x",n:"3",t:"『両国の研究者が調査』は本文になし。"},{m:"o",n:"4",t:"正解。運命は知りえない＝完全には解明されない。"}]},
+
+{id:"(9)", grp:"CD", type:"内容一致（NOT・2つ選ぶ）", lbl:"設問 (9)", en:"Which TWO of the choices are NOT mentioned in the passage?",
+ ask:"本文で言及されて いない ものを、1〜7 から2つ選べ。（正解は 1・5）", answer:"1・5", kind:"multi",
+ items:[
+   {n:"1", t:"メアリー・セレスト号の歴史（いつ造られ、どう使われてきたか等）", ok:true,
+    ev:"本文は1872年の発見時の出来事と諸説を述べるが、船の建造や来歴といった『歴史』には触れていない。",
+    why:"<b>言及なし＝正解の1つ</b>。発見・状態・諸説は述べるが、船そのものの歴史（沿革）は書かれていない。"},
+   {n:"2", t:"モアハウス船長がメアリー・セレスト号に近づいた理由", ok:false,
+    ev:"第2段落：船長は『何か問題を抱えているのでは』と心配し、調査のため救命ボートを出させた。",
+    why:"<b>言及あり</b>。concerned that the ship may be in trouble → 調査のため近づいた、と明記。"},
+   {n:"3", t:"メアリー・セレスト号が発見されたときの状態", ok:false,
+    ev:"第2〜3段落：ほぼ完璧な状態・無人／中身も所持品も積荷も手つかず、と詳述。",
+    why:"<b>言及あり</b>。near perfect condition／remained untouched など、発見時の状態を詳しく描写。"},
+   {n:"4", t:"メアリー・セレスト号の謎をめぐる、ありうる理由（諸説）", ok:false,
+    ev:"第4〜7段落：海の怪物説・海賊説・悪天候説・アルコール中毒説を順に検討。",
+    why:"<b>言及あり</b>。several theories を1つずつ検討しており、本文の中心。"},
+   {n:"5", t:"アルコール摂取が社会にもたらす危険", ok:true,
+    ev:"第7段落は『工業用アルコールが（乗組員の）脳に損傷を与え発狂させうる』と述べるが、それは船上の乗組員に関する話。『社会（society）への危険』は論じていない。",
+    why:"<b>言及なし＝正解の1つ</b>。アルコールの害は<u>乗組員個人</u>の文脈のみ。『社会への危険』という一般論には踏み込んでいない。"},
+   {n:"6", t:"発見されたときにメアリー・セレスト号がたどっていた航路", ok:false,
+    ev:"最終段落：ニューヨークからイタリアのジェノバへ向かう航海、と明記。",
+    why:"<b>言及あり</b>。their voyage from New York to Genoa, Italy と航路が示されている。"},
+   {n:"7", t:"メアリー・セレスト号の乗組員はどんな人々だったか", ok:false,
+    ev:"第7段落最終2文：乗組員は船乗りの世界でよく知られ、職務に優れた評判を持つプロで、積荷を盗むような人間ではなかった。",
+    why:"<b>言及あり</b>。professionals with an excellent reputation … と乗組員の人物像を描写。"},
+ ],
+ co:[{c:"nav",l:"NOT（2つ選ぶ）の解き筋",h:"7つの選択肢を本文と照合し、<u>『言及がある』5つ（2・3・4・6・7）を消す</u>→残った<b>1（船の歴史）と5（アルコールの社会的危険）</b>が言及なし＝正解。"},
+     {c:"verm",l:"5 の見抜き方",h:"アルコールの害は書いてあるが、それは<em>『乗組員が発狂したか』という個人の文脈</em>。<u>『社会（society）への危険』という一般論にはすり替わっていない</u>ことに注意。"}],
+},
+];
+
+
+/* ===== ENGINE ===== */
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+</script>
+</body>
+</html>
