@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜甲南大学 2024 大問1（ピーチ文化とココナッツ文化）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">甲</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>甲南大学 2024 ／ 大問1</span></div>
+    <div class="top-meta">ピーチ文化とココナッツ文化<br>問1〜14（語彙・段落一致・和訳）</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>PEACH/COCONUT</small>2つの文化</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>問1–7</small>語彙・段落一致</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>問8–13</small>段落一致・語彙</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>問14</small>和訳</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>「ピーチ」か「ココナッツ」か。<br>この2文化の対比を掴めば、<br>13問すべてが同じ軸で解ける。</h1>
+    <p>異文化における「見知らぬ人との距離感」を、桃（ピーチ）とココナッツにたとえた評論。<em>ピーチ＝外は柔らかい（すぐ友好的）が中に硬い種（本当の自分は守る）／ココナッツ＝外は硬い（最初は閉じる）が中は柔らかい（時間で深く温かく）</em>。この一本の対比軸に、語彙も段落一致も和訳も全部ぶら下がっている。まず軸を掴み、各設問を軸に照らして解く。</p>
+    <div class="thesis"><b>一貫する対比：</b>ピーチ文化（米・ブラジル）＝<b>速いが浅い</b>友好、核心で急に閉じる。ココナッツ文化（露・独）＝<b>遅いが深い</b>友好、時間で温かくなり長続き。両者は互いを誤解する（ピーチ＝不誠実? ／ ココナッツ＝冷たい?）。筆者の結論は<u>「自分らしくありつつ、相手の文化ルールに適応せよ」</u>。</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>段落構成</span></div>
+      <div class="stat"><b>14</b><span>設問</span></div>
+      <div class="stat"><b>2</b><span>文化の対比</span></div>
+      <div class="stat"><b>2</b><span>和訳(イ)(ロ)</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:30%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">語彙・同意語</td><td>問1 問2 問5 問9 問12</td><td><b>文脈の方向</b>で決める。stranger＝よく知らない人／appropriate＝suitable／initially＝in the early stages／set off＝started／stony＝very cold。</td></tr>
+      <tr><td class="cond">イディオム・状況</td><td>問3 問10</td><td>問3＝<b>hot water＝苦境</b>（直訳『熱湯』の罠）。問10＝<b>財布を握る＝警戒・不信</b>。</td></tr>
+      <tr><td class="cond">段落一致</td><td>問4 問6 問8 問13</td><td><b>段落の主旨を対比軸で掴む</b>。問8は<b>2つ選ぶ</b>。誤答は『逆・言いすぎ・事実誤認』。</td></tr>
+      <tr><td class="cond">指示語・空所</td><td>問7 問11</td><td>問7＝<b>they＝ココナッツ側（ブラジル人は含まない）</b>。問11＝<b>対比の On the other hand</b>。</td></tr>
+      <tr><td class="cond">和訳</td><td>問14 (イ)(ロ)</td><td>(イ)<b>All was well until / 連鎖関係詞</b>、(ロ)<b>someone you're not（関係詞省略）</b>。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。問8は<strong>A〜Eをタップ</strong>すると各文の○×と根拠が、問14の和訳は<strong>解答プロセス＋自己採点＋NG例</strong>が開きます。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 8段落の流れと設問の在りか<span class="sub">「導入→主題→ピーチ／ココナッツの定義→3つのすれ違い→結論」。対比軸がどの段落にどう現れるかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">パリの『無害な質問』の失敗</div><p>初対面のフランス人夫婦に「どう知り合った?」と尋ね、夫に凍りつかれる。<em>異文化では『適切な質問』が違う</em>。</p><div class="tags"><span class="utag">(イ)和訳</span><span class="utag">問1</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>主題</span></div><div class="para-b">
+      <div class="theme">文化ごとに『適切さ』が違う</div><p>見知らぬ人に尋ねてよい情報のルールは文化で異なる。自分のルールを当てはめると<em>ひどい目にあう</em>。</p><div class="tags"><span class="utag">問2</span><span class="utag">問3</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>枠組み</span></div><div class="para-b">
+      <div class="theme">ピーチ文化とは</div><p>米・ブラジル＝<em>最初は友好的（ソフト）だが、種の硬い殻で急に関係が止まる</em>。速いが浅い。</p><div class="tags"><span class="utag">問4</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>対比</span></div><div class="para-b">
+      <div class="theme">ココナッツ文化とは</div><p>露・独＝<em>最初は閉じるが、時間で温かく友好的に。関係は遅く築かれ長続き</em>。深いが遅い。</p><div class="tags"><span class="utag">問5</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>すれ違い①</span></div><div class="para-b">
+      <div class="theme">ココナッツがピーチをどう見るか</div><p>友好を『友情の申し出』と誤解し、応じないと『不誠実』と結論づける。独・露アガポフの困惑。</p><div class="tags"><span class="utag">問6</span><span class="utag">問7</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>すれ違い②</span></div><div class="para-b">
+      <div class="theme">アガポフが心を開いた結果</div><p>アガポフは深い友情を築いたと思い個人情報を共有。だが着陸後、相手はあっさり去る。<em>欺かれたと感じる</em>。</p><div class="tags"><span class="utag">問8</span><span class="utag">問9</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>すれ違い③</span></div><div class="para-b">
+      <div class="theme">ピーチの友好を疑うフランス人</div><p>ミネソタのウエイターの笑顔を『気味悪い』と疑い財布を握る。<em>他方、ピーチ出身の筆者も欧州で驚いた</em>。</p><div class="tags"><span class="utag">問10</span><span class="utag">問11</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>転換・結論</span></div><div class="para-b">
+      <div class="theme">では、どうすればいいか</div><p>冷淡な表情を軽べつと誤解。結論＝<em>自分らしくありつつ、相手の文化ルールに適応せよ</em>。</p><div class="tags"><span class="utag">問12</span><span class="utag">問13</span><span class="utag">(ロ)和訳</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">2つの文化へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Peach vs Coconut</div>
+  <h1 class="head">2つの文化 ― この対比表が全設問の軸<span class="sub">桃とココナッツの「構造の違い」を1枚で掴む。問4・問6・問7・問8・問11・問13はすべてこの対比に還元できる。</span></h1>
+  <div class="rule"></div>
+
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">ピーチ（桃）<small>PEACH ― 米・ブラジル</small></div><div class="vs-bd">
+      <div class="r"><b>構造</b>外は<strong>柔らかい</strong>／中に<strong>硬い種</strong>（本当の自分を守る）</div>
+      <div class="r"><b>初対面</b><strong>すぐ友好的</strong>（ほほ笑む・ファーストネーム・個人的質問）</div>
+      <div class="r"><b>深さ</b>種の殻で<strong>急に止まる</strong>＝速いが浅い</div>
+      <div class="r"><b>ココナッツから見ると</b>「友好的なのに応じない＝<em>不誠実?</em>」</div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">ココナッツ<small>COCONUT ― 露・独</small></div><div class="vs-bd">
+      <div class="r"><b>構造</b>外は<strong>硬い</strong>／中は<strong>柔らかい</strong></div>
+      <div class="r"><b>初対面</b><strong>心を閉ざす</strong>（めったに笑まない・個人情報を出さない）</div>
+      <div class="r"><b>深さ</b>時間で<strong>温かくなり長続き</strong>＝遅いが深い</div>
+      <div class="r"><b>ピーチから見ると</b>「冷たい・よそよそしい＝<em>嫌われてる?</em>」</div>
+    </div></div>
+  </div>
+
+  <div class="box gold"><span class="lab">対比が解く設問</span>
+    <strong>問4＝ピーチ（最初は友好的だが深入りに消極的）／問7＝they はココナッツ側（ブラジル＝ピーチは含まない）／問8＝アガポフ（ココナッツ）が心を開いて裏切られた/問11＝ピーチ↔ココナッツの立場逆転で On the other hand</strong>。<u>「どちらの文化の視点か」を毎回確かめる</u>と誤答が消える。</div>
+
+  <div class="box navy"><span class="lab">3つのすれ違いエピソード（第5〜7段落）</span>
+    ①<strong>ドイツ人 in ブラジル</strong>：コーヒーに誘われるが住所を教えてもらえず「不誠実?」と困惑（ココナッツ→ピーチ）。<br>
+    ②<strong>アガポフ（露）in アメリカ</strong>：飛行機で意気投合し個人情報を共有→着陸後あっさり別れ「<em>欺かれた</em>」と感じる（ココナッツ→ピーチ）。<br>
+    ③<strong>フランス人女性 in ミネソタ</strong>：ウエイターの笑顔を「気味悪い」と疑い財布を握る（ココナッツ→ピーチ）。<u>いずれもココナッツがピーチの友好に戸惑う話</u>。</div>
+
+  <div class="box verm"><span class="lab">筆者の結論（第8段落）</span>
+    ピーチもココナッツも、相手の友好・冷淡を<em>「不誠実」「軽べつ」と誤読しない</em>こと。<strong>自分らしくありつつ（Being yourself matters）、相手の文化ルールに適応せよ</strong>。＝問13の主旨。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問1〜7へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問1〜問7 ― 語彙・イディオム・段落一致<span class="sub">語義は<b>文脈の方向</b>で、段落一致は<b>対比軸</b>で、指示語は<b>視点（どちらの文化か）</b>で決める。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 2つの文化</button><span class="sp"></span><button class="btnp" data-go="4">問8〜13へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問8〜問13 ― 段落一致・語彙・状況説明<span class="sub">問8は<b>2つ選ぶ</b>（A〜Eをタップ）。誤答は『逆・言いすぎ・事実誤認』のどれか、を意識して消す。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問1〜7</button><span class="sp"></span><button class="btnp" data-go="5">問14 和訳へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問14 ― 和訳（イ）（ロ）<span class="sub">(イ)は<b>All was well until / 連鎖関係詞（I thought の挿入）</b>、(ロ)は<b>someone you're not（関係代名詞の省略）</b>が急所。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 問8〜13</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全36文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>が設問・主張に直結する箇所。各段落の下に設問の根拠をまとめた。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    直訳では答案にならず、意訳しすぎると要素が落ちる。この訳は<strong>「答案でそのまま通用する日本語」</strong>を狙った。<em>構文の骨（対比・比喩・関係詞）を保ったまま、日本語として自立させている</em>。問14の和訳(イ)(ロ)の言い回しの見本にも使ってほしい。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― パリでの「無害な質問」の失敗　<span class="qbadge">(イ)和訳</span> <span class="qbadge">問1</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">フランスでの私の初めてのディナーパーティーで、私はパリのある夫婦とおしゃべりをしていた。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>私が、自分では完全に無害だと思っていた質問をするまでは、すべてが順調だった</em>。それは「お二人はどうやって知り合ったのですか?」というものだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">私の夫エリック（フランス人）は、私に恐怖の視線を投げかけた。</div></div><div class="jpline"><div class="n">④</div><div class="s">帰宅してから、彼はこう説明した。「フランスでは、見知らぬ人にそんな種類の質問はしないんだ。それは、下着の色を尋ねるようなものだよ」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li><b>(イ) All was well until I asked what I thought was a perfectly innocent question</b>：<u>問14(イ)の和訳箇所</u>。<em>All was well until ~「〜するまではすべて順調だった」＝『〜して初めて事態が悪化した』</em>。<b>what I thought was ~「自分では〜だと思っていたもの」＝連鎖関係詞（I thought は挿入）</b>。<u>a perfectly innocent question「まったく悪気のない質問」</u>。<span class="qbadge">(イ)</span></li>
+    <li><b>(1) strangers</b>「見知らぬ人」。<u>問1＝『よく知らない人（people whom you don't know well）』＝C</u>。次文の「下着の色を聞くようなもの」＝親しくない相手には踏み込みすぎ、という文脈。<span class="qbadge">問1</span></li>
+    <li><b>shot me a look of horror</b>「恐怖の視線を投げつけた」＝<em>shot＝（視線を）さっと投げる</em>。夫の反応で「まずい質問だった」と分かる。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜主題提示 ― 文化ごとに『適切さ』のルールが違う　<span class="qbadge">問2</span> <span class="qbadge">問3</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">これは典型的な失敗だ。</div></div><div class="jpline"><div class="n">②</div><div class="s">新しい文化圏に入ったときにまず気づくことの1つは、見知らぬ人に尋ねたり共有したりするのに<em>適切な</em>情報と、そうでない情報のルールが（文化によって）異なる、ということである。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし、それらのルールを理解することは、その新しい文化の中で成功するために必要だ。単に自分の（元の）ルールを当てはめるだけでは、すぐにひどい目にあう。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li><b>(2) appropriate</b>「適切な」。<u>問2＝『suitable（ふさわしい）』＝D</u>。<em>appropriate to ask and share「尋ねたり共有したりするのに適切な」</em>。awkward（ぎこちない）/rude（無礼な）は逆方向、legal（合法の）は文脈外。<span class="qbadge">問2</span></li>
+    <li><b>(3) gets you into hot water</b>「ひどい目にあわせる・面倒に陥れる」。<u>問3＝『forces you into trouble and difficulty（面倒と困難に陥れる）』＝B</u>。<em>in/into hot water＝苦境・面倒</em>という定型イディオム。<span class="qbadge">問3</span></li>
+    <li><b>simply applying your own rules</b>「自分のルールをそのまま当てはめること」＝異文化での失敗の原因。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜枠組み ― 『ピーチ（桃）』文化とは　<span class="qbadge">問4</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">準備をするためのよい方法は、新しい文化が「桃（ピーチ）」なのか「ココナッツ」なのかを自問することである。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは、文化の専門家であるフォンス・トロンペナールスとチャールズ・ハンプデン＝ターナーによって導き出された区別である。</div></div><div class="jpline"><div class="n">③</div><div class="s">アメリカやブラジルのようなピーチ文化圏では、人々は初対面の人にも友好的（「ソフト」）に接する傾向がある。</div></div><div class="jpline"><div class="n">④</div><div class="s">彼らは見知らぬ人にも頻繁にほほ笑み、すぐにファーストネームで呼び合うようになり、自分についての情報を共有し、ほとんど知らない人にも個人的な質問をする。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">しかし、ピーチと少し友好的に交流したあと、あなたは突然、桃が自分の本当の自分を守っている種（たね）の硬い殻にぶつかることがあり、そこで関係が突然止まってしまう。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li><b>(4) A good way</b> で始まる段落＝<u>問4の対象</u>。<u>問4＝D『ピーチ文化では、人々は最初は友好的だが、より深い関係を築くことには消極的だ』</u>。<em>友好的（ソフト）だが、核心（種の硬い殻）で急に閉ざす</em>という記述に一致。<span class="qbadge">問4</span></li>
+    <li><b>peach＝外は柔らかいが中に硬い種</b>：<em>最初は friendly（soft）→ but the hard shell of the pit（種の硬い殻）で関係が止まる</em>。ピーチ文化の比喩の核心。</li>
+    <li>問4の誤答：A『2種類に分かれる』は本文の一部だが段落主旨でない、B『米国人はブラジル人より友好的』は本文になし、C『ファーストネームで呼ぶのをためらう』は逆（すぐ呼び合う）。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜対比 ― 『ココナッツ』文化とは　<span class="qbadge">問5</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ロシアやドイツのようなココナッツ文化圏では、人々は<em>最初は</em>、親しくない人に対してより心を閉ざしている。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らは見知らぬ人にはめったにほほ笑まず、たまたまの知り合いに個人的な質問をしたり、親しくない人に個人情報を提供したりすることはほとんどない。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし時間がたつにつれて、ココナッツがあなたを知るようになると、彼らはしだいに温かく、友好的になっていく。</div></div><div class="jpline"><div class="n">④</div><div class="s">そして、その関係はゆっくりと築かれる一方で、長続きする傾向がある。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li><b>(5) initially</b>「最初は」。<u>問5＝『in the early stages（初期段階では）』＝C</u>。<em>initial＝初めの</em>。confusingly（紛らわしく）/in fact（実際は）/intentionally（意図的に）は文意に合わない。<span class="qbadge">問5</span></li>
+    <li><b>coconut＝外は硬いが中は柔らかい</b>：<em>最初は closed off（閉じている）→ over time … warmer and friendlier</em>。ピーチと正反対の構造。</li>
+    <li><b>built up slowly … last longer</b>「ゆっくり築かれ、長続きする」＝ココナッツ文化の関係の特徴。ピーチ（速いが浅い）との対比。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜すれ違い① ― ココナッツがピーチをどう見るか　<span class="qbadge">問6</span> <span class="qbadge">問7</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ココナッツはピーチに対して、いくつかの反応を示すことがある。</div></div><div class="jpline"><div class="n">②</div><div class="s">友好的な態度を、友情の申し出だと解釈する者もいて、ピーチがその意図しない申し出に応じてくれなかった場合、ピーチは不誠実だ、あるいは誠意がないと結論づける者もいる。</div></div><div class="jpline"><div class="n">③</div><div class="s">たとえばブラジルで困惑したあるドイツ人のように。「ブラジルの人々はとても友好的だ――いつも僕をコーヒーに誘ってくれる。僕は喜んで応じるのだが、彼らはいつも、どこに住んでいるのか言い忘れてしまうんだ」。</div></div><div class="jpline"><div class="n">④</div><div class="s">ロシア人の同僚イーゴリ・アガポフも、初めてのアメリカ旅行でピーチの種に同じように衝撃を受けた。「僕は9時間のフライトの中で見知らぬ人の隣に座った。そのアメリカ人は僕にとても個人的な質問をし始めた。初めてのアメリカ旅行なのか、どんな仕事をしているのか、子どもたちとこんなに長く離れていたことが以前にもあるのか、と。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">彼はまた、自分の個人的な情報も話してくれた。彼はベース奏者で、頻繁な出張が、フロリダで生まれたばかりの子どもと暮らす妻にとってどんなにつらいか、を話していた」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第5段落</div><ul><li><b>(6) Coconuts</b> で始まる段落＝<u>問6の対象（一致するもの1つ）</u>。<u>問6＝D『アガポフの隣に座ったアメリカ人乗客は、自分の私生活について多くを語った』</u>。<em>He also shared very personal information about himself … bass player … newborn child</em>に一致。<span class="qbadge">問6</span></li>
+    <li><b>(7) they</b>＝<u>問7『theyに含まれないもの→1つ』の答えA（Brazilian people）</u>。この they は<em>ピーチの友好を『友情の申し出』と誤解し、応じないと『不誠実』と結論づける側＝ココナッツ（ドイツ人・ロシア人アガポフ等）</em>を指す。<u>ブラジル人はここでは『ピーチ側（見られる側）』なので they に含まれない</u>。<span class="qbadge">問7</span></li>
+    <li>問6の誤答：A『ココナッツ文化の人は常に友好を疑いすぎ』＝alwaysが過度、B『ブラジル人は住所を教えたがる』は逆、C『アガポフはNY市民の不親切さに衝撃』は別段落の話。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜すれ違い② ― アガポフが心を開いた結果　<span class="qbadge">問8</span> <span class="qbadge">問9</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">それに対してアガポフは、ロシア文化では珍しいことを始めた。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼は、2人が短期間で異常なほど深い友情を築いたと思い、自分の個人的な話を共有したのだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">そのあとに起こったことは、本当に残念なことだった。「このようなつながりのあと、僕らはとても長い付き合いになると思ったんだ。</div></div><div class="jpline"><div class="n">④</div><div class="s">飛行機が着陸したとき、僕の驚きを想像してみてほしい。僕が電話番号を書こうと紙に手を伸ばすと、その新しい友人が立ち上がり、手を振りながらこう言ったのだ。『会えてよかった! よい旅を!』。それでおしまいでした。彼と再会することはありませんでした」。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">彼は、続けるつもりのない関係のために、わざと僕の心を開かせたのだと思ってしまいました」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第6段落</div><ul><li><b>(8) In response</b> で始まる段落＝<u>問8『一致するもの→2つ』の答えA・E</u>。<u>A『ロシア文化では初対面で個人情報を簡単には明かさない』</u>（unusual in Russian culture＝珍しい＝ふだんは明かさない）。<u>E『アガポフは、アメリカ人乗客に欺かれたかのように感じた』</u>（tricked me into opening up）。<span class="qbadge">問8</span></li>
+    <li><b>(9) set off</b>「（旅などに）出発する／始める」。<u>問9＝『started』＝D</u>。ここでは<em>Agapov started to do something（アガポフが〜し始めた）</em>の言い換え。misunderstood/finished/made up は文意に合わない。<span class="qbadge">問9</span></li>
+    <li>問8の誤答：B『アガポフは乗客が自分を避けたことに失望』は逆、C『紙が見つからなかった』は事実誤認、D『乗客が長年の友になろうとしたがアガポフが嫌がった』は逆。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜すれ違い③ ― ピーチの友好を疑うフランス人女性　<span class="qbadge">問10</span> <span class="qbadge">問11</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">すぐに（ピーチを）疑う人もいる。</div></div><div class="jpline"><div class="n">②</div><div class="s">私の家族を訪ねてミネソタ州に来たあるフランス人女性は、中西部のピーチらしさ（友好的すぎる態度）に驚いた。「ここのウエイターたちはいつも笑顔で、『今日はどうですか』と聞いてくるのよ! 彼らは私のことを知らないのに。ちょっと気まずくて、疑い深くなってしまう。彼らは私に何を求めているのかしら?</div></div><div class="jpline"><div class="n">③</div><div class="s">私は財布をしっかり握りしめることで反応するわ」。</div></div><div class="jpline"><div class="n">④</div><div class="s">（　11　）、私自身、ピーチ文化圏出身なのに、14年前にヨーロッパに住むようになったとき、同じように驚いた。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">私の友好的な笑みや個人的なコメントは、私が知り合いになり始めていたポーランド人、フランス人、ドイツ人、ロシア人の同僚たちには、冷たいよそよそしさで迎えられた。私は彼らの険しい表情を、親しみのなさ、嫌悪、さらには軽べつの表れとさえ受け取った」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第7段落</div><ul><li><b>(10) I respond by holding tightly onto my purse</b>「私は財布をしっかり握りしめることで反応する」＝<u>問10の状況説明</u>。<u>問10＝B『彼らが私を欺いてお金を盗もうとしていると思った』</u>。<em>財布を握る＝相手を警戒・疑っている</em>。suspicious（疑い深い）と対応。<span class="qbadge">問10</span></li>
+    <li><b>(11) 空所</b>＝<u>問11＝D『On the other hand（他方で）』</u>。<em>前：ピーチを疑うフランス人女性 ↔ 空所後：ピーチ出身の筆者自身も逆にヨーロッパで驚いた</em>＝<u>立場が逆の対比</u>。As a result/Therefore（因果）In any case（いずれにせよ）は不適。<span class="qbadge">問11</span></li>
+    <li><b>peachiness</b>「ピーチらしさ（過度な友好）」＝peach＋ness の造語。ウエイターの笑顔を『気味悪い』と感じるココナッツ視点。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜転換 ― では、どうすればいいのか　<span class="qbadge">問12</span> <span class="qbadge">問13</span> <span class="qbadge">(ロ)和訳</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私は彼らの<em>冷淡な</em>表情を、親しみのなさ、嫌悪、さらには軽べつの表れとさえ受け取った。</div></div><div class="jpline"><div class="n">②</div><div class="s">では、私のようにココナッツの中に落ちてしまったピーチ人間は、どうすればいいのだろうか。</div></div><div class="jpline"><div class="n">③</div><div class="s">自分自身であることが重要だ。<em>もし自分でない誰かになろうとすれば、それは決してうまくいかない</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">だから、好きなだけほほ笑み、好きなだけ家族の情報を共有すればいい。ただ、相手が自分から話を振ってくるまでは、個人的な質問はしないこと。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">そしてココナッツの読者の方々、もしあなたのピーチの相手が、あなたの近況を尋ねたり、家族の写真を見せたり、あるいはバーベキューに招待してきたりしても、それを深い友情への招待や、何か隠された企みのカモフラージュと受け取らないで、単に自分が適応しなくてはならない文化的なルールと考えることである。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第8段落</div><ul><li><b>(12) stony</b>「冷淡な・無表情な」。<u>問12＝C『very cold（とても冷たい）』</u>。<em>stony expressions＝石のように硬く冷たい表情</em>。extremely fearful（おびえた）/too worried（心配しすぎ）/extraordinarily dark（暗い）は文意に合わない。<span class="qbadge">問12</span></li>
+    <li><b>(ロ) if you try to be someone you're not, it never works</b>：<u>問14(ロ)の和訳箇所</u>。<em>someone you're not「本来の自分でない誰か」＝目的格の関係代名詞省略（someone (who) you're not）</em>。<u>it never works「それは決してうまくいかない」</u>。<span class="qbadge">(ロ)</span></li>
+    <li><b>(13) So what do you do</b> で始まる段落＝<u>問13の対象</u>。<u>問13＝A『もしあなたがピーチなら、自分の個人情報を明かすのをためらう必要はない』</u>（Being yourself matters／share as much information about your family as you like）に一致。<span class="qbadge">問13</span></li></ul></div><div class="pnav"><button class="btns" data-go="5">← 問14 和訳</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定して潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">設問</th><th style="width:20%">解答</th><th>ひとことポイント</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1</td><td><b>C</b></td><td>stranger＝よく知らない人</td></tr>
+      <tr><td class="cond">問2</td><td><b>D</b></td><td>appropriate＝suitable（ふさわしい）</td></tr>
+      <tr><td class="cond">問3</td><td><b>B</b></td><td>hot water＝苦境（『熱湯』ではない）</td></tr>
+      <tr><td class="cond">問4</td><td><b>D</b></td><td>ピーチ＝最初は友好的だが深入りに消極的</td></tr>
+      <tr><td class="cond">問5</td><td><b>C</b></td><td>initially＝in the early stages</td></tr>
+      <tr><td class="cond">問6</td><td><b>D</b></td><td>アメリカ人乗客が私生活を多く語った</td></tr>
+      <tr><td class="cond">問7</td><td><b>A</b></td><td>they＝ココナッツ側。ブラジル人は含まない</td></tr>
+      <tr><td class="cond">問8</td><td><b>A・E</b>（2つ）</td><td>ロシアでは珍しい／欺かれたと感じた</td></tr>
+      <tr><td class="cond">問9</td><td><b>D</b></td><td>set off＝started（始めた）</td></tr>
+      <tr><td class="cond">問10</td><td><b>B</b></td><td>財布を握る＝盗まれると警戒</td></tr>
+      <tr><td class="cond">問11</td><td><b>D</b></td><td>On the other hand（立場の対比）</td></tr>
+      <tr><td class="cond">問12</td><td><b>C</b></td><td>stony＝very cold（冷たい）</td></tr>
+      <tr><td class="cond">問13</td><td><b>A</b></td><td>ピーチは情報を明かしてよい</td></tr>
+      <tr><td class="cond">問14(イ)</td><td colspan="2"><b>私が、自分ではまったく悪気のない質問だと思っていたことを尋ねるまでは、すべてが順調だった。</b></td></tr>
+      <tr><td class="cond">問14(ロ)</td><td colspan="2"><b>もし本来の自分ではない誰かになろうとするなら、それは決してうまくいかない。</b></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>語彙で落とした（問1・2・5・9・12）</b><p><em>文脈の方向で決める</em>。stranger＝よく知らない人、appropriate＝suitable、initially＝初期段階、set off＝started、stony＝very cold。<u>strange/innocent など多義語の第一義に飛びつかない</u>。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>イディオム・状況で落とした（問3・10）</b><p>問3＝<em>hot water は『熱湯』でなく『苦境』</em>（直訳の罠）。問10＝<em>財布を握る＝警戒・不信</em>（suspicious と一致）。<u>字面でなく行動・文脈の意味</u>を取る。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>段落一致で落とした（問4・6・8・13）</b><p><em>対比軸（ピーチ／ココナッツ）</em>で段落主旨を掴む。誤答は<b>『逆』（問6B住所／問13D適応不要）『言いすぎ』（問6A always）『事実誤認』（問8C紙）</b>のどれか。問8は<u>2つ選ぶ</u>点に注意。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>指示語・空所で落とした（問7・11）</b><p>問7＝<em>they はどちらの文化の視点か</em>（ココナッツ側＝独・露。ブラジルはピーチ側で含まない）。問11＝<em>前後で立場が逆転</em>＝On the other hand。<u>『誰の視点か』を必ず確かめる</u>。</p></div></div>
+  <div class="route"><div class="rn">E</div><div><b>和訳で落とした（問14）</b><p>(イ)＝<em>All was well until ~（〜まで順調）＋what I thought was ~（I thought は挿入＝連鎖関係詞）</em>。(ロ)＝<em>someone you're not（関係代名詞の省略＝本来の自分でない誰か）＋it never works</em>。<u>挿入・省略を見抜く</u>のが得点の分かれ目。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    この英文は<strong>ピーチ／ココナッツという1つの対比軸</strong>で全問がつながっていました。評論は<u>最初に提示された対比・比喩を掴み、各設問を『どちらの視点か』で照らす</u>のが最短ルート。語彙は文脈の方向、段落一致は対比軸、和訳は挿入・省略――型どおりに追えば、長文評論でも安定して取れます。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は甲南大学2024年英語（大問1）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問1〜問7：グループAB ===== */
+{id:"問1", grp:"AB", type:"語義（文脈）", lbl:"下線部(1) strangers", en:"We don't ask that type of question to (1)strangers in France.",
+ ask:"下線部(1) strangers の定義としてもっとも適切なものを A〜D から選べ。", answer:"C", kind:"choice",
+ choices:[{t:"people who don't know how to behave（振る舞い方を知らない人）", ok:false},{t:"people who don't know much about the place they are in（今いる場所をよく知らない人）", ok:false},{t:"people whom you don't know well（あなたがよく知らない人）", ok:true},{t:"people whose behavior is silly and unacceptable（振る舞いが愚かで容認できない人）", ok:false}],
+ steps:[
+   {t:"下線部の語を押さえる", d:"<b>stranger＝見知らぬ人・よく知らない人</b>。文脈：フランスでは<em>stranger に「どう知り合ったか」を尋ねない</em>。"},
+   {t:"直後の比喩で確認", d:"「それは<em>下着の色を尋ねるようなもの</em>」＝<u>親しくない相手に踏み込みすぎ</u>。つまり stranger＝親密でない相手。"},
+   {t:"定義を選ぶ", d:"<b>people whom you don't know well（よく知らない人）</b>＝C。A（振る舞いを知らない）B（場所を知らない）D（愚かな人）はいずれも stranger の定義ではない。"}],
+ ev:{q:'We don\'t ask that type of question to <span class="h">strangers</span> in France. It\'s like asking them the color of their underpants.', jp:"「フランスでは見知らぬ人にそんな質問はしない。下着の色を尋ねるようなものだ」＝stranger＝よく知らない相手。"},
+ co:[{c:"gold",l:"語義｜stranger",h:"<b>stranger＝『よく知らない人・他人』</b>。strange（奇妙な）に引きずられて『変な人』と誤解しない。"}],
+ sol:[{m:"x",n:"A",t:"「振る舞い方を知らない」は stranger の定義でない。"},{m:"x",n:"B",t:"「場所を知らない」ではない。"},{m:"o",n:"C",t:"正解。よく知らない人（whom you don't know well）。"},{m:"x",n:"D",t:"「愚かで容認できない人」は無関係。"}]},
+
+{id:"問2", grp:"AB", type:"同意語", lbl:"下線部(2) appropriate", en:"the rules about what information is and is not (2)appropriate to ask and share",
+ ask:"下線部(2) appropriate に代わる語句としてもっとも適切なものを A〜D から選べ。", answer:"D", kind:"choice",
+ choices:[{t:"awkward（ぎこちない）", ok:false},{t:"legal（合法の）", ok:false},{t:"rude（無礼な）", ok:false},{t:"suitable（ふさわしい）", ok:true}],
+ steps:[
+   {t:"語義を確認", d:"<b>appropriate＝適切な・ふさわしい</b>。<em>information appropriate to ask and share「尋ねたり共有したりするのに適切な情報」</em>。"},
+   {t:"同義語を選ぶ", d:"<b>suitable（ふさわしい・適した）</b>＝D が最も近い。"},
+   {t:"他を消す", d:"awkward（ぎこちない）rude（無礼な）は<u>逆方向（不適切）</u>、legal（合法の）は文脈がずれる。"}],
+ ev:{q:'the rules about what information is and is not <span class="h">appropriate</span> to ask and share with strangers', jp:"「見知らぬ人に尋ねたり共有したりするのに適切な情報かどうかのルール」。appropriate＝適切な＝suitable。"},
+ co:[{c:"gold",l:"語義｜appropriate",h:"<b>appropriate＝適切な・ふさわしい（＝suitable）</b>。TPOに合っている、の意。"}],
+ sol:[{m:"x",n:"A",t:"awkward（ぎこちない）は逆方向。"},{m:"x",n:"B",t:"legal（合法の）は文脈外。"},{m:"x",n:"C",t:"rude（無礼な）は逆方向。"},{m:"o",n:"D",t:"正解。suitable（ふさわしい）。"}]},
+
+{id:"問3", grp:"AB", type:"イディオム", lbl:"下線部(3) gets you into hot water", en:"simply applying your own rules (3)gets you into hot water pretty quickly",
+ ask:"下線部(3) gets you into hot water の意味としてもっとも近いものを A〜D から選べ。", answer:"B", kind:"choice",
+ choices:[{t:"causes you to burn yourself（やけどをさせる）", ok:false},{t:"forces you into trouble and difficulty（面倒と困難に陥れる）", ok:true},{t:"leads you to a comfortable situation（快適な状況へ導く）", ok:false},{t:"makes you mad（怒らせる）", ok:false}],
+ steps:[
+   {t:"イディオムを知る", d:"<b>in / into hot water＝『苦境・面倒』</b>。get into hot water＝トラブルに陥る。<em>hot water を『熱湯＝やけど』と直訳しない</em>。"},
+   {t:"文脈で確認", d:"「自分のルールをそのまま当てはめると、すぐに hot water に陥る」＝<u>異文化で失敗する・面倒になる</u>。"},
+   {t:"選ぶ", d:"<b>forces you into trouble and difficulty（面倒と困難に陥れる）</b>＝B。A（やけど）は直訳の罠、C（快適）は逆、D（怒らせる）は無関係。"}],
+ ev:{q:'simply applying your own rules <span class="h">gets you into hot water</span> pretty quickly', jp:"「自分のルールをそのまま当てはめると、すぐに面倒なことになる」。hot water＝苦境・トラブル。"},
+ co:[{c:"verm",l:"罠｜直訳",h:"<b>hot water＝『熱湯』ではなく『苦境』</b>。A『やけど』は字面に釣られた誤り。イディオムとして覚える。"}],
+ sol:[{m:"x",n:"A",t:"「やけど」は直訳の罠。"},{m:"o",n:"B",t:"正解。トラブル・困難に陥れる。"},{m:"x",n:"C",t:"「快適な状況」は逆。"},{m:"x",n:"D",t:"「怒らせる」は無関係。"}]},
+
+{id:"問4", grp:"AB", type:"段落一致", lbl:"下線部(4) A good way の段落", en:"( 下線部(4) A good way で始まるパラグラフ )",
+ ask:"下線部(4) A good way で始まる段落の内容と一致するものを A〜D から一つ選べ。", answer:"D", kind:"choice",
+ choices:[{t:"文化は、友好的な人々の文化とそうでない文化の2種類に分かれる。", ok:false},{t:"アメリカ人は概してブラジル人より新しい人に友好的だ。", ok:false},{t:"ピーチ文化に属する人は、あなたをファーストネームで呼ぶのをためらう。", ok:false},{t:"ピーチ文化では、人々は最初は友好的だが、より深い関係を築くことには消極的だ。", ok:true}],
+ steps:[
+   {t:"段落の主旨を掴む", d:"ピーチ文化＝<b>最初は friendly（soft）</b>だが、<em>核心（種の硬い殻）で急に関係が止まる</em>。表は柔らかいが中は硬い『桃』の比喩。"},
+   {t:"一致を選ぶ", d:"<b>『最初は友好的だが、深い関係には消極的』</b>＝D。桃の比喩そのもの。"},
+   {t:"他を消す", d:"A（2種類に分かれる）は導入の一部で段落主旨でない、B（米国人＞ブラジル人）は本文になし、C（ファーストネームをためらう）は<u>逆</u>（すぐ呼び合う）。"}],
+ ev:{q:'after a little friendly interaction with a peach, you may suddenly get to <span class="h">the hard shell of the pit</span> … the relationship suddenly stops', jp:"「ピーチと少し交流したあと、突然、種の硬い殻にぶつかり、関係が止まる」＝最初は友好的だが深入りには消極的。"},
+ co:[{c:"nav",l:"ピーチの比喩",h:"<b>外は柔らかい（soft・friendly）／中は硬い種（本当の自分を守る殻）</b>。速く親しくなるが、深い関係には壁がある。"}],
+ sol:[{m:"x",n:"A",t:"『2種類に分かれる』は導入で、この段落の主旨ではない。"},{m:"x",n:"B",t:"米国人がブラジル人より友好的、は本文になし。"},{m:"x",n:"C",t:"ファーストネームは『すぐ呼び合う』＝逆。"},{m:"o",n:"D",t:"正解。最初は友好的だが深い関係には消極的（種の硬い殻）。"}]},
+
+{id:"問5", grp:"AB", type:"同意語", lbl:"下線部(5) initially", en:"people are (5)initially more closed off from those they don't have friendships with",
+ ask:"下線部(5) initially に代わる語句としてもっとも適切なものを A〜D から選べ。", answer:"C", kind:"choice",
+ choices:[{t:"confusingly（紛らわしく）", ok:false},{t:"in fact（実際は）", ok:false},{t:"in the early stages（初期の段階では）", ok:true},{t:"intentionally（意図的に）", ok:false}],
+ steps:[
+   {t:"語義を確認", d:"<b>initially＝最初は・初めのうちは</b>（initial＝最初の）。"},
+   {t:"文脈で確認", d:"ココナッツ文化は<em>『最初は』心を閉ざすが、時間がたつと温かくなる（over time … warmer）</em>。initially は『over time』と対をなす。"},
+   {t:"選ぶ", d:"<b>in the early stages（初期段階では）</b>＝C。confusingly/in fact/intentionally は文意に合わない。"}],
+ ev:{q:'people are <span class="h">initially</span> more closed off … But over time, as coconuts get to know you, they become gradually warmer', jp:"「最初はより心を閉ざすが、時間がたつと温かくなる」。initially＝初期段階では。"},
+ co:[{c:"gold",l:"語義｜initially",h:"<b>initially＝最初は（＝in the early stages）</b>。『over time（時間とともに）』と対で読む。"}],
+ sol:[{m:"x",n:"A",t:"confusingly（紛らわしく）は無関係。"},{m:"x",n:"B",t:"in fact（実際は）ではない。"},{m:"o",n:"C",t:"正解。in the early stages（初期段階では）。"},{m:"x",n:"D",t:"intentionally（意図的に）ではない。"}]},
+
+{id:"問6", grp:"AB", type:"段落一致", lbl:"下線部(6) Coconuts の段落", en:"( 下線部(6) Coconuts で始まるパラグラフ )",
+ ask:"下線部(6) Coconuts で始まる段落の内容と一致するものを A〜D から一つ選べ。", answer:"D", kind:"choice",
+ choices:[{t:"ココナッツ文化の人は、友好を受け入れるにはいつも疑い深すぎる。", ok:false},{t:"ブラジル人はとても友好的なので、たいてい自分の住所を教えて家に招きたがる。", ok:false},{t:"イーゴリ・アガポフは、ニューヨーカーがいかに不親切かに衝撃を受けた。", ok:false},{t:"アガポフの隣に座ったアメリカ人乗客は、自分の私生活について多くを語った。", ok:true}],
+ steps:[
+   {t:"段落の具体例を拾う", d:"アガポフの隣のアメリカ人は、個人的な質問をし、<b>自分のこと（ベース奏者・出張・フロリダの新生児）も多く語った</b>。"},
+   {t:"一致を選ぶ", d:"<b>『アメリカ人乗客が自分の私生活を多く語った』</b>＝D。<em>He also shared very personal information about himself</em>に一致。"},
+   {t:"他を消す", d:"A（always 疑い深すぎ）は<u>always が過度</u>、B（ブラジル人は住所を教えたがる）は<u>逆</u>（言い忘れる）、C（NY市民の不親切）は別の話（この段落でない）。"}],
+ ev:{q:'He also shared very personal information about himself. He told me he was a bass player and talked about how difficult his frequent travelling was for his wife', jp:"「彼は自分についても個人的な情報を多く語った。ベース奏者で、頻繁な出張が妻にとってつらい、と話した」。"},
+ co:[{c:"verm",l:"罠｜always",h:"A の『always too distrustful（いつも疑い深すぎる）』は<u>言いすぎ</u>。本文は『そう解釈する者もいる』程度。極端な一般化に注意。"}],
+ sol:[{m:"x",n:"A",t:"always（常に）が過度な一般化。"},{m:"x",n:"B",t:"ブラジル人は住所を『言い忘れる』＝逆。"},{m:"x",n:"C",t:"NY市民の不親切は、この段落の内容ではない。"},{m:"o",n:"D",t:"正解。アメリカ人乗客は自分の私生活を多く語った。"}]},
+
+{id:"問7", grp:"AB", type:"指示語（含まれないもの）", lbl:"下線部(7) they", en:"they conclude that the peaches are dishonest or insincere",
+ ask:"下線部(7) they に含まれ ない ものを A〜D から一つ選べ。", answer:"A", kind:"choice",
+ choices:[{t:"Brazilian people（ブラジル人）", ok:true},{t:"German people（ドイツ人）", ok:false},{t:"Igor Agapov（イーゴリ・アガポフ）", ok:false},{t:"Russian people（ロシア人）", ok:false}],
+ steps:[
+   {t:"they が指す立場を掴む", d:"they＝<b>ピーチの友好を『友情の申し出』と誤解し、応じないと『不誠実だ』と結論づける側</b>＝<u>ココナッツ側</u>（見る側）。"},
+   {t:"具体例を当てはめる", d:"この段落のココナッツ側＝<em>ドイツ人（ブラジルで困惑）、ロシア人アガポフ</em>。→ B・C・D は they に含まれる。"},
+   {t:"含まれないものを選ぶ", d:"<b>ブラジル人</b>は<u>『ピーチ側（友好的に見られる側）』</u>で、誤解して結論づける they ではない。→ 含まれない＝A。"}],
+ ev:{q:'Some interpret the friendliness as an offer of friendship and … <span class="h">they</span> conclude that the peaches are dishonest', jp:"「友好を友情の申し出と解釈し、ピーチを不誠実だと結論づける（they）」＝ココナッツ側。ブラジル人はピーチ側。"},
+ co:[{c:"nav",l:"『見る側』と『見られる側』",h:"they＝<em>ピーチを疑うココナッツ（独・露アガポフ）</em>。<u>ブラジル人はピーチ側（friendly と見られる側）</u>なので they に含まれない。"}],
+ sol:[{m:"o",n:"A",t:"正解（＝含まれない）。ブラジル人はピーチ側で、疑う they ではない。"},{m:"x",n:"B",t:"ドイツ人はピーチを困惑して見る側＝they に含まれる。"},{m:"x",n:"C",t:"アガポフもピーチに衝撃を受けた側＝they に含まれる。"},{m:"x",n:"D",t:"ロシア人（アガポフら）＝they に含まれる。"}]},
+
+/* ===== 問8〜問13：グループCD ===== */
+{id:"問8", grp:"CD", type:"段落一致（2つ選ぶ）", lbl:"下線部(8) In response の段落", en:"( 下線部(8) In response で始まるパラグラフ・2つ選ぶ )",
+ ask:"下線部(8) In response で始まる段落の内容と一致するものを A〜E から二つ選べ。（正解 A・E）", answer:"A・E", kind:"multi",
+ items:[
+   {n:"A", t:"ロシア文化では、人々は初対面で個人情報を簡単には明かさない。", ok:true,
+    ev:"段落冒頭：アガポフは『ロシア文化では珍しいこと（unusual in Russian culture）』＝自分の個人的な話を共有した。裏返せば、ふだんは簡単に明かさない。",
+    why:"<b>一致</b>。『ロシアでは珍しい』＝通常は初対面で個人情報を明かさない、と読める。"},
+   {n:"B", t:"アガポフは、アメリカ人乗客が自分と話すのを避けたことに失望した。", ok:false,
+    ev:"乗客はむしろ饒舌に個人的な話をした。避けてはいない。",
+    why:"<b>不一致</b>。乗客は避けるどころか多くを語った。『避けた』は事実と逆。"},
+   {n:"C", t:"アガポフは電話番号を書き留める紙を見つけられなかった。", ok:false,
+    ev:"アガポフは『紙に手を伸ばした（reached for a piece of paper）』。紙は見つかっている。問題は相手が去ったこと。",
+    why:"<b>不一致</b>。紙は手に取ろうとしており、『見つけられなかった』は事実誤認。"},
+   {n:"D", t:"アメリカ人乗客はアガポフと長年の友人になろうとしたが、アガポフが嫌がった。", ok:false,
+    ev:"逆に、長年の友を望んだのはアガポフ側。乗客は着陸後あっさり去った。",
+    why:"<b>不一致</b>。友情を望んだのはアガポフ。乗客は去った＝立場が逆。"},
+   {n:"E", t:"アガポフは、アメリカ人乗客に欺かれたかのように感じた。", ok:true,
+    ev:"段落末：『続けるつもりのない関係のために、わざと自分の心を開かせた（tricked me into opening up）と思った』。",
+    why:"<b>一致</b>。tricked me into opening up＝欺かれて心を開かされた、と感じた。"},
+ ],
+ co:[{c:"nav",l:"2つ選ぶ段落一致",h:"段落を1文ずつ照合。<b>A（ロシアでは珍しい＝ふだん明かさない）とE（tricked＝欺かれたと感じた）</b>が一致。B・C・Dは<u>立場や事実が逆</u>。"},
+     {c:"verm",l:"逆・誤認に注意",h:"B『避けた』／D『友になろうとしたのは乗客』は<em>立場が逆</em>。C『紙が見つからない』は<em>事実誤認</em>。"}]},
+
+{id:"問9", grp:"CD", type:"同意語", lbl:"下線部(9) set off", en:"the relationship he had (9)set off",
+ ask:"下線部(9) set off に代わる語句としてもっとも適切なものを A〜D から選べ。", answer:"D", kind:"choice",
+ choices:[{t:"misunderstood（誤解した）", ok:false},{t:"finished（終えた）", ok:false},{t:"made up（でっちあげた）", ok:false},{t:"started（始めた）", ok:true}],
+ steps:[
+   {t:"文脈を掴む", d:"アメリカ人が<em>続けるつもりのない関係を『開始した（set off）』</em>のに、わざとアガポフの心を開かせた、という文脈。"},
+   {t:"set off の意味を絞る", d:"<b>set off＝『出発する／始める・引き起こす』</b>。ここでは<u>関係を『始めた』</u>。"},
+   {t:"選ぶ", d:"<b>started（始めた）</b>＝D。misunderstood（誤解）finished（終えた）made up（でっちあげた）は文意に合わない。"}],
+ ev:{q:'he had no intention of following through on the relationship he had <span class="h">set off</span>', jp:"「彼は、自分が始めた関係を続けるつもりがなかった」。set off＝始めた。"},
+ co:[{c:"gold",l:"語義｜set off",h:"<b>set off＝出発する・始める・引き起こす</b>。ここでは『関係を始めた（started）』。"}],
+ sol:[{m:"x",n:"A",t:"misunderstood（誤解した）ではない。"},{m:"x",n:"B",t:"finished（終えた）は逆。"},{m:"x",n:"C",t:"made up（でっちあげた）ではない。"},{m:"o",n:"D",t:"正解。started（始めた）。"}]},
+
+{id:"問10", grp:"CD", type:"状況説明", lbl:"下線部(10) I respond by holding tightly onto my purse", en:"I respond by holding tightly onto my purse",
+ ask:"下線部(10) I respond by holding tightly onto my purse の状況を説明する英文としてもっとも適切なものを A〜D から選べ。", answer:"B", kind:"choice",
+ choices:[{t:"I was so scared that I was prepared to give them all the money I had.（怖くて全財産を渡す気だった）", ok:false},{t:"I thought they were trying to deceive me and steal my money.（彼らが私を欺いてお金を盗もうとしていると思った）", ok:true},{t:"Their friendliness made me so happy that I even wanted to give them some money.（友好的で嬉しくてお金をあげたくなった）", ok:false},{t:"I made a wish on my purse for their happiness.（財布に彼らの幸せを願った）", ok:false}],
+ steps:[
+   {t:"行動の意味を読む", d:"<b>財布をしっかり握りしめる</b>＝<em>盗られないよう警戒する</em>しぐさ。直前で『気まずい・疑い深くなる（suspicious）』と言っている。"},
+   {t:"心理を特定", d:"ウエイターの過剰な friendliness を<u>『何か企んでいる＝お金目当てでは』と疑っている</u>。"},
+   {t:"選ぶ", d:"<b>『彼らが私を欺いてお金を盗もうとしていると思った』</b>＝B。A（全財産を渡す気）C（嬉しくてあげたい）D（幸せを願う）は財布を握る警戒と矛盾。"}],
+ ev:{q:'It makes me feel uncomfortable and <span class="h">suspicious</span>. What do they want from me? … holding tightly onto my purse', jp:"「気まずく疑い深くなる。彼らは何が目的? …財布をしっかり握る」＝盗まれると警戒。"},
+ co:[{c:"nav",l:"しぐさ＝心理",h:"<b>財布を握る＝警戒・不信</b>。直前の suspicious（疑い深い）と一致。過度な友好を『下心』と疑う。"}],
+ sol:[{m:"x",n:"A",t:"全財産を渡す気＝逆（守っている）。"},{m:"o",n:"B",t:"正解。欺いてお金を盗もうとしていると疑った。"},{m:"x",n:"C",t:"嬉しくてあげたい＝矛盾。"},{m:"x",n:"D",t:"『幸せを願う』は無関係。"}]},
+
+{id:"問11", grp:"CD", type:"空所（つなぎ）", lbl:"空所 (11)", en:"( 11 ), coming from a peach culture as I do, I was equally surprised when I came to live in Europe",
+ ask:"空所(11)に入るのにもっとも適切なものを A〜D から選べ。", answer:"D", kind:"choice",
+ choices:[{t:"As a result（その結果）", ok:false},{t:"Therefore（それゆえ）", ok:false},{t:"In any case（いずれにせよ）", ok:false},{t:"On the other hand（他方で）", ok:true}],
+ steps:[
+   {t:"前後の立場を比べる", d:"前：<em>ピーチを疑うフランス人女性（ココナッツ視点）</em>／空所後：<em>ピーチ出身の筆者自身が逆にヨーロッパで驚いた（ピーチ視点）</em>。"},
+   {t:"論理関係を判定", d:"<u>立場が逆の2つの例を並べている</u>＝対比。As a result/Therefore（因果）は不適、In any case（いずれにせよ）も対比を表さない。"},
+   {t:"選ぶ", d:"<b>On the other hand（他方で）</b>＝D。ココナッツ→ピーチ、と視点を切り替える対比の合図。"}],
+ ev:{q:'<span class="h">On the other hand</span>, coming from a peach culture as I do, I was equally surprised when I came to live in Europe', jp:"「他方、ピーチ文化出身の私自身も、ヨーロッパに住んで同じように驚いた」＝立場が逆の対比。"},
+ co:[{c:"nav",l:"対比の On the other hand",h:"<em>ピーチを疑うフランス人 ↔ ヨーロッパで驚くピーチ出身の筆者</em>。<u>逆の立場を並べる</u >ので On the other hand。"}],
+ sol:[{m:"x",n:"A",t:"As a result（因果）ではない。"},{m:"x",n:"B",t:"Therefore（因果）ではない。"},{m:"x",n:"C",t:"In any case（いずれにせよ）は対比を表さない。"},{m:"o",n:"D",t:"正解。On the other hand（他方で）＝立場の対比。"}]},
+
+{id:"問12", grp:"CD", type:"同意語", lbl:"下線部(12) stony", en:"I took their (12)stony expressions as signs of unfriendliness",
+ ask:"下線部(12) stony に代わる語句としてもっとも適切なものを A〜D から選べ。", answer:"C", kind:"choice",
+ choices:[{t:"extremely fearful（極度におびえた）", ok:false},{t:"too worried（心配しすぎた）", ok:false},{t:"very cold（とても冷たい）", ok:true},{t:"extraordinarily dark（並外れて暗い）", ok:false}],
+ steps:[
+   {t:"語義を確認", d:"<b>stony＝石のような＝冷たく無表情な</b>（stone＝石）。stony expression＝硬く冷たい表情。"},
+   {t:"文脈で確認", d:"筆者は同僚の stony な表情を<em>『親しみのなさ・嫌悪・軽べつ』の表れ</em>と受け取った。"},
+   {t:"選ぶ", d:"<b>very cold（とても冷たい）</b>＝C。fearful（おびえた）worried（心配）dark（暗い）は表情の『冷たさ』を表さない。"}],
+ ev:{q:'I took their <span class="h">stony</span> expressions as signs of unfriendliness, dislike, and even contempt', jp:"「彼らの冷たい表情を、親しみのなさ・嫌悪・軽べつの表れと受け取った」。stony＝冷たい。"},
+ co:[{c:"gold",l:"語義｜stony",h:"<b>stony＝石のように冷たい・無表情な（＝very cold）</b>。unfriendliness（よそよそしさ）と並ぶ。"}],
+ sol:[{m:"x",n:"A",t:"fearful（おびえた）ではない。"},{m:"x",n:"B",t:"worried（心配）ではない。"},{m:"o",n:"C",t:"正解。very cold（とても冷たい）。"},{m:"x",n:"D",t:"dark（暗い）は表情の冷たさを表さない。"}]},
+
+{id:"問13", grp:"CD", type:"段落一致", lbl:"下線部(13) So what do you do の段落", en:"( 下線部(13) So what do you do で始まるパラグラフ )",
+ ask:"下線部(13) So what do you do で始まる段落の内容と一致するものを A〜D から一つ選べ。", answer:"A", kind:"choice",
+ choices:[{t:"もしあなたがピーチなら、自分の個人情報を明かすのをためらう必要はない。", ok:true},{t:"もしあなたがピーチなら、相手も自分と同じように私的情報を教えてくれると期待せよ。", ok:false},{t:"もしあなたがココナッツなら、ピーチは友好的なふりをしているだけなので用心せよ。", ok:false},{t:"もしあなたがココナッツなら、周りのピーチの振る舞いに合わせる必要はない。", ok:false}],
+ steps:[
+   {t:"段落の助言を掴む", d:"筆者の助言：<b>『自分自身であれ（Being yourself matters）』『好きなだけほほ笑み、家族の情報を共有していい』</b>。ただし相手が振ってくるまで個人的質問はしない。"},
+   {t:"ピーチへの助言を選ぶ", d:"ピーチ（筆者側）は<u>自分の情報を共有してよい＝明かすのをためらう必要はない</u>＝A。"},
+   {t:"他を消す", d:"B（相手も教えてくれると期待）は本文になし、C（ピーチはふりをしているだけ）は誤り（本文は『企みと受け取るな』）、D（合わせる必要はない）は<u>逆</u>（文化ルールに適応せよ）。"}],
+ ev:{q:'Being yourself matters … So go ahead and smile all you want and <span class="h">share as much information about your family as you like</span>', jp:"「自分自身であれ。好きなだけほほ笑み、家族の情報を好きなだけ共有していい」＝ピーチは情報を明かしてよい。"},
+ co:[{c:"nav",l:"段落の主旨＝『自分らしく＋適応』",h:"ピーチは<em>情報を共有してよい</em>が、<u>相手が振るまで個人的質問はしない</u>。ココナッツには<em>ピーチの友好を企みと取るな＝文化差として適応せよ</em>。"}],
+ sol:[{m:"o",n:"A",t:"正解。ピーチは個人情報を明かすのをためらう必要はない。"},{m:"x",n:"B",t:"『相手も教えてくれると期待せよ』は本文になし。"},{m:"x",n:"C",t:"『ふりをしているだけ』は誤り（企みと取るなと述べる）。"},{m:"x",n:"D",t:"『合わせる必要はない』は逆（適応せよ）。"}]},
+
+/* ===== 問14：和訳 グループEF ===== */
+{id:"問14(イ)", grp:"EF", type:"英文和訳", lbl:"下線部(イ)", en:"All was well until I asked what I thought was a perfectly innocent question", ask:"下線部(イ)を和訳せよ。", kind:"desc", answer:"下記模範解答",
+ steps:[
+   {t:"All was well until ~ の型", d:"<b>All was well until ~＝『〜するまではすべて順調だった』</b>。<em>until 以下が起きて初めて事態が悪化した</em>、という含み。「〜して初めて…」と訳してもよい。"},
+   {t:"what I thought was ~（連鎖関係詞）", d:"<b>what I thought was a perfectly innocent question</b>：<u>I thought は挿入</u>で、骨格は <em>what was a perfectly innocent question</em>。＝『自分では完全に無害だと思っていた（ある）質問』。"},
+   {t:"perfectly innocent を訳す", d:"<em>perfectly innocent＝『まったく悪気のない／完全に無害な』</em>。innocent は『無邪気な・悪意のない』。"},
+   {t:"日本語に整える", d:"「<u>自分ではまったく悪気のない質問だと思っていたことを尋ねるまでは、すべてが順調だった</u>」。"}],
+ model:["私が、自分ではまったく悪気のない（完全に無害な）質問だと思っていたことを尋ねるまでは、すべてが順調だった。"],
+ mnote:"<b>All was well until ~（〜まではすべて順調）</b>と<b>what I thought was ~（自分では〜だと思っていたもの＝連鎖関係詞）</b>の2つが要。<em>I thought の挿入</em>を見抜けるかがポイント。",
+ rubric:[
+   {t:"<b>All was well until ~（〜するまではすべて順調だった）</b>の骨格", p:3, must:true},
+   {t:"<b>what I thought was ~（自分では〜だと思っていたもの）</b>＝I thought を挿入として処理", p:4, must:true},
+   {t:"<b>a perfectly innocent question（まったく悪気のない／完全に無害な質問）</b>", p:3, must:true}],
+ total:10,
+ ng:[
+   {bad:"私が完全に無実だと思った質問をするまで、すべては井戸だった。", why:"<b>innocent『無実』・well『井戸』と誤訳</b>。ここは innocent＝『悪気のない』、All was well＝『すべて順調』。多義語の取り違え。"},
+   {bad:"私が思ったことは完全に無害な質問だったが、すべてうまくいった。", why:"<b>連鎖関係詞と until を無視</b>。what I thought was ~ を分解できておらず、until（〜するまで）も訳出されていない。"}]},
+
+{id:"問14(ロ)", grp:"EF", type:"英文和訳", lbl:"下線部(ロ)", en:"if you try to be someone you're not, it never works", ask:"下線部(ロ)を和訳せよ。", kind:"desc", answer:"下記模範解答",
+ steps:[
+   {t:"someone you're not を読む", d:"<b>someone you're not＝『あなたがそうでない誰か＝本来の自分でない人間』</b>。<u>someone (who) you're not の関係代名詞（目的格）の省略</u>。you're not (someone)。"},
+   {t:"try to be を訳す", d:"<b>try to be someone you're not＝『本来の自分でない誰かになろうとする』</b>＝<em>自分を偽る・別人を演じる</em>。"},
+   {t:"it never works", d:"<b>it never works＝『それは決してうまくいかない』</b>。work＝『機能する・うまくいく』。"},
+   {t:"日本語に整える", d:"「<u>もし、本来の自分ではない誰かになろうとすれば、それは決してうまくいかない</u>」。"}],
+ model:["もし（私のように）本来の自分ではない誰かになろうとするなら、それは決してうまくいかない。"],
+ mnote:"<b>someone you're not（本来の自分でない誰か）＝関係代名詞の省略</b>と、<b>it never works（決してうまくいかない）</b>が要。<em>be someone you're not＝自分を偽る</em>と捉える。",
+ rubric:[
+   {t:"<b>if you try to be ~（もし〜になろうとすれば）</b>の条件節", p:3, must:true},
+   {t:"<b>someone you're not（本来の自分でない誰か）</b>＝関係代名詞の省略を処理", p:4, must:true},
+   {t:"<b>it never works（決してうまくいかない）</b>", p:3, must:true}],
+ total:10,
+ ng:[
+   {bad:"もしあなたが誰でもない人になろうとするなら、それは決して働かない。", why:"<b>someone you're not『誰でもない人』・works『働く』と誤訳</b>。someone you're not＝『本来の自分でない誰か』、works＝『うまくいく』。"},
+   {bad:"あなたがそうでない誰かになろうとしても、それは決して機能しない。", why:"<u>直訳としては可だが</u>、someone you're not を『本来の自分でない誰か（＝自分を偽る）』とかみ砕くとより明確。it never works は『うまくいかない』が自然。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+</script>
+</body>
+</html>
