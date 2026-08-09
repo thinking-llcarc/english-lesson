@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜成蹊大学 2025 大問3（短文読解5問）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">成</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>成蹊大学 2025 ／ 大問3</span></div>
+    <div class="top-meta">短文読解5問（広告・メール・SMS・アナウンス）<br>根拠の一文を必ず指させるように</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>HOW-TO</small>短文読解の解き方</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>(1)–(5)</small>5つの短文</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">How to Solve — Short Passages</div>
+    <h1>短文読解は「根拠の一文」を<br>必ず指させるかどうかの勝負。<br>雰囲気で選ぶと必ず外す。</h1>
+    <p>大問3は5つの独立した短文（バンドの募集広告・ケーキ屋の広告・コーチのメール・妻からのSMS・駅アナウンス）。それぞれ<em>「正しいものは?」「なぜ書いたのか?」「正しくないものは?」</em>を問う。全問に共通する解き方は1つ――<strong>選択肢を1つずつ本文と照合し、根拠の一文を指す</strong>。この解説では各設問に「どの一文が根拠か」を明示した。</p>
+    <div class="thesis"><b>短文読解の3原則：</b>①<b>選択肢を本文と1つずつ照合</b>する（記憶で解かない）。②<b>「必須」と「歓迎」、修飾のかかる範囲</b>など、強さ・範囲のすり替えに注意。③<b>NOT問題は「本文にある3つを消す」</b>。残った本文にないものが答え。</p>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>短文</span></div>
+      <div class="stat"><b>4</b><span>択</span></div>
+      <div class="stat"><b>3</b><span>種の問い方</span></div>
+      <div class="stat"><b>1</b><span>NOT問題</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">5つの短文と、問い方のタイプ</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">番号</th><th style="width:30%">素材</th><th>問い方と急所</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">(1)</td><td>女子バンドのボーカル募集広告</td><td>内容一致。<b>「必須」か「歓迎（a big plus）」か</b>の強さを読み分ける。</td></tr>
+      <tr><td class="cond">(2)</td><td>ケーキ屋の広告</td><td>内容一致。<b>only during the week が修飾するのは何か</b>（割引? 営業日?）。</td></tr>
+      <tr><td class="cond">(3)</td><td>サッカー部コーチのメール</td><td>目的。<b>メール全体のトーン</b>（不利な状況の選手を励ます）で判断。</td></tr>
+      <tr><td class="cond">(4)</td><td>妻から夫へのSMS</td><td>目的。<b>末尾の問いかけ</b>（あなたはどうしたい?）＝決断を委ねる。</td></tr>
+      <tr><td class="cond">(5)</td><td>駅の運休アナウンス</td><td><b>NOT問題</b>。本文にある3つ（お詫び・代替バス・追加料金なし）を消す。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは、選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文の該当箇所）→全4択の✓✗</strong>が開きます。<u>正解だけでなく「なぜ他が違うか」まで</u>確認してください。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">5つの短文へ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">5つの短文 ― (1)〜(5)<span class="sub">各カードに<b>解答プロセス（①タイプ確認→②根拠の一文→③消去法）</b>を付けた。根拠を指させるか確認しよう。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="0">← 解き方</button><span class="sp"></span><button class="btnp" data-go="2">全訳へ →</button></div>
+</section><section class="panel" id="p2">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 5つの短文の日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳。番号①②③…は本文の文の順番に対応。各短文の下に、設問の根拠と急所をまとめた。</span></h1>
+  <div class="rule"></div><div class="tr-sec"><b>(1) 募集広告</b>｜女子だけのバンド、ボーカル募集</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">女子だけのバンドのために、ボーカルを募集します。</div></div><div class="jpline"><div class="n">②</div><div class="s">もし楽器も演奏できるなら、それは大きなプラスになります。</div></div><div class="jpline"><div class="n">③</div><div class="s">でも急いで! 私たちの初コンサートは6週間後です!</div></div><div class="jpline"><div class="n">④</div><div class="s">興味がある? ジェニー（jenny@girlband.co.uk）までメールを。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜(1)</div><ul><li><b>設問：この広告について正しいものは?</b>　正解＝<b>2「女性のみが応募できる」</b>。<u>all-girl band（女子だけのバンド）</u>が根拠（第1文）。</li>
+    <li>1「バンドは定期的にライブをやる」→初コンサートがこれから（6週間後）なので×。3「ジェニーには複数の方法で連絡できる」→メールのみ記載なので×。4「応募者は楽器を演奏できなければならない」→<em>楽器は「大きなプラス（a big plus）」＝必須ではない</em>ので×。</li>
+    <li><b>読解の急所</b>：a big plus は<em>「あれば有利／歓迎」＝任意</em>。「必須（have to）」ではない、という<u>強さの違い</u>を読み分ける。</li></ul></div><div class="tr-sec"><b>(2) 店の広告</b>｜ケーキ屋の広告</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ぜひご来店を。30種類以上のケーキからお選びいただけます。</div></div><div class="jpline"><div class="n">②</div><div class="s">いちばん人気のチョコレート3種には特別割引があります。</div></div><div class="jpline"><div class="n">③</div><div class="s">ただし平日限定です。</div></div><div class="jpline"><div class="n">④</div><div class="s">そしていつものとおり、お誕生日なら50％オフ!</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜(2)</div><ul><li><b>設問：このケーキ屋について正しいものは?</b>　正解＝<b>3「どの客も年に一度は特別割引を受けられる」</b>。<u>誕生日なら50％オフ＝誰でも年1回は割引を受けられる</u>（第4文）。</li>
+    <li>1「週末はたいてい閉店」→平日限定なのは<em>チョコ3種の特別割引</em>であって、店自体が週末休みとは書いていないので×。2「チョコケーキは3種類だけ売る」→<em>「人気のチョコ3種に割引」であって、チョコが3種だけとは言っていない</em>ので×。4「今、独占契約の一環として新商品を宣伝中」→本文になし×。</li>
+    <li><b>読解の急所</b>：<em>only during the week（平日限定）</em>が修飾するのは<u>「特別割引」であって「営業日」ではない</u>。かかる範囲に注意。</li></ul></div><div class="tr-sec"><b>(3) コーチのメール</b>｜サッカー部コーチから選手へ</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">みんな! 今週土曜がいよいよ大一番だ。地区トーナメントの準決勝。ここまで来られてよくやった。</div></div><div class="jpline"><div class="n">②</div><div class="s">みんな相手が僕らに勝つと思っているのは分かっている。でも、全力を尽くせば、今シーズン最大の番狂わせの1つを起こせるかもしれない。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜(3)</div><ul><li><b>設問：コーチはなぜチームにメールを書いているのか?</b>　正解＝<b>4「試合を心配しているかもしれないチームを励ますため」</b>。<u>「よくやった」「全力を尽くせば番狂わせを起こせる」＝激励</u>（最終文）。</li>
+    <li>1「他人の予想に対する失望を表すため」→失望ではない×。2「たぶん勝つと選手に伝えるため」→<em>「相手が勝つと皆思っている」＝格上相手</em>なので「勝てる」と断言してはいない×。3「今年のコーチであることを誇りに思うと伝えるため」→主眼は誇りでなく激励×。</li>
+    <li><b>読解の急所</b>：<em>everyone expects our opponents to beat us（皆、相手が勝つと思っている）</em>という不利な状況を、<u>but 以下で「全力なら番狂わせ可能」と鼓舞</u>。メール全体の目的＝励まし。</li></ul></div><div class="tr-sec"><b>(4) 妻からのSMS</b>｜レイチェルから夫ヘンリーへ</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ヘンリー、助けて! 今日の午後、会議が入ったことがさっき分かったの。</div></div><div class="jpline"><div class="n">②</div><div class="s">私の代わりに、子どもたちを学校に迎えに行ってくれる?</div></div><div class="jpline"><div class="n">③</div><div class="s">午後3時までには手が空くかもしれないけど、確約はできないの。</div></div><div class="jpline"><div class="n">④</div><div class="s">それか、お母さん（義母）に頼んでもいい。問題ないって言ってたから。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">あなたはどうしたい? ――レイチェル</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜(4)</div><ul><li><b>設問：レイチェルはなぜヘンリーにSMSを送っているのか?</b>　正解＝<b>1「彼に決断してもらうため」</b>。<u>子どもの迎えを「あなた（ヘンリー）」に頼むか「お母さん」に頼むか、2案を示し「あなたはどうしたい?（What do you feel like doing?）」と尋ねている</u>＝<em>判断を委ねている</em>。</li>
+    <li>2「今日の午後、彼に必ず時間を作らせるため」→<em>「確約できない」「母にも頼める」と逃げ道を用意しており、強制ではない</em>×。3「自分のその日の勤務予定を伝えるため」→予定の連絡が主目的ではない×。4「彼女の母と連絡を取るよう提案するため」→母に頼むのは選択肢の一つで、それを勧めているわけではない×。</li>
+    <li><b>読解の急所</b>：末尾の <em>What do you feel like doing?（あなたはどうしたい?）</em>が決め手。<u>2つの案を出して相手に選ばせている＝decision を委ねる</u>。</li></ul></div><div class="tr-sec"><b>(5) 駅アナウンス</b>｜サザン鉄道からのお知らせ（NOT問題）</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">サザン鉄道より、ヴィクトリア駅行き17時35分発の運休についてお詫び申し上げます。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは、最近の新型コロナウイルスの流行による一時的な人員不足が原因です。</div></div><div class="jpline"><div class="n">③</div><div class="s">ただし、有効な列車の切符をお持ちのすべての乗客に、代替のバスサービスをご用意いたします。</div></div><div class="jpline"><div class="n">④</div><div class="s">重ねて、ご不便をおかけしますことをお詫び申し上げます。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜(5)</div><ul><li><b>設問：サザン鉄道について正しく<u>ない</u>ものは?（NOT問題）</b>　正解＝<b>4「今後数週間から数か月で、より多くの人を雇う予定だ」</b>。<u>増員・採用予定については本文にまったく言及がない</u>ので、これが「正しくない（＝本文にない）」もの。</li>
+    <li>正しい3つ：1「顧客に迷惑をかけたことを申し訳なく思っている」→冒頭と末尾で apologise（お詫び）○。2「乗客が旅程を完了できるようにする」→<em>代替バスを用意（replacement bus service）</em>＝旅を続けられるようにする○。3「緊急のサービスに追加料金を請求しない」→<em>有効な切符を持つ乗客に代替バス</em>＝追加料金なし○。</li>
+    <li><b>NOT問題の解き方</b>：<u>本文に書いてある3つ（お詫び・代替バス・追加料金なし）を消し、残った「増員予定」（本文にない）を選ぶ</u>。「正しくない＝本文と食い違う／本文にない」。</li></ul></div><div class="pnav"><button class="btns" data-go="1">← 5つの短文</button><span class="sp"></span><button class="btnp" data-go="3">総まとめへ →</button></div></section><section class="panel" id="p3">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定して潰す。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">設問</th><th style="width:12%">解答</th><th>根拠</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">(1)</td><td><b>2</b></td><td>all-girl band＝女性のみ応募可（楽器は歓迎で必須でない）</td></tr>
+      <tr><td class="cond">(2)</td><td><b>3</b></td><td>誕生日50％オフ＝どの客も年1回は割引</td></tr>
+      <tr><td class="cond">(3)</td><td><b>4</b></td><td>不利な状況の選手を「全力なら番狂わせ可能」と励ます</td></tr>
+      <tr><td class="cond">(4)</td><td><b>1</b></td><td>2案を示し「あなたはどうしたい?」＝決断を委ねる</td></tr>
+      <tr><td class="cond">(5)</td><td><b>4</b></td><td>NOT。増員・採用予定は本文に言及なし</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>「必須」と「歓迎」を取り違えた（(1)）</b><p><em>a big plus（あれば有利）＝任意</em>、<em>have to（〜しなければならない）＝必須</em>。強さの違いを読み分ける。募集広告・求人では頻出。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>修飾のかかる範囲を誤った（(2)）</b><p><em>only during the week（平日限定）</em>が修飾するのは<u>「特別割引」であって「営業日」ではない</u>。どの語がどこにかかるかを正確に。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>目的問題を外した（(3)(4)）</b><p>個々の文でなく<em>文章全体が何をしようとしているか</em>で判断。(3)は励まし、(4)は末尾の<u>「あなたはどうしたい?」＝決断を委ねる</u>。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>NOT問題を外した（(5)）</b><p><u>本文に書いてある選択肢（お詫び・代替バス・追加料金なし）を消し、残った「本文にない」もの（増員予定）を選ぶ</u>。「正しくない＝本文と食い違う／本文にない」。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    短文読解は、<u>①選択肢を1つずつ本文と照合 ②強さ・範囲のすり替えを見抜く ③NOTは本文にある選択肢を消す</u>――この3手で安定します。速く読めても、根拠の一文を指せなければ運任せ。<em>「どの一文が根拠か」を必ず言えるように</em>練習してください。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="2">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は成蹊大学2025年英語（大問3）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+{id:"(1)", grp:"AB", type:"内容一致（募集広告）", lbl:"設問 (1)", en:"この広告について正しいものはどれか。",
+ ask:"女子バンドのボーカル募集広告について、正しいものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"バンドは定期的にライブをやっている。", ok:false},{t:"女性のみがこの募集に応募できる。", ok:true},{t:"ジェニーには複数の方法で連絡できる。", ok:false},{t:"応募者は楽器を演奏できなければならない。", ok:false}],
+ steps:[
+   {t:"設問タイプを確認", d:"短文の内容一致。<b>選択肢を1つずつ本文と照合</b>し、本文に合うものを選ぶ。"},
+   {t:"根拠の一文を指す", d:"<b>Singer wanted for <u>all-girl band</u>（女子だけのバンドのボーカル募集）</b>。→ 応募できるのは<u>女性のみ</u>。選択肢2に一致。"},
+   {t:"残りを消す", d:"1＝初コンサートは6週間後（まだライブ実績なし）→×。3＝連絡はメールのみ記載→×。4＝楽器は<em>a big plus（大きなプラス＝歓迎）</em>で必須ではない→×。"}],
+ ev:{q:'<span class="h">Singer wanted for all-girl band.</span> If you can play an instrument as well, that would be a big plus.', jp:"「女子だけのバンドのボーカル募集。楽器も弾けたら大きなプラス」。all-girl＝女性のみ。楽器は必須でなく歓迎。"},
+ co:[{c:"verm",l:"必須 vs 歓迎",h:"<b>a big plus（あれば有利）</b>は<u>任意</u>。<em>have to（〜しなければならない）＝必須</em>とは強さが違う。4はこの差を突く罠。"}],
+ sol:[{m:"x",n:"1",t:"初コンサートはこれから（6週間後）。定期ライブの実績はない。"},{m:"o",n:"2",t:"正解。all-girl band＝応募は女性のみ。"},{m:"x",n:"3",t:"連絡方法はメールのみ記載。「複数の方法」は誤り。"},{m:"x",n:"4",t:"楽器は a big plus（歓迎）で必須ではない。"}]},
+
+{id:"(2)", grp:"AB", type:"内容一致（店の広告）", lbl:"設問 (2)", en:"このケーキ屋について正しいものはどれか。",
+ ask:"ケーキ屋の広告について、正しいものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"週末はたいてい閉店している。", ok:false},{t:"チョコレートケーキを3種類だけ売っている。", ok:false},{t:"どの客も年に一度は特別割引を受けられる。", ok:true},{t:"今、独占契約の一環として新商品を宣伝している。", ok:false}],
+ steps:[
+   {t:"根拠の一文を探す", d:"最終文 <b>「お誕生日なら50％オフ（if it's your birthday, you get 50% off）」</b>。誕生日は誰にでも年1回ある。"},
+   {t:"『どの客も年1回』に結ぶ", d:"誕生日割引＝<u>どの客も年に一度は特別割引を受けられる</u>。選択肢3に一致。"},
+   {t:"かかる範囲に注意して消す", d:"1＝<em>only during the week（平日限定）</em>なのは『チョコ3種の割引』であって『営業日』ではない→×。2＝『人気のチョコ3種に割引』で、チョコが3種<u>だけ</u>とは言っていない→×。4＝独占契約・新商品は本文になし→×。"}],
+ ev:{q:'as always, <span class="h">if it\'s your birthday, you get 50% off!</span>', jp:"「いつものとおり、誕生日なら50％オフ」。誕生日は年に一度＝どの客も年1回は割引を受けられる。"},
+ co:[{c:"nav",l:"修飾のかかり先",h:"<em>only during the week（平日限定）</em>が修飾するのは<u>the special deal（特別割引）</u>。『店の営業日』ではない。2・1はここを取り違えさせる罠。"}],
+ sol:[{m:"x",n:"1",t:"平日限定なのは割引であって、営業日ではない。"},{m:"x",n:"2",t:"「人気のチョコ3種に割引」であって、チョコが3種だけとは言っていない。"},{m:"o",n:"3",t:"正解。誕生日50％オフ＝どの客も年1回は割引を受けられる。"},{m:"x",n:"4",t:"独占契約・新商品の宣伝は本文になし。"}]},
+
+{id:"(3)", grp:"AB", type:"目的（コーチのメール）", lbl:"設問 (3)", en:"コーチはなぜチームにEメールを書いているのか。",
+ ask:"サッカー部コーチがメールを書いた目的を 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"他人の予想に対する失望を表すため。", ok:false},{t:"たぶん試合に勝つと思っていると選手に伝えるため。", ok:false},{t:"今年このチームのコーチであることを誇りに思うと伝えるため。", ok:false},{t:"試合を心配しているかもしれないチームを励ますため。", ok:true}],
+ steps:[
+   {t:"メール全体のトーンを掴む", d:"「よくやった（Well done）」「全力を尽くせば今季最大の番狂わせを起こせるかも」＝<b>前向きに鼓舞する調子</b>。"},
+   {t:"状況を確認", d:"<em>everyone expects our opponents to beat us（皆、相手が勝つと思っている）</em>＝<u>格上相手で不利</u>。選手は不安かもしれない。"},
+   {t:"目的を1つに絞る", d:"不利な状況の選手を<b>「全力なら番狂わせ可能」と励ましている</b>→4。1（失望）2（勝つと断言）3（誇り）は主眼ではない。"}],
+ ev:{q:'Well done to you all for getting this far. … <span class="h">if you all try your best, who knows, we can cause one of the biggest upsets</span>', jp:"「ここまでよくやった。全力を尽くせば、最大の番狂わせを起こせるかも」。不安な選手を鼓舞するのが目的。"},
+ co:[{c:"nav",l:"目的問題は全体の狙い",h:"個々の文でなく<u>メール全体が何をしようとしているか</u>で判断。ここは一貫して<em>励まし・鼓舞</em>。"},
+     {c:"verm",l:"罠｜2",h:"『相手が勝つと皆思う』格上相手なので、コーチは「勝つ」と<u>断言していない</u>（who knows＝どうなるか分からないが、の含み）。"}],
+ sol:[{m:"x",n:"1",t:"他人の予想への「失望」ではない。"},{m:"x",n:"2",t:"格上相手で「勝つ」と断言はしていない（who knows）。"},{m:"x",n:"3",t:"「誇り」は主眼でない。"},{m:"o",n:"4",t:"正解。不安な選手を「全力なら番狂わせ可能」と励ます。"}]},
+
+{id:"(4)", grp:"AB", type:"目的（SMS）", lbl:"設問 (4)", en:"レイチェルはなぜヘンリーにSMSを送っているのか。",
+ ask:"レイチェルが夫ヘンリーにSMSを送った目的を 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"彼に決断してもらうため。", ok:true},{t:"今日の午後、必ず時間を作らせるため。", ok:false},{t:"自分のその日の勤務予定を伝えるため。", ok:false},{t:"自分の母と連絡を取るよう彼に提案するため。", ok:false}],
+ steps:[
+   {t:"提示された『選択肢』を数える", d:"レイチェルは<em>①ヘンリーが迎えに行く ②義母に頼む</em>の<b>2案</b>を並べている。"},
+   {t:"末尾の一文を読む", d:"最後に <b>「あなたはどうしたい?（What do you feel like doing?）」</b>と尋ねている＝<u>ヘンリーに選ばせている</u>。"},
+   {t:"目的を確定", d:"2案を示して相手に選ばせる＝<b>決断を委ねる</b>→1。2（強制）3（予定連絡）4（母に頼めと勧める）は末尾の問いかけと合わない。"}],
+ ev:{q:'Or I can ask mum to do it. … <span class="h">What do you feel like doing?</span>', jp:"「私が行く／義母に頼む、どちらもありうる。あなたはどうしたい?」＝どちらにするか決めてほしい。"},
+ co:[{c:"nav",l:"決め手は末尾の問いかけ",h:"<em>What do you feel like doing?</em>＝<u>「どうする?」と相手に判断を委ねる</u>。2案提示＋この問い＝『決断を求める』。"},
+     {c:"verm",l:"罠｜2",h:"『確約できない（no guarantees）』『義母にも頼める』と<u>逃げ道を用意</u>しており、時間を『必ず作らせる』強制ではない。"}],
+ sol:[{m:"o",n:"1",t:"正解。2案を示し「どうしたい?」と決断を委ねている。"},{m:"x",n:"2",t:"確約せず義母案も用意。強制ではない。"},{m:"x",n:"3",t:"勤務予定の連絡が主目的ではない。"},{m:"x",n:"4",t:"母案は選択肢の一つで、勧めているわけではない。"}]},
+
+{id:"(5)", grp:"AB", type:"内容一致（NOT・駅アナウンス）", lbl:"設問 (5)", en:"サザン鉄道について正しくないものはどれか。",
+ ask:"サザン鉄道のアナウンスについて、正しく ない ものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"顧客に迷惑をかけたことを申し訳なく思っている。", ok:false},{t:"乗客が旅程を完了できるようにする。", ok:false},{t:"緊急のサービスに追加料金を請求しない。", ok:false},{t:"今後数週間から数か月で、より多くの人を雇う予定だ。", ok:true}],
+ steps:[
+   {t:"NOT問題と確認", d:"<b>正しく『ない』ものを選ぶ</b>。まず本文に合う（正しい）3つを消していく。"},
+   {t:"本文にある3つを消す", d:"1＝冒頭・末尾で apologise（お詫び）→○。2＝<em>replacement bus service（代替バス）</em>で旅を続けられる→○。3＝<em>有効な切符を持つ乗客に代替バス</em>＝追加料金なし→○。"},
+   {t:"残った1つが答え", d:"4＝<u>『増員・採用予定』は本文にまったく書かれていない</u>。運休の原因は人員不足だが、増員するとは言っていない。→ これが『正しくない（本文にない）』＝正解。"}],
+ ev:{q:'a <span class="h">replacement bus service will be provided for any and all passengers with a valid train ticket</span>', jp:"「有効な切符を持つ全乗客に代替バスを提供」＝旅を続けられ、追加料金もない。増員予定は本文になし。"},
+ co:[{c:"verm",l:"NOT問題の手順",h:"<u>①本文に書いてある選択肢を消す（1・2・3は○）→②残った『本文にない』4が答え</u>。人員不足が原因とはあるが、<em>『雇用を増やす予定』は書かれていない</em>。"}],
+ sol:[{m:"x",n:"1",t:"本文と一致（お詫びしている）。NOTではない。"},{m:"x",n:"2",t:"本文と一致（代替バスで旅を完了できる）。NOTではない。"},{m:"x",n:"3",t:"本文と一致（有効な切符で代替バス＝追加料金なし）。NOTではない。"},{m:"o",n:"4",t:"正解（＝正しくない）。増員・採用予定は本文にまったく言及なし。"}]},
+];
+
+
+/* ===== ENGINE ===== */
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+</script>
+</body>
+</html>
