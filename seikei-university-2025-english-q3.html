@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="color-scheme" content="light">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>英語精読｜成蹊大学 2025 大問3（短文読解5問）｜THINKING</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -399,6 +400,64 @@ tbody tr:nth-child(even){background:var(--surface2);}
 .cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
 .cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
 .cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
 
 </style>
 </head>
