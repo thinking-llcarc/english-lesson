@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜成蹊大学 2025 大問5（頭蓋骨と脳の大きさ）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">成</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>成蹊大学 2025 ／ 大問5</span></div>
+    <div class="top-meta">頭蓋骨は大きくなった（脳＝知能?）<br>科学記事・全10問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>問1–5</small>設問 前半</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>問6–10</small>設問 後半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>頭蓋骨は600年で18%大きくなった。<br>でも「大きい脳＝賢い」ではない。<br>この一本の否定の論理を追う。</h1>
+    <p>現代人の頭蓋冠は中世より18%以上高い――が、筆者はそれを安易に「知能の増加」と結びつける考えを、証拠で一つずつ否定していく。<em>脳の大きさは体に対する相対値で意味を持ち、顎・顔の縮小は食生活（加工食で噛まなくなった）の結果</em>。この「大きさ増加≠知能向上」という否定の軸を掴めば、空所も内容一致も筆者の態度も全部つながる。</p>
+    <div class="thesis"><b>一貫する論理：</b>①事実＝頭蓋冠が18%増（データは82個の古い頭蓋骨 vs 現代）。②素朴な解釈＝「知能が増えた?」→<b>but 早計</b>。③理由＝脳の大きさは<u>体に対する相対値</u>／顎・顔の縮小は<u>食生活の変化</u>。④結論＝中世人の知能テストは不可能なので<u>今は答えられない</u>が、問い自体は興味深い。</div>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>段落構成</span></div>
+      <div class="stat"><b>10</b><span>設問</span></div>
+      <div class="stat"><b>18%</b><span>頭蓋冠の増加</span></div>
+      <div class="stat"><b>82</b><span>古い頭蓋骨</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:26%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">空所補充（文・接続）</td><td>問1 問4 問8</td><td>問1＝直後のコロンが結果の中身。問4＝but で『早計』とブレーキ。問8＝easy↔less easy の対比で while。</td></tr>
+      <tr><td class="cond">内容一致・理由</td><td>問3 問5 問6 問7 問9</td><td><b>数値・因果を本文で確認</b>。82個(問3)／相対的な脳の大きさ(問5)／脳に影響しない身長体重(問6)／食生活の変化(問7)／故人は測れない(問9)。</td></tr>
+      <tr><td class="cond">表現の解釈・態度</td><td>問2</td><td><b>would appear that＝控えめな推量</b>（確信・驚きではない）。</td></tr>
+      <tr><td class="cond">筆者の目的</td><td>問10</td><td>科学記事＝<b>新たな知識を与える</b>。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。<u>「大きさ増加≠知能向上」という軸に照らして</u>各設問を確認してください。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 5段落の流れと設問の在りか<span class="sub">「導入→データ→考察①（否定）→考察②（食生活）→結論」。否定の論理がどこに現れるかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">頭蓋骨は大きくなった</div><p>『英国歯科ジャーナル』の比較研究。現代人 vs 中世人で頭蓋骨の形がかなり変化。<em>予期しない結果</em>。</p><div class="tags"><span class="utag">(1)</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>データ</span></div><div class="para-b">
+      <div class="theme">頭蓋冠が18%以上増</div><p>古い頭蓋骨82個（ペスト30＋メアリー・ローズ号52）vs 現代。頭蓋冠の高さ80mm→95mm。<em>would appear（推量）</em>。</p><div class="tags"><span class="utag">(2)</span><span class="utag">(3)</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>考察①</span></div><div class="para-b">
+      <div class="theme">大型化≠知能向上</div><p>ロック博士『知能増加のせい?』→<em>but 早計</em>。脳の大きさは<u>体に対する相対値</u>で意味を持つ（大きさ絶対値ではない）。</p><div class="tags"><span class="utag">(4)</span><span class="utag">(5)</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>考察②</span></div><div class="para-b">
+      <div class="theme">顎の縮小は食生活由来</div><p>顔の際立ちの減少＝<u>加工食で噛まなくなった</u>結果。ヌビア人も同じ変化。<em>顔の縮小は説明できるが知能増加は説明しにくい（while）</em>。</p><div class="tags"><span class="utag">(6)</span><span class="utag">(7)</span><span class="utag">(8)</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>結論</span></div><div class="para-b">
+      <div class="theme">今は答えられない</div><p>中世人に知能テストは不可能＝<u>故人のデータは集められない</u>。だが問い自体は興味深い（科学記事）。</p><div class="tags"><span class="utag">(9)</span><span class="utag">(10)</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">問1〜5へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">設問 前半 ― 問1〜問5<span class="sub">空所(問1・4)、態度(問2)、内容一致(問3・5)。各カードに<b>解答プロセス</b>を付けた。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問6〜10へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">設問 後半 ― 問6〜問10<span class="sub">否定(問6)、理由(問7・9)、接続(問8)、筆者の目的(問10)。『何が根拠か』を必ず指させるように。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 問1〜5</button><span class="sp"></span><button class="btnp" data-go="4">全訳へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全25文）。番号①②③…は本文の文の順番に対応。<b>赤字</b>が設問に直結する箇所。各段落の下に設問の根拠をまとめた。</span></h1>
+  <div class="rule"></div><div class="tr-sec"><b>第1段落</b>｜導入 ― 頭蓋骨は600〜700年で大きくなった　<span class="qbadge">(1)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私たちは頭が「膨らんで」きているようだ。少なくとも、より大きくはなっている。</div></div><div class="jpline"><div class="n">②</div><div class="s">『英国歯科ジャーナル』に発表されたある研究が、現代人の頭蓋骨と、2組のより古い頭蓋骨との比較研究を行った。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>彼らは予期しない結果に行き着いた</em>。すなわち、人間の頭蓋骨の形は、現代の標本と中世の標本の間の6〜700年で、かなり大きく変化していたのである。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第1段落</div><ul><li><b>(1) They came to some unexpected results</b>「彼らは予期しない結果に至った」＝<u>空所1の正解＝3</u>。<em>直後のコロン以下（頭蓋骨がかなり変化していた）が『予期しない結果』の中身</em>。前文の『比較研究を行った』を受け、その結果を紹介する流れ。<span class="qbadge">(1)</span></li>
+    <li><b>swelled heads</b>「頭が膨らむ」＝<em>比喩（うぬぼれ）と字義（物理的に大きい）をかけた導入</em>。「少なくとも大きくはなっている」と続く。</li>
+    <li><b>a comparative study</b>「比較研究」＝現代人 vs 中世人の頭蓋骨。研究の枠組み。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜データ ― 頭蓋冠の高さが18%以上増加　<span class="qbadge">(2)</span> <span class="qbadge">(3)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>私たちの頭蓋骨、そしておそらく脳は、選択的に大きくなっているように思われる</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">2組の古い頭蓋骨――14世紀半ばのロンドンのペスト犠牲者30個と、1545年のメアリー・ローズ号の難破船から出た52個――が、頭蓋冠の高さ（目から頭頂までの測定値）を含む、いくつかの異なる寸法で測定された。</div></div><div class="jpline"><div class="n">③</div><div class="s">古い頭蓋骨は、頭蓋冠の高さが平均80mmだった。</div></div><div class="jpline"><div class="n">④</div><div class="s">これらは現代の頭蓋骨1組（歯科記録から取った測定値）と比較された。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">現代の頭蓋骨の頭蓋冠の高さの平均は? 95mm――18%以上の増加である。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第2段落</div><ul><li><b>(2) It would appear that</b>「〜のように思われる（が、確実ではない）」＝<u>問2の根拠</u>。<u>問2の正解＝4『人間の頭には変化が生じてきたのではないかと思っている』</u>。<em>would appear that＝断定を避けた推量</em>なので、『驚いた・確信している』ではない。<span class="qbadge">(2)</span></li>
+    <li><b>(3) 82個の頭蓋骨</b>：<u>問3の根拠</u>。30個（ペスト）＋52個（メアリー・ローズ号）＝82個。<u>問3の正解＝4『82個の頭蓋骨が調査に使われた』</u>（現代の頭蓋骨と比較）。<span class="qbadge">(3)</span></li>
+    <li><b>a more than 18% increase</b>「18%以上の増加」＝80mm→95mm。<em>問3選択肢1『脳が約20%大きい』は頭蓋冠の高さの話（脳ではない）で不適</em>。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜考察① ― 大型化＝知能向上とは限らない　<span class="qbadge">(4)</span> <span class="qbadge">(5)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">その大きさの増加が何を意味するのかは、また別の問題である。</div></div><div class="jpline"><div class="n">②</div><div class="s">最初の衝動は、それを知能の増加のせいにすることだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">この研究を率いたピーター・ロック博士は確かに、大きさの増加は知的能力の増加を反映しているのかもしれない、と示唆している。<em>しかし、この考えは少し早すぎるようだ</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">第一に、それは『脳の大きさが知的能力に直接関係する』というよくある誤解に陥っている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">これは何度も誤りだと証明されてきた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">一般に、種を越えて見ると、知的能力は絶対的な脳の大きさではなく、体の大きさに対する相対的な脳の大きさに関係する。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">種の内部では、個体が持つ脳の大きさは知能に予測可能な影響を及ぼさないように見える。ただし、脳を異常に大きくしたり小さくしたりする特定の脳疾患は例外である。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">平均的な人間が何世紀にもわたって大きさも身長も増してきたことを考えると、測定された（頭蓋骨の）増加は、単にこの全体的な変化を反映しているだけかもしれないし、あるいは、現代の先進国の人間と、歴史上の他の人類の大半とを比べたときの、栄養状態の大きな違いを反映しているだけかもしれない。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第3段落</div><ul><li><b>(4) but this seems a little premature</b>「しかし、これは少し早すぎるようだ」＝<u>設問(4)の正解＝2</u>。<em>ロック博士の『知能増加のせい』という考えに対し、but で『時期尚早（結論を急ぎすぎ）』とブレーキ</em>。続く文で『よくある誤解』と否定される。<span class="qbadge">(4)</span></li>
+    <li><b>(5) 問5の根拠＝第3段落第6文</b>：<u>問5の正解＝3『知能は体の大きさと脳の大きさの両方で決まる』</u>。<em>mental capacity relates to the brain size relative to body size（知能は体に対する相対的な脳の大きさに関係）</em>＝体と脳の両方が関わる。<span class="qbadge">(5)</span></li>
+    <li><b>a common misconception that brain size directly relates to mental capacity</b>「脳の大きさが知能に直結するという誤解」＝この段落の核心。<u>大型化≠知能向上</u>。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜考察② ― 顎の縮小は食生活の変化による　<span class="qbadge">(6)</span> <span class="qbadge">(7)</span> <span class="qbadge">(8)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">とはいえ、この変化はより深く見るに値するものである。</div></div><div class="jpline"><div class="n">②</div><div class="s">頭蓋冠の高さの増加は、研究者が現代と中世の頭蓋骨の間に見出した唯一の違いではなく、単に最も劇的な違いにすぎない。</div></div><div class="jpline"><div class="n">③</div><div class="s">中世の頭蓋骨では顔の特徴がより際立っており、これは、より噛む必要の少ない、より加工された柔らかい食物への食生活の変化の結果かもしれない。</div></div><div class="jpline"><div class="n">④</div><div class="s">興味深いことに、同様の一連の変化（頭蓋冠の高さの増加、顔の特徴の際立ちの減少）が、紀元前12000年から紀元1500年にわたる一連のヌビア人の頭蓋骨を測定したときにも認められた。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">両方の特徴における変化は、ヌビア人の、より噛むこと（咀嚼）を必要としない食物への食生活の変化に起因するとされ、したがって、顎の活動を支えるのに使われる筋肉や骨の発達が少なくなったのであって、知的能力の増加によるものではなかった。</div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>しかしながら</em>、あまり発達していない顎や顎の筋肉組織が、より小さく目立たない顔につながる理由を理解するのは容易だが、それがどのようにして知的能力の増加につながるのかを理解するのは、より難しい。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第4段落</div><ul><li><b>(6) 問6＝脳の大きさに影響を与えないもの</b>：<u>問6の正解＝4『食料の製造法』</u>。本文（第3段落）で脳・頭蓋の大きさに影響しうる要因として挙がるのは<em>①脳疾患（第7文）②身長体重の全体的変化・③栄養状態（第8文）</em>。<u>選択肢1・2・3は言及があり、4『食料の製造法』だけが脳の大きさの要因として言及なし＝正解4</u>。（加工食は第4段落で顎・顔の縮小の要因として出るが、脳の大きさの要因ではない）。<span class="qbadge">(6)</span></li>
+    <li><b>(7) 問7＝古代ヌビア人の頭蓋骨が現代人と似ている理由</b>：<u>問7の正解＝2『両者とも食事の種類を変えたから』</u>。<em>ヌビア人も現代人も、より噛まない（加工された）食物への変化で顎が縮小</em>＝同じ食生活変化。<span class="qbadge">(7)</span></li>
+    <li><b>(8) However（空所4）</b>：<u>問8の正解＝『However』ではなく、空所4に入るのは選択肢の接続語</u>。前『顎の縮小は食生活由来（知能ではない）』↔後『顔の縮小は説明できるが、知能増加は説明しにくい』＝<em>逆接。ただし選択肢は while/when/since/as</em>。<u>問8の正解＝1 while（〜する一方で）</u>で、『顔の縮小は分かりやすい一方、知能増加は分かりにくい』の対比。<span class="qbadge">(8)</span></li></ul></div><div class="tr-sec"><b>第5段落</b>｜結論 ― 知能テストはできないが問いは興味深い　<span class="qbadge">(9)</span> <span class="qbadge">(10)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">この種の研究が投げかける疑問の多くは、<em>現時点では答えられない</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">中世の頭蓋骨の持ち主たちに一連の知能テストを実施するために、過去に戻る方法はないのだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">とはいえ、その疑問自体は興味をそそるものであり、古代と現代の両方のデータをより多く集めるにつれて、私たちは思っているよりも多くの答えを見つけるかもしれない――そしてもちろん、さらに興味深い疑問も。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠｜第5段落</div><ul><li><b>(9) not currently answerable の理由</b>：<u>問9の正解＝3『調査対象となる人全員のデータを集めるのは不可能なため』</u>。<em>直後の文『中世の頭蓋骨の持ち主に知能テストを実施するため過去に戻る方法はない』＝故人の知能は測りようがない</em>。<span class="qbadge">(9)</span></li>
+    <li><b>(10) 筆者が書いた目的</b>：<u>問10の正解＝2『読者に新たな知識を与えるため』</u>。<em>頭蓋骨の変化とその意味（脳の大きさ≠知能）という知見を伝える科学記事</em>。納得させる・ショック・励ましが主眼ではない。<span class="qbadge">(10)</span></li>
+    <li><b>the questions themselves are intriguing</b>「疑問自体が興味深い」＝答えは出ないが問いには価値がある、という締め。</li></ul></div><div class="pnav"><button class="btns" data-go="3">← 問6〜10</button><span class="sp"></span><button class="btnp" data-go="5">総まとめへ →</button></div></section><section class="panel" id="p5">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定して潰す。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">設問</th><th style="width:12%">解答</th><th>根拠</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1</td><td><b>3</b></td><td>直後のコロン＝予期しない結果の中身</td></tr>
+      <tr><td class="cond">問2</td><td><b>4</b></td><td>would appear＝控えめな推量（確信・驚きでない）</td></tr>
+      <tr><td class="cond">問3</td><td><b>4</b></td><td>30＋52＝82個が調査に使われた</td></tr>
+      <tr><td class="cond">問4</td><td><b>2</b></td><td>but this seems a little premature（早計だ）</td></tr>
+      <tr><td class="cond">問5</td><td><b>3</b></td><td>知能＝体に対する相対的な脳の大きさ</td></tr>
+      <tr><td class="cond">問6</td><td><b>4</b></td><td>食料の製造法は脳の大きさの要因として本文に言及なし</td></tr>
+      <tr><td class="cond">問7</td><td><b>2</b></td><td>両者とも食事の種類を変えた（噛む必要の減少）</td></tr>
+      <tr><td class="cond">問8</td><td><b>1</b></td><td>while（easy↔less easy の対比）</td></tr>
+      <tr><td class="cond">問9</td><td><b>3</b></td><td>故人（中世人）の知能は測れない＝全員のデータ不可</td></tr>
+      <tr><td class="cond">問10</td><td><b>2</b></td><td>科学記事＝読者に新たな知識を与える</td></tr>
+    </tbody>
+  </table>
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>空所（文・接続）で落とした（問1・4・8）</b><p>問1＝<em>直後のコロンが答えの中身</em>、問4＝<em>but で『早計』とブレーキ</em>、問8＝<em>easy↔less easy の対比で while</em>。<u>前後の論理の向き</u>で決める。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>内容一致・理由で落とした（問3・5・6・7・9）</b><p><em>数値・因果を本文で確認</em>。82個(問3)／相対的な脳の大きさ(問5)／食料の製造法は脳の要因として言及なし(問6)／食生活の変化(問7)／故人は測れない(問9)。<u>『脳の大きさ』と『頭蓋骨全体』のすり替え</u>に注意。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>態度・目的で落とした（問2・10）</b><p>問2＝<em>would appear that＝控えめな推量</em>（『確信』『驚き』ではない）。問10＝<em>科学記事＝新たな知識を与える</em>（説得・煽り・励ましでない）。<u>表現の強さ・文章のジャンル</u>で判断。</p></div></div>
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    この英文は<strong>「大きさの増加≠知能の向上」</strong>という否定の論理が一本通っていました。科学系の評論は<u>①提示された事実 ②素朴な解釈 ③それを否定する証拠</u>の三段を追うのが最短。空所は論理の向き、内容一致は数値と因果、態度は表現の強さ――型どおりに追えば安定して取れます。</div>
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="4">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は成蹊大学2025年英語（大問5）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問1〜問5：グループAB ===== */
+{id:"(1)", grp:"AB", type:"空所補充（文）", lbl:"空所 (1)", en:"A study … ran a comparative study …. ( 1 ): the shape of the human skull has changed considerably",
+ ask:"空所(1)に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"The data was collected over a period of five years（データは5年かけて集められた）", ok:false},{t:"They expected to learn about the evolution of human teeth（歯の進化を学ぶつもりだった）", ok:false},{t:"They came to some unexpected results（予期しない結果に至った）", ok:true},{t:"However, scientists were unable to agree on the findings（科学者は結果で合意できなかった）", ok:false}],
+ steps:[
+   {t:"空所直後のコロンに注目", d:"空所の直後がコロン（:）で、<b>『頭蓋骨の形が6〜700年でかなり変化していた』</b>と続く。コロンは<u>直前を具体的に言い換える</u>合図。"},
+   {t:"『何を言い換えているか』を考える", d:"コロン以下＝<em>思いがけない発見</em>。空所は<b>『予期しない結果に至った』</b>＝その発見を予告する文。"},
+   {t:"他を消す", d:"1（5年かけて収集）4（合意できず）は後続と噛み合わない。2（歯の進化を学ぶつもり）は本文の主題（頭蓋骨の形）とずれる。<b>3</b>が自然。"}],
+ ev:{q:'<span class="h">They came to some unexpected results</span>: the shape of the human skull has changed considerably', jp:"「彼らは予期しない結果に至った。すなわち、頭蓋骨の形がかなり変化していた」。コロンが結果の中身を示す。"},
+ co:[{c:"nav",l:"コロン（:）の働き",h:"コロンは<b>直前の内容を具体化・言い換える</b>。空所＝コロン以下（頭蓋骨の変化）を予告する『予期しない結果』。"}],
+ sol:[{m:"x",n:"1",t:"『5年かけて収集』は後続と無関係。"},{m:"x",n:"2",t:"『歯の進化』は主題（頭蓋骨の形）とずれる。"},{m:"o",n:"3",t:"正解。コロン以下の『予期しない発見』を予告。"},{m:"x",n:"4",t:"『合意できず』は後続の断定と矛盾。"}]},
+
+{id:"(2)", grp:"AB", type:"表現の解釈", lbl:"下線部(2) It would appear that", en:"(2)It would appear that our skulls, and most likely our brains, are getting selectively bigger.",
+ ask:"下線部(2) It would appear that の表現によれば、科学者たちの反応はどのようなものか。もっとも適切なものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"脳の大きさがどのように変化したかについて確信を持っている。", ok:false},{t:"人間の頭蓋骨に変化が生じたことを発見して驚いた。", ok:false},{t:"人間の頭蓋骨と脳に変化が生じた原因について意見が一致している。", ok:false},{t:"人間の頭には変化が生じてきたのではないかと思っている。", ok:true}],
+ steps:[
+   {t:"would appear that の含みを掴む", d:"<b>It would appear that ~＝『〜のように思われる』</b>。<em>would＋appear で断定を避けた控えめな推量</em>。「〜だと思われるが、確実ではない」。"},
+   {t:"科学者の態度に置き換える", d:"控えめな推量＝<u>『変化が生じたのではないかと思っている』</u>（確信でも驚きでもない）。"},
+   {t:"他を消す", d:"1『確信を持っている』は断定で逆、2『驚いた』は感情の記述で本文にない、3『原因で意見一致』は本文になし。<b>4</b>が would appear の控えめさに一致。"}],
+ ev:{q:'<span class="h">It would appear that</span> our skulls, and most likely our brains, are getting selectively bigger.', jp:"「私たちの頭蓋骨、そしておそらく脳は、選択的に大きくなっているように思われる」。would appear＝控えめな推量。"},
+ co:[{c:"gold",l:"would appear that",h:"<b>『〜のように思われる（が確実でない）』</b>。断定を避けた表現。<u>『確信』『驚き』『意見一致』ではない</u>。"}],
+ sol:[{m:"x",n:"1",t:"『確信』は断定で、would appear の控えめさと逆。"},{m:"x",n:"2",t:"『驚いた』という感情は本文にない。"},{m:"x",n:"3",t:"『原因で意見一致』は本文になし。"},{m:"o",n:"4",t:"正解。『変化が生じたのではと思っている』＝控えめな推量。"}]},
+
+{id:"(3)", grp:"AB", type:"内容一致", lbl:"設問 (3)", en:"本文の内容と一致するものを 1〜4 から選べ。",
+ ask:"本文の内容と一致するものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"現在の人間の脳は、過去と比べ約20%大きい。", ok:false},{t:"三つの異なる世紀からの頭蓋骨を比較した。", ok:false},{t:"科学者たちは、頭蓋骨の寸法を測定した。", ok:true},{t:"82個の頭蓋骨が調査に使われた。", ok:false}],
+ note:"※旺文社解答は 4。本問は『82個』の一致が根拠（30＋52＝82）。以下は解答に合わせて解説する。",
+ steps:[
+   {t:"数値を本文で確認", d:"古い頭蓋骨は<b>ロンドンのペスト犠牲者30個＋メアリー・ローズ号52個＝82個</b>。これらが現代の頭蓋骨と比較された。"},
+   {t:"選択肢と照合", d:"<b>『82個の頭蓋骨が調査に使われた』</b>＝本文の数値に一致。"},
+   {t:"紛らわしい選択肢を消す", d:"1『脳が約20%大きい』は<u>頭蓋冠の高さの18%増</u>であって『脳』ではない。2『3つの異なる世紀』は不正確（14世紀・16世紀・現代など）。3『寸法を測定した』も事実だが、旺文社解答は数値の一致する4。"}],
+ ev:{q:'thirty from London plague victims of the mid-14th century and another fifty-two from the wreck of the Mary Rose', jp:"「14世紀半ばのロンドンのペスト犠牲者30個と、メアリー・ローズ号の52個」＝合計82個。"},
+ co:[{c:"nav",l:"数値の一致で決める",h:"30＋52＝<b>82個</b>。<u>問3は『82個が調査に使われた』が旺文社解答</u>。選択肢1の『脳が20%』は頭蓋冠の高さ(18%)のすり替え。"}],
+ sol:[{m:"x",n:"1",t:"18%増は『頭蓋冠の高さ』で、脳が20%ではない。"},{m:"x",n:"2",t:"『三つの異なる世紀』は不正確。"},{m:"x",n:"3",t:"寸法測定は事実だが、旺文社解答は数値の一致する4。"},{m:"o",n:"4",t:"正解（旺文社）。30＋52＝82個が調査に使われた。"}]},
+
+{id:"(4)", grp:"AB", type:"空所補充（つなぎ）", lbl:"空所 (3)〔設問(4)〕", en:"the increase in size may reflect an increase in mental capacity, ( 4 ).",
+ ask:"空所（本文中・設問(4)）に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"which is to be expected（それは予想されることだ）", ok:false},{t:"but this seems a little premature（しかしこれは少し早すぎるようだ）", ok:true},{t:"and led to organised social structures（そして組織的な社会構造につながった）", ok:false},{t:"challenging current theories about the brain（脳に関する現在の理論に異議を唱えて）", ok:false}],
+ steps:[
+   {t:"前後の論理を掴む", d:"前：ロック博士が<em>『大きさの増加は知能の増加を反映するかも』</em>と示唆。空所後：<b>『第一に、それはよくある誤解に陥っている』</b>と<u>その考えを否定</u>していく。"},
+   {t:"逆接・ブレーキを探す", d:"『知能増加のせい』という考えに対し、次文以降で否定するので、空所は<b>『しかし、これは少し早すぎる（時期尚早）』</b>＝ブレーキ。"},
+   {t:"他を消す", d:"1『予想される』3『社会構造につながった』は否定の流れに合わない。4『現在の理論に異議』は主語がずれる。<b>2</b>が『但し書き→否定』の流れに一致。"}],
+ ev:{q:'the increase in size may reflect an increase in mental capacity, <span class="h">but this seems a little premature</span>. Firstly, it falls to a common misconception', jp:"「知能の増加を反映するのかも。しかしこれは早計だ。第一に、それはよくある誤解に陥っている」。"},
+ co:[{c:"nav",l:"but＋premature",h:"<b>premature＝時期尚早・早計</b>。ロック説に but でブレーキをかけ、次文から『誤解だ』と論駁する流れ。"}],
+ sol:[{m:"x",n:"1",t:"『予想される』では、後続の否定と噛み合わない。"},{m:"o",n:"2",t:"正解。but this seems premature（早計だ）でブレーキ。"},{m:"x",n:"3",t:"『社会構造につながった』は文脈外。"},{m:"x",n:"4",t:"『現在の理論に異議』は主語・論理がずれる。"}]},
+
+{id:"(5)", grp:"AB", type:"内容一致", lbl:"設問 (5)", en:"本文に書かれているものを 1〜4 から選べ。",
+ ask:"本文に書かれているものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"体が大きい動物のほうが、体が小さな動物より知能が高い。", ok:false},{t:"体が小さな動物のほうが、体が大きい動物より知能が高い。", ok:false},{t:"知能は体の大きさと脳の大きさの両方で決まる。", ok:true},{t:"どんな種の動物にも、大変知能の高い個体がある割合で存在する。", ok:false}],
+ steps:[
+   {t:"根拠の一文を探す", d:"第3段落：<b>『知能は、絶対的な脳の大きさではなく、体の大きさに対する相対的な脳の大きさに関係する』</b>。"},
+   {t:"選択肢に結ぶ", d:"『体に対する相対的な脳の大きさ』＝<u>体の大きさと脳の大きさの両方が関わる</u>＝3。"},
+   {t:"他を消す", d:"1『体が大きいほど知能が高い』2『体が小さいほど知能が高い』は<em>単純な大小の話で不正確</em>。4『どの種にも高知能個体が一定割合』は本文になし。"}],
+ ev:{q:'mental capacity relates to <span class="h">the brain size relative to body size</span>, not brain size absolute', jp:"「知能は、絶対的な脳の大きさではなく、体に対する相対的な脳の大きさに関係する」＝体と脳の両方が関わる。"},
+ co:[{c:"gold",l:"相対的な脳の大きさ",h:"<b>brain size relative to body size（体に対する相対的な脳の大きさ）</b>が知能に関係。<u>体と脳の『両方』</u>＝選択肢3。"}],
+ sol:[{m:"x",n:"1",t:"『体が大きいほど知能が高い』は単純化で不正確。"},{m:"x",n:"2",t:"『体が小さいほど』も不正確。"},{m:"o",n:"3",t:"正解。体の大きさと脳の大きさの両方（相対的な脳の大きさ）で決まる。"},{m:"x",n:"4",t:"『どの種にも高知能個体が一定割合』は本文になし。"}]},
+
+/* ===== 問6〜問10：グループCD ===== */
+{id:"(6)", grp:"CD", type:"内容一致（否定）", lbl:"設問 (6)", en:"人間の脳の大きさに影響を与えないものを 1〜4 から選べ。",
+ ask:"人間の脳の大きさに影響を与え ない ものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"ある種の疾病", ok:false},{t:"栄養価の高い食べ物", ok:false},{t:"身長と体重の変化", ok:false},{t:"食料の製造法", ok:true}],
+ steps:[
+   {t:"『脳の大きさに影響するもの』を本文で拾う", d:"第3段落。<b>①特定の脳疾患（specific brain diseases → abnormally large/small brains）＝第7文</b>、<b>②身長体重の全体的変化（larger change）／③栄養状態（nutritional status）＝第8文</b>が、（測定された）脳・頭蓋の大きさに関わる要因として挙がる。"},
+   {t:"選択肢を本文と照合", d:"1（疾病）＝第7文に言及、2（栄養価の高い食べ物＝栄養状態）・3（身長と体重の変化）＝第8文に言及。<u>いずれも脳の大きさに影響しうる要因として本文にある</u>。"},
+   {t:"『影響しないもの』を選ぶ", d:"<b>4『食料の製造法』</b>は、脳の大きさに影響する要因として<u>本文に言及がない</u>（加工食は第4段落で『顎・顔の縮小』の要因として出るが、脳の大きさの要因としては挙げられていない）。→ これが『影響を与えないもの』＝4。"}],
+ ev:{q:'specific brain diseases … abnormally large or small brains … this larger change, or … the very different <span class="h">nutritional status</span>', jp:"脳・頭蓋の大きさに関わるのは、脳疾患・全体的な体格変化（身長体重）・栄養状態。食料の製造法は脳の大きさの要因としては挙げられていない。"},
+ co:[{c:"verm",l:"否定問題の詰め",h:"疾病(1)＝第7文、身長体重(3)・栄養食(2)＝第8文に<u>脳の大きさの要因として言及あり</u>。<b>食料の製造法(4)は脳の大きさの要因としては本文になし</b>＝答え。"}],
+ sol:[{m:"x",n:"1",t:"ある種の疾病（脳疾患）は第3段落第7文に言及。影響しうる。"},{m:"x",n:"2",t:"栄養価の高い食べ物（栄養状態）は第8文に言及。影響しうる。"},{m:"x",n:"3",t:"身長と体重の変化（全体的な体格変化）は第8文に言及。影響しうる。"},{m:"o",n:"4",t:"正解（＝影響しない）。食料の製造法は脳の大きさの要因として本文に言及なし。"}]},
+
+{id:"(7)", grp:"CD", type:"理由", lbl:"設問 (7)", en:"現代人の頭蓋骨が古代ヌビア人の頭蓋骨と似ているのはなぜか。",
+ ask:"現代の人間の頭蓋骨が古代ヌビア人の頭蓋骨と似ているのはなぜか。もっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"古代ヌビア人の知能は現代の人間とほぼ変わらないから", ok:false},{t:"両者とも食事の種類を変えたから", ok:true},{t:"古代ヌビア人は現代の人間の祖先だから", ok:false},{t:"両者とも14〜15世紀の人間ほど食べ物を噛む習慣がないから", ok:false}],
+ steps:[
+   {t:"共通する変化を掴む", d:"現代人もヌビア人も<b>同じ変化（頭蓋冠の高さ増加＋顔の際立ちの減少）</b>を示した。"},
+   {t:"その原因を本文で確認", d:"どちらの変化も<em>『より噛む必要のない（加工された・柔らかい）食物への食生活の変化』</em>に起因する、と本文が述べる。"},
+   {t:"選ぶ", d:"<b>『両者とも食事の種類を変えたから』</b>＝2。1（知能が同じ）3（祖先だから）は本文の因果でない。4は<em>『14〜15世紀の人間ほど噛まない』と時代を限定するのが不正確</em>（噛む必要の減少が要因だが、比較対象の限定が誤り）。"}],
+ ev:{q:'The changes in both features were attributed to the Nubians\' <span class="h">change in diet to food which required less mastication</span>', jp:"「両方の変化は、ヌビア人の、より噛む必要のない食物への食生活の変化に起因するとされた」＝食事の変化が原因。"},
+ co:[{c:"nav",l:"共通原因＝食生活の変化",h:"現代人・ヌビア人ともに<b>『より噛まない食物』への変化</b>で顎が縮小し顔が変わった。だから頭蓋骨が似る＝食事の種類を変えたから。"}],
+ sol:[{m:"x",n:"1",t:"知能が同じだから、ではない。"},{m:"o",n:"2",t:"正解。両者とも食事の種類を変えた（噛む必要の減少）。"},{m:"x",n:"3",t:"『祖先だから』は本文の因果でない。"},{m:"x",n:"4",t:"『14〜15世紀の人間ほど噛まない』は比較対象の限定が不正確。"}]},
+
+{id:"(8)", grp:"CD", type:"空所補充（接続）", lbl:"空所 (4)〔設問(8)〕", en:"( 4 ) it is easy to see why less developed jaws … it is less easy to see how it would lead to increased mental capacity.",
+ ask:"空所（本文中の4つめの空所・設問(8)）に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"while（〜する一方で）", ok:true},{t:"when（〜するとき）", ok:false},{t:"since（〜だから）", ok:false},{t:"as（〜なので）", ok:false}],
+ steps:[
+   {t:"空所がつなぐ2つを見る", d:"前半：<em>顎の縮小→顔が小さくなる理由は『理解しやすい（easy to see）』</em>／後半：<em>それが『知能増加につながる』理由は『理解しにくい（less easy to see）』</em>。"},
+   {t:"論理関係を判定", d:"『Aは容易だが、Bは難しい』＝<b>対比・譲歩</b>。<u>while＝『〜する一方で』</u>が対比を表す。"},
+   {t:"他を消す", d:"when（時）since/as（理由）は<em>この対比を表さない</em>。『易しい一方で難しい』の対比＝<b>while</b>。"}],
+ ev:{q:'<span class="h">while</span> it is easy to see why less developed jaws … would lead to smaller … faces, it is less easy to see how it would lead to increased mental capacity', jp:"「顎の縮小が顔を小さくする理由は分かりやすい一方、それが知能増加につながる理由は分かりにくい」。"},
+ co:[{c:"nav",l:"対比の while",h:"<b>while＝『〜する一方で』（対比）</b>。easy to see ↔ less easy to see の対比をつなぐ。時・理由の when/since/as は不適。"}],
+ sol:[{m:"o",n:"1",t:"正解。while（〜する一方で）で easy ↔ less easy を対比。"},{m:"x",n:"2",t:"when（時）では対比にならない。"},{m:"x",n:"3",t:"since（理由）は文意に合わない。"},{m:"x",n:"4",t:"as（理由・とき）も対比を表さない。"}]},
+
+{id:"(9)", grp:"CD", type:"理由", lbl:"下線部(5) not currently answerable", en:"Many of the questions raised … are (5)not currently answerable.",
+ ask:"下線部(5) not currently answerable の理由としてもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"人間の知能を測定することはできないから", ok:false},{t:"頭蓋骨の大きさについてのデータは十分でないから", ok:false},{t:"調査対象となる人全員のデータを集めるのは不可能なため", ok:true},{t:"科学的な探究にそぐわないため", ok:false}],
+ steps:[
+   {t:"直後の文を読む", d:"下線部の直後：<b>『中世の頭蓋骨の持ち主に一連の知能テストを実施するために、過去に戻る方法はない』</b>。"},
+   {t:"理由を特定", d:"故人（中世の人々）の知能は<u>もう測れない＝調査対象の全員のデータは集められない</u>。だから今は答えられない。"},
+   {t:"他を消す", d:"1『知能を測定できない』は一般化しすぎ（現代人は測れる）、2『頭蓋骨のデータ不足』は逆（データは集めている）、4『科学的探究にそぐわない』は本文になし。<b>3</b>が直後の理由に一致。"}],
+ ev:{q:'There is no way we can go back in time to administer a battery of intelligence tests to <span class="h">the owners of the medieval skulls</span>', jp:"「中世の頭蓋骨の持ち主に知能テストを実施するため過去に戻る方法はない」＝故人のデータは集められない。"},
+ co:[{c:"nav",l:"直後が理由",h:"<b>過去に戻って中世人に知能テストはできない</b>＝<u>調査対象（故人を含む全員）のデータは集められない</u>。だから今は答えが出ない。"}],
+ sol:[{m:"x",n:"1",t:"知能測定一般ができない、は言いすぎ（現代人は測れる）。"},{m:"x",n:"2",t:"頭蓋骨のデータは集めている。逆。"},{m:"o",n:"3",t:"正解。故人を含む全員のデータは集められないため。"},{m:"x",n:"4",t:"『科学的探究にそぐわない』は本文になし。"}]},
+
+{id:"(10)", grp:"CD", type:"筆者の目的", lbl:"設問 (10)", en:"本文の筆者がこれを書いた目的は何か。",
+ ask:"本文の筆者がこれを書いた目的としてもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"読者を納得させるため", ok:false},{t:"読者に新たな知識を与えるため", ok:true},{t:"読者にショックを与えるため", ok:false},{t:"読者を励ますため", ok:false}],
+ steps:[
+   {t:"文章のジャンルを掴む", d:"本文は<b>科学記事</b>。頭蓋骨が大きくなった事実と、その意味（脳の大きさ≠知能／食生活の影響）を<u>解説・紹介</u>している。"},
+   {t:"目的を判定", d:"新しい研究の知見を<b>読者に伝える＝新たな知識を与える</b>のが目的。主張を押し付けたり、感情を煽ったりしていない。"},
+   {t:"他を消す", d:"1『納得させる』（特定の主張の説得ではない）3『ショックを与える』（煽情的でない）4『励ます』（応援ではない）はいずれも本文の性質と合わない。<b>2</b>。"}],
+ ev:{q:'the questions themselves are intriguing, and as we gather more data … <span class="h">we may find more answers than we think</span>', jp:"「疑問自体が興味深く、データが集まればより多くの答えが見つかるかも」＝知見を伝え探究を促す科学記事。"},
+ co:[{c:"nav",l:"科学記事の目的",h:"事実と解釈を<b>紹介・解説</b>する＝<u>新たな知識を与える</u>。説得・煽り・励ましではない。"}],
+ sol:[{m:"x",n:"1",t:"特定の主張を『納得させる』文章ではない。"},{m:"o",n:"2",t:"正解。研究の知見を伝える＝新たな知識を与える。"},{m:"x",n:"3",t:"煽情的な『ショック』狙いではない。"},{m:"x",n:"4",t:"『励ます』応援でもない。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+</script>
+</body>
+</html>
