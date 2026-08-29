@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜明治大学 法学部 2022 大問2（仕事とアイデンティティ）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">明</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>明治大学 法学部 2022 ／ 大問2</span></div>
+    <div class="top-meta">Why we define ourselves by our jobs<br>下線部言い換え・空所・内容一致／全12問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>ARGUMENT</small>論の展開</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>問1 ア–ウ</small>下線部 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>問1 エ–カ・問2</small>下線部後半・空所</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>問3 A–D</small>内容一致</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>「仕事＝自分」は、いつ・なぜ<br>危険になるのか。<br>この一本の論の流れで、12問が解ける。</h1>
+    <p>中世では姓がそのまま職業だった――そんな導入から、現代人が「自分を職業で定義してしまう」ことの危険（enmeshment＝過剰な絡み合い）を論じ、パンデミックを機に「仕事は人生の一片にすぎない」と捉え直す好機を説く評論。<em>①仕事＝アイデンティティの起源→②その代償（自己価値まで仕事任せ）→③脱却の好機（死の意識・天職観からの転換）</em>という一本の流れを掴めば、下線部の言い換えも空所も内容一致も、すべて同じ論の中に位置づけられる。</p>
+    <div class="thesis"><b>一貫する論の流れ：</b>仕事は昔も今もアイデンティティの核（起源・two-way street）。だが自分を仕事に飲み込ませる（enmeshment）と、自己価値が仕事の成否に直結し、失業＝アイデンティティ危機に。パンデミックは<u>「自分＝何をするか」を切り離す好機</u>。必要なのは「各人に天職がある」という文化的観念からの転換。</div>
+    <div class="stats">
+      <div class="stat"><b>16</b><span>段落構成</span></div>
+      <div class="stat"><b>12</b><span>設問</span></div>
+      <div class="stat"><b>6</b><span>下線部言い換え</span></div>
+      <div class="stat"><b>4</b><span>内容一致</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:24%">タイプ</th><th style="width:26%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">下線部の言い換え</td><td>問1(ア)(イ)(ウ)(エ)(オ)(カ)</td><td><b>直後・前後の言い換えを指す</b>。available＝空いている(ア)／two-way＝両面(イ)／at own expense＝犠牲(ウ)／shift away from＝変化前(エ)／calling＝天職(オ)／knock-on＝連鎖(カ)。<u>字義の罠</u>に注意。</td></tr>
+      <tr><td class="cond">空所補充</td><td>問2(a)(b)</td><td>(a)＝仕事の流れで What do you do?。(b)＝『不快』↔『夢の仕事』の矛盾で Ironically。</td></tr>
+      <tr><td class="cond">内容一致</td><td>問3(A)(B)(C)(D)</td><td><b>根拠段落を特定</b>。自己裁量ほどWLB悪化(A)／同一視への警告(B)／地位のみで自己評価するな(C)／人生のもろさ→重要を問う(D)。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。この解説の核心は<u>「なぜ他の選択肢がダメか」</u>――正解の根拠だけでなく、<strong>各誤答が『字義の罠／本文と逆／論点ずれ／本文にない』のどれで外れるか</strong>まで示しています。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 16段落の流れと設問の在りか<span class="sub">「起源→現代→問題提起→歴史→代償→危機→皮肉→希望→主張→結論」。長い評論だが、論は一直線。設問がどこに刺さるかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">姓は昔『職業』だった</div><p>ミュラー＝粉屋、スミス＝鍛冶屋。中世では<em>仕事がそのまま人のアイデンティティ</em>だった。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>現代</span></div><div class="para-b">
+      <div class="theme">今も仕事は自己の一部</div><p>初対面で最初に交わす質問＝<em>What do you do?（ご職業は?）</em>。仕事は今もアイデンティティの核。</p><div class="tags"><span class="utag">(a)</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>問題提起</span></div><div class="para-b">
+      <div class="theme">仕事と自己はなぜ絡む?</div><p>職業で人を見るのは自然。だが<em>『自分を職業で定義』してしまう</em>のは問題では?という問い。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>歴史</span></div><div class="para-b">
+      <div class="theme">昔は仕事を選べなかった</div><p>世代的（父が大工なら子も）、または<em>その時空いている仕事に就く</em>だけ。</p><div class="tags"><span class="utag">(ア)</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>変化</span></div><div class="para-b">
+      <div class="theme">教育の普及で指標に</div><p>職業が多様化し所得層が生まれた。職業＝地位の指標。<em>判断する側とされたい側の両面通行</em>。</p><div class="tags"><span class="utag">(イ)</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>転換</span></div><div class="para-b">
+      <div class="theme">仕事に飲まれる代償</div><p>仕事にアイデンティティを飲み込ませる＝<em>自分を犠牲に</em>。enmeshment（過剰な絡み合い）。</p><div class="tags"><span class="utag">(ウ)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>具体</span></div><div class="para-b">
+      <div class="theme">自己裁量の職ほど危険</div><p>9-5で区切らない経営職・弁護士・医師ほど、<em>仕事が人生の時間を占める</em>。</p><div class="tags"><span class="utag">(A)</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>帰結</span></div><div class="para-b">
+      <div class="theme">自己価値まで仕事任せ</div><p>仕事が自分を定義し始めると、<em>自己の価値まで仕事に決めさせる</em>。破滅的結果へ。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>危機①</span></div><div class="para-b">
+      <div class="theme">成功も失敗も自己に直結</div><p>自己価値をキャリアに縛ると、<em>失業＝アイデンティティ危機</em>に。</p><div class="tags"><span class="utag">(C)</span></div></div></div><div class="para"><div class="para-n"><b>10</b><span>危機②</span></div><div class="para-b">
+      <div class="theme">うつ・依存に</div><p>レイオフ・不況・買収で仕事が変わると、<em>存在に関わる問題→うつ・不安・依存</em>。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>11</b><span>皮肉</span></div><div class="para-b">
+      <div class="theme">苦しむ人ほど『夢の仕事』</div><p>仕事に定義されて不快な人が、同時に<em>『夢の仕事』とも言う（＝皮肉）</em>。</p><div class="tags"><span class="utag">(b)</span></div></div></div><div class="para"><div class="para-n"><b>12</b><span>希望</span></div><div class="para-b">
+      <div class="theme">パンデミックが好機</div><p>コロナで生活が混乱→<em>『本当に重要なもの』を見つめ直す</em>好機。趣味・家族の絆。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>13</b><span>論拠</span></div><div class="para-b">
+      <div class="theme">死の意識が問いを促す</div><p>死すべき存在のはかなさに気づくと、<em>何が人生を価値あるものにするか</em>を問う。</p><div class="tags"><span class="utag">(D)</span></div></div></div><div class="para"><div class="para-n"><b>14</b><span>位置づけ</span></div><div class="para-b">
+      <div class="theme">仕事は人生の一片</div><p>キャリアはなお視野にあるが、<em>仕事は人生のパズルの一片にすぎない</em>という転換点。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>15</b><span>主張</span></div><div class="para-b">
+      <div class="theme">『天職』観からの転換</div><p>必要なのは<em>『各人に天職があり、それを見つけるのが人生の目標』という考えからの文化的転換</em>。</p><div class="tags"><span class="utag">(エ)</span><span class="utag">(オ)</span></div></div></div><div class="para"><div class="para-n"><b>16</b><span>結論</span></div><div class="para-b">
+      <div class="theme">子への問いが将来に連鎖</div><p>『大きくなったら何になりたい?』という問いが、<em>大人の自己認識に連鎖的に影響</em>する。</p><div class="tags"><span class="utag">(カ)</span><span class="utag">(B)</span></div></div></div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">論の展開へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Argument Flow</div>
+  <h1 class="head">論の展開 ― 「仕事＝自分」の光と影<span class="sub">この評論は『仕事＝アイデンティティ』を①起源→②代償→③脱却の3幕で論じる。各設問がどの幕に属するかを掴むと、内容一致が一気に解ける。</span></h1>
+  <div class="rule"></div>
+  <div class="para"><div class="para-n"><b>1</b><span>起源</span></div><div class="para-b">
+    <div class="theme">仕事はなぜアイデンティティになったか（第1〜5段落）</div>
+    <p>中世は<strong>姓＝職業</strong>（粉屋・鍛冶屋）。現代も初対面で<strong>What do you do?</strong>と尋ねる〔問2(a)〕。教育の普及で職業が多様化し、<strong>職業＝社会的地位の指標</strong>に。しかもそれは<strong>両面通行</strong>――他者が職業で判断し、本人もそう見られたい〔問1(イ)〕。昔は<strong>空いている仕事に就くだけ</strong>だった〔問1(ア)〕。</p>
+    <div class="tags"><span class="utag">(ア)</span><span class="utag">(イ)</span><span class="utag">(a)</span></div></div></div>
+  <div class="para"><div class="para-n"><b>2</b><span>代償</span></div><div class="para-b">
+    <div class="theme">「自分＝仕事」の危険（第6〜11段落）</div>
+    <p>仕事にアイデンティティを<strong>飲み込ませると自分を犠牲にする</strong>〔問1(ウ)〕。とくに<strong>自己裁量の職ほどWLBが崩れる</strong>〔問3(A)〕。やがて<strong>自己の価値まで仕事が決め</strong>、失業＝<strong>アイデンティティ危機・うつ・依存</strong>に〔問3(C)〕。しかも苦しむ人ほど<strong>『夢の仕事』と言う皮肉</strong>〔問2(b)〕。</p>
+    <div class="tags"><span class="utag">(ウ)</span><span class="utag">(A)</span><span class="utag">(C)</span><span class="utag">(b)</span></div></div></div>
+  <div class="para"><div class="para-n"><b>3</b><span>脱却</span></div><div class="para-b">
+    <div class="theme">「仕事は人生の一片」への転換（第12〜16段落）</div>
+    <p>パンデミックは<strong>『自分＝何をするか』を切り離す好機</strong>。人生のはかなさに気づくと<strong>『何が本当に重要か』を問う</strong>〔問3(D)〕。必要なのは<strong>『各人に天職がある』という観念からの文化的転換</strong>〔問1(エ)(オ)〕。子への『何になりたい?』が大人の自己認識に<strong>連鎖</strong>する〔問1(カ)〕。筆者は<strong>仕事との完全な同一視に警告</strong>〔問3(B)〕。</p>
+    <div class="tags"><span class="utag">(エ)</span><span class="utag">(オ)</span><span class="utag">(カ)</span><span class="utag">(D)</span><span class="utag">(B)</span></div></div></div>
+  <div class="box gold"><span class="lab">誤答を見抜く4つの型</span>
+    この英文の誤答選択肢は、ほぼ次の4型で外れる。<strong>①字義の罠</strong>（available＝『好機』、expense＝『経費』、calling＝『依頼』、knock＝『音』と誤読）／<strong>②本文と逆</strong>（『打ち込むほど真価が分かる』等）／<strong>③論点ずれ</strong>（企業の組織論・リモートワーク等、別の話にすり替え）／<strong>④本文にない</strong>。<u>正解を選ぶより、この4型で誤答を消す</u>のが速い。</div>
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問1(ア)〜(ウ)へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問1 下線部言い換え(ア)(イ)(ウ)<span class="sub">直後・前後の言い換えを指すのが基本。各カードで<b>正解の根拠</b>と<b>誤答が外れる型</b>を確認。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 論の展開</button><span class="sp"></span><button class="btnp" data-go="4">(エ)〜(カ)・問2へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問1(エ)(オ)(カ)＋問2(a)(b)<span class="sub">下線部言い換えの後半と、空所補充2問。字義の罠（calling＝天職／knock-on＝連鎖）に注意。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問1(ア)〜(ウ)</button><span class="sp"></span><button class="btnp" data-go="5">問3(A)〜(D)へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問3 内容一致(A)(B)(C)(D)<span class="sub">根拠段落を特定するのが第一。誤答は『本文と逆／論点ずれ／本文にない』で消える。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← (エ)〜(カ)・問2</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全16段落・46文）。番号①②③…は各段落内の文の順番。<b>赤字</b>が設問に直結する箇所。各段落の下に設問の根拠をまとめた。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">和訳の方針</span>
+    長い評論なので、<strong>『どの段落が、論のどの幕（起源／代償／脱却）か』</strong>を小見出しで示した。設問の根拠は各段落末にまとめてある。<em>下線部の言い換えは、必ず本文中の別の一文が根拠になっている</em>――その対応を意識して読んでほしい。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― 姓は昔『職業』だった</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ドイツとスイスで最も多い姓はミュラーで、一方ウクライナではメルニクである。どちらも「粉屋（製粉業者）」を意味する語だ。</div></div><div class="jpline"><div class="n">②</div><div class="s">スロバキアで最も一般的な姓はヴァルガで、これは「靴屋」を意味する語である。そしてイギリス、オーストラリア、ニュージーランド、カナダ、アメリカでは、それはスミス――blacksmith（鍛冶屋）、silversmith（銀細工師）、locksmith（錠前屋）、gunsmith（銃工）のような――である。</div></div><div class="jpline"><div class="n">③</div><div class="s">これらの名前は中世にまで遡る。当時は、人の仕事がその人を特徴づけるものと見なされ、それが文字どおりその人のアイデンティティになったのである。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li><b>職業＝アイデンティティの起源</b>：中世では<em>姓がそのまま職業</em>だった（粉屋・靴屋・鍛冶屋）。<u>「仕事＝その人を定義するもの」という本文全体のテーマの導入</u>。</li>
+    <li><b>a defining characteristic</b>「特徴づけるもの」＝この語は本文で繰り返し登場するキーワード。define（定義する）が全体を貫く。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜現代 ― 今も仕事はアイデンティティの一部　<span class="qbadge">(a)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">今日、私たちの仕事が名前を決めることはないが、それでも仕事はしばしばアイデンティティの大きな部分になる。</div></div><div class="jpline"><div class="n">②</div><div class="s">結局のところ、新しい知り合いと最初に交わす質問の1つは、「<em>（ a ）</em>?」なのだ。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li><b>(a) 空所</b>：<u>問2(a)の正解＝3『What do you do?（ご職業は?）』</u>。<em>初対面で交わす質問＝職業を尋ねる</em>＝仕事がアイデンティティの一部である証拠。<span class="qbadge">(a)</span></li>
+    <li><b>How do you do?（初めまして）</b>は挨拶で『職業を尋ねる』文脈に合わない。<u>What do you do?＝ご職業は?</u>が正解。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜問題提起 ― 仕事と自己はなぜ絡み合ったか</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">多くの点で、人の職業をその人が何者かを定義する要素と見なすのは自然に感じられる。</div></div><div class="jpline"><div class="n">②</div><div class="s">それは、その人の価値観・興味・経歴への手がかりになり得る（あるいは単に、気まずいカクテルパーティーで見知らぬ者同士が時間をつぶす助けにもなる）。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし、私たちの多くは、自分自身を実際に自分の職業で定義するようになってしまった。</div></div><div class="jpline"><div class="n">④</div><div class="s">仕事はどのようにしてアイデンティティとこれほど絡み合うようになったのか――そして、自己の認識を職業的な生活から切り離すには、もう手遅れなのだろうか?</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li><b>問題提起の段落</b>：職業で人を見るのは自然だが、<em>『自分自身を職業で定義してしまう』</em>ことの是非を問う。<u>この英文の中心的な問い</u>。</li>
+    <li><b>define ourselves by our occupations</b>「自分を職業で定義する」＝本文のキーフレーズ。以降、その危険性が論じられる。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜歴史 ― 昔は仕事を選べなかった　<span class="qbadge">(ア)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">歴史的に、ほとんどの人は自分の仕事を選ぶことができなかった、とオンタリオ州のウィルフリッド・ローリエ大学の心理学教授アン・ウィルソンは言う。</div></div><div class="jpline"><div class="n">②</div><div class="s">「それはたいてい世代的なものでした――父親が大工なら、あなたも大工になる」と彼女は言う。</div></div><div class="jpline"><div class="n">③</div><div class="s">「あるいは、その時に<em>手に入る機会に基づいて仕事に就く</em>だけでした」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li><b>(ア) take a job based on the opportunities available</b>「手に入る機会に基づいて仕事に就く」＝<u>問1(ア)の正解＝3『pick a job among vacancies that are open at the time（その時に空いている求人の中から仕事を選ぶ）』</u>。<em>available＝その時に手に入る＝空いている</em>。<span class="qbadge">(ア)</span></li>
+    <li><b>第4段落と第5段落の対比</b>：第4段落＝<em>昔は選べなかった（機会次第）</em> ↔ 第5段落＝<em>教育の普及で職業が多様化</em>。(ア)は『自分の意志で選ぶ』のではなく『空いている仕事に就く』。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜変化 ― 教育の普及で職業がアイデンティティの指標に　<span class="qbadge">(イ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">しかし、この一世紀にわたる教育へのアクセスの増加は、より多様な仕事の出現、ひいてはより多くの所得層を生み出した。</div></div><div class="jpline"><div class="n">②</div><div class="s">そのため、仕事はより微妙な形でアイデンティティの重要な指標となった。</div></div><div class="jpline"><div class="n">③</div><div class="s">誰かが自分は外科医だと言うと、あなたは一般に、その人が高い教育と高い収入を持っていると思い込む――この2つは、社会におけるその人の地位を決定づけ、その後あなたがその人をどう判断するかに影響する基準である。</div></div><div class="jpline"><div class="n">④</div><div class="s">もちろん、<em>それは双方向（両面通行）である</em>。多くの人はこの判断を歓迎する。なぜなら彼らは、自分の職業上の肩書きが暗に示す富や業績に自分を結びつけたいと望むからだ。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">「それは特に『教育を受けたエリート』の間で当てはまります」とウィルソンは言う。「ある種の仕事と階級を持つ人々にとって、それはしばしば、自分が自分をどう定義し、他者が自分をどう定義するか、になるのです」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第5段落</div><ul><li><b>(イ) it's a two-way street</b>「それは双方向（両面通行）だ」＝<u>問1(イ)の正解＝4『we evaluate others by their professions and a lot of them enjoy being thus evaluated（私たちは他者を職業で評価し、その多くはそう評価されることを楽しむ）』</u>。<em>他者が職業で判断する（一方向）＋本人もそう判断されることを望む（もう一方向）＝双方向</em>。<span class="qbadge">(イ)</span></li>
+    <li><b>you generally assume they have a good education … they desire to associate themselves with</b>：<u>(イ)の根拠</u>。<em>「他者が職業で判断」と「本人が職業で判断されることを望む」の両面</em>＝選択肢4。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜転換 ― 仕事に飲み込まれる代償　<span class="qbadge">(ウ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">しかし、<em>仕事に自分のアイデンティティを飲み込ませてしまう人々は、自分自身を犠牲にしてそうしているのかもしれない</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">人が自分のキャリアに不釣り合いなほど多くの時間とエネルギーを注ぎ込むと、それは「エンメッシュメント（過剰な絡み合い）」と呼ばれる心理状態につながり得る、とウィルソンは説明する。そこでは、仕事と私生活の境界が曖昧になる。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第6段落</div><ul><li><b>(ウ) those who do let their jobs consume their identities may be doing so at their own expense</b>「仕事にアイデンティティを飲み込ませる人は、自分自身を犠牲にしているかもしれない」＝<u>問1(ウ)の正解＝1『there can be negative consequences to tying yourself too tightly to your career（自分をキャリアに強く結びつけすぎると否定的な結果があり得る）』</u>。<em>at one's own expense＝自分自身を犠牲にして</em>。<span class="qbadge">(ウ)</span></li>
+    <li><b>enmeshment（過剰な絡み合い）</b>：<em>仕事と私生活の境界が曖昧になる心理状態</em>。この段落以降のキーワード。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜具体 ― 自分で時間を決める職ほど危険　<span class="qbadge">(A)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「これは特に、比較的自分で決められる仕事、つまり9時に出勤して5時に退勤するわけではない仕事の人に起こりがちです」とウィルソンは言う。</div></div><div class="jpline"><div class="n">②</div><div class="s">高い権限を持つ経営職、弁護士、医師、起業家、学者、その他自分で勤務時間を決める人々は、「結局、仕事に人生の多くの時間――あるいはほとんどの時間――を占めさせてしまうことになりかねません」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第7段落</div><ul><li><b>(A) 問3(A)の根拠</b>：<u>問3(A)の正解＝1『Company executives and professionals who can choose their working hours may find their work-life balance getting worse（勤務時間を選べる企業重役や専門職は、ワークライフバランスが悪化するかもしれない）』</u>。<em>自分で時間を決める職ほど仕事が生活を占める＝WLBが崩れる</em>。<span class="qbadge">(A)</span></li>
+    <li><b>self-determined … not clocking in at nine and out at five</b>「9-5で区切らない自己裁量の仕事」＝<em>経営職・弁護士・医師など</em>。この裁量の高さが逆に危険。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜帰結 ― 自己の価値まで仕事が決める</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">自分の仕事に深く絡み合い、それが自分を定義し始めると、あなたはそれに自分自身の価値まで決めさせ始めるかもしれない。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは破滅的な結果をもたらし得る。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第8段落</div><ul><li><b>let it determine your own value</b>「仕事に自己の価値まで決めさせる」＝<em>エンメッシュメントの帰結</em>。次段落の『自己評価』の議論（問3C）につながる。</li>
+    <li><b>disastrous effects</b>「破滅的な結果」＝次の段落以降で具体化（アイデンティティの危機・うつ等）。</li></ul></div><div class="tr-sec"><b>第9段落</b>｜危機① ― 成功も失敗も自己価値に直結　<span class="qbadge">(C)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「もし自分の価値をキャリアに結びつけると、あなたが経験する成功と失敗が、直接あなたの自己価値に影響します」とウィルソンは言う。</div></div><div class="jpline"><div class="n">②</div><div class="s">「そして、私たちはキャリアが生涯続くとは限らない社会に生きているので、もし転職したり失業したりすれば、それはアイデンティティの危機にもなり得るのです」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第9段落</div><ul><li><b>(C) 問3(C)の根拠（第8〜10段落）</b>：<u>問3(C)の正解＝1『A person's self-evaluation should not be based solely on the social status of his or her occupation（人の自己評価は、その職業の社会的地位のみに基づくべきではない）』</u>。<em>自己価値を仕事だけに結びつけると、失業＝アイデンティティ危機になる</em>という警告に一致。<span class="qbadge">(C)</span></li>
+    <li><b>tie your self-worth to your career</b>「自己価値をキャリアに結びつける」＝危険。<u>solely（〜のみに）基づくべきでない</u>という選択肢1のキーワードに対応。</li></ul></div><div class="tr-sec"><b>第10段落</b>｜危機② ― キャリアの挫折がうつ・依存に</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">そして、過剰な絡み合いは、私たちが個人的に自分をどう感じるかを脅かすだけではない。</div></div><div class="jpline"><div class="n">②</div><div class="s">高圧的な仕事に就く人々のメンタルヘルスに焦点を当てた、ボストンを拠点とする施設アジマス・サイコロジカルの創設者ジャンナ・コレツは、自己価値をキャリアに結びつけることが、キャリア上の障害を、乗り越えるのがかなり困難なものに変え得ると言う。</div></div><div class="jpline"><div class="n">③</div><div class="s">「必ず、何かが起こります」と彼女は言う。「レイオフや不況が起こり、会社が買収され、突然あなたの仕事はかつてのものではなくなる。</div></div><div class="jpline"><div class="n">④</div><div class="s">それは人々にとって本当に存在に関わる問題になり、しかも対処法が乏しい。なぜならそれは驚天動地の出来事だからです。だからそれは、うつ、不安、さらには薬物・アルコールの乱用にまでなるのです」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第10段落</div><ul><li><b>self-worth ↔ career hurdle</b>：<em>自己価値をキャリアに結びつけると、キャリアの障害（レイオフ・不況・買収）が『存在に関わる問題』になる</em>。うつ・不安・依存へ。問3(C)の裏づけ。</li>
+    <li><b>earth-shattering</b>「驚天動地の」＝注記あり。<em>キャリアの挫折が人生全体を揺るがす</em>ほど深刻になる。</li></ul></div><div class="tr-sec"><b>第11段落</b>｜皮肉 ― 苦しむ人ほど『夢の仕事』と言う　<span class="qbadge">(b)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">しかし、問題が起こるまで、キャリア中心のアイデンティティに陥ってしまったほとんどの人は、それが起きていることにすら気づかない。</div></div><div class="jpline"><div class="n">②</div><div class="s">「私たちは、自分がどれだけ仕事によって定義されているかに不快感を抱く人々と関わっています」とコレツは言う。「<em>（ b ）</em>」、彼女はこう付け加える。そうした人々のほとんどは、自分は『夢の仕事』、あるいは大好きなことをしているとも言うだろう、と。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第11段落</div><ul><li><b>(b) 空所</b>：<u>問2(b)の正解＝2『Ironically（皮肉なことに）』</u>。<em>『仕事に定義されて不快』な人が、同時に『夢の仕事をしている』と言う＝矛盾・皮肉</em>。<span class="qbadge">(b)</span></li>
+    <li><b>逆接の関係</b>：<em>『不快に思う』↔『夢の仕事と言う』の食い違い</em>＝Ironically。Hopefully/Justly/Naturally は両者の矛盾を表さない。</li></ul></div><div class="tr-sec"><b>第12段落</b>｜希望 ― パンデミックが再評価の好機</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">しかし、私たちには、自分が何者かを自分が何をするかから切り離す、またとない機会があるかもしれない。</div></div><div class="jpline"><div class="n">②</div><div class="s">パンデミックがもたらした、私たちの生活のあらゆる要素――特に仕事――の強制的な混乱は、多くの人に、自分にとって本当に重要なものは何かを見つめ直させた。</div></div><div class="jpline"><div class="n">③</div><div class="s">新しい趣味を始めた人もいれば、家族や友人との絆を深めた人もいる。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第12段落</div><ul><li><b>a rare opportunity to disassociate who we are with what we do</b>「自分が何者かを、何をするかから切り離すまたとない機会」＝<u>後半の転換点</u>。<em>パンデミック＝再評価の契機</em>（問3Dにつながる）。</li>
+    <li><b>evaluate what's actually important</b>「本当に重要なものを見つめ直す」＝以降の主題。第13段落・問3(D)の伏線。</li></ul></div><div class="tr-sec"><b>第13段落</b>｜論拠 ― 死の意識が『何が大切か』を問わせる　<span class="qbadge">(D)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「私たちが、自分の死すべき存在がはかなく一時的なものであり、悲劇がほとんど、あるいはまったく警告なしに襲い得ることを思い出させる経験に直面すると、私たちは何が人生を価値あるものにするのかを見つめ直そうとする傾向があります」と、ノースダコタ州立大学の心理学教授クレイ・ラウトリッジは書いている。</div></div><div class="jpline"><div class="n">②</div><div class="s">ラウトリッジは、アメリカの成人が自分の人生にどのように意味を見出したかに関する最近の研究の共著者の一人である。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第13段落</div><ul><li><b>(D) 問3(D)の根拠（第13段落第1文）</b>：<u>問3(D)の正解＝4『When we are reminded that our lives are fragile and temporary by such experiences as a pandemic, we ask ourselves what is really important（パンデミックのような経験で人生がもろく一時的だと気づかされると、本当に重要なのは何かを自問する）』</u>。<em>mortal existence is transient（死すべき存在ははかない）→ 何が大切かを問う</em>。<span class="qbadge">(D)</span></li>
+    <li><b>mortal existence is transient</b>「死すべき存在ははかない」＝<u>fragile and temporary（もろく一時的）</u>の言い換え＝選択肢4。</li></ul></div><div class="tr-sec"><b>第14段落</b>｜位置づけ ― 仕事は人生の『一片』に</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">だから、もちろん私たちのキャリアは依然として（人生の）視野の中にあるとはいえ、私たちは、仕事が人生の重要なパズルのピースの1つにすぎなくなる、そんな転換点にいるのかもしれない。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第14段落</div><ul><li><b>one significant puzzle piece of our lives</b>「人生の重要なパズルの一片にすぎない」＝<em>仕事を『全て』でなく『一部』に位置づけ直す</em>。本文の主張の核。</li></ul></div><div class="tr-sec"><b>第15段落</b>｜主張 ― 『天職』という考えからの文化的転換　<span class="qbadge">(エ)</span> <span class="qbadge">(オ)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ウィルソンは、大好きな仕事をすることは悪いことではないし、生計を立てるための仕事を自分が何者かの重要な一部と考えることも悪くない、と指摘する。</div></div><div class="jpline"><div class="n">②</div><div class="s">しかし彼女は、人々が主に――あるいは専ら――仕事によって定義されるシステムから離れるには、問題があると気づくことや、パンデミックを機に優先順位を組み替えること以上のものが必要だと言う。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>それはまた、各人には天職があり、人生の目標はそれを見つけることであるべきだ、という考えからの文化的な転換をも必要とするだろう</em>。</div></div><div class="jpline"><div class="n">④</div><div class="s">「私たちはしばしば、人々が不満を感じるように仕向けています。もし完璧な仕事に自分を見出せなければ、その人はどこかで失敗したことになる、と」と彼女は言う。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第15段落</div><ul><li><b>(エ) It will also require a cultural shift</b>「それはまた文化的な転換を必要とする」＝<u>問1(エ)の正解＝3『We should change the idea that everybody has a job that perfectly fits him or her（誰もが自分に完璧に合う仕事を持つ、という考えを変えるべきだ）』</u>。<em>shiftの『変化前』＝直後のthe idea（各人に天職があり、それを見つけるのが人生の目標）</em>。<span class="qbadge">(エ)</span></li>
+    <li><b>(オ) a professional calling</b>「天職」＝<u>問1(オ)の正解＝4『a career which a person is destined for（その人が運命づけられた職業）』</u>。<em>calling＝天職・使命＝運命づけられた職</em>。<span class="qbadge">(オ)</span></li></ul></div><div class="tr-sec"><b>第16段落</b>｜結論 ― 子どもへの問いかけが将来に影響　<span class="qbadge">(カ)</span> <span class="qbadge">(B)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">その考え方を変えることは、人々が実際に労働力に加わるずっと前から始める必要があるかもしれない。</div></div><div class="jpline"><div class="n">②</div><div class="s">研究によれば、「天職」を見つけよというプレッシャーは、学生に自分を見失わせ、憂うつにさせる。</div></div><div class="jpline"><div class="n">③</div><div class="s">幼い子どもでさえ、自分が選ぶ職業が自分が何者になるかの一部だ、というメッセージを受け取る。今日の子どもたちがどれほど頻繁に「大きくなったら何になりたい?」と尋ねられるかを考えてみてほしい。</div></div><div class="jpline"><div class="n">④</div><div class="s">子どもたち――特に幼い女の子――とキャリアについて話すことは、彼女たちが自分の未来にある無数の可能性に気づく助けになり得る。しかしウィルソンは、若者に何になりたいかを尋ねることには<em>連鎖的な影響</em>があるかもしれないと言う。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">「これ（＝子ども時代）が、私たちが子どもに人生の進路を決めさせたい時期だ、という考えは、大人になったときに私たちが結局どの程度、自分のアイデンティティを仕事に強く結びつけてしまうかに影響を与えるかもしれません」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第16段落</div><ul><li><b>(カ) knock-on effects</b>「連鎖的な影響」＝<u>問1(カ)の正解＝1『chain reactions（連鎖反応）』</u>。<em>最終段落最終文の内容（子ども時代の問いかけ→大人のアイデンティティ形成）から判断</em>。<span class="qbadge">(カ)</span></li>
+    <li><b>(B) 問3(B)の根拠（第16段落第2文ほか）</b>：<u>問3(B)の正解＝4『The writer warns that it is not wise to regard ourselves as completely at one with our job（筆者は、自分を職業と完全に同一視するのは賢明でないと警告する）』</u>。<em>第12段落以降で繰り返し述べられ、第16段落第2文が最も明確</em>。<span class="qbadge">(B)</span></li></ul></div><div class="pnav"><button class="btns" data-go="5">← 問3(A)〜(D)</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした型を特定して潰す。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:16%">設問</th><th style="width:12%">解答</th><th>根拠・急所</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1(ア)</td><td><b>3</b></td><td>available＝その時空いている求人から選ぶ</td></tr>
+      <tr><td class="cond">問1(イ)</td><td><b>4</b></td><td>two-way＝評価する側＋そう評価されたい側の両面</td></tr>
+      <tr><td class="cond">問1(ウ)</td><td><b>1</b></td><td>at own expense＝自分を犠牲に＝否定的結果</td></tr>
+      <tr><td class="cond">問1(エ)</td><td><b>3</b></td><td>shift away from＝『完璧に合う仕事』観を変える</td></tr>
+      <tr><td class="cond">問1(オ)</td><td><b>4</b></td><td>calling＝天職＝運命づけられた職</td></tr>
+      <tr><td class="cond">問1(カ)</td><td><b>1</b></td><td>knock-on＝連鎖反応（chain reactions）</td></tr>
+      <tr><td class="cond">問2(a)</td><td><b>3</b></td><td>What do you do?（ご職業は?）</td></tr>
+      <tr><td class="cond">問2(b)</td><td><b>2</b></td><td>Ironically（『不快』↔『夢の仕事』の矛盾）</td></tr>
+      <tr><td class="cond">問3(A)</td><td><b>1</b></td><td>自己裁量の職ほどWLBが悪化</td></tr>
+      <tr><td class="cond">問3(B)</td><td><b>4</b></td><td>仕事との完全な同一視への警告</td></tr>
+      <tr><td class="cond">問3(C)</td><td><b>1</b></td><td>自己評価を職業の地位のみに基づけるな</td></tr>
+      <tr><td class="cond">問3(D)</td><td><b>4</b></td><td>人生のもろさ→本当に重要なものを問う</td></tr>
+    </tbody>
+  </table>
+  <h2 class="sec">復習動線 ― 落とした型から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>下線部言い換えで落とした（問1）</b><p><em>下線部の答えは必ず本文の別の一文にある</em>。available＝空いている(ア)／two-way＝両面(イ)／at own expense＝犠牲(ウ)／shift away from の後が変化前(エ)／calling＝天職(オ)／knock-on＝連鎖(カ)。<u>字義の罠（expense＝経費、calling＝依頼、knock＝音）に釣られない</u>。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>空所補充で落とした（問2）</b><p>(a)＝<em>『仕事＝アイデンティティ』の流れ→What do you do?</em>。(b)＝<em>『不快』↔『夢の仕事』の矛盾→Ironically</em>。<u>前後の内容の『向き（順接か逆接か・矛盾か）』</u>で決める。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>内容一致で落とした（問3）</b><p><em>まず根拠段落を特定</em>：(A)第7段落／(B)第16段落第2文ほか／(C)第8〜10段落／(D)第13段落第1文。誤答は<u>『本文と逆』（打ち込むほど真価が分かる等）『論点ずれ』（企業の組織論・リモート等）『本文にない』</u>で消す。</p></div></div>
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    この英文は<strong>『仕事＝自分』の起源→代償→脱却</strong>という一本の論で貫かれていました。長文評論は<u>①論の幕（3幕構成）を掴む ②下線部は本文の別の一文に言い換えを探す ③内容一致は根拠段落を特定してから誤答を4型で消す</u>――この順で解けば、設問数が多くても崩れません。特に<strong>「なぜ他がダメか」を言語化する訓練</strong>が、内容一致の精度を一段上げます。</div>
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は明治大学法学部2022年英語（大問2）の学習用解説です。設問・出典（Kate Morgan, BBC.com）の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問1(ア)〜(ウ)：グループAB ===== */
+{id:"問1(ア)", grp:"AB", type:"下線部の言い換え", lbl:"下線部(ア) take a job based on the opportunities available", en:"you'd just (ア)take a job based on the opportunities available",
+ ask:"下線部(ア)の内容にもっとも近いものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"consult with your parents and let them decide the job that would suit you（親に相談し、自分に合う仕事を決めてもらう）", ok:false},{t:"decide your job when you are sure it is a once-in-a-lifetime offer（一生に一度の好機だと確信したら仕事を決める）", ok:false},{t:"pick a job among vacancies that are open at the time（その時に空いている求人の中から仕事を選ぶ）", ok:true},{t:"think twice before taking a job that is unpopular among elites（エリートに不人気な仕事は就く前によく考える）", ok:false}],
+ steps:[
+   {t:"下線部の語義を分解", d:"<b>based on the opportunities available＝『手に入る（利用可能な）機会に基づいて』</b>。<em>available＝その時に空いている</em>。"},
+   {t:"文脈（第4・5段落の対比）で確認", d:"第4段落＝<u>昔は仕事を選べなかった</u>（世代的、または『空いている仕事に就くだけ』）。<em>自分の意志で選ぶのではなく、その時空いている仕事に就く</em>。"},
+   {t:"言い換えを選ぶ", d:"<b>『その時に空いている求人（vacancies open at the time）の中から選ぶ』</b>＝3。available を『その時に空いている』と正しく捉えている。"}],
+ ev:{q:'you\'d just <span class="h">take a job based on the opportunities available</span>', jp:"「その時に手に入る機会に基づいて仕事に就くだけ」。available＝その時に空いている＝vacancies open at the time。"},
+ co:[{c:"gold",l:"available＝空いている",h:"<b>opportunities available＝その時に利用できる（空いている）機会</b>。自分の適性で選ぶのではなく、空きに応じて就く。"}],
+ sol:[{m:"x",n:"1",t:"『親が決める』は第4段落の別の話（世代的＝父が大工なら…）で、下線部(ア)そのものの意味ではない。available（空いている機会）の要素がない。"},{m:"x",n:"2",t:"『一生に一度の好機だと確信したら』は<u>opportunity を『またとない好機』と読み違えた罠</u>。ここは『その時にある機会』の意味で、特別な好機ではない。"},{m:"o",n:"3",t:"正解。その時に空いている求人の中から選ぶ＝available の正確な言い換え。"},{m:"x",n:"4",t:"『エリートに不人気な仕事はよく考える』は本文に一切なく、下線部と無関係。"}]},
+
+{id:"問1(イ)", grp:"AB", type:"下線部の言い換え", lbl:"下線部(イ) it's a two-way street", en:"(イ)it's a two-way street: many welcome this judgement, because they desire to associate themselves with …",
+ ask:"下線部(イ)の内容にもっとも近いものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"we tend to look down on people who try to understand others through their jobs（職業で他者を理解しようとする人を見下しがちだ）", ok:false},{t:"when we meet people on business, their job is the easiest way to remember who they are（仕事で会う人は、職業が誰かを覚える最も簡単な方法だ）", ok:false},{t:"we are inclined to associate employment with identity, if people introduce themselves with their job title（人が肩書きで自己紹介するなら、雇用をアイデンティティと結びつけがちだ）", ok:false},{t:"we evaluate others by their professions and a lot of them enjoy being thus evaluated（私たちは他者を職業で評価し、その多くはそう評価されることを楽しむ）", ok:true}],
+ steps:[
+   {t:"two-way street の意味を掴む", d:"<b>a two-way street＝『双方向・両面通行』</b>＝<u>片方だけでなく両方向に作用する</u>関係。"},
+   {t:"前後で『2つの方向』を特定", d:"前：<em>you generally assume they have a good education（他者が職業で判断する）</em>／後：<em>they desire to associate themselves with the wealth …（本人もそう判断されることを望む）</em>。＝<u>『判断する側』と『判断されたい側』の両面</u>。"},
+   {t:"言い換えを選ぶ", d:"<b>『他者を職業で評価する（一方向）＋多くの人がそう評価されることを楽しむ（もう一方向）』</b>＝4。両面通行を正確に表す。"}],
+ ev:{q:'you generally assume they have a good education … many welcome this judgement, because <span class="h">they desire to associate themselves with</span> the wealth', jp:"「他者は職業で判断し（一方向）、本人もその判断を歓迎する（もう一方向）」＝双方向。"},
+ co:[{c:"nav",l:"two-way＝両面",h:"<b>『評価する側』と『評価されたい側』の両方向</b>。選択肢4だけが『評価する＋そう評価されるのを楽しむ』の両面を含む。"}],
+ sol:[{m:"x",n:"1",t:"『見下す』は本文と逆。本文はむしろ職業判断を『歓迎する』人が多いと述べる。"},{m:"x",n:"2",t:"『職業は誰かを覚える最も簡単な方法』は<u>一方向（覚える側）だけ</u>で、two-way（双方向）を表さない。"},{m:"x",n:"3",t:"『肩書きで自己紹介するなら結びつけがち』も<u>片方向（結びつける側）のみ</u>。『そう評価されたい』側の視点が欠ける。"},{m:"o",n:"4",t:"正解。『評価する＋そう評価されるのを楽しむ』の両面＝two-way street。"}]},
+
+{id:"問1(ウ)", grp:"AB", type:"下線部の言い換え", lbl:"下線部(ウ) …consume their identities… at their own expense", en:"(ウ)those who do let their jobs consume their identities may be doing so at their own expense",
+ ask:"下線部(ウ)の内容にもっとも近いものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"there can be negative consequences to tying yourself too tightly to your career（自分をキャリアに強く結びつけすぎると否定的な結果があり得る）", ok:true},{t:"your job may alienate you from your friends, but that's the cost you should be prepared to pay for great success（仕事は友人から遠ざけるかもしれないが、大きな成功のために払うべき代償だ）", ok:false},{t:"you should devote everything to your work to avoid wasting your capabilities（能力を無駄にしないため仕事に全てを捧げるべきだ）", ok:false},{t:"you will be asked to cover the costs if you use company resources for private purposes（会社の資源を私用に使えば費用負担を求められる）", ok:false}],
+ steps:[
+   {t:"下線部を分解", d:"<b>let their jobs consume their identities＝仕事にアイデンティティを飲み込ませる</b>／<b>at their own expense＝自分自身を犠牲にして</b>。"},
+   {t:"直後の言い換えを確認", d:"直後：<em>enmeshment（過剰な絡み合い）で仕事と私生活の境界が曖昧になる</em>＝<u>否定的な結果</u>。"},
+   {t:"選ぶ", d:"<b>『キャリアに強く結びつけすぎると否定的な結果があり得る』</b>＝1。at one's own expense（犠牲にして）＝negative consequences。"}],
+ ev:{q:'those who do let their jobs consume their identities may be doing so <span class="h">at their own expense</span>', jp:"「仕事にアイデンティティを飲み込ませる人は、自分自身を犠牲にしているかもしれない」＝否定的な結果があり得る。"},
+ co:[{c:"verm",l:"at one's own expense",h:"<b>『自分自身を犠牲にして』</b>＝マイナスの帰結。『費用を払う』の字義に引きずられない（選択肢4の罠）。"}],
+ sol:[{m:"o",n:"1",t:"正解。キャリアに結びつけすぎる＝否定的な結果があり得る。at one's own expense の正確な言い換え。"},{m:"x",n:"2",t:"『大きな成功のために払うべき代償』＝<u>犠牲を『価値ある投資』と肯定</u>している点が誤り。本文は犠牲を否定的に見ている。"},{m:"x",n:"3",t:"『仕事に全てを捧げるべき』は<u>本文の主張と正反対</u>（本文は捧げすぎの危険を警告）。"},{m:"x",n:"4",t:"『会社の資源を私用に使うと費用負担』は<u>expense を『経費』と字義通り誤読した罠</u>。文脈と無関係。"}]},
+
+/* ===== 問1(エ)(オ)(カ)＋問2(a)(b)：グループCD ===== */
+{id:"問1(エ)", grp:"CD", type:"下線部の言い換え", lbl:"下線部(エ) It will also require a cultural shift", en:"(エ)It will also require a cultural shift away from the idea that each person has a professional calling",
+ ask:"下線部(エ)の内容にもっとも近いものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"Corporate culture needs to change from a top-down to bottom-up model（企業文化をトップダウンからボトムアップへ変える必要がある）", ok:false},{t:"Children should be encouraged to work instead of seeking higher education（子どもは高等教育でなく働くよう促すべきだ）", ok:false},{t:"We should change the idea that everybody has a job that perfectly fits him or her（誰もが自分に完璧に合う仕事を持つ、という考えを変えるべきだ）", ok:true},{t:"People should move out of their offices, and enjoy the freedom of choosing their working locations（オフィスを出て、働く場所を選ぶ自由を楽しむべきだ）", ok:false}],
+ steps:[
+   {t:"shift の『変化前』を特定", d:"<b>a cultural shift away from the idea that ~＝『〜という考えからの文化的転換』</b>。<u>away from の後（the idea 以降）が『変えるべき考え』</u>。"},
+   {t:"『変えるべき考え』を読む", d:"the idea that＝<em>『各人には天職（professional calling）があり、人生の目標はそれを見つけることだ』</em>という考え。"},
+   {t:"言い換えを選ぶ", d:"<b>『誰もが自分に完璧に合う仕事を持つ、という考えを変えるべき』</b>＝3。professional calling＝perfectly fitting job の言い換え。"}],
+ ev:{q:'a cultural shift away from <span class="h">the idea that each person has a professional calling and that the goal of life should be to discover it</span>', jp:"「各人に天職があり、それを見つけるのが人生の目標だ、という考えからの転換」＝この考えを変えるべき。"},
+ co:[{c:"nav",l:"shift away from＝変化前",h:"<b>away from の後が『変えるべき対象』</b>＝『各人に天職があるという考え』＝『完璧に合う仕事を持つという考え』。"}],
+ sol:[{m:"x",n:"1",t:"『トップダウン→ボトムアップ』は<u>企業の組織論の話で、本文のcultural shift（天職観からの転換）とは別物</u>。"},{m:"x",n:"2",t:"『子どもは働くべき（高等教育でなく）』は本文になく、むしろ教育の普及を前向きに扱っている。"},{m:"o",n:"3",t:"正解。『誰もが完璧に合う仕事を持つ』という考えを変える＝professional calling の観念からの転換。"},{m:"x",n:"4",t:"『オフィスを出て働く場所を選ぶ』は<u>リモートワークの話で、cultural shift の中身（天職観）とは無関係</u>。"}]},
+
+{id:"問1(オ)", grp:"CD", type:"下線部の言い換え", lbl:"下線部(オ) a professional calling", en:"the idea that each person has (オ)a professional calling",
+ ask:"下線部(オ)の内容にもっとも近いものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"a realisation that each person has their own way of working（各人に独自の働き方があるという気づき）", ok:false},{t:"a request for professional services（専門的サービスの依頼）", ok:false},{t:"an attraction to a specific company（特定の企業への魅力）", ok:false},{t:"a career which a person is destined for（その人が運命づけられた職業）", ok:true}],
+ steps:[
+   {t:"calling の語義を掴む", d:"<b>calling＝『天職・使命』</b>。<em>神や運命に『呼ばれた』職＝生まれつき定められた職</em>というニュアンス。"},
+   {t:"文脈で確認", d:"『各人に professional calling があり、人生の目標はそれを discover（発見）することだ』＝<u>あらかじめ定まった天職を見つける</u>という発想。"},
+   {t:"選ぶ", d:"<b>『その人が運命づけられた職業（destined for）』</b>＝4。calling＝天職＝運命づけられた職。"}],
+ ev:{q:'each person has <span class="h">a professional calling</span> and that the goal of life should be to discover it', jp:"「各人に天職があり、人生の目標はそれを見つけること」＝運命づけられた職業。"},
+ co:[{c:"gold",l:"calling＝天職",h:"<b>calling＝『天職・使命』（destined for＝運命づけられた）</b>。discover（発見する）と結びつく＝あらかじめ定まった職。"}],
+ sol:[{m:"x",n:"1",t:"『各人に独自の働き方がある気づき』は<u>calling（運命の職）とずれる</u>。『働き方の多様性』の話ではない。"},{m:"x",n:"2",t:"『専門的サービスの依頼』は<u>calling を『呼び出し・依頼』と字義通り誤読した罠</u>。ここは『天職』。"},{m:"x",n:"3",t:"『特定企業への魅力』は本文になく、calling の意味でもない。"},{m:"o",n:"4",t:"正解。運命づけられた職業＝天職＝calling。"}]},
+
+{id:"問1(カ)", grp:"CD", type:"下線部の言い換え", lbl:"下線部(カ) knock-on effects", en:"asking young people what they want to be may have (カ)knock-on effects",
+ ask:"下線部(カ)の内容にもっとも近いものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"chain reactions（連鎖反応）", ok:true},{t:"banging sounds（打ちつける音）", ok:false},{t:"physical impacts（物理的な衝撃）", ok:false},{t:"unexpected success（予期しない成功）", ok:false}],
+ steps:[
+   {t:"knock-on の語義", d:"<b>knock-on effect＝『（ドミノ的な）連鎖的影響』</b>。1つの出来事が次々に影響を及ぼす。"},
+   {t:"最終文で内容を確認", d:"最終段落最終文：<em>子ども時代に進路を決めさせる → 大人になって仕事にアイデンティティを強く結びつける</em>、という<u>後々まで連なる影響</u>。"},
+   {t:"選ぶ", d:"<b>chain reactions（連鎖反応）</b>＝1。"}],
+ ev:{q:'asking young people what they want to be may have <span class="h">knock-on effects</span>. "The idea that this is when we want kids to determine a life course may influence the degree to which, as adults, we end up tying our identity …"', jp:"「若者に何になりたいか尋ねることには連鎖的な影響がある」＝子ども時代の問いかけが大人の自己認識に連鎖する。"},
+ co:[{c:"nav",l:"knock-on＝連鎖",h:"<b>knock-on effect＝連鎖的影響（chain reaction）</b>。knock（打つ）の字義に釣られない。最終文の因果連鎖が根拠。"}],
+ sol:[{m:"o",n:"1",t:"正解。連鎖反応＝次々に影響が連なる（子ども時代→大人の自己認識）。"},{m:"x",n:"2",t:"『打ちつける音』は<u>knock を『ノックの音』と字義通り誤読した罠</u>。"},{m:"x",n:"3",t:"『物理的な衝撃』も<u>knock の物理的イメージに引きずられた誤り</u>。ここは比喩的な『連鎖影響』。"},{m:"x",n:"4",t:"『予期しない成功』は本文の文脈（否定的な連鎖）と方向が逆で無関係。"}]},
+
+{id:"問2(a)", grp:"CD", type:"空所補充（会話）", lbl:"空所 (a)", en:"one of the first questions we tend to exchange with a new acquaintance is, \"( a )?\"",
+ ask:"空所(a)に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"How do you do?（初めまして）", ok:false},{t:"How do you think?（どう考えますか・非文法的）", ok:false},{t:"What do you do?（ご職業は?）", ok:true},{t:"What do you think?（どう思いますか）", ok:false}],
+ steps:[
+   {t:"文脈を掴む", d:"第2段落：<b>『仕事はアイデンティティの大きな部分』→ だから初対面で最初に交わす質問の1つが（a）</b>。<u>職業を尋ねる質問</u>が入る。"},
+   {t:"定型表現を確認", d:"<b>What do you do?＝『お仕事は何ですか（ご職業は?）』</b>という定番の問い。"},
+   {t:"選ぶ", d:"職業を尋ねる＝<b>What do you do?</b>＝3。"}],
+ ev:{q:'our jobs … often become a major part of our identities. After all, one of the first questions we tend to exchange … is, "<span class="h">( a )</span>?"', jp:"「仕事はアイデンティティの一部→初対面で最初に交わす質問」＝What do you do?（ご職業は?）。"},
+ co:[{c:"gold",l:"What do you do?＝ご職業は",h:"<b>What do you do?＝『お仕事は何ですか』</b>。直前の『仕事＝アイデンティティ』の流れに直結。"}],
+ sol:[{m:"x",n:"1",t:"How do you do?（初めまして）は<u>挨拶で、職業を尋ねる文脈に合わない</u>。直後に『?』で職業の話につながらない。"},{m:"x",n:"2",t:"How do you think?は<u>文法的に不自然</u>（正しくは What do you think?）。意味も職業と無関係。"},{m:"o",n:"3",t:"正解。What do you do?＝ご職業は?＝仕事＝アイデンティティの流れに一致。"},{m:"x",n:"4",t:"What do you think?（どう思う?）は<u>意見を尋ねる質問で、職業の話につながらない</u>。"}]},
+
+{id:"問2(b)", grp:"CD", type:"空所補充（つなぎ副詞）", lbl:"空所 (b)", en:"\"We work with people who are uncomfortable with how much they're defined by their job.\" ( b ), … most would also say they're doing their \"dream job\"",
+ ask:"空所(b)に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"Hopefully（願わくは）", ok:false},{t:"Ironically（皮肉なことに）", ok:true},{t:"Justly（正当に）", ok:false},{t:"Naturally（当然ながら）", ok:false}],
+ steps:[
+   {t:"前後の内容を比べる", d:"前：<em>『自分がどれだけ仕事に定義されているかに不快感を抱く』人々</em>／後：<em>その同じ人々のほとんどが『夢の仕事をしている』とも言う</em>。"},
+   {t:"関係を判定", d:"<b>『仕事に定義されて不快』なのに『夢の仕事だと言う』＝矛盾・食い違い</b>。この意外な食い違いを表す副詞は<u>Ironically（皮肉なことに）</u>。"},
+   {t:"選ぶ", d:"<b>Ironically</b>＝2。"}],
+ ev:{q:'people who are uncomfortable with how much they\'re defined by their job. "<span class="h">( b )</span>," … most would also say they\'re doing their "dream job"', jp:"「仕事に定義されて不快な人が、同時に『夢の仕事だ』と言う」＝皮肉なことに（Ironically）。"},
+ co:[{c:"nav",l:"矛盾＝Ironically",h:"<b>『不快』と『夢の仕事』の食い違い</b>＝皮肉。Ironically だけがこの意外な矛盾を表す。"}],
+ sol:[{m:"x",n:"1",t:"Hopefully（願わくは）は<u>期待・希望を表し、矛盾の指摘にならない</u>。"},{m:"o",n:"2",t:"正解。Ironically（皮肉なことに）＝『不快』なのに『夢の仕事』という矛盾を表す。"},{m:"x",n:"3",t:"Justly（正当に）は<u>正当性の話で、ここの食い違いと無関係</u>。"},{m:"x",n:"4",t:"Naturally（当然ながら）は<u>『不快』と『夢の仕事』の矛盾を『当然』とするのは逆で不自然</u>。"}]},
+
+/* ===== 問3(A)〜(D)：グループEF ===== */
+{id:"問3(A)", grp:"EF", type:"内容一致", lbl:"設問(A)", en:"（第6・7段落の内容に一致するもの）",
+ ask:"本文の内容にもっとも近いものを 1〜4 から選べ。（A）", answer:"1", kind:"choice",
+ choices:[{t:"Company executives and professionals who can choose their working hours may find their work-life balance getting worse.（勤務時間を選べる企業重役や専門職は、ワークライフバランスが悪化するかもしれない）", ok:true},{t:"Once you attain a high-powered executive position you can make others work long hours.（高い権限の経営職に就けば、他人を長時間働かせられる）", ok:false},{t:"People in high-powered executive positions often work from home, which enables them to spend longer hours with their families.（経営職は在宅勤務が多く、家族と長く過ごせる）", ok:false},{t:"Remote work has set people free of many old office rules, but there still remains a strong work ethic that binds people to fixed timetables.（リモートワークは古い規則から解放したが、固定時間に縛る労働倫理が残る）", ok:false}],
+ steps:[
+   {t:"根拠段落を特定", d:"第7段落：<b>『自分で勤務時間を決める人（経営職・弁護士・医師など）ほど、仕事に人生の多くの時間を占めさせてしまう』</b>。"},
+   {t:"選択肢に結ぶ", d:"仕事が生活を占める＝<u>ワークライフバランスが悪化する</u>＝1。"},
+   {t:"確認", d:"『勤務時間を選べる（self-determined）』人ほど危険、という本文と一致。"}],
+ ev:{q:'others who set their own hours "can end up letting their jobs fill a lot of — or most of — <span class="h">the time in their lives</span>."', jp:"「自分で勤務時間を決める人は、仕事に人生の多くの時間を占めさせてしまう」＝WLBが悪化しうる。"},
+ co:[{c:"nav",l:"自己裁量ほどWLB悪化",h:"<b>勤務時間を選べる職（経営職・専門職）ほど仕事が生活を侵食</b>＝ワークライフバランスが悪化。選択肢1に一致。"}],
+ sol:[{m:"o",n:"1",t:"正解。勤務時間を選べる人ほど仕事が生活を占める＝WLBが悪化しうる。"},{m:"x",n:"2",t:"『他人を長時間働かせられる』は<u>本文になく、論点がずれる</u>（本文は本人の時間の話）。"},{m:"x",n:"3",t:"『在宅勤務で家族と長く過ごせる』は<u>本文と逆</u>（本文は仕事が生活を侵食すると述べる）。在宅勤務の記述もない。"},{m:"x",n:"4",t:"『固定時間に縛る労働倫理が残る』は<u>本文と逆</u>。本文はむしろ『9-5で区切らない自己裁量の職』の危険を述べる。"}]},
+
+{id:"問3(B)", grp:"EF", type:"内容一致（筆者の主張）", lbl:"設問(B)", en:"（筆者の主張として最も近いもの）",
+ ask:"本文の内容にもっとも近いものを 1〜4 から選べ。（B）", answer:"4", kind:"choice",
+ choices:[{t:"The writer finds it is wonderful to be identified by our occupations, because we don't have to worry about defining ourselves.（筆者は職業で定義されるのは素晴らしいと考える。自分を定義する心配が要らないから）", ok:false},{t:"The writer is surprised how many people actually choose a job that is not financially rewarding.（筆者は、金銭的に報われない仕事を選ぶ人の多さに驚いている）", ok:false},{t:"The writer thinks that if our ancestors were all members of the same profession, we should uphold that tradition.（筆者は、先祖が皆同じ職業なら、その伝統を守るべきだと考える）", ok:false},{t:"The writer warns that it is not wise to regard ourselves as completely at one with our job.（筆者は、自分を職業と完全に同一視するのは賢明でないと警告する）", ok:true}],
+ steps:[
+   {t:"本文全体の主張を掴む", d:"第12段落以降で繰り返し：<b>『自分を仕事と完全に同一視する（enmeshment）のは危険』</b>。第16段落第2文で最も明確（天職探しのプレッシャーが人を見失わせる）。"},
+   {t:"筆者の立場を選ぶ", d:"筆者は<u>『仕事＝自分』の同一視に警告</u>している＝4。"},
+   {t:"確認", d:"『大好きな仕事は悪くない』としつつ、『仕事だけで定義されるシステムからの脱却』を訴える＝完全な同一視への警告。"}],
+ ev:{q:'moving away from a system where people are defined primarily — or exclusively — by their jobs … <span class="h">Research shows that pressure to find "a calling" makes students feel lost and depressed.</span>', jp:"「仕事だけで定義されるシステムからの脱却」「天職探しのプレッシャーが学生を見失わせる」＝完全な同一視への警告。"},
+ co:[{c:"nav",l:"筆者＝同一視に警告",h:"<b>筆者の一貫した主張＝『仕事＝自分』の完全な同一視は賢明でない</b>。ただし『仕事を愛すること自体』は否定していない点に注意。"}],
+ sol:[{m:"x",n:"1",t:"『職業で定義されるのは素晴らしい』は<u>筆者の主張と正反対</u>。筆者は同一視の危険を説く。"},{m:"x",n:"2",t:"『報われない仕事を選ぶ人の多さに驚く』は<u>本文にない論点</u>。"},{m:"x",n:"3",t:"『先祖の職業の伝統を守るべき』は<u>本文にない</u>。中世の姓の話は導入で、伝統維持の主張ではない。"},{m:"o",n:"4",t:"正解。自分を職業と完全に同一視するのは賢明でない、という筆者の警告に一致。"}]},
+
+{id:"問3(C)", grp:"EF", type:"内容一致", lbl:"設問(C)", en:"（第8〜10段落の内容に一致するもの）",
+ ask:"本文の内容にもっとも近いものを 1〜4 から選べ。（C）", answer:"1", kind:"choice",
+ choices:[{t:"A person's self-evaluation should not be based solely on the social status of his or her occupation.（人の自己評価は、その職業の社会的地位のみに基づくべきではない）", ok:true},{t:"People who decide their own work hours rarely forget how valuable their personal lives are.（自分で勤務時間を決める人は、私生活の価値を忘れることはめったにない）", ok:false},{t:"The more you devote yourself to your job, the better you understand your true value.（仕事に打ち込むほど、自分の真の価値がよく分かる）", ok:false},{t:"You should re-evaluate everything in financial terms and discard outdated work habits.（すべてを金銭的に再評価し、時代遅れの習慣を捨てるべきだ）", ok:false}],
+ steps:[
+   {t:"根拠段落を特定", d:"第8〜10段落：<b>『自己価値をキャリアに結びつけると、成功・失敗が自己価値に直結し、失業＝アイデンティティ危機になる』</b>。"},
+   {t:"筆者の含意を掴む", d:"＝<u>自己評価を職業（の地位）だけに基づけるべきではない</u>、という警告＝1。"},
+   {t:"確認", d:"solely（〜のみに）がキーワード。仕事の地位『だけ』で自己評価するのは危険、と本文が述べる。"}],
+ ev:{q:'"If you tie your self-worth to your career, the successes and failures you experience will <span class="h">directly affect your self-worth</span>," … it can also become an identity crisis.', jp:"「自己価値をキャリアに結びつけると、成功・失敗が自己価値に直結し、アイデンティティ危機になる」＝職業の地位のみで自己評価すべきでない。"},
+ co:[{c:"nav",l:"solely（のみ）がカギ",h:"<b>自己評価を職業の社会的地位『のみ』に基づけるのは危険</b>。第8〜10段落の『自己価値をキャリアに縛る危険』に一致。"}],
+ sol:[{m:"o",n:"1",t:"正解。自己評価を職業の社会的地位のみに基づけるべきでない＝第8〜10段落の趣旨。"},{m:"x",n:"2",t:"『自分で時間を決める人は私生活の価値を忘れない』は<u>本文と逆</u>（そういう人ほど仕事に飲まれると述べる）。"},{m:"x",n:"3",t:"『打ち込むほど真の価値が分かる』は<u>本文と正反対</u>（打ち込みすぎの危険を説く）。"},{m:"x",n:"4",t:"『すべてを金銭的に再評価』は<u>本文になく、金銭至上の主張は筆者の立場と逆</u>。"}]},
+
+{id:"問3(D)", grp:"EF", type:"内容一致", lbl:"設問(D)", en:"（第13段落の内容に一致するもの）",
+ ask:"本文の内容にもっとも近いものを 1〜4 から選べ。（D）", answer:"4", kind:"choice",
+ choices:[{t:"If we are to admit that our lives are primarily about our jobs, we should not refrain from asking our boss for help and encouragement.（人生が主に仕事だと認めるなら、上司に助けや励ましを求めるのをためらうべきでない）", ok:false},{t:"Once we realise how dependent we are on our family history, it makes us sincerely respect our ancestors.（家系にどれだけ依存しているか気づけば、先祖を心から敬うようになる）", ok:false},{t:"Since our lives often feature unexpected success, we can get by without a little help from our friends.（人生には予期せぬ成功が多いので、友の助けなしでやっていける）", ok:false},{t:"When we are reminded that our lives are fragile and temporary by such experiences as a pandemic, we ask ourselves what is really important.（パンデミックのような経験で人生がもろく一時的だと気づかされると、本当に重要なのは何かを自問する）", ok:true}],
+ steps:[
+   {t:"根拠を特定", d:"第13段落第1文：<b>『死すべき存在がはかなく一時的で、悲劇が警告なく襲い得ると思い出させる経験に直面すると、何が人生を価値あるものにするかを見つめ直す』</b>。"},
+   {t:"パンデミックと結ぶ", d:"第12段落で<em>パンデミック＝再評価の契機</em>と述べており、第13段落がその心理的説明。＝<u>人生のはかなさに気づき、何が重要かを問う</u>。"},
+   {t:"選ぶ", d:"<b>『人生がもろく一時的だと気づかされると、本当に重要なのは何かを自問する』</b>＝4。"}],
+ ev:{q:'When we face experiences that remind us that our <span class="h">mortal existence is transient</span> … we tend to be motivated to evaluate what makes life worthwhile', jp:"「死すべき存在がはかなく一時的だと思い出す経験に直面すると、何が人生を価値あるものにするか見つめ直す」＝人生のもろさ→本当に重要なものを自問。"},
+ co:[{c:"nav",l:"transient＝fragile/temporary",h:"<b>mortal existence is transient（死すべき存在ははかない）＝fragile and temporary</b>。パンデミック等の経験→『何が本当に重要か』を問う＝選択肢4。"}],
+ sol:[{m:"x",n:"1",t:"『上司に助けを求めるのをためらうな』は<u>本文にない論点</u>。人生＝仕事という前提も筆者と逆。"},{m:"x",n:"2",t:"『家系への依存に気づき先祖を敬う』は<u>本文にない</u>。中世の姓は導入で、先祖崇拝の話ではない。"},{m:"x",n:"3",t:"『予期せぬ成功が多く友の助けは要らない』は<u>本文にない</u>。第12段落はむしろ家族・友人との絆を深めたと述べる（逆）。"},{m:"o",n:"4",t:"正解。人生がもろく一時的だと気づく→本当に重要なのは何かを自問（第13段落）。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+</script>
+</body>
+</html>
