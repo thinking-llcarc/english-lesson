@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜東洋大学 2025 大問1（Knowledge Culture）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">東</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>東洋大学 2025 ／ 大問1</span></div>
+    <div class="top-meta">Knowledge Culture 知識文化<br>空所補充・下線部・内容一致／全11問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>TRAPS</small>誤答の構造</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>問1 A–F</small>設問①</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>問2–4</small>設問②</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>問5–6</small>設問③</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>「情報にいつでも手が届く社会」。<br>その恩恵と重圧を語り、<br>最後に4つの心得で締める。</h1>
+    <p>ネット・スマホ・ビッグデータによって、社会は<em>知識文化（knowledge culture）</em>へと変わった――そう宣言してから、データの価値、教育の個別最適化、教育水準の向上、そして生涯学習の重圧までを一気に描き、最後に<b>「あなたが備えるための4か条」</b>で締めくくる。<u>全体は一貫して前向きで、しかも読者に能動的な行動を促す</u>。この論調を掴めば、内容一致（問5・問6）は本文を探す前に半分決まる。</p>
+    <div class="thesis"><b>この英文の骨格：</b>①社会は知識文化へ<u>変わった</u>（turn into）。②データは<u>予測に使える</u>から価値がある。③情報があれば教育も政治もシステムも最適化できる。④同時に教育水準も上がり未来は明るい。⑤ただし生涯学習は<u>機会でもあり重圧でもある</u>。⑥だから「学ぶ習慣・情報を集める・問う・適応する」という<b>能動的な4か条</b>で備えよ。</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>段落構成</span></div>
+      <div class="stat"><b>11</b><span>設問</span></div>
+      <div class="stat"><b>6</b><span>空所(A–F)</span></div>
+      <div class="stat"><b>4</b><span>備えの心得</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:26%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">熟語・句動詞</td><td>問1(A)(B)(F)</td><td><b>turn into／in the course of／add up</b>。<u>前後の名詞との結びつきで決める</u>。</td></tr>
+      <tr><td class="cond">形容詞・比較</td><td>問1(C)(D)</td><td>(C)＝<b>What makes A so C is B</b>のBが理由。(D)＝<b>the 比較級, the 比較級</b>でlooksの補語。</td></tr>
+      <tr><td class="cond">品詞の識別</td><td>問1(E)</td><td><b>to some extent</b>。<u>extent（名詞）だけが入る</u>。extend/expandは動詞。</td></tr>
+      <tr><td class="cond">下線部の言い換え</td><td>問2 問4</td><td>問2＝<b>tailorは比喩（個別最適化）</b>。問4＝<b>lifelong learningは学ぶ側・学校に限らない</b>。</td></tr>
+      <tr><td class="cond">つなぎ語</td><td>問3</td><td><b>同義の選択肢は両方消える</b>という発想が急所。</td></tr>
+      <tr><td class="cond">内容一致</td><td>問5 問6</td><td>問5＝一致するもの、問6＝<b>一致しないもの</b>。<u>設問の向きを間違えない</u>。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。<u>誤答ごとに「なぜダメか」＋「どんな読み方をした人が選ぶか」</u>まで示しました。<strong>自分の誤読のクセ</strong>を特定してください。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 段落の流れと設問の在りか<span class="sub">「導入→具体→展望→理由→応用→並列→生涯学習→結論（4か条）」。全体を通して<b>知識文化を前向きに捉える</b>論調。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">社会は知識文化へと変わった</div><p>ネット・スマホ・ビッグデータの結果、社会は知識文化へ<em>turn into</em>。<u>この流れは今後も続き拡大する</u>（問5③の根拠）。</p><div class="tags"><span class="utag">(A)</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>具体</span></div><div class="para-b">
+      <div class="theme">検索が当たり前に</div><p>外出先でグーグル検索が普通に。<em>「知りたいたびに図書館へ行く状況は想像できない」</em>（問5①を消す根拠）。</p><div class="tags"><span class="utag">(B)</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>展望</span></div><div class="para-b">
+      <div class="theme">情報量は増え続ける</div><p>ビッグデータをますます多くの企業が収集。データは<em>新たな宝庫</em>（問6①＝一致／問5②を消す根拠）。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>理由</span></div><div class="para-b">
+      <div class="theme">データが価値を持つ理由</div><p><em>予測に使えるから</em>企業にとって価値がある。対象を知るほど製品開発が容易に。</p><div class="tags"><span class="utag">(C)</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>応用</span></div><div class="para-b">
+      <div class="theme">教育・政治・システムの最適化</div><p>情報があれば<em>教育は各学習者のニーズに完璧に合わせられる</em>（問2）。政治もデータに基づける。</p><div class="tags"><span class="utag">(a)</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>並列</span></div><div class="para-b">
+      <div class="theme">教育水準の向上と明るい未来</div><p><em>同時に</em>教育水準が急速に向上（問3）。創造的な仕事に関わる人が増えるほど<em>未来は明るく</em>見える。</p><div class="tags"><span class="utag">(X)</span><span class="utag">(D)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>生涯学習</span></div><div class="para-b">
+      <div class="theme">機会であり重圧でもある</div><p>知識文化は<em>生涯学習</em>を重視（問4）。潜在能力を発揮する機会だが、<u>十分と感じられなければストレス要因</u>（問6②＝一致）。</p><div class="tags"><span class="utag">(b)</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>結論</span></div><div class="para-b">
+      <div class="theme">備えるための4か条</div><p>知識文化は<em>ある程度</em>すでにここに。①学ぶ習慣②情報を集めよ③問え④適応せよ――<u>すべて能動的</u>（問6③の根拠）。</p><div class="tags"><span class="utag">(E)</span><span class="utag">(F)</span></div></div></div><div class="box navy"><span class="lab">論調を掴むことが最大の武器</span>
+  この英文は<strong>知識文化を前向きに描き、読者に能動的な行動を促す</strong>。<u>「情報を待つ」のではなく「出かけて集めよ」「問え」「適応せよ」</u>。<em>この姿勢を掴んでいれば、問6③（静かに待つのが最善）は本文を探す前に「これは違う」と分かる</em>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">誤答の構造へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Trap Analysis</div>
+  <h1 class="head">誤答の構造 ― 出題者は何を試しているか<span class="sub">この大問の誤答は、受験生の典型的な誤読を狙って設計されている。4つの型を知れば、選択肢を見た瞬間に候補が絞れる。</span></h1>
+  <div class="rule"></div>
+  <div class="para"><div class="para-n"><b>A</b><span>品詞無視</span></div><div class="para-b">
+    <div class="theme">綴りが似た語を、品詞で区別できるか</div>
+    <p><strong>問1(E)</strong>は典型。<em>to some ( E )</em> という形を見れば<u>名詞が必要</u>だと分かり、動詞のexpect/extend/expandは一瞬で消える。残るのは名詞のextentだけ。<u>意味を考える前に品詞を見る</u>のが最短ルート。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>空所に入るべき品詞を、形から特定する力</strong>。<u>extent と extend は1字違い</u>で、品詞を意識しない受験生を狙い撃ちしている。</div>
+    <div class="tags"><span class="utag">問1(E)</span></div></div></div>
+  <div class="para"><div class="para-n"><b>B</b><span>字義固執</span></div><div class="para-b">
+    <div class="theme">比喩を字義通りに取らせる罠</div>
+    <p><strong>問2</strong>の下線部は <em>education could be tailored perfectly</em>。tailorの原義は「（服を）仕立てる」だが、ここは<u>「教育を個々に合わせて調整する」という比喩</u>。ところが選択肢③には<strong>「魅力的な服をデザインする」</strong>が用意されている。<em>原義だけ知っていて文脈（education）を見ない人</em>が引っかかる。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>語の原義と、文脈での比喩的意味を区別する力</strong>。<u>「その語が何を修飾しているか」を必ず見る</u>。</div>
+    <div class="tags"><span class="utag">問2</span></div></div></div>
+  <div class="para"><div class="para-n"><b>C</b><span>同義共倒れ</span></div><div class="para-b">
+    <div class="theme">同義の選択肢が2つあれば、両方とも消える</div>
+    <p><strong>問3</strong>が秀逸。<em>③Nevertheless（それにもかかわらず）と④In spite of this（これにもかかわらず）はほぼ同義</em>。<u>択一問題で正解は1つだから、もし片方が正解ならもう片方も正解になってしまう</u>。<strong>つまりこの2つは共倒れで消える</strong>。残る①②のうち、前後を並列でつなぐ①At the same timeが正解。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>選択肢どうしの関係を見て消去する力</strong>。<u>内容を読む前に「同義のペアはないか」を確認する</u>と、一気に2つ消せる。実際、前後とも肯定的な内容の並列なので、内容面でも逆接は不要。</div>
+    <div class="tags"><span class="utag">問3</span></div></div></div>
+  <div class="para"><div class="para-n"><b>D</b><span>論調ずれ</span></div><div class="para-b">
+    <div class="theme">本文の姿勢と逆の「もっともらしい」選択肢</div>
+    <p><strong>問6③</strong>「有益な情報が届くのを静かに待つのが最善」は、一見すると落ち着いた良い態度に見える。だが本文の4か条は<em>「出かけて集めよ」「無批判に受け入れるな」「勇敢であれ」「素早く適応せよ」</em>と<u>徹底して能動的</u>。<strong>本文の姿勢と正反対だから、これが「一致しないもの」＝正解</strong>。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>筆者の姿勢・論調を掴む力</strong>。<u>「自分ならどう思うか」ではなく「この筆者ならどう書くか」</u>で判断する。</div>
+    <div class="tags"><span class="utag">問5</span><span class="utag">問6</span></div></div></div>
+  <div class="box gold"><span class="lab">まとめ ― 選択肢を見たらこの順で疑う</span>
+    ①<strong>空所なら、まず必要な品詞を特定</strong>（問1(E)）→②<strong>下線部なら、原義でなく文脈での意味</strong>（問2）→③<strong>選択肢どうしに同義のペアがないか</strong>（問3）→④<strong>本文の論調・姿勢と逆を向いていないか</strong>（問5・問6）。<u>この4つで、11問すべての誤答が機械的に絞れる</u>。</div>
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問1(A)〜(F)へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問1 空所補充(A)〜(F)<span class="sub">熟語・形容詞・比較・品詞。<b>前後の語との結びつき</b>と<b>必要な品詞</b>で決める6問。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 誤答の構造</button><span class="sp"></span><button class="btnp" data-go="4">問2〜4へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問2〜問4 下線部・つなぎ語<span class="sub">問2＝tailorの比喩、問3＝同義の選択肢は共倒れ、問4＝lifelong learningの正確な把握。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問1</button><span class="sp"></span><button class="btnp" data-go="5">問5〜6へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問5・問6 内容一致<span class="sub"><b>問5は「一致するもの」、問6は「一致しないもの」</b>。設問の向きを取り違えないこと。</span></h1>
+  <div class="rule"></div>
+  <div class="box verm" style="margin-top:0"><span class="lab">設問の向きに注意</span>
+    <strong>問5＝一致するものを選ぶ／問6＝一致 しない ものを選ぶ</strong>。<u>同じ形式の設問が連続するので、向きの取り違えが最も多い失点原因</u>。問6は<em>「一致する3つを消して、残った1つ」</em>という解き方が確実。</div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 問2〜4</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳。番号①②③…は各段落内の文の順番。<b>赤字</b>が設問に直結する箇所。各段落の下に根拠をまとめた。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">読むときの視点</span>
+    空所・下線部の答えは<strong>必ず本文の前後に根拠がある</strong>。訳を読むときは<u>「この設問の答えは、どの一文が決めているか」</u>を確かめてほしい。<em>問1(C)なら「予測に使えるから」、問6なら4か条の能動的な姿勢</em>――答えの在りかを見つける訓練が、そのまま得点力になる。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― 社会は知識文化へと変わった　<span class="qbadge">(A)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">インターネットの発明、スマートフォンの普及、ビッグデータの台頭の結果、私たちの社会は知識文化へと<em>変わった</em>。つまり、いつでもどこでも、ほとんどあらゆる種類の情報にアクセスできるということだ。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは今後も続き、拡大していく流れであり、より多くの情報がより多くの人に利用可能になり、読み書きのできない成人の数は毎年減少していく。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li><b>(A) turn into ~</b>「〜へと変わる」＝<u>問1(A)の正解＝④ into</u>。<em>turn into＝別のものに変化する</em>。<span class="qbadge">(A)</span></li>
+    <li><b>a knowledge culture（知識文化）</b>＝この英文のキーワード。<u>「いつでもどこでも情報にアクセスできる社会」</u>と直後のダッシュで定義されている。</li>
+    <li><b>with more information becoming ~ / with the number ~ decreasing</b>＝<em>付帯状況のwith（with＋O＋分詞）</em>。「〜しながら／〜という形で」。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜具体 ― 検索が当たり前になった　<span class="qbadge">(B)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">外出先で物事をグーグルで調べ、必要なものすべてに必要なときにアクセスできることは、完全に当たり前になった。</div></div><div class="jpline"><div class="n">②</div><div class="s">たとえば、グーグル（や他の検索エンジン）が使えない状況を想像できるだろうか。</div></div><div class="jpline"><div class="n">③</div><div class="s">何かを知りたいと思うたびに図書館へ行かなければならない状況を想像できるだろうか。私にはできない。</div></div><div class="jpline"><div class="n">④</div><div class="s">それは、この20年<em>の間に</em>現れた知識文化がもたらした結果である。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li><b>(B) in the course of ~</b>「〜の間に・〜を通じて」＝<u>問1(B)の正解＝② course</u>。<em>in the course of the last two decades＝この20年の間に</em>。<span class="qbadge">(B)</span></li>
+    <li><b>can you imagine not having access ~?</b>「アクセスできない状況を想像できるか」＝<u>反語</u>。想像できないほど当たり前になった、ということ。</li>
+    <li><b>問5①の判定材料</b>：<em>「図書館へ行かなければならない状況は想像できない」</em>＝<u>今は図書館に頼っていない</u>。問5①「人々はますます図書館に頼っている」は<b>この内容に矛盾</b>。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜展望 ― 情報量は増え続ける</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私たちは、ますます多くの情報にアクセスできる未来へと向かっている。</div></div><div class="jpline"><div class="n">②</div><div class="s">ビッグデータは、ますます多くの企業によって、ますます多くの情報源から収集されている。</div></div><div class="jpline"><div class="n">③</div><div class="s">データは新たな宝庫と考えられており、その結果、私たちが利用できる情報量を増やすために多くのことが行われている。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li><b>an increasing amount / an increasing number</b>「ますます増える」＝<em>情報量は増え続ける</em>という展望。</li>
+    <li><b>問5②の判定材料</b>：本文は<u>情報量が増え続ける</u>と述べる。問5②「利用可能なデータ量はまもなく限界に達する」は<b>この段落の内容に矛盾</b>。</li>
+    <li><b>問6①の判定材料</b>：<em>企業がますます多くのデータを収集している</em>＝問6①「企業は顧客についてより多くのデータを集めようとしている」は<u>一致</u>（＝問6の答えではない）。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜理由 ― データが価値を持つのは予測のため　<span class="qbadge">(C)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">データが企業にとってこれほど<em>価値がある</em>のは、未来やユーザーについて予測を行うのに使えるからである。</div></div><div class="jpline"><div class="n">②</div><div class="s">対象とする集団の習慣について知れば知るほど、彼らのニーズや欲求に沿った製品やサービスを開発することが容易になる。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li><b>(C) valuable</b>「価値がある」＝<u>問1(C)の正解＝③ valuable</u>。<em>What makes data so valuable「データをそれほど価値あるものにするもの」</em>＝&lt;make＋O＋C&gt;のC。<span class="qbadge">(C)</span></li>
+    <li><b>What makes data so ( C ) is its use for ~</b>：<em>What ~ is …「〜なのは…だ」</em>の構造。<u>空所はmakeの補語（形容詞）</u>で、heavy/large/expensiveでは「予測に使えるから」という理由と噛み合わない。</li>
+    <li><b>The more ~, the easier …</b>「知れば知るほど容易になる」＝<u>the 比較級〜, the 比較級…</u>。問1(D)と同じ構文なので、ここで型を確認しておく。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜応用 ― 教育・政治・システムの最適化　<span class="qbadge">(a)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ユーザー体験の向上のほかにも、より多くのデータは、モノのインターネットの確立、スマートシティの構築、古いプロセスの合理化による効率化・持続可能化を可能にする。</div></div><div class="jpline"><div class="n">②</div><div class="s">適切な種類の情報があれば、<em>教育は各学習者のニーズに完璧に合わせて調整され得る</em>し、政治的決定は日和見主義ではなくデータに基づいて行われ得るし、円滑に機能するために情報を必要とするシステム（天気予報、交通ダイヤ、廃棄物管理など）は、より正確かつ円滑に動き得る。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第5段落</div><ul><li><b>(a) education could be tailored perfectly to each learner's needs</b>「教育は各学習者のニーズに完璧に合わせられ得る」＝<u>問2の正解＝④「誰にとっても適切な学習を供給することは可能かもしれない」</u>。<em>tailor＝（服を）仕立てる→ぴったり合わせる</em>。<span class="qbadge">(a)</span></li>
+    <li><b>tailored の比喩に注意</b>：<u>③「魅力的な服をデザインする」は tailor の字義（仕立てる）に引きずられた罠</u>。ここは<em>教育を個々に最適化する</em>という比喩。</li>
+    <li><b>could be ~（可能性）</b>：断定でなく<em>「〜し得る」</em>。選択肢の「may be possible（〜は可能かもしれない）」と対応する。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜並列 ― 教育水準の向上と未来　<span class="qbadge">(X)</span> <span class="qbadge">(D)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>同時に</em>、より多くの人が教育の機会を得るようになり、世界の教育水準は急速に高まっている。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは、より多くの人が高等教育を受けることでより良い機会にアクセスできるようになり、世界の平等の水準を高める効果を持つだけでなく、生み出される新機軸や発明の数を増やす効果も持つはずである。</div></div><div class="jpline"><div class="n">③</div><div class="s">より多くの人が創造的な仕事や起業家的な試みに関わるほど、私たちの未来は<em>より明るく</em>見える。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第6段落</div><ul><li><b>(X) At the same time</b>「同時に」＝<u>問3の正解＝①</u>。<em>前段落（データの応用）と並列で、教育水準の向上という別の側面を加える</em>。<span class="qbadge">(X)</span></li>
+    <li><b>消去法の論理</b>：<u>③Nevertheless（それにもかかわらず）が正解なら、④In spite of this（これにもかかわらず）も同義で正解になってしまう</u>。<em>正解が1つに定まらないので両方とも消える</em>＝残るのは①（②To be honestは文脈に合わない）。<b>この「同義の選択肢は両方消える」という発想が本問の急所</b>。</li>
+    <li><b>(D) the brighter</b>＝<u>問1(D)の正解＝① brighter</u>。<em>&lt;the 比較級 ~, the 比較級 …&gt;「〜すればするほど…」</em>。<u>The more people get involved …, the ( D ) our future looks</u>で、looksの補語になる形容詞の比較級。<span class="qbadge">(D)</span></li></ul></div><div class="tr-sec"><b>第7段落</b>｜生涯学習 ― 機会であり重圧でもある　<span class="qbadge">(b)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">知識文化のもう一つの側面は、<em>生涯学習</em>の重視である。</div></div><div class="jpline"><div class="n">②</div><div class="s">インターネットにアクセスできる人なら誰でも非常に多くの情報をすぐに手に入れられるので、私たちは絶えず自らを成長させ、新しい技能を身につけることを期待され、また強いられることになる。</div></div><div class="jpline"><div class="n">③</div><div class="s">一方でこれは、自分の潜在能力を最大限に発揮し技能水準を高める絶好の機会である。しかし他方で、もし自分が決して十分だと感じられなければ、それはストレス要因にもなり得る。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第7段落</div><ul><li><b>(b) lifelong learning</b>「生涯学習」＝<u>問4の正解＝③「一生にわたって新しい知識を獲得すること」</u>。<em>lifelong＝生涯にわたる</em>。<span class="qbadge">(b)</span></li>
+    <li><b>①④との違い</b>：<u>①「教えること」④「学校や大学に通うこと」は、lifelong learningの意味を狭めている</u>。生涯学習は<em>学校教育に限らず、あらゆる形で学び続けること</em>（次段落の「本・講座・動画・コミュニティ」参照）。</li>
+    <li><b>問6②の判定材料</b>：<em>「十分だと感じられなければストレス要因になり得る」</em>＝問6②「能力を伸ばし続ける義務感が不安を引き起こし得る」は<u>一致</u>（＝問6の答えではない）。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜結論 ― 知識文化への備え4か条　<span class="qbadge">(E)</span> <span class="qbadge">(F)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">知識文化は<em>ある程度</em>すでにここにあるが、近い将来さらに広まり影響力を持つようになるだろう。以下は、それに備えるためにできることである。</div></div><div class="jpline"><div class="n">②</div><div class="s">1. 学ぶことを習慣にせよ：本を読むこと、講座を受けること、教育動画を見ること、あるいは私たちのパイレーツ・コミュニティで学ぶことであれ、毎日が学び成長する機会を与えてくれる。毎日本を読む必要はない。しかし毎日ごく小さな一歩を踏み出すことが<em>積み重なる</em>のだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">2. 利用できる情報を使え：新しいプロジェクトを始めるときは、ユーザー調査を行い、他の関連情報を集めよ。それは意思決定を改善し、成功の可能性を高める。必要な情報はそこにある。ただ出かけて集めればよい。</div></div><div class="jpline"><div class="n">④</div><div class="s">3. 世界に好奇心を持ち、世界を問え：世界についての知識が広がるにつれ、それを改善する能力も広がる。情報の助けで多くのプロセスをより効率的で持続可能にできる。世界をそのまま無批判に受け入れるな。勇敢に、必要な変化をもたらせ。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">4. 適応力と機知に富め：ますます多くの情報を得るにつれ、これまで以上に素早く周囲に適応しなければならなくなる。古いデータに基づく旧来のシステムに固執すれば、成功は手の届かない場所に置かれてしまう。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第8段落</div><ul><li><b>(E) to some extent</b>「ある程度まで」＝<u>問1(E)の正解＝④ extent</u>。<em>名詞extent（程度）</em>。expect/extend/expandは動詞で、to some ~ の形に入らない。<span class="qbadge">(E)</span></li>
+    <li><b>(F) add up</b>「積み重なる・効果を持つ」＝<u>問1(F)の正解＝② adds</u>。<em>taking a tiny step every day adds up「毎日の小さな一歩が積み重なる」</em>。<span class="qbadge">(F)</span></li>
+    <li><b>問6③の判定材料</b>：<u>この4か条は「自ら動け（集めよ・問え・適応せよ）」という能動的な心得</u>。<em>問6③「有益な情報が自分に届くのを静かに待つのが最善」は、この能動的姿勢と正反対</em>＝<b>問6の正解＝③</b>。</li>
+    <li><b>問5③の判定材料</b>：<em>第1段落「インターネット・スマホ・ビッグデータの結果、社会は知識文化へ変わった。この流れは今後も続き拡大する」</em>＝問5③「技術の進歩が知識文化を拡大し続けると予想される」は<u>一致</u>＝<b>問5の正解＝③</b>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 設問③</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした問題がどの「誤答の型」かを特定して潰す。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:14%">設問</th><th style="width:10%">解答</th><th style="width:32%">決め手</th><th>陥りやすい誤答</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1(A)</td><td><b>④</b></td><td>turn into＝〜へと変わる</td><td>①on③up（turnの熟語を意味で検討しない）</td></tr>
+      <tr><td class="cond">問1(B)</td><td><b>②</b></td><td>in the course of＝〜の間に</td><td>③past（『過去20年』の日本語から）</td></tr>
+      <tr><td class="cond">問1(C)</td><td><b>③</b></td><td>予測に使える→valuable</td><td>②large（big dataの印象／近接語）</td></tr>
+      <tr><td class="cond">問1(D)</td><td><b>①</b></td><td>the 比較級＋looksの補語</td><td>④darker（方向が真逆）</td></tr>
+      <tr><td class="cond">問1(E)</td><td><b>④</b></td><td>to some extent（名詞）</td><td>②extend（1字違い・品詞無視／A型）</td></tr>
+      <tr><td class="cond">問1(F)</td><td><b>②</b></td><td>add up＝積み重なる</td><td>③makes（make upの有名さ）</td></tr>
+      <tr><td class="cond">問2</td><td><b>④</b></td><td>tailored＝個別に合わせる</td><td>③服のデザイン（字義固執／B型）</td></tr>
+      <tr><td class="cond">問3</td><td><b>①</b></td><td>並列＋同義選択肢の共倒れ</td><td>③④（同義ペアに気づかない／C型）</td></tr>
+      <tr><td class="cond">問4</td><td><b>③</b></td><td>生涯にわたり知識を獲得</td><td>④学校に通う（学習を制度教育に限定）</td></tr>
+      <tr><td class="cond">問5</td><td><b>③</b></td><td>第1段落「今後も続き拡大」</td><td>①図書館（近接語／第2段落と矛盾）</td></tr>
+      <tr><td class="cond">問6</td><td><b>③</b></td><td>4か条は能動的姿勢</td><td>①②④はすべて一致（向きの取り違え／D型）</td></tr>
+    </tbody>
+  </table>
+  <h2 class="sec">復習動線 ― 落とした「型」から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>品詞を見ずに落とした（問1(E)ほか）</b><p>空所補充では<em>まず「ここに入るべき品詞は何か」</em>を特定する。<u>to some ( ) なら名詞、obtained ( ) 名詞句 なら前置詞</u>。この一手で選択肢の半分以上が消えることが多い。<strong>意味を考えるのは、品詞で絞ってから</strong>。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>語の原義に引きずられた（問2）</b><p>tailor＝「仕立てる」は正しいが、<em>education を修飾すれば「個別に最適化する」</em>という比喩になる。<u>語の意味は文脈で決まる</u>。原義を知っているほど、かえって字義通りの選択肢（服のデザイン）に引っかかる。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>選択肢どうしの関係を見なかった（問3）</b><p><em>NeverthelessとIn spite of thisは同義</em>。<u>択一問題では同義のペアは両方とも正解になり得ない＝共倒れで消える</u>。<strong>本文を読む前に選択肢を見比べる</strong>だけで、2つ消せることがある。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>設問の向き・論調を外した（問5・問6）</b><p>問5は<em>一致するもの</em>、問6は<em>一致しないもの</em>。<u>連続する同形式の設問では、向きの取り違えが最大の失点原因</u>。加えて、本文の<strong>能動的な姿勢</strong>（集めよ・問え・適応せよ）を掴んでいれば、問6③は即座に見抜ける。</p></div></div>
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    東洋大の空所補充は、<strong>熟語・品詞・前後の結びつき</strong>という基本を正確に運用できるかを測っています。難解な語彙ではなく、<u>turn into / in the course of / to some extent / add up といった標準的な熟語</u>と、<em>品詞の識別</em>が勝負。落とした問題は単語を覚え直すより、<strong>「どの手がかりを見ていなかったか」</strong>で振り返ってください。</div>
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は東洋大学2025年英語（大問1）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問1 (A)-(F)：グループAB ===== */
+{id:"問1(A)", grp:"AB", type:"空所補充（熟語）", lbl:"空所(A)", en:"our society has turned ( A ) a knowledge culture",
+ ask:"空所(A)に入る語としてもっとも適切なものを ①〜④ から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"on", ok:false},{t:"over", ok:false},{t:"up", ok:false},{t:"into", ok:true}],
+ steps:[
+   {t:"文の骨格を見る", d:"<b>our society has turned ( A ) a knowledge culture</b>「社会は知識文化（　）変わった」。<u>turn の後ろに前置詞＋名詞</u>。"},
+   {t:"熟語を確定", d:"<b>turn into ~＝『〜へと変わる』</b>。<em>A が B に変化する</em>ときの定番。"},
+   {t:"直後の説明で確認", d:"ダッシュの後：<em>「いつでもどこでも情報にアクセスできる」</em>＝<u>社会が別の状態に『変わった』</u>という内容と一致。"}],
+ ev:{q:'our society has <span class="h">turned into</span> a knowledge culture — you have access to almost any kind of information anywhere', jp:"「社会は知識文化へと変わった。つまりいつでもどこでも情報にアクセスできる」。"},
+ co:[{c:"gold",l:"turn into",h:"<b>『〜へと変わる』</b>。turn on（つける）／turn over（ひっくり返す）／turn up（現れる）との区別が問われている。"}],
+ sol:[{m:"x",n:"①",t:"turn on は『（スイッチを）つける』『〜次第である』。<u>社会が文化に『つく』では意味をなさない</u>。〈選びがちな人〉turn の熟語を一つずつ意味で検討せず、最初に浮かんだものを選ぶ人。"},
+      {m:"x",n:"②",t:"turn over は『ひっくり返す・引き渡す』。<u>変化の到達点を示せない</u>。"},
+      {m:"x",n:"③",t:"turn up は『現れる・音量を上げる』。<u>後ろに『変化先』の名詞を取らない</u>。"},
+      {m:"o",n:"④",t:"正解。turn into ~＝〜へと変わる。変化の到達点（知識文化）を示す。"}]},
+
+{id:"問1(B)", grp:"AB", type:"空所補充（熟語）", lbl:"空所(B)", en:"the knowledge culture that has emerged in the ( B ) of the last two decades",
+ ask:"空所(B)に入る語としてもっとも適切なものを ①〜④ から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"time", ok:false},{t:"course", ok:true},{t:"past", ok:false},{t:"most", ok:false}],
+ steps:[
+   {t:"形を見る", d:"<b>in the ( B ) of the last two decades</b>＝<u>in the ___ of ~ という熟語の形</u>。"},
+   {t:"熟語を確定", d:"<b>in the course of ~＝『〜の間に・〜の過程で』</b>。<em>期間を表す定番表現</em>。"},
+   {t:"意味で確認", d:"「この20年<u>の間に</u>現れた知識文化」＝文意が通る。"}],
+ ev:{q:'the knowledge culture that has emerged <span class="h">in the course of</span> the last two decades', jp:"「この20年の間に現れた知識文化」。in the course of＝〜の間に。"},
+ co:[{c:"gold",l:"in the course of",h:"<b>『〜の間に・〜の過程で』</b>。<u>during とほぼ同義</u>の書き言葉表現。"}],
+ sol:[{m:"x",n:"①",t:"in the time of ~ は『〜の時代に』で、<u>特定の人物・時代を指す</u>（in the time of Shakespeare など）。『この20年の時代に』は不自然。〈選びがちな人〉『時間』という意味の近さだけで選ぶ人。"},
+      {m:"o",n:"②",t:"正解。in the course of ~＝〜の間に。"},
+      {m:"x",n:"③",t:"in the past of ~ という形は<u>使わない</u>（in the past 単独なら『過去に』）。〈選びがちな人〉『過去20年』という日本語から past を当てはめた人。<b>the last two decades だけで既に『過去20年』の意味</b>。"},
+      {m:"x",n:"④",t:"in the most of ~ は<u>文法的に不自然</u>（most of なら the が不要）。"}]},
+
+{id:"問1(C)", grp:"AB", type:"空所補充（形容詞）", lbl:"空所(C)", en:"What makes data so ( C ) for companies is its use for making predictions",
+ ask:"空所(C)に入る語としてもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"heavy", ok:false},{t:"large", ok:false},{t:"valuable", ok:true},{t:"expensive", ok:false}],
+ steps:[
+   {t:"構造を掴む", d:"<b>What makes data so ( C ) for companies is its use for ~</b>＝<u>&lt;make＋O＋C&gt;のC（補語）</u>が空所。「データを企業にとってそれほど（　）にするもの」。"},
+   {t:"be動詞の後（理由）を読む", d:"<b>is its use for making predictions about the future and about users</b>「それは、未来やユーザーについて予測するのに使えることだ」＝<u>データの『有用性』を説明</u>。"},
+   {t:"選ぶ", d:"予測に使えるから＝<b>valuable（価値がある）</b>＝③。"}],
+ ev:{q:'What makes data so <span class="h">valuable</span> for companies is its use for making predictions about the future and about users.', jp:"「データを企業にとってそれほど価値あるものにしているのは、予測に使えることだ」。"},
+ co:[{c:"nav",l:"What makes A so C is B",h:"<b>『AをそれほどCにするものはBだ』</b>。<u>B（理由）を読めばCが決まる</u>。ここは『予測に使える』→価値がある。"}],
+ sol:[{m:"x",n:"①",t:"heavy（重い）＝<u>データの物理的重さは話題でない</u>。〈選びがちな人〉空所の形（形容詞）だけ見て、後ろの理由（予測に使える）と結びつけない人。"},
+      {m:"x",n:"②",t:"large（大きい）＝<u>量の話ではなく『企業にとっての意義』が問われている</u>。big dataという語に引きずられる罠。〈選びがちな人〉近くにあった big data の印象で『大きい』を選ぶ人。"},
+      {m:"o",n:"③",t:"正解。予測に使えるから企業にとって価値がある。"},
+      {m:"x",n:"④",t:"expensive（高価な）＝<u>値段の話ではない</u>。『価値がある』と『高価だ』は別。〈選びがちな人〉『価値』を金銭に短絡させた人。"}]},
+
+{id:"問1(D)", grp:"AB", type:"空所補充（比較）", lbl:"空所(D)", en:"The more people get involved in creative work …, the ( D ) our future looks.",
+ ask:"空所(D)に入る語としてもっとも適切なものを ①〜④ から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"brighter", ok:true},{t:"further", ok:false},{t:"higher", ok:false},{t:"darker", ok:false}],
+ steps:[
+   {t:"構文を特定", d:"<b>The more ~, the ( D ) …</b>＝<u>&lt;the 比較級 ~, the 比較級 …&gt;「〜すればするほど…」</u>。空所は<em>looks の補語になる形容詞の比較級</em>。"},
+   {t:"文脈の方向を見る", d:"前：<em>創造的な仕事や起業に関わる人が増える</em>＝<u>プラスの内容</u>。同段落も「平等の向上」「新機軸・発明の増加」とプラスが続く。"},
+   {t:"選ぶ", d:"<b>the brighter our future looks「未来はより明るく見える」</b>＝①。look bright（明るく見える）という自然な結びつき。"}],
+ ev:{q:'The more people get involved in creative work and entrepreneurial endeavors, the <span class="h">brighter</span> our future looks.', jp:"「創造的な仕事や起業に関わる人が増えるほど、私たちの未来はより明るく見える」。"},
+ co:[{c:"gold",l:"the 比較級, the 比較級",h:"<b>『〜すればするほど…』</b>。<u>空所は look の補語</u>なので、look と自然に結びつく形容詞（bright）を選ぶ。"},
+     {c:"verm",l:"方向を間違えない",h:"段落全体が<b>プラスの見通し</b>（平等・新機軸の増加）。<u>darker（暗い）は方向が真逆</u>。"}],
+ sol:[{m:"o",n:"①",t:"正解。look brighter（未来がより明るく見える）。段落のプラスの流れと一致。"},
+      {m:"x",n:"②",t:"further（さらに遠く）＝<u>look further では『未来が遠く見える』となり文意が成立しない</u>。〈選びがちな人〉比較級の形だけ見て、looks との相性を確認しない人。"},
+      {m:"x",n:"③",t:"higher（より高い）＝<u>look higher は『高く見える』で未来の評価を表さない</u>。〈選びがちな人〉『水準が上がる』という近くの内容に引きずられた人。"},
+      {m:"x",n:"④",t:"darker（より暗い）＝<u>方向が正反対</u>。段落はプラスの見通しを述べている。〈選びがちな人〉文脈の方向（プラス/マイナス）を確認せず形だけで選ぶ人。"}]},
+
+{id:"問1(E)", grp:"AB", type:"空所補充（熟語・品詞）", lbl:"空所(E)", en:"The knowledge culture is to some ( E ) already here",
+ ask:"空所(E)に入る語としてもっとも適切なものを ①〜④ から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"expect", ok:false},{t:"extend", ok:false},{t:"expand", ok:false},{t:"extent", ok:true}],
+ steps:[
+   {t:"形（品詞）で絞る", d:"<b>to some ( E )</b>＝<u>to some ＋ 名詞</u>の形。①expect ②extend ③expand は<em>すべて動詞</em>で、この位置に入れない。"},
+   {t:"熟語を確定", d:"<b>to some extent＝『ある程度まで』</b>。<em>extent は『程度・範囲』を表す名詞</em>。"},
+   {t:"意味で確認", d:"「知識文化は<u>ある程度</u>すでにここにあるが、近い将来さらに広まる」＝but 以下（さらに広まる）とも自然につながる。"}],
+ ev:{q:'The knowledge culture is <span class="h">to some extent</span> already here, but it will become even more widespread', jp:"「知識文化はある程度すでにここにあるが、さらに広まるだろう」。"},
+ co:[{c:"gold",l:"to some extent",h:"<b>『ある程度まで』</b>。<u>extent（名詞）だけが to some の後ろに入れる</u>。品詞で一発で決まる問題。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>綴りの似た語（extend/expand/extent）を、品詞と熟語で区別できるか</b>。<u>意味の前に品詞を見る</u>のが最短。"}],
+ sol:[{m:"x",n:"①",t:"expect は動詞（予期する）。<u>to some expect という形は存在しない</u>。〈選びがちな人〉ex-で始まる似た綴りを見分けず、雰囲気で選ぶ人。"},
+      {m:"x",n:"②",t:"extend は動詞（伸ばす）。<u>名詞が必要な位置に入らない</u>。extent と綴りが1字違いの最大の罠。〈選びがちな人〉extent と extend の品詞の違いを意識していない人。"},
+      {m:"x",n:"③",t:"expand も動詞（拡大する）。<u>同じく品詞が合わない</u>。"},
+      {m:"o",n:"④",t:"正解。to some extent＝ある程度まで。extent は名詞。"}]},
+
+{id:"問1(F)", grp:"AB", type:"空所補充（句動詞）", lbl:"空所(F)", en:"taking a tiny step every day ( F ) up",
+ ask:"空所(F)に入る語としてもっとも適切なものを ①〜④ から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"plays", ok:false},{t:"adds", ok:true},{t:"makes", ok:false},{t:"dries", ok:false}],
+ steps:[
+   {t:"形を見る", d:"<b>( F ) up</b>＝<u>動詞＋up の句動詞</u>。主語は <em>taking a tiny step every day（毎日ごく小さな一歩を踏み出すこと）</em>。"},
+   {t:"文脈を読む", d:"直前：<em>「毎日本を読む必要はない。しかし〜」</em>＝<u>小さな積み重ねでよい</u>という励まし。"},
+   {t:"句動詞を確定", d:"<b>add up＝『積み重なる・効果を持つ』</b>＝②。「毎日の小さな一歩が積み重なる」。"}],
+ ev:{q:'You don\'t have to read a book every day — but taking a tiny step every day <span class="h">adds</span> up.', jp:"「毎日本を読む必要はない。だが毎日のごく小さな一歩が積み重なる」。"},
+ co:[{c:"gold",l:"add up",h:"<b>『積み重なる・合計して効果を生む』</b>。<u>小さな努力が集積する</u>という文脈の定番。"}],
+ sol:[{m:"x",n:"①",t:"play up は『目立たせる・不調になる』。<u>積み重ねの意味にならない</u>。"},
+      {m:"o",n:"②",t:"正解。add up＝積み重なる。"},
+      {m:"x",n:"③",t:"make up は『構成する・埋め合わせる・でっち上げる』。<u>『小さな一歩が埋め合わせる』では文意が通らない</u>。〈選びがちな人〉make up が有名なので、文脈を確認せず選ぶ人。"},
+      {m:"x",n:"④",t:"dry up は『干上がる』。<u>文脈と無関係</u>。"}]},
+
+/* ===== 問2〜問4：グループCD ===== */
+{id:"問2", grp:"CD", type:"下線部の言い換え", lbl:"下線部(a)", en:"(a)education could be tailored perfectly to each learner's needs",
+ ask:"下線部(a)が示す意味としてもっとも適切なものを ①〜④ から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"it may be possible for learners to obtain consistently correct information（学習者が常に正しい情報を得ることが可能かもしれない）", ok:false},{t:"it may be possible for learners to receive full marks（学習者が満点を取ることが可能かもしれない）", ok:false},{t:"it may be possible to design attractive clothes for everyone（皆のために魅力的な服をデザインすることが可能かもしれない）", ok:false},{t:"it may be possible to provide appropriate learning for everyone（誰にとっても適切な学習を提供することが可能かもしれない）", ok:true}],
+ steps:[
+   {t:"下線部を分解", d:"<b>education could be tailored perfectly to each learner's needs</b>＝<em>教育が、各学習者のニーズに完璧に合わせて調整され得る</em>。"},
+   {t:"tailor の意味を確認", d:"<b>tailor＝（服を）仕立てる → （個々に）合わせて作る</b>。<u>ここは比喩で『個別最適化する』</u>。"},
+   {t:"言い換えを選ぶ", d:"各人のニーズに合わせた教育＝<b>『誰にとっても適切な学習を提供する』</b>＝④。"}],
+ ev:{q:'With the right kind of information, <span class="h">education could be tailored perfectly to each learner\'s needs</span>', jp:"「適切な情報があれば、教育は各学習者のニーズに完璧に合わせて調整され得る」。"},
+ co:[{c:"gold",l:"tailor＝個別に合わせる",h:"<b>『仕立てる』→『個々のニーズに合わせて調整する』</b>。<u>教育の個別最適化</u>を表す比喩。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>比喩を字義通りに取らない力</b>。<u>tailor（仕立てる）から『服』を連想させる選択肢③が用意されている</u>。"}],
+ sol:[{m:"x",n:"①",t:"『常に正しい情報を得る』＝<u>情報の正確さの話にすり替えている</u>。下線部は『各人に合わせる』であって正誤の話ではない。〈選びがちな人〉直前の the right kind of information（適切な情報）に引きずられた人。"},
+      {m:"x",n:"②",t:"『満点を取る』＝<u>本文にない</u>。成績の話は出てこない。〈選びがちな人〉『教育』から試験・点数を連想した人。"},
+      {m:"x",n:"③",t:"『魅力的な服をデザインする』＝<u>tailor を『仕立て屋』と字義通りに読んだ罠</u>。ここは比喩。〈選びがちな人〉tailor の原義だけ知っていて、文脈（education）を見ない人。<b>最も引っかかりやすい誤答</b>。"},
+      {m:"o",n:"④",t:"正解。各学習者のニーズに合わせる＝誰にとっても適切な学習を提供する。"}]},
+
+{id:"問3", grp:"CD", type:"空所補充（つなぎ）", lbl:"空所(X)", en:"( X ), the global level of education is increasing rapidly",
+ ask:"空所(X)に入るものとしてもっとも適切なものを ①〜④ から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"At the same time（同時に）", ok:true},{t:"To be honest（正直に言うと）", ok:false},{t:"Nevertheless（それにもかかわらず）", ok:false},{t:"In spite of this（これにもかかわらず）", ok:false}],
+ steps:[
+   {t:"前後の関係を見る", d:"前段落：<em>データの応用（教育・政治・システムの最適化）</em>／空所後：<em>世界の教育水準が急速に高まっている</em>。<u>どちらもプラスの内容で、並列</u>。"},
+   {t:"『同義の選択肢は両方消える』と考える", d:"<b>③Nevertheless と ④In spite of this はほぼ同義（それにもかかわらず）</b>。<u>もし片方が正解なら、もう片方も正解になってしまう</u>＝<em>正解が1つに定まらないので両方とも消える</em>。"},
+   {t:"残りから選ぶ", d:"②To be honest（正直に言うと）は<u>前後の論理関係を表さない</u>。残る<b>①At the same time（同時に）</b>が、プラスの内容を並列に加える働きとして適切。"}],
+ ev:{q:'<span class="h">At the same time</span>, the global level of education is increasing rapidly with more people getting access to educational opportunities.', jp:"「同時に、より多くの人が教育機会を得て、世界の教育水準は急速に高まっている」。"},
+ co:[{c:"nav",l:"同義の選択肢は共倒れ",h:"<b>NeverthelessとIn spite of thisは同義</b>。<u>択一問題で同義の選択肢が2つあれば、その両方が答えになり得ないので消える</u>――この発想が本問の急所。"},
+     {c:"verm",l:"内容でも確認",h:"前後とも<b>プラスの内容の並列</b>なので、そもそも逆接（それにもかかわらず）は不要。<u>形式（同義消去）と内容（並列）の両面から①に決まる</u>。"}],
+ sol:[{m:"o",n:"①",t:"正解。前後のプラスの内容を並列に加える。"},
+      {m:"x",n:"②",t:"To be honest（正直に言うと）は<u>前後の論理関係を示さない</u>。話し手の態度を示すだけで、ここでは不要。"},
+      {m:"x",n:"③",t:"Nevertheless（それにもかかわらず）＝逆接。<u>前後とも肯定的な内容なので逆接は不要</u>。加えて④と同義なので、択一問題では両方消える。〈選びがちな人〉逆接の接続語を無条件に『それっぽい』と感じる人。"},
+      {m:"x",n:"④",t:"In spite of this も③と同義の逆接。<u>同義の選択肢が2つある時点で、どちらも正解になり得ない</u>。〈選びがちな人〉③と④の意味の重なりに気づかず、片方だけを検討する人。"}]},
+
+{id:"問4", grp:"CD", type:"下線部の言い換え", lbl:"下線部(b)", en:"(b)lifelong learning",
+ ask:"下線部(b)が示す意味としてもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"teaching students of all ages throughout our lives（生涯にわたりあらゆる年齢の生徒を教えること）", ok:false},{t:"neglecting important information throughout our lives（生涯にわたり重要な情報を無視すること）", ok:false},{t:"acquiring new knowledge throughout our lives（生涯にわたり新しい知識を獲得すること）", ok:true},{t:"attending schools and colleges throughout our lives（生涯にわたり学校や大学に通うこと）", ok:false}],
+ steps:[
+   {t:"語の意味を押さえる", d:"<b>lifelong learning＝生涯学習</b>。<em>life（生涯）＋long（〜にわたる）＋learning（学ぶこと）</em>。"},
+   {t:"文脈で中身を確認", d:"直後：<em>「絶えず自らを成長させ、新しい技能を身につけることを期待され、強いられる」</em>。さらに後の心得1では<u>本・講座・動画・コミュニティなど多様な学びの形</u>が挙がる。"},
+   {t:"選ぶ", d:"<b>『生涯にわたり新しい知識を獲得すること』</b>＝③。学ぶ側の行為であり、学校に限らない。"}],
+ ev:{q:'its emphasis on <span class="h">lifelong learning</span>. … we will be expected and forced to continuously grow ourselves and acquire new skills.', jp:"「生涯学習の重視。私たちは絶えず自らを成長させ、新しい技能を身につけることを期待され強いられる」。"},
+ co:[{c:"gold",l:"learning＝学ぶ側",h:"<b>learning は『学ぶこと』であって『教えること』ではない</b>。<u>①（教える）は主体が逆</u>。"},
+     {c:"nav",l:"学校に限らない",h:"本文の心得1は<em>本・講座・動画・コミュニティ</em>を挙げる。<u>④（学校や大学に通う）は生涯学習を狭く限定しすぎ</u>。"}],
+ sol:[{m:"x",n:"①",t:"『教えること』＝<u>learning（学ぶこと）と主体が逆</u>。〈選びがちな人〉『生涯学習』を『生涯教育』と混同し、教える側で捉えた人。"},
+      {m:"x",n:"②",t:"『重要な情報を無視する』＝<u>本文と正反対</u>。生涯学習は情報を積極的に取り入れること。"},
+      {m:"o",n:"③",t:"正解。生涯にわたり新しい知識を獲得すること。"},
+      {m:"x",n:"④",t:"『学校や大学に通う』＝<u>学びの形を制度教育に限定しすぎ</u>。本文は本・講座・動画・コミュニティなど多様な学びを挙げる。〈選びがちな人〉『学習＝学校』と短絡した人。"}]},
+
+/* ===== 問5・問6：グループEF ===== */
+{id:"問5", grp:"EF", type:"内容一致", lbl:"問5（一致するもの）", en:"（本文全体）",
+ ask:"本文の内容と一致するものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"These days everyone is increasingly relying on libraries to find information.（近年、誰もが情報を探すのにますます図書館に頼っている）", ok:false},{t:"The amount of available data is expected to reach its limit soon.（利用可能なデータ量はまもなく限界に達すると予想される）", ok:false},{t:"Technological advances are expected to continue expanding knowledge culture.（技術の進歩が知識文化を拡大し続けると予想される）", ok:true},{t:"Future learning opportunities are expected to become increasingly restricted.（将来の学習機会はますます制限されると予想される）", ok:false}],
+ steps:[
+   {t:"第1段落を根拠にする", d:"<b>『インターネットの発明、スマホの普及、ビッグデータの台頭の結果、社会は知識文化へ変わった。これは今後も続き拡大する流れだ』</b>＝<u>技術の進歩が知識文化を拡大し続ける</u>。"},
+   {t:"選択肢と照合", d:"③<b>『技術の進歩が知識文化を拡大し続けると予想される』</b>＝第1段落の内容に一致。"},
+   {t:"他を消す", d:"①図書館＝<u>第2段落と矛盾</u>（図書館へ行く状況は想像できない）。②データが限界＝<u>第3段落と矛盾</u>（情報量は増え続ける）。④学習機会が制限される＝<u>第6段落と矛盾</u>（教育機会は拡大）。"}],
+ ev:{q:'This is a trend that is going to <span class="h">continue and grow in the future</span>, with more information becoming available to more people', jp:"「これは今後も続き拡大していく流れであり、より多くの情報がより多くの人に利用可能になる」。"},
+ co:[{c:"nav",l:"『続き拡大する』が鍵",h:"<b>第1段落の continue and grow</b>＝<u>知識文化は今後も拡大する</u>。技術（ネット・スマホ・ビッグデータ）がその原因として挙がっている。"}],
+ sol:[{m:"x",n:"①",t:"第2段落と矛盾。<u>『何か知りたいたびに図書館へ行く状況は想像できない』＝今は図書館に頼っていない</u>。〈選びがちな人〉本文に library という語があるのを見て、内容を確認せず選ぶ人（近接語の罠）。"},
+      {m:"x",n:"②",t:"第3段落と矛盾。<u>本文は情報量が『増え続ける』と述べ、限界には触れていない</u>。〈選びがちな人〉『いつか限界が来る』という一般常識で判断した人。"},
+      {m:"o",n:"③",t:"正解。第1段落の内容（技術の結果として知識文化が生まれ、今後も拡大する）に一致。"},
+      {m:"x",n:"④",t:"第6段落と矛盾。<u>本文は教育機会が拡大し教育水準が高まると述べる</u>。〈選びがちな人〉第7段落の『ストレス要因になり得る』というマイナス面を、機会の制限と読み違えた人。"}]},
+
+{id:"問6", grp:"EF", type:"内容一致（不一致）", lbl:"問6（一致しないもの）", en:"（本文全体）",
+ ask:"本文の内容と一致 しない ものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"Businesses are looking to collect more data about their customers.（企業は顧客についてより多くのデータを集めようとしている）", ok:false},{t:"Feeling an obligation to continue developing our abilities may cause anxiety.（能力を伸ばし続ける義務感が不安を引き起こし得る）", ok:false},{t:"Waiting calmly for useful information to reach us is the best approach.（有益な情報が自分に届くのを静かに待つのが最善の方法だ）", ok:true},{t:"Knowledge culture can help us to make a difference in the world.（知識文化は世界に変化をもたらす助けになり得る）", ok:false}],
+ steps:[
+   {t:"設問の向きを確認", d:"<b>『一致 しない もの』を選ぶ</b>＝<u>本文と食い違う選択肢が正解</u>。①②④が本文にあることを確認し、残りを選ぶ。"},
+   {t:"①②④を本文で確認", d:"①＝第3段落<em>（企業がますます多くのデータを収集）</em>。②＝第7段落<em>（十分だと感じられなければストレス要因になり得る）</em>。④＝心得3<em>（世界を無批判に受け入れるな、必要な変化をもたらせ）</em>。<u>すべて一致</u>。"},
+   {t:"残った③を判定", d:"本文の心得は<b>『出かけて集めよ』『問え』『適応せよ』という能動的な姿勢</b>。<u>③『静かに待つのが最善』は正反対</u>＝一致しない＝正解。"}],
+ ev:{q:'The information you need is there. You just need to <span class="h">go out and collect it</span>. … Don\'t blindly accept the world as it is. Be brave', jp:"「必要な情報はそこにある。出かけて集めればよい…世界を無批判に受け入れるな。勇敢であれ」＝能動的姿勢。"},
+ co:[{c:"verm",l:"本文の姿勢＝能動",h:"<b>4か条はすべて『自ら動け』</b>（学ぶ習慣・情報を集めよ・問え・適応せよ）。<u>『静かに待つ』は本文の主張と正反対</u>。"},
+     {c:"nav",l:"不一致問題の解き方",h:"<b>一致するものを消していく</b>のが確実。①第3段落／②第7段落／④心得3で確認でき、残った③が答え。"}],
+ sol:[{m:"x",n:"①",t:"第3段落に一致（企業がますます多くのデータを収集している）。<u>一致するので答えではない</u>。"},
+      {m:"x",n:"②",t:"第7段落に一致（十分だと感じられなければストレス要因になり得る）。<u>一致するので答えではない</u>。"},
+      {m:"o",n:"③",t:"正解（＝一致しない）。本文の心得は『出かけて集めよ』『問え』という能動的姿勢で、『静かに待つ』とは正反対。"},
+      {m:"x",n:"④",t:"心得3に一致（世界を無批判に受け入れず、必要な変化をもたらせ）。<u>一致するので答えではない</u>。〈選びがちな人〉『世界を変える』が大げさに感じて選ぶが、make a difference＝変化をもたらす、で本文と合う。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+</script>
+</body>
+</html>
