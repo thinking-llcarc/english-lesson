@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜慶應義塾大学 経済学部 2024 大問1（Remote Work Revolution）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">慶</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>慶應義塾大学 経済学部 2024 ／ 大問1</span></div>
+    <div class="top-meta">Remote Work Revolution<br>空所補充11問（語彙・語法・論理）</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>TRAPS</small>誤答の構造</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>1–4</small>設問 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>5–8</small>語彙選択・構文</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>9–11</small>設問 後半</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>空所補充11問。<br>解く鍵は「空所の外」にある。<br>直後の一文・後ろの形・段落の枠組み。</h1>
+    <p>慶應経済の大問1は、全問が空所補充。だが問われているのは単語力ではない。<em>空所の直後の一文が答えを名指ししていたり（問2）、空所の後ろの『形』が構文を決めていたり（問7・問8）、段落冒頭の一語が答えを縛っていたり（問4）する</em>。<u>空所そのものを睨んでも解けない。視線を空所の外に飛ばせるか</u>――出題者が測っているのはその一点に尽きる。</p>
+    <div class="thesis"><b>この大問を貫く3つの解き筋：</b>①<b>直後を読む</b>（問2はWhat it took was a virus.が、問10はコロン以下が答えを決める）。②<b>形で決める</b>（問7は&lt;O+to do&gt;、問8はA,B,C,or Dの並列、問11はwith）。③<b>枠組みから逆算</b>（問4はalike、問9は後続の列挙が主題文を決める）。</div>
+    <div class="stats">
+      <div class="stat"><b>9</b><span>段落構成</span></div>
+      <div class="stat"><b>11</b><span>空所</span></div>
+      <div class="stat"><b>3</b><span>語彙選択(5-7)</span></div>
+      <div class="stat"><b>やや難</b><span>難易度</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:24%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">語彙＋因果</td><td>問1</td><td>空所の後ろの<b>結果（leaving以下）</b>から逆算。in ~ numbers の型に気づく。</td></tr>
+      <tr><td class="cond">論理（否定の型）</td><td>問2 問3</td><td>問2＝<b>直後のWhat it took was a virus.</b>が決定打。問3＝<b>前の不確かさ／後の断定</b>を橋渡し。</td></tr>
+      <tr><td class="cond">段落の枠組み</td><td>問4 問9</td><td>問4＝段落冒頭の<b>alike（双方とも）</b>。問9＝<b>後続が列挙</b>だから『尽きない』。</td></tr>
+      <tr><td class="cond">語彙選択（3語配分）</td><td>問5 問6 問7</td><td><b>目的語との相性</b>で割り振る。問7は<b>&lt;empower O to do&gt;</b>の形が決め手。</td></tr>
+      <tr><td class="cond">構文・語法</td><td>問8 問11</td><td>問8＝<b>A, B, C, or D の並列</b>を受ける whether it be。問11＝<b>be rewarded with</b>。</td></tr>
+      <tr><td class="cond">評価の方向</td><td>問10</td><td><b>but の転換＋コロン以下のプラス</b>で『必ずしも悪くない』。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。この解説の核心は、<u>誤答ごとに「なぜダメか」だけでなく「どういう読み方をした人が選ぶか」</u>まで書いた点です。<strong>自分がどのタイプの誤読をしやすいか</strong>を特定してください。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 9段落の流れと空所の在りか<span class="sub">「問題提起→歴史→データ→利点①②③→反論への応答→結論」。一貫してリモートワークを擁護する論調。空所がどこに刺さるかを俯瞰する。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>問題提起</span></div><div class="para-b">
+      <div class="theme">労働者の反乱→答えはリモートワーク</div><p><em>前例のない人数</em>が離職し企業が機能不全に。「答えは単純、リモートワークだ」と<u>最初に立場表明</u>。</p><div class="tags"><span class="utag">［1］</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>歴史と皮肉</span></div><div class="para-b">
+      <div class="theme">促したのはウイルスだった</div><p>ナイルズ＝障壁は社会的／近年＝技術の進歩。<em>だが皮肉にも、そのどちらでもなかった</em>。必要だったのはウイルス。</p><div class="tags"><span class="utag">［2］</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>データ</span></div><div class="para-b">
+      <div class="theme">経済は回復、鍵はリモート採用</div><p>2020年は3.3%縮小。翌年は5.8%成長。<em>測定は困難だが、明確なのは</em>リモートを迅速採用した政府・企業が乗り切ったこと。</p><div class="tags"><span class="utag">［3］</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>利点①</span></div><div class="para-b">
+      <div class="theme">コスト削減は労使双方に</div><p>冒頭で<u>alike（双方とも）</u>と枠組み提示。従業員＝交通費・保育費／<em>雇用者も同じくらい</em>＝オフィス費・賃料。</p><div class="tags"><span class="utag">［4］</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>事例</span></div><div class="para-b">
+      <div class="theme">Bildemup社の証言</div><p>紙の回覧を廃止しオンライン化→業務を<em>効率化</em>し、柔軟性を<em>提供</em>。遠方の新規案件も<em>可能に</em>。</p><div class="tags"><span class="utag">［5］</span><span class="utag">［6］</span><span class="utag">［7］</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>利点②</span></div><div class="para-b">
+      <div class="theme">生産性低下の懸念に反論</div><p>「離れると生産性が下がる」→<u>過去には正当だったが今は違う</u>。最適な環境を選べる（<em>自宅・カフェ・山頂・ビーチいずれでも</em>）。</p><div class="tags"><span class="utag">［8］</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>利点③</span></div><div class="para-b">
+      <div class="theme">利点は尽きない（環境まで）</div><p><em>利点は尽きないように思われる</em>→自由・満足度・居住地・WLB・社内政治・忠誠心・欠勤、さらに環境改善まで列挙。</p><div class="tags"><span class="utag">［9］</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>反論への応答</span></div><div class="para-b">
+      <div class="theme">レストランへの影響も悪くない</div><p>ビル所有者・レストランへの悪影響という反論→賃料低下で多様な利用が可能に。レストランも<em>必ずしも悪くない</em>（体験改善・配達増）。</p><div class="tags"><span class="utag">［10］</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>結論</span></div><div class="para-b">
+      <div class="theme">企業は忠実な従業員で報われる</div><p>従業員の要望に応える企業は、忠実な従業員という見返りで<em>報われる</em>。労働者は生活と地域の質を高める。</p><div class="tags"><span class="utag">［11］</span></div></div></div><div class="box navy"><span class="lab">論調を掴むことが最大の武器</span>
+  この記事は<strong>徹底してリモートワークを擁護する</strong>立場（著者名 Noah Fice＝"no office" の言葉遊び）。<u>反論を挙げてもすぐ打ち消し、悪影響も「必ずしも悪くない」と転じる</u>。この論調を掴んでいれば、<em>問9（欠点で相殺される→×）や問10（マイナス評価→×）は読む前に半分消せる</em>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">誤答の構造へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Trap Analysis</div>
+  <h1 class="head">誤答の構造 ― 出題者は何を試しているか<span class="sub">この大問の誤答は、行き当たりばったりに作られていない。受験生の典型的な誤読を狙って設計されている。5つの型を知れば、選択肢を見た瞬間に候補が絞れる。</span></h1>
+  <div class="rule"></div>
+
+  <div class="para"><div class="para-n"><b>A</b><span>近接語</span></div><div class="para-b">
+    <div class="theme">近くにある単語に引きずらせる罠</div>
+    <p>空所の近くにある印象的な単語を、そのまま選択肢に混ぜてくる。<strong>問1の unstable</strong>は、直前の <em>stable jobs</em> に反応させる罠。<strong>問2の organizational</strong>は、同段落の <em>outdated organizational schemes</em> を拾わせる罠。<u>「本文にあった単語だ」という既視感で選ばせる</u>のが狙い。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>空所が修飾・支配する語を正確に見る力</strong>。問1なら『空所は numbers を修飾する』と特定できれば、unstable numbers が意味をなさないと即座に分かる。</div>
+    <div class="tags"><span class="utag">問1</span><span class="utag">問2</span></div></div></div>
+
+  <div class="para"><div class="para-n"><b>B</b><span>直後未読</span></div><div class="para-b">
+    <div class="theme">空所の直後を読まないと必ず外す設計</div>
+    <p><strong>問2</strong>は空所直後の <em>What it took was a virus.</em>（必要だったのはウイルス）を読めば一発で neither...nor に決まる。だが直前だけ見ると『技術の進歩で可能になった』とあるので、<u>技術を肯定する選択肢2を選んでしまう</u>。<strong>問10</strong>も同じで、コロン以下のプラスの内容を読まずに『打撃を受けた』という常識で選ぶとマイナス評価の1・4を選ぶ。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>空所の答えは直後に書かれている、と知っているか</strong>。空所補充は『前後を読む』が鉄則だが、<u>特に直後の一文・コロン以下は答えそのもの</u>であることが多い。</div>
+    <div class="tags"><span class="utag">問2</span><span class="utag">問10</span></div></div></div>
+
+  <div class="para"><div class="para-n"><b>C</b><span>意味○形×</span></div><div class="para-b">
+    <div class="theme">意味は合うが、後ろの形が合わない罠</div>
+    <p><strong>問8の regardless of</strong>は意味（〜に関係なく）だけなら文脈にぴたり合う。だが後ろに続くのは <em>at home, at a café…</em> という前置詞句の並列で、<u>regardless of の後ろには名詞が必要</u>だから接続できない。<strong>問7の expected</strong>も &lt;expect O to do&gt; という形は取れるが、文意（どこでも働けるから可能になった）と合わない。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>意味と語法の両方で検算する力</strong>。<u>意味が合った瞬間に飛びつかず、「後ろの形はこれで成立するか」を必ず確認する</u>。慶應経済が最も好む問い方。</div>
+    <div class="tags"><span class="utag">問7</span><span class="utag">問8</span><span class="utag">問11</span></div></div></div>
+
+  <div class="para"><div class="para-n"><b>D</b><span>枠組み無視</span></div><div class="para-b">
+    <div class="theme">段落の主題文・キーワードを見落とさせる罠</div>
+    <p><strong>問4</strong>は段落冒頭に <em>companies and workers alike（双方とも同様に）</em>とあり、この一語が答えを縛っている。だが空所の周囲だけ見ると、直後に雇用者の恩恵が並ぶので<u>『雇用者こそ真の受益者』（選択肢1）を選びたくなる</u>。<strong>問9</strong>も、後続が『列挙』か『一点集中』かを見れば決まるのに、部分だけ読むと『一つが際立つ』を選ぶ。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>段落全体の枠組みから空所を判断する力</strong>。<u>空所補充は局所的な問題に見えて、実は段落の設計図を読ませている</u>。</div>
+    <div class="tags"><span class="utag">問4</span><span class="utag">問9</span></div></div></div>
+
+  <div class="para"><div class="para-n"><b>E</b><span>論調ずれ</span></div><div class="para-b">
+    <div class="theme">記事の立場と逆の「常識的な」選択肢</div>
+    <p>一般常識では『リモートワークでレストランは打撃』『メリットにはデメリットが伴う』と考えるのが自然。だがこの記事は<u>徹底してリモートワークを擁護する立場</u>。<strong>問9の選択肢3（欠点で相殺される）</strong>や<strong>問10の選択肢1・4（マイナス評価）</strong>は、<em>常識的でバランスが取れているように見えるが、この記事の論調とは正反対</em>。</p>
+    <div class="box verm" style="margin:10px 0 0"><span class="lab">試されている力</span><strong>筆者の立場を掴み、自分の常識と切り離す力</strong>。<u>「自分ならこう思う」ではなく「この筆者ならこう書く」で選ぶ</u>。</div>
+    <div class="tags"><span class="utag">問9</span><span class="utag">問10</span></div></div></div>
+
+  <div class="box gold"><span class="lab">まとめ ― 選択肢を見たらこの順で疑う</span>
+    ①<strong>本文にあった単語がそのまま入っていないか</strong>（近接語の罠）→②<strong>空所の直後・コロン以下を読んだか</strong>→③<strong>後ろの形はその語で成立するか</strong>（意味だけで選んでいないか）→④<strong>段落冒頭の枠組みと矛盾しないか</strong>→⑤<strong>筆者の論調と逆を向いていないか</strong>。<u>この5つを通せば、11問すべてで誤答が機械的に消える</u>。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問1〜4へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問1〜問4 ― 語彙・論理・段落の枠組み<span class="sub">空所の外（直後の一文・段落冒頭）を見る問題群。各カードで<b>誤答を選ぶ人のタイプ</b>まで確認を。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 誤答の構造</button><span class="sp"></span><button class="btnp" data-go="4">問5〜8へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問5〜問8 ― 語彙の配分と構文<span class="sub">問5〜7は3語を3空所に配る問題。<b>目的語との相性</b>と<b>&lt;O+to do&gt;の形</b>で決まる。問8は並列を受ける構文。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">問5〜7の解き順</span>
+    <strong>形が決まっているものから確定させる</strong>のが鉄則。まず<u>［7］＝後ろが &lt;the business to take on&gt; なので empower で確定</u>。次に<u>［6］＝目的語が flexibility なので provide</u>。残った<u>［5］＝operations に streamlined</u>。<em>一つずつ独立に考えず、全体で1回ずつ使う条件を利用する</em>。</div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問1〜4</button><span class="sp"></span><button class="btnp" data-go="5">問9〜11へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問9〜問11 ― 主題文・評価の方向・語法<span class="sub">問9は後続の展開から主題文を逆算。問10はコロン以下の方向。問11は主語の特定とbe rewarded with。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 問5〜8</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全9段落・44文）。番号①②③…は各段落内の文の順番。<b>赤字</b>が空所・設問に直結する箇所。各段落の下に根拠をまとめた。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">読むときの視点</span>
+    空所補充の答えは<strong>ほぼすべて本文の別の箇所に書いてある</strong>。訳を読むときは、<u>「この空所の答えは、どの一文が決めているか」</u>を毎回確かめてほしい。問2なら次の一文、問4なら段落冒頭、問10ならコロン以下――<em>答えの在りかを見つける訓練</em>が、そのまま得点力になる。</div><div class="tr-sec"><b>第1段落</b>｜問題提起 ― 労働者の反乱と答え　<span class="qbadge">1</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">労働者が反乱を起こしている。</div></div><div class="jpline"><div class="n">②</div><div class="s">驚くべきことに、あらゆる経済分野の人々が<em>前例のない人数で</em>安定した職を辞めることを選んでおり、その結果、多くの企業が機能できなくなっている。</div></div><div class="jpline"><div class="n">③</div><div class="s">より高い給与を求める労働者もいれば、学歴を高めたい人もおり、単に「自分のための」時間を取っている人もいる。</div></div><div class="jpline"><div class="n">④</div><div class="s">こうした労働者を呼び戻すには何ができるのか、そして彼らの労働条件をどう改善できるのか。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">答えは単純だ。リモートワークである。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第1段落</div><ul><li><b>［1］unprecedented</b>「前例のない」＝<u>問1の正解＝3</u>。<em>in unprecedented numbers「前例のないほどの人数で」</em>とすると、後続の<b>leaving many businesses unable to function（多くの企業が機能不全になる）</b>という結果とつながる。<span class="qbadge">1</span></li>
+    <li><b>leaving ~（分詞構文・結果）</b>「その結果〜になる」。<u>空所の後ろが『結果』を示す</u>ので、空所には『それだけの規模だから企業が回らなくなる』と言える語が入る。</li>
+    <li><b>The answer is simple: remote work.</b>＝この記事の立場表明。<em>以降はリモートワークの利点を並べる論調</em>だと最初に分かる。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜歴史と皮肉 ― 促したのはウイルスだった　<span class="qbadge">2</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワークとは、従業員が指定されたオフィスビルに通勤しない働き方である。</div></div><div class="jpline"><div class="n">②</div><div class="s">もちろん、リモートワークは何十年も前から存在していた。</div></div><div class="jpline"><div class="n">③</div><div class="s">1970年代にジャック・ナイルズによって初めて「テレコミューティング」と名づけられた。</div></div><div class="jpline"><div class="n">④</div><div class="s">ナイルズは、その実施を妨げる障壁は技術的なものではなく社会的な性質のものだと主張した。従業員を机に縛りつけていたのは、頑固な管理職と時代遅れの組織体制だった、と。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">確かに、近年の普及は通信技術とパソコンの進歩によって可能になった。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">しかし皮肉なことに、2020年にリモートワーク革命に拍車をかけたのは<em>技術的変革でも社会的変革でもなかった</em>。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">必要だったのは、ウイルスだったのである。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第2段落</div><ul><li><b>［2］neither a technological nor a social transformation</b>「技術的変革でも社会的変革でもない」＝<u>問2の正解＝3</u>。<em>空所直後の『What it took was a virus.（必要だったのはウイルスだった）』</em>が決定打。<u>技術でも社会でもない『第三の要因＝ウイルス』</u>だから neither...nor。<span class="qbadge">2</span></li>
+    <li><b>Ironically（皮肉なことに）</b>が伏線：<em>ナイルズは『障壁は社会的』と言い、近年の普及は『技術』のおかげ</em>と述べた直後で、<u>実際に革命を起こしたのはそのどちらでもなかった</u>＝だから皮肉。</li>
+    <li><b>この段落の構造</b>：社会的要因（ナイルズ）→技術的要因（近年）→<em>しかし実際はどちらでもなくウイルス</em>。<u>2つを挙げてから両方を否定する</u>流れを掴むこと。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜データ ― 経済は回復した　<span class="qbadge">3</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">新型コロナウイルスのパンデミックは、2022年まで多くの国に影響を及ぼすロックダウンを生んだ。</div></div><div class="jpline"><div class="n">②</div><div class="s">2020年度には、これによって世界経済は3.3%縮小し、大量の解雇の波が伴った。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし翌年、制限がまだ残っていた国々では経済活動を正確に測ることが困難だったにもかかわらず、驚くべきことに世界の成長率は5.8%に達したようである。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>これを説明するのは容易ではないが、一つはっきりしていることがある</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">経済の数字は全般に改善し、いくつかの注目すべき例外はあるものの、この嵐を最もうまく乗り切ることができた政府や企業は、リモートワーク政策を迅速に採用したところだった。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第3段落</div><ul><li><b>［3］Explaining this is not easy, but one thing is clear</b>「これを説明するのは容易ではないが、一つはっきりしていることがある」＝<u>問3の正解＝2</u>。<em>空所の直前＝『正確な測定は困難』、直後＝『リモートワークを迅速に採用した政府・企業が乗り切った』と明確に述べる</em>。<u>『説明は難しい、しかし一つ明確なことがある』が両者を橋渡し</u>。<span class="qbadge">3</span></li>
+    <li><b>despite difficulties in accurately measuring</b>「正確に測るのは困難だが」＝<u>空所前の『不確실さ』</u>。ここを受けて『説明は容易でない』と受け、but で『しかし明確なことは』と転じる。</li>
+    <li><b>surprisingly global growth seems to have reached 5.8%</b>「驚くことに5.8%に達したようだ」＝<em>seem＝断定を避ける</em>。この不確かさが空所2の『説明は容易でない』と呼応する。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜利点① ― コスト削減は労使双方に　<span class="qbadge">4</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワークの恩恵は企業と労働者の双方が感じたが、コスト削減ほど重要なものはなかった。</div></div><div class="jpline"><div class="n">②</div><div class="s">従業員にとって、職場に行くことは交通費、昼食代、仕事着、さらに同僚の誕生日プレゼントのような隠れた出費を生じさせる。</div></div><div class="jpline"><div class="n">③</div><div class="s">在宅で働く親は、保育費の節約という恩恵を受けられるかもしれない。</div></div><div class="jpline"><div class="n">④</div><div class="s">同時に、<em>雇用者も従業員と同じくらい恩恵を受ける</em>。リモートワークはオフィススペースの必要性を減らすからだ。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">賃料、光熱費、清掃、家具、さらには交通費や住宅手当の削減にも、節約が見いだせるかもしれない。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第4段落</div><ul><li><b>［4］employers benefit just as much as employees</b>「雇用者も従業員と同じくらい恩恵を受ける」＝<u>問4の正解＝2</u>。<em>空所直後で雇用者側の恩恵（オフィス費・賃料・光熱費の削減）が列挙される</em>。<span class="qbadge">4</span></li>
+    <li><b>第1文が枠組み</b>：<em>The benefits … were felt by companies and workers alike（企業と労働者の双方が恩恵）</em>。<u>alike（双方とも）＝『どちらか一方が得』ではない</u>。だから選択肢1（雇用者こそ真の受益者）3（雇用者の恩恵は影が薄い）は枠組みに反する。</li>
+    <li><b>At the same time</b>「同時に」＝<em>従業員の話（前）と並列で雇用者の話（後）へ</em>。この並列も『双方が同じくらい』を支持する。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜事例 ― Bildemup社の証言　<span class="qbadge">5</span> <span class="qbadge">6</span> <span class="qbadge">7</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">こうした考えを最もよく表していたのが、ケンブリッジの建設会社ビルデムアップのシーモア・ドルハーズだった。「リモートワークは全員にとってウィンウィンだ」とドルハーズは語った。</div></div><div class="jpline"><div class="n">②</div><div class="s">パンデミックが襲ったとき、同社は本社を閉鎖し、事務職の従業員をオンラインに移した。</div></div><div class="jpline"><div class="n">③</div><div class="s">「まず最初にしたのは、承認のために書類をオフィス中で回覧させるという以前のやり方をなくすことでした」とドルハーズは説明した。</div></div><div class="jpline"><div class="n">④</div><div class="s">ビルデムアップにとって、すべてをオンライン化したことは業務を<em>効率化し</em>、従業員に柔軟性を<em>提供した</em>。そして今のところ誰一人辞めていない。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">それはまた、社員がどこからでも働けるため、以前の本社から遠く離れた新しいプロジェクトを引き受けることを会社に<em>可能にした</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第5段落</div><ul><li><b>［5］streamlined</b>「効率化した」＝<u>問5の正解＝5</u>。<em>紙の書類を回覧していたのをオンライン化した→業務を効率化した</em>。目的語は operations（業務）。<span class="qbadge">5</span></li>
+    <li><b>［6］provided</b>「提供した」＝<u>問6の正解＝4</u>。<em>空所直後の flexibility for employees（従業員への柔軟性）が provided の目的語</em>。<span class="qbadge">6</span></li>
+    <li><b>［7］empowered</b>「可能にした」＝<u>問7の正解＝1</u>。<em>&lt;empower + O + to do&gt;「Oが〜することを可能にする」</em>。空所直後が <b>the business to take on new projects</b> という O + to do の形。<u>語法（後ろの形）で一発で決まる</u>。<span class="qbadge">7</span></li></ul></div><div class="tr-sec"><b>第6段落</b>｜利点② ― 生産性の懸念への反論　<span class="qbadge">8</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワークについて根強い懸念の一つは、従業員がオフィス環境から離れると生産性が下がるだろうというものだ。</div></div><div class="jpline"><div class="n">②</div><div class="s">これは過去には正当だったかもしれないが、今日ではほとんどの仕事がノートパソコンとインターネット接続があればできる。</div></div><div class="jpline"><div class="n">③</div><div class="s">リモートで働くことで従業員は自分に最適な環境を見つけられる。<em>それが</em>自宅であろうと、近所のカフェであろうと、山の頂上であろうと、日当たりのよいビーチであろうと。</div></div><div class="jpline"><div class="n">④</div><div class="s">通勤によるストレスも無駄な時間もなく、労働者はより幸福で生産的になる。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第6段落</div><ul><li><b>［8］whether it be</b>「それが〜であろうと」＝<u>問8の正解＝4</u>。<em>空所直後が A, B, C, or D（at home / at a café / on a mountain / at a beach）という並列</em>。<u>whether it be A, B, C, or D＝「AだろうとBだろうと…であろうと」</u>と筋が通る。<span class="qbadge">8</span></li>
+    <li><b>whether it be</b> は<em>仮定法現在（be）を用いた譲歩</em>の定型。硬めの書き言葉で頻出。</li>
+    <li><b>This may have been justified in the past, but ~</b>「過去には正当だったかもしれないが」＝<u>譲歩→反論</u>。懸念を一度認めてから否定する、この記事の典型的な運び方。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜利点③ ― 利点は尽きない（環境まで）　<span class="qbadge">9</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>リモートワークの利点は、尽きることがないように思われる</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">それは自由を増し、仕事の満足度を高め、労働者が好きな場所に住むことを可能にし、ワークライフバランスを改善する。</div></div><div class="jpline"><div class="n">③</div><div class="s">有害な社内政治を減らし、忠誠心を高め、欠勤を減らす。</div></div><div class="jpline"><div class="n">④</div><div class="s">これらの恩恵の中で、あまり知られていないものの一つが環境への影響である。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">パンデミック中のロックダウンでは、大都市の住民は空が晴れ、道路が静かになり、かつてないほどきれいな川や湖に驚嘆した。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">リモートワークがこうした改善に部分的にしか寄与していないとはいえ、それが温室効果ガスとエネルギー消費をどう減らすかは容易に見て取れる。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第7段落</div><ul><li><b>［9］The positives of remote work are seemingly endless</b>「リモートワークの利点は尽きないように思われる」＝<u>問9の正解＝4</u>。<em>空所の後に利点が次々と列挙され（自由・満足度・居住地・WLB・社内政治・忠誠心・欠勤減）、さらに環境への好影響まで加わる</em>。<u>『列挙が続く』ことを予告する一文</u>。<span class="qbadge">9</span></li>
+    <li><b>Among these benefits, one of the less well-noted is ~</b>「これらの恩恵の中で、あまり知られていないものの一つが」＝<em>利点の列挙が続いている証拠</em>。空所2（＝選択肢2『一部の利点は他より重要』）や1（『一つが際立つ』）だと、この『次々挙げる』流れと合わない。</li>
+    <li><b>While ~ only partially responsible</b>「部分的にしか寄与していないとはいえ」＝<u>譲歩</u>。それでも利点として数える、という論調。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜反論への応答 ― レストラン業界も　<span class="qbadge">10</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワーク革命のより広い影響を心配する人々もいる。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らは、企業が賃貸契約を手放すことでビルの所有者に悪影響が出る、あるいは地元のレストランを廃業に追い込むと主張する。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし、サンフランシスコからマンハッタンまで、アメリカの都市中心部では住宅用・商業用スペースの賃料が下がり、それによってこの一等地の新しく多様な利用が可能になった。</div></div><div class="jpline"><div class="n">④</div><div class="s">確かに、リモートワークはレストラン業界に深い影響を与えた。しかしそれは<em>必ずしも悪いことではない</em>。その圧力がレストランに、驚くような形で客の食事体験を改善させ、テイクアウトや配達の選択肢を増やさせたのだから。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第8段落</div><ul><li><b>［10］not necessarily a bad thing</b>「必ずしも悪いことではない」＝<u>問10の正解＝3</u>。<em>空所直後のコロン以下で『客の食事体験の改善』『テイクアウト・配達の拡充』というプラスの変化</em>が述べられる。<span class="qbadge">10</span></li>
+    <li><b>Certainly ~, but that is ［10］</b>：<u>Certainly（確かに）＝譲歩</u>→ but で転換。<em>『影響は与えた。だが悪いとは限らない』</em>という譲歩→反論の型。</li>
+    <li><b>この段落の役割</b>：<em>反対意見（ビル所有者・レストランへの悪影響）を挙げ、それに反論する</em>。<u>記事全体がリモートワーク擁護の論調</u>であることを再確認。</li></ul></div><div class="tr-sec"><b>第9段落</b>｜結論 ― 企業は忠実な従業員で報われる　<span class="qbadge">11</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワーク革命は、企業の運営方法を変え続けるだろう。</div></div><div class="jpline"><div class="n">②</div><div class="s">企業が従業員のリモートワーク環境への要望や期待に応えるとき、企業は、より良い仕事をする備えのある忠実な従業員という形で<em>報われる</em>ことになる。</div></div><div class="jpline"><div class="n">③</div><div class="s">通勤経路や古臭いオフィス空間に縛られず、労働者は自分の生活の質を、ひいては自分が住むより広い地域社会の質を高められるかもしれない。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第9段落</div><ul><li><b>［11］rewarded</b>「報われる」＝<u>問11の正解＝4</u>。<em>they（＝従業員の要望に応える企業）が『忠実な従業員』をその見返りとして与えられる</em>。<u>be rewarded with ~「〜で報われる」</u>という語法。<span class="qbadge">11</span></li>
+    <li><b>主語theyの特定が鍵</b>：<em>they＝companies（従業員のためにリモート環境を整える企業）</em>。<u>『企業が報われる』</u>という関係を掴めば rewarded が選べる。</li>
+    <li><b>be rewarded with</b>：報酬・見返りを表す定型。<em>earned/granted/recognized は with を伴ってこの意味にならない</em>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 問9〜11</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした問題がどの「誤答の型」に当たるかを特定して潰す。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:12%">設問</th><th style="width:10%">解答</th><th style="width:30%">決め手</th><th>陥りやすい誤答と型</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問1</td><td><b>3</b></td><td>in unprecedented numbers＋leaving以下の結果</td><td>4 unstable（近接語 stable jobs の罠／A型）</td></tr>
+      <tr><td class="cond">問2</td><td><b>3</b></td><td>直後 What it took was a virus.</td><td>2（直前の技術だけ見る／B型）4（organizational を拾う／A型）</td></tr>
+      <tr><td class="cond">問3</td><td><b>2</b></td><td>前＝測定困難／後＝断定 を橋渡し</td><td>4 予測可能（surprisingly と矛盾／B型）</td></tr>
+      <tr><td class="cond">問4</td><td><b>2</b></td><td>段落冒頭の alike（双方とも）</td><td>1 雇用者こそ受益者（枠組み無視／D型）</td></tr>
+      <tr><td class="cond">問5</td><td><b>5</b></td><td>紙の回覧廃止→operations を効率化</td><td>配分を意識せず個別に選ぶ</td></tr>
+      <tr><td class="cond">問6</td><td><b>4</b></td><td>目的語 flexibility との相性</td><td>意味の近い語を相性未確認で選ぶ</td></tr>
+      <tr><td class="cond">問7</td><td><b>1</b></td><td>&lt;empower O to do&gt; の形</td><td>3 expected（形は合うが文意が合わない／C型）</td></tr>
+      <tr><td class="cond">問8</td><td><b>4</b></td><td>A, B, C, or D の並列を受ける</td><td>3 regardless of（意味○形×／C型）</td></tr>
+      <tr><td class="cond">問9</td><td><b>4</b></td><td>後続が利点の列挙</td><td>3 欠点で相殺（論調ずれ／E型）1（部分だけ読む／D型）</td></tr>
+      <tr><td class="cond">問10</td><td><b>3</b></td><td>but＋コロン以下がプラス</td><td>1・4 マイナス評価（常識に引きずられる／E型）2 語形ミス</td></tr>
+      <tr><td class="cond">問11</td><td><b>4</b></td><td>be rewarded with＋主語＝企業</td><td>2 granted（with との相性未確認／C型）</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした「型」から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>近接語の罠で落ちた（問1・問2）</b><p>本文にあった単語が選択肢に混ざっていると、既視感で選んでしまう。対策は<em>「空所が何を修飾・支配するか」を先に特定する</em>こと。<u>問1なら『空所＋numbers』、問2なら『it was ~ that』の強調構文の中身</u>。ここを固定してから選択肢を見る。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>直後を読まずに落ちた（問2・問3・問10）</b><p>空所補充の答えは<em>直後の一文やコロン以下に書かれている</em>ことが極めて多い。<u>問2＝What it took was a virus.／問3＝後続の断定／問10＝コロン以下のプラス</u>。空所を見たら、まず<strong>後ろを1〜2文読み切る</strong>習慣をつける。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>意味だけで選んで形を外した（問7・問8・問11）</b><p>慶應経済が最も好む問い方。<em>意味が合っても、後ろの形が成立しなければ不正解</em>。<u>regardless of の後ろは名詞／empower は O + to do／be rewarded は with</u>。<strong>意味で候補を絞り、語法で確定する</strong>という二段構えを徹底する。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>段落の枠組みを見落とした（問4・問9）</b><p>空所の周囲だけ見ると誤答が魅力的に見える。<em>段落冒頭の一語（alike）や、後続の展開の形（列挙か一点集中か）が答えを決めている</em>。<u>空所補充でも「段落全体の設計図」を確認する</u>。</p></div></div>
+  <div class="route"><div class="rn">E</div><div><b>自分の常識で選んだ（問9・問10）</b><p>『メリットには必ずデメリットがある』『リモートでレストランは打撃』――常識としては正しいが、<em>この記事は徹底してリモートワークを擁護する立場</em>。<u>「自分ならこう思う」ではなく「この筆者ならこう書く」で選ぶ</u>。論調の把握が得点を分ける。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    慶應経済の空所補充は、<strong>単語を知っているかではなく、空所の外を見られるかを測る試験</strong>です。直後の一文、後ろの形、段落冒頭の枠組み、記事全体の論調――<u>答えは必ず空所の外にある</u>。この4か所を機械的に確認する型を身につければ、初見の英文でも同じ精度で解けます。落とした問題は、単語を覚え直すのではなく<em>「どこを見ていなかったか」</em>で振り返ってください。</div>
+
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は慶應義塾大学経済学部2024年英語（大問1）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問1〜4：グループAB ===== */
+{id:"問1", grp:"AB", type:"空所補充（語彙）", lbl:"空所［1］", en:"people across every economic sector are choosing to quit stable jobs in [ 1 ] numbers, leaving many businesses unable to function",
+ ask:"空所［1］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"understandable（理解できる）", ok:false},{t:"unmistaken（間違いのない）", ok:false},{t:"unprecedented（前例のない）", ok:true},{t:"unstable（不安定な）", ok:false}],
+ steps:[
+   {t:"空所の後ろ（結果）を見る", d:"<b>leaving many businesses unable to function</b>「その結果、多くの企業が機能できなくなっている」＝<u>分詞構文で『結果』</u>。空所には<em>『それほどの規模だから企業が回らなくなる』と言える語</em>が入る。"},
+   {t:"in ~ numbers の型を押さえる", d:"<b>in ~ numbers＝『〜な人数で』</b>。<em>in large numbers（大人数で）／in unprecedented numbers（前例のない人数で）</em>という使い方。"},
+   {t:"選ぶ", d:"<b>in unprecedented numbers「前例のないほどの人数で」</b>＝3。だからこそ企業が機能不全に陥る、と結果につながる。"}],
+ ev:{q:'people … are choosing to quit stable jobs in <span class="h">unprecedented</span> numbers, leaving many businesses unable to function', jp:"「前例のない人数で安定した職を辞めており、その結果多くの企業が機能できなくなっている」。"},
+ co:[{c:"gold",l:"in ~ numbers",h:"<b>『〜な人数で』を表す型</b>。空所には<u>数の規模</u>を表す形容詞が入る、と見抜けるかが第一関門。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>空所の後ろの『結果』から逆算する力</b>を測っている。<u>語彙力だけでなく、分詞構文が示す因果を読む力</u>。"}],
+ sol:[{m:"x",n:"1",t:"understandable（理解できる）＝『理解できる人数で』は意味をなさない。<u>numbers を修飾する語として不適</u>。〈選びがちな人〉un-で始まる語を雰囲気で選び、後ろの numbers との結びつきを検討していない人。"},
+      {m:"x",n:"2",t:"unmistaken（間違いのない）も numbers を修飾できない。<u>『間違いのない人数』は日本語でも英語でも不自然</u>。〈選びがちな人〉語義だけ見て、コロケーション（語の結びつき）を確認しない人。"},
+      {m:"o",n:"3",t:"正解。in unprecedented numbers（前例のない人数で）＝企業が機能不全になるほどの規模。"},
+      {m:"x",n:"4",t:"unstable（不安定な）は<u>『不安定な人数』となり意味不明</u>。なお本文には stable jobs（安定した職）があり、<b>そこに引きずられて選びやすい罠</b>。〈選びがちな人〉近くにある単語（stable）に反応して、空所が修飾する語（numbers）を見ていない人。"}]},
+
+{id:"問2", grp:"AB", type:"空所補充（論理）", lbl:"空所［2］", en:"Ironically, however, it was [ 2 ] that spurred the remote work revolution in 2020. What it took was a virus.",
+ ask:"空所［2］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"a combination of technological and social transformations（技術的変革と社会的変革の組み合わせ）", ok:false},{t:"a technological, not a social transformation（社会的ではなく技術的な変革）", ok:false},{t:"neither a technological nor a social transformation（技術的変革でも社会的変革でもないもの）", ok:true},{t:"not a technological transformation, but an organizational one（技術的変革ではなく組織的な変革）", ok:false}],
+ steps:[
+   {t:"空所直後の一文が決定打", d:"<b>What it took was a virus.</b>「必要だったのはウイルスだった」＝<u>革命を起こしたのはウイルス</u>。つまり<em>技術でも社会でもない『第三のもの』</em>。"},
+   {t:"段落の流れを確認", d:"ナイルズ＝<em>障壁は『社会的』</em>／近年の普及＝<em>『技術』の進歩による</em>。この2つを挙げた直後に<b>Ironically, however</b>＝<u>そのどちらでもなかった</u>という皮肉。"},
+   {t:"選ぶ", d:"<b>neither A nor B（AでもBでもない）</b>＝3。技術・社会という既出の2つを<u>まとめて否定</u>し、ウイルスという第三の要因につなぐ。"}],
+ ev:{q:'Ironically, however, it was <span class="h">neither a technological nor a social transformation</span> that spurred the remote work revolution in 2020. What it took was a virus.', jp:"「皮肉にも、2020年に革命に拍車をかけたのは技術的変革でも社会的変革でもなかった。必要だったのはウイルスだった」。"},
+ co:[{c:"nav",l:"Ironically が示す構造",h:"<b>皮肉＝『技術か社会か』と語ってきたのに、実際はどちらでもなかった</b>。<u>Ironically は『既出の枠組みを裏切る』合図</u>。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>空所の直後の一文を根拠に取れるか</b>。<u>neither...nor / not A but B / a combination of の論理的な違いを、文脈で使い分ける力</u>を測っている。"}],
+ sol:[{m:"x",n:"1",t:"『技術と社会の組み合わせ』では、<u>直後の『必要だったのはウイルス』と矛盾</u>する。両方だと言ってしまうと皮肉が成立しない。〈選びがちな人〉段落前半に技術と社会の両方が出てきたのを見て、『両方まとめた選択肢だろう』と早合点した人。"},
+      {m:"x",n:"2",t:"『技術的変革だった』と肯定してしまう点が誤り。<u>直後でウイルスだと明言</u>されており、技術ではない。〈選びがちな人〉直前の『近年の普及は技術進歩で可能になった』だけを見て、直後の一文を読んでいない人。"},
+      {m:"o",n:"3",t:"正解。技術でも社会でもない＝だから『必要だったのはウイルス』につながる。"},
+      {m:"x",n:"4",t:"『組織的変革だった』は<u>本文にない第三項をでっち上げている</u>。ナイルズの言う outdated organizational schemes に引きずられた罠。〈選びがちな人〉本文の別の箇所にあった単語（organizational）を見つけ、文脈を確かめずに飛びついた人。"}]},
+
+{id:"問3", grp:"AB", type:"空所補充（文・つなぎ）", lbl:"空所［3］", en:"…despite difficulties in accurately measuring…, surprisingly global growth seems to have reached 5.8%. [ 3 ]. Economic numbers generally improved and … those that quickly adopted remote work policies.",
+ ask:"空所［3］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"All the figures reveal a uniform trend（すべての数字が一様な傾向を示している）", ok:false},{t:"Explaining this is not easy, but one thing is clear（これを説明するのは容易ではないが、一つはっきりしていることがある）", ok:true},{t:"It could hardly have been otherwise（それ以外ではあり得なかっただろう）", ok:false},{t:"The outcome was entirely predictable（その結果は完全に予測可能だった）", ok:false}],
+ steps:[
+   {t:"空所の前を読む", d:"前：<em>『正確に測ることは困難』『驚くべきことに5.8%に達したようだ（seems）』</em>＝<u>不確かさ・意外性</u>が強調されている。"},
+   {t:"空所の後を読む", d:"後：<em>『経済の数字は改善し、嵐を乗り切ったのはリモートワークを迅速に採用した政府・企業だった』</em>＝<u>はっきりと断定している</u>。"},
+   {t:"橋渡しを選ぶ", d:"<b>『説明は容易ではない（＝前の不確かさを受ける）が、一つ明確なことがある（＝後の断定を導く）』</b>＝2。前後を過不足なくつなぐ。"}],
+ ev:{q:'despite difficulties in accurately measuring … <span class="h">Explaining this is not easy, but one thing is clear</span>. Economic numbers generally improved and … those that quickly adopted remote work policies.', jp:"「正確な測定は困難…（空所）…経済の数字は改善し、乗り切ったのはリモートワークを迅速に採用したところだった」。"},
+ co:[{c:"nav",l:"前後をつなぐ一文",h:"<b>前＝不確か／後＝断定</b>。この落差を埋めるには<u>『説明は難しい、しかし一つ明確なことがある』</u>という譲歩＋転換が要る。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>文と文の論理的な段差を埋める力</b>。<u>空所前の『不確かさ』と空所後の『断定』の両方を見て、その両方に接続する文を選べるか</u>を測っている。"}],
+ sol:[{m:"x",n:"1",t:"『すべての数字が一様な傾向』は<u>直前の『正確な測定が困難』『例外もある（a few notable exceptions）』と矛盾</u>。〈選びがちな人〉空所後の『数字が改善した』だけを見て、『数字』という語の一致で選んだ人。"},
+      {m:"o",n:"2",t:"正解。前の不確かさを受け（説明は容易でない）、後の断定を導く（一つ明確なことがある）。"},
+      {m:"x",n:"3",t:"『それ以外あり得なかった』＝<u>当然の結果だったという意味</u>。だが本文は surprisingly（驚くべきことに）と述べており、<b>意外性と正反対</b>。〈選びがちな人〉前後の論理でなく、なんとなく強い断定の響きで選んだ人。"},
+      {m:"x",n:"4",t:"『完全に予測可能だった』も<u>surprisingly と矛盾</u>。〈選びがちな人〉空所後が断定調なのを見て『予測できた』と早合点し、空所前の『驚き』『測定困難』を見落とした人。"}]},
+
+{id:"問4", grp:"AB", type:"空所補充（内容）", lbl:"空所［4］", en:"The benefits from remote work were felt by companies and workers alike… At the same time, [ 4 ], as remote work reduces the need for office space.",
+ ask:"空所［4］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"employers are the real beneficiaries（雇用者こそが真の受益者だ）", ok:false},{t:"employers benefit just as much as employees（雇用者も従業員と同じくらい恩恵を受ける）", ok:true},{t:"employers' benefits are overshadowed by employees'（雇用者の恩恵は従業員の恩恵に影を潜める）", ok:false},{t:"employers experience some losses comparatively（雇用者は比較的いくらか損失を被る）", ok:false}],
+ steps:[
+   {t:"段落の枠組みを確認", d:"第1文：<b>The benefits … were felt by companies and workers alike</b>「企業と労働者の<u>双方が同様に</u>恩恵を感じた」。<em>alike＝どちらも同じように</em>。"},
+   {t:"空所の前後を見る", d:"前＝<em>従業員側の節約（交通費・昼食・保育費）</em>／空所の後＝<em>雇用者側の節約（オフィス、賃料、光熱費）</em>。<u>At the same time で並列</u>。"},
+   {t:"選ぶ", d:"<b>『雇用者も従業員と同じくらい恩恵を受ける』</b>＝2。段落冒頭の alike（双方とも）と完全に一致する。"}],
+ ev:{q:'The benefits … were felt by companies and workers <span class="h">alike</span> … At the same time, employers benefit just as much as employees, as remote work reduces the need for office space.', jp:"「恩恵は企業と労働者の双方が感じた…同時に、雇用者も従業員と同じくらい恩恵を受ける」。"},
+ co:[{c:"gold",l:"alike が決め手",h:"<b>alike＝『双方とも同じように』</b>。<u>段落冒頭の枠組みが、空所の答えを先に決めている</u>。優劣をつける選択肢はすべて外れる。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>段落の主題文（第1文）を空所の判断根拠に使えるか</b>。<u>空所の周囲だけでなく、段落全体の枠組みから解く力</u>を測っている。"}],
+ sol:[{m:"x",n:"1",t:"『雇用者<u>こそ</u>が真の受益者』は<u>優劣をつけており、alike（双方同様）と矛盾</u>。〈選びがちな人〉空所の後に雇用者の恩恵が並ぶのを見て、『雇用者の方が得なんだな』と強く読みすぎた人。"},
+      {m:"o",n:"2",t:"正解。alike（双方とも）と一致し、空所後の雇用者側の恩恵ともつながる。"},
+      {m:"x",n:"3",t:"『雇用者の恩恵は従業員のそれに影を潜める』＝<u>雇用者の恩恵を小さく見る</u>。だが空所直後で雇用者の恩恵が列挙されるので逆。〈選びがちな人〉前段が従業員の話だったので『主役は従業員』と決めつけた人。"},
+      {m:"x",n:"4",t:"『雇用者は損失を被る』は<u>本文と正反対</u>（オフィス費の節約という利益が続く）。〈選びがちな人〉reduces（減らす）という語をマイナスに捉え、何が減るのか（＝コスト）を確認しなかった人。"}]},
+
+/* ===== 問5〜8：グループCD ===== */
+{id:"問5", grp:"CD", type:"語彙選択（語法）", lbl:"空所［5］", en:"putting everything online [ 5 ] operations",
+ ask:"空所［5］に入れるのにもっとも適切な語を、選択肢（empowered / exceeded / expected / provided / streamlined）から選べ。", answer:"5", kind:"choice",
+ choices:[{t:"empowered（可能にした）", ok:false},{t:"exceeded（超えた）", ok:false},{t:"expected（予期した）", ok:false},{t:"provided（提供した）", ok:false},{t:"streamlined（効率化した）", ok:true}],
+ steps:[
+   {t:"直前の具体を読む", d:"直前：<b>『承認のために書類をオフィス中で回覧させる以前のやり方をなくした』</b>＝<u>紙の回覧を廃止しオンライン化</u>。"},
+   {t:"目的語を見る", d:"空所の目的語は<b>operations（業務）</b>。<em>『業務を〜した』</em>に入る語を選ぶ。"},
+   {t:"選ぶ", d:"紙の回覧をなくしてオンライン化＝<b>streamlined operations「業務を効率化した」</b>＝5。"}],
+ ev:{q:'putting everything online <span class="h">streamlined</span> operations and provided flexibility for employees', jp:"「すべてをオンライン化したことは業務を効率化し、従業員に柔軟性を提供した」。"},
+ co:[{c:"gold",l:"streamline＝効率化する",h:"<b>streamline＝無駄をなくして流れをよくする</b>。<u>紙の回覧廃止という具体と直結</u>する語。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>3語を3つの空所に配る問題は『目的語との相性』で決める</b>。<u>operations / flexibility / the business to do の3つを見比べて割り振る力</u>。"}],
+ sol:[{m:"x",n:"1",t:"empowered は<u>［7］で &lt;empower O to do&gt; の形で使う</u>。ここは目的語が operations だけで to do が続かない。〈選びがちな人〉3つの空所を個別に見て、全体で1回ずつ使う条件を意識していない人。"},
+      {m:"x",n:"2",t:"exceeded（超えた）は『業務を超えた』となり<u>意味不明</u>。〈選びがちな人〉語義を確認せず、残った語を機械的に当てはめた人。"},
+      {m:"x",n:"3",t:"expected（予期した）も『業務を予期した』で<u>文意が通らない</u>。"},
+      {m:"x",n:"4",t:"provided は<u>［6］で flexibility を目的語にとる</u>。ここに入れると［6］が埋まらない。〈選びがちな人〉一つずつ確定させず、後の空所との整合を見ていない人。"},
+      {m:"o",n:"5",t:"正解。紙の回覧廃止→業務を効率化した（streamlined operations）。"}]},
+
+{id:"問6", grp:"CD", type:"語彙選択（語法）", lbl:"空所［6］", en:"[ 6 ] flexibility for employees",
+ ask:"空所［6］に入れるのにもっとも適切な語を選べ。", answer:"4", kind:"choice",
+ choices:[{t:"empowered（可能にした）", ok:false},{t:"exceeded（超えた）", ok:false},{t:"expected（予期した）", ok:false},{t:"provided（提供した）", ok:true},{t:"streamlined（効率化した）", ok:false}],
+ steps:[
+   {t:"目的語を確認", d:"空所直後：<b>flexibility for employees</b>「従業員にとっての柔軟性」＝<u>これが空所の動詞の目的語</u>。"},
+   {t:"相性を考える", d:"<em>『柔軟性を〜した』</em>に自然に入るのは<b>provide（提供する）</b>。<u>provide flexibility＝柔軟性をもたらす</u>という定番の結びつき。"},
+   {t:"選ぶ", d:"<b>provided</b>＝4。前の streamlined operations と and で並ぶ（業務を効率化し、柔軟性を提供した）。"}],
+ ev:{q:'streamlined operations and <span class="h">provided</span> flexibility for employees', jp:"「業務を効率化し、従業員に柔軟性を提供した」。"},
+ co:[{c:"gold",l:"provide + 名詞",h:"<b>provide flexibility / provide support</b> など、<u>『（利益・手段）を与える』</u>の定番。目的語との相性で即決できる。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>語と語の自然な結びつき（コロケーション）</b>を知っているか。<u>意味が近い語の中から、その名詞と実際に使う動詞を選ぶ力</u>。"}],
+ sol:[{m:"x",n:"1",t:"empowered は［7］の &lt;O + to do&gt; で必要。ここでは to do が続かない。"},
+      {m:"x",n:"2",t:"exceeded flexibility（柔軟性を超えた）は<u>意味をなさない</u>。"},
+      {m:"x",n:"3",t:"expected flexibility（柔軟性を予期した）では<u>会社が行った施策の成果にならない</u>。〈選びがちな人〉文脈（施策の効果を並べている）を見ずに語義だけで選ぶ人。"},
+      {m:"o",n:"4",t:"正解。provided flexibility＝柔軟性を提供した。"},
+      {m:"x",n:"5",t:"streamlined は［5］で operations を目的語にとる。<u>flexibility を『効率化する』は不自然</u>。"}]},
+
+{id:"問7", grp:"CD", type:"語彙選択（語法）", lbl:"空所［7］", en:"It also [ 7 ] the business to take on new projects far from their previous headquarters",
+ ask:"空所［7］に入れるのにもっとも適切な語を選べ。", answer:"1", kind:"choice",
+ choices:[{t:"empowered（可能にした）", ok:true},{t:"exceeded（超えた）", ok:false},{t:"expected（予期した）", ok:false},{t:"provided（提供した）", ok:false},{t:"streamlined（効率化した）", ok:false}],
+ steps:[
+   {t:"空所の後ろの『形』を見る", d:"<b>［7］the business to take on new projects</b>＝<u>「動詞＋O＋to do」の形</u>。この形をとれる動詞はどれか、で決まる。"},
+   {t:"語法を当てはめる", d:"<b>&lt;empower + O + to do&gt;＝「Oが〜することを可能にする」</b>。<em>形がぴたりと合う</em>。"},
+   {t:"選ぶ", d:"<b>empowered</b>＝1。「社員がどこでも働けるので、会社が遠方の新規案件を引き受けることを可能にした」。"}],
+ ev:{q:'It also <span class="h">empowered</span> the business to take on new projects far from their previous headquarters', jp:"「それはまた、会社が以前の本社から遠く離れた新しいプロジェクトを引き受けることを可能にした」。"},
+ co:[{c:"gold",l:"empower O to do",h:"<b>「Oが〜できるようにする」</b>。<u>後ろの to do が決め手</u>。意味より先に『形』で決まる問題。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>語法（後ろにとる形）で選ぶ力</b>。<u>意味が似た語の中から、その文型をとれる動詞を選べるか</u>。ここは文脈より語法が優先。"}],
+ sol:[{m:"o",n:"1",t:"正解。&lt;empower O to do&gt;＝Oが〜することを可能にする。後ろの形と完全に一致。"},
+      {m:"x",n:"2",t:"exceeded は<u>&lt;O + to do&gt; の形をとらない</u>。意味も通らない。"},
+      {m:"x",n:"3",t:"expected は &lt;expect O to do&gt; の形は<u>とれる</u>が、『会社が案件を引き受けると予期した』では<b>前後（どこからでも働けるから）と因果が合わない</b>。〈選びがちな人〉形だけ見て expect O to do を思い出し、文意の確認を省いた人。<u>ここが最大の罠</u>。"},
+      {m:"x",n:"4",t:"provided は［6］で使用。&lt;provide O to do&gt; の形もとらない。"},
+      {m:"x",n:"5",t:"streamlined は［5］で使用。&lt;O + to do&gt; の形をとらない。"}]},
+
+{id:"問8", grp:"CD", type:"空所補充（構文）", lbl:"空所［8］", en:"find the best environment for themselves, [ 8 ] at home, at a local café, on the top of a mountain, or at a sunny beach",
+ ask:"空所［8］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"if it was（もしそれが〜だったら）", ok:false},{t:"of which（そのうちの）", ok:false},{t:"regardless of（〜に関係なく）", ok:false},{t:"whether it be（それが〜であろうと）", ok:true}],
+ steps:[
+   {t:"空所の後ろの形を見る", d:"空所の後：<b>at home, at a local café, on the top of a mountain, or at a sunny beach</b>＝<u>A, B, C, or D の並列（前置詞句）</u>。"},
+   {t:"この並列を受ける形を考える", d:"<b>whether it be A, B, C, or D＝『それがAであろうとBであろうと…であろうと』</b>。<em>whether ~ or ~ の譲歩</em>で、並列を丸ごと受けられる。"},
+   {t:"選ぶ", d:"<b>whether it be</b>＝4。「自宅だろうと、カフェだろうと、山頂だろうと、ビーチだろうと」と筋が通る。"}],
+ ev:{q:'find the best environment for themselves, <span class="h">whether it be</span> at home, at a local café, on the top of a mountain, or at a sunny beach', jp:"「自分に最適な環境を見つけられる。それが自宅だろうと、カフェだろうと、山頂だろうと、ビーチだろうと」。"},
+ co:[{c:"gold",l:"whether it be A, B, or C",h:"<b>『AだろうとBだろうとCだろうと』</b>＝譲歩の定型（be は仮定法現在）。<u>or を含む並列を見たら候補に挙げる</u>。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>空所の後ろの『並列の形』から構文を決める力</b>。<u>意味の見当ではなく、A, B, C, or D という形が何を要求しているかを見る</u>。"}],
+ sol:[{m:"x",n:"1",t:"if it was は<u>or で並ぶ4つを受けられない</u>（if ~ or ~ は『〜か〜か』の譲歩にならない）。時制も過去で文脈に合わない。〈選びがちな人〉『もし〜なら』の意味だけで選び、後ろの並列構造を見ていない人。"},
+      {m:"x",n:"2",t:"of which は<u>関係代名詞で、前に先行詞となる名詞が必要</u>。ここは environment の後にカンマがあり、前置詞句の並列が続くだけなので接続できない。〈選びがちな人〉空所前の名詞を見て反射的に関係詞を入れた人。"},
+      {m:"x",n:"3",t:"regardless of は<u>後ろに名詞が来る</u>（regardless of location など）。だが実際に続くのは at home… という前置詞句の並列で、<b>regardless of at home とは言えない</b>。〈選びがちな人〉意味は近い（〜に関係なく）ので飛びつくが、後ろの品詞を確認していない人。<u>意味は合うが形が合わない典型的な罠</u>。"},
+      {m:"o",n:"4",t:"正解。whether it be A, B, C, or D＝どれであろうと。並列を丸ごと受けられる唯一の形。"}]},
+
+/* ===== 問9〜11：グループEF ===== */
+{id:"問9", grp:"EF", type:"空所補充（段落の主題文）", lbl:"空所［9］", en:"[ 9 ]. It increases freedom and improves job satisfaction, allows workers to live anywhere they like, and improves work-life balance. It reduces harmful office politics…",
+ ask:"空所［9］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"One positive of remote work clearly stands out from others（リモートワークの一つの利点が他より明らかに際立つ）", ok:false},{t:"Some benefits of remote work are more important than others（一部の利点は他より重要だ）", ok:false},{t:"The many merits of remote work are countered with some demerits（多くの利点はいくつかの欠点で相殺される）", ok:false},{t:"The positives of remote work are seemingly endless（リモートワークの利点は尽きないように思われる）", ok:true}],
+ steps:[
+   {t:"空所の後に何が続くかを見る", d:"空所の後：<b>自由↑・仕事満足度↑・居住地の自由・WLB改善・社内政治↓・忠誠心↑・欠勤↓</b>、さらに<em>環境への好影響</em>まで。<u>利点が次々と列挙される</u>。"},
+   {t:"列挙を予告する一文を選ぶ", d:"次々挙がる＝<b>『利点は尽きないように思われる』</b>が段落の主題文としてぴたり合う。"},
+   {t:"選ぶ", d:"<b>The positives of remote work are seemingly endless</b>＝4。"}],
+ ev:{q:'<span class="h">The positives of remote work are seemingly endless</span>. It increases freedom and improves job satisfaction … It reduces harmful office politics, improves loyalty, and reduces absences.', jp:"「利点は尽きないように思われる。自由を増し、満足度を高め…社内政治を減らし、忠誠心を高め、欠勤を減らす」。"},
+ co:[{c:"nav",l:"主題文は『後続の形』で決まる",h:"<b>後ろが『列挙』なら、主題文は『たくさんある』</b>。<u>後ろが『一つの重点』なら『際立つ』</u>。段落の展開の形で選ぶ。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>段落の主題文（topic sentence）を、後続の展開から逆算する力</b>。<u>個々の文の意味でなく、段落全体がどう展開するかを見る</u>。"}],
+ sol:[{m:"x",n:"1",t:"『一つの利点が際立つ』なら<u>その後は一つに絞って論じるはず</u>。実際は多数を並列に列挙しており合わない。〈選びがちな人〉後半の『あまり知られていないものの一つが環境』を見て、『一つに注目してる』と早合点した人。"},
+      {m:"x",n:"2",t:"『一部の利点は他より重要』なら<u>重要度の比較が続くはず</u>。だが本文は優劣をつけず並べている。〈選びがちな人〉one of the less well-noted（あまり知られていない一つ）を『重要度の差』と誤読した人。"},
+      {m:"x",n:"3",t:"『欠点で相殺される』は<u>本文と正反対</u>。この段落に欠点は一つも出てこない。〈選びがちな人〉記事全体がリモートワーク擁護だと掴めておらず、バランスを取る文を入れたくなった人。"},
+      {m:"o",n:"4",t:"正解。後続で利点が次々に列挙されるので『尽きないほどある』が主題文。"}]},
+
+{id:"問10", grp:"EF", type:"空所補充（評価）", lbl:"空所［10］", en:"remote work has deeply impacted the restaurant industry, but that is [ 10 ]: the pressures have forced restaurants to improve customers' dining experience…",
+ ask:"空所［10］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"hardly a positive（とてもプラスとは言えない）", ok:false},{t:"needlessly to say（不必要に言えば・非文法的）", ok:false},{t:"not necessarily a bad thing（必ずしも悪いことではない）", ok:true},{t:"on the whole a negative（全体としてマイナス）", ok:false}],
+ steps:[
+   {t:"コロン以下（空所の中身）を読む", d:"空所直後のコロン以下：<b>『その圧力がレストランに、客の食事体験を改善させ、テイクアウトや配達を増やさせた』</b>＝<u>プラスの変化</u>。"},
+   {t:"譲歩→転換の型を確認", d:"<b>Certainly ~（確かに影響を与えた）, but that is ［10］</b>。<u>but で転じる</u>ので、空所は<em>マイナス評価を否定する</em>内容。"},
+   {t:"選ぶ", d:"<b>not necessarily a bad thing『必ずしも悪いことではない』</b>＝3。コロン以下のプラスの具体と一致。"}],
+ ev:{q:'remote work has deeply impacted the restaurant industry, but that is <span class="h">not necessarily a bad thing</span>: the pressures have forced restaurants to improve customers\' dining experience', jp:"「レストラン業界に深く影響した。だがそれは必ずしも悪いことではない。その圧力が食事体験の改善を促したのだから」。"},
+ co:[{c:"nav",l:"コロンは『中身の説明』",h:"<b>コロン以下がプラスの内容</b>＝空所もプラス寄りの評価でなければならない。<u>コロンの前後は同じ方向</u>。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>but の転換と、コロン以下の具体の『方向（プラス/マイナス）』を一致させる力</b>。<u>記事全体の擁護的な論調も判断材料</u>。"}],
+ sol:[{m:"x",n:"1",t:"『とてもプラスとは言えない』＝<u>マイナス評価</u>。だがコロン以下はプラスの変化なので方向が逆。〈選びがちな人〉直前の『深く影響を与えた』を悪影響と読み、コロン以下を確認しなかった人。"},
+      {m:"x",n:"2",t:"needlessly to say は<u>英語として成立しない</u>（正しくは needless to say＝言うまでもなく）。〈選びがちな人〉見慣れた熟語に似ているので形の違いに気づかず選ぶ人。<u>語形の正確さを問う罠</u>。"},
+      {m:"o",n:"3",t:"正解。but で転じ、コロン以下のプラスの具体（食事体験の改善・配達拡充）と一致。"},
+      {m:"x",n:"4",t:"『全体としてマイナス』も<u>コロン以下のプラスと矛盾</u>。〈選びがちな人〉『レストランが打撃を受けた』という一般常識に引きずられ、本文の主張（擁護）を読めていない人。"}]},
+
+{id:"問11", grp:"EF", type:"空所補充（語法）", lbl:"空所［11］", en:"When companies meet the needs and expectations of their employees…, they will be [ 11 ] with loyal employees equipped to do better work.",
+ ask:"空所［11］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"earned（稼がれた）", ok:false},{t:"granted（与えられた）", ok:false},{t:"recognized（認められた）", ok:false},{t:"rewarded（報われた）", ok:true}],
+ steps:[
+   {t:"主語theyを特定する", d:"<b>they＝companies（従業員のリモート環境への要望に応える企業）</b>。<u>『企業が〜される』</u>という受動態。"},
+   {t:"with 以下との関係を見る", d:"<b>with loyal employees（忠実な従業員という形で）</b>＝<u>企業が受け取る『見返り』</u>。要望に応えた企業が、その報酬として忠実な従業員を得る。"},
+   {t:"語法で決める", d:"<b>be rewarded with ~「〜で報われる」</b>＝4。報酬・見返りを表す定型。"}],
+ ev:{q:'When companies meet the needs and expectations of their employees …, they will be <span class="h">rewarded</span> with loyal employees equipped to do better work.', jp:"「企業が従業員の要望や期待に応えるとき、企業はより良い仕事をする忠実な従業員という形で報われるだろう」。"},
+ co:[{c:"gold",l:"be rewarded with",h:"<b>『〜という見返りで報われる』</b>。<u>with が『報酬の中身』を導く</u>のが決め手。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>主語（they＝企業）を正しく特定し、with 以下との意味関係で語法を選ぶ力</b>。<u>主語を従業員だと誤ると全部崩れる</u>。"}],
+ sol:[{m:"x",n:"1",t:"be earned with とは<u>言わない</u>（earn は『自分で稼ぐ』で、目的語を直接とる）。〈選びがちな人〉『報酬を得る』という意味の近さだけで選び、受動態＋with の形を確認しない人。"},
+      {m:"x",n:"2",t:"grant は<u>&lt;grant A B&gt;（AにBを与える）</u>で、受動態なら be granted + 物。be granted with ~ は不自然。〈選びがちな人〉『与えられる』の意味で選ぶが、with との相性を検討していない人。"},
+      {m:"x",n:"3",t:"be recognized with は<u>『表彰される』などの限定的用法</u>で、ここの『見返りを得る』文脈に合わない。〈選びがちな人〉企業が『評価される』と意味を広げすぎた人。"},
+      {m:"o",n:"4",t:"正解。be rewarded with ~＝〜という見返りで報われる。主語（企業）と with 以下（忠実な従業員）の関係に一致。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+</script>
+</body>
+</html>
