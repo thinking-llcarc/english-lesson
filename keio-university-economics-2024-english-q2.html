@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜慶應義塾大学 経済学部 2024 大問2（The Dark Side of Remote Work）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">慶</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>慶應義塾大学 経済学部 2024 ／ 大問2</span></div>
+    <div class="top-meta">The Dark Side of Remote Work<br>空所補充・内容一致・2記事照合／全9問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>VS</small>2記事の対決</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>12–15</small>設問 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>16–18</small>数値・比較</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>19–20</small>2記事照合</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>大問1が礼賛した利点を、<br>この記事は一つずつ崩していく。<br>2つの記事は「対」で読む。</h1>
+    <p>タイトルは<em>The Dark Side of Remote Work</em>――大問1（Noah Fice の礼賛記事）と<u>真っ向から対立する反対論</u>。生産性向上は「単に長く働いただけ」、創造性は「偶発的な出会いの喪失で窒息する」、環境への好影響は「幻想」。<b>大問1で利点として挙げられた項目が、順番に反論されていく</b>。この構造を掴めば、空所補充も、そして最後の<u>2記事照合問題（問19・20）</u>も一本の線でつながる。</p>
+    <div class="thesis"><b>この記事の論法：</b>①まず<u>働き方は社会の根幹</u>だと歴史で示す（狩猟採集→農耕→産業革命→都市）。②コロナ禍で<u>当初は魅力的に見えた</u>（数字を鵜呑みにした）。③しかし<b>「それは幻想では?」</b>と問い、以降<u>生産性・創造性・メンタルヘルス・地域社会・環境</u>の5点で反論。④結論＝<b>誰かが介入すべき</b>（放置すれば手に負えない）。</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>段落構成</span></div>
+      <div class="stat"><b>9</b><span>設問</span></div>
+      <div class="stat"><b>5</b><span>反論の論点</span></div>
+      <div class="stat"><b>2</b><span>記事照合(19-20)</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">タイプ</th><th style="width:24%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">因果・つなぎ</td><td>問12</td><td><b>都市への集中→豊かな都市の成長</b>＝leading to（結果）。</td></tr>
+      <tr><td class="cond">文の挿入</td><td>問13</td><td><b>直後の But was this all an illusion?</b> から逆算。<u>「信じていた」がなければ But が成立しない</u>。</td></tr>
+      <tr><td class="cond">熟語・語法</td><td>問14</td><td>文末の<b>is concerned</b> を見つければ so far as で即決。</td></tr>
+      <tr><td class="cond">段落構造</td><td>問15</td><td><b>The first / The second</b> の中身から逆算して2つ目の要素を決める。</td></tr>
+      <tr><td class="cond">数値計算</td><td>問16</td><td><b>one in five＝20%</b>、almost doubled＝約40%。<u>39%</u>。</td></tr>
+      <tr><td class="cond">程度の判断</td><td>問17</td><td><b>truly disastrous</b> という最も強い語がある集団を選ぶ。</td></tr>
+      <tr><td class="cond">比較の方向</td><td>問18</td><td>段落冒頭<b>「環境によいは幻想」</b>を支える方向へ。a fraction of。</td></tr>
+      <tr><td class="cond">2記事照合</td><td>問19 問20</td><td><b>①言及の有無 ②賛否の方向</b>の2段階で判定。<u>言及なし＝同意ではない</u>。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。<u>誤答ごとに「なぜダメか」＋「どんな読み方をした人が選ぶか」</u>まで示しました。<strong>問19・20は大問1の内容も必要</strong>なので、先に大問1の解説を確認しておくと万全です。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 8段落の流れと空所の在りか<span class="sub">「導入（歴史）→当初の魅力→5つの反論→結論（介入せよ）」。<b>大問1の利点を順に崩す</b>構成。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">働き方は社会の根幹</div><p>狩猟採集→農耕→産業革命→都市。産業革命が人を都市に集め<em>その結果</em>豊かな都市が生まれた。<u>オフィスを取り去れば何が残る?</u></p><div class="tags"><span class="utag">［12］</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>経緯</span></div><div class="para-b">
+      <div class="theme">当初は魅力的に見えた</div><p>コロナ禍で生産性が急上昇（13〜56%）、運動・趣味・家族の時間も増加。<em>多くが数字を鵜呑みに</em>。<u>だが幻想では?</u></p><div class="tags"><span class="utag">［13］</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>反論①</span></div><div class="para-b">
+      <div class="theme">生産性向上は労働時間の増加</div><p>企業は恩恵が誇張と気づき自己申告を信用せず。境界が曖昧だから雇用主は歓迎。<em>生産性向上に関する限り</em>、単に長く働いただけ。</p><div class="tags"><span class="utag">［14］</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>反論②</span></div><div class="para-b">
+      <div class="theme">仕事の質と創造性が損なわれる</div><p>①監視の強化＝速く働くが賢くはない ②在宅が革新を窒息＝<u>偶発的な出会いの喪失</u>。それが質の高い人材と企業文化の鍵だった。</p><div class="tags"><span class="utag">［15］</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>反論③</span></div><div class="para-b">
+      <div class="theme">メンタルヘルスの悪化</div><p>70%は肯定的だが、24%が家庭内ストレス、54%が作業場所不足を指摘。<em>5人に1人が新たな問題</em>、若年・単身では<u>ほぼ倍増</u>。</p><div class="tags"><span class="utag">［16］</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>反論④</span></div><div class="para-b">
+      <div class="theme">都市の衰退と地方の混乱</div><p>都市＝文化施設の訪問者減で存続の危機。地方＝リモート労働者の流入が<em>本当に壊滅的</em>（学校・道路・病院・警察）。納税先が違うため深刻化。</p><div class="tags"><span class="utag">［17］</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>反論⑤</span></div><div class="para-b">
+      <div class="theme">環境によいは幻想</div><p><em>環境に有益という考えは幻想</em>。オフィス1つの費用は在宅100軒の<u>ごく一部</u>。通勤削減も地方での運転に置き換わるだけ。</p><div class="tags"><span class="utag">［18］</span><span class="utag">［20］</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>結論</span></div><div class="para-b">
+      <div class="theme">誰かが介入すべき</div><p>個人（消費者行動）か政府（公共政策）か。<u>放置すれば手に負えない</u>。メタ社の例＝人をつなげた企業が今や仮想世界に閉じ込めようとする。</p><div class="tags"><span class="utag">［19］</span></div></div></div><div class="box navy"><span class="lab">著者名にも仕掛けがある</span>
+  大問1の著者は<strong>Noah Fice</strong>（＝"no office" の言葉遊び）、大問2は<strong>I. D. Nighet</strong>（＝"I deny it" の言葉遊び）。<u>出題者は「2人の架空の論者を戦わせる」という設計を最初から明示している</u>。<em>問19・20はこの対決構造を読めているかを問う設問</em>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">2記事の対決へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Fice vs Nighet</div>
+  <h1 class="head">2記事の対決 ― 同じ話題、正反対の結論<span class="sub">問19・20はこの表で解ける。<b>大問1（Fice＝擁護）と大問2（Nighet＝批判）</b>が、同じ論点でどう対立するかを一枚に。</span></h1>
+  <div class="rule"></div>
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">Noah Fice<small>大問1 ― Remote Work Revolution（擁護）</small></div><div class="vs-bd">
+      <div class="r"><b>生産性</b>リモートで<strong>労働者は幸福で生産的に</strong>なる</div>
+      <div class="r"><b>創造性</b>社内政治が減り<strong>忠誠心が高まる</strong></div>
+      <div class="r"><b>地域</b>都市の賃料低下で<strong>多様な利用が可能に</strong></div>
+      <div class="r"><b>環境</b><strong>温室効果ガスとエネルギー消費を減らす</strong>（第7段落）</div>
+      <div class="r"><b>政府の役割</b><strong>言及なし</strong></div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">I. D. Nighet<small>大問2 ― The Dark Side（批判）</small></div><div class="vs-bd">
+      <div class="r"><b>生産性</b>向上は幻想。<strong>単に長時間働いただけ</strong></div>
+      <div class="r"><b>創造性</b>偶発的な出会いが消え<strong>革新が窒息する</strong></div>
+      <div class="r"><b>地域</b>都市は文化施設が衰退、地方は<strong>壊滅的な混乱</strong></div>
+      <div class="r"><b>環境</b>環境によいは<strong>幻想</strong>（第7段落第1文）</div>
+      <div class="r"><b>政府の役割</b><strong>介入・規制が必要</strong>（第8段落）</div>
+    </div></div>
+  </div>
+  <div class="box gold"><span class="lab">Slot判定の手順（問19・20の解き方）</span>
+    <strong>Slot 1＝Ficeのみ／Slot 2＝Nighetのみ／Slot 3＝両者／Slot 4＝どちらも同意しない</strong>。判定は必ず<u>2段階</u>で行う。<br>
+    <strong>①その筆者はその話題に言及しているか?</strong> → 言及がなければ<em>「同意」とは判定できない</em>（推測で補わない）。<br>
+    <strong>②言及しているなら、賛成か反対か?</strong> → <em>話題が同じでも方向が逆なら同意ではない</em>。</div>
+  <div class="box navy"><span class="lab">問19が Slot 4 になる理由</span>
+    設問＝<strong>「政府はリモートワークを<u>奨励する</u>政策を作るべきだ」</strong>。<br>
+    <strong>Fice</strong>：政府の役割に<u>一切言及なし</u> → 同意と判定できない（<em>擁護派だから賛成のはず、と推測してはいけない</em>）。<br>
+    <strong>Nighet</strong>：政府の公共政策に言及<u>あり</u>。だがそれは<em>リモートワークを抑えるための介入</em>＝<u>「奨励」とは方向が逆</u> → 同意しない。<br>
+    → <strong>どちらも同意しない＝Slot 4</strong>。</div>
+  <div class="box verm"><span class="lab">問20が Slot 1 になる理由</span>
+    設問＝<strong>「リモートワークは環境を改善する」</strong>。<br>
+    <strong>Fice</strong>：第7段落で<u>温室効果ガスとエネルギー消費を減らすと明記</u> → 同意。<br>
+    <strong>Nighet</strong>：第7段落第1文で<u>「環境に有益という考えは幻想」と断定</u> → 同意しない。<br>
+    → <strong>Ficeのみ同意＝Slot 1</strong>。<em>2記事が最も鮮明に対立する論点</em>。</div>
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">問12〜15へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">問12〜問15 ― 因果・文の挿入・熟語・段落構造<span class="sub">いずれも<b>空所の外</b>を見る問題。直後の疑問文、文末の is concerned、数文先の The second が決め手。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 2記事の対決</button><span class="sp"></span><button class="btnp" data-go="4">問16〜18へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">問16〜問18 ― 数値・程度・比較の方向<span class="sub">問16は計算、問17は語の強さ、問18は段落の主張と整合する向きを選ぶ。</span></h1>
+  <div class="rule"></div>
+  <div class="box verm" style="margin-top:0"><span class="lab">この3問に共通する落とし穴</span>
+    <strong>いずれも「本文のどこか一点」を見落とすと外れる</strong>。<u>問16＝almost doubled を読み飛ばすと20%を選ぶ／問17＝On the one hand 側だけ読むと都市を選ぶ／問18＝段落冒頭の「幻想」を忘れると逆向きを選ぶ</u>。<em>選択肢を見る前に、判断の根拠となる一文を特定する</em>こと。</div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 問12〜15</button><span class="sp"></span><button class="btnp" data-go="5">問19〜20へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">問19・問20 ― 2記事の照合（Slot判定）<span class="sub">大問1（Fice）と大問2（Nighet）の両方を突き合わせる設問。慶應経済の名物形式。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">解く前に確認</span>
+    <strong>①その筆者はその話題に言及しているか ②言及しているなら賛成か反対か</strong>――この2段階で判定する。<u>最大の誤りは「言及がないのに、立場から推測して同意と決めつける」こと</u>。<em>擁護派だからきっと賛成だろう、は通用しない</em>。</div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 問16〜18</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全8段落・47文）。番号①②③…は各段落内の文の順番。<b>赤字</b>が空所・設問に直結する箇所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">読むときの視点</span>
+    この記事は<strong>大問1の利点を順に崩していく</strong>。訳を読むときは<u>「これは大問1のどの主張への反論か」</u>を意識してほしい。<em>生産性・創造性・地域・環境</em>――対応関係が見えると、問19・20の照合が一気に楽になる。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― 働き方は社会の根幹に関わる　<span class="qbadge">12</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワークは危険である。私たち個人にとってだけでなく、現代生活の構造そのものにとっても。</div></div><div class="jpline"><div class="n">②</div><div class="s">私たちの働き方は、他者とどう関わり、社会としてどう機能するかの中心にある。</div></div><div class="jpline"><div class="n">③</div><div class="s">かつて狩猟採集民は小さな部族で暮らし、食料を探して長距離を移動した。</div></div><div class="jpline"><div class="n">④</div><div class="s">農耕民は大家族と社会的つながりを生み出し、それが種まきと収穫の季節に協力し合った。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">近年では、産業革命が人々を密集した都市中心部へと集め、<em>その結果</em>ニューヨーク、ロンドン、パリ、東京のような文化的に豊かな都市が生まれるに至った。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">もしオフィスワークをこれらの都市から取り去ったら、そこには何が残るのだろうか。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第1段落</div><ul><li><b>［12］leading to</b>「その結果〜に至る」＝<u>問12の正解＝3</u>。<em>空所の直前＝『産業革命が人々を都市部へ集めた』／空所の後＝『文化的に豊かな都市が生まれた』</em>。<u>原因→結果</u>をつなぐ。<span class="qbadge">12</span></li>
+    <li><b>この記事の立場表明</b>：<em>Remote work is a danger（リモートワークは危険だ）</em>と冒頭で宣言。<u>大問1（礼賛）と正反対</u>。</li>
+    <li><b>歴史の並べ方</b>：<em>狩猟採集→農耕→産業革命</em>と、<u>働き方が社会の形を決めてきた</u>ことを示す。だから働き方の変化は社会の根幹を揺るがす、という論法。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜経緯 ― 当初は魅力的に見えた　<span class="qbadge">13</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">コロナ禍の初期、多くの人にとってリモートワークが現実のものとなり、当初それはとても魅力的に思えた。</div></div><div class="jpline"><div class="n">②</div><div class="s">経済を動かし続けてくれたので、企業も従業員もそれを歓迎した。</div></div><div class="jpline"><div class="n">③</div><div class="s">労働者の生産性は急上昇し、報告された伸びは13%から56%にまで及んだ。</div></div><div class="jpline"><div class="n">④</div><div class="s">労働者たちは、運動量が増え、新しい趣味を見つけ、家族と過ごす時間が増えたと報告した。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>多くの人がこれらの数字を額面通りに受け取った</em>。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">しかし、これはすべて幻想ではなかったのか?</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第2段落</div><ul><li><b>［13］Many took these figures at face value</b>「多くの人がこれらの数字を額面通りに受け取った」＝<u>問13の正解＝1</u>。<em>直前で生産性向上の具体的な数字（13%〜56%）が提示され、直後で『しかしこれはすべて幻想ではなかったのか』と疑問が呈される</em>。<u>『鵜呑みにした』→『しかし疑わしい』</u>という流れ。<span class="qbadge">13</span></li>
+    <li><b>take ~ at face value</b>「額面通りに受け取る・鵜呑みにする」＝<em>疑わずに信じる</em>。次文の疑問（幻想では?）への伏線。</li>
+    <li><b>But was this all an illusion?</b>＝<u>この記事の問題提起</u>。以降、リモートワークの利点とされたものを一つずつ崩していく。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜反論① ― 生産性向上は労働時間の増加　<span class="qbadge">14</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">今日、欺かれていた人はほとんどいない。</div></div><div class="jpline"><div class="n">②</div><div class="s">労働者の生産性向上を夢見た企業は、その恩恵が誇張されていたことに気づいた。</div></div><div class="jpline"><div class="n">③</div><div class="s">多くの企業はもはや、従業員の自己申告データを信用していない。</div></div><div class="jpline"><div class="n">④</div><div class="s">労働者にとっても幻滅が広がった。今日、彼らは、仕事と私生活の境界が曖昧になるからこそ雇用主がリモートワークを喜んで認めるのだ、と気づいている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">在宅勤務の従業員は、子どもをサッカーの練習に送っていたり宿題を手伝っていたりするときでさえ、電話会議に出ることを期待される。</div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>生産性の向上に関する限り</em>、それは単により長く働いた結果にすぎない。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第3段落</div><ul><li><b>［14］So far as</b>「〜に関する限り」＝<u>問14の正解＝3</u>。<em>so far as S is concerned＝Sに関する限り</em>。<span class="qbadge">14</span></li>
+    <li><b>反論の核</b>：<u>生産性が上がったのではなく、単に労働時間が増えただけ</u>（simply been a product of more hours working）。<em>大問1の『生産性向上』という利点を、数字の解釈で崩している</em>。</li>
+    <li><b>the boundary … becomes blurred</b>「境界が曖昧になる」＝<em>大問1では enmeshment として同じ現象に触れていたが、こちらは雇用主の思惑として批判的に描く</em>。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜反論② ― 仕事の質と創造性が損なわれる　<span class="qbadge">15</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">より生産的な労働時間を追い求めるあまり、企業は仕事の質<em>と従業員の創造性</em>への長期的な影響を見落としている。</div></div><div class="jpline"><div class="n">②</div><div class="s">第一の影響は、監視の強化から生じる。</div></div><div class="jpline"><div class="n">③</div><div class="s">従業員はより速く働くが、より賢く働くわけではない。なぜなら企業は、リモート労働者を、仕事を終えたりメールに返信したりするのにかかった時間だけで評価するからだ。</div></div><div class="jpline"><div class="n">④</div><div class="s">第二の影響は在宅勤務の産物であり、それは時間とともに革新を窒息させる。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">従業員はもはや、同僚と気軽に雑談したり、直属の作業グループ外の人々とアイデアを交換したりする自由がない。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">偶発的な出会いは、新しいアイデアが生まれるために不可欠である。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">最終的にそれらは、質の高い労働者の成長と教育、そして健全な企業文化の発展にとって鍵となる。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第4段落</div><ul><li><b>［15］and the creativity of employees</b>「と従業員の創造性」＝<u>問15の正解＝1</u>。<em>空所直後に The first ~、同段落第4文に The second ~ とあり、2つの内容が展開される</em>。<u>前者＝空所直前の the quality of work（仕事の質）／後者＝innovation や new ideas に関わる『従業員の創造性』</u>。<span class="qbadge">15</span></li>
+    <li><b>2つの影響</b>：<em>①監視の強化（速く働くが賢くは働かない）②在宅が革新を窒息させる（偶発的な出会いの喪失）</em>。</li>
+    <li><b>Spontaneous encounters</b>「偶発的な出会い」＝<u>新しいアイデアの源</u>。<em>大問1が『社内政治を減らす』と肯定した対面の接触を、こちらは創造性の源泉として擁護している</em>。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜反論③ ― メンタルヘルスの悪化　<span class="qbadge">16</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">2021年のある調査では、70%の人がリモートワークに肯定的な見方を示し、健康、対人関係、経済面での恩恵を挙げた。</div></div><div class="jpline"><div class="n">②</div><div class="s">しかし同じ調査で、24%の回答者が自宅での人間関係のストレスを報告し、54%が仕事場所の不足がワークライフバランスに悪影響を与えていると指摘した。</div></div><div class="jpline"><div class="n">③</div><div class="s">憂慮すべきことに、10.4%がリモートワークで気に入った点の上位3つにメンタルヘルスの改善を挙げた一方で、<u>回答者の5人に1人が新たなメンタルヘルスの問題を報告した</u>。</div></div><div class="jpline"><div class="n">④</div><div class="s">これは、同僚や上司との交流の欠如による孤立と不安によるものである。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">最も気がかりなのは、若い従業員や一人暮らしの従業員に限って見ると、この報告されたメンタルヘルスの問題の割合が<em>39%</em>へとほぼ倍増したことである。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第5段落</div><ul><li><b>［16］39%</b>＝<u>問16の正解＝2</u>。<em>第3文で『5人に1人（＝20%）が新たなメンタルヘルスの問題を報告』</em>、最終文で<u>若年層・単身者に限るとその割合が『ほぼ倍』</u>。<b>20%の約2倍＝39%</b>が最も近い。<span class="qbadge">16</span></li>
+    <li><b>計算で解く設問</b>：<em>one in five＝5人に1人＝20%</em>。<u>almost doubled（ほぼ倍増）→ 約40%</u>。選択肢1の20%は倍増前の数字（罠）。</li>
+    <li><b>数字の使い方</b>：<em>70%が肯定的、しかし24%・54%が問題を指摘</em>＝<u>同じ調査から否定的な面を拾い上げる</u>のがこの記事の手法。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜反論④ ― 都市の衰退と地方の混乱　<span class="qbadge">17</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワークの有害な影響はいたるところに見られる。</div></div><div class="jpline"><div class="n">②</div><div class="s">一方では、人々が都市に住む必要がなくなったことで、企業は取引をやめ、美術館、交響楽団のホール、その他の文化施設は訪問者が大幅に減った。</div></div><div class="jpline"><div class="n">③</div><div class="s">このため都市の行政や住民団体は、それらに資金を出すか、つぶれるに任せるかを迫られている。</div></div><div class="jpline"><div class="n">④</div><div class="s">他方では、この2年間でリモート労働者が地方の町や村へと殺到した。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>これはそうした地域社会にとって本当に壊滅的だった</em>。予期せぬ新住民の波が、学校、道路、病院、警察、その他の行政サービスにわたって、地域全体に深刻な問題を引き起こしたからである。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">これらの問題は、リモート労働者を雇う企業が別の市や州に拠点を置き、そこに納税している場合、さらに深刻になる。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第6段落</div><ul><li><b>問17の根拠</b>：<u>正解＝4 residents in rural towns and villages（地方の町や村の住民）</u>。<em>第4文以降で、リモート労働者の流入が地方に与えた影響が truly disastrous（本当に壊滅的）という強い語で述べられている</em>。<span class="qbadge">17</span></li>
+    <li><b>都市 vs 地方の両面</b>：<em>On the one hand（都市の文化施設の衰退）／On the other hand（地方の混乱）</em>。<u>設問は『最も否定的な影響を受けた集団』を問うので、truly disastrous という最上級級の表現がある地方が答え</u>。</li>
+    <li><b>問題が深刻化する理由</b>：<em>企業は別の市・州に納税している</em>＝<u>新住民は増えるのに税収は増えない</u>。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜反論⑤ ― 環境によいという考えは幻想　<span class="qbadge">18</span> <span class="qbadge">20</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">リモートワークが環境に有益だという考えは幻想である。</div></div><div class="jpline"><div class="n">②</div><div class="s">たとえば、100人の労働者のための1つのオフィスを運営するエネルギー費用は、100の在宅オフィスを運営するのに必要な費用の<em>ほんの一部にすぎない</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">労働者は、1時間の通勤が毎日なくなることによるCO2削減を自慢する。</div></div><div class="jpline"><div class="n">④</div><div class="s">しかし彼らが地方に移り住むと、それを単にスーパーマーケットやホームセンターへの1時間の運転に交換しているだけなのだ。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">さらに、人々が広大な農地や人里離れた森林の丘に新居を建てることで、そうした景観を傷つけるだけでなく、それらが食料やその他の資源を生産するために使われるのを妨げてもいる。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第7段落</div><ul><li><b>［18］are only a fraction of</b>「〜のほんの一部にすぎない」＝<u>問18の正解＝3</u>。<em>『環境によいという考えは幻想』に続く内容</em>なので、<u>1つのオフィスのエネルギー費用のほうが、100の在宅オフィスよりずっと少ない</u>となる。<span class="qbadge">18</span></li>
+    <li><b>a fraction of ~</b>「〜のごく一部」＝<em>ずっと少ない</em>。<u>選択肢2（many times more than＝何倍も多い）を選ぶと『オフィスのほうが費用がかかる＝リモートのほうが環境によい』となり、段落冒頭の『幻想だ』と矛盾する</u>。</li>
+    <li><b>問20の根拠</b>：<u>I. D. Nighet は第7段落第1文で『環境によいという考えは幻想』と述べる＝リモートワークが環境を改善するとは考えていない</u>。一方<em>Noah Fice（大問1）は第7段落第4文で環境への好影響に言及</em>。＝<b>問20はNoah Ficeのみ同意＝Slot 1</b>。<span class="qbadge">20</span></li></ul></div><div class="tr-sec"><b>第8段落</b>｜結論 ― 誰かが介入しなければならない　<span class="qbadge">19</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">誰かが介入する必要がある。それが消費者としての行動を通じた個人であれ、公共政策を通じた政府であれ。</div></div><div class="jpline"><div class="n">②</div><div class="s">放っておけば、企業も従業員も、事態を手に負えないところまで進ませてしまいそうだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">たとえばメタ社を見てみよう。</div></div><div class="jpline"><div class="n">④</div><div class="s">同社は、連絡を取り合い、イベントを計画し、同じ考えを持つ人々と出会うことを容易にすることで世界に革命をもたらした企業として始まった。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">今日、同社は、人々が仕事も娯楽もすべて行う仮想世界へと、すべての人を押し込もうとしている。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">これは本当に私たちが望む未来なのだろうか。実際、私たちの文化施設、社会的関係、そしてメンタルヘルスを犠牲にしてまで、それを望むだろうか。</div></div></div>
+      <div class="tr-points"><div class="pl">空所の根拠・急所｜第8段落</div><ul><li><b>問19の根拠</b>：<u>正解＝Slot 4（どちらの筆者も同意しない）</u>。設問＝<em>「政府はリモートワークを奨励する政策を作るべきだ」</em>。<u>Noah Fice（大問1）は政府の関与に一切言及していない</u>。<u>I. D. Nighet は第8段落第1文で政府の公共政策に言及するが、それは『介入＝規制』であって『奨励』ではない</u>。<span class="qbadge">19</span></li>
+    <li><b>Somebody needs to intervene</b>「誰かが介入する必要がある」＝<em>放置すれば悪化する</em>という結論。<u>個人（消費者行動）または政府（公共政策）</u>。</li>
+    <li><b>メタ社の例</b>：<em>かつて人をつなげた企業が、今は人を仮想世界に閉じ込めようとしている</em>＝<u>皮肉な対比で締めくくる</u>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 問19〜20</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした問題が「どの手がかりを見落としたか」で振り返る。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:12%">設問</th><th style="width:10%">解答</th><th style="width:32%">決め手</th><th>陥りやすい誤答</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">問12</td><td><b>3</b></td><td>都市への集中→豊かな都市（因果）</td><td>1 beginning to（後ろが名詞句で形が合わない）</td></tr>
+      <tr><td class="cond">問13</td><td><b>1</b></td><td>直後の But was this all an illusion?</td><td>2 懐疑的だった（Butの転換が成立しない）</td></tr>
+      <tr><td class="cond">問14</td><td><b>3</b></td><td>文末の is concerned と呼応</td><td>4 Whereas（is concernedが浮く）</td></tr>
+      <tr><td class="cond">問15</td><td><b>1</b></td><td>The second＝innovation／new ideas</td><td>4 直接的な監督（近接語 supervision の罠）</td></tr>
+      <tr><td class="cond">問16</td><td><b>2</b></td><td>one in five＝20%、almost doubled</td><td>1 20%（倍増前の数字）</td></tr>
+      <tr><td class="cond">問17</td><td><b>4</b></td><td>truly disastrous という最強の語</td><td>1 都市住民（On the one hand側だけ読む）</td></tr>
+      <tr><td class="cond">問18</td><td><b>3</b></td><td>段落冒頭「環境によいは幻想」と整合</td><td>2 何倍も多い（常識で判断／結論が逆転）</td></tr>
+      <tr><td class="cond">問19</td><td><b>Slot 4</b></td><td>Fice言及なし／Nighetは規制方向</td><td>2（政府＋政策の語一致だけで判断）</td></tr>
+      <tr><td class="cond">問20</td><td><b>Slot 1</b></td><td>Fice＝環境改善／Nighet＝幻想</td><td>3（両方が環境に言及＝両方同意と誤解）</td></tr>
+    </tbody>
+  </table>
+  <h2 class="sec">復習動線 ― 落とした「型」から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>空所の外を見なかった（問13・問14・問15）</b><p>この大問の空所は、<em>答えが必ず空所の外にある</em>。<u>問13＝直後の But（疑問）／問14＝文末の is concerned／問15＝数文先の The second</u>。<strong>空所を睨む時間を、周辺を読む時間に回す</strong>だけで正答率が変わる。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>数値・程度の処理で落とした（問16・問17）</b><p>問16は<em>one in five＝20% → almost doubled＝約40%</em>という2段階の処理。<u>1段階目で止まると20%を選ぶ</u>。問17は<em>被害が複数並ぶ中で「最も」を判定</em>する問題で、<strong>truly disastrous という語の強さ</strong>が根拠。<u>「どれも被害を受けている」で止まらない</u>。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>常識で方向を決めた（問18）</b><p>「大きなオフィスのほうがエネルギーを使うはず」という常識は、<em>段落冒頭の「環境によいは幻想」</em>に負ける。<u>例文は必ず段落の主張を支える方向に働く</u>。<strong>常識ではなく、その段落が何を証明しようとしているかで向きを決める</strong>。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>Slot判定を推測で埋めた（問19・問20）</b><p>最大の誤りは<em>「擁護派だから賛成のはず」と本文にない意見を補うこと</em>。<u>①言及の有無 ②賛否の方向</u>の2段階で機械的に判定する。<strong>言及がなければ同意とは判定しない</strong>。また<em>話題が同じでも方向が逆なら同意ではない</em>（問19のNighet＝政府に言及はあるが規制方向）。</p></div></div>
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    慶應経済の大問1・2は<strong>「同じテーマの賛成論と反対論を読ませ、最後に突き合わせる」</strong>という設計です。<u>片方だけを精読しても問19・20は解けません</u>。<em>読みながら「この主張は、もう一方の記事のどの主張への反論か」を対応づける</em>――この習慣が、この形式の攻略法そのものです。対立点（生産性・創造性・地域・環境・政府の役割）を表にして整理してから照合問題に入ってください。</div>
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は慶應義塾大学経済学部2024年英語（大問2）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 問12〜15：グループAB ===== */
+{id:"問12", grp:"AB", type:"空所補充（因果）", lbl:"空所［12］", en:"the Industrial Revolution has brought people into dense urban centers, [ 12 ] the growth of culturally rich cities like New York, London, Paris, and Tokyo",
+ ask:"空所［12］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"beginning to（〜し始めて）", ok:false},{t:"consisting of（〜から成る）", ok:false},{t:"leading to（その結果〜に至る）", ok:true},{t:"taking over（引き継いで）", ok:false}],
+ steps:[
+   {t:"空所の前後を確認", d:"前：<b>産業革命が人々を密集した都市中心部へ集めた</b>／後：<b>ニューヨーク等の文化的に豊かな都市の成長</b>。"},
+   {t:"論理関係を判定", d:"<u>人が都市に集まった → その結果 文化的に豊かな都市が生まれた</u>＝<em>原因→結果</em>。"},
+   {t:"選ぶ", d:"<b>leading to（その結果〜に至る）</b>＝3。分詞構文で結果を表す定番。"}],
+ ev:{q:'the Industrial Revolution has brought people into dense urban centers, <span class="h">leading to</span> the growth of culturally rich cities', jp:"「産業革命が人々を密集した都市中心部へ集め、その結果、文化的に豊かな都市の成長に至った」。"},
+ co:[{c:"gold",l:"lead to＝結果を導く",h:"<b>「〜という結果をもたらす」</b>。<u>分詞構文 leading to ~ で『その結果〜に至った』</u>。因果を示す最頻出表現。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>前後の因果関係を読み取る力</b>。<u>空所は独立した語彙問題ではなく、2つの内容をどうつなぐかの問題</u>。"}],
+ sol:[{m:"x",n:"1",t:"beginning to は<u>後ろに動詞の原形が必要</u>（begin to do）。ここは名詞句（the growth）が続くので形が合わない。〈選びがちな人〉意味だけで判断し、後ろの品詞を見ない人。"},
+      {m:"x",n:"2",t:"consisting of（〜から成る）＝<u>構成要素を示す</u>。都市中心部が『都市の成長から成る』では意味をなさない。〈選びがちな人〉of の後ろに名詞が来る形だけ見て選ぶ人。"},
+      {m:"o",n:"3",t:"正解。leading to＝その結果〜に至る。原因（都市への集中）→結果（豊かな都市の成長）。"},
+      {m:"x",n:"4",t:"taking over（引き継ぐ・乗っ取る）＝<u>主体の交代を表し、因果を示さない</u>。〈選びがちな人〉産業革命が『取って代わった』というイメージで選ぶ人。"}]},
+
+{id:"問13", grp:"AB", type:"空所補充（文）", lbl:"空所［13］", en:"Worker productivity skyrocketed … [ 13 ]. But was this all an illusion?",
+ ask:"空所［13］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"Many took these figures at face value（多くの人がこれらの数字を額面通りに受け取った）", ok:true},{t:"Most people were skeptical of the data（ほとんどの人がデータに懐疑的だった）", ok:false},{t:"Nobody was fooled by such numbers（誰もそんな数字にだまされなかった）", ok:false},{t:"The data never seemed very rosy at all（データはまったく楽観的に見えなかった）", ok:false}],
+ steps:[
+   {t:"空所の直前を読む", d:"<b>生産性が急上昇（13%〜56%の伸び）、運動量増加、新しい趣味、家族との時間</b>＝<u>リモートワークの恩恵が具体的な数字とともに提示されている</u>。"},
+   {t:"空所の直後を読む", d:"<b>But was this all an illusion?</b>「しかし、これはすべて幻想ではなかったのか?」＝<u>それまで信じられていたものを疑う</u>転換。"},
+   {t:"橋渡しを選ぶ", d:"<b>『多くの人がこれらの数字を額面通りに受け取った』</b>＝1。<u>鵜呑みにした → しかし幻想では?</u> と自然につながる。"}],
+ ev:{q:'Workers reported exercising more, finding new hobbies … <span class="h">Many took these figures at face value</span>. But was this all an illusion?', jp:"「多くの人がこれらの数字を額面通りに受け取った。しかし、これはすべて幻想ではなかったのか?」。"},
+ co:[{c:"gold",l:"take ~ at face value",h:"<b>『額面通りに受け取る・鵜呑みにする』</b>。<u>疑わずに信じた</u>という含み。直後の But（疑問）への伏線になる。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>But の直後の疑問文から逆算する力</b>。<u>『幻想では?』と疑うには、その前に『信じていた』がなければならない</u>。"}],
+ sol:[{m:"o",n:"1",t:"正解。数字を鵜呑みにした→しかし幻想では?、という流れが成立する。"},
+      {m:"x",n:"2",t:"『懐疑的だった』＝<u>直後の『しかし幻想では?』という疑問の提示と重複し、But の転換が成り立たない</u>。すでに疑っているなら But で疑いを持ち出す必要がない。〈選びがちな人〉記事全体が批判的だと知っていて、空所にも批判的な内容を入れたくなる人。<b>最も引っかかる誤答</b>。"},
+      {m:"x",n:"3",t:"『誰もだまされなかった』も同様に<u>But の転換と噛み合わない</u>。加えて第3段落冒頭の『today, few are deceived（今日では欺かれる人はほとんどいない）』と比べると、<em>当時は多くが信じていた</em>ことが分かる。"},
+      {m:"x",n:"4",t:"『楽観的に見えなかった』＝<u>直前の具体的な好数字（13〜56%の生産性向上）と矛盾</u>。〈選びがちな人〉空所の直前を読まずに選んだ人。"}]},
+
+{id:"問14", grp:"AB", type:"空所補充（熟語）", lbl:"空所［14］", en:"[ 14 ] increased productivity is concerned, it has simply been a product of more hours working",
+ ask:"空所［14］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"However as", ok:false},{t:"Much as", ok:false},{t:"So far as", ok:true},{t:"Whereas", ok:false}],
+ steps:[
+   {t:"文末の is concerned に注目", d:"<b>[ 14 ] increased productivity <u>is concerned</u></b>＝<em>「〜に関する限り」という定型表現の一部</em>ではないかと見当をつける。"},
+   {t:"熟語を確定", d:"<b>so far as S is concerned＝『Sに関する限り』</b>（as far as S is concerned とも）。"},
+   {t:"意味で確認", d:"「生産性の向上<u>に関する限り</u>、それは単により長く働いた結果にすぎない」＝文意が通る。"}],
+ ev:{q:'<span class="h">So far as</span> increased productivity is concerned, it has simply been a product of more hours working.', jp:"「生産性の向上に関する限り、それは単により長く働いた結果にすぎない」。"},
+ co:[{c:"gold",l:"so far as S is concerned",h:"<b>『Sに関する限り』</b>。<u>as far as S is concerned と同義</u>。is concerned とセットで覚える。"},
+     {c:"nav",l:"文末から解く",h:"<b>is concerned という『相方』を見つければ即決</b>。<u>空所だけ見て意味を考えるより、定型表現の片割れを探す</u>ほうが速い。"}],
+ sol:[{m:"x",n:"1",t:"However as という形は<u>存在しない</u>。〈選びがちな人〉However（しかし）の意味だけで選び、is concerned との呼応を見ない人。"},
+      {m:"x",n:"2",t:"Much as（〜ではあるが）は譲歩を表すが、<u>is concerned とは呼応しない</u>。"},
+      {m:"o",n:"3",t:"正解。so far as S is concerned＝Sに関する限り。"},
+      {m:"x",n:"4",t:"Whereas（〜である一方）は<u>2つの節を対比させる接続詞で、is concerned という定型の一部にならない</u>。〈選びがちな人〉対比の意味で選ぶが、文末の is concerned が浮いてしまう。"}]},
+
+{id:"問15", grp:"AB", type:"空所補充（並列）", lbl:"空所［15］", en:"companies fail to see the long-term impacts on the quality of work [ 15 ]. The first stems from … The second is a product of …",
+ ask:"空所［15］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"and the creativity of employees（と従業員の創造性）", ok:true},{t:"and the mental health of workers（と労働者のメンタルヘルス）", ok:false},{t:"or impacts on employees' work-life balance（あるいは従業員のワークライフバランスへの影響）", ok:false},{t:"or the importance of direct supervision（あるいは直接的な監督の重要性）", ok:false}],
+ steps:[
+   {t:"直後の The first / The second に注目", d:"空所の直後：<b>The first stems from ~</b>／同段落第4文：<b>The second is a product of ~</b>＝<u>2つの内容が展開される</u>。つまり空所で<em>2つ目の要素</em>が提示されるはず。"},
+   {t:"前者と後者を特定", d:"<b>前者＝空所直前の the quality of work（仕事の質）</b>＝監視の強化による（速く働くが賢く働かない）。<b>後者＝空所に入る要素</b>で、<u>innovation（革新）や new ideas（新しいアイデア）が述べられている</u>。"},
+   {t:"選ぶ", d:"革新・新しいアイデアに関わるのは<b>『従業員の創造性』</b>＝1。"}],
+ ev:{q:'the long-term impacts on the quality of work <span class="h">and the creativity of employees</span>. The first stems from the rise of supervision. … The second … stifles innovation.', jp:"「仕事の質と従業員の創造性への長期的影響。第一は監視の強化から生じる…第二は…革新を窒息させる」。"},
+ co:[{c:"nav",l:"The first / The second が鍵",h:"<b>空所で2つ挙げ、直後で順に説明する</b>構造。<u>The second の中身（革新・アイデア）から逆算</u>すれば創造性と決まる。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>段落の構造（列挙と展開）を読む力</b>。<u>空所の直後だけでなく、数文先の The second まで見て初めて解ける</u>。"}],
+ sol:[{m:"o",n:"1",t:"正解。The second が述べる innovation / new ideas ＝従業員の創造性。"},
+      {m:"x",n:"2",t:"『メンタルヘルス』は<u>第5段落の主題であって、この段落の The second ではない</u>。〈選びがちな人〉記事全体にメンタルヘルスの話があるのを知っていて、段落の対応を確認せず選ぶ人。"},
+      {m:"x",n:"3",t:"『ワークライフバランス』も<u>第5段落で触れられるが、この段落の展開ではない</u>。加えて or では The first / The second という2つの並列を受けにくい。"},
+      {m:"x",n:"4",t:"『直接的な監督の重要性』＝<u>監督（supervision）は The first の原因として否定的に語られている</u>。企業が見落としている『影響』の中身として不適。〈選びがちな人〉直後の supervision という語に反応した人（近接語の罠）。"}]},
+
+/* ===== 問16〜18：グループCD ===== */
+{id:"問16", grp:"CD", type:"空所補充（数値計算）", lbl:"空所［16］", en:"one in five of all respondents reported new mental health issues … this reported rate … almost doubled to [ 16 ]",
+ ask:"空所［16］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"2", kind:"choice",
+ choices:[{t:"20%", ok:false},{t:"39%", ok:true},{t:"47%", ok:false},{t:"48%", ok:false}],
+ steps:[
+   {t:"元になる数値を特定", d:"同段落第3文：<b>one in five of all respondents reported new mental health issues</b>「回答者の<u>5人に1人</u>が新たなメンタルヘルスの問題を報告」＝<em>20%</em>。"},
+   {t:"変化を読む", d:"最終文：<b>若い従業員と一人暮らしの従業員に限ると、この割合が almost doubled（ほぼ倍増）した</b>。"},
+   {t:"計算する", d:"<u>20% × 約2＝約40%</u>。選択肢のうち<b>39%</b>が最も近い＝2。"},
+   {t:"他を消す", d:"20%は<em>倍増する前の数字</em>。47%・48%は<u>20%の倍（約40%）から離れすぎ</u>（2.35倍・2.4倍になってしまう）。"}],
+ ev:{q:'<span class="h">one in five</span> of all respondents reported new mental health issues … this reported rate of mental health problems <span class="h">almost doubled</span>', jp:"「回答者の5人に1人（20%）が新たなメンタルヘルスの問題を報告…この割合がほぼ倍増した」。"},
+ co:[{c:"gold",l:"one in five＝20%",h:"<b>『5人に1人』＝20%</b>。<u>分数表現を％に直す</u>のが第一歩。almost doubled＝ほぼ2倍。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>本文中の数値表現を正確に換算し、計算する力</b>。<u>選択肢1（20%）は『倍増前の数字』という罠</u>で、almost doubled を読み飛ばすと選んでしまう。"}],
+ sol:[{m:"x",n:"1",t:"20%は<u>倍増する『前』の数字</u>（回答者全体の5人に1人）。〈選びがちな人〉one in five＝20%までは正しく換算したが、almost doubled を見落とした人。<b>最も引っかかる誤答</b>。"},
+      {m:"o",n:"2",t:"正解。20%がほぼ倍増＝約40%。39%が最も近い。"},
+      {m:"x",n:"3",t:"47%は<u>20%の約2.35倍</u>で、almost doubled（ほぼ2倍）から離れる。〈選びがちな人〉本文の54%など他の数字に引きずられた人。"},
+      {m:"x",n:"4",t:"48%も<u>約2.4倍</u>で倍増とは言えない。"}]},
+
+{id:"問17", grp:"CD", type:"内容一致（最上級の判断）", lbl:"問17", en:"In Paragraph ⑥, which of the following groups has been most negatively impacted by the increase in remote work?",
+ ask:"第6段落によれば、リモートワークの増加によって最も否定的な影響を受けたのはどの集団か。1〜4 から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"city residents（都市の住民）", ok:false},{t:"companies who hire remote workers（リモート労働者を雇う企業）", ok:false},{t:"cultural establishments（文化施設）", ok:false},{t:"residents in rural towns and villages（地方の町や村の住民）", ok:true}],
+ steps:[
+   {t:"段落の二部構成を確認", d:"<b>On the one hand＝都市（企業の取引停止、文化施設の訪問者減）／On the other hand＝地方（リモート労働者の流入）</b>。"},
+   {t:"『最も』を判定する語を探す", d:"地方について：<b>This has been truly disastrous for those communities</b>「これはそうした地域社会にとって<u>本当に壊滅的だった</u>」＝<em>段落中で最も強い否定的表現</em>。"},
+   {t:"選ぶ", d:"<b>地方の町や村の住民</b>＝4。<u>truly disastrous という強い語が判断の決め手</u>。さらに学校・道路・病院・警察など<em>地域全体に深刻な問題</em>と具体化される。"}],
+ ev:{q:'over the past two years remote workers have flooded into rural towns and villages. <span class="h">This has been truly disastrous for those communities</span>', jp:"「この2年でリモート労働者が地方の町や村に殺到した。これはそうした地域社会にとって本当に壊滅的だった」。"},
+ co:[{c:"verm",l:"『最も』は表現の強さで決まる",h:"<b>truly disastrous（本当に壊滅的）</b>＝段落中で最も強い否定表現。<u>都市側には『資金を出すか、つぶれるに任せるか』とあるが、disastrous ほど強くない</u>。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>複数の被害が並ぶ中で、程度の差を語の強さで判断する力</b>。<u>『どれも被害を受けている』で止まらず、最上級の根拠を探す</u>。"}],
+ sol:[{m:"x",n:"1",t:"都市住民も影響を受けるが、<u>本文で『壊滅的』とまでは述べられていない</u>。行政や住民団体が資金の判断を迫られる、という記述にとどまる。〈選びがちな人〉On the one hand 側だけ読んで選んだ人。"},
+      {m:"x",n:"2",t:"『リモート労働者を雇う企業』は、<u>問題を深刻化させる側</u>として言及される（別の市・州に納税している）。被害者として描かれていない。〈選びがちな人〉corporations employing remote workers という語を見て反応した人。"},
+      {m:"x",n:"3",t:"文化施設（美術館・交響楽団）は訪問者減の被害を受けるが、<u>やはり truly disastrous とは書かれていない</u>。〈選びがちな人〉具体名が挙がっているので印象に残り選ぶ人。"},
+      {m:"o",n:"4",t:"正解。truly disastrous と最も強い語で、地域全体の深刻な問題として描かれている。"}]},
+
+{id:"問18", grp:"CD", type:"空所補充（比較）", lbl:"空所［18］", en:"the energy costs of operating a single office for a hundred workers [ 18 ] what it takes to run a hundred home offices",
+ ask:"空所［18］に入れるのにもっとも適切なものを 1〜4 から選べ。", answer:"3", kind:"choice",
+ choices:[{t:"are equal to（〜と等しい）", ok:false},{t:"are many times more than（〜より何倍も多い）", ok:false},{t:"are only a fraction of（〜のほんの一部にすぎない）", ok:true},{t:"are qualitatively different from（〜と質的に異なる）", ok:false}],
+ steps:[
+   {t:"段落冒頭の主張を確認", d:"<b>The idea that remote work is beneficial to the environment is a fantasy.</b>「リモートワークが環境に有益だという考えは幻想である」＝<u>リモートは環境によくない</u>。"},
+   {t:"例が支えるべき方向を定める", d:"For example 以下は<em>この主張を支える例</em>。したがって<u>『オフィス1つ』のほうが『在宅100軒』より環境負荷が小さい</u>と言わなければならない。"},
+   {t:"選ぶ", d:"<b>are only a fraction of（〜のほんの一部にすぎない）</b>＝3。<u>オフィス1つの費用は、在宅100軒の費用のごく一部</u>＝オフィスのほうが効率的。"}],
+ ev:{q:'the energy costs of operating a single office for a hundred workers <span class="h">are only a fraction of</span> what it takes to run a hundred home offices', jp:"「100人のためのオフィス1つのエネルギー費用は、100の在宅オフィスを運営する費用のほんの一部にすぎない」。"},
+ co:[{c:"gold",l:"a fraction of ~",h:"<b>『〜のごく一部』＝ずっと少ない</b>。<u>fraction（分数・断片）から『わずか』の意</u>。"},
+     {c:"verm",l:"方向を間違えると逆になる",h:"<b>選択肢2（何倍も多い）を入れると『オフィスのほうが費用がかかる＝リモートのほうが環境によい』</b>となり、<u>段落冒頭の『幻想だ』と正面から矛盾する</u>。"}],
+ sol:[{m:"x",n:"1",t:"『等しい』では<u>どちらが環境によいかの主張にならない</u>。段落は明確にリモートを批判している。"},
+      {m:"x",n:"2",t:"『何倍も多い』＝<u>オフィスのほうが費用がかかる＝リモートのほうが環境によい</u>となり、段落冒頭の『環境によいという考えは幻想』と正反対。〈選びがちな人〉『大きなオフィスのほうがエネルギーを使うはず』という常識で選んだ人。<b>最大の罠</b>。"},
+      {m:"o",n:"3",t:"正解。オフィス1つの費用は在宅100軒のごく一部＝リモートのほうが環境負荷が大きい。"},
+      {m:"x",n:"4",t:"『質的に異なる』＝<u>量の比較になっておらず、費用の大小を述べる文脈に合わない</u>。"}]},
+
+/* ===== 問19・20：グループEF（両記事の照合） ===== */
+{id:"問19", grp:"EF", type:"両記事の照合（Slot判定）", lbl:"問19", en:"Governments should make policies to encourage remote work.",
+ ask:"「政府はリモートワークを奨励する政策を作るべきだ」― 両方の記事に基づき、Slot 1（Noah Ficeのみ同意）／2（I. D. Nighetのみ同意）／3（両者とも同意）／4（どちらも同意しない）から選べ。", answer:"4", kind:"choice",
+ choices:[{t:"Slot 1（Noah Fice のみ同意）", ok:false},{t:"Slot 2（I. D. Nighet のみ同意）", ok:false},{t:"Slot 3（両者とも同意）", ok:false},{t:"Slot 4（どちらも同意しない）", ok:true}],
+ steps:[
+   {t:"Noah Fice（大問1）を確認", d:"大問1は<u>リモートワークを全面的に擁護する記事</u>だが、<b>政府の関与・政策については一切言及していない</b>。<em>言及がない＝同意しているとは判定できない</em>。"},
+   {t:"I. D. Nighet（大問2）を確認", d:"第8段落第1文：<b>Somebody needs to intervene: … or the government through public policy</b>「誰かが介入する必要がある…公共政策を通じた政府であれ」＝<u>政府の政策に言及はある</u>。"},
+   {t:"『奨励』か『規制』かを見極める", d:"だがNighetの記事は<em>リモートワークの害を訴える</em>もの。この介入は<b>リモートワークを抑制・規制するため</b>であって、<u>『奨励する政策』ではない</u>。→ 同意しない。"},
+   {t:"判定", d:"<b>Noah Fice＝言及なし／Nighet＝規制であって奨励ではない</b>＝<u>どちらも『奨励する政策』には同意しない</u>＝<b>Slot 4</b>。"}],
+ ev:{q:'Somebody needs to intervene: whether that means individuals … or <span class="h">the government through public policy</span>. Left alone, companies and employees are both seemingly willing to let things get out of hand.', jp:"「誰かが介入する必要がある…公共政策を通じた政府であれ。放っておけば事態は手に負えなくなる」＝介入＝抑制のため。"},
+ co:[{c:"verm",l:"『言及なし』は『同意』ではない",h:"<b>Noah Ficeは政府の役割に触れていない</b>。<u>触れていない以上、同意しているとは判定できない</u>――これがSlot判定の大原則。"},
+     {c:"nav",l:"方向の違いを見抜く",h:"<b>Nighetの『介入』＝リモートワークを抑える方向</b>。<u>設問は『奨励する政策』なので、言及があっても方向が逆なら同意ではない</u>。"}],
+ sol:[{m:"x",n:"1",t:"Noah Ficeは<u>政府の政策に一切言及していない</u>ので、同意とは判定できない。〈選びがちな人〉『リモート擁護派なら奨励に賛成するはず』と推測で補った人。<b>本文にない意見を想像で補う</b>のが最大の誤り。"},
+      {m:"x",n:"2",t:"Nighetは政府の政策に言及するが、それは<u>介入＝抑制・規制のため</u>であって奨励ではない。〈選びがちな人〉『政府＋政策』という語の一致だけで同意と判断した人。"},
+      {m:"x",n:"3",t:"両者とも同意していないので誤り。"},
+      {m:"o",n:"4",t:"正解。Ficeは言及なし、Nighetは規制方向＝どちらも『奨励する政策』には同意しない。"}]},
+
+{id:"問20", grp:"EF", type:"両記事の照合（Slot判定）", lbl:"問20", en:"Remote work improves the environment.",
+ ask:"「リモートワークは環境を改善する」― 両方の記事に基づき、Slot 1〜4 から選べ。", answer:"1", kind:"choice",
+ choices:[{t:"Slot 1（Noah Fice のみ同意）", ok:true},{t:"Slot 2（I. D. Nighet のみ同意）", ok:false},{t:"Slot 3（両者とも同意）", ok:false},{t:"Slot 4（どちらも同意しない）", ok:false}],
+ steps:[
+   {t:"Noah Fice（大問1）を確認", d:"大問1の第7段落：<b>利点の一つとして環境への影響を挙げ、『温室効果ガスとエネルギー消費をどう減らすかは容易に見て取れる』</b>と述べる＝<u>環境を改善すると考えている＝同意</u>。"},
+   {t:"I. D. Nighet（大問2）を確認", d:"第7段落第1文：<b>The idea that remote work is beneficial to the environment is a fantasy.</b>「リモートワークが環境に有益だという考えは<u>幻想である</u>」＝<em>明確に否定＝同意しない</em>。"},
+   {t:"判定", d:"<b>Fice＝同意／Nighet＝否定</b>＝<u>Noah Ficeのみ同意</u>＝<b>Slot 1</b>。"},
+   {t:"両者の対立点として押さえる", d:"<em>この設問は、2つの記事が真っ向から対立する論点</em>。<u>同じ話題（環境）について、一方は利点として挙げ、他方は幻想と切り捨てている</u>。"}],
+ ev:{q:'[Nighet 第7段落] <span class="h">The idea that remote work is beneficial to the environment is a fantasy.</span> ／[Fice 第7段落] one can easily see how it reduces greenhouse gasses and energy consumption.', jp:"Nighet「環境に有益という考えは幻想」／Fice「温室効果ガスとエネルギー消費を減らすことは容易に見て取れる」＝正面から対立。"},
+ co:[{c:"nav",l:"2記事の対立点",h:"<b>環境問題は、2つの記事が最も鮮明に対立する論点</b>。<u>Fice＝利点として明記／Nighet＝冒頭で『幻想』と断定</u>。どちらも明確に述べているので判定しやすい。"},
+     {c:"gold",l:"Slot判定の手順",h:"<b>①各筆者が『その話題に言及しているか』②『賛成か反対か』</b>の2段階で判定。<u>言及なし→同意とはしない／言及あり→方向を確認</u>。"}],
+ sol:[{m:"o",n:"1",t:"正解。Ficeは環境改善を利点として挙げ、Nighetは『幻想』と否定。Noah Ficeのみ同意。"},
+      {m:"x",n:"2",t:"逆。<u>Nighetこそが『幻想』と明確に否定している</u>。〈選びがちな人〉どちらの記事がどちらの立場か混同した人。<b>記事名と立場を必ず紐づける</b>。"},
+      {m:"x",n:"3",t:"Nighetが否定しているので『両者とも同意』は誤り。〈選びがちな人〉『環境』という語が両方の記事にあるのを見て、両方が論じている＝両方同意と早合点した人。<u>言及の有無と賛否は別</u>。"},
+      {m:"x",n:"4",t:"Ficeは明確に環境への好影響を述べているので『どちらも同意しない』は誤り。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+
+</script>
+</body>
+</html>
