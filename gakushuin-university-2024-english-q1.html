@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜学習院大学 2024 大問1（食品ロスと料理）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">学</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>学習院大学 2024 ／ 大問1</span></div>
+    <div class="top-meta">Tamar Adler「食品ロス」<br>下線部・空所・和訳・内容一致／全10問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>KEY</small>主張の転換</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>A–D</small>設問 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>E–G</small>空所・言い換え</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>H–J</small>和訳・内容一致</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>「食品ロスを減らせ」ではない。<br>「持っている食べ物を使え」だ。<br>この一語の転換が全設問を貫く。</h1>
+    <p>筆者は料理研究家 Tamar Adler。食品ロス対策が進むことを歓迎しつつ、<em>「扱い方を間違えている」</em>と釘を刺す。鍵は<b>food "waste"（食品ロス）への懸念 → food "use"（食べ物を使うこと）への情熱</b>という転換。<u>「捨てるのは悪だ」と責める道徳主義から、「残り物も食べ物として使い切る」実践へ</u>――この軸を掴めば、下線部の言い換えも内容一致も一本の線でつながる。</p>
+    <div class="thesis"><b>この英文の骨格：</b>①食品ロス対策は進んでいる（法律・キャンペーン）。②<u>しかし扱い方が違う</u>。③必要なのは<b>道徳主義的な態度→実践的で人間的な態度</b>への転換。④なぜなら<u>「ごみ」は主観的に生まれる</u>から（絶対的な汚れはない）。⑤実際、ヨーグルト・チーズ・チャーハン・リボリータは<b>すべて残り物から生まれた</b>。⑥だから結論は<u>「持っている食べ物を使え」</u>。</div>
+    <div class="stats">
+      <div class="stat"><b>10</b><span>段落構成</span></div>
+      <div class="stat"><b>10</b><span>設問</span></div>
+      <div class="stat"><b>1</b><span>和訳(15字)</span></div>
+      <div class="stat"><b>2つ</b><span>内容一致J</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:20%">タイプ</th><th style="width:22%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">下線部の意味</td><td>A G</td><td>A＝<b>account for＝占める</b>。何が何の8%かを正確に。G＝<b>想像の限界を超える＝通念に挑む</b>。</td></tr>
+      <tr><td class="cond">空所補充</td><td>B E</td><td>B＝<b>as＝〜として</b>（主語と同一人物）。E＝<b>This が受ける内容＝五感＝主観的</b>。</td></tr>
+      <tr><td class="cond">言い換え・理由</td><td>C D F I</td><td>C＝<b>replace A with B の B 側</b>。D＝<b>コロン以下が理由</b>。F＝<b>because 節</b>。I＝<b>ダッシュの前</b>。</td></tr>
+      <tr><td class="cond">和訳（15字以内）</td><td>H</td><td><b>save の目的語が2つ</b>（お金と時間）。<u>『材料にかかるお金』を『材料費』と圧縮</u>。</td></tr>
+      <tr><td class="cond">内容一致（2つ）</td><td>J</td><td><b>一語のすり替え</b>を見抜く。提出≠承認／4人家族≠1人／固いパン≠新鮮なパン。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の使い方</span>
+    各設問カードは選択肢をタップして自分で解けます。「答え・根拠を表示」で<strong>解答プロセス→根拠（本文）→全選択肢の✓✗</strong>が開きます。Hの和訳は<strong>自分で書いてから</strong>模範解答・採点基準・NG例を、Jは<strong>(イ)〜(ト)をタップ</strong>して各項目の○×を確認してください。<u>誤答ごとに「なぜダメか」＋「どんな読み方をした人が選ぶか」</u>まで示しています。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 10段落の流れと設問の在りか<span class="sub">「導入→データ→立場→主張→転換→展開→具体→意義→結論」。<b>残り物から生まれた料理の実例</b>が主張を支える。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">食品ロスが話題に</div><p>オハイオのキャンペーン、食品寄付改善法、食品ロスゼロ法。<u>ただし法は「提出された」だけ</u>（設問Jイの罠）。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>データ</span></div><div class="para-b">
+      <div class="theme">食品ロスの規模</div><p>米国生産の30〜40%が埋立地へ。<em>世界の温室効果ガスの8%を占める</em>（そのうち米国が11%）。4人家族で月120ドル分。</p><div class="tags"><span class="utag">(1)</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>立場</span></div><div class="para-b">
+      <div class="theme">喜びつつも懸念</div><p><em>残り物料理の本の著者として</em>注目を歓迎。<u>だが扱い方を間違えていると心配</u>＝問題提起。</p><div class="tags"><span class="utag">(X)</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>主張</span></div><div class="para-b">
+      <div class="theme">waste から use へ</div><p><em>「食品ロス」への懸念を「食べ物を使う情熱」に置き換えよ</em>。道徳主義的態度→<u>実践的で人間的な態度</u>へ。</p><div class="tags"><span class="utag">(2)</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>転換</span></div><div class="para-b">
+      <div class="theme">ごみは主観的に生まれる</div><p>食べ物は主観的にごみになる。<em>絶対的な汚れなど存在せず、見る人次第</em>（メアリー・ダグラス）。</p><div class="tags"><span class="utag">(3)</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>展開</span></div><div class="para-b">
+      <div class="theme">食べられるかは見る人次第</div><p>歴史の大半で境界は「見る人の目」に委ねられた。<u>見て嗅いで触って味わって</u>判断してきた。</p><div class="tags"><span class="utag">(Y)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>具体①</span></div><div class="para-b">
+      <div class="theme">残り物から生まれた料理</div><p>ヨーグルト・チーズ・ワイン、refried beans、そして<em>チャーハン（冷たく固いご飯の再利用）</em>。</p><div class="tags"><span class="utag">(4)</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>具体②</span></div><div class="para-b">
+      <div class="theme">リボリータ</div><p>イタリアの名スープ。材料は<u>固くなった乾いたパン・豆の煮汁・チーズの端</u>（設問Jヘの罠）。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>意義</span></div><div class="para-b">
+      <div class="theme">味と知恵が得られる</div><p><em>最初の想像の限界を超えて</em>使えば味の世界が開ける。<u>酸と塩が固いものを柔らかくする</u>知恵も（設問Jト）。</p><div class="tags"><span class="utag">(5)</span></div></div></div><div class="para"><div class="para-n"><b>10</b><span>結論</span></div><div class="para-b">
+      <div class="theme">持っている食べ物を使え</div><p><em>材料費と店に行く時間を節約できる</em>。食品ロスを心配するより<u>持っている食べ物を使う</u>のが良い道。</p><div class="tags"><span class="utag">(6)</span><span class="utag">(7)</span></div></div></div><div class="box navy"><span class="lab">具体例はすべて一つの主張を支える</span>
+  ヨーグルト・チーズ・ワイン・refried beans・チャーハン・リボリータ――<strong>挙がる料理はすべて「捨てられそうなものから生まれた」</strong>。<u>この共通点に気づけば、設問Fも設問Jホ・ヘも即座に判定できる</u>。<em>具体例を読むときは「どの主張を支えているか」を必ず問う</em>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">主張の転換へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">Key Contrast</div>
+  <h1 class="head">主張の転換 ― waste から use へ<span class="sub">この英文の全設問は、この一枚の対比に還元できる。設問C・G・I・Jはここを見れば解ける。</span></h1>
+  <div class="rule"></div>
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">筆者が退ける側<small>food "waste" への懸念</small></div><div class="vs-bd">
+      <div class="r"><b>態度</b><strong>道徳主義的</strong>（moralistic approach）＝「捨てるのは悪だ」と責める</div>
+      <div class="r"><b>語感</b>waste は<strong>食べられそうにも聞こえない</strong>（does not sound edible）</div>
+      <div class="r"><b>手段</b>法律・市民意識啓発＝<strong>数字の上で小さな改善</strong>にとどまる</div>
+      <div class="r"><b>結果</b>心配するだけ＝<strong>遠回り</strong></div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">筆者が説く側<small>food "use" への情熱</small></div><div class="vs-bd">
+      <div class="r"><b>態度</b><strong>実践的で人間的</strong>（a practical human one）＝材料を食べ物として扱う</div>
+      <div class="r"><b>発想</b>「ごみ」は<strong>主観的に生まれる</strong>＝見る人次第だから変えられる</div>
+      <div class="r"><b>実例</b>チャーハン・リボリータ＝<strong>残り物から生まれた料理</strong></div>
+      <div class="r"><b>結果</b><strong>味・知恵・お金・時間</strong>が得られ、埋立地も減る</div>
+    </div></div>
+  </div>
+  <div class="box gold"><span class="lab">この対比が解く設問</span>
+    <strong>設問C</strong>＝下線部 a practical human one は<u>右側（use）</u>なので a passion for food use。<em>左側（concern with food waste）を選ぶと逆</em>。<br>
+    <strong>設問G</strong>＝「最初の想像の限界を超えて」＝<u>右側の発想＝通念に挑む</u>。<em>伝統を守る（左寄り・保守的）は逆</em>。<br>
+    <strong>設問I</strong>＝done this の this は<u>use the food we have（右側）</u>。<em>worried about food waste（左側）は筆者が退けた行為</em>。<br>
+    <strong>設問Jハ</strong>＝<u>「waste 以上に use を考えてほしい」＝この転換そのもの</u>＝正解。</div>
+  <div class="box navy"><span class="lab">なぜ「ごみは主観的」が要るのか</span>
+    第5〜6段落の<strong>「絶対的な汚れなど存在しない／食べられるかは見る人次第」</strong>は、単なる哲学的余談ではない。<u>もし「ごみ」が客観的に決まるなら、残り物を食べ物として使い直すことはできない</u>。<em>主観的だからこそ、見方を変えれば使える</em>――この論理があって初めて、第7段落以降の「残り物から生まれた料理」が説得力を持つ。<b>設問D・Eはこの論理の急所を突いている</b>。</div>
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問A〜Dへ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">設問A〜D ― 下線部・空所の前半<span class="sub">A＝数値の関係、B＝立場のas、C＝言い換えのA/B、D＝コロン以下の理由。<b>どれも「空所・下線部の周辺」を正確に読む</b>問題。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 主張の転換</button><span class="sp"></span><button class="btnp" data-go="4">設問E〜Gへ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">設問E〜G ― 指示語・具体例・比喩<span class="sub">E＝Thisが受ける内容、F＝because節、G＝抽象表現の言い換え。<b>指示語と根拠の位置</b>が鍵。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問A〜D</button><span class="sp"></span><button class="btnp" data-go="5">設問H〜Jへ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">設問H〜J ― 和訳・言い換え・内容一致<span class="sub">Hは15字以内の記述（自己採点つき）、Iは指示語、Jは<b>2つ選ぶ</b>内容一致。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">Hの解答欄の形に注意</span>
+    <strong>「私たちは、____ を節約できる」</strong>という形が指定されている。<u>したがって空欄には『節約できるもの』を名詞句で入れる</u>。<em>save の目的語が『お金』と『時間』の2つ</em>なので、<b>両方を15字以内に収める圧縮力</b>が問われる。</div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 設問E〜G</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全10段落・31文）。番号①②③…は各段落内の文の順番。<b>赤字</b>が設問に直結する箇所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">読むときの視点</span>
+    この英文の答えは<strong>ほぼすべて下線部・空所のすぐ近くにある</strong>。<u>Cは直前の文、Dはコロン以下、Fはbecause節、Iはダッシュの前</u>。訳を読むときは<em>「この設問の根拠はどの一文か」</em>を確かめてほしい。<b>根拠の位置を当てる訓練</b>が、そのまま得点力になる。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― 食品ロスが話題になっている</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">「食品ロス」に関するニュースが最近あちこちで見られる。</div></div><div class="jpline"><div class="n">②</div><div class="s">オハイオ州ではごみ埋立地に入る食品を減らすための市民意識啓発キャンペーンがあり、いくつかのスーパーマーケット・チェーンは食品ロス削減計画を実施している。</div></div><div class="jpline"><div class="n">③</div><div class="s">2023年1月、バイデン大統領は食品寄付改善法に署名し、食品の寄付者への法的保護を拡大して、通常は捨てられてしまう食品の寄付を促そうとした。</div></div><div class="jpline"><div class="n">④</div><div class="s">2月には、食品ロスゼロ法が議会に提出された。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li><b>導入の役割</b>：<em>社会的に食品ロス対策が進んでいる</em>という事実の列挙。<u>筆者はこの後で「方向性が間違っている」と述べる</u>ので、ここは<b>後で覆される前提</b>として読む。</li>
+    <li><b>問Jイの判定材料</b>：<em>『食品ロスゼロ法が議会に提出された（was introduced in Congress）』</em>＝<u>提出されただけで、可決されていない</u>。<b>選択肢イ「議会は食品ロスを促進する法律を承認した」は二重に誤り</b>（承認していない／促進ではなく削減）。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜データ ― 食品ロスの規模　<span class="qbadge">(1)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">統計がその理由を教えてくれる。アメリカが生産する食品の30〜40%が埋立地で一生を終える。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>食品ロスは、世界で排出される温室効果ガスの8%もを占めており</em>、そのうちアメリカが11%を生み出している。</div></div><div class="jpline"><div class="n">③</div><div class="s">そしてアメリカの4人家族は、平均して毎月120ドル分の食品を捨てている。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li><b>(1) Food waste accounts for as much as eight percent of greenhouse gases released in the world</b>＝<u>問Aの根拠</u>。<em>account for ~＝「（ある割合）を占める」</em>。<b>as much as ~＝「〜も」</b>で数量の多さを強調。<u>released in the world は greenhouse gases を修飾</u>（「世界で排出される温室効果ガス」）。<span class="qbadge">(1)</span></li>
+    <li><b>数値の所属に注意</b>：<em>8%＝世界の温室効果ガスに占める食品ロスの割合</em>／<u>11%＝その8%のうちアメリカが生み出す割合</u>。<b>「アメリカ以外で」ではない</b>（問Aロの罠）。</li>
+    <li><b>問Jロの判定材料</b>：<em>『4人家族が月120ドル分を捨てる』</em>＝<u>1人あたりではない</u>。<b>選択肢ロ「アメリカ人は1人平均で月120ドルを捨てるために払う」は、4人家族の数値を個人にすり替えている</b>。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜筆者の立場 ― 喜びつつも懸念がある　<span class="qbadge">(X)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>残り物料理についての本を2冊書いた著者として</em>、私は使われない食品の問題が次第に注目を集めていることをとても嬉しく思う。</div></div><div class="jpline"><div class="n">②</div><div class="s">しかし私は、私たちがこの問題の扱い方を間違えているのではないかと心配している。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li><b>(X) As</b>「〜として」＝<u>問Bの正解＝ロ</u>。<em>As the author of two books on cooking leftovers, I'm very pleased ~</em>「（残り物料理についての）2冊の本の著者として、私は…」。<u>資格・立場を表す as</u>。<span class="qbadge">(X)</span></li>
+    <li><b>But I worry we're handling it wrong.</b>「しかし私たちは扱い方を間違えていると心配だ」＝<u>この英文の問題提起</u>。<em>対策自体は歓迎するが、力点の置き方が違う</em>という立場。</li>
+    <li><b>譲歩→主張の型</b>：<em>I'm very pleased（喜ばしい）→ But I worry（しかし心配）</em>。<u>「賛成だが、もっと大事なことがある」</u>という運び。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜主張 ― 「食品ロス」から「食べ物を使う情熱」へ　<span class="qbadge">(2)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">法律や市民意識啓発キャンペーンは、数字の上で小さな改善をもたらすかもしれない。</div></div><div class="jpline"><div class="n">②</div><div class="s">しかしもっと重要なこととして、アメリカ人は「食品ロス」への懸念を――それは食べられそうにも聞こえないし、ましてやおいしそうでもない――<u>食べ物を使うことへの情熱</u>に、みなで置き換える必要がある。</div></div><div class="jpline"><div class="n">③</div><div class="s">私たちは、道徳主義的な態度から、<em>食べられる材料をありのままのもの、すなわち食べ物として扱う、実践的で人間的な態度</em>へと変わる必要がある。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li><b>(2) a practical human one</b>「実践的で人間的な態度（one＝approach）」＝<u>問Cの正解＝ニ a passion for food use</u>。<em>この文は直前の文の言い換え</em>。<b>replace A with B「AをBに取り替える」＝change from A to B「AからBに変える」</b>。<u>直前の a passion for food use が、a practical human one と言い換えられている</u>。<span class="qbadge">(2)</span></li>
+    <li><b>対比の軸</b>：<em>moralistic approach（道徳主義的な態度）↔ a practical human one（実践的で人間的な態度）</em>。<u>「捨てるのは悪だ」と責めるのではなく、「食べ物を使い切る」ことに情熱を持つ</u>。</li>
+    <li><b>問Jハの判定材料</b>：<em>『food waste への懸念を food use への情熱に置き換えるべきだ』</em>＝<u>筆者は food waste より food use を考えてほしい</u>。<b>選択肢ハと一致</b>（最終段落第4文にも同趣旨）。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜転換 ― 「ごみ」は主観的に生まれる　<span class="qbadge">(3)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">食べ物は主観的に「ごみ」になるのであり、その主観的な過程の中にこそ、料理の可能性の世界が広がっている。</div></div><div class="jpline"><div class="n">②</div><div class="s">捨てられるまでは、食べ物は食べ物である。</div></div><div class="jpline"><div class="n">③</div><div class="s">食べ物は人間と同じく、時間とともに変化する。</div></div><div class="jpline"><div class="n">④</div><div class="s">しかし食べ物について、科学者メアリー・ダグラスが汚れについて述べたことを言うこともできる。「<em>絶対的な汚れなどというものは存在しない。それは見る人の目の中に存在するのだ</em>」。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第5段落</div><ul><li><b>(3) There is no such thing as absolute dirt: It exists in the eye of the beholder</b>＝<u>問Dの根拠</u>。<b>正解＝イ because dirt becomes dirt only when one considers it as such</b>「ごみはそう思うときにだけごみになるから」。<em>直後の It (= dirt) exists in the eye of the beholder「（不潔な物は）見る人次第」が理由を述べている</em>。<span class="qbadge">(3)</span></li>
+    <li><b>in the eye of the beholder</b>「見る人の目の中に（＝見る人次第）」＝<u>美醜や価値は見る側が決める</u>という定型表現（Beauty is in the eye of the beholder のもじり）。</li>
+    <li><b>この段落の役割</b>：<em>「ごみ」は客観的な性質ではなく主観的な判断</em>＝<u>だから見方を変えれば食べ物として使える</u>。次段落以降の料理の話への橋渡し。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜展開 ― 食べられるかは見る人が決める　<span class="qbadge">(Y)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">何が「食べ物」で何が「ごみ」かは、あなた次第である。</div></div><div class="jpline"><div class="n">②</div><div class="s">歴史の大半において、食べられるものと食べられないものの境界線は「見る人の目」に委ねられてきた。</div></div><div class="jpline"><div class="n">③</div><div class="s">（より正確には「見る人の目、鼻、指、舌」と言うべきかもしれない。）</div></div><div class="jpline"><div class="n">④</div><div class="s">私たちは、見て、嗅いで、触って、味わうことで得る情報を使って、食べ物を調理すべきか、動物に与えるべきか、土に返すべきかを決めてきた。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第6段落</div><ul><li><b>(Y) subjective</b>「主観的な」＝<u>問Eの正解＝ハ</u>。<em>直前の文の「seeing, smelling, touching, tasting から得る情報」を言い換えたのが This subjective observation「この主観的な観察」</em>。<u>五感による判断＝主観的</u>。<span class="qbadge">(Y)</span></li>
+    <li><b>objective との対比に注意</b>：<em>五感で判断する＝主観的（subjective）</em>。<u>科学的な計測ではない</u>ので objective（客観的）は逆。</li>
+    <li><b>問Jニの判定材料</b>：<em>『食べられるものとそうでないものの境界は「見る人の目」に委ねられてきた』</em>＝<u>人によって異なる</u>。<b>選択肢ニ「歴史的に、何が食べ物とみなせるかは概ね合意されてきた」は正反対</b>。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜具体① ― 主観的な観察が料理を生んだ　<span class="qbadge">(4)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">この<em>主観的な</em>観察が、料理の宝を生み出してきた。まずはヨーグルト、チーズ、ワインから。それらの発見は、牛乳やぶどうジュースが変化していく中で、それが何になったのかを理解しようとする意志にかかっていた。</div></div><div class="jpline"><div class="n">②</div><div class="s">refried beans（豆の再調理料理）が存在するのは、ずっと昔に誰かが、冷たくなった残りの豆を思い切ってつぶし、脂で温め直したからである。</div></div><div class="jpline"><div class="n">③</div><div class="s"><em>チャーハン（Fried rice）は馴染み深い楽しみだが、それは、熱々の炊きたてのご飯が、熱くなくなって固くなったときに捨てられず、代わりに再利用されたからである</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第7段落</div><ul><li><b>(4) Fried rice</b>＝<u>問Fの根拠</u>。<b>正解＝ロ It was first made from cold, hard rice.</b>「それは最初、冷めて固くなったご飯で作られた」。<em>直後の because 節「冷たく固いご飯が捨てられず再利用されたから」</em>が根拠。<span class="qbadge">(4)</span></li>
+    <li><b>because 以下を読む</b>：<em>cold, hard rice wasn't thrown away … but instead was reused</em>「冷たく固いご飯は捨てられず、代わりに再利用された」＝<u>チャーハンの起源は残りご飯</u>。</li>
+    <li><b>問Jホの判定材料</b>：<em>refried beans は残り豆を再利用した料理＝食べられる</em>。<b>選択肢ホ「refried beans とチーズの端は食べられないものの例だ」は逆</b>（どちらも食べられる料理の例）。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜具体② ― リボリータとの出会い</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">イタリアの川沿いのレストランで初めてリボリータを味わったときのことを、私は決して忘れない。昼食にはあまりに遅い時間で、私は同情され、一皿出された。完璧にとろりと温かく、新鮮なオリーブオイルがかかっていた。</div></div><div class="jpline"><div class="n">②</div><div class="s">何年も後に、私はその有名なスープの作り方を学んだ。そしてそれが古い材料に頼っていることを知った。固くなった乾いたパン、豆を煮た後に残ったスープ、パルメザンチーズの端である。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第8段落</div><ul><li><b>リボリータの材料</b>：<em>hardened dry bread（固くなった乾いたパン）／soup left from cooking beans（豆を煮た残りのスープ）／an edge of Parmesan cheese（パルメザンチーズの端）</em>。<u>いずれも「残り物」</u>。</li>
+    <li><b>問Jヘの判定材料</b>：<u>リボリータは「固くなった乾いたパン」で作る</u>。<b>選択肢ヘ「リボリータは新鮮なパン、残りのスープ、チーズで作られる」は fresh bread（新鮮なパン）が誤り</b>（本文は hardened dry bread）。</li></ul></div><div class="tr-sec"><b>第9段落</b>｜意義 ― 想像を超えた味と知恵が得られる　<span class="qbadge">(5)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><em>私たちの最初の想像の限界を超えて</em>食べ物を使うことに目を向けることで、私たちは味の世界に触れることができる。一晩で固くなって美味しいソースに変わったスープの中に、あるいは昼食のサンドイッチをよくする残り物のドレッシングの中に。</div></div><div class="jpline"><div class="n">②</div><div class="s">私たちはまた、貴重な料理の知恵も得る。ある材料から別の材料へ風味がどう移るか、液体と脂に一晩で何が起こるか、<u>酸と塩がどのように固くなったものを柔らかくするか</u>を学ぶのだ。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第9段落</div><ul><li><b>(5) beyond the limits of our first imaginings</b>「最初の想像の限界を超えて」＝<u>問Gの正解＝ロ in a way that challenges our usual ideas about food</u>「食べ物についての私たちの通念に異議を唱えるようなやり方で」。<em>「最初の想像」＝食べ物についての常識的な思い込み</em>。<span class="qbadge">(5)</span></li>
+    <li><b>問Jトの根拠</b>：最終文の <em>how acid and salt can soften what has hardened</em>「酸と塩がどのように固くなったものを柔らかくするか」＝<b>選択肢ト「ある種の食べ物を柔らかくするのに酸や塩を加えるのは役立つ」と一致</b>。<u>問Jのもう一つの正解</u>。</li>
+    <li><b>この段落の構造</b>：<em>①味の世界に触れられる ②料理の知恵が得られる</em>。<u>食べ物を使い切ることの積極的な価値</u>を説く。</li></ul></div><div class="tr-sec"><b>第10段落</b>｜結論 ― 持っている食べ物を使うこと　<span class="qbadge">(6)</span> <span class="qbadge">(7)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">さらに、<em>私たちは材料にかかるお金と、店に行く時間を節約できる</em>。そして食品を埋立地から遠ざけられる。</div></div><div class="jpline"><div class="n">②</div><div class="s">だからそう、アメリカ人は捨てる量を減らすべきだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかし、単に食品ロスを心配するよりも、もっと直接的で、経済的で、楽しく、正直な道は、<u>私たちが持っている食べ物を使うこと</u>だ。つまり、世界中の料理人たちが何千年にもわたって<em>そうしてきた</em>何千もの方法の例に倣うことである。</div></div><div class="jpline"><div class="n">④</div><div class="s">どうなるかは分からない。refried beans やリボリータの次の発見が、すぐそこにあるかもしれないのだ。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第10段落</div><ul><li><b>(6) we save money on ingredients and time going to the store</b>＝<u>問Hの和訳箇所</u>。<b>save money on ~「〜にかかるお金を節約する」／save time doing「〜する時間を節約する」</b>。<u>save が money と time の両方にかかる</u>。<span class="qbadge">(6)</span></li>
+    <li><b>(7) done this</b>「そうしてきた」＝<u>問Iの正解＝ハ used the food they have</u>。<em>ダッシュ（—）の前にある use the food we have を指す</em>。<span class="qbadge">(7)</span></li>
+    <li><b>問Jハの根拠（最終段落第4文）</b>：<em>『食品ロスを心配するより、持っている食べ物を使うほうが直接的で経済的で楽しく正直な道だ』</em>＝<b>選択肢ハ「筆者はアメリカ人に food waste 以上に food use を考えてほしいと思っている」と一致</b>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 設問H〜J</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした問題が「どの手がかりを見落としたか」で振り返る。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:10%">設問</th><th style="width:12%">解答</th><th style="width:34%">決め手</th><th>陥りやすい誤答</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">A</td><td><b>ハ</b></td><td>account for＝占める（＝の原因）</td><td>ロ（後続の11%を見て「米国外」と誤解）</td></tr>
+      <tr><td class="cond">B</td><td><b>ロ</b></td><td>As＝〜として（主語と同一人物）</td><td>ハ Despite（次文のButに引かれる）</td></tr>
+      <tr><td class="cond">C</td><td><b>ニ</b></td><td>replace A with B のB側＝直前の言い換え</td><td>ハ（A側＝変える前を選ぶ）</td></tr>
+      <tr><td class="cond">D</td><td><b>イ</b></td><td>コロン以下＝見る人次第</td><td>ハ・ニ（eyeを物理的な目と誤読）</td></tr>
+      <tr><td class="cond">E</td><td><b>ハ</b></td><td>This＝五感による判断＝主観的</td><td>ロ objective（observationから連想）</td></tr>
+      <tr><td class="cond">F</td><td><b>ロ</b></td><td>because節＝冷たく固いご飯の再利用</td><td>イ（hot, fresh riceの語だけ拾う）</td></tr>
+      <tr><td class="cond">G</td><td><b>ロ</b></td><td>最初の想像の限界を超える＝通念に挑む</td><td>ハ（伝統を守る＝方向が逆）</td></tr>
+      <tr><td class="cond">H</td><td><b>14字</b></td><td>save の目的語は「お金」と「時間」の2つ</td><td>moneyを訳出せず「材料」だけにする</td></tr>
+      <tr><td class="cond">I</td><td><b>ハ</b></td><td>thisはダッシュ前のuse the food we have</td><td>ロ（直前のworrying about food waste）</td></tr>
+      <tr><td class="cond">J</td><td><b>ハ・ト</b></td><td>主張の核／第9段落最終文</td><td>ヘ（材料のうちパンだけfreshに改変）</td></tr>
+    </tbody>
+  </table>
+  <h2 class="sec">復習動線 ― 落とした「型」から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>数値・修飾の関係で落とした（設問A・J）</b><p><em>何が全体で、何が部分か</em>を毎回確認する。<u>Aなら「温室効果ガス（全体）の8%が食品ロス（部分）」</u>、<u>Jロなら「4人家族」を「1人あたり」にすり替えている</u>。<strong>数値は必ず「誰の」「何に対する」数値かをセットで押さえる</strong>。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>指示語・言い換えの位置を外した（設問C・E・I）</b><p>この英文の答えは<em>下線部のすぐ近く</em>にある。<u>C＝直前の文（replace A with B のB側）／E＝直前の文（五感）／I＝ダッシュの前</u>。<strong>指示語を見たら、まず直前を指差し確認する</strong>。<em>Cで A側を選ぶ誤りは、言い換えの向きを取り違えた典型</em>。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>比喩を字義通りに取った（設問D・G）</b><p><u>in the eye of the beholder＝「見る人次第」</u>であって、物理的に目に入る話ではない。<u>beyond the limits of our first imaginings＝「通念を超えて」</u>であって、知識や伝統の話ではない。<strong>慣用表現・抽象表現は、文脈が示す方向で意味を決める</strong>。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>一語のすり替えを見逃した（設問J）</b><p>この設問の誤答は<em>本文の語をほぼそのまま使い、一点だけ変える</em>型。<u>introduced→approved／4人家族→1人／hardened dry bread→fresh bread</u>。<strong>選択肢の語が本文にあっても、修飾語・数値・主体まで一致するか照合する</strong>。<em>「見覚えがある」は正解の根拠にならない</em>。</p></div></div>
+  <div class="route"><div class="rn">E</div><div><b>和訳で要素を落とした（設問H）</b><p><u>save の目的語が2つ（money と time）</u>あることを見抜く。<em>save money on ingredients＝材料にかかるお金／save time going to the store＝店に行く時間</em>。<strong>15字以内という制限は「圧縮せよ」という指示</strong>＝『材料にかかるお金』→『材料費』。<u>要素を削るのではなく、表現を縮める</u>。</p></div></div>
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    学習院大の長文は、<strong>下線部と空所の「すぐ近く」に根拠が置かれている</strong>のが特徴です。<u>コロン、ダッシュ、because節、直前の文</u>――この4か所を機械的に確認する型を身につければ、初見の英文でも同じ精度で解けます。加えて、この英文のように<em>一本の主張（waste→use）が全体を貫く</em>文章では、<strong>迷ったら「筆者はどちら側か」に立ち返る</strong>のが最短です。</div>
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="6">← 全訳</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は学習院大学2024年英語（大問1）の学習用解説です。設問・出典（The Washington Post）の著作権は出題者・原著者に帰属します。和訳・解説・思考プロセスはTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== A〜D：グループAB ===== */
+{id:"A", grp:"AB", type:"下線部の意味", lbl:"下線部(1)", en:"(1)Food waste accounts for as much as eight percent of greenhouse gases released in the world, of which the United States produces 11 percent.",
+ ask:"下線部(1)の意味にもっとも近いものを (イ)〜(ニ) から1つ選べ。", answer:"ハ", kind:"choice",
+ choices:[{t:"(イ) Eight percent of food waste in the world becomes a source of greenhouse gases.（世界の食品ロスの8%が温室効果ガスの源になる）", ok:false},{t:"(ロ) Food waste is responsible for eight percent of greenhouse gases released outside the United States.（食品ロスはアメリカ国外で排出される温室効果ガスの8%の原因だ）", ok:false},{t:"(ハ) Food waste is the cause of eight percent of greenhouse gases released in the world.（食品ロスは世界で排出される温室効果ガスの8%の原因だ）", ok:true},{t:"(ニ) There is an eight percent increase in greenhouse gases produced by food waste every year.（食品ロスによる温室効果ガスは毎年8%増加している）", ok:false}],
+ steps:[
+   {t:"account for の意味を確定", d:"<b>account for ~＝『（ある割合）を占める』</b>。<em>A accounts for X% of B＝AがBのX%を占める</em>。"},
+   {t:"何が何の8%かを整理", d:"<b>食品ロス</b>が<b>『世界で排出される温室効果ガス』の8%</b>を占める。<u>as much as＝『〜も』で数量の多さを強調</u>。<em>released in the world は greenhouse gases を修飾</em>。"},
+   {t:"言い換えを選ぶ", d:"『食品ロスが世界の温室効果ガスの8%の原因だ』＝<b>(ハ)</b>。<u>account for を is the cause of で言い換えている</u>。"}],
+ ev:{q:'Food waste <span class="h">accounts for</span> as much as eight percent of greenhouse gases <span class="h">released in the world</span>', jp:"「食品ロスは、世界で排出される温室効果ガスの8%もを占めている」。"},
+ co:[{c:"gold",l:"account for＝占める",h:"<b>A accounts for X% of B＝AがBのX%を占める</b>。<u>ここでは『占める』＝『その原因である』</u>と言い換えられる。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>「何が」「何の」8%なのかを正確に取れるか</b>。<u>主語と of 以下の関係を取り違えると(イ)に落ちる</u>。修飾関係（released in the world）の把握も同時に問われている。"}],
+ sol:[{m:"x",n:"(イ)",t:"主語と割合の関係が<u>逆転している</u>。本文は『温室効果ガスの8%が食品ロス由来』であって、『食品ロスの8%がガスの源』ではない。〈選びがちな人〉<b>A of B の関係を機械的に読み、何が全体で何が部分かを確認しない人</b>。"},
+      {m:"x",n:"(ロ)",t:"<u>outside the United States（アメリカ国外）が誤り</u>。本文は『世界で排出される』であり、直後の11%は<em>その8%のうちアメリカが生み出す分</em>。〈選びがちな人〉<b>後続の『アメリカが11%』を見て、8%はアメリカ以外の話だと早合点した人</b>。"},
+      {m:"o",n:"(ハ)",t:"正解。account for＝is the cause of。世界で排出される温室効果ガスの8%を食品ロスが占める。"},
+      {m:"x",n:"(ニ)",t:"<u>『毎年8%増加』という変化率の話にすり替えている</u>。本文の8%は<em>全体に占める割合</em>であって増加率ではない。〈選びがちな人〉<b>％を見ると反射的に『増加率』と読む癖のある人</b>。"}]},
+
+{id:"B", grp:"AB", type:"空所補充（前置詞）", lbl:"空所(X)", en:"( X ) the author of two books on cooking leftovers, I'm very pleased that the problem of unused food has been gradually attracting attention.",
+ ask:"空所(X)に入る語としてもっとも適切なものを (イ)〜(ニ) から1つ選べ。", answer:"ロ", kind:"choice",
+ choices:[{t:"(イ) Against", ok:false},{t:"(ロ) As", ok:true},{t:"(ハ) Despite", ok:false},{t:"(ニ) With", ok:false}],
+ steps:[
+   {t:"空所の後ろと主語の関係を見る", d:"空所の後：<b>the author of two books on cooking leftovers</b>（残り物料理についての2冊の本の著者）。主節の主語：<b>I</b>。<u>両者は同一人物</u>。"},
+   {t:"『資格・立場』を表す語を探す", d:"<b>As ~＝『〜として』</b>。<em>As the author of ~, I'm very pleased「〜の著者として、私は嬉しい」</em>。"},
+   {t:"文意で確認", d:"残り物料理の本を書いた立場だからこそ、<u>食品ロスが注目されるのを喜んでいる</u>＝自然につながる。"}],
+ ev:{q:'<span class="h">As</span> the author of two books on cooking leftovers, I\'m very pleased that the problem of unused food has been gradually attracting attention.', jp:"「残り物料理についての2冊の本の著者として、私は使われない食品の問題が注目を集めていることをとても嬉しく思う」。"},
+ co:[{c:"gold",l:"as＝〜として",h:"<b>資格・立場を表す as</b>。<u>「その立場だから、こう感じる」</u>という理由の含みも持つ。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>空所の後ろの名詞句が、主語（I）と同一人物だと気づけるか</b>。<u>同一なら『〜として』</u>。逆接や付帯状況ではない。"}],
+ sol:[{m:"x",n:"(イ)",t:"Against（〜に反対して）＝<u>『著者に反対して』となり意味不明</u>。〈選びがちな人〉<b>筆者が何かに反対していると先入観を持ち、意味を確かめずに選ぶ人</b>。"},
+      {m:"o",n:"(ロ)",t:"正解。As＝〜として。自分の立場を示して、その立場ゆえの感想を述べる。"},
+      {m:"x",n:"(ハ)",t:"Despite（〜にもかかわらず）＝<u>逆接</u>。『著者であるにもかかわらず嬉しい』では、著者であることと喜びが矛盾することになり不自然。<em>むしろ著者だから嬉しい</em>。〈選びがちな人〉<b>次文の But I worry を見て、この文にも逆接が要ると思い込んだ人</b>。逆接は次文の But が担っている。"},
+      {m:"x",n:"(ニ)",t:"With（〜とともに・〜を持って）＝<u>『著者とともに』では主語 I と別人になってしまう</u>。〈選びがちな人〉<b>付帯状況の with を漠然と当てはめた人</b>。"}]},
+
+{id:"C", grp:"AB", type:"下線部の言い換え", lbl:"下線部(2)", en:"We need to change from a moralistic approach to (2)a practical human one that treats edible ingredients as what they are: food.",
+ ask:"下線部(2)の言い換えとしてもっとも適切なものを (イ)〜(ニ) から1つ選べ。", answer:"ニ", kind:"choice",
+ choices:[{t:"(イ) legislation（法律）", ok:false},{t:"(ロ) public awareness campaigns（市民意識啓発キャンペーン）", ok:false},{t:"(ハ) Americans' concern with \"food waste\"（アメリカ人の「食品ロス」への懸念）", ok:false},{t:"(ニ) a passion for food use（食べ物を使うことへの情熱）", ok:true}],
+ steps:[
+   {t:"one が何を指すか確認", d:"<b>a practical human one</b> の one＝<u>approach</u>（直前の a moralistic approach を受ける）。「実践的で人間的な態度」。"},
+   {t:"直前の文との対応を見る", d:"直前の文：<b>replace their concern with \"food waste\" with a passion for food use</b>「『食品ロス』への懸念を、食べ物を使うことへの情熱に置き換える」。"},
+   {t:"言い換えの構造を掴む", d:"<b>replace A with B＝change from A to B</b>。<u>A＝concern with food waste＝moralistic approach／B＝a passion for food use＝a practical human one</u>。<em>2つの文は同じ内容の言い換え</em>。"},
+   {t:"選ぶ", d:"下線部(2)＝Bの側＝<b>(ニ) a passion for food use</b>。"}],
+ ev:{q:'replace their concern with "food waste" … with <span class="h">a passion for food use</span>. We need to change from a moralistic approach to a practical human one', jp:"「『食品ロス』への懸念を、食べ物を使うことへの情熱に置き換える必要がある。道徳主義的な態度から、実践的で人間的な態度へ変わる必要がある」＝同内容の言い換え。"},
+ co:[{c:"nav",l:"2文が同じ構造",h:"<b>replace A with B（AをBに取り替える）＝change from A to B（AからBへ変える）</b>。<u>A同士・B同士が対応する</u>。下線部はB側なので a passion for food use。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>連続する2文が言い換えだと見抜き、対応する要素を取り出す力</b>。<u>A側とB側を混同すると(ハ)を選ぶ</u>。"}],
+ sol:[{m:"x",n:"(イ)",t:"legislation（法律）は<u>同段落第1文に出てくるが、それは『小さな改善をもたらすかもしれない』ものとして触れられただけ</u>。下線部の指す態度ではない。〈選びがちな人〉<b>同じ段落にある名詞を拾っただけの人（近接語の罠）</b>。"},
+      {m:"x",n:"(ロ)",t:"public awareness campaigns も<u>legislation と並んで挙げられただけ</u>。<em>筆者が『これに変わるべきだ』と述べている態度ではない</em>。"},
+      {m:"x",n:"(ハ)",t:"<u>これは A 側（変える前）</u>。<em>concern with \"food waste\"＝moralistic approach</em> であって、下線部(2)（変えた後）とは正反対。〈選びがちな人〉<b>replace A with B の A と B を取り違えた人</b>。<b>最も引っかかりやすい誤答</b>。"},
+      {m:"o",n:"(ニ)",t:"正解。a passion for food use＝a practical human one。どちらも『変えた後』の態度。"}]},
+
+{id:"D", grp:"AB", type:"下線部の理由", lbl:"下線部(3)", en:"\"(3)There is no such thing as absolute dirt: It exists in the eye of the beholder.\"",
+ ask:"下線部(3)の理由としてもっとも適切なものを (イ)〜(ニ) から1つ選べ。", answer:"イ", kind:"choice",
+ choices:[{t:"(イ) because dirt becomes dirt only when one considers it as such（ごみはそう思うときにだけごみになるから）", ok:true},{t:"(ロ) because dirt is always impure in that it consists of various components（ごみはさまざまな成分から成る点で常に不純だから）", ok:false},{t:"(ハ) because it is difficult to recognize dirt except when it gets in the eye and causes pain（目に入って痛みを起こすとき以外、ごみを認識するのは難しいから）", ok:false},{t:"(ニ) because people usually do not notice the existence of dirt unless they see it with their own eyes（自分の目で見ない限り、人は普通ごみの存在に気づかないから）", ok:false}],
+ steps:[
+   {t:"下線部の意味を取る", d:"<b>There is no such thing as absolute dirt</b>「絶対的な汚れなどというものは存在しない」＝<u>汚れは客観的な性質ではない</u>。"},
+   {t:"コロン以下が理由", d:"<b>It (= dirt) exists in the eye of the beholder</b>「それは見る人の目の中に存在する」＝<em>見る人次第</em>。<u>コロンは直前を説明する</u>。"},
+   {t:"理由として言い換える", d:"見る人がそう判断したときに初めて汚れになる＝<b>(イ) dirt becomes dirt only when one considers it as such</b>。<u>as such＝そういうもの（＝汚れ）として</u>。"}],
+ ev:{q:'There is no such thing as absolute dirt: <span class="h">It exists in the eye of the beholder</span>.', jp:"「絶対的な汚れなど存在しない。それは見る人の目の中に存在する（＝見る人次第だ）」。"},
+ co:[{c:"gold",l:"in the eye of the beholder",h:"<b>『見る人の目の中に＝見る人次第』</b>という定型表現。<u>Beauty is in the eye of the beholder（美は見る人次第）</u>のもじり。<em>物理的に目の中にある、ではない</em>。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>比喩表現を字義通りに取らない力</b>。<u>(ハ)(ニ)はどちらも eye を『物理的な目』と読んだ誤答</u>。"}],
+ sol:[{m:"o",n:"(イ)",t:"正解。汚れは、人がそう見なしたときにだけ汚れになる＝主観的に決まる。"},
+      {m:"x",n:"(ロ)",t:"<u>『不純である』という客観的な性質の話にしている</u>。本文は逆に『絶対的な（客観的な）汚れはない』と述べる。〈選びがちな人〉<b>dirt を化学的・物理的な性質として捉えた人</b>。"},
+      {m:"x",n:"(ハ)",t:"<u>eye を『物理的な目』と読み、『目に入って痛い』という話にすり替えている</u>。in the eye of the beholder は比喩。〈選びがちな人〉<b>慣用表現を知らず、字義通りに訳した人</b>。"},
+      {m:"x",n:"(ニ)",t:"これも<u>『自分の目で見る』という物理的な視覚の話</u>。本文の要点は『見る人の判断次第』であって、視認できるかどうかではない。〈選びがちな人〉<b>see with their own eyes という自然な表現に引かれた人</b>。"}]},
+
+/* ===== E〜G：グループCD ===== */
+{id:"E", grp:"CD", type:"空所補充（形容詞）", lbl:"空所(Y)", en:"This ( Y ) observation has produced culinary treasures",
+ ask:"空所(Y)に入る語としてもっとも適切なものを (イ)〜(ニ) から1つ選べ。", answer:"ハ", kind:"choice",
+ choices:[{t:"(イ) clear（明確な）", ok:false},{t:"(ロ) objective（客観的な）", ok:false},{t:"(ハ) subjective（主観的な）", ok:true},{t:"(ニ) vague（曖昧な）", ok:false}],
+ steps:[
+   {t:"This が何を受けるか確認", d:"<b>This ( Y ) observation</b>＝<u>直前の文の内容を受ける</u>。直前：<em>「見て、嗅いで、触って、味わうことで得る情報を使って判断してきた」</em>。"},
+   {t:"五感による判断の性質を考える", d:"<b>五感で判断する＝人によって異なる＝主観的</b>。<u>計測や数値による客観的判断ではない</u>。"},
+   {t:"選ぶ", d:"<b>(ハ) subjective（主観的な）</b>。<u>第5段落の『食べ物は主観的にごみになる』とも一貫</u>する。"}],
+ ev:{q:'We have used information we get by seeing and smelling and touching and tasting to decide whether food should be cooked … This <span class="h">subjective</span> observation has produced culinary treasures', jp:"「見て、嗅いで、触って、味わって得る情報で判断してきた。この主観的な観察が料理の宝を生んだ」。"},
+ co:[{c:"nav",l:"This が受ける内容を見る",h:"<b>This ~ observation は直前の文を要約する</b>。<u>五感による判断＝主観的</u>。この英文全体が『主観』を鍵語にしている（第5段落 subjectively）。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>指示語 This が受ける内容を特定し、それを一語で言い表す力</b>。<u>objective を選ぶと本文のテーマ（主観性）と正反対になる</u>。"}],
+ sol:[{m:"x",n:"(イ)",t:"clear（明確な）＝<u>五感による判断は人により異なるので『明確』とは言えない</u>。また本文のテーマ（主観性）を表さない。〈選びがちな人〉<b>プラスの評価語を漠然と選んだ人</b>。"},
+      {m:"x",n:"(ロ)",t:"objective（客観的な）＝<u>正反対</u>。本文は一貫して『食べ物かごみかは見る人次第（主観的）』と述べている。〈選びがちな人〉<b>『観察（observation）』という語から科学的・客観的な語を連想した人</b>。<b>最も引っかかる誤答</b>。"},
+      {m:"o",n:"(ハ)",t:"正解。五感による判断＝主観的。第5〜6段落のテーマと一貫する。"},
+      {m:"x",n:"(ニ)",t:"vague（曖昧な）＝<u>否定的すぎる</u>。本文はこの観察が『料理の宝を生んだ』と肯定的に評価しており、曖昧さを問題にしていない。"}]},
+
+{id:"F", grp:"CD", type:"下線部の説明", lbl:"下線部(4)", en:"(4)Fried rice is a familiar pleasure because cold, hard rice wasn't thrown away when it finished being hot, fresh rice, but instead was reused.",
+ ask:"下線部(4)の説明としてもっとも適切なものを (イ)〜(ニ) から1つ選べ。", answer:"ロ", kind:"choice",
+ choices:[{t:"(イ) It is better to use hot, fresh rice to make it.（それを作るには熱々の炊きたてご飯を使うほうがよい）", ok:false},{t:"(ロ) It was first made from cold, hard rice.（それは最初、冷めて固くなったご飯で作られた）", ok:true},{t:"(ハ) It was reused over and over again in earlier times.（それは昔、何度も繰り返し再利用された）", ok:false},{t:"(ニ) The way to make it is usually handed down in the family.（その作り方はたいてい家庭で受け継がれる）", ok:false}],
+ steps:[
+   {t:"because 以下を読む", d:"<b>cold, hard rice wasn't thrown away … but instead was reused</b>「冷たく固くなったご飯が捨てられず、代わりに再利用された」＝<u>チャーハン誕生の経緯</u>。"},
+   {t:"段落の文脈で確認", d:"この段落は<em>「残り物から生まれた料理」の例を列挙</em>（ヨーグルト・チーズ・ワイン、refried beans、チャーハン）。<u>チャーハンも残りご飯から生まれた</u>。"},
+   {t:"選ぶ", d:"<b>(ロ) 最初は冷めて固くなったご飯で作られた</b>。because 節の内容そのもの。"}],
+ ev:{q:'Fried rice is a familiar pleasure because <span class="h">cold, hard rice wasn\'t thrown away</span> when it finished being hot, fresh rice, but instead was reused.', jp:"「チャーハンが馴染み深い楽しみなのは、熱々の炊きたてご飯でなくなった冷たく固いご飯が捨てられず、再利用されたからだ」。"},
+ co:[{c:"gold",l:"not A but B",h:"<b>wasn't thrown away … but instead was reused</b>＝<u>捨てられず、代わりに再利用された</u>。<em>but instead が転換の合図</em>。"},
+     {c:"nav",l:"出題者の狙い",h:"<b>because 節が下線部の説明そのものだと気づけるか</b>。<u>段落全体が『残り物から生まれた料理』の列挙だと掴めていれば即決</u>。"}],
+ sol:[{m:"x",n:"(イ)",t:"<u>本文と正反対</u>。チャーハンは<em>熱々の炊きたてご飯ではなく、冷めて固くなったご飯</em>から生まれた。〈選びがちな人〉<b>hot, fresh rice という語句だけ拾い、not ~ but の構造を読まなかった人</b>。"},
+      {m:"o",n:"(ロ)",t:"正解。because 節の『冷たく固いご飯が再利用された』に一致。"},
+      {m:"x",n:"(ハ)",t:"<u>『何度も繰り返し』は本文にない</u>。本文は『捨てずに一度再利用した』ことを述べるだけ。〈選びがちな人〉<b>reused という語から『繰り返し』を過剰に読み込んだ人</b>。"},
+      {m:"x",n:"(ニ)",t:"<u>『家庭で受け継がれる』は本文に一切ない</u>。〈選びがちな人〉<b>料理＝家庭で伝わるもの、という常識で補った人</b>。"}]},
+
+{id:"G", grp:"CD", type:"下線部の意味", lbl:"下線部(5)", en:"By focusing on using food (5)beyond the limits of our first imaginings, we're granted access to a world of flavor",
+ ask:"下線部(5)の意味にもっとも近いものを (イ)〜(ニ) から1つ選べ。", answer:"ロ", kind:"choice",
+ choices:[{t:"(イ) based on our knowledge about cooking all over the world（世界中の料理についての知識に基づいて）", ok:false},{t:"(ロ) in a way that challenges our usual ideas about food（食べ物についての私たちの通念に異議を唱えるようなやり方で）", ok:true},{t:"(ハ) to preserve our traditional ways of cooking（伝統的な料理法を守るために）", ok:false},{t:"(ニ) without any prejudices against foreign foods（外国の食べ物への偏見なしに）", ok:false}],
+ steps:[
+   {t:"下線部を分解", d:"<b>beyond the limits of our first imaginings</b>「私たちの最初の想像の限界を超えて」。<u>first imaginings＝最初に思い浮かぶこと＝食べ物についての常識的な思い込み</u>。"},
+   {t:"文脈で確認", d:"直後：<em>一晩で固くなったスープが美味しいソースになる、残り物のドレッシングがサンドイッチをよくする</em>＝<u>普通は思いつかない使い方</u>。"},
+   {t:"言い換えを選ぶ", d:"常識の限界を超える＝<b>(ロ) 食べ物についての通念に異議を唱えるようなやり方で</b>。<u>challenge＝（通念に）挑む・異議を唱える</u>。"}],
+ ev:{q:'By focusing on using food <span class="h">beyond the limits of our first imaginings</span>, we\'re granted access to a world of flavor', jp:"「最初の想像の限界を超えて食べ物を使うことに目を向けることで、味の世界に触れられる」。"},
+ co:[{c:"gold",l:"first imaginings＝最初の想像",h:"<b>『最初に思い浮かぶ範囲』＝食べ物についての常識</b>。<u>それを超える＝通念に挑む</u>。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>抽象的な比喩表現を、文脈に沿って具体的に言い換える力</b>。<u>『限界を超える』を『知識に基づく』『伝統を守る』と逆向きに読むと外れる</u>。"}],
+ sol:[{m:"x",n:"(イ)",t:"<u>『知識に基づいて』は『想像の限界を超えて』と方向が違う</u>。本文は既存の知識の枠を出ることを説く。〈選びがちな人〉<b>最終段落の『世界中の料理人の例に倣う』と混同した人</b>。"},
+      {m:"o",n:"(ロ)",t:"正解。最初の想像（通念）の限界を超える＝食べ物についての通念に異議を唱えるやり方。"},
+      {m:"x",n:"(ハ)",t:"<u>『伝統を守る』は保守的で、『限界を超える』と正反対</u>。〈選びがちな人〉<b>直後にリボリータなど伝統料理の話が出るので、伝統保存の話だと思った人</b>。本文は伝統料理を<em>『通念を超えた工夫の産物』</em>として挙げている。"},
+      {m:"x",n:"(ニ)",t:"<u>『外国の食べ物への偏見』は本文にない論点</u>。ここでの『限界』は外国料理への偏見ではなく、食べ物の使い方についての思い込み。〈選びがちな人〉<b>イタリア料理の話が出るので国際的な話題だと捉えた人</b>。"}]},
+
+/* ===== H（記述）・I・J：グループEF ===== */
+{id:"H", grp:"EF", type:"英文和訳（15字以内）", lbl:"下線部(6)", en:"Plus, (6)we save money on ingredients and time going to the store.", ask:"下線部(6)を句読点を含め15字以内の日本語に訳せ。ただし「私たちは、____ を節約できる」の形で答えること。", kind:"desc", answer:"下記模範解答",
+ steps:[
+   {t:"save が何にかかるかを見抜く", d:"<b>we save [money on ingredients] and [time going to the store]</b>＝<u>save の目的語が2つ</u>。『お金』と『時間』の両方を節約する。"},
+   {t:"それぞれの修飾を訳す", d:"<b>money on ingredients</b>＝<em>save money on ~「〜にかかるお金を節約する」</em>→「材料にかかるお金＝材料費」。<b>time going to the store</b>＝<em>save time doing「〜する時間を節約する」</em>→「店に行く時間」。"},
+   {t:"解答欄の形に合わせる", d:"「私たちは、<u>材料費と、店に行くための時間</u>を節約できる」。<b>指定は15字以内</b>なので、<em>『材料にかかるお金』を『材料費』と圧縮</em>するのが要領。"},
+   {t:"字数を調整する", d:"<b>「材料費と、店に行くための時間」＝14字</b>（読点含む）。<u>読点を省けば「材料費と店に行く時間」＝10字でも可</u>。<em>要素（お金・時間）が両方入っていることが最重要</em>。"}],
+ model:["材料費と、店に行くための時間（14字）","材料費と店に行く時間（10字）","食材代と買い物に行く時間（12字）"],
+ mnote:"採点の核は<b>『お金』と『時間』の2要素が両方入っているか</b>、そして<b>それぞれの修飾（何のお金か／何の時間か）が正しいか</b>。<em>save が2つの目的語にかかる構造</em>を見抜けたかが問われる。15字以内なので、<u>『材料にかかるお金』→『材料費』と圧縮する</u>のが定石。",
+ rubric:[
+   {t:"<b>材料（食材）にかかるお金</b>＝『材料費』の要素が入っている", p:4, must:true},
+   {t:"<b>店に行く時間</b>＝『買い物に行く時間』の要素が入っている", p:4, must:true},
+   {t:"15字以内に収まっている（句読点を含む）", p:2, must:true}],
+ total:10,
+ ng:[
+   {bad:"材料と店に行く時間", why:"<b>『材料』だけでは『お金』の要素が落ちている</b>。save money on ingredients は<u>『材料を節約する』ではなく『材料にかかるお金を節約する』</u>。<em>money を訳出しないと減点</em>。"},
+   {bad:"店で買う材料とそこへ行く時間にかかるお金", why:"<u>19字で字数超過</u>。加えて<b>『お金』を時間にもかけてしまい、構造を誤読している</b>。save の目的語は『材料のお金』と『店に行く時間』という<em>別々の2つ</em>。"},
+   {bad:"食材を買うお金と店までの距離", why:"<b>『距離』が誤り</b>。本文は time going to the store（店に行く<u>時間</u>）であって距離ではない。<em>go の目的語ではなく time を修飾する分詞</em>だと正確に取る。"}]},
+
+{id:"I", grp:"EF", type:"下線部の言い換え", lbl:"下線部(7)", en:"to follow the examples of the thousands of ways cooks from across the globe have (7)done this for thousands of years",
+ ask:"下線部(7)の言い換えとしてもっとも適切なものを (イ)〜(ニ) から1つ選べ。", answer:"ハ", kind:"choice",
+ choices:[{t:"(イ) softened what has hardened（固くなったものを柔らかくした）", ok:false},{t:"(ロ) worried about food waste（食品ロスを心配した）", ok:false},{t:"(ハ) used the food they have（持っている食べ物を使った）", ok:true},{t:"(ニ) followed the examples of the thousands of ways（何千もの方法の例に倣った）", ok:false}],
+ steps:[
+   {t:"this が指すものを探す", d:"<b>done this</b> の this＝<u>直前で述べられた行為</u>。同じ文のダッシュ（—）の前：<b>to use the food we have</b>「私たちが持っている食べ物を使うこと」。"},
+   {t:"文の構造を確認", d:"<em>『…もっと直接的で経済的で楽しく正直な道は、持っている食べ物を使うことだ — つまり、世界中の料理人が何千年もそうしてきた何千もの方法に倣うことだ』</em>。<u>ダッシュ以下は言い換え</u>。"},
+   {t:"選ぶ", d:"<b>(ハ) used the food they have</b>。<u>主語が cooks（料理人たち）なので we→they に変わる</u>。"}],
+ ev:{q:'a more direct, economical, pleasurable and honest route … is <span class="h">to use the food we have</span> — to follow the examples of the thousands of ways cooks … have done this', jp:"「…もっと直接的な道は、持っている食べ物を使うことだ ― 世界中の料理人が何千年もそうしてきた何千もの方法に倣うことだ」。"},
+ co:[{c:"nav",l:"ダッシュの前を見る",h:"<b>done this の this は、ダッシュ（—）の前にある use the food we have</b>を指す。<u>ダッシュ以下は直前の言い換え</u>なので、this も直前の行為を受ける。"},
+     {c:"verm",l:"出題者の狙い",h:"<b>指示語 this が指す内容を、文の構造から特定する力</b>。<u>同じ文の後半（followの目的語）を選ぶと循環してしまう</u>ことに気づけるか。"}],
+ sol:[{m:"x",n:"(イ)",t:"<u>第9段落の内容（酸と塩が固いものを柔らかくする）</u>であって、this が指す行為ではない。〈選びがちな人〉<b>本文の別の箇所にある印象的な表現を拾った人</b>。"},
+      {m:"x",n:"(ロ)",t:"<u>筆者が『それより良い道がある』と退けている行為</u>。this は<em>『食品ロスを心配する』より良い道</em>＝『持っている食べ物を使う』を指す。〈選びがちな人〉<b>直前の worrying about food waste を機械的に拾った人</b>。<b>最も引っかかりやすい</b>。"},
+      {m:"o",n:"(ハ)",t:"正解。ダッシュの前の use the food we have を、主語 cooks に合わせて they で言い換えたもの。"},
+      {m:"x",n:"(ニ)",t:"<u>これは this を含む文そのもの（follow the examples of the thousands of ways）</u>。<em>『そうしてきた方法の例に倣う』の『そうしてきた』が this なので、循環している</em>。〈選びがちな人〉<b>下線部のすぐ近くの語句を選んでしまう人</b>。"}]},
+
+{id:"J", grp:"EF", type:"内容一致（2つ選ぶ）", lbl:"設問J", en:"本文の内容と一致するものを (イ)〜(ト) から2つ選べ。", ask:"本文の内容と一致するものを (イ)〜(ト) から 2つ 選べ。（正解 ハ・ト）", answer:"ハ・ト", kind:"multi",
+ items:[
+   {n:"(イ)", t:"Congress has approved a law to promote food waste.（議会は食品ロスを促進する法律を承認した）", ok:false,
+    ev:"第1段落末：the Zero Food Waste Act was introduced in Congress（食品ロスゼロ法が議会に提出された）。",
+    why:"<b>二重に誤り</b>。①<u>introduced（提出された）であって approved（承認された）ではない</u>。②<u>promote food waste（食品ロスを促進）ではなく Zero Food Waste（食品ロスゼロ＝削減）</u>。"},
+   {n:"(ロ)", t:"Each American pays an average of $120 a month to throw away unwanted food.（アメリカ人は1人平均で月120ドルを不要な食品を捨てるために払う）", ok:false,
+    ev:"第2段落末：American households of four people throw out, on average, $120 worth of food each month（4人家族が平均して月120ドル分の食品を捨てる）。",
+    why:"<b>『4人家族』を『1人あたり』にすり替えている</b>。また<u>『捨てるために払う』のではなく『120ドル分の食品を捨てている』</u>。数値の主体と意味の両方が誤り。"},
+   {n:"(ハ)", t:"The author wants Americans to think about food \"use\" more than food \"waste.\"（筆者はアメリカ人に、food \"waste\" 以上に food \"use\" のことを考えてほしいと思っている）", ok:true,
+    ev:"最終段落第4文：a more direct, economical, pleasurable and honest route than just worrying about food waste is to use the food we have（単に食品ロスを心配するより、持っている食べ物を使うほうがよい道だ）。第4段落の『concern with food waste を passion for food use に置き換えよ』も同趣旨。",
+    why:"<b>一致＝正解の1つ</b>。筆者の主張の核そのもの。第4段落と最終段落の両方で繰り返されている。"},
+   {n:"(ニ)", t:"Historically, what can and cannot be considered food has generally been agreed upon.（歴史的に、何が食べ物とみなせるかは概ね合意されてきた）", ok:false,
+    ev:"第6段落：For most of history, the line between the edible and the inedible has been left to \"the eye of the beholder.\"（歴史の大半で、その境界は見る人の目に委ねられてきた）。",
+    why:"<b>正反対</b>。本文は<u>『見る人次第（主観的）』</u>と述べており、<em>『合意されてきた』わけではない</em>。この英文全体のテーマ（主観性）と衝突する。"},
+   {n:"(ホ)", t:"Refried beans and an edge of cheese are examples of inedible food.（refried beans とチーズの端は食べられない食品の例だ）", ok:false,
+    ev:"第7段落：refried beans は残った豆を再調理した料理。第8段落：リボリータはパルメザンチーズの端を使う。",
+    why:"<b>逆</b>。どちらも<u>『捨てられそうなものを食べ物として活かした』例</u>であって、<em>食べられないものの例ではない</em>。本文の主旨（残り物も食べ物）とも矛盾する。"},
+   {n:"(ヘ)", t:"Ribollita is made with fresh bread, leftover soup and cheese.（リボリータは新鮮なパン、残りのスープ、チーズで作られる）", ok:false,
+    ev:"第8段落：it relies on old ingredients: hardened dry bread, soup left from cooking beans, an edge of Parmesan cheese（固くなった乾いたパン、豆を煮た残りのスープ、パルメザンチーズの端）。",
+    why:"<b>fresh bread（新鮮なパン）が誤り</b>。本文は<u>hardened dry bread（固くなった乾いたパン）</u>。<em>スープとチーズは合っているので、一語だけ入れ替えた巧妙な誤答</em>。"},
+   {n:"(ト)", t:"In order to soften certain foods, adding acid and salt can be helpful.（ある種の食べ物を柔らかくするには、酸や塩を加えるのが役立つ）", ok:true,
+    ev:"第9段落最終文：learning … how acid and salt can soften what has hardened（酸と塩がどのように固くなったものを柔らかくするかを学ぶ）。",
+    why:"<b>一致＝正解の1つ</b>。第9段落最終文の how 以下の内容そのもの。<u>料理の知恵として得られるものの一例</u>。"},
+ ],
+ co:[{c:"nav",l:"2つ選ぶ問題の解き筋",h:"<b>7つを本文と1つずつ照合し、確実に×のものを消す</b>。<u>イ（提出≠承認）ロ（4人家族≠1人）ニ（主観↔合意）ホ（食べられる↔食べられない）ヘ（固いパン↔新鮮なパン）</u>と、5つはすべて<em>一語・一点のすり替え</em>で外れる。"},
+     {c:"verm",l:"誤答の作り方を知る",h:"<b>この設問の誤答は「本文の語をほぼそのまま使い、一点だけ変える」型</b>。<u>ヘは3つの材料のうちパンだけ fresh に変えてある</u>。<em>選択肢の語が本文にあっても、修飾語まで一致するか確認する</em>。"}]},
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+
+</script>
+</body>
+</html>
