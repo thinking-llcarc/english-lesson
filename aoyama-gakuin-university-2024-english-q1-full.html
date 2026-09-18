@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜青山学院大学 2024 大問1（high-context / low-context）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">青</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>青山学院大学 2024 ／ 大問1</span></div>
+    <div class="top-meta">high-context / low-context<br>本試験10問＋発展5問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>HIGH/LOW</small>2つの文脈</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>1–4</small>設問 前半</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>5–7</small>設問 中盤</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>8–10</small>設問 後半</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>ORIGINAL</small>発展5問</button>
+    <button class="tab" data-p="8"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>ネットが人を争わせたのか。<br>違う。争いを生む変化は<br>何世紀も前から進んでいた。</h1>
+    <p>2010年、Facebookは「怒れる群衆をなだめる」と期待された。だが現実は分断だった――そこから本文は、<em>なぜ私たちはこれほど意見を戦わせるようになったのか</em>を問う。答えは技術ではない。<b>high-context（意味が文脈に宿る）からlow-context（言葉がすべて）への、何世紀もかけた移行</b>である。<u>技術はそれを「加速」しただけ</u>。この因果の向きを掴めるかが、本文理解の最大の分かれ目になる。</p>
+    <div class="thesis"><b>この英文の骨格：</b>①ネットは友情を生まなかった（期待と現実の落差）。②不同意こそが人を動かす仕組み。③<u>だが技術は主因ではない</u>――何世紀もかけた人間行動の変化が先にある。④その変化とは<b>high-context→low-context</b>の移行。⑤共有された文脈が失われ、明示的に語り交渉せねばならなくなった。⑥だから対立が増える。⑦そしてオンラインは<u>文脈が剥ぎ取られたlow-contextの極致</u>。</div>
+    <div class="stats">
+      <div class="stat"><b>10</b><span>段落構成</span></div>
+      <div class="stat"><b>10</b><span>本試験設問</span></div>
+      <div class="stat"><b>5</b><span>発展問題</span></div>
+      <div class="stat"><b>2</b><span>対の概念</span></div>
+    </div>
+  </div>
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:20%">タイプ</th><th style="width:22%">該当設問</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">当時の理論・調査結果</td><td>設問1 設問2</td><td><b>時期と主体を確認</b>。「当時の期待」と「現在の現実」を混同しない。</td></tr>
+      <tr><td class="cond">因果の特定</td><td>設問3</td><td><b>技術は主因ではない</b>。筆者が退けた見方（①②）を選ばない。</td></tr>
+      <tr><td class="cond">定義の理解</td><td>設問4 設問5</td><td><b>high＝文脈に宿る／low＝言葉がすべて</b>。ぶぶ漬けの例が決め手。</td></tr>
+      <tr><td class="cond">地域比較・適用範囲</td><td>設問6 設問7</td><td>設問6＝<b>どちらが直接的か</b>。設問7＝<b>個人も切り替える</b>。</td></tr>
+      <tr><td class="cond">要因・現状・手段</td><td>設問8 設問9 設問10</td><td>8＝<b>都市化＋平等志向</b>／9＝<b>言ってよいことが不明確に</b>／10＝<b>文脈が奪われる</b>。</td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:20px;"><span class="lab">この解説の構成</span>
+    <strong>本試験10問の完全解説</strong>に加えて、<strong>THINKINGオリジナルの発展5問</strong>（早慶・MARCH上位レベル／選択肢すべて英語）を収録しています。<u>本試験は「該当箇所を正確に読む力」、発展問題は「本文全体を一本の論として掌握する力」</u>を測ります。<em>誤答にはすべて「なぜダメか」＋「どんな読み方をした人が選ぶか」</em>を記しました。</div>
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 10段落の流れと設問の在りか<span class="sub">「期待と現実→仕組み→<b>技術は主因でない</b>→概念の導入→対比→対立→適用→移行→帰結→結論」。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>導入</span></div><div class="para-b">
+      <div class="theme">ネットは友情を生まなかった</div><p>2010年の楽観論＝<em>コミュニケーションできるほど友好的になる</em>。だが現実は怒りと分断。<u>At its worst＝最悪の場合</u>と留保付き。</p><div class="tags"><span class="utag">設問1</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>分析</span></div><div class="para-b">
+      <div class="theme">不同意が人を動かす</div><p>同意はコメントの動機になりにくい。BBCフォーラム250万投稿の調査＝<em>否定的コメントが議論を長引かせる</em>。</p><div class="tags"><span class="utag">設問2</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>転換</span></div><div class="para-b">
+      <div class="theme">技術は原因ではなく一因</div><p>技術は<u>played a part（一役買った）</u>。だが<em>責めるのは何世紀もかけた変化を見落とすこと</em>。理由は<b>現代生活が率直な意見を求めるから</b>。</p><div class="tags"><span class="utag">設問3</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>枠組み</span></div><div class="para-b">
+      <div class="theme">high と low の定義</div><p><em>low＝明確で直接的／high＝ほとんど語られず文脈に宿る</em>。京都のぶぶ漬け＝<u>帰る時間だという合図</u>。</p><div class="tags"><span class="utag">設問4</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>対比</span></div><div class="para-b">
+      <div class="theme">二つの社会の特徴</div><p>high＝伝統的・聞く重視・少ない言葉。low＝多様・短期的関係・<em>割り込みと議論が多い</em>。</p><div class="tags"><span class="utag">設問5</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>核心</span></div><div class="para-b">
+      <div class="theme">対立をどれだけ生むか</div><p>アジア＝直接表明は珍しい／欧米＝率直に話し対決も辞さない。<u>伝統が薄れるにつれ対立が増える</u>。</p><div class="tags"><span class="utag">設問6</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>適用</span></div><div class="para-b">
+      <div class="theme">あらゆる規模で使える</div><p>村vs都市、既存組織vs新会社。そして<em>個人も家族とはhigh、コールセンターではlow</em>と切り替える。</p><div class="tags"><span class="utag">設問7</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>移行</span></div><div class="para-b">
+      <div class="theme">平等志向が交渉を生む</div><p>都市へ移りlow-contextな生活へ。<u>かつてないほど平等であろうとする</u>。結婚の例＝<em>良い変化だが対立の余地は増える</em>。</p><div class="tags"><span class="utag">設問8</span></div></div></div><div class="para"><div class="para-n"><b>9</b><span>帰結</span></div><div class="para-b">
+      <div class="theme">合意できる事柄が縮む</div><p>子は黙って従わず、組織は協働へ。<em>何を言ってよいかのルールが緩み、みなが同意する事柄が急速に縮む</em>。</p><div class="tags"><span class="utag">設問9</span></div></div></div><div class="para"><div class="para-n"><b>10</b><span>結論</span></div><div class="para-b">
+      <div class="theme">ネットはlowの極致</div><p>人間は表情・動作・声から意図を読むが<u>オンラインではその文脈が奪われる</u>。絵文字でも基本的理解のみ。</p><div class="tags"><span class="utag">設問10</span></div></div></div><div class="box navy"><span class="lab">第3段落が論の分水嶺</span>
+  <strong>第1〜2段落だけ読むと「ネットが悪い」という話に見える</strong>。だが第3段落で筆者は<u>「FacebookやTwitterを責めるのは、何十年・何世紀もかけた変化を見落とすこと」</u>と明確に留保する。<em>ここを読み飛ばすと、設問3も発展1も落とす</em>。<b>but が出てきたら、そこが論の急所</b>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">2つの文脈へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">High vs Low Context</div>
+  <h1 class="head">2つの文脈 ― この対比が全設問の軸<span class="sub">設問4・5・6・7・8・10、そして発展問題のすべてがこの表に還元できる。</span></h1>
+  <div class="rule"></div>
+  <div class="vs">
+    <div class="vs-col t"><div class="vs-hd">High-Context<small>意味は文脈に宿る ― 日本・アジア</small></div><div class="vs-bd">
+      <div class="r"><b>言葉</b>明確に語られることは<strong>少ない</strong>。意味の大半が<strong>暗示</strong>される</div>
+      <div class="r"><b>理解</b>誰が・どんな状況で話すか、<strong>文脈を知る必要がある</strong></div>
+      <div class="r"><b>目的</b>情報交換より<strong>良好な関係の維持</strong></div>
+      <div class="r"><b>姿勢</b><strong>聞くこと</strong>を重視。行間を読む。沈黙が心地よい</div>
+      <div class="r"><b>対立</b>直接的な意見表明は<strong>珍しい</strong>（無礼と見なされ得る）</div>
+      <div class="r"><b>例</b>京都でぶぶ漬けを勧める＝<strong>帰る時間だという合図</strong></div>
+    </div></div>
+    <div class="vs-col s"><div class="vs-hd">Low-Context<small>言葉がすべて ― 欧米・都市・ネット</small></div><div class="vs-bd">
+      <div class="r"><b>言葉</b>明確で<strong>直接的</strong>。言うことがそのまま考えの表現</div>
+      <div class="r"><b>理解</b>文脈を知らなくても<strong>メッセージが伝わる</strong></div>
+      <div class="r"><b>目的</b>意図を明確にし、欲求を表明し、説明する</div>
+      <div class="r"><b>姿勢</b><strong>絶え間ない言葉の使用</strong>。割り込みと同時発話が多い</div>
+      <div class="r"><b>対立</b>率直に話し<strong>対決の危険も冒す</strong>。意見の相違は当然</div>
+      <div class="r"><b>例</b>オンライン＝<strong>表情・声が奪われた極致</strong></div>
+    </div></div>
+  </div>
+  <div class="box gold"><span class="lab">この対比が解く設問</span>
+    <strong>設問4</strong>＝ぶぶ漬けの例＝<u>high（意味が文脈に宿る）</u>／<strong>設問5</strong>＝<u>low（平等・議論が多い）</u>／<strong>設問6</strong>＝<u>欧米のほうが直接的</u>／<strong>設問10</strong>＝<u>オンラインは文脈が奪われるからlow</u>。<em>迷ったら「これはどちら側の特徴か」に立ち返る</em>。</div>
+  <div class="box verm"><span class="lab">最重要：これは固定された属性ではない</span>
+    第7段落で筆者は<strong>「このモデルはどんな規模でも有用（useful at any scale）」</strong>と述べ、<u>村と都市、既存組織と新会社、そして個人にまで適用する</u>。<em>同じ人が、家族とはhigh-context、コールセンターではlow-contextになる</em>。<b>国の分類として暗記すると、設問7も発展2も落とす</b>。<u>状況によって動く相対的な尺度</u>として捉えること。</div>
+  <div class="box navy"><span class="lab">なぜ対立が増えるのか（発展4の急所）</span>
+    答えは<strong>「意見が多様になったから」ではない</strong>。第6段落<u>「そうした伝統が薄れるにつれ対立が増える」</u>、第9段落<u>「何を言ってよいかのルールが緩み、みなが同意する事柄が急速に縮む」</u>――<em>対立を抑えていた共有の作法（context）が失われたから</em>表面化する。<b>原因は共有前提の喪失</b>。</div>
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問1〜4へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions ①</div>
+  <h1 class="head">設問1〜4 ― 理論・調査・因果・定義<span class="sub">設問3が最重要。<b>技術を主因とする選択肢は、筆者が明確に退けたもの</b>。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 2つの文脈</button><span class="sp"></span><button class="btnp" data-go="4">設問5〜7へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions ②</div>
+  <h1 class="head">設問5〜7 ― low-contextの特徴・地域比較・適用範囲<span class="sub">設問5は<b>根拠が第5段落と第8段落に分かれる</b>。設問7は<b>個人も切り替える</b>という第7段落の核心。</span></h1>
+  <div class="rule"></div>
+  <div class="box verm" style="margin-top:0"><span class="lab">この3問に共通する罠</span>
+    <strong>「言い過ぎ」と「主体の入れ替え」</strong>。<u>設問5②のunimportant（本文はisn't much help）</u>、<u>設問6②はヨーロッパ側の説明をアジアに付け替えたもの</u>、<u>設問7①は村と都市を逆にしたもの</u>。<em>選択肢の語が本文にあっても、程度と主体まで一致するか確認する</em>。</div>
+  <div class="qindex" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問1〜4</button><span class="sp"></span><button class="btnp" data-go="5">設問8〜10へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions ③</div>
+  <h1 class="head">設問8〜10 ― 要因・現代社会・技術の作用<span class="sub">8＝都市化と平等志向、9＝言ってよいことの不明確化、10＝文脈の剥奪。</span></h1>
+  <div class="rule"></div>
+  <div class="qindex" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 設問5〜7</button><span class="sp"></span><button class="btnp" data-go="6">全訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全10段落・81文）。番号①②③…は各段落内の文の順番。<b>赤字</b>が設問に直結する箇所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">読むときの視点</span>
+    この英文は<strong>抽象（概念）と具体（ぶぶ漬け・結婚・コールセンター）を往復しながら進む</strong>。訳を読むときは<u>「この具体例は、どの概念を説明しているか」</u>を確かめてほしい。<em>ぶぶ漬け＝high-contextの定義／結婚＝共有文脈の喪失／コールセンター＝個人のモード切替</em>――対応が見えると、設問の根拠を探す速度が上がる。</div><div class="tr-sec"><b>第1段落</b>｜導入 ― ネットは友情を生まなかった　<span class="qbadge">1</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">2010年、『タイム』誌はFacebookの使命を「怒れる群衆をなだめ、無作為な偶然から成る孤独で反社会的な世界を友好的な世界に変えること」と表現した。</div></div><div class="jpline"><div class="n">②</div><div class="s">インターネットが大衆に使われ始めた最初の10年間、次のような考え方が一般的だった。<em>人々が他者とコミュニケーションできるようになればなるほど、彼らはより友好的で理解のあるものになり、公共の対話もより健全になる</em>、というものだ。</div></div><div class="jpline"><div class="n">③</div><div class="s">21世紀の30年目に入ろうとする今、そのビジョンは痛々しいほど世間知らずに見える。</div></div><div class="jpline"><div class="n">④</div><div class="s">怒った人々が昼夜を問わず衝突している。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">インターネットは人々をつないではいるが、必ずしも友情を生み出すわけではない。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">最悪の場合、それは争いと分断を生産するための機械のように見える。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li><b>問1の根拠</b>：第1〜2文。<u>a popular theory＝「コミュニケーションできるほど友好的で理解が深まる」</u>＝<b>設問1の正解③「人々がコミュニケーションし、より友好的になるのを助ける」</b>。<em>During the first decade＝10年間</em>。<span class="qbadge">1</span></li>
+    <li><b>この段落の構図</b>：<em>2010年の楽観的ビジョン ↔ 現在の現実（怒りと分断）</em>。<u>この落差が英文全体の出発点</u>。</li>
+    <li><b>At its worst</b>「最悪の場合」＝<em>断定を避けた表現</em>。筆者は「ネット＝悪」と単純に断じてはいない点に注意（発展1に直結）。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜分析 ― 不同意が人を動かす　<span class="qbadge">2</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ポール・グレアムは、インターネットが設計上その性質として不同意を生み出す媒体だと指摘している。</div></div><div class="jpline"><div class="n">②</div><div class="s">デジタルメディアのプラットフォームはその本質からして双方向的であり、人々は争うのを好む。</div></div><div class="jpline"><div class="n">③</div><div class="s">グレアムの言葉を借りれば、「同意することは、不同意することよりも人々がコメントする動機を与えにくい」。</div></div><div class="jpline"><div class="n">④</div><div class="s">読者は記事や投稿に同意しないときのほうがコメントしやすく、不同意のときのほうが言うべきことが多い（「同意します」と言う方法はそれほど多くない）。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">また彼らは不同意のときのほうが興奮しやすく、それはたいてい怒りにつながる。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">2010年、データ科学者のチームがBBCの討論フォーラムでのユーザー活動を調査し、18,000人のユーザーによる約250万件の投稿の感情を測定した。</div></div><div class="jpline"><div class="n">⑦</div><div class="s"><em>彼らが見出したのは、より長く続く議論は否定的なコメントによって生き続けているということ、そして最も活発なユーザーは全体として否定的な感情を表明する傾向が強いということだった</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li><b>問2の根拠</b>：第6〜7文。<u>longer discussions were kept alive by negative comments</u>＝<b>設問2の正解②「否定的なコメントがBBCフォーラムでの議論を長引かせる」</b>。<span class="qbadge">2</span></li>
+    <li><b>by design</b>「設計上」＝<em>意図的にというより「その仕組み上そうなる」</em>。<u>発展1の誤答①は、これを「敵意を誘発する意図」と読み替えた罠</u>。</li>
+    <li><b>数値の確認</b>：<em>18,000人のユーザー／約250万件の投稿</em>。<u>数字の帰属を取り違えない</u>。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜転換 ― 技術は原因ではなく一因　<span class="qbadge">3</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私たちは、不同意がいたるところにあり、人々がより頻繁に不快にさせたりさせられたりし、話すことがますます増え聞くことがますます減る世界に生きている。</div></div><div class="jpline"><div class="n">②</div><div class="s">私たちが互いにコミュニケーションするために使う技術は、明らかに私たちをこのようにするのに<u>一役買って</u>きた。<em>しかし、自分たちの問題をFacebookやTwitterのせいにしたくなるかもしれないが、それでは、何十年、いや何世紀もかけて形作られてきた、より広く深い人間行動の変化の重要性を見落とすことになるだろう</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">社会的にも電子的にも、一方通行の経路は少なくなっている。</div></div><div class="jpline"><div class="n">④</div><div class="s">誰もが他の誰にでも言い返し始めている。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>もし私たちがより意見を戦わせるようになっているとすれば、それは現代生活が私たちに率直な意見を言うよう求めているからだ</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li><b>問3の根拠</b>：最終文。<u>modern life demands we speak our mind</u>＝<b>設問3の正解③「現代生活では思っていることを言わねばならない」</b>。<span class="qbadge">3</span></li>
+    <li><b>発展1の最重要根拠</b>：<em>played a part（一役買った）／but … that would be to miss …（それでは見落とす）／decades, even centuries, in the making（何十年・何世紀もかけて）</em>＝<u>技術は根本原因ではなく、先行する変化の一因・加速要因</u>。</li>
+    <li><b>筆者の慎重さ</b>：<u>技術を全否定も全肯定もしない</u>。<em>「責めたくなるが、それでは本質を見誤る」</em>という留保の型。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜枠組み ― high-context と low-context　<span class="qbadge">4</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">アメリカの人類学者エドワード・ホールは、コミュニケーション文化には2種類あるという考えを導入した。high-context（高文脈）とlow-context（低文脈）である。</div></div><div class="jpline"><div class="n">②</div><div class="s">low-contextな文化では、コミュニケーションは明確で直接的である。</div></div><div class="jpline"><div class="n">③</div><div class="s">人々が言うことは、その人の考えや感情の表現としてそのまま受け取られる。</div></div><div class="jpline"><div class="n">④</div><div class="s">メッセージを理解するのに、文脈――誰が、どんな状況で話しているのか――を理解する必要はない。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">high-contextな文化とは、明確に語られることが少なく、メッセージの大部分が暗示される文化である。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">各メッセージの意味は、部分的には言葉そのものに、部分的には文脈にある。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">コミュニケーションは繊細で曖昧である。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">大まかに言えば、ヨーロッパと北米の文化はlow-contextであり、アジアの文化はhigh-contextである。</div></div><div class="jpline"><div class="n">⑨</div><div class="s">一例として、ぶぶ漬けは京都で人気のある簡素な日本料理で、ご飯に緑茶やだし汁をかけたものだ。</div></div><div class="jpline"><div class="n">⑩</div><div class="s">京都出身の人の家にいて、ぶぶ漬けを勧められたら、お腹が空いているかどうかで「はい」か「いいえ」と答えようと思うかもしれない。</div></div><div class="jpline"><div class="n">⑪</div><div class="s"><em>しかし京都では、ぶぶ漬けを勧めることは、客が帰る時間だと伝える伝統的なやり方である</em>。</div></div><div class="jpline"><div class="n">⑫</div><div class="s">そのメッセージを受け取るには、文脈を知る必要があるだろう。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li><b>問4の根拠</b>：第9〜11文。<u>ぶぶ漬けを勧める＝客に帰ってほしいという合図</u>＝<b>設問4の正解①「主人にもっと食べ物を勧められることは、あなたが帰るべきだという意味かもしれない」</b>。<span class="qbadge">4</span></li>
+    <li><b>定義の確認</b>：<em>low-context＝言葉がそのまま／high-context＝意味が文脈に宿る</em>。<u>この定義が発展5（オンライン＝low-context）の土台</u>。</li>
+    <li><b>設問4④の罠</b>：<u>debate（討論）は本文になし</u>。high-contextでは言葉が少なく、討論が増えるわけではない（第4段落第4文参照）。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜対比 ― 二つの社会の特徴　<span class="qbadge">5</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">日本のようなhigh-contextな社会は、より伝統的で形式的である傾向がある。</div></div><div class="jpline"><div class="n">②</div><div class="s">良いコミュニケーションとは、共有された象徴や、目上の人への敬意のような暗黙のルールや作法を深く理解していることを意味する。</div></div><div class="jpline"><div class="n">③</div><div class="s">コミュニケーションの主たる目的は、情報を交換したり自分の気分を良くするために何かを言ったりすることではなく、良好な関係を維持することである。</div></div><div class="jpline"><div class="n">④</div><div class="s">聞くことに重点が置かれる。high-contextなやりとりでは、聞き手は言われていることを理解するために行間を読まねばならないからだ。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">high-contextな文化の話し手は、わずかな言葉しか使わず、沈黙を心地よく感じ、自分の順番を待つことを厭わない傾向がある。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">アメリカのようなlow-contextな社会は、伝統に縛られず、より多様である。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">そこでは短期的な関係とより多くの変化が関わってくる。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">話すことや聞くことに関して言えば、伝統・慣習・地位の知識はあまり役に立たない。誰もが自分のために話す。</div></div><div class="jpline"><div class="n">⑨</div><div class="s">文脈を信頼できないので、人々は言語そのものに頼る。</div></div><div class="jpline"><div class="n">⑩</div><div class="s">low-contextなコミュニケーションは、ある学者が言うところの「絶え間ない、時には終わりのない言葉の使用」を示す。</div></div><div class="jpline"><div class="n">⑪</div><div class="s">意図は明確にされ、欲求は表明され、説明がなされる。</div></div><div class="jpline"><div class="n">⑫</div><div class="s">人々はファーストネームを使い、世間話が多い。</div></div><div class="jpline"><div class="n">⑬</div><div class="s"><em>割り込みや同時発話がより多く、そしてより多く議論する</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第5段落</div><ul><li><b>問5の根拠</b>：<u>argue more は第5段落第10〜13文</u>、<u>feel equal は第8段落第6〜7文</u>＝<b>設問5の正解③「人々が平等だと感じ、より多く議論する」</b>。<span class="qbadge">5</span></li>
+    <li><b>設問5②の罠</b>：<u>unimportant（重要でない）が言い過ぎ</u>。本文は<em>isn't much help（あまり役に立たない）</em>であって「重要でない」とまでは言わない（第5段落第6〜8文）。</li>
+    <li><b>設問5①の罠</b>：本文は<em>more interruption and cross-talking（割り込みと同時発話が多い）</em>。<u>「割り込みを避ける」は正反対</u>。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜核心 ― 対立をどれだけ生むか　<span class="qbadge">6</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">ここから、high-contextな文化とlow-contextな文化の最も重要な違いに至る。それぞれがどれだけ対立を生むか、である。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>アジアの文化では、自分の意見を直接的に強く表明することは珍しい</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">それは無礼、あるいは不快と見なされ得る。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>ヨーロッパやアメリカの人々は、より進んで率直に話し、対決の危険を冒す</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">意見の相違は、たとえそれが対立を生むとしても、あって当然のものとされる。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">その違いは相対的である。ヨーロッパでさえ、人々は食卓で政治や宗教を論じないという慣習のように、議論が過ぎるのを避けるための文化的戦略を発達させてきた。</div></div><div class="jpline"><div class="n">⑦</div><div class="s"><em>しかしそうした伝統が薄れるにつれ、対立は増加する</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第6段落</div><ul><li><b>問6の根拠</b>：第2〜4文。<u>アジアでは直接的な意見表明は珍しい／ヨーロッパ・アメリカはより率直に話す</u>＝<b>設問6の正解③「ヨーロッパの人々はアジアの人々より直接的に意見を表明する傾向が強い」</b>。<span class="qbadge">6</span></li>
+    <li><b>発展4の最重要根拠</b>：最終文<em>as such traditions fade, conflicts rise</em>＝<u>対立増加の原因は「意見の多様化」ではなく「対立を抑えていた共有の作法が薄れたこと」</u>。</li>
+    <li><b>The difference is relative</b>「その違いは相対的」＝<u>絶対的な区分ではない</u>（発展2に直結）。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜適用 ― モデルはあらゆる規模で使える　<span class="qbadge">7</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私は国どうしの大まかな比較をしているが、<em>ホールのhigh/low-contextモデルはどんな規模でも有用である</em>。</div></div><div class="jpline"><div class="n">②</div><div class="s">誰もが互いを知っている村に住む人々は、異なる背景を持つ見知らぬ人に会うことに慣れた大都市に住む人々よりも、high-contextなコミュニケーションを行う。</div></div><div class="jpline"><div class="n">③</div><div class="s">確立された組織では、職員は新しく来た人を戸惑わせるようなやり方で互いに意思を通じ合わせられるかもしれない。一方、新しい会社では、明確に語られないことは聞き取られないかもしれない。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>個々の人間も、high-contextとlow-contextのモードの間を行き来する。家族や友人とはおそらく多くのhigh-contextなコミュニケーションを行うが、コールセンターの誰かと話すときにはlow-contextになる</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">low-contextな文化は、多様性と革新の水準が高い、変化のただ中にある社会により適している。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">しかしそれはまた、非人間的に感じられ、渡り歩くのが難しく、より多くの対立の可能性を含み得る。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第7段落</div><ul><li><b>問7の根拠</b>：第4文。<u>Individual people shift between high- and low-context modes</u>＝<b>設問7の正解④「人は状況によってhighからlowへ切り替えられる」</b>。<span class="qbadge">7</span></li>
+    <li><b>発展2の最重要根拠</b>：<em>useful at any scale（どんな規模でも有用）＋個人も切り替える</em>＝<u>high/lowは国の固定属性ではなく、場面によって変わる相対的なもの</u>。</li>
+    <li><b>設問7①③の罠</b>：<u>①都市住民はhigh-context＝逆</u>（村がhigh）。<u>③high-context育ちは都市に適応できない＝本文になし</u>（むしろ切り替え可能）。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜移行 ― 平等志向が交渉を生む　<span class="qbadge">8</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私たちのほとんどは、世界のどこにいようと、都市へ移り、見知らぬ人と商売をし、スマートフォン越しに話すにつれ、ますますlow-contextな生活を送っている。</div></div><div class="jpline"><div class="n">②</div><div class="s">国によってコミュニケーション文化は依然として異なるが、そのほぼすべてが商業と技術という同じ世界的慣行に関わっている。それらは伝統を弱め、起こり得る議論の範囲を広げる力である。</div></div><div class="jpline"><div class="n">③</div><div class="s">私たちが本当にこれに備えができているのかは明らかでない。</div></div><div class="jpline"><div class="n">④</div><div class="s">種としての存在の大半において、人類はhigh-contextな社会に生きてきた。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">私たちの祖先は伝統を共有する小さな村に暮らしていたが、今や私たちは自分とは異なる価値観や慣習を持つ人々と頻繁に出会う。</div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>同時に、私たちはかつてないほど平等であろうとする傾向がある</em>。</div></div><div class="jpline"><div class="n">⑦</div><div class="s"><em>どこを見ても、誰もが対等な発言権を持つことを期待するやりとりがある</em>。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">結婚がどう変わってきたかを考えてみてほしい。</div></div><div class="jpline"><div class="n">⑨</div><div class="s">70年前、ほとんどの結婚において、配偶者たちは誰がどの家事をするのか、誰が子どもの世話をするのかを話し合わなかっただろう。こうした決定は、すでに一般的な文化の中でなされていたのだ。</div></div><div class="jpline"><div class="n">⑩</div><div class="s">ジェンダー平等の高まりとともに、現代の家庭はより多くのコミュニケーションと交渉を必要とする。</div></div><div class="jpline"><div class="n">⑪</div><div class="s">文脈はもはや、誰が洗濯をすべきかについての指針を与えてはくれない。</div></div><div class="jpline"><div class="n">⑫</div><div class="s"><em>私と同じように、これは本当に良い変化だと信じることもできるが、それでもなお、それが争いになりうる領域を増やすことは認められる</em>。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第8段落</div><ul><li><b>問8の根拠</b>：第1文・第6〜7文。<u>都市へ移りlow-contextな生活へ／かつてないほど平等であろうとする／誰もが対等な発言権を期待</u>＝<b>設問8の正解①「都市生活と対等な発言権への欲求」</b>。<span class="qbadge">8</span></li>
+    <li><b>発展3の最重要根拠</b>：最終文<em>You can believe, as I do, that this is a really good change, but still recognize that it increases the potential areas where one could get into fights about.</em>＝<u>筆者は変化を歓迎しつつ、代償（対立の増加）も認める</u>。<b>懐古でも全面礼賛でもない</b>。</li>
+    <li><b>結婚の例の機能</b>：<em>共有文脈（誰が家事をするか既に決まっていた）が失われ、明示的な交渉が必要になった</em>＝<u>low-context化の具体例</u>。</li></ul></div><div class="tr-sec"><b>第9段落</b>｜帰結 ― 合意できる事柄が縮んでいく　<span class="qbadge">9</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">状況は社会全般においても非常によく似ている。</div></div><div class="jpline"><div class="n">②</div><div class="s">子どもたちは黙って親に従うことが少なくなり、組織は命令より協働に頼るようになり、ジャーナリストはもはや読者が単純に自分を信じることを期待しない。</div></div><div class="jpline"><div class="n">③</div><div class="s">誰もが自分の意見が聞かれ、自分の自立が認められることを期待する。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>この多様な世界では、何を言ってよく何を言ってはいけないかについて以前から想定されていたルールは、より緩く流動的になり、時には消えさえする</em>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">判断を導く文脈が減り、「私たちみなが同意する」事柄の数は急速に縮んでいる。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第9段落</div><ul><li><b>問9の根拠</b>：第4文。<u>previously assumed rules about what can and cannot be said are looser and more fluid</u>＝<b>設問9の正解③「言ってよいことと言ってはいけないことが以前ほどはっきりしない」</b>。<span class="qbadge">9</span></li>
+    <li><b>設問9②の罠</b>：<u>ignore（無視する）が誤り</u>。本文は<em>obey their parents silently（黙って従う）ことが less likely</em>であって、<u>「無視する」とは言っていない</u>。</li>
+    <li><b>発展4の根拠</b>：最終文<em>the number of things on which "we all agree" is shrinking fast</em>＝<u>共有前提の縮小</u>。</li></ul></div><div class="tr-sec"><b>第10段落</b>｜結論 ― ネットの世界はlow-contextの極致　<span class="qbadge">10</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">low-contextへの移行は長い時間をかけて進んできたが、通信技術の結果として今や加速している。</div></div><div class="jpline"><div class="n">②</div><div class="s"><em>人間は、表情や動作、声の調子から相手の意図を理解する能力を持っている。オンラインでは、その文脈が奪われる</em>。</div></div><div class="jpline"><div class="n">③</div><div class="s">スマートフォンのインターフェースやオンラインのプラットフォームは設計上low-contextであり、一度に数語か画像かに伝達を制限している。</div></div><div class="jpline"><div class="n">④</div><div class="s">たとえ信号が絵文字で豊かにされていても、私たちはテキストから相手の意図について基本的な理解しか得られない。</div></div><div class="jpline"><div class="n">⑤</div><div class="s">low-context文化を極端な形で定義づけるものが何かを考えてみてほしい。終わりのない話、頻繁な議論、誰もが常に自分の考えを伝えていること。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">これには馴染みがあるはずだ。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">紛争解決の専門家イアン・マクダフが言うように、「インターネットの世界は、low-contextな世界によく似ている」。</div></div><div class="jpline"><div class="n">⑧</div><div class="s">その一方で、私たちは20万年前の世界から受け継いだ紛争解決の技能を使っているのである。</div></div></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第10段落</div><ul><li><b>問10の根拠</b>：第2〜3文。<u>人間は表情・動作・声の調子から意図を読むが、オンラインではその文脈が奪われる</u>＝<b>設問10の正解①「表情や声の調子をコミュニケーションから取り除くことによって」</b>。<span class="qbadge">10</span></li>
+    <li><b>発展5の最重要根拠</b>：<em>Online, that context is taken away.</em>＝<u>オンラインがlow-contextである理由そのもの</u>。<b>even when the signal is enriched with emojis（絵文字で豊かにされてさえ）only a basic understanding</b>＝<u>絵文字は代替にならない</u>。</li>
+    <li><b>締めの皮肉</b>：<em>ネットはlow-contextの極致なのに、私たちが使う紛争解決の技能は20万年前（high-context時代）のもの</em>＝<u>そのずれが問題の核心</u>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 設問8〜10</button><span class="sp"></span><button class="btnp" data-go="7">発展5問へ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Original Questions</div>
+  <h1 class="head">発展5問 ― THINKINGオリジナル<span class="sub">早慶・MARCH上位レベル。<b>選択肢はすべて英語</b>。本文の語句を拾うだけでは解けず、<u>因果の向き・概念の適用範囲・筆者の価値判断・論理の連鎖</u>を掴んでいないと正解が選べない5問。</span></h1>
+  <div class="rule"></div>
+
+  <div class="box navy" style="margin-top:0"><span class="lab">この5問が試すもの</span>
+    本試験の10問は<strong>該当箇所を正確に読む力</strong>を測っていました。この発展問題はその先、<u>「本文全体を一本の論として掌握しているか」</u>を測ります。<em>各問の誤答は、本文の語をそのまま使いながら論理を一点だけ崩してあります</em>。<b>「見覚えのある語が入っている」は正解の根拠になりません</b>。</div>
+
+  <h2 class="sec">5問が狙う5つの急所</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:12%">問</th><th style="width:26%">狙う力</th><th>この本文での急所</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">発展1</td><td>因果の向き</td><td><b>技術は「原因」ではなく「加速要因」</b>。played a part と speeding up の程度を正確に。</td></tr>
+      <tr><td class="cond">発展2</td><td>概念の適用範囲</td><td><b>high/lowは国の固定属性ではない</b>。村・組織・個人にも適用され、同じ人が切り替える。</td></tr>
+      <tr><td class="cond">発展3</td><td>筆者の価値判断</td><td><b>「良い変化」と明言しつつ代償も認める</b>。片面だけ取ると誤読する。</td></tr>
+      <tr><td class="cond">発展4</td><td>論理の連鎖</td><td><b>対立増加の原因は意見の多様化ではなく共有前提の喪失</b>。</td></tr>
+      <tr><td class="cond">発展5</td><td>定義からの演繹</td><td><b>オンライン＝文脈が剥ぎ取られるからlow-context</b>。絵文字は代替にならない。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box gold" style="margin-top:18px;"><span class="lab">取り組み方</span>
+    <strong>まず本文を読み直してから、5問を通しで解いてください</strong>。各問は選択肢をタップして自分で解け、「答え・根拠を表示」で<u>解答プロセス→根拠（本文）→全選択肢の✓✗</u>が開きます。<em>正解を選べても、他の3つがなぜ外れるかを説明できなければ半分</em>――誤答解説には<b>「どんな読み方をした人がそれを選ぶか」</b>まで書いてあります。</div>
+
+  <h2 class="sec">発展 第1問・第2問</h2>
+  <div class="qindex" id="qidxGH"></div>
+  <div id="qWrapGH"></div>
+
+  <h2 class="sec">発展 第3問〜第5問</h2>
+  <div class="qindex" id="qidxIJ"></div>
+  <div id="qWrapIJ"></div>
+
+  <div class="box verm" style="margin-top:22px;"><span class="lab">5問を終えたら</span>
+    落とした問題があれば、<strong>本文のどこを読み飛ばしていたか</strong>を特定してください。<u>発展1なら第3段落の but 以下、発展2なら第7段落の useful at any scale、発展3なら第8段落末の as I do … but still recognize、発展4なら第6段落末と第9段落末、発展5なら第10段落の Online, that context is taken away</u>。<em>いずれも本文に明確な根拠があり、推測で補う必要はありません</em>。<b>「なんとなく」で選んだ箇所こそ、伸びしろです</b>。</div>
+
+  <div class="pnav"><button class="btns" data-go="6">← 全訳</button><span class="sp"></span><button class="btnp" data-go="8">総まとめへ →</button></div>
+</section><section class="panel" id="p8">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 解答一覧と復習動線<span class="sub">まず自己採点。落とした問題が「どの手がかりを見落としたか」で振り返る。</span></h1>
+  <div class="rule"></div>
+  <h2 class="sec">本試験 解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:10%">設問</th><th style="width:10%">解答</th><th style="width:34%">決め手</th><th>陥りやすい誤答</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">1</td><td><b>③</b></td><td>the more … communicate, the more friendly</td><td>①（現在の現実を当時の理論と混同）</td></tr>
+      <tr><td class="cond">2</td><td><b>②</b></td><td>longer discussions kept alive by negative comments</td><td>③（BBCを原因として捏造）</td></tr>
+      <tr><td class="cond">3</td><td><b>③</b></td><td>modern life demands we speak our mind</td><td>②（筆者が退けた技術原因説）</td></tr>
+      <tr><td class="cond">4</td><td><b>①</b></td><td>ぶぶ漬け＝帰る合図（文脈に宿る意味）</td><td>④（debateが本文になし）</td></tr>
+      <tr><td class="cond">5</td><td><b>③</b></td><td>argue more（5段落）＋feel equal（8段落）</td><td>②（unimportantが言い過ぎ）</td></tr>
+      <tr><td class="cond">6</td><td><b>③</b></td><td>アジア＝直接表明は珍しい／欧米＝率直</td><td>②（欧米の説明をアジアに付け替え）</td></tr>
+      <tr><td class="cond">7</td><td><b>④</b></td><td>Individual people shift between modes</td><td>①（村と都市を逆にする）</td></tr>
+      <tr><td class="cond">8</td><td><b>①</b></td><td>move to cities＋equal voice</td><td>③（性役割の維持＝逆）</td></tr>
+      <tr><td class="cond">9</td><td><b>③</b></td><td>rules … are looser and more fluid</td><td>②（ignoreが言い過ぎ）</td></tr>
+      <tr><td class="cond">10</td><td><b>①</b></td><td>Online, that context is taken away</td><td>②（restrictingを見落とす）</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">発展5問 解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:10%">問</th><th style="width:10%">解答</th><th style="width:34%">試された力</th><th>最も引っかかる誤答</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">発展1</td><td><b>3</b></td><td>因果の向き（原因か加速要因か）</td><td>2（留保を「無関係」まで拡大）</td></tr>
+      <tr><td class="cond">発展2</td><td><b>2</b></td><td>概念の適用範囲（固定か可変か）</td><td>1（国の分類として暗記）</td></tr>
+      <tr><td class="cond">発展3</td><td><b>4</b></td><td>筆者の価値判断の両面性</td><td>1（対立増加だけ見て嘆きと誤読）</td></tr>
+      <tr><td class="cond">発展4</td><td><b>1</b></td><td>対立増加の真の原因</td><td>3（例示を唯一の要因に格上げ）</td></tr>
+      <tr><td class="cond">発展5</td><td><b>2</b></td><td>定義からの演繹</td><td>3（even whenの譲歩を読み落とす）</td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec">復習動線 ― 落とした「型」から潰す</h2>
+  <div class="route"><div class="rn">A</div><div><b>因果の向きを外した（設問3・発展1）</b><p>本文は<em>技術が played a part（一役買った）</em>としつつ、<u>主因は何世紀もかけた人間行動の変化</u>だと明言する。<strong>「影響した」を「原因だ」と短絡しない</strong>。<em>but が出てきたら、そこが論の急所</em>――この英文では第3段落がそれ。</p></div></div>
+  <div class="route"><div class="rn">B</div><div><b>概念を固定属性として暗記した（設問7・発展2）</b><p>high/lowは<em>国の分類ではなく、状況によって動く尺度</em>。<u>useful at any scale（どんな規模でも有用）、Individual people shift（個人も切り替える）</u>。<strong>「日本＝high、アメリカ＝low」で止めると、村・都市・組織・個人への適用が読めない</strong>。</p></div></div>
+  <div class="route"><div class="rn">C</div><div><b>程度を強めて読んだ（設問5②・設問9②）</b><p><u>isn't much help（あまり役に立たない）→unimportant（重要でない）</u>、<u>黙って従わない→ignore（無視する）</u>。<strong>本文より強く言い切っている選択肢は、まず疑う</strong>。<em>程度表現の一致まで確認する</em>のが内容一致問題の基本動作。</p></div></div>
+  <div class="route"><div class="rn">D</div><div><b>主体を入れ替えられた（設問6②・設問2③）</b><p><u>設問6②は「意見の相違を当然と考える」という欧米側の説明を、アジアに付け替えたもの</u>。<u>設問2③はBBCフォーラムを原因に仕立てたもの</u>。<strong>選択肢の後半が本文とそっくりなときほど、主語を確認する</strong>。</p></div></div>
+  <div class="route"><div class="rn">E</div><div><b>筆者の両面性を片面で読んだ（発展3）</b><p>結婚の例で筆者は<em>a really good change（本当に良い変化）</em>と明言しつつ、<u>but still recognize（それでも認める）</u>で対立増加という代償も認める。<strong>「対立が増える」だけを見ると嘆きと誤読し、「良い変化」だけを見ると代償を見落とす</strong>。<em>評論文では、この両面併記こそが筆者の実際の立場</em>。</p></div></div>
+
+  <div class="box navy" style="margin-top:22px;"><span class="lab">次の一手</span>
+    この英文の核心は<strong>「共有された文脈が失われていく」という一本の変化</strong>です。<u>対立の増加も、交渉の必要も、ネットの荒れも、すべてそこから説明される</u>。抽象概念（high/low context）が、ぶぶ漬け・結婚・コールセンターという具体で繰り返し例示される構造なので、<em>「この具体例はどの概念の説明か」を対応づけながら読む</em>と、初見でも設問の根拠にすぐ到達できます。発展5問で落とした箇所があれば、<b>本文のどの一文を読み飛ばしたか</b>を特定してください。いずれも推測ではなく明確な根拠があります。</div>
+  <div class="pnav"><button class="btns" data-go="0">↩ 最初に戻る</button><span class="sp"></span><button class="btns" data-go="7">← 発展5問</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">学部別合格設計塾 THINKING</div>
+  <div>受験は根性じゃなく、設計。 ／ <a href="https://thinking-online.com/" target="_blank" rel="noopener">https://thinking-online.com/</a></div>
+  <div class="cr">本解説は青山学院大学2024年英語（大問1）の学習用解説です。設問・出典の著作権は出題者・原著者に帰属します。和訳・解説・発展問題はTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump-top" id="jumpTop" aria-label="上へ">↑</button>
+
+<script>
+const Q = [
+/* ===== 設問1〜4：グループAB ===== */
+{id:"1", grp:"AB", type:"内容一致（初期の理論）", lbl:"設問1", en:"A popular theory for ten years after the beginning of mass internet use was that Facebook would ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[
+  {t:"① quickly become a machine to make people fight with one another（人々を争わせる機械にすぐになる）", ok:false},
+  {t:"② anger people at first but would become a better way to communicate（最初は人々を怒らせるが、より良い意思疎通の手段になる）", ok:false},
+  {t:"③ help people communicate and become more friendly with each other（人々が意思疎通し、より友好的になるのを助ける）", ok:true},
+  {t:"④ randomly make sick people seek good medical help（病人に無作為に良い医療を求めさせる）", ok:false}],
+ steps:[
+   {t:"『当時の理論』の中身を探す", d:"第1段落第2文：<b>this was a popular theory: the more people are able to communicate with others, the more friendly and understanding they will become</b>「コミュニケーションできるほど友好的で理解のあるものになる」。"},
+   {t:"Facebookの使命と重ねる", d:"第1文：<em>to tame the angry crowd and turn the lonely, anti-social world … into a friendly world</em>「怒れる群衆をなだめ、孤独で反社会的な世界を友好的な世界に変える」。"},
+   {t:"選ぶ", d:"<b>『人々が意思疎通し、より友好的になるのを助ける』</b>＝③。<u>during the first decade＝最初の10年間</u>という設問文の条件とも一致。"}],
+ ev:{q:'this was a popular theory: <span class="h">the more people are able to communicate with others, the more friendly and understanding they will become</span>, and the healthier our public conversations will be', jp:"「人々が他者とコミュニケーションできるようになるほど、より友好的で理解のあるものになり、公共の対話も健全になる、というのが一般的な理論だった」。"},
+ co:[{c:"nav",l:"『当時の期待』と『現在の現実』",h:"<b>設問が問うのは「当時の理論」</b>。<u>現在の現実（争いと分断）と取り違えない</u>。第1段落は両者の落差で構成されている。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>時期が逆</b>。『争いの機械』は<u>現在の評価（At its worst, it can seem like a machine for the production of fighting）</u>であって、当時の理論ではない。〈選びがちな人〉<b>同じ段落にある印象的な表現を、設問の時期を確認せずに拾った人</b>。"},
+  {m:"x",n:"②",t:"<b>「最初は怒らせる」が本文にない</b>。当時の理論は最初から<u>友好的になる</u>という楽観論。〈選びがちな人〉<b>angry という語が段落内にあるのを見て、段階的な変化の話だと補った人</b>。"},
+  {m:"o",n:"③",t:"正解。the more … communicate, the more friendly and understanding they will become に一致。"},
+  {m:"x",n:"④",t:"<b>医療の話は本文に一切ない</b>。<u>anti-social や sick といった語の連想だけで作られた選択肢</u>。"}]},
+
+{id:"2", grp:"AB", type:"内容一致（調査結果）", lbl:"設問2", en:"A team of data scientists found that ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"2", kind:"choice",
+ choices:[
+  {t:"① people tend to agree with one another more when they are off the internet（ネットから離れているときのほうが人々は同意しやすい）", ok:false},
+  {t:"② negative comments keep discussions going longer on BBC forums（否定的なコメントがBBCフォーラムでの議論を長引かせる）", ok:true},
+  {t:"③ people want to agree on the internet, but BBC forums make them disagree（ネットでは同意したいが、BBCフォーラムが不同意にさせる）", ok:false},
+  {t:"④ the internet is hostile because data scientists try to make forums less interactive（データ科学者がフォーラムの双方向性を減らそうとするのでネットは敵対的だ）", ok:false}],
+ steps:[
+   {t:"調査の結論部を探す", d:"第2段落最終文：<b>They found that longer discussions were kept alive by negative comments, and that the most active users overall were more likely to express negative emotions.</b>"},
+   {t:"訳して照合", d:"「より長く続く議論は否定的なコメントによって生き続けており、最も活発なユーザーは否定的感情を表明する傾向が強い」＝<u>否定的コメントが議論を長引かせる</u>。"},
+   {t:"選ぶ", d:"<b>②</b>。<u>kept alive＝生き続ける＝長く続く</u>の言い換え。"}],
+ ev:{q:'They found that <span class="h">longer discussions were kept alive by negative comments</span>, and that the most active users overall were more likely to express negative emotions.', jp:"「より長い議論は否定的なコメントによって生き続けており、最も活発なユーザーは否定的感情を表明しやすいと分かった」。"},
+ co:[{c:"gold",l:"kept alive by",h:"<b>『〜によって生き続けている』</b>＝<u>否定的コメントが議論を継続させる原動力</u>。keep ~ going longer と同義。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>ネット外との比較は調査していない</b>。調査対象は<u>BBCフォーラムの投稿250万件</u>のみ。〈選びがちな人〉<b>「ネットは不同意を生む」という段落の趣旨から、対比を勝手に補った人</b>。"},
+  {m:"o",n:"②",t:"正解。調査結果の第一の発見そのもの。"},
+  {m:"x",n:"③",t:"<b>因果が捏造されている</b>。本文は<u>BBCフォーラムが人を不同意にさせるとは述べていない</u>。単に否定的コメントが議論を長引かせると観察しただけ。〈選びがちな人〉<b>BBC forums という固有名詞を見て、原因として読み込んだ人</b>。"},
+  {m:"x",n:"④",t:"<b>データ科学者の意図が捏造されている</b>。彼らは<u>測定しただけ</u>で、フォーラムを操作してなどいない。〈選びがちな人〉<b>data scientists という語を拾い、行為主体を取り違えた人</b>。"}]},
+
+{id:"3", grp:"AB", type:"内容一致（不同意の理由）", lbl:"設問3", en:"There is disagreement everywhere mainly because ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[
+  {t:"① the internet has taken over our minds（インターネットが私たちの心を乗っ取った）", ok:false},
+  {t:"② Twitter and Facebook have given us too many forums（TwitterやFacebookが場を与えすぎた）", ok:false},
+  {t:"③ in modern life we must say what we think（現代生活では思っていることを言わねばならない）", ok:true},
+  {t:"④ there are too many one-way channels on and off the internet（ネット内外に一方通行の経路が多すぎる）", ok:false}],
+ steps:[
+   {t:"段落の結論文を探す", d:"第3段落最終文：<b>If we are becoming more disagreeable, it's because modern life demands we speak our mind.</b>「より意見を戦わせるようになっているとすれば、それは現代生活が率直な意見を言うよう求めているからだ」。"},
+   {t:"『mainly because』と照合", d:"<u>設問は主たる理由を問う</u>。本文が明示する理由＝<b>現代生活が率直な意見表明を求めること</b>。"},
+   {t:"選ぶ", d:"<b>③ in modern life we must say what we think</b>。<u>speak our mind＝思っていることを言う</u>。"}],
+ ev:{q:'If we are becoming more disagreeable, it\'s because <span class="h">modern life demands we speak our mind</span>.', jp:"「私たちがより意見を戦わせるようになっているとすれば、それは現代生活が率直な意見を言うよう求めているからだ」。"},
+ co:[{c:"verm",l:"技術は主因ではない",h:"<b>この段落は「技術のせいにするな」と明言する箇所</b>。<u>①②のような技術原因説は、筆者が退けた見方</u>。<em>主因は現代生活のあり方</em>。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>筆者が退けた見方</b>。本文は<u>技術が played a part（一役買った）</u>としつつ、<em>それを主因とするのは本質を見落とすと述べる</em>。「心を乗っ取った」という表現も本文にない。"},
+  {m:"x",n:"②",t:"<b>まさに筆者が『責めたくなるが、それでは見落とす』とした対象</b>。<u>we might want to blame Facebook and Twitter … that would be to miss …</u>〈選びがちな人〉<b>固有名詞が本文にあるのを見て選んだ人</b>。<u>最も引っかかる誤答</u>。"},
+  {m:"o",n:"③",t:"正解。段落の結論文 modern life demands we speak our mind に一致。"},
+  {m:"x",n:"④",t:"<b>本文と正反対</b>。本文は<u>there are fewer one-way channels（一方通行の経路は少なくなっている）</u>と述べる。〈選びがちな人〉<b>one-way channels という語句だけ拾い、fewer を見落とした人</b>。"}]},
+
+{id:"4", grp:"AB", type:"定義の理解（high-context）", lbl:"設問4", en:"A high-context culture is one in which ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"1", kind:"choice",
+ choices:[
+  {t:"① being offered more food by a host might mean that you should leave（主人にもっと食べ物を勧められることは、帰るべきだという意味かもしれない）", ok:true},
+  {t:"② just a few relationships are implied and people speak their minds（ほんの少数の関係が暗示され、人々は率直に話す）", ok:false},
+  {t:"③ speaking and listening are mostly direct（話すことと聞くことがほとんど直接的である）", ok:false},
+  {t:"④ listeners often need more debate to understand meanings（聞き手は意味を理解するのにより多くの討論を必要とする）", ok:false}],
+ steps:[
+   {t:"high-contextの定義を確認", d:"第4段落第5〜7文：<b>little is said clearly, and most of the message is implied</b>「明確に語られることが少なく、メッセージの大部分が暗示される」。"},
+   {t:"ぶぶ漬けの例を当てはめる", d:"第9〜11文：<em>京都でぶぶ漬けを勧めるのは、客が帰る時間だと伝える伝統的なやり方</em>＝<u>食べ物を勧める行為が、言葉とは別の意味を運ぶ</u>。まさにhigh-contextの実例。"},
+   {t:"選ぶ", d:"<b>① 主人に食べ物を勧められることが『帰るべき』を意味しうる</b>。<u>メッセージが文脈に宿る例</u>。"}],
+ ev:{q:'in Kyoto, <span class="h">offering bubuzuke is the traditional way to signal that it\'s time for a guest to leave</span>. You would need to know the context to get the message.', jp:"「京都では、ぶぶ漬けを勧めることは客が帰る時間だと伝える伝統的なやり方だ。メッセージを受け取るには文脈を知る必要がある」。"},
+ co:[{c:"gold",l:"言葉の外にある意味",h:"<b>high-context＝意味が言葉そのものではなく文脈に宿る</b>。<u>ぶぶ漬けの例は、その最もわかりやすい実例</u>として置かれている。"}],
+ sol:[
+  {m:"o",n:"①",t:"正解。ぶぶ漬けの例＝行為が言葉と別の意味を運ぶ＝high-contextの定義に合致。"},
+  {m:"x",n:"②",t:"<b>後半が逆</b>。<u>speak their minds（率直に話す）はlow-contextの特徴</u>。high-contextでは<em>わずかな言葉しか使わない</em>。〈選びがちな人〉<b>implied（暗示される）という語だけ見て、後半を確認しなかった人</b>。"},
+  {m:"x",n:"③",t:"<b>完全に逆</b>。<u>direct（直接的）はlow-contextの定義</u>（communication is clear and direct）。"},
+  {m:"x",n:"④",t:"<b>debate（討論）が誤り</b>。high-contextでは<u>言葉が少なく、聞き手は行間を読む</u>のであって、討論が増えるわけではない。〈選びがちな人〉<b>「理解に手間がかかる」という印象から、討論という手段を補った人</b>。<u>旺文社も④はdebateが誤りと明記</u>。"}]},
+
+/* ===== 設問5〜7：グループCD ===== */
+{id:"5", grp:"CD", type:"定義の理解（low-context）", lbl:"設問5", en:"A low-context culture is one in which ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[
+  {t:"① people cross talk frequently but avoid interruption（同時発話は頻繁だが、割り込みは避ける）", ok:false},
+  {t:"② long relationships and traditions are unimportant（長期的な関係と伝統は重要でない）", ok:false},
+  {t:"③ people feel equal and argue more（人々は平等だと感じ、より多く議論する）", ok:true},
+  {t:"④ arguing is more important than equality（議論することは平等より重要だ）", ok:false}],
+ steps:[
+   {t:"argue more の根拠を探す", d:"第5段落最終文：<b>There is more interruption and cross-talking — and more arguing.</b>＝<u>より多く議論する</u>。"},
+   {t:"feel equal の根拠を探す", d:"第8段落第6〜7文：<b>we are inclined to try to be more equal than ever. Everywhere you look, there are interactions in which everyone expects to have an equal voice.</b>＝<u>対等な発言権を期待する</u>。"},
+   {t:"選ぶ", d:"<b>③ 人々は平等だと感じ、より多く議論する</b>。<u>2つの根拠が別の段落にあるので、本文全体を掴んでいないと選べない</u>。"}],
+ ev:{q:'There is more interruption and cross-talking — and <span class="h">more arguing</span>. … we are inclined to try to be more equal than ever … everyone expects to have an <span class="h">equal voice</span>.', jp:"「割り込みや同時発話がより多く、そしてより多く議論する…私たちはかつてないほど平等であろうとし、誰もが対等な発言権を期待する」。"},
+ co:[{c:"nav",l:"根拠が2か所に分かれる",h:"<b>argue more＝第5段落／feel equal＝第8段落</b>。<u>離れた2か所を結びつける必要がある</u>のがこの設問の難所。"},
+     {c:"verm",l:"言い過ぎの選択肢に注意",h:"<b>②のunimportant（重要でない）は言い過ぎ</b>。本文は<u>isn't much help（あまり役に立たない）</u>にとどまる。<em>程度を強めた選択肢は疑う</em>。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>後半が正反対</b>。本文は<u>more interruption and cross-talking（割り込みも同時発話も多い）</u>。<em>「割り込みを避ける」は誤り</em>。〈選びがちな人〉<b>cross talk という語の一致だけで選び、avoid interruption を確認しなかった人</b>。"},
+  {m:"x",n:"②",t:"<b>unimportant が言い過ぎ</b>。本文は<u>knowledge of tradition, custom and rank isn't much help（あまり役に立たない）</u>であって、<em>「重要でない」と断じてはいない</em>。〈選びがちな人〉<b>「役に立たない≒重要でない」と程度を強めて読んだ人</b>。<u>旺文社も②は言い過ぎと明記</u>。"},
+  {m:"o",n:"③",t:"正解。argue more（第5段落）と feel equal（第8段落）の両方が本文にある。"},
+  {m:"x",n:"④",t:"<b>本文にない優劣比較</b>。議論と平等のどちらが重要かなど論じていない。〈選びがちな人〉<b>正解③の要素（平等・議論）を並べ替えただけの選択肢に引っかかった人</b>。"}]},
+
+{id:"6", grp:"CD", type:"内容一致（地域比較）", lbl:"設問6", en:"It is generally observed that ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[
+  {t:"① Japan is high context, whereas other Asian nations are low context（日本はhigh-contextだが、他のアジア諸国はlow-contextだ）", ok:false},
+  {t:"② people from Asia expect differences of opinions, even when they generate conflict（アジアの人々は、対立を生むときでさえ意見の相違を当然と考える）", ok:false},
+  {t:"③ people from Europe are more likely to express their opinion directly than people from Asia（ヨーロッパの人々はアジアの人々より直接的に意見を表明する傾向が強い）", ok:true},
+  {t:"④ European nations have kept their high-context traditions（ヨーロッパ諸国はhigh-contextな伝統を守ってきた）", ok:false}],
+ steps:[
+   {t:"アジア側の記述を確認", d:"第6段落第2文：<b>In Asian cultures, expressing your opinion directly and strongly is unusual.</b>「アジアの文化では、直接的に強く意見を表明することは珍しい」。"},
+   {t:"欧米側の記述を確認", d:"第4文：<b>People from Europe and the USA are more willing to speak directly and risk confrontation.</b>「ヨーロッパやアメリカの人々は、より進んで率直に話し、対決の危険を冒す」。"},
+   {t:"選ぶ", d:"<b>③ ヨーロッパの人々はアジアの人々より直接的に意見を表明する</b>。<u>2文の対比そのもの</u>。"}],
+ ev:{q:'In Asian cultures, expressing your opinion directly and strongly is unusual. … <span class="h">People from Europe and the USA are more willing to speak directly and risk confrontation.</span>', jp:"「アジアの文化では直接的に強く意見を表明することは珍しい…ヨーロッパやアメリカの人々はより進んで率直に話し、対決の危険を冒す」。"},
+ co:[{c:"nav",l:"どちらが直接的か",h:"<b>アジア＝直接表明は珍しい／欧米＝率直に話す</b>。<u>この対比は第5段落の high/low の定義と一貫している</u>（アジア＝high、欧米＝low）。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>アジアの扱いが逆</b>。本文は<u>Asian cultures are high context</u>と一括りに述べており、<em>「他のアジア諸国はlow-context」とは言っていない</em>。〈選びがちな人〉<b>日本の例（ぶぶ漬け・敬意）が詳しいので、日本だけが特別だと読んだ人</b>。"},
+  {m:"x",n:"②",t:"<b>主体が逆</b>。<u>Differences of opinion are expected, even when they generate conflict</u>は<em>ヨーロッパ・アメリカ側の説明</em>（直前文の主語を受ける）。〈選びがちな人〉<b>選択肢の後半が本文とそっくりなので、主語の入れ替えに気づかなかった人</b>。<u>最も巧妙な誤答</u>。"},
+  {m:"o",n:"③",t:"正解。第6段落第2文と第4文の対比に一致。"},
+  {m:"x",n:"④",t:"<b>ヨーロッパはlow-context側</b>。加えて本文は<u>as such traditions fade（そうした伝統が薄れるにつれ）</u>と述べ、<em>伝統を守ってきたどころか失いつつある</em>。〈選びがちな人〉<b>「政治や宗教を食卓で論じない」という慣習の記述を、伝統維持の証拠と読んだ人</b>。"}]},
+
+{id:"7", grp:"CD", type:"内容一致（適用範囲）", lbl:"設問7", en:"It is true that people ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"4", kind:"choice",
+ choices:[
+  {t:"① who live in cities are often high context（都市に住む人々はしばしばhigh-contextだ）", ok:false},
+  {t:"② who live in low-context environments usually remain low context（low-context環境に住む人々はたいていlow-contextのままだ）", ok:false},
+  {t:"③ who live in high-context environments cannot adapt to cities（high-context環境に住む人々は都市に適応できない）", ok:false},
+  {t:"④ can shift from high to low context when in different circumstances（状況が異なればhigh-contextからlow-contextへ切り替えられる）", ok:true}],
+ steps:[
+   {t:"該当文を探す", d:"第7段落第4文：<b>Individual people shift between high- and low-context modes: with family or friends, you probably do a lot of high-context communication, but when talking to someone in a call center, you go low context.</b>"},
+   {t:"訳して照合", d:"「個々の人間もhigh/lowのモード間を行き来する。家族や友人とはhigh-context、コールセンターの相手とはlow-context」＝<u>状況に応じて切り替わる</u>。"},
+   {t:"選ぶ", d:"<b>④ 状況が異なればhighからlowへ切り替えられる</b>。"}],
+ ev:{q:'<span class="h">Individual people shift between high- and low-context modes</span>: with family or friends, you probably do a lot of high-context communication, but when talking to someone in a call center, you go low context.', jp:"「個々の人間もhigh/lowのモード間を行き来する。家族や友人とはhigh-contextだが、コールセンターの相手と話すときはlow-contextになる」。"},
+ co:[{c:"gold",l:"shift between＝行き来する",h:"<b>high/lowは固定された属性ではない</b>。<u>同じ人が相手や場面によって切り替える</u>。この段落は「国の類型」から「可変的な状況」へ概念を拡張している。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>逆</b>。本文は<u>村に住む人々のほうがhigh-context</u>、<em>大都市の人々はlow-context寄り</em>と述べる。〈選びがちな人〉<b>villages と big cities のどちらがhighか、対応を取り違えた人</b>。"},
+  {m:"x",n:"②",t:"<b>「remain（〜のままだ）」が本文と衝突</b>。本文の主眼は<u>人が状況で切り替わる（shift）</u>点。〈選びがちな人〉<b>low-context environments という語句の一致で選び、shift の記述を見落とした人</b>。"},
+  {m:"x",n:"③",t:"<b>「適応できない」は本文にない</b>。本文は切り替え可能だと述べており、むしろ適応を前提にしている。〈選びがちな人〉<b>leave new people confused（新参者を戸惑わせる）を「適応できない」と読み替えた人</b>。<u>この記述は既存組織内の伝わり方の話</u>。"},
+  {m:"o",n:"④",t:"正解。Individual people shift between high- and low-context modes に一致。"}]},
+
+/* ===== 設問8〜10：グループEF ===== */
+{id:"8", grp:"EF", type:"内容一致（low-contextの要因）", lbl:"設問8", en:"Low-context communication often results from ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"1", kind:"choice",
+ choices:[
+  {t:"① city life and a desire for an equal voice（都市生活と、対等な発言権への欲求）", ok:true},
+  {t:"② small town life and a desire to be polite（小さな町の生活と、礼儀正しくありたい欲求）", ok:false},
+  {t:"③ married life and a desire to maintain traditional gender roles（結婚生活と、伝統的な性役割を維持したい欲求）", ok:false},
+  {t:"④ married life and a desire to stay away from the city（結婚生活と、都市を離れていたい欲求）", ok:false}],
+ steps:[
+   {t:"都市生活との関係を確認", d:"第8段落第1文：<b>we are living more and more low-context lives, as we move to cities, do business with strangers, and talk over smartphones</b>「都市へ移り、見知らぬ人と商売し、スマホで話すにつれ、ますますlow-contextな生活を送っている」。"},
+   {t:"平等志向との関係を確認", d:"第6〜7文：<b>we are inclined to try to be more equal than ever … everyone expects to have an equal voice</b>「かつてないほど平等であろうとし、誰もが対等な発言権を期待する」。"},
+   {t:"選ぶ", d:"<b>① 都市生活と、対等な発言権への欲求</b>。<u>2つの要因が本文に明示されている</u>。"}],
+ ev:{q:'we are living more and more low-context lives, <span class="h">as we move to cities</span>, do business with strangers … At the same time, we are inclined to try to be more equal than ever … everyone expects to have an <span class="h">equal voice</span>.', jp:"「都市へ移り、見知らぬ人と商売するにつれ、ますますlow-contextな生活になっている…同時に、かつてないほど平等であろうとし、誰もが対等な発言権を期待する」。"},
+ co:[{c:"nav",l:"2つの要因",h:"<b>①都市化（見知らぬ人との接触）②平等志向（対等な発言権）</b>。<u>結婚の例は、この②を具体化したもの</u>であって、結婚そのものが要因ではない。"}],
+ sol:[
+  {m:"o",n:"①",t:"正解。都市への移動（第1文）と対等な発言権への期待（第6〜7文）の両方が本文にある。"},
+  {m:"x",n:"②",t:"<b>逆</b>。<u>小さな村・町はhigh-context側</u>（第7段落・第8段落第5文）。〈選びがちな人〉<b>small villages という語が本文にあるのを見て、要因として拾った人</b>。<em>それは祖先の暮らし＝high-contextの説明</em>。"},
+  {m:"x",n:"③",t:"<b>「伝統的性役割を維持したい」が逆</b>。本文は<u>ジェンダー平等の高まりで交渉が必要になった</u>と述べる。維持ではなく崩れが要因。〈選びがちな人〉<b>結婚の例が印象的なので、gender roles という語を肯定的に拾った人</b>。"},
+  {m:"x",n:"④",t:"<b>「都市を離れたい」は本文と正反対</b>。本文は<u>都市へ移る（move to cities）</u>ことがlow-context化の要因だと述べる。"}]},
+
+{id:"9", grp:"EF", type:"内容一致（現代社会）", lbl:"設問9", en:"Generally, in our current society, ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"3", kind:"choice",
+ choices:[
+  {t:"① organizations are more likely to rely on silent commands（組織は無言の命令に頼る傾向が強い）", ok:false},
+  {t:"② children are more likely to ignore their parents（子どもは親を無視する傾向が強い）", ok:false},
+  {t:"③ what can and cannot be spoken is not as clear as it used to be（言ってよいことと言ってはいけないことが、以前ほどはっきりしない）", ok:true},
+  {t:"④ journalists are better able to give commands（ジャーナリストはより命令を与えられるようになった）", ok:false}],
+ steps:[
+   {t:"該当文を探す", d:"第9段落第4文：<b>previously assumed rules about what can and cannot be said are looser and more fluid, and sometimes even disappear</b>「何を言ってよく何を言ってはいけないかについて以前から想定されていたルールは、より緩く流動的になり、時には消えさえする」。"},
+   {t:"訳して照合", d:"<u>looser and more fluid＝以前ほどはっきりしない</u>。"},
+   {t:"選ぶ", d:"<b>③</b>。<u>not as clear as it used to be＝以前ほど明確でない</u>という言い換え。"}],
+ ev:{q:'In this diverse world, <span class="h">previously assumed rules about what can and cannot be said are looser and more fluid</span>, and sometimes even disappear.', jp:"「この多様な世界では、何を言ってよく何を言ってはいけないかについて以前から想定されていたルールは、より緩く流動的になり、時には消えさえする」。"},
+ co:[{c:"verm",l:"程度を強めた誤答に注意",h:"<b>②のignore（無視する）は言い過ぎ</b>。本文は<u>obey their parents silently（黙って従う）ことが less likely</u>にとどまる。<em>「黙って従わない」≠「無視する」</em>。<u>旺文社も②はignoreが誤りと明記</u>。"}],
+ sol:[
+  {m:"x",n:"①",t:"<b>逆</b>。本文は<u>organizations rely more on collaboration and less on commands（命令より協働に頼る）</u>と述べる。〈選びがちな人〉<b>commands という語の一致だけで選び、more/less の向きを見落とした人</b>。"},
+  {m:"x",n:"②",t:"<b>ignore（無視する）が言い過ぎ</b>。本文は<u>黙って従うことが less likely</u>であって、無視するとは述べていない。〈選びがちな人〉<b>「従わない＝無視する」と程度を強めて読んだ人</b>。"},
+  {m:"o",n:"③",t:"正解。previously assumed rules … are looser and more fluid に一致。"},
+  {m:"x",n:"④",t:"<b>逆</b>。本文は<u>journalists no longer expect their readers to simply believe them（読者が単純に信じることをもはや期待しない）</u>＝<em>権威が弱まっている</em>。〈選びがちな人〉<b>journalists という語だけ拾い、内容を確認しなかった人</b>。"}]},
+
+{id:"10", grp:"EF", type:"内容一致（技術の作用）", lbl:"設問10", en:"Communication technologies are now speeding up the shift to low-context communication by ______.",
+ ask:"空所に入れるのにもっとも適切なものを ①〜④ から選べ。", answer:"1", kind:"choice",
+ choices:[
+  {t:"① removing facial expressions and tone of voice from communication（表情や声の調子をコミュニケーションから取り除くことによって）", ok:true},
+  {t:"② providing too many images on devices like smartphones that are too small（小さすぎる端末に画像を与えすぎることによって）", ok:false},
+  {t:"③ redesigning emojis from high-context social media platforms（high-contextなSNSから絵文字を再設計することによって）", ok:false},
+  {t:"④ using faster conflict resolution platforms（より速い紛争解決の場を使うことによって）", ok:false}],
+ steps:[
+   {t:"該当箇所を探す", d:"第10段落第2〜3文：<b>Humans have an ability to understand a person's intentions from their facial expressions, movements, and tone of voice. Online, that context is taken away.</b>"},
+   {t:"訳して照合", d:"「人間は表情・動作・声の調子から意図を理解する能力を持つ。オンラインでは、その文脈が奪われる」＝<u>手がかりが取り除かれる</u>。"},
+   {t:"選ぶ", d:"<b>① 表情や声の調子を取り除くことによって</b>。<u>that context is taken away の言い換え</u>。"}],
+ ev:{q:'Humans have an ability to understand a person\'s intentions from their facial expressions, movements, and tone of voice. <span class="h">Online, that context is taken away.</span>', jp:"「人間は表情・動作・声の調子から相手の意図を理解する能力を持つ。オンラインでは、その文脈が奪われる」。"},
+ co:[{c:"gold",l:"context＝意図を読む手がかり",h:"<b>表情・動作・声＝文脈</b>。<u>それが奪われるからオンラインはlow-context</u>。定義から演繹できる。"}],
+ sol:[
+  {m:"o",n:"①",t:"正解。Online, that context is taken away.（表情・動作・声という文脈が奪われる）に一致。"},
+  {m:"x",n:"②",t:"<b>「画像が多すぎる」が逆</b>。本文は<u>restricting the flow to a few words or images at a time（一度に数語か画像かに制限する）</u>＝<em>情報が絞られる</em>。〈選びがちな人〉<b>images, smartphones という語を拾い、restricting を見落とした人</b>。"},
+  {m:"x",n:"③",t:"<b>絵文字の再設計という記述はない</b>。本文は<u>絵文字で豊かにされても基本的な理解しか得られない</u>と述べるだけ。〈選びがちな人〉<b>emojis という語の一致で選んだ人</b>。"},
+  {m:"x",n:"④",t:"<b>紛争解決は最終文の別の論点</b>。<u>私たちが使う紛争解決の技能は20万年前のもの</u>という皮肉であって、<em>技術がlow-context化を進める手段ではない</em>。〈選びがちな人〉<b>conflict resolution という語を拾い、文脈を確認しなかった人</b>。"}]},
+].concat([
+/* ===== 発展1：因果の向き（技術は原因か加速要因か） ===== */
+{id:"発展1", grp:"GH", type:"因果の向き", lbl:"Original Q1", en:"（第3段落・第10段落）",
+ ask:"According to the author, what is the relationship between communication technology and our growing tendency to disagree?（筆者によれば、通信技術と、私たちが意見を戦わせるようになっている傾向との関係はどのようなものか）", answer:"3", kind:"choice",
+ choices:[
+  {t:"Technology is the root cause of the change, since platforms such as Facebook and Twitter were deliberately designed to provoke hostility.（技術こそが変化の根本原因である。FacebookやTwitterのようなプラットフォームは敵意を誘発するよう意図的に設計されたからだ）", ok:false},
+  {t:"Technology has had almost no effect, because the shift in human behavior would have advanced at the same pace without it.（技術はほとんど影響を与えていない。技術がなくても人間行動の変化は同じ速度で進んだはずだからだ）", ok:false},
+  {t:"Technology has accelerated a shift in human behavior that was already under way long before the internet existed.（技術は、インターネット以前からすでに進行していた人間行動の変化を加速させた）", ok:true},
+  {t:"Technology has reversed a long historical trend, turning societies that were once low context back into high-context ones.（技術は長い歴史的傾向を逆転させ、かつてlow-contextだった社会をhigh-contextに戻した）", ok:false}],
+ steps:[
+   {t:"第3段落の but 以下を読む", d:"<b>The technologies … have clearly played a part in making us this way, but … that would be to miss the significance of a wider and more profound shift in human behavior that has been decades, even centuries, in the making.</b>"},
+   {t:"played a part の含意を取る", d:"<u>played a part＝『一役買った』＝原因の一部</u>。<em>根本原因ではない</em>。<b>decades, even centuries, in the making</b>＝<u>何十年・何世紀もかけて進んできた変化が先にある</u>。"},
+   {t:"第10段落で裏を取る", d:"<b>The low-context shift has been a long time coming but is speeding up now as a result of communication technologies.</b>＝<u>長く進行してきた変化を、技術が『加速』している</u>。"},
+   {t:"選ぶ", d:"<b>『インターネット以前から進行していた変化を、技術が加速させた』</b>＝3。<u>原因ではなく加速要因</u>という位置づけが正確。"}],
+ ev:{q:'though we might want to blame Facebook and Twitter for our problems, that would be to miss the significance of <span class="h">a wider and more profound shift in human behavior that has been decades, even centuries, in the making</span>. … The low-context shift has been a long time coming but is <span class="h">speeding up</span> now as a result of communication technologies.', jp:"「FacebookやTwitterのせいにしたくなるが、それは何十年・何世紀もかけて進んできたより広く深い人間行動の変化の重要性を見落とすことになる…low-contextへの移行は長く続いてきたが、今、通信技術によって加速している」。"},
+ co:[{c:"nav",l:"原因と加速要因を分ける",h:"<b>played a part（一役買った）／speeding up（加速させる）</b>＝<u>技術は変化を『速めた』が『生んだ』のではない</u>。筆者はむしろ<em>技術のせいにする見方を戒めている</em>。"},
+     {c:"verm",l:"出題者が見ている力",h:"<b>「AがBに影響した」を「AがBの原因だ」と短絡しない力</b>。<u>本文がわざわざ but で留保をつけている箇所は、必ず論の急所</u>。"}],
+ sol:[
+  {m:"x",n:"1",t:"<b>筆者が明確に退けた見方</b>。<u>we might want to blame Facebook and Twitter … that would be to miss …</u>＝「そう責めたくなるが、それでは見落とす」。また<em>「敵意を誘発するよう意図的に設計された」とまでは述べていない</em>（第2段落は produces disagreement by design と言うが、これは Graham の観察であり、根本原因の断定ではない）。〈選びがちな人〉<b>第2段落の by design だけを拾い、第3段落の but を読まなかった人</b>。"},
+  {m:"x",n:"2",t:"<b>「ほとんど影響を与えていない」が言い過ぎ</b>。本文は<u>played a part（一役買った）</u>と認め、第10段落では<u>speeding up（加速している）</u>と明言する。〈選びがちな人〉<b>「技術のせいではない」という留保を、「技術は無関係」まで拡大解釈した人</b>。<u>本文の程度表現を強めすぎる典型</u>。"},
+  {m:"o",n:"3",t:"正解。技術は既に進行していた変化を加速させた。played a part と speeding up の両方に合致する。"},
+  {m:"x",n:"4",t:"<b>方向が正反対</b>。本文は<u>high-context から low-context へ移行している</u>と一貫して述べる。〈選びがちな人〉<b>high/low の向きを取り違えたまま読み進めた人</b>。"}]},
+
+/* ===== 発展2：high/low contextは固定属性か ===== */
+{id:"発展2", grp:"GH", type:"概念の適用範囲", lbl:"Original Q2", en:"（第7段落）",
+ ask:"Which statement best reflects how the author applies Hall's high- and low-context model?（筆者がHallのhigh/low-contextモデルをどのように適用しているかを最もよく表しているものはどれか）", answer:"2", kind:"choice",
+ choices:[
+  {t:"The model classifies each nation permanently, so that a country identified as high context cannot become low context.（このモデルは各国を恒久的に分類するので、high-contextとされた国がlow-contextになることはない）", ok:false},
+  {t:"The model applies not only to whole nations but also to smaller settings, and even a single person may move between the two modes.（このモデルは国全体だけでなくより小さな場にも当てはまり、一人の人間でさえ二つのモードの間を行き来しうる）", ok:true},
+  {t:"The model is useful for describing organizations but breaks down when applied to families and villages.（このモデルは組織を説明するには有用だが、家族や村に適用すると成り立たなくなる）", ok:false},
+  {t:"The model shows that people raised in high-context environments are unable to function once they move to large cities.（このモデルは、high-contextな環境で育った人は大都市に移ると機能できなくなることを示している）", ok:false}],
+ steps:[
+   {t:"第7段落冒頭の宣言を読む", d:"<b>I am making broad comparisons between countries, but Hall's high- and low-context model is useful at any scale.</b>「国どうしの大まかな比較をしているが、このモデルはどんな規模でも有用だ」＝<u>国に限らない</u>。"},
+   {t:"挙げられる規模を確認", d:"<em>村 vs 大都市／既存の組織 vs 新しい会社</em>＝<u>国より小さな単位にも適用</u>。"},
+   {t:"個人への適用を確認", d:"<b>Individual people shift between high- and low-context modes: with family or friends … high-context … when talking to someone in a call center, you go low context.</b>＝<u>同じ人が状況で切り替える</u>。"},
+   {t:"選ぶ", d:"<b>『国全体だけでなく小さな場にも当てはまり、一人の人間も二つのモードを行き来しうる』</b>＝2。"}],
+ ev:{q:'Hall\'s high- and low-context model is <span class="h">useful at any scale</span>. … <span class="h">Individual people shift between high- and low-context modes</span>: with family or friends, you probably do a lot of high-context communication, but when talking to someone in a call center, you go low context.', jp:"「Hallのモデルはどんな規模でも有用だ…個人も二つのモードを行き来する。家族や友人とはhigh-contextだが、コールセンターの相手と話すときはlow-contextになる」。"},
+ co:[{c:"gold",l:"at any scale＝規模を問わない",h:"<b>国 → 村/都市 → 組織 → 個人</b>と、<u>入れ子状に適用範囲が下りていく</u>。この段落は「国の類型論」を「可変的な状況の記述」へと拡張する役割を持つ。"},
+     {c:"verm",l:"出題者が見ている力",h:"<b>概念が「固定的な属性」か「状況依存の可変的なもの」かを正確に捉える力</b>。<u>第5段落までの国別の説明だけで止まると、固定属性だと誤解する</u>。"}],
+ sol:[
+  {m:"x",n:"1",t:"<b>「恒久的な分類」が誤り</b>。第6段落では<u>ヨーロッパでも伝統が薄れるにつれ対立が増える</u>とされ、第8段落では<u>世界中が low-context な生活へ移行中</u>と述べられる。<em>国の位置づけ自体が動く</em>。〈選びがちな人〉<b>第5段落の「ヨーロッパ・北米＝low、アジア＝high」という分類だけを覚えた人</b>。"},
+  {m:"o",n:"2",t:"正解。useful at any scale と Individual people shift between … の両方に合致する。"},
+  {m:"x",n:"3",t:"<b>逆</b>。本文は<u>村（village）を high-context の例として明示的に挙げている</u>。家族についても with family … high-context communication と述べる。〈選びがちな人〉<b>established organizations という語だけを拾い、組織の話だと限定した人</b>。"},
+  {m:"x",n:"4",t:"<b>「機能できなくなる」は本文にない</b>。本文は<u>個人がモードを切り替えられる</u>と述べており、むしろ適応可能だとしている。〈選びがちな人〉<b>leave new people confused（新しい人を混乱させる）を「適応できない」と読み替えた人</b>。この記述は<em>既存組織の内輪の伝わり方についてであって、個人の適応力の話ではない</em>。"}]},
+
+/* ===== 発展3：筆者の価値判断（結婚の例） ===== */
+{id:"発展3", grp:"IJ", type:"筆者の価値判断", lbl:"Original Q3", en:"（第8段落：結婚の例）",
+ ask:"Why does the author discuss the way marriage has changed over the past seventy years?（筆者はなぜ、この70年で結婚がどう変わったかを論じているのか）", answer:"4", kind:"choice",
+ choices:[
+  {t:"To argue that the loss of traditional roles has made modern households less stable than they once were.（伝統的役割の喪失により、現代の家庭がかつてより不安定になったと論じるため）", ok:false},
+  {t:"To suggest that couples should return to the shared assumptions that once made negotiation unnecessary.（かつて交渉を不要にしていた共有された前提に、夫婦は立ち返るべきだと示唆するため）", ok:false},
+  {t:"To show that gender equality has succeeded in removing the main sources of conflict from family life.（ジェンダー平等が家庭生活から主要な対立の源を取り除くことに成功したと示すため）", ok:false},
+  {t:"To illustrate that as shared context disappears, more must be negotiated explicitly — a change he welcomes while acknowledging its costs.（共有された文脈が失われるにつれ、より多くを明示的に交渉せねばならなくなることを示すため。筆者はその変化を歓迎しつつ、代償も認めている）", ok:true}],
+ steps:[
+   {t:"例の構造を確認", d:"<b>70年前＝誰が家事をするか話し合わなかった（decisions were already made within the general culture）</b>／<b>現在＝ジェンダー平等の高まりで more communication and negotiation が必要</b>。"},
+   {t:"何の例かを特定", d:"直前：<em>Context no longer gives us a program for who should be doing the laundry.</em>＝<u>共有された文脈（context）が失われ、明示的に交渉する必要が生じた</u>。第8段落全体の主題（low-contextへの移行）の実例。"},
+   {t:"筆者の評価を読む", d:"<b>You can believe, as I do, that this is a really good change, but still recognize that it increases the potential areas where one could get into fights about.</b>＝<u>良い変化だと認めつつ、対立の余地が増えることも認める</u>。"},
+   {t:"選ぶ", d:"<b>『共有文脈が失われ明示的交渉が必要になることの例示。歓迎しつつ代償も認める』</b>＝4。<u>両面を含むのはこれだけ</u>。"}],
+ ev:{q:'Context no longer gives us a program for who should be doing the laundry. <span class="h">You can believe, as I do, that this is a really good change, but still recognize that it increases the potential areas where one could get into fights about.</span>', jp:"「文脈はもはや誰が洗濯をすべきかの指針を与えてくれない。私と同じく、これは本当に良い変化だと信じつつ、それが争いになりうる領域を増やすことも認められる」。"},
+ co:[{c:"nav",l:"歓迎＋代償の両面",h:"<b>as I do（私もそう信じる）</b>で<u>筆者自身が良い変化だと明言</u>。だが<u>but still recognize</u>で<em>対立の増加という代償も認める</em>。<b>懐古でも全面礼賛でもない</b>。"},
+     {c:"verm",l:"出題者が見ている力",h:"<b>筆者が価値判断を明示している箇所を見つけ、その両面性を保つ力</b>。<u>「対立が増える」という記述だけを見ると、変化を嘆いていると誤読する</u>。"}],
+ sol:[
+  {m:"x",n:"1",t:"<b>「不安定になった」という評価は本文にない</b>。筆者は<u>a really good change（本当に良い変化）</u>と述べている。増えるのは<em>交渉と対立の余地</em>であって、安定性の低下ではない。〈選びがちな人〉<b>get into fights という語からマイナス評価を読み取り、筆者の明示的な肯定を見落とした人</b>。"},
+  {m:"x",n:"2",t:"<b>筆者の立場と正反対</b>。<u>as I do, that this is a really good change</u>と明言しており、<em>過去への回帰を勧めてなどいない</em>。〈選びがちな人〉<b>「70年前は話し合う必要がなかった」を筆者の理想として読んだ人</b>。"},
+  {m:"x",n:"3",t:"<b>「対立の源を取り除いた」が逆</b>。本文は<u>it increases the potential areas where one could get into fights about（争いの余地を増やす）</u>と述べる。〈選びがちな人〉<b>「良い変化」という肯定だけを取り、but still recognize 以下を読まなかった人</b>。"},
+  {m:"o",n:"4",t:"正解。共有文脈の喪失→明示的交渉の必要、という例示であり、筆者は歓迎しつつ代償も認めている。"}]},
+
+/* ===== 発展4：対立が増える理由（合意の縮小） ===== */
+{id:"発展4", grp:"IJ", type:"論理の連鎖", lbl:"Original Q4", en:"（第6段落・第9段落）",
+ ask:"According to the author, what most directly explains why conflicts are becoming more common?（筆者によれば、対立がより頻繁になっている理由を最も直接的に説明するものはどれか）", answer:"1", kind:"choice",
+ choices:[
+  {t:"Shared assumptions about what may and may not be said are weakening, so fewer things can be taken for granted.（何を言ってよく何を言ってはいけないかについての共有された前提が弱まり、当然のこととして済ませられる事柄が減っているから）", ok:true},
+  {t:"People today hold a far wider range of opinions than their ancestors did, and opinions inevitably produce conflict.（今日の人々は祖先よりはるかに幅広い意見を持っており、意見は必然的に対立を生むから）", ok:false},
+  {t:"Societies have abandoned the rule of not discussing politics or religion, which was the only safeguard against argument.（社会は、議論に対する唯一の防波堤であった「政治と宗教を語らない」という規則を放棄したから）", ok:false},
+  {t:"High-context cultures have begun to imitate low-context ones, and imitation always produces misunderstanding.（high-contextな文化がlow-contextな文化を模倣し始め、模倣は常に誤解を生むから）", ok:false}],
+ steps:[
+   {t:"第6段落の因果を確認", d:"<b>even in Europe, people have developed cultural strategies to avoid too much argument, like the practice of not discussing politics or religion at the dinner table. But as such traditions fade, conflicts rise.</b>＝<u>対立を抑えていた共有の作法が薄れる→対立が増える</u>。"},
+   {t:"第9段落で一般化を確認", d:"<b>previously assumed rules about what can and cannot be said are looser and more fluid, and sometimes even disappear. With less context to guide our decisions, the number of things on which \"we all agree\" is shrinking fast.</b>＝<u>共有前提の縮小</u>。"},
+   {t:"因果の核を特定", d:"<b>対立の増加＝意見の多様さそのものではなく、『何を言ってよいか』の共有前提が失われたこと</b>が直接の理由。"},
+   {t:"選ぶ", d:"<b>『何を言ってよいかの共有前提が弱まり、当然視できる事柄が減った』</b>＝1。"}],
+ ev:{q:'as such traditions fade, conflicts rise. … <span class="h">previously assumed rules about what can and cannot be said are looser and more fluid, and sometimes even disappear</span>. With less context to guide our decisions, the number of things on which "we all agree" is shrinking fast.', jp:"「そうした伝統が薄れるにつれ対立が増える…何を言ってよく言ってはいけないかについて以前から想定されていたルールは緩く流動的になり、時には消えさえする。判断を導く文脈が減り、『みなが同意する』事柄の数は急速に縮んでいる」。"},
+ co:[{c:"nav",l:"対立の原因は「合意の縮小」",h:"<b>意見が違うこと自体が新しいのではない</b>。<u>違いを抑えていた暗黙の作法（context）が失われた</u>から表面化する。第6段落の『伝統が薄れる→対立が増える』が最も明快な根拠。"},
+     {c:"verm",l:"出題者が見ている力",h:"<b>「対立の増加」の原因を、意見の多様化ではなく共有前提の喪失に正しく帰する力</b>。<u>一見もっともらしい常識（多様化＝対立）に流されない</u>。"}],
+ sol:[
+  {m:"o",n:"1",t:"正解。第6段落（伝統が薄れる→対立が増える）と第9段落（言ってよいことのルールが緩む→合意が縮む）の両方に合致。"},
+  {m:"x",n:"2",t:"<b>「意見の幅」への言及は本文にない</b>。本文が述べるのは<u>意見を表明することが期待されるようになった</u>点（Everyone expects their opinion to be heard）であって、意見の種類が増えたとは述べていない。〈選びがちな人〉<b>diverse world という語から「意見が多様化した」と一般論で補った人</b>。"},
+  {m:"x",n:"3",t:"<b>「唯一の防波堤」が言い過ぎ</b>。本文は政治・宗教の話題回避を<u>like（〜のような）</u>と例示として挙げているにすぎず、<em>それが唯一の手段だとは述べていない</em>。〈選びがちな人〉<b>具体例を唯一の要因に格上げした人</b>。<u>本文の例示を限定に読み替える典型的な誤り</u>。"},
+  {m:"x",n:"4",t:"<b>「模倣」という枠組みは本文にない</b>。本文は<u>世界全体が商業と技術の同じ慣行に巻き込まれ、伝統が弱まる</u>と述べるのであって、一方が他方を真似ているとは言っていない。〈選びがちな人〉<b>high→lowの移行を「西洋化・模倣」と解釈した人</b>。"}]},
+
+/* ===== 発展5：オンラインがlow-contextである理由 ===== */
+{id:"発展5", grp:"IJ", type:"理由の特定", lbl:"Original Q5", en:"（第10段落）",
+ ask:"Why does the author regard online communication as low context?（筆者はなぜオンラインのコミュニケーションをlow-contextだと見なしているのか）", answer:"2", kind:"choice",
+ choices:[
+  {t:"Because users online are more hostile by nature than they are in face-to-face encounters.（オンラインの利用者は対面のときより本来的に敵対的だから）", ok:false},
+  {t:"Because the cues people normally rely on to read intentions — expression, movement, tone — are stripped away.（人が意図を読み取るのに普段頼っている手がかり、すなわち表情・動作・声の調子が取り除かれるから）", ok:true},
+  {t:"Because emojis have successfully replaced the information that facial expressions once carried.（絵文字が、かつて表情が担っていた情報の代替に成功したから）", ok:false},
+  {t:"Because online platforms were designed by engineers from low-context cultures such as the USA.（オンラインのプラットフォームが、アメリカのようなlow-context文化の技術者によって設計されたから）", ok:false}],
+ steps:[
+   {t:"人間の能力を確認", d:"<b>Humans have an ability to understand a person's intentions from their facial expressions, movements, and tone of voice.</b>＝<u>これらが意図を読む手がかり（＝context）</u>。"},
+   {t:"オンラインで何が起きるか", d:"<b>Online, that context is taken away.</b>「オンラインでは、その文脈が取り去られる」＝<u>手がかりの喪失</u>。"},
+   {t:"絵文字の扱いを確認", d:"<b>We get only a basic understanding of someone's intentions from text, even when the signal is enriched with emojis.</b>＝<u>絵文字で補強されても基本的な理解しか得られない</u>。<em>代替に成功してはいない</em>。"},
+   {t:"選ぶ", d:"<b>『意図を読むための手がかり（表情・動作・声の調子）が取り除かれるから』</b>＝2。"}],
+ ev:{q:'Humans have an ability to understand a person\'s intentions from their facial expressions, movements, and tone of voice. <span class="h">Online, that context is taken away.</span> … We get only a basic understanding of someone\'s intentions from text, even when the signal is enriched with emojis.', jp:"「人間は表情・動作・声の調子から相手の意図を理解する能力を持つ。オンラインでは、その文脈が取り去られる…絵文字で信号が豊かにされても、テキストからは基本的な理解しか得られない」。"},
+ co:[{c:"gold",l:"context＝意図を読む手がかり",h:"<b>high-context＝文脈が豊か／low-context＝文脈が乏しい</b>。<u>オンラインは表情・動作・声という文脈が剥ぎ取られる</u>ので、定義上 low-context になる。"},
+     {c:"verm",l:"出題者が見ている力",h:"<b>「low-context」という語を、本文の定義（文脈の多寡）に戻して適用する力</b>。<u>「ネットは荒れる」という印象論ではなく、定義から演繹する</u>。"}],
+ sol:[
+  {m:"x",n:"1",t:"<b>「本来的に敵対的」は本文にない</b>。第2段落は<u>意見が合わないときのほうがコメントしやすい</u>という仕組みを述べるが、それは<em>low-contextである理由の説明ではない</em>。〈選びがちな人〉<b>第1〜2段落の「ネットは争いを生む」という印象と、第10段落の定義的な説明を混同した人</b>。"},
+  {m:"o",n:"2",t:"正解。Online, that context is taken away.（表情・動作・声という文脈が取り去られる）が直接の根拠。"},
+  {m:"x",n:"3",t:"<b>本文は絵文字の効果を否定している</b>。<u>even when the signal is enriched with emojis（絵文字で豊かにされてさえ）only a basic understanding</u>＝<em>代替できていない</em>。〈選びがちな人〉<b>emojis という語を見て、譲歩の even when を読み落とした人</b>。<u>最も引っかかりやすい誤答</u>。"},
+  {m:"x",n:"4",t:"<b>設計者の出身文化への言及は本文にない</b>。本文は<u>Smartphone interfaces and online platforms are low context by design</u>と述べるが、これは<em>設計上そうなっているという意味</em>であって、設計者の文化的背景を論じてはいない。〈選びがちな人〉<b>by design を「誰が設計したか」の話だと読んだ人</b>。"}]},
+]);
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">8択から3つ</span>各文をタップすると○×と根拠が開きます。まず自分で3つ選んでから確認しよう。</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF'],['GH','qWrapGH','qidxGH'],['IJ','qWrapIJ','qidxIJ']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+
+</script>
+</body>
+</html>
