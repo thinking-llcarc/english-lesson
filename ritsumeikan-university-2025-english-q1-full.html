@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜立命館大学 2025 大問1（ジョン・ケージ／639年の演奏）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+
+
+/* 設問文：英文＋和訳 */
+.q-body .askjp .aen{display:block;font-size:13.5px;color:var(--ink);line-height:1.8;margin-bottom:9px;font-weight:500;}
+.q-body .askjp .ajp{display:block;font-size:13px;color:var(--ink);line-height:1.8;padding:9px 12px;background:var(--surface2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;}
+.q-body .askjp .ajp b{color:var(--gold-d);}
+/* 選択肢の和訳 */
+.ch .cjp{display:block;margin-top:5px;padding-top:5px;border-top:1px dashed var(--line2);font-size:12.5px;color:var(--muted);line-height:1.72;font-family:"Noto Sans JP",sans-serif;}
+.ch.reveal.correct .cjp{color:var(--teal-d);border-top-color:#bfe0d6;}
+.ch.reveal.wrong .cjp{color:#8d7b73;}
+.mi .st .cjp{display:block;margin-top:5px;padding-top:5px;border-top:1px dashed var(--line2);font-size:12.5px;color:var(--muted);line-height:1.72;font-family:"Noto Sans JP",sans-serif;}
+/* 全選択肢照合ブロックの構造化 */
+.ca-bd .cj{display:block;margin:6px 0 7px;padding:7px 11px;background:var(--surface2);border-radius:7px;font-size:12.5px;color:var(--navy);line-height:1.72;}
+.ca-bd .cj b{color:var(--gold-d);}
+.ca-bd .tag,.jd .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:4px;margin-right:7px;vertical-align:1px;white-space:nowrap;}
+.ca-bd .tag.g,.jd .tag.g{background:var(--teal-soft);color:var(--teal-d);}
+.ca-bd .tag.v,.jd .tag.v{background:var(--verm-soft);color:var(--verm-d);}
+.ca-bd .tag.n,.jd .tag.n{background:var(--blue-soft);color:var(--navy);}
+/* 解答プロセス：見出しの<b>だけブロック、本文中の<b>はインラインに */
+.dstep .db p b{display:inline;font-family:"Noto Sans JP",sans-serif;font-size:inherit;color:var(--navy-ink);margin:0;font-weight:700;}
+/* 責任の移動図 */
+.flow{margin:16px 0 8px;}
+.flow-row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:11px 0 11px 16px;border-left:3px solid var(--gold);border-bottom:1px dashed var(--line2);align-items:baseline;}
+.flow-row:last-child{border-bottom:0;}
+.flow-row .ph{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;}
+.flow-row .bd{font-size:13.5px;color:var(--ink);line-height:1.75;}
+@media (max-width:520px){
+  .q-body .askjp .aen{font-size:13px;}
+  .ch .cjp{font-size:12px;}
+  .flow-row{grid-template-columns:1fr;gap:3px;padding-left:12px;}
+}
+@media (prefers-color-scheme: dark){
+  .q-body .askjp .aen{color:var(--ink) !important;}
+  .q-body .askjp .ajp{background:var(--surface2) !important;color:var(--ink) !important;}
+  .ch .cjp,.mi .st .cjp{color:var(--muted) !important;}
+  .ch.reveal.correct .cjp{color:var(--teal-d) !important;}
+  .ch.reveal.wrong .cjp{color:#8d7b73 !important;}
+  .ca-bd .cj{background:var(--surface2) !important;color:var(--navy) !important;}
+  .ca-bd .tag.g,.jd .tag.g{background:var(--teal-soft) !important;color:var(--teal-d) !important;}
+  .ca-bd .tag.v,.jd .tag.v{background:var(--verm-soft) !important;color:var(--verm-d) !important;}
+  .ca-bd .tag.n,.jd .tag.n{background:var(--blue-soft) !important;color:var(--navy) !important;}
+  .dstep .db p b{color:var(--navy-ink) !important;}
+  .flow-row .ph{color:var(--navy) !important;}
+  .flow-row .bd{color:var(--ink) !important;}
+}
+
+
+/* 設問番号が〔2〕(3)のように長いので、2行で収まる形に */
+.q-no{font-family:"Noto Serif JP",serif !important;font-size:11.5px !important;line-height:1.3 !important;
+  width:46px !important;height:46px !important;flex-direction:column;letter-spacing:0;padding:0 2px;text-align:center;}
+/* ===== 咀嚼訳ブロック ===== */
+.chew{margin:10px 0 0;padding:14px 16px 13px;background:linear-gradient(180deg,#fdfaf3 0%,#faf6ec 100%);
+  border:1px solid #e8dcc0;border-left:4px solid var(--gold);border-radius:0 11px 11px 0;}
+.chew .cl{display:block;font-family:"Noto Serif JP",serif;font-size:11.5px;font-weight:700;letter-spacing:.1em;
+  color:var(--gold-d);margin-bottom:8px;}
+.chew .cl i{font-style:normal;font-weight:500;letter-spacing:.02em;color:var(--muted);margin-left:8px;font-size:11px;
+  font-family:"Noto Sans JP",sans-serif;}
+.chew p{margin:0;font-size:13.8px;line-height:2.0;color:var(--ink);font-family:"Noto Sans JP",sans-serif;}
+.chew p b{color:var(--navy-ink);font-weight:700;}
+.chew p u{text-decoration:none;border-bottom:2px solid #f0deb4;padding-bottom:1px;}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .chew{background:var(--surface2) !important;border-color:var(--line2) !important;
+    border-left-color:var(--gold) !important;}
+  :root:not([data-theme="light"]) .chew p{color:var(--ink) !important;}
+  :root:not([data-theme="light"]) .chew p b{color:var(--navy-ink) !important;}
+  :root:not([data-theme="light"]) .chew .cl{color:var(--gold-d) !important;}
+  :root:not([data-theme="light"]) .chew .cl i{color:var(--muted) !important;}
+}
+:root[data-theme="dark"] .chew{background:var(--surface2) !important;border-color:var(--line2) !important;}
+:root[data-theme="dark"] .chew p{color:var(--ink) !important;}
+/* 三択判定の凡例 */
+.v3{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px;}
+.v3 .v3i{flex:1 1 190px;padding:10px 12px;border-radius:10px;border:1px solid var(--line2);background:var(--surface2);}
+.v3 .v3i b{display:block;font-family:"Noto Serif JP",serif;font-size:13px;margin-bottom:4px;}
+.v3 .v3i span{display:block;font-size:12px;line-height:1.7;color:var(--muted);}
+.v3 .n1 b{color:var(--teal-d);} .v3 .n2 b{color:var(--verm-d);} .v3 .n3 b{color:var(--gold-d);}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .v3 .v3i{background:var(--surface2) !important;border-color:var(--line2) !important;}
+  :root:not([data-theme="light"]) .v3 .v3i span{color:var(--muted) !important;}
+}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">立</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>立命館大学 2025 ／ 大問1</span></div>
+    <div class="top-meta">639年かけて演奏される一曲（Nicholas Goldberg）<br>〔1〕〜〔3〕・全10問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>CORE</small>二択を超える</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>〔1〕</small>設問 A〜D</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>〔2〕</small>三択判定 5問</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>〔3〕</small>主題</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳＋咀嚼訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>二択を立てて、<br>二択を超える。<br>その形を読む文章。</h1>
+    <p>ジョン・ケージの曲を<u>639年かけて演奏している</u>という実話。<b>第2段落の最後で、筆者ははっきり二択を立てます</b>。<em>思慮深い実験なのか、馬鹿げた悪ふざけなのか</em>。<u>残りの段落は、すべてこの二択をめぐる材料です</u>。第6段落は悪ふざけ側の論拠（評論家スウェッドの批判）、第7段落は実験側の論拠（ケージは規則を破る人でもあった）。<b>そして第8段落で筆者が答えを出す――「悪ふざけだ。でも同時に挑戦でもある」</b>。<em>どちらか一方を選ぶのではなく、両方だと答えて二択を超える</em>。この形が見えていれば、〔1〕(D)と〔3〕は一瞬で決まります。</p>
+    <div class="thesis"><b>この文章の骨格：</b>①事実の提示――639年の演奏（第1〜4段落）。②<u>筆者の立場の前置き</u>――自分は前衛好きではない（第5段落）。③<b>反対側の論拠</b>――大ファンの評論家が強く苛立っている（第6段落）。④<b>その反対</b>――ケージは規則を破る人でもあった（第7段落）。⑤<u>着地</u>――スウェッドは正しい。それでも私は微笑む。これは時間のとらえ方への挑戦だ（第8段落）。</div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>段落構成</span></div>
+      <div class="stat"><b>10</b><span>設問数</span></div>
+      <div class="stat"><b>47</b><span>全訳の文数</span></div>
+      <div class="stat"><b>3</b><span>出てくる声の数</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">設問タイプと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:16%">設問</th><th style="width:22%">タイプ</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">〔1〕(A)</td><td>理由</td><td><b>That&apos;s because に飛びつく</b>。<u>第3段落第3文だけで決着する</u>。<em>探し回る必要がない</em>。</td></tr>
+      <tr><td class="cond">〔1〕(B)</td><td>理由・比較</td><td><b>(unlike a piano note) が何の軸で比べているか</b>を本動詞まで見る。<u>美しさではなく、音が止まるかどうか</u>。</td></tr>
+      <tr><td class="cond">〔1〕(C)</td><td>NOT問題</td><td><b>三つ潰して残りを取る</b>。<u>第6段落第5文に二つ、第6文に一つ</u>。<em>not only A but B を一つと数えると詰む</em>。</td></tr>
+      <tr><td class="cond">〔1〕(D)</td><td>筆者の主張</td><td><b>誰の声かを追う</b>。<u>筆者・スウェッド・「そう考える人々」の三者</u>。<em>設問は the author と限定している</em>。</td></tr>
+      <tr><td class="cond">〔2〕(1)(4)</td><td>三択判定／一致</td><td><b>語ではなく内容を照合する</b>。<u>29分＜1時間／vegetables＝food, toaster＝kitchen item</u>。</td></tr>
+      <tr><td class="cond">〔2〕(2)</td><td>三択判定／矛盾</td><td><b>prefer が好みを明示している</b>。<u>本文は traditional 側、設問文は experimental 側</u>。<em>だから2</em>。</td></tr>
+      <tr><td class="cond">〔2〕(3)(5)</td><td>三択判定／記述なし</td><td><b>本文の沈黙に耐える</b>。<u>(3)は職業から推論したくなる罠、(5)は近接情報を結びつけたくなる罠</u>。</td></tr>
+      <tr><td class="cond">〔3〕</td><td>主題・タイトル</td><td><b>Interpretations が複数形</b>であることが決定打。<u>解釈が三つ並ぶ、という構造そのものを指している</u>。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box verm" style="margin-top:20px;"><span class="lab">この文章で最も落としやすい一点</span>
+    <strong>第8段落第1文を読み飛ばさないこと</strong>。<u>I, of course, will accept Swed&apos;s opinion when he says that Cage would have disliked this idea.</u>（私はもちろん、ケージがこの着想を嫌っただろうというスウェッドの意見を受け入れる）。<em>第7段落が「ケージなら喜んだはずだ」で終わるので、その勢いのまま読むと筆者も同意見だと感じます</em>。<b>しかし筆者は、ケージ本人の評価についてはスウェッドに同意している</b>。<u>そのうえで別の理由で肯定する</u>。<em>この一文を落とすと〔1〕(D)で(1)を、〔3〕で(1)を選びます</em>。</div>
+
+  <div class="box gold" style="margin-top:16px;"><span class="lab">この解説について</span>
+    <strong>全10問、旺文社の解答・研究と照合済み</strong>です。<u>すべての選択肢に和訳を付けました</u>。<em>誤答にはすべて「なぜダメか」＋「どんな読み方をした人が選ぶか」</em>を記しています。<b>全訳パネルには、今回から「咀嚼訳」を併載</b>しました。<u>硬い訳語を一度すべて捨てて、中学生に話す言葉まで落とした訳</u>です。<em>和訳は読めたのに意味がつかめない、という状態を潰すためのものです</em>。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 8段落の流れと設問の在りか<span class="sub">「事実 → <b>二択の設定</b> → 事実 → 前置き → 反対側 → 反対の反対 → <b>二択を超える着地</b>」。<u>第2段落で立った問いが、第8段落で回収される</u>。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>事実</span></div><div class="para-b">
+      <div class="theme">「できるだけゆっくり」という指示</div><p>1987年、ケージが8ページの曲 <em>Organ2/ASLSP</em> を書いた。<b>指示は As Slow As Possible のみ</b>。<u>What&apos;s possible は解釈の余地があると明言</u>。実例は29分・71分・8時間。</p><div class="tags"><span class="utag">設問〔2〕(1)</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>問いの設定</span></div><div class="para-b">
+      <div class="theme">639年という宣言と、二択</div><p>ファンたちが専用オルガンを作り、<b>639年かけて演奏すると発表</b>。終了は2640年。<u>So what are we to make of this?</u> <em>思慮深い実験か、馬鹿げた悪ふざけか――ここで二択が立つ</em>。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>事実</span></div><div class="para-b">
+      <div class="theme">始まりの17か月は無音</div><p>2001年9月開始、<b>だが何も起こらなかった</b>。<u>理由は楽譜が休符で始まるから</u>。17か月後に最初の和音。以後24時間連続。<em>18年で変化はわずか12回</em>。</p><div class="tags"><span class="utag">設問〔1〕(A)</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>事実</span></div><div class="para-b">
+      <div class="theme">なぜオルガンなのか</div><p>次の変化は2月5日、518日鳴り続けたソのシャープが消える。<b>オルガンは（ピアノと違って）鍵盤を押し続ければ止まらない</b>。<u>押しているのは砂袋</u>。</p><div class="tags"><span class="utag">設問〔1〕(B)</span></div></div></div><div class="para"><div class="para-n"><b>5</b><span>前置き</span></div><div class="para-b">
+      <div class="theme">筆者は前衛好きではない</div><p><b>物語のある本・何が描いてあるか分かる芸術・明快なメロディー</b>を好む。<u>だが偏狭にならないよう努める</u>。<em>ケージは20世紀で最も革新的な一人</em>。両親の職業に言及。</p><div class="tags"><span class="utag">設問〔2〕(2)</span><span class="utag">設問〔2〕(3)</span></div></div></div><div class="para"><div class="para-n"><b>6</b><span>反対側</span></div><div class="para-b">
+      <div class="theme">大ファンの評論家が苛立っている</div><p>音楽評論家スウェッドは<b>大のケージ愛好家なのに強く苛立っている</b>。<u>ケージは演奏されるために書いた／これは演奏ではない／一人では弾けない（砂袋が奏者）／最初から最後まで聴けない／自我からの自由に反し、町の誇りと集客の話だ</u>。</p><div class="tags"><span class="utag">設問〔1〕(C)</span><span class="utag">設問〔2〕(5)</span></div></div></div><div class="para"><div class="para-n"><b>7</b><span>反対の反対</span></div><div class="para-b">
+      <div class="theme">ケージは規則を破る人でもあった</div><p><b>野菜・おもちゃ・ラジオ・トランプ・トースター</b>。環境音、雑音、沈黙、偶然、時間。<u>代表作 4&apos;33&quot; は4分33秒何も弾かない曲で、三つの楽章に分かれる</u>。<em>だから拍手しただろうと考える人がいても驚かない</em>。</p><div class="tags"><span class="utag">設問〔2〕(4)</span></div></div></div><div class="para"><div class="para-n"><b>8</b><span>着地</span></div><div class="para-b">
+      <div class="theme">悪ふざけだ。でも挑戦でもある</div><p><b>スウェッドの意見を受け入れる</b>。空虚なトリックだという指摘もそのとおり。<u>それでもこの演奏は私を微笑ませる</u>。<em>自分の一生の時間だけで考える鈍い癖への挑戦／世代・世紀・千年の単位／ゆっくり動くことの価値</em>。</p><div class="tags"><span class="utag">設問〔1〕(D)</span><span class="utag">設問〔3〕</span></div></div></div><div class="box navy"><span class="lab">構造を一枚で言うと</span>
+  <strong>第2段落で問いが立ち、第6段落と第7段落で正反対の材料が並び、第8段落で筆者が答える</strong>。<u>しかもその答えは「どちらか」ではなく「両方」</u>。<em>It&apos;s a prank, but it&apos;s also a challenge.</em> <b>二択を立てて、二択を超える</b>。これがこの文章の形です。<u>第6段落だけで止まると批判の文章に、第7段落だけで止まると擁護の文章に見える</u>。<em>最後まで読んで初めて形が見えるタイプ</em>。</div><div class="box verm"><span class="lab">読み飛ばしやすい三箇所</span>
+  <strong>第2段落第5文 Is it a thoughtful experiment ... or a ridiculous prank?</strong>｜<u>この文章の設計図</u>。<em>ここを飛ばすと、以降の段落が何のために並んでいるか分からなくなる</em>。<br>
+  <strong>第5段落第2文 I generally prefer my books to have stories ...</strong>｜<u>筆者のふだんの好み</u>。<em>〔2〕(2)の判定はここ一文で決まる</em>。<br>
+  <strong>第8段落第1文 I will accept Swed&apos;s opinion ...</strong>｜<u>筆者はケージ本人の評価については譲っている</u>。<em>〔1〕(D)と〔3〕の誤答はほぼここの読み落としが原因</em>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">二択を超えるへ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">The Core</div>
+  <h1 class="head">核心 ― 二択・三つの声・三択判定の一線<span class="sub">この三つを押さえれば、10問のうち8問は読む前に方針が決まります。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">核心①　二択を立てて、二択を超える</h2>
+  <div class="box gold"><span class="lab">第2段落の問い</span>
+    <strong>Is it a thoughtful experiment suiting the creative author of the work — or a ridiculous prank being played on his memory and on the rest of us?</strong><br>
+    <u>それは、この作品の創造的な作者にふさわしい思慮深い実験なのか――それとも、彼の記憶と私たち全員に対して仕掛けられた、馬鹿げた悪ふざけなのか。</u></div>
+  <div class="box teal" style="margin-top:12px;"><span class="lab">第8段落の答え</span>
+    <strong>It&apos;s a prank, but it&apos;s also a challenge to our dull human tendency to think only in terms of ... our own short existences.</strong><br>
+    <u>それは悪ふざけだが、同時に、自分の短い存在の時間だけで物事を考えてしまうという、私たちの鈍い人間的な傾向への挑戦でもある。</u></div>
+  <p style="margin:14px 0 0;font-size:14px;line-height:1.95;">
+  <b>注目すべきは but の位置です</b>。<u>筆者は「悪ふざけではない」とは一度も言っていません</u>。<em>悪ふざけであることを認めたうえで、「でもそれだけではない」と足している</em>。<br>
+  これは<b>二択を否定しているのではなく、二択の枠組みそのものを超えている</b>ということ。<u>選択肢を与えられたら、どちらかを選ばなければならないという思い込みを外す</u>。<em>〔3〕で Interpretations（複数形）が正解になるのは、この構造があるからです</em>。</p>
+
+  <h2 class="sec" style="margin-top:24px;">核心②　三つの声を混ぜない</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:22%">誰の声か</th><th style="width:26%">どこに出てくるか</th><th>何を言っているか</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">マーク・スウェッド<br><span style="font-size:11.5px;color:var(--muted)">音楽評論家・大のケージファン</span></td><td>第6段落 全体</td><td><b>これは演奏ではない。空虚なトリックだ</b>。<u>一人では弾けず（砂袋が奏者）、全部を聴ける客もいない</u>。<em>ケージの「自我からの自由」に反し、町の誇りと集客の話になっている</em>。</td></tr>
+      <tr><td class="cond">「そう考える人々」<br><span style="font-size:11.5px;color:var(--muted)">名前のない第三者</span></td><td>第7段落 最終文</td><td><b>ケージなら639年のコンサートに拍手を送っただろう</b>。<u>there are people who think ... という形で紹介されるだけ</u>。<em>筆者の主張ではない</em>。</td></tr>
+      <tr><td class="cond">筆者<br><span style="font-size:11.5px;color:var(--muted)">Nicholas Goldberg</span></td><td>第5段落・第8段落</td><td><b>ケージ本人の評価についてはスウェッドに同意</b>（嫌っただろう）。<u>それでもこの演奏は私を微笑ませる</u>。<em>これは時間のとらえ方への挑戦だ</em>。</td></tr>
+    </tbody>
+  </table>
+  <div class="box verm" style="margin-top:14px;"><span class="lab">ここを混ぜると落ちる</span>
+    <strong>第6段落の内容を筆者の主張だと思うと、〔1〕(D)で(2)を選びます</strong>。<u>purely artistic ではない、と言ったのはスウェッド</u>。<br>
+    <strong>第7段落最終文を筆者の主張だと思うと、〔1〕(D)で(1)を選びます</strong>。<u>「ケージは喜んだはず」と考えているのは第三者</u>。<em>筆者はむしろ逆の立場</em>。<br>
+    <strong>筆者とスウェッドが対立していると思うと、〔3〕で(1)を選びます</strong>。<u>第8段落第1文は I will accept Swed&apos;s opinion から始まる</u>。<em>対立ではなく、同意したうえでの上書き</em>。</div>
+
+  <h2 class="sec" style="margin-top:24px;">核心③　〔2〕の三択を分ける一線</h2>
+  <div class="v3">
+    <div class="v3i n1"><b>1 ― 一致する</b><span>本文にそう書いてある。または、本文の記述から確実に言える。<u>語が違っても、内容が同じなら1</u>。</span></div>
+    <div class="v3i n2"><b>2 ― 一致しない</b><span>本文に、それと<u>反対のことが書いてある</u>。<em>「書いてなさそう」ではなく「反対が書いてある」ときだけ</em>。</span></div>
+    <div class="v3i n3"><b>3 ― 判断しかねる</b><span>本文がその点に<u>触れていない</u>。賛成する材料も、反対する材料もない。</span></div>
+  </div>
+  <p style="margin:0 0 14px;font-size:14px;line-height:1.95;">
+  <b>この形式の勝負どころは、2と3の区別です</b>。<u>多くの受験生は、本文が触れていないことを常識や推論で埋めて、2だと断定してしまいます</u>。</p>
+  <div class="box navy"><span class="lab">迷ったときの一つの問い</span>
+    <strong>「この設問文を否定する一文が、本文のどこかにあるか」</strong><br>
+    <u>あれば2。なければ3</u>。<em>「なさそうだ」ではなく、「ない」ことを確認する</em>。<br><br>
+    今回でいえば――<br>
+    <b>〔2〕(2)</b>｜第5段落第2文 <u>I generally prefer my books to have stories ...</u> が設問文を真正面から否定している → <b>2</b>。<br>
+    <b>〔2〕(3)</b>｜ケージがどこで音楽を学んだかを述べた文は、本文に一つもない → <b>3</b>。<em>「両親が音楽家でない」は否定の根拠にならない</em>。<br>
+    <b>〔2〕(5)</b>｜スウェッドが演奏したか否かを述べた文も、本文に一つもない → <b>3</b>。<em>「評論家だから」は否定の根拠にならない</em>。</div>
+  <div class="box teal" style="margin-top:12px;"><span class="lab">(3)と(5)は、落ち方が違う</span>
+    <strong>(3)は「推論で埋めたくなる罠」</strong>｜<u>職業が音楽でない → 音楽を教えなかった</u>、という飛躍。<em>現実には音楽家でない親が子に音楽を教えることはいくらでもある</em>。<br>
+    <strong>(5)は「近接情報を結びつけたくなる罠」</strong>｜<u>スウェッドの段落の直後に 4&apos;33&quot; が出てくる</u>から、彼が演奏した曲の話に見える。<em>第7段落第6文の his はケージ</em>。<br>
+    <b>どちらも、本文が言っていないことを自分で作っている点は同じ</b>です。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問〔1〕へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問〔1〕 ― 内容説明 (A)〜(D)<span class="sub">本文の意味・内容にかかわる問い。<b>(A)(B)は根拠が一文で確定する取りたい問題</b>、<u>(C)はNOT問題、(D)は話者の区別</u>が問われます。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">このパートの攻め方</span>
+    <strong>(A)(B)は理由を問う問題で、どちらも本文に because が明示されています</strong>。<u>探し回らず、該当する一文だけで決める</u>。<br>
+    <strong>(C)はNOT問題</strong>。<u>「本文にある三つ」を潰して残りを取る</u>のが最短。<em>第6段落第5文に二つ入っていることに注意</em>。<br>
+    <strong>(D)は筆者の主張</strong>。<u>この文章には三つの声があるので、設問が指定した声だけを拾う</u>。</div>
+  <div class="qidx" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 核心</button><span class="sp"></span><button class="btnp" data-go="4">設問〔2〕へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問〔2〕 ― 三択判定 (1)〜(5)<span class="sub">一致＝1／一致しない＝2／<b>本文の内容からだけではどちらとも判断しかねる＝3</b>。<u>立命館の看板形式</u>で、2と3の区別が最難関です。</span></h1>
+  <div class="rule"></div>
+  <div class="v3">
+    <div class="v3i n1"><b>1 ― 一致する</b><span>本文にそう書いてある。または本文から確実に言える。<u>語が違っても内容が同じなら1</u>。</span></div>
+    <div class="v3i n2"><b>2 ― 一致しない</b><span>本文に<u>反対のことが書いてある</u>。<em>否定する一文を指させるときだけ</em>。</span></div>
+    <div class="v3i n3"><b>3 ― 判断しかねる</b><span>本文が<u>触れていない</u>。賛成も反対もできない。</span></div>
+  </div>
+  <div class="box verm"><span class="lab">今回の内訳と、落ちる順番</span>
+    <strong>1が二つ（(1)(4)）、2が一つ（(2)）、3が二つ（(3)(5)）</strong>。<u>難しいのは圧倒的に3の二問</u>です。<br>
+    <b>(3)</b>｜両親の職業は書いてあるが、音楽を教えたかは書いていない。<em>「音楽家でないから教えていない」と推論すると2を選ぶ</em>。<br>
+    <b>(5)</b>｜スウェッドは評論家。演奏したかは書いていない。<em>直後の段落に 4&apos;33&quot; があるので結びつけると1を選ぶ</em>。<br>
+    <u>どちらも「本文が黙っていること」を自分で埋めてしまう誤り</u>です。</div>
+  <div class="qidx" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問〔1〕</button><span class="sp"></span><button class="btnp" data-go="5">設問〔3〕へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問〔3〕 ― 主題の選択<span class="sub">本文の内容をもっともよく表しているものを五つから選ぶ。<b>話題が合うだけでは足りず、文章の「形」まで合うもの</b>を選びます。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">タイトル問題の二つの条件</span>
+    <strong>①対象が合っているか</strong>｜<u>この文章の対象は「639年かけて演奏されている一つの企画」</u>。<em>曲そのものの分析でも、作曲家の評伝でも、20世紀芸術史でもない</em>。<br>
+    <strong>②形が合っているか</strong>｜<u>一つの企画をめぐって、複数の解釈が並べられている</u>。<em>この「複数」を捉えた語が入っているかを見る</em>。</div>
+  <div class="qidx" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 設問〔2〕</button><span class="sp"></span><button class="btnp" data-go="6">全訳＋咀嚼訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳＋咀嚼訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全8段落・47文）。番号①②③…は各段落内の文の順番。<b>太字・下線</b>が設問に直結する箇所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">咀嚼訳とは</span>
+    <strong>和訳のすぐ下に、もう一段やさしくした訳を置きました</strong>。<u>前衛・解釈の余地・自我・先入観といった硬い言葉を一度すべて捨てて、中学生に話す言葉まで落としたもの</u>です。<br>
+    <em>和訳は書けたのに「で、どういうこと？」が残る</em>――その状態を潰すためのものです。<b>使う順番は、①英文だけで「つまり」を言ってみる　②和訳で内容を確認する　③咀嚼訳と比べて、自分の言葉が硬すぎないか見る</b>。<u>和訳を先に見ると、訳語をなぞるだけになります</u>。</div><div class="tr-sec"><b>第1段落</b>｜奇妙な指示　<span class="utag">〔2〕(1)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">1987年、前衛派の作曲家ジョン・ケージは、<em>Organ2/ASLSP</em> というキーボードのための曲を書いた。</div></div><div class="jpline"><div class="n">②</div><div class="s">楽譜は8ページある。</div></div><div class="jpline"><div class="n">③</div><div class="s">しかしケージは、この曲を演奏したい人のために、<b>変わった指示</b>を残した。「可能な限りゆっくりと」である。</div></div><div class="jpline"><div class="n">④</div><div class="s">何が「可能」なのかは、もちろん<u>解釈の余地がある</u>。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>ある演奏家は29分で、別の演奏家は71分で、また別の演奏家は8時間かけて演奏した。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>1987年、ジョン・ケージという作曲家が8ページの曲を書いた。そして楽譜に「<b>できるだけゆっくり</b>」とだけ書き残した。<u>どこまでゆっくりやるかは、演奏する人しだい</u>ということだ。実際、29分で終えた人もいれば、71分の人も、8時間かけた人もいた。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li>最終文の三つの数字が<b>設問〔2〕(1)</b>の判定根拠。<u>29分は1時間未満</u>なので、「1時間未満で演奏されたことがある」は<em>一致</em>。</li><li><b>open to interpretation</b>＝「解釈の余地がある」。<u>この一語が、639年という極端な演奏を可能にしている</u>。<em>ケージ自身が上限を決めなかった</em>。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜639年という宣言</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">しかし今――いや、正確には今ではなく21年前――<u>ケージファンの一団が、さらに先へ進むことに決めた</u>。</div></div><div class="jpline"><div class="n">②</div><div class="s">彼らは特別なオルガンを作り、それをドイツのハルバーシュタットという町のみすぼらしい古い教会に置き、<b>本当に、本当にゆっくりと</b> <em>Organ2/ASLSP</em> を演奏すると発表した――<b>639年もの歳月をかけて</b>である。</div></div><div class="jpline"><div class="n">③</div><div class="s">演奏は2640年に終了する予定だ。</div></div><div class="jpline"><div class="n">④</div><div class="s"><u>さて、私たちはこれをどう考えればいいのだろうか。</u></div></div><div class="jpline"><div class="n">⑤</div><div class="s"><b>それは、この作品の創造的な作者にふさわしい思慮深い実験なのか――それとも、彼の記憶と私たち全員に対して仕掛けられた、馬鹿げた悪ふざけなのか。</b></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>ところが21年前、ケージのファンたちがとんでもないことを思いついた。ドイツの古い教会に専用のオルガンを作り、<b>この曲を639年かけて演奏すると宣言した</b>のだ。終わるのは2640年。<u>これをどう受け取ればいいのか</u>。作者にふさわしい真剣な実験なのか、それともただのふざけた悪ふざけなのか。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li>最終文が<b>この文章の問いそのもの</b>。<u>thoughtful experiment か ridiculous prank か</u>という二択が立てられる。<em>この問いの答えは第8段落で出る</em>。</li><li><b>読み方の指針</b>｜<u>ここで二択が立った以上、残りの段落はこの二択をめぐる材料として読む</u>。<em>第6段落は prank 側の論拠、第7段落は experiment 側の論拠</em>。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜始まりの沈黙　<span class="utag">〔1〕(A)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">これまでの演奏について知っておくべきことは、以下のとおりだ。</div></div><div class="jpline"><div class="n">②</div><div class="s"><u>演奏は2001年9月に始まったが、何も起こらなかった。</u></div></div><div class="jpline"><div class="n">③</div><div class="s"><b>というのも、楽譜が休符――音がないことを示す音楽記号――で始まっているからである。</b></div></div><div class="jpline"><div class="n">④</div><div class="s"><em>17か月後に最初の和音が鳴り、それ以来コンサートは24時間体制で途切れることなく続いている。</em></div></div><div class="jpline"><div class="n">⑤</div><div class="s">私は2003年にこの話を初めて読み、興味をそそられると同時に面白がったが、その後18年間も忘れていた。</div></div><div class="jpline"><div class="n">⑥</div><div class="s">幸い、たいして見逃してはいなかった。</div></div><div class="jpline"><div class="n">⑦</div><div class="s"><u>それ以来、和音や音の変化はたった12回しか起きていない。</u></div></div><div class="jpline"><div class="n">⑧</div><div class="s"><b>演奏はまだ始まったばかりなのだ。</b></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>演奏は2001年9月に始まった。<b>ただし最初は何も鳴らなかった</b>。<u>楽譜の出だしが「休み」の記号だったから</u>だ。17か月後にようやく最初の和音が鳴り、そこから24時間ずっと鳴り続けている。筆者は2003年にこの話を知って面白がったが、その後18年間すっかり忘れていた。でも損はしていない。<u>18年のあいだに音が変わったのは、たった12回</u>。まだ始まったばかりなのだ。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li>第3文が<b>設問〔1〕(A)</b>の答えそのもの。<u>2001年に無音だったのは、楽譜が休符で始まっていたから</u>。<em>演奏者の意志でも、教会の事情でもない</em>。</li><li><b>a rest＝休符</b>（休憩ではない）。<u>直後に a musical symbol that indicates the absence of sound と説明が付いている</u>ので、知らなくても読める。</li><li>最終文 <b>The performance is just getting started.</b>｜<u>24年たってもまだ「始まったばかり」</u>。<em>639年という時間の桁が、この一文で体感できる</em>。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜なぜオルガンなのか　<span class="utag">〔1〕(B)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">次の変化は2月5日の土曜日、<u>ソのシャープの音が消えるときに起こる</u>。</div></div><div class="jpline"><div class="n">②</div><div class="s"><b>その音は518日間ずっと鳴らされ続けていたことになる。それが可能なのは、オルガンの音が（ピアノの音とは違って）鍵盤が押され続けているかぎり止まらずに鳴り続けられるからであり、この場合それは砂袋を使って行われている。</b></div></div><div class="jpline"><div class="n">③</div><div class="s">演奏の中には数か月鳴り続ける音や和音もあれば、1年以上、あるいはそれよりはるかに長く続くものもある。</div></div><div class="jpline"><div class="n">④</div><div class="s"><em>直近の変化は2020年9月で、それはほぼ7年ぶりのことだった。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>次に音が変わるのは2月5日。<u>ソのシャープの音が消える</u>。その音は<b>518日間ずっと鳴りっぱなし</b>だった。<u>オルガンは鍵盤を押し続ければ音が切れない。ピアノとはそこが違う</u>。ここでは砂袋を鍵盤に載せて、押しっぱなしにしている。数か月で変わる音もあれば、1年以上続く音もある。直前に音が変わったのは2020年9月で、それはほぼ7年ぶりだった。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li>第2文が<b>設問〔1〕(B)</b>の答え。<u>オルガンが選ばれた理由は「鍵盤を押し続けるかぎり音が止まらない」から</u>。<em>(unlike a piano note) という挿入が、他の楽器では無理だと示している</em>。</li><li><b>sandbags（砂袋）</b>が出てくるのはここ。<u>第6段落でスウェッドが &quot;sandbags are the current organist&quot; と皮肉を言う伏線</u>。</li></ul></div><div class="tr-sec"><b>第5段落</b>｜筆者は前衛好きではない　<span class="utag">〔2〕(2)(3)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私はふだん、前衛的なタイプの人間ではない。</div></div><div class="jpline"><div class="n">②</div><div class="s"><b>私はたいてい、本には物語があってほしいし、芸術は何が描かれているか分かるものであってほしいし、音楽には明快なメロディーがあってほしいと思っている。</b></div></div><div class="jpline"><div class="n">③</div><div class="s"><u>しかし、あまり偏狭にならないようにも努めている。</u></div></div><div class="jpline"><div class="n">④</div><div class="s">ジョン・ケージは、20世紀の音楽において最も革新的な人物の一人である。</div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>ロサンゼルスに生まれ（母は1930年代に新聞のコラムを書き、父は、驚くまでもなく、発明家だった）、彼は世界の音楽界に長く続く影響を与えてきた。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>筆者はもともと前衛好きではない。<u>本には物語がほしいし、絵は何が描いてあるか分かるほうがいいし、音楽にはメロディーがあってほしい</u>。それでも、頭を固くしないようにはしている。ケージは20世紀の音楽でいちばん新しいことをやった人の一人だ。ロサンゼルス生まれで、<b>母は新聞のコラムを書き、父は発明家だった</b>。そして世界の音楽に長く影響を与えてきた。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第5段落</div><ul><li>第2文が<b>設問〔2〕(2)</b>の判定根拠。<u>筆者は物語・具象・メロディーを好むと明言</u>。<em>「実験的な芸術のほうを好む」は矛盾＝2</em>。</li><li>第5文が<b>設問〔2〕(3)</b>の急所。<u>両親の職業は書かれている（母＝コラムニスト、父＝発明家）</u>が、<em>ケージに音楽を教えたかどうかは一言も書かれていない</em>。<b>よって「判断しかねる＝3」</b>。</li><li><b>この段落が置かれている理由</b>｜<u>筆者は前衛びいきではないと先に宣言している</u>。<em>そのうえで第8段落でこの演奏を肯定するから、説得力が出る</em>。</li></ul></div><div class="tr-sec"><b>第6段落</b>｜反対意見――スウェッド　<span class="utag">〔1〕(C)・〔2〕(5)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">私はハルバーシュタットの企画についてもっと知りたくなり、音楽評論家のマーク・スウェッドに電話した。彼はケージが1992年に亡くなる前から彼を知っており、ケージについて広範に書いてきた人物である。</div></div><div class="jpline"><div class="n">②</div><div class="s"><u>スウェッドは大のケージ愛好家なので、彼がこの639年のイベントに強く苛立っていると知って、私は興味をそそられた。</u></div></div><div class="jpline"><div class="n">③</div><div class="s"><b>スウェッドは言う。ケージは演奏されるために音楽を書いたのだ、と。</b></div></div><div class="jpline"><div class="n">④</div><div class="s"><b>そしてこれは本当の演奏ではない。</b></div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>一人の演奏家がこの曲を演奏できないだけでなく――現在のオルガン奏者は砂袋である――明白な理由から、この曲は聴衆が最初から最後まで聴くこともできない。</em></div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>さらにスウェッドが言うには、ケージは自我から自由になることを信条としていた――しかしこれは、ハルバーシュタットという町の誇りの話であり、注目を集め、観光客を呼び込むことの話なのだ。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>筆者はもっと知りたくなって、音楽評論家のマーク・スウェッドに電話した。<u>ケージ本人を知っていて、ケージについてたくさん書いてきた人</u>だ。大ファンのはずなのに、この639年の企画には強く腹を立てていた。理由はこうだ。<b>ケージは演奏されるために音楽を書いた。でもこれは演奏とは呼べない</b>。一人の演奏者が弾けないどころか、今「弾いて」いるのは砂袋だ。しかも最初から最後まで聴ける客がいない。さらに<u>ケージは「自分を手放すこと」を大事にしていたのに、この企画は町の自慢と、注目集めと、観光客集めの話になっている</u>。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第6段落</div><ul><li><b>設問〔1〕(C)</b>はこの段落から三つが拾える。<u>第5文＝(1)誰も全部は聴けない、(4)一人では演奏できない</u>。<u>第6文＝(3)ケージの中心的な価値観に反する</u>。<em>よって残る(2)が NOT a reason</em>。</li><li><b>sandbags are the current organist</b>｜<u>「今のオルガン奏者は砂袋だ」という皮肉</u>。<em>スウェッドは砂袋そのものを嫌っているのではなく、人が演奏していないことを問題にしている</em>。<b>ここを取り違えると(2)を正解に選べない</b>。</li><li>この段落は<b>スウェッドという評論家についての記述</b>。<u>彼が <em>4&apos;33&quot;</em> を演奏したかどうかは書かれていない</u>ので、<b>設問〔2〕(5)は「判断しかねる＝3」</b>。</li></ul></div><div class="tr-sec"><b>第7段落</b>｜反対の反対――ケージの別の顔　<span class="utag">〔2〕(4)</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">他方でもちろん、<u>ケージは規則を破り、先入観に挑むことも信条としていた</u>。</div></div><div class="jpline"><div class="n">②</div><div class="s"><b>彼は作品に野菜やおもちゃやラジオを使った。</b></div></div><div class="jpline"><div class="n">③</div><div class="s">トランプも。</div></div><div class="jpline"><div class="n">④</div><div class="s"><b>トースターも。</b></div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>環境音、雑音、沈黙、偶然、そして時間――こうしたものが彼のテーマの一つだった。</em></div></div><div class="jpline"><div class="n">⑥</div><div class="s">彼の最も有名な作品の一つが <em>4&apos;33&quot;</em> で、1952年のこの作品では、演奏者が舞台に現れ、4分33秒のあいだまったく何も演奏せず、そして舞台を降りる。</div></div><div class="jpline"><div class="n">⑦</div><div class="s">その曲は三つの楽章に分かれている。</div></div><div class="jpline"><div class="n">⑧</div><div class="s"><u>だから、639年のコンサートならケージは拍手を送っただろうと考える人々がいるのも、まったく驚くことではない。</u></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>とはいえ、<b>ケージは規則を破り、思い込みをひっくり返すのも好きだった</b>。作品に野菜やおもちゃやラジオを使った。トランプも。トースターも。周りの音、雑音、沈黙、偶然、時間。そういうものが彼のテーマだった。代表作の『4分33秒』は、<u>演奏者が舞台に出てきて4分33秒まったく何も弾かずに引っ込むだけの曲</u>だ。しかもご丁寧に三つの楽章に分かれている。だから「ケージなら639年のコンサートを喜んだはずだ」と考える人がいても、まあ驚くことではない。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第7段落</div><ul><li>第2文と第4文が<b>設問〔2〕(4)</b>の根拠。<u>vegetables（野菜）＝food、a toaster（トースター）＝kitchen item</u>。<em>二文を合わせて「台所用品と食べ物を使った」が成立する＝1</em>。</li><li><b>この段落の役割</b>｜<u>第6段落（prank 説）への反論</u>。<em>ケージには「演奏されるために書く」人という面と、「規則を破る」人という面の両方があった</em>。<b>だから二択はそう簡単に決まらない</b>。</li><li><b>Playing cards. A toaster.</b> のような体言止めの連続は、<u>ケージが使った素材を畳みかけて見せる書き方</u>。<em>一文ずつが短いほど、雑多さが伝わる</em>。</li></ul></div><div class="tr-sec"><b>第8段落</b>｜筆者の着地　<span class="utag">〔1〕(D)・〔3〕</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><u>私はもちろん、ケージがこの着想を嫌っただろうというスウェッドの意見を受け入れる。</u></div></div><div class="jpline"><div class="n">②</div><div class="s">スウェッドはそれを中身のない仕掛けだと呼ぶが、もちろんそのとおりである。</div></div><div class="jpline"><div class="n">③</div><div class="s"><b>しかしどうしようもない――この演奏は私を微笑ませるのだ。</b></div></div><div class="jpline"><div class="n">④</div><div class="s"><b>それは悪ふざけだが、同時に、自分自身の人生が刻一刻と過ぎていくこと、日々が空しく過ぎること、自分の短い存在の時間と分だけで物事を考えてしまうという、私たちの鈍い人間的な傾向への挑戦でもある。</b></div></div><div class="jpline"><div class="n">⑤</div><div class="s"><em>私が死んで何百年たってもハルバーシュタットで <em>Organ2/ASLSP</em> がまだ鳴っているかもしれないということは――オルガンが存続し、資金が続くと仮定しての話だが――ときには世代や世紀や千年という単位で考える必要があることを思い出させてくれる。</em></div></div><div class="jpline"><div class="n">⑥</div><div class="s"><em>そしてそれは、忙しく、刺激が多すぎ、過度に加速したこの世界を、ゆっくりと、ごくゆっくりと進むことにも価値があると思い出させてくれるのだ。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>筆者はスウェッドの意見を認める。<u>ケージはこれを嫌っただろう</u>。中身のない仕掛けだという指摘も、確かにそのとおりだ。<b>それでも筆者は、この演奏を思うとつい笑ってしまう</b>。確かに悪ふざけだ。でも同時に、<u>私たちへの挑戦でもある</u>。人はつい、自分の一生の時間だけで物事を考えてしまう。あと何日、あと何時間、という具合に。この曲は、筆者が死んで何百年たってもまだ鳴っているかもしれない。オルガンが壊れず、お金が続けばの話だが。<b>それは「世代や世紀や千年という単位でも考えてみろ」と言われているようなもの</b>だ。そして、忙しく刺激が多すぎて何もかもが速すぎるこの世界で、<u>ゆっくり動くことにも意味がある</u>と思い出させてくれる。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第8段落</div><ul><li>第4〜6文が<b>設問〔1〕(D)</b>の根拠。<u>時間のとらえ方への挑戦／世代・世紀・千年の単位／ゆっくり動くことの価値</u>。<em>三文とも「時間」の話</em>。</li><li><b>第2段落の二択に答えている段落</b>｜<u>It&apos;s a prank, <b>but</b> it&apos;s also a challenge</u>。<em>「悪ふざけか実験か」ではなく「悪ふざけであり、かつ挑戦でもある」</em>。<b>二択を立てて、二択を超える</b>。</li><li>段落全体が<b>設問〔3〕</b>の根拠。<u>一つの風変わりな演奏をめぐって、複数の解釈が並べられている</u>。<em>Interpretations of an unusual musical performance</em>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 設問〔3〕</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 次に同じ形の文章が出たときのために<span class="sub">この一題から持ち帰るべきものを、five points に絞りました。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:18%">設問</th><th style="width:14%">解答</th><th>決め手となる一文</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">〔1〕(A)</td><td><b>2</b></td><td>第3段落第3文｜<u>the score opens with a rest</u></td></tr>
+      <tr><td class="cond">〔1〕(B)</td><td><b>2</b></td><td>第4段落第2文｜<u>can sound without stopping as long as the key is continually pressed</u></td></tr>
+      <tr><td class="cond">〔1〕(C)</td><td><b>2</b></td><td>第6段落第5文に(1)(4)、第6文に(3)｜<u>残る(2)が理由として書かれていない</u></td></tr>
+      <tr><td class="cond">〔1〕(D)</td><td><b>3</b></td><td>第8段落第4〜6文｜<u>三文すべてが「時間」の話</u></td></tr>
+      <tr><td class="cond">〔2〕(1)</td><td><b>1</b></td><td>第1段落最終文｜<u>29 minutes</u>（1時間未満の実例）</td></tr>
+      <tr><td class="cond">〔2〕(2)</td><td><b>2</b></td><td>第5段落第2文｜<u>I generally prefer ... stories / recognizable / clear melody</u></td></tr>
+      <tr><td class="cond">〔2〕(3)</td><td><b>3</b></td><td>第5段落第5文｜<u>両親の職業のみ。教えたかどうかの記述なし</u></td></tr>
+      <tr><td class="cond">〔2〕(4)</td><td><b>1</b></td><td>第7段落第2文・第4文｜<u>vegetables＝food, a toaster＝kitchen item</u></td></tr>
+      <tr><td class="cond">〔2〕(5)</td><td><b>3</b></td><td>第6段落｜<u>評論家であることは書かれているが、演奏したかの記述なし</u></td></tr>
+      <tr><td class="cond">〔3〕</td><td><b>3</b></td><td>全体｜<u>一つの企画をめぐって、解釈が三つ並ぶ</u></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec" style="margin-top:26px;">持ち帰る五つ</h2>
+  <div class="box navy"><span class="lab">1 ― 二択が立ったら、答えは第三の形かもしれない</span>
+    <strong>A か B か、と問われたら「両方」「どちらでもない」も答えの候補に入れる</strong>。<u>この文章は It&apos;s a prank, but it&apos;s also a challenge と答えた</u>。<em>選択肢を与えられたら選ばなければならない、というのは読み手の思い込み</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">2 ― 段落が変わったら、話者を取り直す</span>
+    <strong>says / according to / there are people who think に印を付けながら読む</strong>。<u>この文章には筆者・スウェッド・第三者の三つの声がある</u>。<em>〔1〕(D)と〔3〕は、この区別だけで決まる</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">3 ― 「書いていない」と「反対が書いてある」を分ける</span>
+    <strong>否定する一文を指させるなら2、指させないなら3</strong>。<u>「なさそうだ」で2を選ばない</u>。<em>常識・推論・近接情報で空白を埋めた瞬間に落ちる</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">4 ― 内容一致は、語ではなく内容を照合する</span>
+    <strong>vegetables は food、a toaster は kitchen item</strong>。<u>設問文の語が本文になくても、包含関係が成り立てば一致</u>。<em>逆に、本文にある語が入っているだけの選択肢は一致ではない（〔1〕(C)の sandbags）</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">5 ― タイトル問題は、単数か複数かを見る</span>
+    <strong>Interpretations という複数形が、この文章の形をそのまま示していた</strong>。<u>解釈が三つ並ぶ構造</u>。<em>目立つ一文や、印象に残った場面で選ばない</em>。</div>
+
+  <h2 class="sec" style="margin-top:26px;">この文章を一言で</h2>
+  <div class="box gold"><span class="lab">THINKING の答案</span>
+    <strong>639年かけて一曲を演奏するという企画を、三つの解釈を並べて検討した文章</strong>。<u>評論家は「演奏ではない、空虚なトリックだ」と断じ、一部の人々は「ケージなら喜んだはずだ」と考える</u>。<em>筆者は前者に同意したうえで、それでも微笑むと言う</em>。<b>理由は、この企画が「自分の一生ぶんの時間でしか物事を考えられない」という私たちの癖を揺さぶるからだ</b>。<u>悪ふざけであることと、価値があることは両立する</u>。</div>
+
+  <div class="pnav"><button class="btns" data-go="6">← 全訳＋咀嚼訳</button><span class="sp"></span><button class="btnp" data-go="0">攻略に戻る ↑</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">THINKING</div>
+  <div class="fmeta">学部別・逆転合格設計塾 THINKING ／ 受験は根性じゃなく、設計。<br>
+  本資料は立命館大学2025年度英語（大問1）の学習用教材です。英文・設問の著作権は出題者・原著者に帰属します。訳・解説はTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump" id="jumpTop">▲</button>
+
+<script>
+const Q=[
+
+/* ===================== 〔1〕内容説明 (A)〜(D) ===================== */
+{
+id:"〔1〕(A)", grp:"AB", type:"内容説明・因果", rate:72,
+lbl:"理由を問う", en:"nothing happened の原因を、直後の because から一文で確定する",
+ask:'<span class="aen">Why was the Halberstadt concert silent in 2001?</span><span class="ajp">ハルバーシュタットのコンサートは、なぜ2001年に無音だったのか。</span>',
+kind:"choice", answer:"2",
+choices:[
+ {t:'The performers chose to remain quiet as a prank.<span class="cjp">演奏者たちが悪ふざけとして黙っていることを選んだから。</span>'},
+ {t:'The score required the performers not to play anything.<span class="cjp">楽譜が演奏者たちに何も演奏しないことを求めていたから。</span>', ok:true},
+ {t:'The church needed repairs, delaying the start of the concert.<span class="cjp">教会に修理が必要で、コンサートの開始が遅れたから。</span>'},
+ {t:'The organizers could not find enough volunteers to perform it.<span class="cjp">主催者が演奏するのに十分な志願者を見つけられなかったから。</span>'}],
+steps:[
+ {t:"設問の語を本文で探す", d:"silent と 2001 を手がかりに第3段落へ。第2文に <b>It began in September 2001, but nothing happened.</b>（2001年9月に始まったが、何も起こらなかった）がある。設問の silent はこの nothing happened の言い換え。", cite:"第3段落 第2文"},
+ {t:"直後の That&apos;s because に飛びつく", d:"理由を問われたら、<b>その事実を述べた文の直後</b>を見るのが最短。ここでは第3文が丸ごと理由になっている。<u>探し回る必要はない</u>。", cite:"第3段落 第3文"},
+ {t:"a rest の意味を本文内で確定する", d:"<b>a rest</b> は「休憩」ではなく「休符」。知らなくても困らない。<u>直後に a musical symbol that indicates the absence of sound（音がないことを示す音楽記号）と同格で説明が付いている</u>。本文が語義を与えてくれている。", cite:"第3段落 第3文"},
+ {t:"言い換えた選択肢を選ぶ", d:"「楽譜が休符で始まる」＝<b>楽譜が演奏者に何も弾かないことを要求していた</b>。これが(2)。<em>the score が主語である点まで一致している</em>。"}],
+ev:{q:"That&apos;s because <b>the score opens with a rest</b>, a musical symbol that indicates the absence of sound.",
+ jp:"というのも、<b>楽譜が休符――音がないことを示す音楽記号――で始まっている</b>からである。"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">語の流用</span>The performers chose to remain quiet as a prank.<span class="cj">演奏者たちが悪ふざけとして黙っていることを選んだから。</span>無音を選んだのは<b>演奏者ではなく楽譜</b>。prank という語は第2段落（a ridiculous prank）と第8段落に出るが、<u>それは企画全体への評価であって、2001年の無音の理由ではない</u>。'},
+ {m:"o", n:"2", t:'<span class="tag g">正解</span>The score required the performers not to play anything.<span class="cj">楽譜が演奏者たちに何も演奏しないことを求めていたから。</span>第3段落第3文の <b>the score opens with a rest</b> をそのまま言い換えている。<em>主語が the score である点も一致</em>。'},
+ {m:"x", n:"3", t:'<span class="tag v">描写からの推測</span>The church needed repairs, delaying the start of the concert.<span class="cj">教会に修理が必要で、コンサートの開始が遅れたから。</span>第2段落に <b>a shabby old church</b>（みすぼらしい古い教会）とあるのは事実だが、<u>修理が必要だったとも、それで開始が遅れたとも書かれていない</u>。描写に推測を足している。'},
+ {m:"x", n:"4", t:'<span class="tag v">因果の取り違え</span>The organizers could not find enough volunteers to perform it.<span class="cj">主催者が演奏するのに十分な志願者を見つけられなかったから。</span>砂袋（sandbags）の存在から「人手不足だったのだろう」と結ぶ読み。<b>砂袋は人手不足の結果ではなく、鍵盤を押し続けるための手段</b>（第4段落第2文）。<em>しかも2001年の無音とは無関係</em>。'}],
+co:[
+ {c:"verm", l:"〈1を選びがちな人〉本文全体の気配で答えてしまう人", h:"第2段落の <b>ridiculous prank</b> が印象に残り、「この文章は悪ふざけの話だ」という全体像から理由を作ってしまう。<u>設問が聞いているのは2001年の一時点の理由</u>であって、企画全体の評価ではない。"},
+ {c:"verm", l:"〈3を選びがちな人〉形容詞から物語を作ってしまう人", h:"shabby old church という二語から「古い＝修理が必要」という常識を補って読む。<b>本文に書いていないことは、どれだけ自然に思えても根拠にならない</b>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>理由を述べる文がどこにあるかを即座に特定する力</b>。英語の説明文では、事実を述べた直後に That&apos;s because / This is because が置かれることが多い。<u>この型を知っていれば、本文全体を読み返さずに一文で決着する</u>。"}]
+},
+
+{
+id:"〔1〕(B)", grp:"AB", type:"内容説明・因果", rate:64,
+lbl:"比較の軸", en:"(unlike a piano note) が何を比較しているのかを読み違えない",
+ask:'<span class="aen">Why is the organ the most suitable instrument for the Halberstadt performance?</span><span class="ajp">ハルバーシュタットの演奏にとって、なぜオルガンが最も適した楽器なのか。</span>',
+kind:"choice", answer:"2",
+choices:[
+ {t:'It fits the work&apos;s religious theme.<span class="cjp">その作品の宗教的な主題に合っているから。</span>'},
+ {t:'Its notes can last as long as necessary.<span class="cjp">その音は必要なだけ長く持続できるから。</span>', ok:true},
+ {t:'The church already had an excellent organ available.<span class="cjp">その教会にはすでに優れたオルガンが備わっていたから。</span>'},
+ {t:'Cage considered its sound to be more beautiful than that of the piano.<span class="cjp">ケージはその音がピアノの音より美しいと考えていたから。</span>'}],
+steps:[
+ {t:"「オルガンでなければ困ること」を考える", d:"639年かけるなら、<b>一つの音を何か月も鳴らし続けなければならない</b>。設問に答える前に、この条件を自分で立てておくと選択肢が一瞬で絞れる。"},
+ {t:"第4段落第2文の because を見る", d:"<b>which is possible because an organ note (unlike a piano note) can sound without stopping as long as the key is continually pressed</b>。<u>ここだけが楽器の性質を説明している箇所</u>。", cite:"第4段落 第2文"},
+ {t:"挿入の役割を取り違えない", d:"<b>(unlike a piano note)</b> が比べているのは<u>音が止まるか止まらないか</u>であって、<em>音の美しさではない</em>。括弧の中の比較が何の軸でなされているかを、必ず本動詞まで見て確認する。", cite:"第4段落 第2文"},
+ {t:"言い換える", d:"「鍵盤を押し続けるかぎり止まらずに鳴る」＝<b>必要なだけ長く音を持続できる</b>。これが(2)。"}],
+ev:{q:"It will have been played steadily for 518 days, which is possible because <b>an organ note (unlike a piano note) can sound without stopping as long as the key is continually pressed</b>, which in this case is done using sandbags.",
+ jp:"その音は518日間ずっと鳴らされ続けていたことになる。それが可能なのは、<b>オルガンの音が（ピアノの音とは違って）鍵盤が押され続けているかぎり止まらずに鳴り続けられる</b>からであり、この場合それは砂袋を使って行われている。"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">場所と主題の混同</span>It fits the work&apos;s religious theme.<span class="cj">その作品の宗教的な主題に合っているから。</span>演奏場所が教会だというだけで、<u>この曲に宗教的な主題があるとは本文のどこにも書かれていない</u>。<b>場所の宗教性を、作品の主題にすり替えている</b>。'},
+ {m:"o", n:"2", t:'<span class="tag g">正解</span>Its notes can last as long as necessary.<span class="cj">その音は必要なだけ長く持続できるから。</span>第4段落第2文 <b>can sound without stopping as long as the key is continually pressed</b> の言い換え。<em>639年という企画が成立する唯一の技術的条件</em>。'},
+ {m:"x", n:"3", t:'<span class="tag v">本文と矛盾</span>The church already had an excellent organ available.<span class="cj">その教会にはすでに優れたオルガンが備わっていたから。</span>第2段落第2文に <b>they built a special organ</b>（彼らは特別なオルガンを作った）とある。<u>備わっていたのではなく、わざわざ作った</u>。「古い教会にはオルガンがあるものだ」という常識を本文より優先した読み。'},
+ {m:"x", n:"4", t:'<span class="tag v">比較の軸のすり替え</span>Cage considered its sound to be more beautiful than that of the piano.<span class="cj">ケージはその音がピアノの音より美しいと考えていたから。</span><b>(unlike a piano note) という挿入だけを拾って「ピアノと比べている＝ピアノより良い」と読んでいる</b>。<u>比べているのは美しさではなく、音が止まるかどうか</u>。さらに、ケージがそう考えたという記述もない。'}],
+co:[
+ {c:"verm", l:"〈4を選びがちな人〉括弧の中だけで判断する人", h:"<b>(unlike a piano note)</b> を見た瞬間に「ピアノとの比較だ」と反応し、比較の軸を確認せずに選ぶ。<u>比較表現を見たら、何を基準に比べているのかを本動詞まで追う</u>。ここでは can sound without stopping が基準。"},
+ {c:"verm", l:"〈3を選びがちな人〉常識で本文を上書きする人", h:"「教会＝オルガンがある」は現実としては正しい。<b>だが本文は they built a special organ とはっきり書いている</b>。<u>常識と本文が食い違ったら、必ず本文が勝つ</u>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>挿入・括弧を正しく処理する力</b>。英文の括弧は補足であって主張ではない。<u>括弧を一度外して文の骨格を読み、それから括弧を戻す</u>。この順番を守れるかが問われている。"}]
+},
+
+{
+id:"〔1〕(C)", grp:"AB", type:"NOT問題・理由の照合", rate:41,
+lbl:"語の一致 ≠ 内容の一致", en:"sandbags という語の存在と、その語が果たす役割を区別する",
+ask:'<span class="aen">What is NOT a reason why Mark Swed dislikes the Halberstadt performance?</span><span class="ajp">マーク・スウェッドがハルバーシュタットの演奏を嫌う理由として、当てはまらないものはどれか。</span>',
+kind:"choice", answer:"2",
+choices:[
+ {t:'No one can hear the whole thing.<span class="cjp">誰もその全体を聴くことができない。</span>'},
+ {t:'Cage preferred to avoid using sandbags.<span class="cjp">ケージは砂袋を使うのを避けたがっていた。</span>', ok:true},
+ {t:'It goes against one of Cage&apos;s central values.<span class="cjp">それはケージの中心的な価値観の一つに反している。</span>'},
+ {t:'A single person cannot perform the piece this way.<span class="cjp">このやり方では一人の人間がその曲を演奏できない。</span>'}],
+steps:[
+ {t:"NOT問題の構造を確認する", d:"<b>三つは本文にあり、一つだけがない</b>。だから「正解を探す」のではなく、<u>本文にあるものを三つ潰して、残りを答えにする</u>。これが最も速く、最も安全。"},
+ {t:"第6段落第5文で二つ潰す", d:"<b>Not only can no single performer play the piece ... but the piece can&apos;t be heard by an audience from beginning to end</b>。not only A but B の形で、<u>(4)と(1)が一文の中に同時に入っている</u>。", cite:"第6段落 第5文"},
+ {t:"第6段落第6文で三つめを潰す", d:"<b>Cage believed in freeing yourself from ego — but this is all about the pride of the town</b>。ケージの信条（＝中心的な価値観）に反している、が(3)。", cite:"第6段落 第6文"},
+ {t:"残った(2)を本文で検証する", d:"sandbags は第4段落第2文と第6段落第5文に出てくる。<u>だがどちらも「ケージが避けたがった」ではない</u>。第4段落は鍵盤を押す手段として、第6段落は <b>sandbags are the current organist</b> という皮肉として出ている。<em>よって(2)が答え</em>。", cite:"第4段落 第2文／第6段落 第5文"}],
+ev:{q:"<b>Not only can no single performer play the piece — sandbags are the current organist — but the piece can&apos;t be heard by an audience from beginning to end</b>, for obvious reasons. What&apos;s more, Swed says, <b>Cage believed in freeing yourself from ego</b> — but this is all about the pride of the town of Halberstadt.",
+ jp:"<b>一人の演奏家がこの曲を演奏できないだけでなく――現在のオルガン奏者は砂袋である――明白な理由から、この曲は聴衆が最初から最後まで聴くこともできない。</b>さらにスウェッドが言うには、<b>ケージは自我から自由になることを信条としていた</b>――しかしこれは、ハルバーシュタットという町の誇りの話なのだ。"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag n">理由として本文にある</span>No one can hear the whole thing.<span class="cj">誰もその全体を聴くことができない。</span>第6段落第5文後半 <b>the piece can&apos;t be heard by an audience from beginning to end</b> に一致。<u>スウェッドが挙げた理由の一つ</u>なので、NOTの答えにはならない。'},
+ {m:"o", n:"2", t:'<span class="tag g">正解＝理由として書かれていない</span>Cage preferred to avoid using sandbags.<span class="cj">ケージは砂袋を使うのを避けたがっていた。</span>sandbags は本文に二度出るが、<b>いずれも「ケージが避けたがった」という記述ではない</b>。第4段落では鍵盤を押し続ける手段として、第6段落では <b>sandbags are the current organist</b>（現在のオルガン奏者は砂袋だ）という皮肉として出てくる。<u>スウェッドが嫌っているのは砂袋そのものではなく、人が演奏していないこと</u>。'},
+ {m:"x", n:"3", t:'<span class="tag n">理由として本文にある</span>It goes against one of Cage&apos;s central values.<span class="cj">それはケージの中心的な価値観の一つに反している。</span>第6段落第6文 <b>Cage believed in freeing yourself from ego — but this is all about the pride of the town</b> に一致。believed in＝信条としていた、が central values の言い換え。'},
+ {m:"x", n:"4", t:'<span class="tag n">理由として本文にある</span>A single person cannot perform the piece this way.<span class="cj">このやり方では一人の人間がその曲を演奏できない。</span>第6段落第5文前半 <b>no single performer play the piece</b> に一致。single performer がそのまま a single person に対応している。'}],
+co:[
+ {c:"verm", l:"〈2を消してしまう人〉本文にある単語を見ると安心する人", h:"(2)には <b>sandbags</b> という、本文に確かに出てくる語が入っている。<u>そのため「本文にあるから正しい記述だ」と判断して消してしまう</u>。だがNOT問題が問うているのは語の有無ではなく、<b>「スウェッドが嫌う理由として」書かれているか</b>。<em>語の一致と、内容の一致は別物</em>。"},
+ {c:"verm", l:"〈皮肉を字義どおり取る人〉", h:"<b>sandbags are the current organist</b> を「スウェッドは砂袋を問題にしている」と読む。<u>これは「今このオルガンを弾いているのは砂袋だ」という皮肉</u>で、言いたいのは<b>人間が演奏していない</b>ということ。砂袋はその不在を示すための道具にすぎない。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>一文の中に理由が二つ入っていることに気づけるか</b>。第6段落第5文は not only A but B の形で、(4)と(1)を同時に含んでいる。<u>ここを一つしか拾えないと、残りが二つになって決められなくなる</u>。not only ... but ... を見たら、必ず二つ数える。"}]
+},
+
+{
+id:"〔1〕(D)", grp:"AB", type:"筆者の主張・話者の区別", rate:55,
+lbl:"誰の声か", en:"筆者・スウェッド・「そう考える人々」の三つの声を混ぜない",
+ask:'<span class="aen">What does the author claim about the Halberstadt performance?</span><span class="ajp">筆者はハルバーシュタットの演奏について何を主張しているか。</span>',
+kind:"choice", answer:"3",
+choices:[
+ {t:'Cage would have enjoyed it.<span class="cjp">ケージはそれを楽しんだだろう。</span>'},
+ {t:'Its goal is a purely artistic one.<span class="cjp">その目的は純粋に芸術的なものである。</span>'},
+ {t:'It makes us think about time in a different way.<span class="cjp">それは私たちに、時間について異なる考え方をさせる。</span>', ok:true},
+ {t:'It is not worth discussing because it is certain to end soon.<span class="cjp">まもなく終わるのが確実なので、論じる価値がない。</span>'}],
+steps:[
+ {t:"設問の主語を確認する", d:"<b>the author</b> と限定されている。この文章には<u>筆者・スウェッド・「拍手しただろうと考える人々」の三つの声</u>が出てくる。<em>設問が指定した声だけを拾う</em>。"},
+ {t:"筆者が自分の言葉で語る段落を探す", d:"第8段落。<b>I can&apos;t help it — this performance makes me smile.</b> から筆者本人の主張が始まる。<u>第6段落はスウェッドの発言、第7段落最終文は第三者の考えの紹介</u>。", cite:"第8段落 第3文"},
+ {t:"第4〜6文を読む", d:"三文とも<b>時間</b>の話。①自分の一生の時間だけで考える鈍い癖への挑戦　②世代・世紀・千年の単位で考える必要　③ゆっくり動くことの価値。<u>筆者の結論は一貫して「時間のとらえ方」</u>。", cite:"第8段落 第4〜6文"},
+ {t:"選択肢を照合する", d:"時間のとらえ方を変えさせる、と言っているのは(3)だけ。<em>他の三つは、別の話者の発言か、本文と逆の内容</em>。"}],
+ev:{q:"It&apos;s a prank, but it&apos;s also <b>a challenge to our dull human tendency to think only in terms of the ticking away of our own lives</b> ... is a reminder that <b>sometimes we need to think in terms of generations and centuries and millenniums</b>. And it&apos;s a reminder that <b>sometimes there&apos;s a value to moving slowly</b> ... through our busy, overstimulated, and hyper-accelerated world.",
+ jp:"それは悪ふざけだが、同時に、<b>自分自身の人生が刻一刻と過ぎていくことだけで物事を考えてしまうという、私たちの鈍い人間的な傾向への挑戦</b>でもある……<b>ときには世代や世紀や千年という単位で考える必要がある</b>ことを思い出させてくれる。そしてそれは、忙しく過度に加速したこの世界で、<b>ときにはゆっくり動くことにも価値がある</b>と思い出させてくれるのだ。"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">話者の取り違え</span>Cage would have enjoyed it.<span class="cj">ケージはそれを楽しんだだろう。</span>第7段落最終文 <b>there are people who think a 639-year concert would&apos;ve been applauded by Cage</b> は<u>「そう考える人々がいる」という第三者の紹介</u>であって、筆者の主張ではない。<em>むしろ第8段落第1文で筆者は「ケージはこの着想を嫌っただろう」というスウェッドの意見を受け入れると明言している</em>。'},
+ {m:"x", n:"2", t:'<span class="tag v">話者の取り違え＋内容も逆</span>Its goal is a purely artistic one.<span class="cj">その目的は純粋に芸術的なものである。</span>第6段落第6文でスウェッドは <b>this is all about the pride of the town of Halberstadt, about attracting attention and drawing in tourists</b> と言っている。<u>町の誇り・注目集め・観光客は purely artistic の正反対</u>。しかもこれはスウェッドの発言で、筆者の主張ですらない。'},
+ {m:"o", n:"3", t:'<span class="tag g">正解</span>It makes us think about time in a different way.<span class="cj">それは私たちに、時間について異なる考え方をさせる。</span>第8段落第4〜6文の三文すべてが時間の話。<b>自分の一生の時間でしか考えない癖への挑戦／世代・世紀・千年という単位／ゆっくり動くことの価値</b>。<em>これが筆者の着地点</em>。'},
+ {m:"x", n:"4", t:'<span class="tag v">本文と真逆</span>It is not worth discussing because it is certain to end soon.<span class="cj">まもなく終わるのが確実なので、論じる価値がない。</span>終了予定は<b>2640年</b>（第2段落第3文）、第3段落最終文は <b>The performance is just getting started.</b>（まだ始まったばかり）。<u>「まもなく終わる」は完全な逆</u>。さらに筆者は第8段落を丸ごと使って論じており、論じる価値がないとは考えていない。'}],
+co:[
+ {c:"verm", l:"〈1を選びがちな人〉直前の段落の余韻で答える人", h:"第7段落は最後まで「ケージなら喜んだはずだ」という方向で進む。<u>その勢いのまま第8段落に入ると、筆者も同意見だと感じてしまう</u>。<b>だが第8段落第1文は I will accept Swed&apos;s opinion ... that Cage would have disliked this idea</b>。<em>段落が変わったら、話者が変わっていないかを必ず確認する</em>。"},
+ {c:"verm", l:"〈2を選びがちな人〉発言の引用を地の文と区別できない人", h:"第6段落は <b>Swed says</b> で始まる長い引用。<u>この段落の内容をすべて筆者の主張として受け取ると、(2)のような「筆者が言っていないこと」を選ぶ</u>。says / according to / What&apos;s more, Swed says といった標識に印を付けながら読む。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>多声構造を追う力</b>。この文章には筆者・スウェッド・第三者の三つの声があり、しかも<u>筆者はスウェッドに同意しつつ、別の価値を主張する</u>という入り組んだ関係にある。<em>「誰がどこまで言ったか」を線引きできるかが、この設問の全て</em>。"},
+ {c:"gold", l:"ここが文章全体の答え", h:"第2段落第5文で立てられた二択――<b>thoughtful experiment か ridiculous prank か</b>――に、第8段落が答えている。<u>It&apos;s a prank, <b>but</b> it&apos;s also a challenge.</u> <em>どちらか一方ではなく「悪ふざけであり、かつ挑戦でもある」。二択を立てて、二択を超える</em>。これがこの文章の骨格。"}]
+},
+
+/* ===================== 〔2〕三択判定 (1)〜(5) ===================== */
+{
+id:"〔2〕(1)", grp:"CD", type:"内容一致・三択判定", rate:58,
+lbl:"どの演奏の話か", en:"ハルバーシュタット公演の印象に引きずられず、第1段落の実例に戻る",
+ask:'<span class="aen">Organ2/ASLSP has been performed in less than one hour.</span><span class="ajp">『Organ2/ASLSP』は1時間未満で演奏されたことがある。</span>',
+kind:"choice", answer:"1",
+choices:[
+ {t:'一致する<span class="cjp">本文にそう書いてある、または本文から確実に言える</span>', ok:true},
+ {t:'一致しない<span class="cjp">本文に、それと反対のことが書いてある</span>'},
+ {t:'本文の内容からだけではどちらとも判断しかねる<span class="cjp">本文がその点に触れていないので、賛成も反対もできない</span>'}],
+steps:[
+ {t:"どの演奏の話かを決める", d:"設問文は <b>Organ2/ASLSP</b> という<u>曲そのもの</u>について述べている。<em>ハルバーシュタットの639年公演に限定していない</em>。ここを限定して読むと一気に迷う。"},
+ {t:"曲の演奏例が列挙されている箇所へ", d:"第1段落最終文。<b>One performer played it at 29 minutes, another at 71 minutes and another at 8 hours.</b>", cite:"第1段落 最終文"},
+ {t:"数字を比べる", d:"<b>29分 &lt; 60分</b>。したがって「1時間未満で演奏されたことがある」は事実として本文にある。<u>71分と8時間は1時間を超えるが、一つでも該当すれば has been performed は成立する</u>。"},
+ {t:"判定", d:"本文に明示されている → <b>1（一致する）</b>。"}],
+ev:{q:"<b>One performer played it at 29 minutes</b>, another at 71 minutes and another at 8 hours.",
+ jp:"<b>ある演奏家は29分で</b>、別の演奏家は71分で、また別の演奏家は8時間かけて演奏した。"},
+sol:[
+ {m:"o", n:"1", t:'<span class="tag g">正解＝一致する</span>第1段落最終文に <b>29 minutes</b> という実例がある。29分は1時間未満。<u>現在完了 has been performed は「過去に一度でもあれば成立する」</u>ので、他に71分・8時間の例があっても問題にならない。'},
+ {m:"x", n:"2", t:'<span class="tag v">一致しない、ではない</span>本文に「1時間未満で演奏されたことはない」と読める記述は<b>ない</b>。むしろ29分という反証が明示されている。<u>As Slow As Possible という指示から「速く弾くはずがない」と推測した人がここに落ちる</u>。<em>指示は解釈の余地があると第1段落第4文が述べている</em>。'},
+ {m:"x", n:"3", t:'<span class="tag v">判断しかねる、ではない</span>本文が<b>具体的な数字で明示している</b>以上、判断しかねることはない。<u>ハルバーシュタット公演が「まだ終わっていない」ことに引きずられると、この第1段落の記述を見落とす</u>。'}],
+co:[
+ {c:"verm", l:"〈3を選びがちな人〉読んだ順ではなく印象の強さで探す人", h:"第2〜4段落の639年の話があまりに強烈なので、<b>「Organ2/ASLSP＝ハルバーシュタットの演奏」と頭の中で等号を結んでしまう</b>。<u>そうすると「まだ演奏中だから1時間未満かどうか判断できない」となる</u>。<em>設問文に Halberstadt の語はない</em>。"},
+ {c:"verm", l:"〈2を選びがちな人〉タイトルの意味で推測する人", h:"ASLSP＝As Slow As Possible なのだから速い演奏はないはずだ、と考える。<b>だが第1段落第4文が What&apos;s &quot;possible&quot; ... is open to interpretation と断っており、第5文でその幅を三つの実例で示している</b>。<u>この二文はセットで読む</u>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>設問文の主語の範囲を正確に取る力</b>。曲について聞かれているのか、特定の演奏について聞かれているのか。<u>範囲を勝手に狭めると、本文に書いてあるのに「書いていない」と判定してしまう</u>。"}]
+},
+
+{
+id:"〔2〕(2)", grp:"CD", type:"内容一致・三択判定", rate:62,
+lbl:"矛盾を見つける", en:"prefer という語で、筆者が自分の好みを明示的に比較している",
+ask:'<span class="aen">The author usually likes experimental art forms more than traditional ones.</span><span class="ajp">筆者はふだん、伝統的な芸術形式よりも実験的な芸術形式のほうを好む。</span>',
+kind:"choice", answer:"2",
+choices:[
+ {t:'一致する<span class="cjp">本文にそう書いてある、または本文から確実に言える</span>'},
+ {t:'一致しない<span class="cjp">本文に、それと反対のことが書いてある</span>', ok:true},
+ {t:'本文の内容からだけではどちらとも判断しかねる<span class="cjp">本文がその点に触れていないので、賛成も反対もできない</span>'}],
+steps:[
+ {t:"usually に対応する語を探す", d:"設問の <b>usually</b>（ふだん）は、本文の <b>ordinarily</b>（第5段落第1文）と <b>generally</b>（第5段落第2文）に対応する。<u>「ふだんの好み」が書かれている箇所に直行できる</u>。", cite:"第5段落 第1〜2文"},
+ {t:"第5段落第2文を読む", d:"<b>I generally prefer my books to have stories, my art to be recognizable, and my music to have a clear melody.</b> 物語がある本・何が描いてあるか分かる芸術・明快なメロディーのある音楽。<u>これはすべて traditional 側</u>。", cite:"第5段落 第2文"},
+ {t:"prefer に注目する", d:"<b>prefer</b> は<u>比較を含む動詞</u>。筆者は自分の好みを明示的に表明している。<em>「触れていない」ではなく「反対のことが書いてある」</em>。"},
+ {t:"判定", d:"設問は experimental を好むと言い、本文は traditional を好むと言っている → <b>2（一致しない）</b>。"}],
+ev:{q:"I&apos;m not an avant-garde type of guy ordinarily. <b>I generally prefer my books to have stories, my art to be recognizable, and my music to have a clear melody.</b> But I try not to be too narrow-minded.",
+ jp:"私はふだん、前衛的なタイプの人間ではない。<b>私はたいてい、本には物語があってほしいし、芸術は何が描かれているか分かるものであってほしいし、音楽には明快なメロディーがあってほしいと思っている。</b>しかし、あまり偏狭にならないようにも努めている。"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">一致する、ではない</span>第5段落第3文 <b>But I try not to be too narrow-minded.</b> と第4文 <b>John Cage is one of the most innovative musical figures of the 20th century.</b> を見て「結局は前衛を評価している」と読む人がここに来る。<u>だが評価することと、ふだん好むことは別</u>。<em>設問は usually と限定している</em>。'},
+ {m:"o", n:"2", t:'<span class="tag g">正解＝一致しない</span>第5段落第2文が <b>prefer</b> を使って、物語・具象・メロディー――つまり伝統的な側――を好むと明言している。<u>設問文は正反対のことを述べている</u>ので、矛盾。'},
+ {m:"x", n:"3", t:'<span class="tag v">判断しかねる、ではない</span>第5段落第1〜2文が<b>ふだんの好みを直接述べている</b>。<u>触れていないのではなく、はっきり反対のことが書いてある</u>。<em>「3」は本文が沈黙しているときにだけ使う</em>。'}],
+co:[
+ {c:"verm", l:"〈1を選びがちな人〉段落の後半だけを読む人", h:"第5段落は前半（第1〜2文）で「前衛は好みではない」と言い、後半（第3〜5文）で「それでもケージはすごい」と転じる。<u>後半だけ見ると前衛肯定に読める</u>。<b>設問の usually が指しているのは前半のほう</b>。"},
+ {c:"teal", l:"この段落がここに置かれている理由", h:"筆者は第8段落でこの企画を肯定する。<b>その前に「自分は前衛好きではない」と宣言しておく</b>ことで、<u>ひいき目で見ていないと示している</u>。<em>自分に不利な前提を先に出してから主張する――説得の型</em>。この構造が分かっていると、第5段落の役割が腑に落ちる。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>2（矛盾）と3（記述なし）を分ける力</b>。この形式の核心はここ。<u>本文が「反対のこと」を述べていれば2、「何も述べていない」なら3</u>。<em>今回は prefer という動詞で好みが明示されているので、迷わず2</em>。"}]
+},
+
+{
+id:"〔2〕(3)", grp:"CD", type:"内容一致・三択判定", rate:34,
+lbl:"書いていないことは埋めない", en:"両親の職業は書いてある。だが「教えたか」は書いていない",
+ask:'<span class="aen">Cage received musical training from his parents.</span><span class="ajp">ケージは両親から音楽の訓練を受けた。</span>',
+kind:"choice", answer:"3",
+choices:[
+ {t:'一致する<span class="cjp">本文にそう書いてある、または本文から確実に言える</span>'},
+ {t:'一致しない<span class="cjp">本文に、それと反対のことが書いてある</span>'},
+ {t:'本文の内容からだけではどちらとも判断しかねる<span class="cjp">本文がその点に触れていないので、賛成も反対もできない</span>', ok:true}],
+steps:[
+ {t:"両親が出てくる箇所を特定する", d:"第5段落第5文の括弧内。<b>his mother wrote a newspaper column in the 1930s, and his father was, unsurprisingly, an inventor</b>。<u>本文で両親に触れているのはここだけ</u>。", cite:"第5段落 第5文"},
+ {t:"書いてあることを正確に取る", d:"書いてあるのは<b>両親の職業だけ</b>。母＝新聞コラムニスト、父＝発明家。<em>ケージに何かを教えたかどうかには、一言も触れていない</em>。"},
+ {t:"推論を足していないか自己点検する", d:"「両親は音楽家ではない → だから音楽を教えていない」と考えたなら、<u>それは本文にない推論</u>。<b>職業が音楽でないことは、音楽を教えなかったことを意味しない</b>。"},
+ {t:"判定", d:"本文は賛成も反対もしていない → <b>3（判断しかねる）</b>。"}],
+ev:{q:"Born in Los Angeles (<b>his mother wrote a newspaper column in the 1930s, and his father was, unsurprisingly, an inventor</b>), he has had a global and enduring influence on the music world.",
+ jp:"ロサンゼルスに生まれ（<b>母は1930年代に新聞のコラムを書き、父は、驚くまでもなく、発明家だった</b>）、彼は世界の音楽界に長く続く影響を与えてきた。"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">一致する、ではない</span>「両親のことがわざわざ書いてあるのだから、何か影響があったはずだ」と補って読む人がここに来る。<u>本文は職業を挙げただけ</u>。<b>記述の存在を、記述の内容にしてはいけない</b>。'},
+ {m:"x", n:"2", t:'<span class="tag v">この誤答が最も多い</span>「母はコラムニスト、父は発明家。どちらも音楽家ではない。だから音楽を教えていない」――<b>これは本文にない推論</b>。<u>音楽家でない親が子に音楽を教えることは、現実にいくらでもある</u>。<em>本文が沈黙していることを、常識で埋めて「矛盾」と断定してしまっている</em>。'},
+ {m:"o", n:"3", t:'<span class="tag g">正解＝判断しかねる</span>第5段落第5文は<b>両親の職業を述べているだけ</b>で、ケージが音楽を教わったかどうかには触れていない。<u>賛成する材料も、反対する材料も本文にない</u>。これが3を選ぶ正しい理由。'}],
+co:[
+ {c:"verm", l:"〈2を選びがちな人〉空白を推論で埋める人", h:"この設問の最大の罠。<b>本文が触れていない事柄について、手持ちの情報から結論を出してしまう</b>。<u>「職業が音楽でない」→「音楽を教えなかった」は飛躍</u>。<em>推論が自然に見えるときほど危ない</em>。"},
+ {c:"teal", l:"3を選ぶための一つの問い", h:"迷ったらこう自問する。<b>「この設問文を否定する一文が、本文のどこかにあるか」</b>。<u>あれば2、なければ3</u>。<em>「なさそうだ」ではなく「ない」ことを確認する</em>。今回、ケージがどこで音楽を学んだかを述べた文は本文に一つもない。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>本文の沈黙に耐える力</b>。立命館のこの三択形式が本当に測っているのはここ。<u>情報が足りないときに「足りない」と答えられるか</u>。<em>国語の評論問題で「本文に書かれていない」を選ぶのと同じ判断</em>。"}]
+},
+
+{
+id:"〔2〕(4)", grp:"CD", type:"内容一致・三択判定", rate:47,
+lbl:"具体語を上位概念に言い換える", en:"vegetables＝food、a toaster＝kitchen item。断片の短文も前文につなぐ",
+ask:'<span class="aen">Cage used kitchen items and food in his works.</span><span class="ajp">ケージは作品の中で台所用品と食べ物を使った。</span>',
+kind:"choice", answer:"1",
+choices:[
+ {t:'一致する<span class="cjp">本文にそう書いてある、または本文から確実に言える</span>', ok:true},
+ {t:'一致しない<span class="cjp">本文に、それと反対のことが書いてある</span>'},
+ {t:'本文の内容からだけではどちらとも判断しかねる<span class="cjp">本文がその点に触れていないので、賛成も反対もできない</span>'}],
+steps:[
+ {t:"ケージが使った素材の列挙箇所へ", d:"第7段落第2〜5文。<b>He used vegetables, toys, and radios in his work. Playing cards. A toaster. Ambient sound, noise, silence, chance, and time ...</b>", cite:"第7段落 第2〜5文"},
+ {t:"断片の短文を前文につなぐ", d:"<b>Playing cards. A toaster.</b> は主語も動詞もない。<u>これは第2文 He used ... in his work の目的語が続いているもの</u>。<em>畳みかけて素材の雑多さを見せる書き方</em>。文の形が崩れていても、列挙の続きとして読む。", cite:"第7段落 第3〜4文"},
+ {t:"具体語を上位概念に言い換える", d:"<b>vegetables（野菜）→ food（食べ物）</b>、<b>a toaster（トースター）→ kitchen item（台所用品）</b>。<u>設問文の語が本文にそのまま出ていなくても、包含関係が成り立てば一致</u>。"},
+ {t:"判定", d:"二つとも本文で裏が取れる → <b>1（一致する）</b>。"}],
+ev:{q:"He used <b>vegetables</b>, toys, and radios in his work. Playing cards. <b>A toaster.</b> Ambient sound, noise, silence, chance, and time —these were among his themes.",
+ jp:"彼は作品に<b>野菜</b>やおもちゃやラジオを使った。トランプも。<b>トースターも。</b>環境音、雑音、沈黙、偶然、そして時間――こうしたものが彼のテーマの一つだった。"},
+sol:[
+ {m:"o", n:"1", t:'<span class="tag g">正解＝一致する</span><b>vegetables が food に、a toaster が kitchen item に</b>それぞれ対応する。どちらも第7段落で「作品に使ったもの」として挙げられている。<u>設問文の語が本文になくても、具体語が上位概念に含まれていれば一致</u>。'},
+ {m:"x", n:"2", t:'<span class="tag v">一致しない、ではない</span>本文に反対の記述はない。<u>A toaster. という短文を独立した話題だと思い、「作品に使った」とは書かれていないと判断した人</u>がここに来る。<b>第2文の He used ... in his work が、第3・4文まで効いている</b>。'},
+ {m:"x", n:"3", t:'<span class="tag v">判断しかねる、ではない</span><b>kitchen items / food という語が本文にないので「書いていない」と判定してしまう</b>のが典型。<u>内容一致問題は、語ではなく内容が一致するかを問う</u>。<em>vegetables が food でないと言う人はいない</em>。'}],
+co:[
+ {c:"verm", l:"〈3を選びがちな人〉語の検索で判定する人", h:"設問文の単語を本文から探し、見つからなければ「書いていない」とする読み方。<b>この方式では(4)は必ず落とす</b>。<u>内容一致問題は、同じ語を探すのではなく、同じ内容を探す</u>。<em>具体 ↔ 抽象の往復ができるかが問われている</em>。"},
+ {c:"verm", l:"〈2を選びがちな人〉文の形で切ってしまう人", h:"<b>Playing cards. A toaster.</b> はピリオドで切れているので、別の話に見える。<u>だが動詞も主語もない以上、前の文の続き以外ではありえない</u>。<em>筆者はわざと断片にして、素材の雑多さをリズムで見せている</em>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>具体語を上位概念でくくる力</b>と、<b>文法的に不完全な文を前文に接続する力</b>。<u>この二つが同時に要る</u>ので、(4)は見た目より難しい。"}]
+},
+
+{
+id:"〔2〕(5)", grp:"CD", type:"内容一致・三択判定", rate:39,
+lbl:"近くにある情報を結びつけない", en:"スウェッドは評論家。4'33\" は別の段落の話",
+ask:'<span class="aen">Swed once performed 4&apos;33&quot; on stage.</span><span class="ajp">スウェッドはかつて『4分33秒』を舞台で演奏したことがある。</span>',
+kind:"choice", answer:"3",
+choices:[
+ {t:'一致する<span class="cjp">本文にそう書いてある、または本文から確実に言える</span>'},
+ {t:'一致しない<span class="cjp">本文に、それと反対のことが書いてある</span>'},
+ {t:'本文の内容からだけではどちらとも判断しかねる<span class="cjp">本文がその点に触れていないので、賛成も反対もできない</span>', ok:true}],
+steps:[
+ {t:"スウェッドについて書かれていることを全部拾う", d:"第6段落第1〜2文。<b>music critic</b>（音楽評論家）である／1992年にケージが亡くなる前から本人を知っていた／ケージについて広範に書いてきた／大のケージ愛好家／639年の企画に強く苛立っている。<u>以上がすべて</u>。", cite:"第6段落 第1〜2文"},
+ {t:"演奏したという記述を探す", d:"第6段落全体を見ても、<b>スウェッドが演奏したという記述はない</b>。第3〜6文はすべて彼の<u>発言内容</u>。"},
+ {t:"4'33&quot; が出てくる段落を確認する", d:"第7段落第6文。<b>One of his best-known works is 4&apos;33&quot;</b>――この his はケージを指す。<u>主語はスウェッドではない</u>。<em>段落も話題も別</em>。", cite:"第7段落 第6文"},
+ {t:"判定", d:"演奏したとも、していないとも書かれていない → <b>3（判断しかねる）</b>。"}],
+ev:{q:"I wanted to know more about the Halberstadt project, so I called <b>music critic Mark Swed</b>, who knew Cage before his death in 1992 and <b>has written about him extensively</b>. Swed is a huge Cage enthusiast ...",
+ jp:"私はハルバーシュタットの企画についてもっと知りたくなり、<b>音楽評論家のマーク・スウェッド</b>に電話した。彼はケージが1992年に亡くなる前から彼を知っており、<b>ケージについて広範に書いてきた</b>人物である。スウェッドは大のケージ愛好家で……"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">一致する、ではない</span>第6段落（スウェッド）と第7段落（<em>4&apos;33&quot;</em>）が近いため、<b>二つを結びつけてしまう</b>。<u>だが <em>4&apos;33&quot;</em> は「ケージの最も有名な作品の一つ」として紹介されているだけ</u>で、誰が演奏したかは書かれていない。'},
+ {m:"x", n:"2", t:'<span class="tag v">一致しない、ではない</span>「評論家なのだから演奏はしない」という決めつけ。<u>評論家が演奏経験を持つことは珍しくない</u>し、何より<b>本文がその点に触れていない</b>。<em>職業から行動を断定するのは、(3)と同じ型の誤り</em>。'},
+ {m:"o", n:"3", t:'<span class="tag g">正解＝判断しかねる</span>本文がスウェッドについて述べているのは<b>評論家であること・ケージを知っていたこと・ケージについて書いてきたこと・大ファンであること・639年企画に苛立っていること</b>の五点だけ。<u>演奏したかどうかには一切触れていない</u>。'}],
+co:[
+ {c:"verm", l:"〈1を選びがちな人〉距離で関係を作る人", h:"<b>本文で近くに置かれている二つの情報を、無意識に結びつけてしまう</b>。<u>スウェッドの段落のすぐ次に <em>4&apos;33&quot;</em> が出てくるので、「彼が演奏した曲の話だ」と感じる</u>。<em>段落が変わったら主語を取り直す</em>。第7段落第6文の his はケージ。"},
+ {c:"teal", l:"(3)との違いを押さえる", h:"<b>(3)は「推論で埋めたくなる罠」、(5)は「近接情報を結びつけたくなる罠」</b>。<u>どちらも答えは3だが、落ち方が違う</u>。<em>(3)は職業から結論を出す、(5)は位置関係から結論を出す</em>。両方とも、本文が言っていないことを自分で作っている点は同じ。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>ある人物について本文が与えた情報を、過不足なく列挙できるか</b>。<u>五点だけ、と言い切れる読み方ができているか</u>。<em>「たぶんこうだろう」が一つでも混ざると、この設問は落とす</em>。"}]
+},
+
+/* ===================== 〔3〕主題 ===================== */
+{
+id:"〔3〕", grp:"EF", type:"主題・タイトル選択", rate:51,
+lbl:"複数形に気づく", en:"Interpretations ― 三つの解釈が並ぶ構造そのものがタイトルになる",
+ask:'<span class="aen">本文の内容をもっともよく表しているものを(1)〜(5)から一つ選びなさい。</span><span class="ajp">五つの候補から、文章全体の内容を最もよく表すものを選ぶ。話題が合うだけでなく、文章の「形」まで合うものを選ぶこと。</span>',
+kind:"choice", answer:"3",
+choices:[
+ {t:'A battle between two music critics<span class="cjp">二人の音楽評論家のあいだの戦い</span>'},
+ {t:'Questions about the theme of Organ2/ASLSP<span class="cjp">『Organ2/ASLSP』の主題をめぐる疑問</span>'},
+ {t:'Interpretations of an unusual musical performance<span class="cjp">ある風変わりな音楽演奏をめぐる、さまざまな解釈</span>', ok:true},
+ {t:'Avant-garde art and its influence on twentieth-century history<span class="cjp">前衛芸術と、それが20世紀の歴史に与えた影響</span>'},
+ {t:'How the Halberstadt concert is changing our view of John Cage<span class="cjp">ハルバーシュタットのコンサートが、ジョン・ケージについての私たちの見方をどう変えつつあるか</span>'}],
+steps:[
+ {t:"話題を一言で押さえる", d:"<b>639年かけて演奏されている一つの曲</b>。これが本文の対象。<u>曲そのものの分析でも、作曲家の評伝でもない</u>。"},
+ {t:"文章の「形」を押さえる", d:"第2段落で<b>二択の問い</b>が立つ。第6段落で<b>スウェッドの解釈</b>、第7段落最終文で<b>「拍手しただろう」と考える人々の解釈</b>、第8段落で<b>筆者の解釈</b>。<u>解釈が三つ並んでいる</u>。", cite:"第2段落第5文／第6段落／第7段落最終文／第8段落"},
+ {t:"複数形に注目する", d:"<b>Interpretations</b> と複数形になっていることが決定打。<u>一つの企画をめぐって複数の受け取り方が提示される、という構造をそのまま指している</u>。"},
+ {t:"他を落とす", d:"残りは<b>①話題がずれている（2)(4)　②事実関係が本文と合わない（1)(5)</b> のどちらか。<em>タイトル問題は、話題と形の両方が合うものを選ぶ</em>。"}],
+ev:{q:"Is it <b>a thoughtful experiment</b> suiting the creative author of the work — or <b>a ridiculous prank</b> being played on his memory and on the rest of us? ... <b>Swed says</b> Cage wrote music to be performed. ... <b>there are people who think</b> a 639-year concert would&apos;ve been applauded by Cage. ... <b>this performance makes me smile.</b>",
+ jp:"それは、この作品の創造的な作者にふさわしい<b>思慮深い実験</b>なのか――それとも、彼の記憶と私たち全員に対して仕掛けられた<b>馬鹿げた悪ふざけ</b>なのか。……<b>スウェッドは言う</b>、ケージは演奏されるために音楽を書いたのだ、と。……639年のコンサートならケージは拍手を送っただろう<b>と考える人々がいる</b>。……<b>この演奏は私を微笑ませる。</b>"},
+sol:[
+ {m:"x", n:"1", t:'<span class="tag v">事実関係が合わない</span>A battle between two music critics<span class="cj">二人の音楽評論家のあいだの戦い</span><b>音楽評論家と紹介されているのはスウェッドただ一人</b>（第6段落第1文 music critic Mark Swed）。筆者は評論家ではない。<u>さらに battle（戦い）でもない</u>。第8段落第1文で筆者は <b>I will accept Swed&apos;s opinion</b> と明言している。<em>対立ではなく、受け入れたうえで別の価値を重ねている</em>。'},
+ {m:"x", n:"2", t:'<span class="tag v">対象がずれている</span>Questions about the theme of Organ2/ASLSP<span class="cj">『Organ2/ASLSP』の主題をめぐる疑問</span>論じられているのは<b>曲の主題ではなく、639年かけて演奏するという企画をどう受け取るか</b>。<u>曲そのものについて本文が述べるのは「8ページ」「休符で始まる」といった事実だけ</u>。<em>作品と、その上演企画は別物</em>。'},
+ {m:"o", n:"3", t:'<span class="tag g">正解</span>Interpretations of an unusual musical performance<span class="cj">ある風変わりな音楽演奏をめぐる、さまざまな解釈</span><b>an unusual musical performance</b>＝639年かけて演奏されるハルバーシュタット公演。<b>Interpretations（複数形）</b>＝スウェッドの解釈／「ケージは喜んだはず」と考える人々の解釈／筆者の解釈。<u>話題も、複数の見方が並ぶという形も、両方が一致する</u>。'},
+ {m:"x", n:"4", t:'<span class="tag v">一文を主題に昇格させている</span>Avant-garde art and its influence on twentieth-century history<span class="cj">前衛芸術と、それが20世紀の歴史に与えた影響</span>ケージが20世紀で最も革新的な音楽家の一人だという記述は<b>第5段落第4文の一文だけ</b>。<u>前衛芸術が20世紀史に与えた影響という話は、本文のどこにもない</u>。<em>目立つ一文を全体の主題だと取り違えている</em>。'},
+ {m:"x", n:"5", t:'<span class="tag v">変わったものが違う</span>How the Halberstadt concert is changing our view of John Cage<span class="cj">ハルバーシュタットのコンサートが、ジョン・ケージについての私たちの見方をどう変えつつあるか</span>第8段落で変わるのは<b>ケージ観ではなく、時間のとらえ方</b>。<u>ケージ観についてはむしろ、スウェッドも筆者も「ケージは嫌っただろう」で一致しており、変化していない</u>。<em>結論の対象を取り違えた選択肢</em>。'}],
+co:[
+ {c:"verm", l:"〈1を選びがちな人〉対立の構図を作りたがる人", h:"第6段落の批判が強いので、<b>筆者 対 スウェッドの論争に見えてくる</b>。<u>だが第8段落第1文は「スウェッドの意見を受け入れる」から始まる</u>。<em>この文章は論争ではなく、同意したうえでの上書き</em>。<b>but も however もなく、I will accept から入っている</b>ことに注意。"},
+ {c:"verm", l:"〈5を選びがちな人〉最終段落の勢いだけで選ぶ人", h:"第8段落が強い結論で終わるので、<b>「何かが変わる話だ」という印象だけが残る</b>。<u>だが変わるのは時間感覚であって、ケージへの評価ではない</u>。<em>結論を選ぶときは「何が」「どう」変わるのかまで一致させる</em>。"},
+ {c:"gold", l:"この一語で決まる ― Interpretations", h:"<b>複数形</b>であることが決定的。<u>本文には解釈が三つ出てくる</u>。①スウェッド＝これは演奏ではない、空虚なトリックだ　②一部の人々＝ケージなら拍手しただろう　③筆者＝悪ふざけだが、時間への挑戦でもある。<em>タイトル問題では、単数か複数かが文章の形を示していることがある</em>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>文章全体の設計を一語でつかむ力</b>。第2段落で問いが立ち、三つの答えが並び、第8段落で筆者が二択を超える。<u>この設計が見えていれば Interpretations に一瞬で手が伸びる</u>。<em>逆に、印象に残った場面で選ぶと(1)や(5)に流れる</em>。"}]
+}
+
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${i+1}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">${q.mlab||'8択から3つ'}</span>各文をタップすると○×と根拠が開きます。${q.mhint||'まず自分で3つ選んでから確認しよう。'}</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF'],['GH','qWrapGH','qidxGH'],['IJ','qWrapIJ','qidxIJ']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
