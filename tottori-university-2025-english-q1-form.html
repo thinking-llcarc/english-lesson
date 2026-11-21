@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解答送信フォーム｜鳥取大学 2025 英語 大問1｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16263f; --navy-ink:#1d3557; --gold:#b8954a; --gold-d:#8e6f2e;
+  --verm:#c8431f; --verm-d:#a63515; --teal:#1f6b5c; --teal-d:#17544a;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --ink:#232830; --muted:#6b7280; --line:#e6dfce; --line2:#efe9db;
+  --teal-soft:#e6f2ee; --verm-soft:#fbe9e3; --gold-soft:#f7efdd;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --navy:#8fb3dd; --navy-ink:#a9c6e8; --gold:#d9b96f; --gold-d:#e0c484;
+    --verm:#e8785a; --verm-d:#f08f74; --teal:#5fc0a8; --teal-d:#79d2bb;
+    --paper:#14161a; --surface:#1c1f25; --surface2:#23272e;
+    --ink:#e8e6e1; --muted:#9aa2ae; --line:#333842; --line2:#2b3038;
+    --teal-soft:#1b3a34; --verm-soft:#3a241e; --gold-soft:#332a18;
+  }
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:"Noto Sans JP",system-ui,sans-serif; font-size:15px; line-height:1.9;
+}
+.top{background:var(--navy);color:#fff;padding:18px 0 16px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .top{background:#10131a;}}
+.top-in{max-width:760px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:13px;}
+.mark{
+  width:40px;height:40px;flex:0 0 40px;border-radius:9px;background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Noto Serif JP",serif;font-weight:900;font-size:19px;color:#16263f;
+}
+.ttl b{display:block;font-family:"Noto Serif JP",serif;font-size:16px;font-weight:700;letter-spacing:.02em;color:#fff;}
+.ttl span{display:block;font-size:11.5px;color:#c7d3e2;letter-spacing:.06em;margin-top:2px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ttl span{color:#8d9bad;}}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 60px;}
+
+.lead{
+  background:var(--surface2);border-left:4px solid var(--gold);border-radius:0 11px 11px 0;
+  padding:15px 17px;margin:22px 0 0;font-size:13.5px;line-height:1.95;color:var(--ink);
+}
+.lead b{color:var(--navy-ink);}
+
+.prog{position:sticky;top:0;z-index:30;background:var(--paper);padding:12px 0 10px;margin:20px 0 0;}
+.prog-bar{height:7px;border-radius:99px;background:var(--line2);overflow:hidden;}
+.prog-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--teal));transition:width .3s;}
+.prog-t{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:6px;letter-spacing:.04em;}
+.prog-t b{font-family:"Zilla Slab",serif;color:var(--navy-ink);font-size:13px;}
+
+.card{
+  background:var(--surface);border:1px solid var(--line);border-radius:13px;
+  padding:19px 19px 20px;margin:16px 0 0;
+}
+.qh{display:flex;align-items:flex-start;gap:11px;margin:0 0 13px;}
+.qn{
+  flex:0 0 auto;min-width:46px;height:30px;padding:0 9px;border-radius:7px;background:var(--navy);color:#fff;
+  font-family:"Noto Serif JP",serif;font-weight:700;font-size:13px;
+  display:flex;align-items:center;justify-content:center;letter-spacing:.02em;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .qn{background:#2d3a4e;color:var(--navy-ink);}}
+.qn.opt{background:var(--surface2);color:var(--muted);border:1px solid var(--line);}
+.qt{flex:1;}
+.qt b{display:block;font-family:"Noto Serif JP",serif;font-size:14.5px;font-weight:700;color:var(--navy-ink);line-height:1.6;}
+.qt span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.75;}
+.pt{flex:0 0 auto;font-family:"Zilla Slab",serif;font-size:12px;color:var(--gold-d);font-weight:600;padding-top:6px;white-space:nowrap;}
+
+.en{
+  background:var(--surface2);border-radius:9px;padding:12px 14px;margin:0 0 13px;
+  font-family:"Zilla Slab",Georgia,serif;font-size:14.5px;line-height:1.85;color:var(--ink);
+}
+.en u{text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:1px;}
+
+label.opt-row{
+  display:flex;align-items:flex-start;gap:11px;padding:11px 13px;margin:0 0 7px;
+  border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  cursor:pointer;transition:border-color .15s,background .15s;font-size:14px;line-height:1.75;
+}
+label.opt-row:last-child{margin-bottom:0;}
+label.opt-row:hover{border-color:var(--gold);}
+label.opt-row.on{border-color:var(--gold);background:var(--gold-soft);}
+label.opt-row input{margin:5px 0 0;flex:0 0 auto;width:17px;height:17px;accent-color:#b8954a;}
+label.opt-row .ln{
+  flex:0 0 auto;font-family:"Zilla Slab",serif;font-weight:700;font-size:13.5px;
+  color:var(--navy-ink);min-width:16px;
+}
+label.opt-row .lt{flex:1;}
+label.opt-row.lock{opacity:.45;cursor:not-allowed;}
+
+textarea{
+  width:100%;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:14.5px;line-height:1.95;
+  padding:11px 13px;resize:vertical;min-height:84px;
+}
+textarea:focus,input[type=text]:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,149,74,.16);}
+textarea::placeholder{color:#b5b0a6;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) textarea::placeholder{color:#5e6671;}}
+.sub-l{font-size:12.5px;color:var(--muted);margin:0 0 5px;font-weight:500;}
+.sub-l em{font-style:normal;font-family:"Zilla Slab",serif;color:var(--navy-ink);font-weight:700;}
+.cnt{text-align:right;font-family:"Zilla Slab",serif;font-size:11.5px;color:var(--muted);margin:4px 0 12px;}
+.cnt:last-child{margin-bottom:0;}
+.cnt.over{color:var(--verm-d);font-weight:700;}
+
+.idrow{display:flex;gap:11px;flex-wrap:wrap;}
+.idrow > div{flex:1 1 220px;}
+input[type=text]{
+  width:100%;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;padding:11px 13px;
+}
+input[type=text].num{font-family:"Zilla Slab",serif;letter-spacing:.06em;}
+
+.note{font-size:12.5px;color:var(--muted);line-height:1.8;margin:11px 0 0;}
+.note b{color:var(--verm-d);}
+
+.err{
+  display:none;background:var(--verm-soft);border-left:4px solid var(--verm);border-radius:0 9px 9px 0;
+  padding:12px 15px;margin:16px 0 0;font-size:13.5px;line-height:1.85;color:var(--ink);
+}
+.err.show{display:block;}
+.err b{color:var(--verm-d);}
+.card.bad{border-color:var(--verm);}
+
+.send{margin:26px 0 0;text-align:center;}
+button.go{
+  width:100%;max-width:420px;border:0;border-radius:11px;background:var(--navy);color:#fff;
+  font-family:"Noto Serif JP",serif;font-size:16px;font-weight:700;letter-spacing:.06em;
+  padding:16px 20px;cursor:pointer;transition:opacity .15s,transform .1s;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button.go{background:#2d4a73;color:#eaf1fa;}}
+button.go:hover{opacity:.88;}
+button.go:active{transform:translateY(1px);}
+button.go[disabled]{opacity:.45;cursor:default;transform:none;}
+.save-n{font-size:12px;color:var(--muted);margin:11px 0 0;letter-spacing:.02em;}
+
+.result{display:none;margin:24px 0 0;}
+.result.show{display:block;}
+.rbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 19px;}
+.rbox h2{
+  font-family:"Noto Serif JP",serif;font-size:18px;margin:0 0 4px;color:var(--navy-ink);letter-spacing:.02em;
+}
+.rbox .rsub{font-size:12.5px;color:var(--muted);margin:0 0 16px;}
+.score{
+  display:flex;align-items:baseline;gap:9px;background:var(--surface2);border-radius:10px;
+  padding:14px 16px;margin:0 0 15px;
+}
+.score b{font-family:"Zilla Slab",serif;font-size:30px;color:var(--navy-ink);line-height:1;}
+.score span{font-size:12.5px;color:var(--muted);}
+.rrow{
+  display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-top:1px solid var(--line2);font-size:13.5px;line-height:1.8;
+}
+.rrow .mk{
+  flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:14px;
+}
+.mk.o{background:var(--teal-soft);color:var(--teal-d);}
+.mk.p{background:var(--gold-soft);color:var(--gold-d);}
+.mk.x{background:var(--verm-soft);color:var(--verm-d);}
+.rrow .rt b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy-ink);font-size:14px;margin-bottom:3px;}
+.rrow .rt span{display:block;color:var(--muted);font-size:12.5px;}
+.pending{
+  background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:0 9px 9px 0;
+  padding:14px 16px;margin:16px 0 0;font-size:13.5px;line-height:1.9;
+}
+.pending b{color:var(--gold-d);}
+.rlinks{margin:18px 0 0;padding-top:15px;border-top:1px solid var(--line2);font-size:13.5px;line-height:2;}
+.rlinks a{color:var(--navy-ink);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--gold);}
+
+.foot{text-align:center;padding:34px 18px 18px;color:var(--muted);font-size:11.5px;line-height:1.9;}
+.foot b{display:block;font-family:"Noto Serif JP",serif;font-size:14px;color:var(--navy-ink);letter-spacing:.14em;margin-bottom:5px;}
+
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.35);
+  border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:8px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">鳥</div>
+    <div class="ttl"><b>解答送信フォーム</b><span>鳥取大学 2025 ／ 英語 大問1</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="lead">
+    AIと自然淘汰（Dan Hendrycks, &quot;Survival of the Fittest&quot;）の大問1です。<br>
+    <b>記述三問は、思いついた語を並べるのではなく、採点者が読んで意味が取れる一文で書いてください。</b>
+    送信すると、選択問題（問1・問5）の正誤はその場で表示されます。記述の採点とコメントは、後ほど個別にお返しします。
+  </div>
+
+  <div class="prog">
+    <div class="prog-bar"><div class="prog-fill" id="pf"></div></div>
+    <div class="prog-t"><span>入力の進み具合</span><span><b id="pc">0</b> / 9 項目</span></div>
+  </div>
+
+  <!-- 受験者情報 -->
+  <div class="card" id="c-id">
+    <div class="qh">
+      <div class="qn">受験者</div>
+      <div class="qt"><b>識別番号と氏名</b><span>識別番号は塾から配付されたものを、半角で入力してください。</span></div>
+    </div>
+    <div class="idrow">
+      <div>
+        <p class="sub-l">識別番号 <em>必須</em></p>
+        <input type="text" id="sid" class="num" inputmode="latin" autocomplete="off" placeholder="例）T-0421">
+      </div>
+      <div>
+        <p class="sub-l">氏名 <em>必須</em></p>
+        <input type="text" id="sname" autocomplete="name" placeholder="例）朝倉 徹大">
+      </div>
+    </div>
+  </div>
+
+  <!-- 問1 -->
+  <div class="card" id="c-q1">
+    <div class="qh">
+      <div class="qn">問1</div>
+      <div class="qt"><b>空欄（ a ）に入る語を一つ選べ</b><span>第3段落第1文。節の中に欠けている要素がないかを見てから選ぶこと。</span></div>
+      <div class="pt">5点</div>
+    </div>
+    <div class="en">The good news is that we can decide&nbsp;<u>(　a　)</u>&nbsp;the AI will be like.</div>
+    <div id="q1opts"></div>
+  </div>
+
+  <!-- 問2 -->
+  <div class="card" id="c-q2">
+    <div class="qh">
+      <div class="qn">問2</div>
+      <div class="qt"><b>下線部(1) &quot;three reasons&quot; が表す三点を、それぞれ日本語で簡潔に述べよ</b><span>理由を問われているので、文末は「〜から」「〜ため」で揃えること。各40〜60字が目安。</span></div>
+      <div class="pt">10点</div>
+    </div>
+    <p class="sub-l">一つめ <em>必須</em></p>
+    <textarea id="q2a" data-max="90" placeholder="第一の理由を一文で"></textarea>
+    <div class="cnt" data-for="q2a">0 字</div>
+    <p class="sub-l">二つめ <em>必須</em></p>
+    <textarea id="q2b" data-max="90" placeholder="第二の理由を一文で"></textarea>
+    <div class="cnt" data-for="q2b">0 字</div>
+    <p class="sub-l">三つめ <em>必須</em></p>
+    <textarea id="q2c" data-max="90" placeholder="第三の理由を一文で"></textarea>
+    <div class="cnt" data-for="q2c">0 字</div>
+  </div>
+
+  <!-- 問3 -->
+  <div class="card" id="c-q3">
+    <div class="qh">
+      <div class="qn">問3</div>
+      <div class="qt"><b>下線部(2) &quot;a more fundamental barrier&quot; が表す内容を日本語で簡潔に述べよ</b><span>文末は「〜ということ」「〜こと」で名詞的にまとめる。50〜70字が目安。</span></div>
+      <div class="pt">10点</div>
+    </div>
+    <textarea id="q3" data-max="100" placeholder="「より根本的な障壁」の中身を説明する"></textarea>
+    <div class="cnt" data-for="q3">0 字</div>
+  </div>
+
+  <!-- 問4 -->
+  <div class="card" id="c-q4">
+    <div class="qh">
+      <div class="qn">問4</div>
+      <div class="qt"><b>下線部(3)を和訳せよ</b><span>まず骨格（S・V・O）を取り、as quickly as のうしろの省略を補ってから訳すこと。</span></div>
+      <div class="pt">10点</div>
+    </div>
+    <div class="en">We need research on AI safety to progress as quickly as research on improving AI abilities.</div>
+    <textarea id="q4" data-max="120" placeholder="日本語訳を書く"></textarea>
+    <div class="cnt" data-for="q4">0 字</div>
+  </div>
+
+  <!-- 問5 -->
+  <div class="card" id="c-q5">
+    <div class="qh">
+      <div class="qn">問5</div>
+      <div class="qt"><b>本文の内容と合致するものを二つ選べ</b><span>ちょうど二つ選択してください。三つ目は選べません。</span></div>
+      <div class="pt">10点</div>
+    </div>
+    <div id="q5opts"></div>
+    <p class="note">選択中：<b id="q5n">0</b> / 2</p>
+  </div>
+
+  <!-- 言語化（任意） -->
+  <div class="card" id="c-sum">
+    <div class="qh">
+      <div class="qn opt">任意</div>
+      <div class="qt"><b>この文章は、つまりどういう話か</b><span>設問とは別に、文章全体を自分の言葉で一言にしてみてください。ここが書けるかどうかで、読めているかが分かります。</span></div>
+    </div>
+    <textarea id="sum" data-max="200" placeholder="例）AIが危ないのは◯◯だからで、しかも……"></textarea>
+    <div class="cnt" data-for="sum">0 字</div>
+  </div>
+
+  <div class="err" id="err"></div>
+
+  <div class="send">
+    <button class="go" id="go">解答を送信する</button>
+    <p class="save-n" id="saven">入力内容はこの端末に自動保存されます。途中で閉じても大丈夫です。</p>
+  </div>
+
+  <!-- 結果 -->
+  <div class="result" id="result">
+    <div class="rbox">
+      <h2>送信が完了しました</h2>
+      <p class="rsub" id="rwho"></p>
+      <div class="score"><b id="rsc">0</b><span>/ 15点（選択問題のみ）</span></div>
+      <div id="rrows"></div>
+      <div class="pending">
+        <b>記述三問（問2・問3・問4）は採点中です。</b><br>
+        採点結果とコメントは、後ほど個別にお返しします。返却までのあいだに、解説で考え方を確認しておいてください。
+      </div>
+      <div class="rlinks">
+        <a href="tottori-university-2025-english-q1-full.html">解説ページを開く</a><br>
+        <a href="tottori-2025-english-q1-simple-translation.pdf">シンプル咀嚼訳 PDF</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer class="foot">
+  <b>THINKING</b>
+  学部別・逆転合格設計塾 THINKING ／ 受験は根性じゃなく、設計。<br>
+  本フォームは鳥取大学2025年度英語（大問1）の学習用です。英文・設問の著作権は出題者・原著者に帰属します。
+</footer>
+
+<script>
+/* ===== 設定 ===== */
+/* GASウェブアプリをデプロイして得たURL（/exec で終わるもの）をここに貼る */
+const GAS_URL = "ここにGASのウェブアプリURLを貼る";
+
+const EXAM_ID = "tottori-2025-q1";
+const DRAFT_KEY = "thinking-" + EXAM_ID + "-draft";
+
+const Q1 = ["when","whether","that","what","why"];
+const Q5 = [
+ "AIが進化すると、CEOや他の従業員よりも重要な役割を果たす可能性がある。",
+ "自然淘汰はあくまで生物学的な現象であり、その原理を経済に当てはめるのは難しい。",
+ "進化生物学者のRichard Lewontinは、個体間に違いがあることを自然淘汰が成立する唯一の条件として挙げた。",
+ "AIは人間よりも速く進化できるが、ミバエほど速く進化できるわけではない。",
+ "インターネットなどに組み込まれているAIを止めるのは、コストがかかりすぎて難しいこともある。",
+ "効率を求めることがAIの進化を推し進めるわけではない。",
+ "AI業界の著しい規制不足に対処するため、政府だけでなく民間企業も財政支援をすべきである。"
+];
+
+/* ===== 選択肢を描画 ===== */
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+document.getElementById("q1opts").innerHTML = Q1.map((t,i)=>
+ `<label class="opt-row" data-g="q1"><input type="radio" name="q1" value="${i+1}">`+
+ `<span class="ln">${i+1}</span><span class="lt">${esc(t)}</span></label>`).join("");
+document.getElementById("q5opts").innerHTML = Q5.map((t,i)=>
+ `<label class="opt-row" data-g="q5"><input type="checkbox" name="q5" value="${i+1}">`+
+ `<span class="ln">${i+1}</span><span class="lt">${esc(t)}</span></label>`).join("");
+
+const $ = id => document.getElementById(id);
+const TAS = ["q2a","q2b","q2c","q3","q4","sum"];
+
+/* ===== 選択の見た目と上限 ===== */
+function syncOpts(){
+  document.querySelectorAll('label.opt-row').forEach(l=>{
+    const inp = l.querySelector('input');
+    l.classList.toggle('on', inp.checked);
+  });
+  const n = document.querySelectorAll('input[name=q5]:checked').length;
+  $("q5n").textContent = n;
+  document.querySelectorAll('input[name=q5]').forEach(inp=>{
+    const lock = (n >= 2 && !inp.checked);
+    inp.disabled = lock;
+    inp.closest('label').classList.toggle('lock', lock);
+  });
+}
+document.addEventListener('change', e=>{
+  if(e.target.name === 'q1' || e.target.name === 'q5'){ syncOpts(); save(); prog(); }
+});
+
+/* ===== 文字数と進捗 ===== */
+function counts(){
+  document.querySelectorAll('.cnt').forEach(c=>{
+    const ta = $(c.dataset.for); if(!ta) return;
+    const n = ta.value.trim().length, max = +ta.dataset.max;
+    c.textContent = n + " 字";
+    c.classList.toggle('over', n > max);
+    if(n > max) c.textContent = n + " 字（目安 " + max + " 字をこえています）";
+  });
+}
+function prog(){
+  let n = 0;
+  if($("sid").value.trim()) n++;
+  if($("sname").value.trim()) n++;
+  if(document.querySelector('input[name=q1]:checked')) n++;
+  ["q2a","q2b","q2c","q3","q4"].forEach(k=>{ if($(k).value.trim()) n++; });
+  if(document.querySelectorAll('input[name=q5]:checked').length === 2) n++;
+  $("pc").textContent = n;
+  $("pf").style.width = (n / 9 * 100) + "%";
+}
+
+/* ===== 下書き保存 ===== */
+let saveTimer = null;
+function save(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    try{
+      const d = { sid:$("sid").value, sname:$("sname").value,
+        q1:(document.querySelector('input[name=q1]:checked')||{}).value || "",
+        q5:[...document.querySelectorAll('input[name=q5]:checked')].map(i=>i.value) };
+      TAS.forEach(k=> d[k] = $(k).value);
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+    }catch(e){ $("saven").textContent = "（この端末では下書きの自動保存が使えません）"; }
+  }, 350);
+}
+function load(){
+  try{
+    const raw = localStorage.getItem(DRAFT_KEY); if(!raw) return;
+    const d = JSON.parse(raw);
+    if(d.sid) $("sid").value = d.sid;
+    if(d.sname) $("sname").value = d.sname;
+    TAS.forEach(k=>{ if(d[k]) $(k).value = d[k]; });
+    if(d.q1){ const r = document.querySelector(`input[name=q1][value="${d.q1}"]`); if(r) r.checked = true; }
+    (d.q5||[]).forEach(v=>{ const c = document.querySelector(`input[name=q5][value="${v}"]`); if(c) c.checked = true; });
+  }catch(e){}
+}
+
+["sid","sname"].concat(TAS).forEach(k=>{
+  $(k).addEventListener('input', ()=>{ counts(); prog(); save(); });
+});
+
+/* ===== 検証 ===== */
+function validate(){
+  const miss = [];
+  document.querySelectorAll('.card').forEach(c=>c.classList.remove('bad'));
+  const mark = (id,label)=>{ $(id).classList.add('bad'); miss.push(label); };
+  if(!$("sid").value.trim()) mark("c-id","識別番号");
+  if(!$("sname").value.trim() && !miss.includes("識別番号")) mark("c-id","氏名");
+  else if(!$("sname").value.trim()) miss.push("氏名");
+  if(!document.querySelector('input[name=q1]:checked')) mark("c-q1","問1");
+  if(!$("q2a").value.trim() || !$("q2b").value.trim() || !$("q2c").value.trim()) mark("c-q2","問2（三点すべて）");
+  if(!$("q3").value.trim()) mark("c-q3","問3");
+  if(!$("q4").value.trim()) mark("c-q4","問4");
+  if(document.querySelectorAll('input[name=q5]:checked').length !== 2) mark("c-q5","問5（ちょうど二つ）");
+  return miss;
+}
+
+/* ===== 送信 ===== */
+let sending = false;
+$("go").addEventListener('click', async ()=>{
+  if(sending) return;
+  const err = $("err");
+  const miss = validate();
+  if(miss.length){
+    err.innerHTML = "<b>未入力の項目があります。</b><br>" + miss.join(" ／ ") + " を確認してください。";
+    err.classList.add('show');
+    document.querySelector('.card.bad').scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+  err.classList.remove('show');
+
+  if(!GAS_URL || GAS_URL.indexOf("http") !== 0){
+    err.innerHTML = "<b>送信先が設定されていません。</b><br>管理者にご連絡ください。";
+    err.classList.add('show');
+    return;
+  }
+
+  const payload = {
+    exam: EXAM_ID,
+    sid: $("sid").value.trim(),
+    sname: $("sname").value.trim(),
+    q1: (document.querySelector('input[name=q1]:checked')||{}).value || "",
+    q2: [$("q2a").value.trim(), $("q2b").value.trim(), $("q2c").value.trim()],
+    q3: $("q3").value.trim(),
+    q4: $("q4").value.trim(),
+    q5: [...document.querySelectorAll('input[name=q5]:checked')].map(i=>i.value).sort(),
+    summary: $("sum").value.trim(),
+    ua: navigator.userAgent.slice(0,180)
+  };
+
+  sending = true;
+  const go = $("go");
+  go.disabled = true;
+  go.innerHTML = '<span class="spin"></span>送信しています…';
+
+  try{
+    // Content-Type を指定しない＝単純リクエストになり、プリフライトを避けられる
+    const res = await fetch(GAS_URL, { method:'POST', body: JSON.stringify(payload) });
+    const data = await res.json();
+    if(!data || data.ok !== true) throw new Error(data && data.error ? data.error : 'unknown');
+    try{ localStorage.removeItem(DRAFT_KEY); }catch(e){}
+    showResult(payload, data);
+  }catch(e){
+    sending = false;
+    go.disabled = false;
+    go.textContent = "解答を送信する";
+    err.innerHTML = "<b>送信に失敗しました。</b><br>通信状況を確認して、もう一度お試しください。"+
+      "何度試しても送れない場合は、入力内容をそのままにして塾までご連絡ください。";
+    err.classList.add('show');
+  }
+});
+
+/* ===== 結果表示 ===== */
+function showResult(p, d){
+  document.querySelectorAll('.card, .send, .lead, .prog').forEach(el=> el.style.display='none');
+  $("rwho").textContent = p.sname + "さん（" + p.sid + "）／ 鳥取大学 2025 英語 大問1";
+  $("rsc").textContent = d.objectiveScore;
+
+  const rows = [];
+  rows.push(row(d.q1.correct ? 2 : 0, 2, "問1（" + d.q1.score + " / 5点）",
+    "あなたの解答：" + p.q1 + "　／　正解：" + d.q1.answer + "（" + d.q1.label + "）"));
+  rows.push(row(d.q5.hit, 2, "問5（" + d.q5.score + " / 10点）",
+    "あなたの解答：" + p.q5.join("・") + "　／　正解：" + d.q5.answer.join("・")));
+  $("rrows").innerHTML = rows.join("");
+  $("result").classList.add('show');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+function row(hit, full, t, s){
+  const cls = hit >= full ? 'o' : (hit > 0 ? 'p' : 'x');
+  const ch  = hit >= full ? '○' : (hit > 0 ? '△' : '×');
+  return '<div class="rrow"><div class="mk ' + cls + '">' + ch + '</div>' +
+    '<div class="rt"><b>' + esc(t) + '</b><span>' + esc(s) + '</span></div></div>';
+}
+
+/* ===== 起動 ===== */
+load(); syncOpts(); counts(); prog();
+</script>
+</body>
+</html>
