@@ -50,6 +50,7 @@ body{
   padding:15px 17px;margin:22px 0 0;font-size:13.5px;line-height:1.95;color:var(--ink);
 }
 .lead b{color:var(--navy-ink);}
+.lead u{text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:1px;}
 
 .prog{position:sticky;top:0;z-index:30;background:var(--paper);padding:12px 0 10px;margin:20px 0 0;}
 .prog-bar{height:7px;border-radius:99px;background:var(--line2);overflow:hidden;}
@@ -144,28 +145,14 @@ button.go[disabled]{opacity:.45;cursor:default;transform:none;}
 .result{display:none;margin:24px 0 0;}
 .result.show{display:block;}
 .rbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 19px;}
+.done-mk{
+  width:46px;height:46px;border-radius:50%;background:var(--teal-soft);color:var(--teal-d);
+  display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;margin:0 0 13px;
+}
 .rbox h2{
-  font-family:"Noto Serif JP",serif;font-size:18px;margin:0 0 4px;color:var(--navy-ink);letter-spacing:.02em;
+  font-family:"Noto Serif JP",serif;font-size:19px;margin:0 0 4px;color:var(--navy-ink);letter-spacing:.02em;
 }
-.rbox .rsub{font-size:12.5px;color:var(--muted);margin:0 0 16px;}
-.score{
-  display:flex;align-items:baseline;gap:9px;background:var(--surface2);border-radius:10px;
-  padding:14px 16px;margin:0 0 15px;
-}
-.score b{font-family:"Zilla Slab",serif;font-size:30px;color:var(--navy-ink);line-height:1;}
-.score span{font-size:12.5px;color:var(--muted);}
-.rrow{
-  display:flex;align-items:flex-start;gap:11px;padding:12px 0;border-top:1px solid var(--line2);font-size:13.5px;line-height:1.8;
-}
-.rrow .mk{
-  flex:0 0 26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-weight:700;font-size:14px;
-}
-.mk.o{background:var(--teal-soft);color:var(--teal-d);}
-.mk.p{background:var(--gold-soft);color:var(--gold-d);}
-.mk.x{background:var(--verm-soft);color:var(--verm-d);}
-.rrow .rt b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy-ink);font-size:14px;margin-bottom:3px;}
-.rrow .rt span{display:block;color:var(--muted);font-size:12.5px;}
+.rbox .rsub{font-size:12.5px;color:var(--muted);margin:0 0 16px;line-height:1.8;}
 .pending{
   background:var(--gold-soft);border-left:4px solid var(--gold);border-radius:0 9px 9px 0;
   padding:14px 16px;margin:16px 0 0;font-size:13.5px;line-height:1.9;
@@ -196,7 +183,7 @@ button.go[disabled]{opacity:.45;cursor:default;transform:none;}
   <div class="lead">
     AIと自然淘汰（Dan Hendrycks, &quot;Survival of the Fittest&quot;）の大問1です。<br>
     <b>記述三問は、思いついた語を並べるのではなく、採点者が読んで意味が取れる一文で書いてください。</b>
-    送信すると、選択問題（問1・問5）の正誤はその場で表示されます。記述の採点とコメントは、後ほど個別にお返しします。
+    このフォームでは点数は表示されません。採点結果と講評は、授業のなかでまとめて返します。<u>自信がない答案でも、空欄にせず書けるところまで書いて出してください。</u>どこでつまずいたかが分かるほうが、返せるものが増えます。
   </div>
 
   <div class="prog">
@@ -305,16 +292,16 @@ button.go[disabled]{opacity:.45;cursor:default;transform:none;}
   <!-- 結果 -->
   <div class="result" id="result">
     <div class="rbox">
+      <div class="done-mk">✓</div>
       <h2>送信が完了しました</h2>
       <p class="rsub" id="rwho"></p>
-      <div class="score"><b id="rsc">0</b><span>/ 15点（選択問題のみ）</span></div>
-      <div id="rrows"></div>
       <div class="pending">
-        <b>記述三問（問2・問3・問4）は採点中です。</b><br>
-        採点結果とコメントは、後ほど個別にお返しします。返却までのあいだに、解説で考え方を確認しておいてください。
+        <b>採点結果と講評は、授業のなかでまとめて返します。</b><br>
+        この場では点数は表示しません。ほかの人の答案と並べて、どこで差がついたかを見たほうが、自分の答案の直しどころがはっきりするからです。
       </div>
       <div class="rlinks">
-        <a href="tottori-university-2025-english-q1-full.html">解説ページを開く</a><br>
+        授業までに見ておくもの<br>
+        <a href="tottori-university-2025-english-q1-full.html">解説ページ</a><br>
         <a href="tottori-2025-english-q1-simple-translation.pdf">シンプル咀嚼訳 PDF</a>
       </div>
     </div>
@@ -499,26 +486,13 @@ $("go").addEventListener('click', async ()=>{
   }
 });
 
-/* ===== 結果表示 ===== */
+/* ===== 送信完了の表示 ===== */
 function showResult(p, d){
   document.querySelectorAll('.card, .send, .lead, .prog').forEach(el=> el.style.display='none');
-  $("rwho").textContent = p.sname + "さん（" + p.sid + "）／ 鳥取大学 2025 英語 大問1";
-  $("rsc").textContent = d.objectiveScore;
-
-  const rows = [];
-  rows.push(row(d.q1.correct ? 2 : 0, 2, "問1（" + d.q1.score + " / 5点）",
-    "あなたの解答：" + p.q1 + "　／　正解：" + d.q1.answer + "（" + d.q1.label + "）"));
-  rows.push(row(d.q5.hit, 2, "問5（" + d.q5.score + " / 10点）",
-    "あなたの解答：" + p.q5.join("・") + "　／　正解：" + d.q5.answer.join("・")));
-  $("rrows").innerHTML = rows.join("");
+  const no = (d && d.receipt) ? "　／　受付番号 " + d.receipt : "";
+  $("rwho").textContent = p.sname + "さん（" + p.sid + "）／ 鳥取大学 2025 英語 大問1" + no;
   $("result").classList.add('show');
   window.scrollTo({top:0, behavior:'smooth'});
-}
-function row(hit, full, t, s){
-  const cls = hit >= full ? 'o' : (hit > 0 ? 'p' : 'x');
-  const ch  = hit >= full ? '○' : (hit > 0 ? '△' : '×');
-  return '<div class="rrow"><div class="mk ' + cls + '">' + ch + '</div>' +
-    '<div class="rt"><b>' + esc(t) + '</b><span>' + esc(s) + '</span></div></div>';
 }
 
 /* ===== 起動 ===== */

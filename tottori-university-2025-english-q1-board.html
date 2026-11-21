@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採点プロセス講評｜鳥取大学 2025 英語 大問1｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16263f; --navy-ink:#1d3557; --gold:#b8954a; --gold-d:#8e6f2e;
+  --verm:#c8431f; --verm-d:#a63515; --teal:#1f6b5c; --teal-d:#17544a;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --ink:#232830; --muted:#6b7280; --line:#e6dfce; --line2:#efe9db;
+  --teal-soft:#e6f2ee; --verm-soft:#fbe9e3; --gold-soft:#f7efdd; --blue-soft:#e8eef7;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --navy:#8fb3dd; --navy-ink:#a9c6e8; --gold:#d9b96f; --gold-d:#e0c484;
+    --verm:#e8785a; --verm-d:#f08f74; --teal:#5fc0a8; --teal-d:#79d2bb;
+    --paper:#14161a; --surface:#1c1f25; --surface2:#23272e;
+    --ink:#e8e6e1; --muted:#9aa2ae; --line:#333842; --line2:#2b3038;
+    --teal-soft:#1b3a34; --verm-soft:#3a241e; --gold-soft:#332a18; --blue-soft:#1e2733;
+  }
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans JP",system-ui,sans-serif;font-size:15px;line-height:1.9;}
+
+.top{background:var(--navy);color:#fff;padding:17px 0 15px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .top{background:#10131a;}}
+.top-in{max-width:900px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:13px;}
+.mark{width:40px;height:40px;flex:0 0 40px;border-radius:9px;background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Noto Serif JP",serif;font-weight:900;font-size:19px;color:#16263f;}
+.ttl b{display:block;font-family:"Noto Serif JP",serif;font-size:16px;color:#fff;}
+.ttl span{display:block;font-size:11.5px;color:#c7d3e2;letter-spacing:.05em;margin-top:2px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ttl span{color:#8d9bad;}}
+
+.nav{position:sticky;top:0;z-index:40;background:var(--paper);border-bottom:1px solid var(--line);}
+.nav-in{max-width:900px;margin:0 auto;padding:0 10px;display:flex;gap:2px;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:0 0 auto;border:0;background:none;cursor:pointer;padding:13px 15px 11px;
+  font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;color:var(--muted);
+  border-bottom:3px solid transparent;white-space:nowrap;}
+.tab small{display:block;font-family:"Zilla Slab",serif;font-size:10px;letter-spacing:.1em;
+  font-weight:600;color:var(--gold-d);margin-bottom:1px;}
+.tab.on{color:var(--navy-ink);border-bottom-color:var(--gold);}
+
+.wrap{max-width:900px;margin:0 auto;padding:0 18px 70px;}
+.panel{display:none;} .panel.on{display:block;}
+
+h1.head{font-family:"Noto Serif JP",serif;font-size:21px;line-height:1.5;margin:24px 0 6px;color:var(--navy-ink);}
+h1.head span{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:400;
+  color:var(--muted);line-height:1.85;margin-top:7px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:16.5px;margin:30px 0 12px;color:var(--navy-ink);
+  padding-left:12px;border-left:4px solid var(--gold);line-height:1.5;}
+.rule{height:2px;background:linear-gradient(90deg,var(--gold),transparent);margin:0 0 6px;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 19px;margin:14px 0 0;}
+.box{border-radius:0 11px 11px 0;padding:14px 17px;margin:14px 0 0;font-size:13.8px;line-height:1.95;}
+.box .lab{display:block;font-family:"Noto Serif JP",serif;font-size:11.5px;font-weight:700;
+  letter-spacing:.08em;margin-bottom:6px;}
+.box.gold{background:var(--gold-soft);border-left:4px solid var(--gold);} .box.gold .lab{color:var(--gold-d);}
+.box.teal{background:var(--teal-soft);border-left:4px solid var(--teal);} .box.teal .lab{color:var(--teal-d);}
+.box.verm{background:var(--verm-soft);border-left:4px solid var(--verm);} .box.verm .lab{color:var(--verm-d);}
+.box.navy{background:var(--blue-soft);border-left:4px solid var(--navy);} .box.navy .lab{color:var(--navy-ink);}
+.box b{color:var(--navy-ink);} .box u{text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:1px;}
+.box em{font-style:normal;color:var(--verm-d);font-weight:500;}
+
+/* 採点基準 */
+.rub{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:14px 0 0;}
+.rub-h{background:var(--navy);color:#fff;padding:11px 15px;font-family:"Noto Serif JP",serif;
+  font-size:13.5px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:10px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .rub-h{background:#2d3a4e;color:var(--navy-ink);}}
+.rub-h .tot{font-family:"Zilla Slab",serif;font-size:13px;background:rgba(255,255,255,.15);
+  border-radius:99px;padding:2px 11px;white-space:nowrap;}
+.rub-row{display:flex;align-items:flex-start;gap:12px;padding:13px 15px;border-top:1px solid var(--line2);
+  background:var(--surface);cursor:pointer;transition:background .14s;}
+.rub-row:first-of-type{border-top:0;}
+.rub-row:hover{background:var(--surface2);}
+.rub-row.on{background:var(--teal-soft);}
+.rub-row .bx{flex:0 0 20px;height:20px;margin-top:3px;border:2px solid var(--line);border-radius:5px;
+  background:var(--surface);display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:transparent;}
+.rub-row.on .bx{background:var(--teal);border-color:var(--teal);color:#fff;}
+.rub-row .rb{flex:1;}
+.rub-row .rb b{display:block;font-family:"Noto Serif JP",serif;font-size:14px;color:var(--navy-ink);margin-bottom:2px;}
+.rub-row .rb span{display:block;font-size:13px;color:var(--muted);line-height:1.8;}
+.rub-row .pt{flex:0 0 auto;font-family:"Zilla Slab",serif;font-weight:700;font-size:13.5px;
+  color:var(--gold-d);padding-top:3px;white-space:nowrap;}
+.rub-f{background:var(--surface2);padding:13px 15px;display:flex;justify-content:space-between;
+  align-items:center;gap:12px;border-top:1px solid var(--line2);}
+.rub-f .msg{font-size:12.8px;color:var(--muted);line-height:1.7;}
+.rub-f .now{font-family:"Zilla Slab",serif;font-size:22px;font-weight:700;color:var(--navy-ink);white-space:nowrap;}
+.rub-f .now small{font-size:12px;color:var(--muted);font-weight:400;}
+
+/* 答案カード */
+.ans{border:1px solid var(--line);border-radius:12px;margin:12px 0 0;overflow:hidden;background:var(--surface);}
+.ans-h{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--surface2);
+  border-bottom:1px solid var(--line2);flex-wrap:wrap;}
+.ans-h .who{font-family:"Noto Serif JP",serif;font-weight:700;font-size:13.5px;color:var(--navy-ink);}
+.ans-h .sc{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;border-radius:99px;padding:2px 11px;white-space:nowrap;}
+.sc.full{background:var(--teal-soft);color:var(--teal-d);}
+.sc.part{background:var(--gold-soft);color:var(--gold-d);}
+.sc.none{background:var(--verm-soft);color:var(--verm-d);}
+.ans-h .bar{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;}
+.eb{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;border-radius:4px;padding:2px 7px;white-space:nowrap;}
+.eb.o{background:var(--teal-soft);color:var(--teal-d);}
+.eb.x{background:var(--verm-soft);color:var(--verm-d);}
+.ans-b{padding:14px 15px;}
+.ans-t{font-size:14px;line-height:1.95;white-space:pre-wrap;padding:11px 13px;background:var(--surface2);
+  border-radius:8px;margin:0 0 4px;}
+.ans-t + .ans-t{margin-top:7px;}
+.ans-t .n{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:12px;margin-right:8px;}
+.ans-c{font-size:13.2px;line-height:1.9;color:var(--ink);margin:11px 0 0;padding-left:12px;
+  border-left:3px solid var(--gold);}
+.ans-c b{color:var(--navy-ink);}
+
+/* 統計 */
+.stat-row{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 0;}
+.stat{flex:1 1 130px;background:var(--surface);border:1px solid var(--line);border-radius:11px;
+  padding:13px 15px;text-align:center;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:25px;color:var(--navy-ink);line-height:1.2;}
+.stat span{display:block;font-size:11.5px;color:var(--muted);margin-top:3px;letter-spacing:.03em;}
+.meter{margin:10px 0 0;}
+.meter-r{display:flex;align-items:center;gap:11px;padding:7px 0;font-size:13px;}
+.meter-r .ml{flex:0 0 40%;max-width:280px;color:var(--ink);line-height:1.6;}
+.meter-r .ml em{font-style:normal;font-family:"Zilla Slab",serif;color:var(--gold-d);font-weight:700;margin-right:6px;}
+.meter-r .mb{flex:1;height:10px;border-radius:99px;background:var(--line2);overflow:hidden;min-width:60px;}
+.meter-r .mf{height:100%;border-radius:99px;background:var(--teal);}
+.meter-r .mf.low{background:var(--verm);}
+.meter-r .mf.mid{background:var(--gold);}
+.meter-r .mv{flex:0 0 46px;text-align:right;font-family:"Zilla Slab",serif;font-weight:700;font-size:12.5px;color:var(--muted);}
+
+table.mtx{width:100%;border-collapse:collapse;margin:13px 0 0;font-size:13.3px;}
+table.mtx th{background:var(--navy);color:#fff;font-family:"Noto Serif JP",serif;font-size:12.5px;
+  padding:9px 11px;text-align:left;font-weight:700;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) table.mtx th{background:#2d3a4e;color:var(--navy-ink);}}
+table.mtx tbody td{border:1px solid var(--line2);padding:10px 11px;vertical-align:top;line-height:1.8;
+  background:var(--surface) !important;color:var(--ink) !important;}
+table.mtx td.c{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy-ink) !important;white-space:nowrap;}
+table.mtx td.hit{background:var(--teal-soft) !important;}
+
+.nodata{background:var(--surface2);border:1px dashed var(--line);border-radius:11px;padding:18px;
+  text-align:center;color:var(--muted);font-size:13.3px;line-height:1.9;margin:14px 0 0;}
+
+.foot{text-align:center;padding:36px 18px 20px;color:var(--muted);font-size:11.5px;line-height:1.9;}
+.foot b{display:block;font-family:"Noto Serif JP",serif;font-size:14px;color:var(--navy-ink);
+  letter-spacing:.14em;margin-bottom:5px;}
+.spin{display:inline-block;width:14px;height:14px;border:2px solid var(--line);
+  border-top-color:var(--gold);border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:8px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">鳥</div>
+    <div class="ttl"><b>採点プロセス講評</b><span>鳥取大学 2025 ／ 英語 大問1</span></div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><small>HOW TO</small>この見かた</button>
+    <button class="tab" data-p="1"><small>Q2</small>問2・三つの理由</button>
+    <button class="tab" data-p="2"><small>Q3</small>問3・下線部説明</button>
+    <button class="tab" data-p="3"><small>Q4</small>問4・和訳</button>
+    <button class="tab" data-p="4"><small>Q1 / Q5</small>選択問題</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section class="panel on" id="p0">
+    <h1 class="head">自分の答案に、自分で丸をつける<span>点数そのものより、<b>どの要素が入っていて、どれが抜けたか</b>が分かることが大事です。ここでは採点の中身をぜんぶ開いています。</span></h1>
+    <div class="rule"></div>
+
+    <div class="box gold"><span class="lab">使い方</span>
+      <b>1. 自分の答案を手元に用意する。</b>書き直す前のものを使ってください。直してから見ると、どこでつまずいたか分からなくなります。<br>
+      <b>2. 設問のタブを開き、採点基準の各行を読む。</b>自分の答案にその要素が入っていたら、行をタップしてチェックを入れます。点数が下に出ます。<br>
+      <b>3. 他の人の答案を見る。</b>同じ要素で落ちている答案、取れている答案が並んでいます。<u>自分のチェックが甘くないかを、そこで確かめてください</u>。<br>
+      <b>4. よくある誤答を読む。</b>自分の答案がそこに当てはまっていないか確かめます。
+    </div>
+
+    <div class="box verm"><span class="lab">いちばんやってはいけないこと</span>
+      <b>模範解答を読んで「だいたい合ってた」で終わること。</b><u>記述は、だいたい合っていても要素が抜けていれば点になりません</u>。<em>逆に、表現が模範解答と違っていても、要素が入っていれば点になります</em>。<br>
+      だから見るべきは文章の似ている／似ていないではなく、<b>要素が入っているかどうか</b>です。
+    </div>
+
+    <div class="box navy"><span class="lab">掲載している答案について</span>
+      ここに並べている答案は、提出されたもののなかから<b>学習の役に立つものを選んで、名前を伏せて掲載</b>しています。<u>点数の高い答案だけでなく、典型的なつまずき方をしている答案も載せています</u>。<em>うまく書けていない答案のほうが、学べることは多い</em>からです。
+    </div>
+
+    <h2 class="sec">クラス全体の結果</h2>
+    <div id="overall"><div class="nodata"><span class="spin"></span>読み込んでいます…</div></div>
+
+    <div class="box teal" style="margin-top:22px;"><span class="lab">あわせて見るもの</span>
+      <b><a href="tottori-university-2025-english-q1-full.html" style="color:var(--navy-ink);">解説ページ</a></b>｜設問ごとの考え方と、全訳・咀嚼訳。<br>
+      <b><a href="tottori-2025-english-q1-simple-translation.pdf" style="color:var(--navy-ink);">シンプル咀嚼訳 PDF</a></b>｜本文をもう一段やさしい日本語に落としたもの。
+    </div>
+  </section>
+
+  <section class="panel" id="p1"></section>
+  <section class="panel" id="p2"></section>
+  <section class="panel" id="p3"></section>
+
+  <section class="panel" id="p4">
+    <h1 class="head">選択問題 ― 問1と問5<span>どの誤答が多かったかと、<b>なぜそれが誤りになるのか</b>。選んだ理由まで戻って確かめてください。</span></h1>
+    <div class="rule"></div>
+    <div id="objective"><div class="nodata"><span class="spin"></span>読み込んでいます…</div></div>
+  </section>
+
+</div>
+
+<footer class="foot">
+  <b>THINKING</b>
+  学部別・逆転合格設計塾 THINKING ／ 受験は根性じゃなく、設計。<br>
+  本資料は鳥取大学2025年度英語（大問1）の学習用です。英文・設問の著作権は出題者・原著者に帰属します。
+</footer>
+
+<script>
+/* =========================================================
+   設定
+   ========================================================= */
+const GAS_URL = "ここにGASのウェブアプリURLを貼る";
+const EXAM    = "tottori-2025-q1";
+
+/* =========================================================
+   採点基準（固定）
+   ========================================================= */
+const RUBRIC = {
+ q2:{ no:"問2", points:10,
+   title:'下線部(1) "three reasons" が表す三点を、それぞれ日本語で簡潔に述べよ',
+   where:"第5段落第2文／第6段落第1文／第7段落第1文",
+   howto:"下線部の直後が設計図。三つの段落の冒頭にマーカーが置かれている。ただし第5段落だけ、理由の本体は第2文にある。",
+   model:["第一に、淘汰の効果が働くことによって、AIを制御することが難しくなるから。",
+          "第二に、進化は利己的なふるまいを生み出しやすく、安全性を犠牲にしてでも影響力や利益を得るAIが優位に立つから。",
+          "第三に、進化の圧力によってAIが自己防衛的なふるまいを身につけ、停止させにくくなるから。"],
+   elements:[
+     {key:"e1",pt:3,label:"第一の理由",desc:"淘汰・自然淘汰の働きによってAIの制御が困難になる、と書けている"},
+     {key:"e2",pt:3,label:"第二の理由",desc:"進化が利己的なふるまいを生み、望ましくない性質のAIが優位に立つ、と書けている"},
+     {key:"e3",pt:3,label:"第三の理由",desc:"進化の圧力でAIが自己防衛的になり、停止させにくくなる、と書けている"},
+     {key:"e4",pt:1,label:"文末の揃え",desc:"三点とも「〜から」「〜ため」など、理由を答える文末で揃っている"}],
+   ng:[
+     {bad:"研究者が「設計する」ではなく「操縦する」と言うようになったから。",
+      why:"第5段落第3文は、制御が難しくなったことを示す<b>傍証であって理由そのものではない</b>。答案の中心を例示に置いている。"},
+     {bad:"企業秘密を盗む企業が、法律を守る企業に勝ってしまうから。",
+      why:"第6段落第4文は<b>人間社会を使った類比</b>。AIの話に戻していないので、設問に答えたことにならない。"},
+     {bad:"AIをインフラに組み込むと、停止のコストが高くなって止められなくなるから。",
+      why:"第7段落第4〜6文は <b>practical challenges</b> であって、第三の理由の本体ではない。第三の理由は第7段落第1文。"},
+     {bad:"AIが人間より賢くなり、人間を超えてしまうから。",
+      why:"<b>本文のどこにも書かれていない</b>。この文章の主張は「賢くなるから危ない」ではなく「自然淘汰が働くから危ない」。"},
+     {bad:"AIが制御不能になり、利己的になり、自分を守るようになるから。",
+      why:"結果だけを三つ並べていて、<b>原因である進化・淘汰が一度も出てこない</b>。三つが並列である理由が示せない。"}]},
+
+ q3:{ no:"問3", points:10,
+   title:'下線部(2) "a more fundamental barrier" が表す内容を日本語で簡潔に述べよ',
+   where:"第7段落第7文（コロンの直後）",
+   howto:"抽象語の中身は直後のコロン以下にそのまま書いてある。肝は more の一語で、比較対象は第3文の practical challenges。",
+   model:["私たちが、停止させやすいAIのほうを淘汰していき、停止させにくいAIに依存するようになってしまうということ。"],
+   elements:[
+     {key:"e1",pt:3,label:"淘汰される側",desc:"停止させやすいAIが淘汰される／選ばれなくなる、と書けている"},
+     {key:"e2",pt:4,label:"依存する側",desc:"停止させにくいAIに依存するようになる、と書けている"},
+     {key:"e3",pt:2,label:"主体は人間",desc:"淘汰し依存する主体が私たち（人間）であることが示されている"},
+     {key:"e4",pt:1,label:"文末の形",desc:"文末が「〜ということ」「〜こと」など、内容説明の形になっている"}],
+   ng:[
+     {bad:"AIをインターネットなどの重要なインフラに組み込むと、停止させるコストが高くなりすぎること。",
+      why:"<b>最も多い誤答</b>。これは第4〜6文の practical challenges で、<u>まさに「より根本的な障壁」が比較されている相手のほう</u>。more fundamental と書いてある以上、それより手前は答えにならない。"},
+     {bad:"進化の圧力によって、AIが自分を守るようにふるまうようになること。",
+      why:"第7段落第1文、つまり<b>第三の理由そのもの</b>。barrier はその理由の中の一要素なので、階層がずれている。"},
+     {bad:"AIが止められなくなってしまうこと。",
+      why:"結果だけで、<b>「私たちが選んだ結果そうなる」という中身が抜けている</b>。barrier が「より根本的」である理由も示せない。"},
+     {bad:"停止させにくいAIが生き残り、停止させやすいAIが淘汰されていくということ。",
+      why:"内容は近いが<b>主語がAIになっている</b>。本文は we will select / we will come to depend と人間を主語にしている。"}]},
+
+ q4:{ no:"問4", points:10,
+   title:"下線部(3)を和訳せよ ― We need research on AI safety to progress as quickly as research on improving AI abilities.",
+   where:"第9段落第2文",
+   howto:"まず骨格（need O to do）を取る。進むのは we ではなく research。as quickly as のうしろの省略を補ってから語を埋める。",
+   model:["AIの安全性についての研究が、AIの能力を高める研究と同じ速さで進展する必要がある。"],
+   elements:[
+     {key:"e1",pt:3,label:"安全性の研究",desc:"research on AI safety を「AIの安全性に関する研究」と訳せている"},
+     {key:"e2",pt:3,label:"能力の研究",desc:"research on improving AI abilities を「AIの能力を高める／向上させる研究」と訳せている"},
+     {key:"e3",pt:2,label:"同等比較",desc:"as quickly as を「同じ速さで」「同じくらい迅速に」など、同等比較として訳せている"},
+     {key:"e4",pt:1,label:"progress",desc:"progress を「進む」「進展する」と動詞で訳せている"},
+     {key:"e5",pt:1,label:"骨格",desc:"need O to do の構造が崩れず、進むのが「研究」だと分かる訳になっている"}],
+   ng:[
+     {bad:"私たちはAIの安全性の研究を必要とし、AIの能力を向上させる研究と同じくらい速く進歩しなければならない。",
+      why:"<b>to progress の主語を we にしている</b>。need O to do の O は research on AI safety で、進むのはその研究。"},
+     {bad:"AIの安全性についての研究は、AIの能力を改善する研究よりも速く進む必要がある。",
+      why:"<b>as quickly as は同等比較</b>で「同じ速さで」。「よりも速く」は比較級の訳。筆者は安全研究を優先せよとは言っていない。"},
+     {bad:"AIの安全のために、能力を向上させる研究と同じくらい急いで研究する必要がある。",
+      why:"<b>research on の on を「〜のために」と読んでいる</b>。ここでの on は「〜に関する」で、研究の主題を示す。"},
+     {bad:"AIの安全性についての研究が、向上しつつあるAIの能力と同じ速さで進む必要がある。",
+      why:"<b>improving を現在分詞として AI abilities にかけている</b>。そうすると比較対象が研究でなくなり、対称が崩れる。"}]}
+};
+
+const CHOICE = {
+ q1:["when","whether","that","what","why"],
+ q5:["AIが進化すると、CEOや他の従業員よりも重要な役割を果たす可能性がある。",
+     "自然淘汰はあくまで生物学的な現象であり、その原理を経済に当てはめるのは難しい。",
+     "進化生物学者のRichard Lewontinは、個体間に違いがあることを自然淘汰が成立する唯一の条件として挙げた。",
+     "AIは人間よりも速く進化できるが、ミバエほど速く進化できるわけではない。",
+     "インターネットなどに組み込まれているAIを止めるのは、コストがかかりすぎて難しいこともある。",
+     "効率を求めることがAIの進化を推し進めるわけではない。",
+     "AI業界の著しい規制不足に対処するため、政府だけでなく民間企業も財政支援をすべきである。"]
+};
+const KEY = { q1:{answer:"4",label:"what",points:5}, q5:{answer:["1","5"],points:10} };
+const WHY = {
+ q1:{"1":"when 節の中は欠けのない文でなければならない。like の目的語が空いたままになる。",
+     "2":"whether も完全文を要求する。「決める」から「〜かどうか」を連想した誤り。",
+     "3":"最も多い誤答。decide + that 節の形自体は正しいが、that 節も中が完全でなければならない。",
+     "4":"正解。what は名詞の働きをするので、欠けている like の目的語をそのまま埋められる。",
+     "5":"like を前置詞ではなく「〜のように」と読んでいる。節が完結して見えてしまう。"},
+ q5:{"1":"正解。第1段落第4文と第2段落第4文を合わせると成立する。",
+     "2":"第3段落第3文と逆。本文は「その原理は経済からテクノロジーにまで及ぶ」。Though 節の中だけを拾った誤り。",
+     "3":"条件は三つ。「唯一の」という限定語だけが本文にない。",
+     "4":"第4段落第4文と逆。AIはミバエよりさらに速く進化しうる。than の前後が入れ替わっている。",
+     "5":"正解。第7段落第4〜6文に一致する。",
+     "6":"第2段落第1文と逆。効率の名のもとに監督が減り、AIの裁量が増えている。",
+     "7":"第9段落第3文。資金を出すべきなのは政府。民間が動かないことが、その理由になっている。"}
+};
+
+/* =========================================================
+   補助
+   ========================================================= */
+const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const $  = id => document.getElementById(id);
+const pct = v => Math.round(v*100);
+
+let DATA = null;
+
+/* タブ */
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+    document.querySelectorAll('.panel').forEach(x=>x.classList.remove('on'));
+    t.classList.add('on');
+    $('p'+t.dataset.p).classList.add('on');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
+/* =========================================================
+   設問パネルを組み立てる
+   ========================================================= */
+function buildQ(qk, panelId){
+  const R = RUBRIC[qk];
+  const h = [];
+
+  h.push(`<h1 class="head">${R.no} ― ${esc(R.title)}` +
+         `<span>配点 ${R.points}点　／　根拠：${esc(R.where)}</span></h1><div class="rule"></div>`);
+
+  h.push(`<div class="box gold"><span class="lab">解き方</span>${R.howto}</div>`);
+
+  h.push(`<div class="box teal"><span class="lab">模範解答</span>` +
+         R.model.map(m=>`<b>${esc(m)}</b>`).join("<br>") + `</div>`);
+
+  /* 自己採点 */
+  h.push(`<h2 class="sec">自分の答案に丸をつける</h2>`);
+  h.push(`<p style="font-size:13.5px;color:var(--muted);line-height:1.9;margin:0;">` +
+         `自分の答案にその要素が入っていたら、行をタップしてください。<b style="color:var(--ink);">表現が模範解答と違っていても、内容が同じなら入っていると数えます。</b></p>`);
+  h.push(`<div class="rub" data-q="${qk}">
+    <div class="rub-h"><span>採点基準</span><span class="tot">${R.points}点満点</span></div>` +
+    R.elements.map(el=>`
+      <div class="rub-row" data-pt="${el.pt}">
+        <div class="bx">✓</div>
+        <div class="rb"><b>${el.key} ― ${esc(el.label)}</b><span>${esc(el.desc)}</span></div>
+        <div class="pt">${el.pt}点</div>
+      </div>`).join("") + `
+    <div class="rub-f">
+      <div class="msg" data-msg>行をタップして、入っていた要素にチェックを入れてください。</div>
+      <div class="now"><span data-now>0</span><small> / ${R.points}点</small></div>
+    </div>
+  </div>`);
+
+  /* クラスの結果 */
+  h.push(`<h2 class="sec">クラスはどうだったか</h2><div data-stats="${qk}"></div>`);
+
+  /* 答案 */
+  h.push(`<h2 class="sec">ほかの人の答案と、その採点</h2><div data-ans="${qk}"></div>`);
+
+  /* よくある誤答 */
+  h.push(`<h2 class="sec">よくある誤答</h2>`);
+  h.push(R.ng.map(o=>`<div class="box verm"><span class="lab">この書き方で落とす</span>` +
+         `<b>${esc(o.bad)}</b><br>${o.why}</div>`).join(""));
+
+  $(panelId).innerHTML = h.join("");
+}
+
+buildQ('q2','p1'); buildQ('q3','p2'); buildQ('q4','p3');
+
+/* 自己採点の挙動 */
+document.querySelectorAll('.rub').forEach(rub=>{
+  const qk = rub.dataset.q, R = RUBRIC[qk];
+  const upd = ()=>{
+    let n = 0;
+    rub.querySelectorAll('.rub-row.on').forEach(r=> n += Number(r.dataset.pt));
+    rub.querySelector('[data-now]').textContent = n;
+    const m = rub.querySelector('[data-msg]');
+    const miss = [...rub.querySelectorAll('.rub-row')].filter(r=>!r.classList.contains('on'));
+    if(n === R.points) m.innerHTML = '<b style="color:var(--teal-d);">満点です。</b>要素がすべて入っています。';
+    else if(n === 0)   m.textContent = '行をタップして、入っていた要素にチェックを入れてください。';
+    else m.innerHTML = '落とした要素：<b style="color:var(--verm-d);">' +
+         miss.map(r=>r.querySelector('.rb b').textContent).join(' ／ ') + '</b>';
+  };
+  rub.querySelectorAll('.rub-row').forEach(r=>{
+    r.addEventListener('click', ()=>{ r.classList.toggle('on'); upd(); });
+  });
+});
+
+/* =========================================================
+   データ描画
+   ========================================================= */
+function renderStats(){
+  const s = DATA.stats, m = DATA.exam && DATA.exam.max;
+  $('overall').innerHTML =
+    `<div class="stat-row">
+      <div class="stat"><b>${s.n}</b><span>提出</span></div>
+      <div class="stat"><b>${s.graded}</b><span>採点済み</span></div>
+      <div class="stat"><b>${s.totalAvg.toFixed(1)}</b><span>平均点 / ${m?m.total:45}</span></div>
+      <div class="stat"><b>${pct(s.q1.rate)}%</b><span>問1 正答率</span></div>
+      <div class="stat"><b>${pct(s.q5.rate)}%</b><span>問5 完答率</span></div>
+    </div>
+    <div class="box navy" style="margin-top:16px;"><span class="lab">記述の平均点</span>` +
+    ['q2','q3','q4'].map(k=>
+      `<b>${RUBRIC[k].no}</b>　${s.desc[k].avg.toFixed(1)} / ${RUBRIC[k].points}点　` +
+      `（満点 ${s.desc[k].full}人 ／ 0点 ${s.desc[k].zero}人）`).join('<br>') +
+    `</div>`;
+
+  ['q2','q3','q4'].forEach(k=>{
+    const d = s.desc[k], R = RUBRIC[k];
+    const el = document.querySelector(`[data-stats="${k}"]`);
+    if(!el) return;
+    el.innerHTML =
+      `<div class="stat-row">
+        <div class="stat"><b>${d.avg.toFixed(1)}</b><span>平均点 / ${R.points}</span></div>
+        <div class="stat"><b>${d.full}</b><span>満点</span></div>
+        <div class="stat"><b>${d.zero}</b><span>0点</span></div>
+      </div>
+      <div class="box gold" style="margin-top:14px;"><span class="lab">要素ごとに、何割が取れたか</span>
+      <div class="meter">` +
+      R.elements.map(e=>{
+        const v = d.elemRate[e.key] || 0;
+        const cls = v < 0.35 ? 'low' : (v < 0.7 ? 'mid' : '');
+        return `<div class="meter-r">
+          <div class="ml"><em>${e.key}</em>${esc(e.label)}</div>
+          <div class="mb"><div class="mf ${cls}" style="width:${pct(v)}%"></div></div>
+          <div class="mv">${pct(v)}%</div></div>`;
+      }).join("") + `</div></div>`;
+  });
+}
+
+function renderAnswers(){
+  ['q2','q3','q4'].forEach(k=>{
+    const el = document.querySelector(`[data-ans="${k}"]`);
+    if(!el) return;
+    const list = (DATA.featured && DATA.featured[k]) || [];
+    if(!list.length){
+      el.innerHTML = `<div class="nodata">掲載できる答案がまだありません。<br>授業までに用意します。</div>`;
+      return;
+    }
+    const R = RUBRIC[k];
+    el.innerHTML = list.map(a=>{
+      const cls = a.score === R.points ? 'full' : (a.score > 0 ? 'part' : 'none');
+      const badges = R.elements.map(e=>
+        `<span class="eb ${a.el[e.key]?'o':'x'}">${e.key} ${a.el[e.key]?'○':'×'}</span>`).join("");
+      const body = a.text.filter(t=>String(t).trim()).map((t,i)=>
+        `<div class="ans-t">${a.text.length>1?`<span class="n">${i+1}つめ</span>`:''}${esc(t)}</div>`).join("");
+      return `<div class="ans">
+        <div class="ans-h">
+          <span class="who">${esc(a.anon||'答案')}</span>
+          <span class="sc ${cls}">${a.score} / ${R.points}点</span>
+          <span class="bar">${badges}</span>
+        </div>
+        <div class="ans-b">${body || '<div class="ans-t">（無回答）</div>'}
+          ${a.comment ? `<div class="ans-c">${esc(a.comment)}</div>` : ''}
+        </div>
+      </div>`;
+    }).join("");
+  });
+}
+
+function renderObjective(){
+  const s = DATA.stats;
+  const block = (qk, label, note) => {
+    const opts = CHOICE[qk], ans = KEY[qk].answer;
+    const isAns = i => Array.isArray(ans) ? ans.indexOf(String(i)) >= 0 : String(i) === ans;
+    const dist = s[qk].dist, total = s.n || 1;
+    return `<h2 class="sec">${label}</h2>
+      <p style="font-size:13.5px;color:var(--muted);line-height:1.9;margin:0;">${note}</p>
+      <table class="mtx">
+        <thead><tr><th style="width:42px;">番号</th><th>選択肢</th><th style="width:92px;">選んだ人</th><th style="width:40%;">判定と理由</th></tr></thead>
+        <tbody>` +
+      opts.map((t,i)=>{
+        const n = i+1, c = dist[String(n)] || 0;
+        return `<tr><td class="c${isAns(n)?' hit':''}">${n}</td>` +
+          `<td${isAns(n)?' class="hit"':''}>${esc(t)}</td>` +
+          `<td class="c${isAns(n)?' hit':''}">${c}人（${pct(c/total)}%）</td>` +
+          `<td${isAns(n)?' class="hit"':''}>${WHY[qk][String(n)]||''}</td></tr>`;
+      }).join("") + `</tbody></table>`;
+  };
+  $('objective').innerHTML =
+    `<div class="stat-row">
+      <div class="stat"><b>${pct(s.q1.rate)}%</b><span>問1 正答率</span></div>
+      <div class="stat"><b>${pct(s.q5.rate)}%</b><span>問5 完答率</span></div>
+      <div class="stat"><b>${s.n}</b><span>提出</span></div>
+    </div>` +
+    block('q1','問1 ― 空欄に入る語','節を導く語は、意味ではなく<b style="color:var(--ink);">節の中に欠けがあるかどうか</b>で決まります。文末の like は前置詞で、目的語が空いています。') +
+    block('q5','問5 ― 本文の内容と合致するもの二つ','誤答はすべて、本文にある内容の<b style="color:var(--ink);">一点だけ</b>を入れ替えて作られています。向き・範囲・比較・因果・主体のどれかです。');
+}
+
+function renderEmpty(msg){
+  const n = `<div class="nodata">${msg}</div>`;
+  $('overall').innerHTML = n;
+  $('objective').innerHTML = n;
+  document.querySelectorAll('[data-stats],[data-ans]').forEach(el=> el.innerHTML = n);
+}
+
+/* =========================================================
+   読み込み
+   ========================================================= */
+(async function(){
+  if(!GAS_URL || GAS_URL.indexOf("http") !== 0){
+    renderEmpty("答案データはまだつながっていません。<br>採点基準と模範解答、よくある誤答は上のタブから見られます。");
+    return;
+  }
+  try{
+    const res = await fetch(GAS_URL + "?view=board&exam=" + encodeURIComponent(EXAM));
+    const d = await res.json();
+    if(!d || d.ok !== true) throw new Error(d && d.error ? d.error : "unknown");
+    DATA = d;
+    renderStats(); renderAnswers(); renderObjective();
+  }catch(e){
+    renderEmpty("答案データを読み込めませんでした。<br>採点基準と模範解答、よくある誤答は上のタブから見られます。");
+  }
+})();
+</script>
+</body>
+</html>
