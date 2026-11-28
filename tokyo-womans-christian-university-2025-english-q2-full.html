@@ -536,19 +536,19 @@ tbody tr:nth-child(even){background:var(--surface2);}
 :root[data-theme="dark"] .chew{background:var(--surface2) !important;border-color:var(--line2) !important;}
 :root[data-theme="dark"] .chew p{color:var(--ink) !important;}
 /* ===== 言い換え表 ===== */
-table.para{width:100%;border-collapse:collapse;margin:13px 0 0;font-size:13px;}
-table.para th{background:var(--navy);color:#f2eee2;font-family:"Noto Serif JP",serif;font-size:12px;
+table.pmap{width:100%;border-collapse:collapse;margin:13px 0 0;font-size:13px;}
+table.pmap th{background:var(--navy);color:#f2eee2;font-family:"Noto Serif JP",serif;font-size:12px;
   padding:9px 11px;text-align:left;font-weight:700;}
-table.para tbody td{border:1px solid var(--line2);padding:10px 11px;vertical-align:top;line-height:1.78;
+table.pmap tbody td{border:1px solid var(--line2);padding:10px 11px;vertical-align:top;line-height:1.78;
   background:var(--surface) !important;color:var(--ink) !important;}
-table.para td.src{font-family:"Zilla Slab",Georgia,serif;font-size:13.2px;}
-table.para td.dst{font-family:"Zilla Slab",Georgia,serif;font-size:13.2px;}
-table.para td.qn{font-family:"Zilla Slab",serif;font-weight:700;text-align:center;white-space:nowrap;
+table.pmap td.src{font-family:"Zilla Slab",Georgia,serif;font-size:13.2px;}
+table.pmap td.dst{font-family:"Zilla Slab",Georgia,serif;font-size:13.2px;}
+table.pmap td.qn{font-family:"Zilla Slab",serif;font-weight:700;text-align:center;white-space:nowrap;
   color:var(--gold-d) !important;width:46px;}
-table.para td .j{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11.8px;color:var(--muted);margin-top:3px;}
+table.pmap td .j{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11.8px;color:var(--muted);margin-top:3px;}
 @media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]) table.para th{background:var(--navy) !important;color:#f2eee2 !important;}
-  :root:not([data-theme="light"]) table.para tbody td{background:var(--surface) !important;color:var(--ink) !important;}
+  :root:not([data-theme="light"]) table.pmap th{background:var(--navy) !important;color:#f2eee2 !important;}
+  :root:not([data-theme="light"]) table.pmap tbody td{background:var(--surface) !important;color:var(--ink) !important;}
 }
 /* ===== 三つの声 ===== */
 .v3{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 14px;}
@@ -642,7 +642,7 @@ table.para td .j{display:block;font-family:"Noto Sans JP",sans-serif;font-size:1
   <h2 class="sec">核心①　本文と選択肢の対応表</h2>
   <p style="margin:0;font-size:14px;line-height:1.95;">
   <b>10問ぶんの言い換えを一覧にしました</b>。<u>左が本文、右が設問文・選択肢</u>。<em>同じ語が両側に出ているのは22だけで、残りはすべて別の語に置き換わっています</em>。</p>
-  <table class="para">
+  <table class="pmap">
     <thead><tr><th style="width:46px;">設問</th><th style="width:42%;">本文の表現</th><th>設問・選択肢の表現</th></tr></thead>
     <tbody>
 <tr><td class="qn">13</td><td class="src">a myth<span class="j">俗説</span></td><td class="dst">misunderstanding<span class="j">誤解・思い違い</span></td></tr>
