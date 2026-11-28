@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>英語精読｜東京女子大学 2025 大問2（右脳・左脳の俗説）｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+
+
+
+
+
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+  --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+  --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+  --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+  --blue:#2f5c86; --blue-soft:#e7eef6;
+  --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --line:#e6dfce; --line2:#d8cfb8;
+  --ok:#1f6b5c; --ng:#c8431f;
+  --shadow:0 1px 2px rgba(22,38,63,.05),0 8px 24px rgba(22,38,63,.06);
+}
+html{scroll-behavior:smooth;}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.85;font-size:15.5px;-webkit-font-smoothing:antialiased;padding-bottom:60px;}
+.en{font-family:"Zilla Slab",serif;font-weight:600;letter-spacing:.01em;}
+em{font-style:normal;color:var(--verm);font-weight:600;}
+strong{font-weight:700;}
+
+/* HEADER */
+.top{position:sticky;top:0;z-index:200;background:var(--navy);color:#f4efe3;border-bottom:2px solid var(--gold);}
+.top-in{max-width:1080px;margin:0 auto;padding:11px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.mark{width:40px;height:40px;border-radius:9px;flex:none;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--navy);font-family:"Noto Serif JP",serif;font-weight:900;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);}
+.ttl{display:flex;flex-direction:column;line-height:1.3;}
+.ttl b{font-family:"Noto Serif JP",serif;font-size:15px;font-weight:700;letter-spacing:.02em;}
+.ttl span{font-size:10.5px;color:var(--gold);letter-spacing:.14em;font-weight:500;}
+.top-meta{margin-left:auto;font-size:10.5px;color:#c9c2b0;text-align:right;letter-spacing:.03em;}
+
+/* NAV */
+.nav{position:sticky;top:63px;z-index:190;background:rgba(250,247,240,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 14px;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;}
+.nav-in::-webkit-scrollbar{display:none;}
+.tab{flex:none;border:none;background:none;cursor:pointer;padding:12px 15px 10px;font-family:"Noto Sans JP",sans-serif;font-size:13px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;letter-spacing:.02em;white-space:nowrap;transition:.15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;position:relative;}
+.tab small{font-size:9px;color:var(--faint);font-weight:500;letter-spacing:.1em;}
+.tab .dot{position:absolute;top:9px;right:7px;width:6px;height:6px;border-radius:50%;background:var(--gold);opacity:0;transition:.2s;}
+.tab.done .dot{opacity:1;}
+.tab:hover{color:var(--navy);}
+.tab.on{color:var(--navy);border-bottom-color:var(--gold);}
+.tab.on small{color:var(--gold-d);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:30px 22px 40px;}
+.panel{display:none;animation:fade .4s ease;}
+.panel.on{display:block;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion:reduce){.panel.on{animation:none;} html{scroll-behavior:auto;}}
+
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:.22em;color:var(--gold-d);text-transform:uppercase;margin-bottom:8px;}
+h1.head{font-family:"Noto Serif JP",serif;font-size:26px;font-weight:900;color:var(--navy);line-height:1.35;letter-spacing:.01em;}
+h1.head .sub{display:block;font-size:14px;font-weight:500;color:var(--muted);margin-top:8px;letter-spacing:.02em;}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold) 0,var(--gold) 46px,var(--line) 46px);margin:16px 0 26px;}
+h2.sec{font-family:"Noto Serif JP",serif;font-size:19px;font-weight:700;color:var(--navy);margin:34px 0 14px;padding-left:13px;border-left:4px solid var(--gold);line-height:1.4;}
+h2.sec:first-child{margin-top:6px;}
+p{margin:0 0 12px;}
+p.lead{font-size:16px;color:#39404a;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 22px;box-shadow:var(--shadow);margin-bottom:16px;}
+.box{border-radius:11px;padding:15px 17px;margin:14px 0;font-size:14.5px;line-height:1.8;}
+.box .lab{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;padding:2px 9px;border-radius:20px;margin-bottom:7px;}
+.box.gold{background:var(--gold-soft);border:1px solid var(--line2);} .box.gold .lab{background:var(--gold);color:#fff;}
+.box.verm{background:var(--verm-soft);border:1px solid #f0cdc0;} .box.verm .lab{background:var(--verm);color:#fff;}
+.box.teal{background:var(--teal-soft);border:1px solid #bfe0d7;} .box.teal .lab{background:var(--teal);color:#fff;}
+.box.navy{background:#eef1f6;border:1px solid #d5ddea;} .box.navy .lab{background:var(--navy);color:#fff;}
+
+/* HERO (overview) */
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#f3efe4;border-radius:16px;padding:30px 30px 26px;position:relative;overflow:hidden;margin-bottom:26px;}
+.hero::after{content:"設計";position:absolute;right:-6px;bottom:-24px;font-family:"Noto Serif JP",serif;font-weight:900;font-size:150px;color:rgba(184,149,74,.10);writing-mode:vertical-rl;letter-spacing:0;line-height:.8;}
+.hero .eyebrow{color:var(--gold);}
+.hero h1{font-family:"Noto Serif JP",serif;font-size:29px;font-weight:900;line-height:1.4;position:relative;z-index:1;}
+.hero p{color:#d5cfc0;font-size:14.5px;max-width:660px;position:relative;z-index:1;margin-top:10px;}
+.thesis{position:relative;z-index:1;margin-top:16px;background:rgba(184,149,74,.14);border:1px solid rgba(184,149,74,.4);border-radius:10px;padding:11px 15px;font-size:13.5px;color:#f0e8d5;}
+.thesis b{color:var(--gold);}
+.stats{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px;position:relative;z-index:1;}
+.stat b{display:block;font-family:"Zilla Slab",serif;font-size:30px;font-weight:700;color:var(--gold);line-height:1;}
+.stat span{font-size:11px;color:#c9c2b0;letter-spacing:.05em;}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media (max-width:720px){.grid2{grid-template-columns:1fr;}}
+
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:12px 0 4px;}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;letter-spacing:.03em;}
+tr:last-child td{border-bottom:none;}
+td.c{white-space:nowrap;font-weight:700;color:var(--navy);}
+tbody tr:nth-child(even){background:var(--surface2);}
+
+/* PARA MAP */
+.para{display:grid;grid-template-columns:52px 1fr;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow);}
+.para-n{background:var(--navy);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding-top:16px;gap:3px;}
+.para-n b{font-family:"Zilla Slab",serif;font-size:24px;font-weight:700;color:var(--gold);}
+.para-n span{writing-mode:vertical-rl;font-size:9.5px;letter-spacing:.14em;color:#b9c0cc;margin-top:2px;}
+.para-b{padding:15px 18px;}
+.para-b .theme{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.para-b .theme .k{color:var(--verm);}
+.para-b p{font-size:14px;color:#3a4048;margin-bottom:8px;}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;}
+.utag{font-family:"Zilla Slab",serif;font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:6px;background:var(--gold-soft);color:var(--gold-d);border:1px solid var(--line2);}
+.utag.blank{background:var(--verm-soft);color:var(--verm);border-color:#f0cdc0;}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0;margin:14px 0;}
+.fnode{display:grid;grid-template-columns:34px 1fr;gap:12px;position:relative;padding-bottom:16px;}
+.fnode:not(:last-child)::before{content:"";position:absolute;left:16px;top:34px;bottom:-2px;width:2px;background:var(--line2);}
+.fdot{width:34px;height:34px;border-radius:50%;background:var(--surface);border:2px solid var(--gold);color:var(--navy);font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;z-index:1;}
+.fbody{padding-top:3px;}
+.fbody b{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14.5px;}
+.fbody p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+.sci{display:grid;grid-template-columns:1fr;gap:12px;}
+.sci .who{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:11px;padding:14px 16px;box-shadow:var(--shadow);}
+.sci .yr{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:13px;text-align:right;line-height:1.4;padding-top:2px;min-width:78px;}
+.sci .yr b{display:block;font-size:15px;color:var(--navy);font-family:"Noto Serif JP",serif;}
+.sci .desc b{font-family:"Noto Serif JP",serif;color:var(--navy);}
+.sci .desc p{font-size:13.5px;color:#4a5058;margin:3px 0 0;}
+
+/* QUESTION INDEX */
+.qindex{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 22px;}
+.qjump{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;width:34px;height:34px;border-radius:8px;border:1px solid var(--line2);background:var(--surface);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;}
+.qjump:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* QUESTION CARD */
+.q{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:0;margin-bottom:20px;box-shadow:var(--shadow);overflow:hidden;scroll-margin-top:120px;}
+.q-head{display:flex;align-items:center;gap:12px;padding:15px 20px;background:var(--surface2);border-bottom:1px solid var(--line);flex-wrap:wrap;}
+.q-no{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;background:var(--navy);color:#fff;width:38px;height:38px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:none;}
+.q-focus{flex:1;min-width:180px;}
+.q-focus .lbl{font-size:10.5px;font-weight:700;letter-spacing:.1em;color:var(--gold-d);}
+.q-focus .en{display:block;font-size:15px;color:var(--navy);line-height:1.5;}
+.q-type{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:20px;background:#fff;border:1px solid var(--line2);color:var(--muted);letter-spacing:.03em;flex:none;}
+.q-body{padding:18px 20px;}
+.q-body .askjp{font-size:13.5px;color:var(--muted);margin-bottom:12px;}
+
+.choices{display:flex;flex-direction:column;gap:8px;margin-bottom:6px;}
+.ch{display:grid;grid-template-columns:30px 1fr auto;gap:10px;align-items:center;text-align:left;width:100%;background:var(--surface);border:1.5px solid var(--line2);border-radius:10px;padding:11px 13px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);line-height:1.6;transition:.15s;}
+.ch:hover{border-color:var(--gold);background:#fffdf8;}
+.ch .num{font-family:"Zilla Slab",serif;font-weight:700;color:var(--navy);font-size:15px;width:26px;height:26px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;flex:none;}
+.ch .mk{font-weight:900;font-size:17px;opacity:0;flex:none;width:20px;text-align:center;}
+.ch.reveal{cursor:default;}
+.ch.reveal.correct{border-color:var(--ok);background:#eef7f4;}
+.ch.reveal.correct .mk{opacity:1;color:var(--ok);}
+.ch.reveal.correct .num{background:var(--ok);color:#fff;}
+.ch.reveal.wrong{border-color:#e9d5cd;background:#fdf6f3;color:#7a6b64;}
+.ch.reveal.wrong .mk{opacity:1;color:var(--ng);}
+.ch.picked{box-shadow:0 0 0 2px var(--navy) inset;}
+
+.reveal-btn{margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:10px 18px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;letter-spacing:.03em;transition:.15s;}
+.reveal-btn:hover{background:var(--navy2);}
+
+.solution{display:none;margin-top:16px;border-top:1px dashed var(--line2);padding-top:16px;}
+.solution.show{display:block;animation:fade .3s;}
+.ans-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-soft);border:1px solid var(--gold);border-radius:9px;padding:7px 14px;font-weight:700;color:var(--navy);font-size:14px;margin-bottom:12px;}
+.ans-badge .c{font-family:"Zilla Slab",serif;font-size:18px;color:var(--verm);font-weight:700;}
+
+/* EVIDENCE BOX (根拠) */
+.ev{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:12px 0;}
+.ev-hd{background:var(--navy);color:#f2eee2;padding:7px 14px;font-size:10.5px;font-weight:700;letter-spacing:.1em;display:flex;align-items:center;gap:8px;}
+.ev-hd::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ev-bd{padding:12px 15px;font-size:13.5px;line-height:1.8;}
+.ev-q{font-family:"Zilla Slab",serif;font-style:italic;color:var(--navy);background:var(--surface2);padding:9px 13px;border-radius:8px;border-left:3px solid var(--gold);margin-bottom:8px;font-size:13.5px;line-height:1.7;}
+.ev-q .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;color:var(--navy-ink);}
+
+/* CHOICE ANALYSIS */
+.chy-h{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;margin:14px 0 7px;}
+.ca-row{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:9px;margin-bottom:6px;overflow:hidden;}
+.ca-mark{flex:none;width:34px;display:flex;align-items:center;justify-content:center;font-family:"Zilla Slab",serif;font-size:16px;font-weight:700;color:#fff;}
+.ca-mark.ok{background:var(--ok);} .ca-mark.ng{background:var(--ng);}
+.ca-bd{padding:9px 13px;font-size:13px;line-height:1.75;flex:1;}
+.ca-bd .k{font-weight:700;} .ca-bd .k.o{color:var(--teal-d);} .ca-bd .k.x{color:var(--verm-d);}
+
+/* CALLOUTS */
+.co{border-radius:9px;padding:11px 14px;margin:10px 0;font-size:13.5px;line-height:1.78;}
+.co .co-lbl{font-size:9.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px;}
+.co.nav{background:var(--blue-soft);border-left:3px solid var(--navy);} .co.nav .co-lbl{color:var(--navy);}
+.co.gold{background:var(--gold-soft);border-left:3px solid var(--gold);} .co.gold .co-lbl{color:var(--gold-d);}
+.co.teal{background:var(--teal-soft);border-left:3px solid var(--teal);} .co.teal .co-lbl{color:var(--teal-d);}
+.co.verm{background:var(--verm-soft);border-left:3px solid var(--verm);} .co.verm .co-lbl{color:var(--verm-d);}
+
+/* DESCRIPTIVE */
+.desc-write{background:var(--teal-soft);border:1px solid #bfe0d7;border-radius:10px;padding:14px 16px;margin:6px 0;}
+.desc-write .modelans{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15px;line-height:1.7;padding:8px 12px;background:#fff;border-radius:8px;border:1px solid #bfe0d7;margin:6px 0;}
+.desc-write .cnt{font-family:"Zilla Slab",serif;font-size:11px;color:var(--teal);font-weight:700;float:right;}
+
+/* READING MAP */
+.tmap{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow);}
+.tmap .h{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.tmap .h b{font-family:"Zilla Slab",serif;font-size:20px;color:var(--gold);}
+.tmap .h span{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:15px;}
+.tmap .key{font-size:11px;font-weight:700;color:var(--gold-d);letter-spacing:.05em;margin:10px 0 4px;}
+.tmap ul{margin:0;padding-left:20px;}
+.tmap li{font-size:13.5px;color:#3a4048;margin-bottom:5px;line-height:1.7;}
+.tmap li em{color:var(--verm);}
+.qbadge{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;color:#fff;background:var(--navy);padding:1px 7px;border-radius:5px;margin-left:4px;}
+
+/* SUMMARY */
+.sheet{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px;margin:14px 0;}
+.acell{background:var(--surface);border:1px solid var(--line2);border-radius:9px;padding:8px;text-align:center;box-shadow:var(--shadow);}
+.acell .qn{font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.05em;}
+.acell .av{font-family:"Zilla Slab",serif;font-size:19px;font-weight:700;color:var(--verm);line-height:1.2;}
+.acell.txt .av{font-size:12px;color:var(--navy);font-family:"Noto Sans JP";font-weight:700;line-height:1.35;}
+.route{display:grid;grid-template-columns:36px 1fr;gap:12px;margin-bottom:12px;}
+.route .rn{width:36px;height:36px;border-radius:9px;background:var(--gold-soft);border:1px solid var(--line2);color:var(--gold-d);font-family:"Zilla Slab",serif;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center;flex:none;}
+.route b{color:var(--navy);font-family:"Noto Serif JP",serif;}
+.route p{font-size:13.5px;color:#4a5058;margin:2px 0 0;}
+
+/* PANEL NAV */
+.pnav{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:30px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap;}
+.btnp{display:inline-flex;align-items:center;gap:6px;padding:11px 22px;background:var(--navy);color:#fff;border:none;border-radius:10px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;transition:.15s;}
+.btnp:hover{background:var(--navy2);}
+.btns{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;background:var(--surface);color:var(--navy);border:1px solid var(--line2);border-radius:10px;font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:.15s;}
+.btns:hover{background:var(--surface2);}
+.pnav .sp{flex:1;}
+
+/* FOOTER */
+.foot{border-top:1px solid var(--line);margin-top:40px;padding:22px 22px 6px;text-align:center;color:var(--muted);font-size:12px;}
+.foot a{color:var(--gold-d);text-decoration:none;font-weight:700;}
+.foot .brand{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;letter-spacing:.03em;}
+.foot .cr{font-size:10.5px;color:var(--faint);margin-top:6px;}
+
+.jump-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(22,38,63,.28);font-size:18px;z-index:150;display:none;}
+.jump-top.show{display:block;}
+
+@media (max-width:600px){
+  body{font-size:15px;}
+  .wrap{padding:22px 16px 30px;}
+  h1.head{font-size:21px;} .hero h1{font-size:22px;}
+  .q-head{padding:13px 15px;} .q-body{padding:15px;}
+  .ch{grid-template-columns:26px 1fr auto;font-size:13.5px;}
+}
+
+/* ===== 記述問題 専用コンポーネント ===== */
+.dsteps{margin:14px 0 6px;}
+.dstep{display:grid;grid-template-columns:32px 1fr;gap:12px;position:relative;padding-bottom:14px;}
+.dstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:32px;bottom:0;width:2px;background:var(--line2);}
+.dstep .dn{width:32px;height:32px;border-radius:8px;background:var(--navy);color:#fff;font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;z-index:1;flex:none;}
+.dstep .db{padding-top:2px;}
+.dstep .db b{display:block;font-family:"Noto Serif JP",serif;color:var(--navy);font-size:14px;margin-bottom:2px;}
+.dstep .db p{font-size:13.5px;color:#414851;margin:0;line-height:1.75;}
+.dstep .db .cite{font-family:"Zilla Slab",serif;font-style:italic;background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:7px 11px;margin-top:6px;font-size:13px;color:var(--navy);line-height:1.7;}
+.dstep .db .cite .h{background:#fbe9c9;font-style:normal;font-weight:700;padding:0 3px;border-radius:3px;}
+
+.model{background:linear-gradient(160deg,#eef7f4,#e2f1ed);border:1px solid #bfe0d7;border-radius:11px;padding:15px 17px;margin:12px 0;}
+.model .mlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--teal-d);margin-bottom:7px;}
+.model .mtext{font-family:"Noto Serif JP",serif;font-weight:600;color:var(--navy);font-size:15.5px;line-height:1.9;background:#fff;border-radius:8px;padding:11px 14px;border:1px solid #bfe0d7;}
+.model .mtext + .mtext{margin-top:8px;}
+.model .mnote{font-size:12.5px;color:var(--teal-d);margin-top:8px;line-height:1.7;}
+
+/* ルーブリック（要素点・自己採点） */
+.rub{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin:12px 0;background:var(--surface);}
+.rub-hd{background:var(--gold);color:#fff;padding:8px 14px;font-size:11px;font-weight:700;letter-spacing:.08em;display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.rub-hd .sc{background:rgba(255,255,255,.22);border-radius:20px;padding:2px 11px;font-family:"Zilla Slab",serif;font-size:13px;font-weight:700;white-space:nowrap;}
+.rub-row{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:flex-start;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer;transition:.15s;}
+.rub-row:last-child{border-bottom:none;}
+.rub-row:hover{background:#fffdf8;}
+.rub-row.on{background:var(--teal-soft);}
+.rub-cb{width:20px;height:20px;border-radius:5px;border:2px solid var(--line2);background:#fff;flex:none;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;color:#fff;transition:.15s;}
+.rub-row.on .rub-cb{background:var(--teal);border-color:var(--teal);}
+.rub-row.on .rub-cb::after{content:"✓";}
+.rub-el{font-size:13.5px;line-height:1.7;}
+.rub-el b{color:var(--navy);}
+.rub-el .must{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--verm);color:#fff;margin-left:6px;vertical-align:1px;}
+.rub-el .plus{display:inline-block;font-size:9.5px;font-weight:700;padding:1px 7px;border-radius:20px;background:var(--surface2);color:var(--muted);border:1px solid var(--line2);margin-left:6px;vertical-align:1px;}
+.rub-pt{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);white-space:nowrap;padding-top:1px;}
+.rub-foot{padding:9px 14px;background:var(--surface2);font-size:12px;color:var(--muted);border-top:1px solid var(--line);}
+
+/* NG解答例 */
+.ng{background:var(--verm-soft);border:1px solid #f0cdc0;border-radius:11px;padding:14px 16px;margin:12px 0;}
+.ng .nlab{font-size:10.5px;font-weight:700;letter-spacing:.08em;color:var(--verm-d);margin-bottom:8px;}
+.ng-row{display:grid;grid-template-columns:auto 1fr;gap:10px;margin-bottom:9px;align-items:flex-start;}
+.ng-row:last-child{margin-bottom:0;}
+.ng-row .x{color:var(--verm);font-weight:900;font-size:14px;line-height:1.6;flex:none;}
+.ng-row .nb{font-size:13.5px;line-height:1.75;}
+.ng-row .nb .bad{display:block;font-family:"Noto Serif JP",serif;color:var(--verm-d);background:#fff;border:1px dashed #e5b8a6;border-radius:6px;padding:6px 10px;margin-bottom:4px;font-size:13.5px;}
+.ng-row .nb .why{color:#6b5c56;font-size:12.5px;}
+
+/* 語尾テンプレ表 */
+.mtx{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 6px;}
+.mtx th,.mtx td{border:1px solid var(--line2);padding:10px 12px;vertical-align:middle;}
+.mtx thead th{background:var(--navy);color:#f2eee2;font-weight:700;font-size:12.5px;}
+.mtx td.cond{background:var(--surface2);font-weight:700;color:var(--navy);font-size:12.5px;white-space:nowrap;}
+.mtx td.tr{background:#fdf6f3;} .mtx td.so{background:#eef7f4;}
+
+/* 対比マトリクス */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0;}
+@media(max-width:720px){.vs{grid-template-columns:1fr;}}
+.vs-col{border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);}
+.vs-hd{padding:11px 15px;color:#fff;font-family:"Noto Serif JP",serif;font-weight:700;font-size:15px;}
+.vs-hd small{display:block;font-family:"Zilla Slab",serif;font-size:11px;font-weight:600;opacity:.8;letter-spacing:.05em;}
+.vs-col.t .vs-hd{background:var(--verm);} .vs-col.s .vs-hd{background:var(--teal);}
+.vs-bd{background:var(--surface);padding:13px 15px;}
+.vs-bd .r{font-size:13.5px;line-height:1.7;padding:7px 0;border-bottom:1px dashed var(--line);}
+.vs-bd .r:last-child{border-bottom:none;}
+.vs-bd .r b{display:block;font-size:10.5px;letter-spacing:.06em;color:var(--faint);font-weight:700;margin-bottom:1px;}
+
+/* ===== 対訳（全訳マップ）― 中央大版レイアウト準拠 ===== */
+.tr-sec{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--faint);margin:26px 0 10px;display:flex;align-items:center;gap:9px;}
+.tr-sec::before{content:"";width:26px;height:1px;background:var(--line2);}
+.tr-sec::after{content:"";flex:1;height:1px;background:var(--line2);}
+.tr-sec b{color:var(--navy);font-family:"Noto Serif JP",serif;font-size:14px;font-weight:700;letter-spacing:.02em;}
+.tr-row{display:grid;grid-template-columns:1fr;border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:12px;box-shadow:var(--shadow);}
+.tr-en{font-family:"Zilla Slab",serif;font-size:14px;line-height:1.95;padding:15px 18px;background:var(--surface);color:var(--ink);}
+.tr-jp{font-family:"Noto Sans JP",sans-serif;font-size:13.5px;line-height:2;padding:15px 18px;background:var(--surface2);color:var(--ink);border-top:1px solid var(--line);}
+.tr-en em,.tr-jp em{color:var(--verm);font-weight:600;}
+.tr-en .ul{border-bottom:1.5px solid var(--gold);padding-bottom:1px;font-weight:700;}
+.tr-en .uln{font-size:9px;font-weight:700;color:var(--gold-d);vertical-align:super;margin-right:1px;line-height:0;font-family:"Noto Sans JP",sans-serif;}
+.tr-slot{min-height:74px;display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:"Noto Sans JP",sans-serif;font-size:12.5px;text-align:center;border:1px dashed var(--line2);border-radius:8px;background:#fdfbf6;padding:12px;line-height:1.7;}
+.tr-jp .tr-slot{background:#f2eee4;}
+.tr-points{margin:0 0 22px;padding:12px 15px;background:var(--gold-soft);border-radius:9px;border-left:3px solid var(--gold);font-size:13px;line-height:1.8;}
+.tr-points .pl{font-size:9.5px;font-weight:700;letter-spacing:.09em;color:var(--gold-d);margin-bottom:4px;}
+.tr-points ul{margin:0;padding-left:18px;}
+.tr-points li{margin-bottom:4px;}
+.tr-points li b{color:var(--navy);}
+.tr-points li em{color:var(--verm);font-weight:600;}
+@media(min-width:760px){
+  .tr-row{grid-template-columns:1fr 1fr;}
+  .tr-jp{border-top:none;border-left:1px solid var(--line);}
+}
+/* 貼り付けパネル */
+.paste{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:18px 20px;margin-bottom:20px;box-shadow:var(--shadow);}
+.paste h4{font-family:"Noto Serif JP",serif;color:var(--navy);font-size:15px;margin-bottom:6px;}
+.paste p{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.paste .pgrid{display:grid;grid-template-columns:1fr;gap:10px;}
+@media(min-width:760px){.paste .pgrid{grid-template-columns:1fr 1fr;}}
+.paste label{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--gold-d);margin-bottom:4px;}
+.paste textarea{width:100%;min-height:110px;border:1px solid var(--line2);border-radius:9px;padding:10px 12px;font-family:inherit;font-size:13px;line-height:1.7;resize:vertical;background:var(--paper);color:var(--ink);}
+.paste textarea:focus{outline:none;border-color:var(--gold);background:#fff;}
+.paste .prow{display:flex;gap:10px;align-items:center;margin-top:12px;flex-wrap:wrap;}
+.paste .msg{font-size:12.5px;color:var(--teal-d);font-weight:700;}
+
+/* ===== 和訳のみ 1カラム表示 ===== */
+.jpbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:6px 20px 14px;margin-bottom:12px;box-shadow:var(--shadow);}
+.jpline{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:11px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.jpline:last-child{border-bottom:none;}
+.jpline .n{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;color:var(--gold-d);background:var(--gold-soft);border:1px solid var(--line2);border-radius:6px;width:26px;height:26px;display:flex;align-items:center;justify-content:center;margin-top:2px;}
+.jpline .s{font-size:14.5px;line-height:2;color:var(--ink);}
+.jpline .s em{color:var(--verm);font-weight:600;font-style:normal;}
+
+/* ===== 同志社 追加：正答率バッジ・整序・内容一致 ===== */
+.rate{display:inline-flex;align-items:center;gap:5px;font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.rate.low{background:var(--verm);color:#fff;}
+.rate.mid{background:var(--gold);color:#fff;}
+.rate.hi{background:var(--teal-soft);color:var(--teal-d);border:1px solid #bfe0d7;}
+.ratebar{height:5px;border-radius:3px;background:var(--line);overflow:hidden;margin-top:5px;}
+.ratebar i{display:block;height:100%;border-radius:3px;}
+.ratebar i.low{background:var(--verm);} .ratebar i.mid{background:var(--gold);} .ratebar i.hi{background:var(--teal);}
+
+/* 語句整序 */
+.pool{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0;}
+.pw{font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;padding:6px 12px;border-radius:8px;background:var(--surface2);border:1px solid var(--line2);color:var(--navy);}
+.pw.used{background:var(--teal-soft);border-color:var(--teal);color:var(--teal-d);}
+.pw.unused{opacity:.45;text-decoration:line-through;}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0;}
+.slot{border:1.5px solid var(--line2);border-radius:9px;padding:8px 12px;text-align:center;background:var(--surface);min-width:88px;}
+.slot .k{font-size:10.5px;font-weight:700;color:var(--muted);}
+.slot .v{font-family:"Zilla Slab",serif;font-weight:700;font-size:15px;color:var(--navy);}
+.slot.hit{border-color:var(--verm);background:var(--verm-soft);}
+.slot.hit .k{color:var(--verm-d);} .slot.hit .v{color:var(--verm-d);}
+.full{background:var(--navy);color:#f2eee2;border-radius:10px;padding:13px 16px;margin:10px 0;font-family:"Zilla Slab",serif;font-size:15px;line-height:1.8;}
+.full b{color:var(--gold);}
+.full .jp{display:block;font-family:"Noto Sans JP",sans-serif;font-size:13.5px;color:#c9c2b0;margin-top:7px;}
+.full .jp b{color:#fff;}
+
+/* 内容一致 8択 */
+.mi{border:1px solid var(--line);border-radius:11px;overflow:hidden;margin-bottom:9px;background:var(--surface);}
+.mi-h{display:grid;grid-template-columns:34px 1fr auto;gap:10px;align-items:center;padding:11px 13px;cursor:pointer;transition:.15s;}
+.mi-h:hover{background:#fffdf8;}
+.mi .num{font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;width:28px;height:28px;border-radius:7px;background:var(--surface2);color:var(--navy);display:flex;align-items:center;justify-content:center;}
+.mi .st{font-size:13.5px;line-height:1.7;}
+.mi .mk{font-weight:900;font-size:16px;width:22px;text-align:center;opacity:0;}
+.mi.on.ok{border-color:var(--ok);} .mi.on.ok .mi-h{background:#eef7f4;} .mi.on.ok .num{background:var(--ok);color:#fff;} .mi.on.ok .mk{opacity:1;color:var(--ok);}
+.mi.on.ng{border-color:#e9d5cd;} .mi.on.ng .mi-h{background:#fdf6f3;} .mi.on.ng .mk{opacity:1;color:var(--ng);}
+.mi-d{display:none;padding:0 13px 12px;border-top:1px dashed var(--line);}
+.mi.on .mi-d{display:block;padding-top:11px;}
+.mi-d .src{font-size:12.5px;color:var(--muted);background:var(--surface2);border-left:3px solid var(--gold);border-radius:6px;padding:8px 11px;margin-bottom:7px;line-height:1.7;}
+.mi-d .jd{font-size:13px;line-height:1.75;}
+
+
+/* ===== 会話フロー表示（大問2） ===== */
+.conv{margin:14px 0;}
+.cturn{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);align-items:start;}
+.cturn:last-child{border-bottom:none;}
+.cturn .who{font-family:"Zilla Slab",serif;font-weight:700;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:3px 0;text-align:center;height:fit-content;}
+.cturn.john .who{background:var(--blue,#2f5c86);}
+.cturn.sarah .who{background:var(--verm);}
+.cturn.david .who{background:var(--teal);}
+.cturn.setup .who{background:var(--gold);}
+.cturn .say{font-size:14px;line-height:1.85;color:var(--ink);}
+.cturn .say b{background:#fbe9c9;color:var(--navy);padding:0 3px;border-radius:3px;font-weight:700;}
+.cturn .memo{display:block;margin-top:4px;font-size:11.5px;color:var(--gold-d);font-weight:700;}
+.cturn.setup{background:var(--surface2);border-radius:9px;padding:11px 13px;border-bottom:none;margin-bottom:6px;}
+.cturn.setup .say{font-size:13px;color:var(--muted);}
+
+
+/* ==== ダークモード無効化：端末がダークでも文字が消えないよう配色を固定 ==== */
+:root{ color-scheme: light; }
+@media (prefers-color-scheme: dark){
+  :root{
+    --navy:#16263f; --navy2:#22344f; --navy-ink:#0f1c30;
+    --gold:#b8954a; --gold-d:#8f7031; --gold-soft:#f3ecda;
+    --verm:#c8431f; --verm-d:#9e3417; --verm-soft:#fbe9e2;
+    --teal:#1f6b5c; --teal-d:#155346; --teal-soft:#e2f1ed;
+    --blue:#2f5c86; --blue-soft:#e7eef6;
+    --ink:#232830; --muted:#6c6a61; --faint:#9a978c;
+    --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+    --line:#e6dfce; --line2:#d8cfb8;
+    --ok:#1f6b5c; --ng:#c8431f;
+  }
+  html, body{ background:var(--paper) !important; color:var(--ink) !important; }
+  /* 明るいセル上の本文は必ず濃色に固定（白文字化による消失を防ぐ） */
+  table, .mtx, .mtx td, .mtx th tbody tr, .box, .para, .para-b, .tr-points, .jpbox,
+  .q, .ch, .ev, .ca-row, .rub, .conv, .cturn, .theme, p, li, span, td, div{
+    -webkit-text-fill-color: currentColor;
+  }
+  .mtx td{ color:var(--ink); }
+  .mtx tbody tr:nth-child(even){ background:var(--surface2); }
+  .box.navy{ background:#eef1f6; }
+}
+
+
+/* ==== 文字消え防止：明色背景セル・本文の文字色を濃色で明示固定 ==== */
+.mtx td{ color:var(--ink); }                 /* 通常セル（2・3列目）を濃紺で固定 */
+.mtx td.cond{ color:var(--navy); }
+.mtx td.tr, .mtx td.so{ color:var(--ink); }
+.mtx td b, .mtx td strong{ color:var(--navy); }   /* 表内の太字も濃色 */
+.box{ color:var(--ink); }                    /* 明色ボックス本文 */
+.box.navy{ color:var(--ink); }
+.para-b, .para-b p, .theme{ color:var(--ink); }
+.para-b .theme{ color:var(--navy); }
+.tr-points, .tr-points li, .tr-points ul{ color:var(--ink); }
+.jpbox, .jpline .s{ color:var(--ink); }
+.conv .say{ color:var(--ink); }
+.route > div{ color:var(--ink); }
+.q, .ch{ color:var(--ink); }
+/* 濃色背景に乗る白系文字は従来どおり（ここで上書きしない） */
+
+
+/* ==== 表セルの背景・文字色をセル自身に直接固定（透過事故を根絶） ==== */
+.mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+.mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+.mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+.mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+.mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+@media (prefers-color-scheme: dark){
+  .mtx thead th{ background:var(--navy) !important; color:#f2eee2 !important; }
+  .mtx tbody td{ background:var(--surface) !important; color:var(--ink) !important; }
+  .mtx tbody tr:nth-child(even) td{ background:var(--surface2) !important; }
+  .mtx tbody td.cond{ background:var(--surface2) !important; color:var(--navy) !important; }
+  .mtx tbody td b, .mtx tbody td strong{ color:var(--navy) !important; }
+}
+
+
+
+
+
+/* 設問文：英文＋和訳 */
+.q-body .askjp .aen{display:block;font-size:13.5px;color:var(--ink);line-height:1.8;margin-bottom:9px;font-weight:500;}
+.q-body .askjp .ajp{display:block;font-size:13px;color:var(--ink);line-height:1.8;padding:9px 12px;background:var(--surface2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;}
+.q-body .askjp .ajp b{color:var(--gold-d);}
+/* 選択肢の和訳 */
+.ch .cjp{display:block;margin-top:5px;padding-top:5px;border-top:1px dashed var(--line2);font-size:12.5px;color:var(--muted);line-height:1.72;font-family:"Noto Sans JP",sans-serif;}
+.ch.reveal.correct .cjp{color:var(--teal-d);border-top-color:#bfe0d6;}
+.ch.reveal.wrong .cjp{color:#8d7b73;}
+.mi .st .cjp{display:block;margin-top:5px;padding-top:5px;border-top:1px dashed var(--line2);font-size:12.5px;color:var(--muted);line-height:1.72;font-family:"Noto Sans JP",sans-serif;}
+/* 全選択肢照合ブロックの構造化 */
+.ca-bd .cj{display:block;margin:6px 0 7px;padding:7px 11px;background:var(--surface2);border-radius:7px;font-size:12.5px;color:var(--navy);line-height:1.72;}
+.ca-bd .cj b{color:var(--gold-d);}
+.ca-bd .tag,.jd .tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;padding:2px 7px;border-radius:4px;margin-right:7px;vertical-align:1px;white-space:nowrap;}
+.ca-bd .tag.g,.jd .tag.g{background:var(--teal-soft);color:var(--teal-d);}
+.ca-bd .tag.v,.jd .tag.v{background:var(--verm-soft);color:var(--verm-d);}
+.ca-bd .tag.n,.jd .tag.n{background:var(--blue-soft);color:var(--navy);}
+/* 解答プロセス：見出しの<b>だけブロック、本文中の<b>はインラインに */
+.dstep .db p b{display:inline;font-family:"Noto Sans JP",sans-serif;font-size:inherit;color:var(--navy-ink);margin:0;font-weight:700;}
+/* 責任の移動図 */
+.flow{margin:16px 0 8px;}
+.flow-row{display:grid;grid-template-columns:150px 1fr;gap:14px;padding:11px 0 11px 16px;border-left:3px solid var(--gold);border-bottom:1px dashed var(--line2);align-items:baseline;}
+.flow-row:last-child{border-bottom:0;}
+.flow-row .ph{font-family:"Noto Serif JP",serif;font-weight:700;color:var(--navy);font-size:13.5px;}
+.flow-row .bd{font-size:13.5px;color:var(--ink);line-height:1.75;}
+@media (max-width:520px){
+  .q-body .askjp .aen{font-size:13px;}
+  .ch .cjp{font-size:12px;}
+  .flow-row{grid-template-columns:1fr;gap:3px;padding-left:12px;}
+}
+@media (prefers-color-scheme: dark){
+  .q-body .askjp .aen{color:var(--ink) !important;}
+  .q-body .askjp .ajp{background:var(--surface2) !important;color:var(--ink) !important;}
+  .ch .cjp,.mi .st .cjp{color:var(--muted) !important;}
+  .ch.reveal.correct .cjp{color:var(--teal-d) !important;}
+  .ch.reveal.wrong .cjp{color:#8d7b73 !important;}
+  .ca-bd .cj{background:var(--surface2) !important;color:var(--navy) !important;}
+  .ca-bd .tag.g,.jd .tag.g{background:var(--teal-soft) !important;color:var(--teal-d) !important;}
+  .ca-bd .tag.v,.jd .tag.v{background:var(--verm-soft) !important;color:var(--verm-d) !important;}
+  .ca-bd .tag.n,.jd .tag.n{background:var(--blue-soft) !important;color:var(--navy) !important;}
+  .dstep .db p b{color:var(--navy-ink) !important;}
+  .flow-row .ph{color:var(--navy) !important;}
+  .flow-row .bd{color:var(--ink) !important;}
+}
+
+
+/* 設問番号が2桁なので少し広く */
+.q-no{font-family:"Zilla Slab",serif !important;font-size:16px !important;width:44px !important;height:44px !important;letter-spacing:0;}
+/* ===== 咀嚼訳ブロック ===== */
+.chew{margin:10px 0 0;padding:14px 16px 13px;background:linear-gradient(180deg,#fdfaf3 0%,#faf6ec 100%);
+  border:1px solid #e8dcc0;border-left:4px solid var(--gold);border-radius:0 11px 11px 0;}
+.chew .cl{display:block;font-family:"Noto Serif JP",serif;font-size:11.5px;font-weight:700;letter-spacing:.1em;
+  color:var(--gold-d);margin-bottom:8px;}
+.chew .cl i{font-style:normal;font-weight:500;letter-spacing:.02em;color:var(--muted);margin-left:8px;font-size:11px;
+  font-family:"Noto Sans JP",sans-serif;}
+.chew p{margin:0;font-size:13.8px;line-height:2.0;color:var(--ink);font-family:"Noto Sans JP",sans-serif;}
+.chew p b{color:var(--navy-ink);font-weight:700;}
+.chew p u{text-decoration:none;border-bottom:2px solid #f0deb4;padding-bottom:1px;}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .chew{background:var(--surface2) !important;border-color:var(--line2) !important;
+    border-left-color:var(--gold) !important;}
+  :root:not([data-theme="light"]) .chew p{color:var(--ink) !important;}
+  :root:not([data-theme="light"]) .chew p b{color:var(--navy-ink) !important;}
+  :root:not([data-theme="light"]) .chew .cl{color:var(--gold-d) !important;}
+  :root:not([data-theme="light"]) .chew .cl i{color:var(--muted) !important;}
+}
+:root[data-theme="dark"] .chew{background:var(--surface2) !important;border-color:var(--line2) !important;}
+:root[data-theme="dark"] .chew p{color:var(--ink) !important;}
+/* ===== 言い換え表 ===== */
+table.para{width:100%;border-collapse:collapse;margin:13px 0 0;font-size:13px;}
+table.para th{background:var(--navy);color:#f2eee2;font-family:"Noto Serif JP",serif;font-size:12px;
+  padding:9px 11px;text-align:left;font-weight:700;}
+table.para tbody td{border:1px solid var(--line2);padding:10px 11px;vertical-align:top;line-height:1.78;
+  background:var(--surface) !important;color:var(--ink) !important;}
+table.para td.src{font-family:"Zilla Slab",Georgia,serif;font-size:13.2px;}
+table.para td.dst{font-family:"Zilla Slab",Georgia,serif;font-size:13.2px;}
+table.para td.qn{font-family:"Zilla Slab",serif;font-weight:700;text-align:center;white-space:nowrap;
+  color:var(--gold-d) !important;width:46px;}
+table.para td .j{display:block;font-family:"Noto Sans JP",sans-serif;font-size:11.8px;color:var(--muted);margin-top:3px;}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) table.para th{background:var(--navy) !important;color:#f2eee2 !important;}
+  :root:not([data-theme="light"]) table.para tbody td{background:var(--surface) !important;color:var(--ink) !important;}
+}
+/* ===== 三つの声 ===== */
+.v3{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 14px;}
+.v3 .v3i{flex:1 1 200px;padding:12px 14px;border-radius:10px;border:1px solid var(--line2);background:var(--surface2);}
+.v3 .v3i b{display:block;font-family:"Noto Serif JP",serif;font-size:13.5px;margin-bottom:5px;color:var(--navy-ink);}
+.v3 .v3i span{display:block;font-size:12.5px;line-height:1.8;color:var(--muted);}
+.v3 .v3i em{font-style:normal;font-family:"Zilla Slab",serif;color:var(--gold-d);}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .v3 .v3i{background:var(--surface2) !important;border-color:var(--line2) !important;}
+  :root:not([data-theme="light"]) .v3 .v3i span{color:var(--muted) !important;}
+  :root:not([data-theme="light"]) .v3 .v3i b{color:var(--navy-ink) !important;}
+}
+
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="top-in">
+    <div class="mark">女</div>
+    <div class="ttl"><b>英語精読・完全解説</b><span>東京女子大学 2025 ／ 大問2</span></div>
+    <div class="top-meta">右脳・左脳の俗説とバーナム効果（Britannica より）<br>設問13〜23・全11問</div>
+  </div>
+</header>
+<nav class="nav">
+  <div class="nav-in">
+    <button class="tab on" data-p="0"><span class="dot"></span><small>STRATEGY</small>この英文の攻略</button>
+    <button class="tab" data-p="1"><span class="dot"></span><small>MAP</small>英文マップ</button>
+    <button class="tab" data-p="2"><span class="dot"></span><small>CORE</small>言い換えの地図</button>
+    <button class="tab" data-p="3"><span class="dot"></span><small>13-15</small>第1段落</button>
+    <button class="tab" data-p="4"><span class="dot"></span><small>16-18</small>第2段落</button>
+    <button class="tab" data-p="5"><span class="dot"></span><small>19-23</small>第3段落と主題</button>
+    <button class="tab" data-p="6"><span class="dot"></span><small>READING</small>全訳＋咀嚼訳</button>
+    <button class="tab" data-p="7"><span class="dot"></span><small>REVIEW</small>総まとめ</button>
+  </div>
+</nav>
+<div class="wrap">
+<section class="panel on" id="p0">
+  <div class="hero">
+    <div class="eyebrow">Reading Strategy</div>
+    <h1>本文の語は、<br>選択肢に出てこない。<br>言い換えを追う11問。</h1>
+    <p>設問の指示が <b>Select the BEST ANSWER to complete the following sentences, keeping the meaning of the original text.</b>（本文の意味を保ったまま文を完成させよ）。<u>これは内容一致ではなく、純粋な言い換え問題です</u>。<br>
+    <b>本文にある語をそのまま選択肢から探しても、まず見つかりません</b>。<em>myth は misunderstanding に、problem-solving は finding answers に、hands, feet, or eyes は parts of their body に置き換わっている</em>。<u>語を探すのではなく、意味を対応させる</u>。これが11問すべてに共通する作法です。</p>
+    <div class="thesis"><b>この文章の骨格：</b>①<u>右脳型・左脳型は俗説である</u>（第1段落）。②<b>ただし、元になった本物の科学はある</b>（第2段落）。③ではなぜ信じられるのか――身体の利き側からの類推と、分類したがる癖（第3段落）。④<u>結局、自分語りの道具だから</u>（第4段落）。<em>全否定ではなく、二層になっている点が最大の読みどころ</em>。</div>
+    <div class="stats">
+      <div class="stat"><b>4</b><span>段落構成</span></div>
+      <div class="stat"><b>11</b><span>設問数</span></div>
+      <div class="stat"><b>21</b><span>全訳の文数</span></div>
+      <div class="stat"><b>3</b><span>出てくる声の数</span></div>
+    </div>
+  </div>
+
+  <h2 class="sec">設問の並びと攻め方</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:16%">設問</th><th style="width:22%">根拠</th><th>攻め方</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">13・14・15</td><td>第1段落</td><td><b>俗説の紹介と、その反論が交互に来る</b>。<u>設問の前置き（Some people think）がどちらの声を聞いているかを見る</u>。</td></tr>
+      <tr><td class="cond">16・17・18</td><td>第2段落</td><td><b>同じ段落から「本当の部分」と「俗説の部分」を切り分けて三問</b>。<u>though で折り返すことに気づけば三つまとめて取れる</u>。</td></tr>
+      <tr><td class="cond">19・20</td><td>第3段落 第2・3文</td><td><b>信じられる理由が二つ</b>。<u>Perhaps と It may also が目印</u>。<em>star signs は理由ではなく比較対象</em>。</td></tr>
+      <tr><td class="cond">21</td><td>第3段落 第4文</td><td><b>最長の一文の、いちばん末尾</b>。<u>especially if ... を読み切れるか</u>。<em>この大問で最も正答率が落ちる</em>。</td></tr>
+      <tr><td class="cond">22</td><td>第3段落 第5文</td><td><b>唯一、本文に直接の対応表現がない</b>。<u>実験が成立する条件から逆算する</u>。</td></tr>
+      <tr><td class="cond">23</td><td>全体</td><td><b>話題と問いの形の両方が合うものを選ぶ</b>。<u>only が入った選択肢は幅を確認</u>。</td></tr>
+    </tbody>
+  </table>
+
+  <div class="box verm" style="margin-top:20px;"><span class="lab">この文章で最も落としやすい一点</span>
+    <strong>第2段落第1文の though を読み飛ばさないこと</strong>。<u>Like many modern myths, <b>though</b>, the myth ... is based on a bit of real science.</u>（もっとも、多くの現代の俗説と同じく、この俗説もわずかながら本物の科学に基づいている）。<br>
+    <em>第1段落が強く否定しているので、そこで「全部ウソ」と結論を作ってしまう</em>。<b>ですが文章はここで折り返し、「ウソだが元ネタの科学はある」という二層構造になります</b>。<u>この一語を落とすと、設問16で totally rejected を選びます</u>。</div>
+
+  <div class="box gold" style="margin-top:16px;"><span class="lab">この解説について</span>
+    <strong>全11問、旺文社の解答・研究と照合済み</strong>です。<u>すべての選択肢に和訳を付け、誤答には「なぜダメか」と「どんな読み方をした人が選ぶか」を記しました</u>。<br>
+    <b>CORE パネルには、本文と選択肢の言い換え対応表</b>を載せています。<em>この一枚が、この大問の設計図そのものです</em>。<u>全訳パネルには咀嚼訳を併載</u>しました。</div>
+
+  <div class="pnav"><span class="sp"></span><button class="btnp" data-go="1">英文マップへ進む →</button></div>
+</section><section class="panel" id="p1">
+  <div class="eyebrow">Passage Map</div>
+  <h1 class="head">英文マップ ― 4段落の流れと設問の在りか<span class="sub">「<b>主張</b> → <u>譲歩</u> → 原因 → 結論」。<em>説明文として型どおりに整っており、どの段落に何があるかが見つけやすい文章</em>。</span></h1>
+  <div class="rule"></div><div class="para"><div class="para-n"><b>1</b><span>主張</span></div><div class="para-b">
+      <div class="theme">右脳型・左脳型は俗説である</div><p><b>冒頭で結論を出す</b>。性格や才能の違いを脳の左右では説明できない。<u>脳画像技術の研究でも、どちらかが優勢だという証拠はゼロ</u>。<em>問題は「能力」の定義が曖昧なこと</em>。数学は論理的だが同時にきわめて創造的でもあり、芸術も精密な思考の産物。<b>「論理＝左、創造＝右」という切り分けが成り立たない</b>。</p><div class="tags"><span class="utag">設問13</span><span class="utag">設問14</span><span class="utag">設問15</span><span class="utag">設問23</span></div></div></div><div class="para"><div class="para-n"><b>2</b><span>譲歩</span></div><div class="para-b">
+      <div class="theme">ただし、元になった科学はある</div><p><b>though で折り返す</b>。<u>左右で役割分担があるのは事実</u>。ただし実際の分担は「右が創造、左が論理」よりはるかに複雑。<em>研究で分かっているのは、右＝空間的作業、左＝言語と問題解決</em>。</p><div class="tags"><span class="utag">設問16</span><span class="utag">設問17</span><span class="utag">設問18</span></div></div></div><div class="para"><div class="para-n"><b>3</b><span>原因</span></div><div class="para-b">
+      <div class="theme">なぜ信じられるのか ― 二つの理由</div><p>①<b>手や足や目に利き側があるのだから、脳にもあると思える</b>。②<u>自分や友人を「タイプ」に分けたがる癖</u>。<em>そうした分類は星座占い程度の妥当性しかないが、バーナム効果に支えられている</em>。<b>誰にでも当てはまる記述を個人向けだと提示されると、人は本当だと思う。とりわけ褒められたときは</b>。偽テストの実験でも、でっち上げの診断が「当たっている」と判定された。</p><div class="tags"><span class="utag">設問19</span><span class="utag">設問20</span><span class="utag">設問21</span><span class="utag">設問22</span></div></div></div><div class="para"><div class="para-n"><b>4</b><span>結論</span></div><div class="para-b">
+      <div class="theme">結局、話題は自分自身</div><p>右脳・左脳の俗説も同じ仕組み。<u>生み出す「診断」は当てはめやすく、しかも気分がいい</u>。<em>「自発的」「論理的」と言われて拒む人はいない</em>。<b>人気の理由は、私たちが大好きな話題――自分自身――を「科学的に」語らせてくれるから</b>。</p><div class="tags"><span class="utag" style="opacity:.5">—</span></div></div></div><div class="box navy"><span class="lab">構造を一枚で言うと</span>
+  <strong>この文章は「否定して終わり」ではありません</strong>。<u>第1段落で俗説を否定し、第2段落で「ただし元になった科学はある」と認め、第3段落で「ではなぜ信じられるのか」に話を移す</u>。<em>否定したあとに、その俗説が広まった理由まで説明する</em>。<br>
+  <b>だから設問も、否定された側（17）と、認められた側（16・18）の両方から作られます</b>。<u>どちらか一方の立場に寄って読むと、必ずどこかで落とします</u>。</div><div class="box verm"><span class="lab">読み飛ばしやすい三箇所</span>
+  <strong>第2段落第1文の though</strong>｜<u>ここで全否定から部分肯定へ折り返す</u>。<em>設問16の答えはここ</em>。<br>
+  <strong>第2段落第2文の as many think</strong>｜<u>同じ一文の中に、筆者の見解と俗説が同居している</u>。<em>設問17はその俗説のほうを聞いている</em>。<br>
+  <strong>第3段落第4文の especially if 以下</strong>｜<u>この文章で最も長い一文の、いちばん末尾</u>。<em>設問21の答えがそこにある</em>。</div><div class="pnav"><button class="btns" data-go="0">← 攻略</button><span class="sp"></span><button class="btnp" data-go="2">言い換えの地図へ →</button></div></section><section class="panel" id="p2">
+  <div class="eyebrow">The Core</div>
+  <h1 class="head">核心 ― 言い換えの地図と、三つの声<span class="sub">この大問は、本文と選択肢のあいだに橋を架ける問題です。橋の形が分かれば、11問が一つの作業になります。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">核心①　本文と選択肢の対応表</h2>
+  <p style="margin:0;font-size:14px;line-height:1.95;">
+  <b>10問ぶんの言い換えを一覧にしました</b>。<u>左が本文、右が設問文・選択肢</u>。<em>同じ語が両側に出ているのは22だけで、残りはすべて別の語に置き換わっています</em>。</p>
+  <table class="para">
+    <thead><tr><th style="width:46px;">設問</th><th style="width:42%;">本文の表現</th><th>設問・選択肢の表現</th></tr></thead>
+    <tbody>
+<tr><td class="qn">13</td><td class="src">a myth<span class="j">俗説</span></td><td class="dst">misunderstanding<span class="j">誤解・思い違い</span></td></tr>
+<tr><td class="qn">14</td><td class="src">the right or left half <b>dominating</b><span class="j">右半球または左半球が優勢であること</span></td><td class="dst">brain hemisphere <b>dominance</b><span class="j">脳半球の優勢</span></td></tr>
+<tr><td class="qn">15</td><td class="src">is generally said to <b>reside in</b> the left brain<span class="j">左脳に宿ると一般に言われている</span></td><td class="dst">some people think the left brain <b>dominates</b><span class="j">左脳が優勢だと考える人がいる</span></td></tr>
+<tr><td class="qn">16</td><td class="src">based on <b>a bit of real science</b><span class="j">わずかながら本物の科学に基づく</span></td><td class="dst">some <b>scientifically proven</b> truth<span class="j">科学的に証明された真実もいくらか</span></td></tr>
+<tr><td class="qn">17</td><td class="src"><b>creativity on the right</b>, as many think<span class="j">多くの人が考える「右が創造性」</span></td><td class="dst">the right brain <b>deals with</b> creative tasks<span class="j">右脳が創造的作業を扱う</span></td></tr>
+<tr><td class="qn">18</td><td class="src"><b>problem-solving</b><span class="j">問題解決</span></td><td class="dst"><b>finding answers</b><span class="j">答えを見つけること</span></td></tr>
+<tr><td class="qn">19</td><td class="src"><b>hands, feet, or eyes</b> ... dominant on one side<span class="j">手・足・目に利き側がある</span></td><td class="dst"><b>parts of their body</b> are stronger than others<span class="j">体の一部は他より強い</span></td></tr>
+<tr><td class="qn">20</td><td class="src"><b>sort</b> ourselves and our friends <b>into &quot;types&quot;</b><span class="j">自分や友人をタイプに分類する</span></td><td class="dst"><b>place</b> people <b>into different categories</b><span class="j">人々を異なる分類に振り分ける</span></td></tr>
+<tr><td class="qn">21</td><td class="src">especially if the statements are <b>positive</b><span class="j">とりわけ記述が肯定的であるとき</span></td><td class="dst"><b>say good things</b> about them<span class="j">自分について良いことを言う</span></td></tr>
+<tr><td class="qn">22</td><td class="src"><b>false</b> personality tests / <b>invented</b> feedback<span class="j">偽の性格テスト／でっち上げの評価</span></td><td class="dst">the feedback was <b>false</b><span class="j">その評価は偽物だった</span></td></tr>
+    </tbody>
+  </table>
+  <div class="box gold" style="margin-top:14px;"><span class="lab">言い換えの型は三つだけ</span>
+    <strong>①品詞を変える</strong>｜<u>dominating → dominance</u>、<u>problem-solving → finding answers</u>。<em>動名詞や複合名詞を、名詞や動詞句に開く</em>。<br>
+    <strong>②具体を上位概念でくくる</strong>｜<u>hands, feet, or eyes → parts of their body</u>。<em>並んだ具体語を一語でまとめる</em>。<br>
+    <strong>③比喩や硬い語をふつうの語にする</strong>｜<u>reside in → dominate</u>、<u>positive → say good things</u>。<em>意味は同じまま、やさしい語に落とす</em>。<br><br>
+    <b>この三つを知っていれば、選択肢を読む速さが変わります</b>。</div>
+
+  <h2 class="sec" style="margin-top:26px;">核心②　三つの声を混ぜない</h2>
+  <div class="v3">
+    <div class="v3i"><b>俗説（世間の理解）</b><span><em>is generally said to</em>（第1段落第5文）<br><em>as many think</em>（第2段落第2文）<br><u>設問15・17がこれを聞いている</u></span></div>
+    <div class="v3i"><b>研究で分かったこと</b><span><em>hasn&apos;t found any evidence</em>（第1段落第3文）<br><em>was found to be</em>（第2段落第3文）<br><u>設問14・18がこれを聞いている</u></span></div>
+    <div class="v3i"><b>筆者の判断</b><span><em>is a myth</em>（第1段落第1文）<br><em>But / Likewise</em>（第1段落第6・8文）<br><u>設問13・23がこれを聞いている</u></span></div>
+  </div>
+  <div class="box teal"><span class="lab">設問の前置きが、どの声を聞くかを指定している</span>
+    <strong>Some people think that ...</strong>（設問15）→ <u>俗説の中身を答える</u>。<em>筆者が否定していても関係ない</em>。<br>
+    <strong>According to popular understanding, ...</strong>（設問17）→ <u>同じく俗説</u>。<em>本文では as many think の部分</em>。<br>
+    <strong>Research has shown that ...</strong>（設問18）→ <u>研究結果</u>。<em>本文では was found to be の部分</em>。<br><br>
+    <b>第2段落第2文は、一文の中に俗説と筆者の見解が同居しています</b>。<u>the real division of labor is much more complex than <em>creativity on the right and logic on the left, as many think</em></u>。<em>than の後ろが俗説、前が筆者の見解</em>。<b>設問17は後ろのほうを聞いています</b>。</div>
+
+  <h2 class="sec" style="margin-top:26px;">核心③　本当と嘘の線はどこに引かれているか</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:20%">　</th><th>内容</th><th style="width:22%">根拠</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">本当</td><td><b>左右の脳で、得意な作業が違う</b>。<u>右＝空間的作業、左＝言語と問題解決</u>。</td><td>第2段落 第2・3文</td></tr>
+      <tr><td class="cond">嘘</td><td><b>「右が創造、左が論理」という単純な図式</b>。<u>実際の分担ははるかに複雑</u>。</td><td>第2段落 第2文</td></tr>
+      <tr><td class="cond">嘘</td><td><b>どちらかが優勢な「型の人間」がいる</b>。<u>証拠はゼロ</u>。</td><td>第1段落 第1〜3文</td></tr>
+    </tbody>
+  </table>
+  <div class="box navy" style="margin-top:14px;"><span class="lab">この線が三問を分けている</span>
+    <strong>設問16</strong>｜<u>本当の側</u>。役割分担があることは科学的に証明されている。<br>
+    <strong>設問17</strong>｜<u>嘘の側</u>。ただし設問が「通俗的理解では」と限定しているので、嘘のほうを答える。<br>
+    <strong>設問18</strong>｜<u>本当の側</u>。左＝言語と問題解決。<br><br>
+    <em>同じ段落から三問。線がどこに引かれているかを掴めば、まとめて取れます</em>。</div>
+
+  <div class="pnav"><button class="btns" data-go="1">← 英文マップ</button><span class="sp"></span><button class="btnp" data-go="3">設問13〜15へ →</button></div>
+</section><section class="panel" id="p3">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問13・14・15 ― 第1段落<span class="sub">主張が出て、俗説が紹介され、すぐに崩される段落。<b>どの文が誰の声かを追う</b>のが、ここでの作業です。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">このパートの攻め方</span>
+    <strong>13は語義</strong>｜<u>myth を文脈で確定する</u>。<em>「神話」でも「あまり知られていない話」でもない</em>。<br>
+    <strong>14は構造</strong>｜<u>using ... は手段。否定された目的語は of 以下</u>。<em>修飾を外して S・V・O を取る</em>。<br>
+    <strong>15は声</strong>｜<u>Some people think の枠内で答える</u>。<em>筆者がそれを崩すことは、この設問には関係ない</em>。</div>
+  <div class="qidx" id="qidxAB"></div>
+  <div id="qWrapAB"></div>
+  <div class="pnav"><button class="btns" data-go="2">← 核心</button><span class="sp"></span><button class="btnp" data-go="4">設問16〜18へ →</button></div>
+</section><section class="panel" id="p4">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問16・17・18 ― 第2段落<span class="sub">わずか3文の段落から、三問が作られています。<b>本当と嘘の線引き</b>が、そのまま設問の切り分けになっています。</span></h1>
+  <div class="rule"></div>
+  <div class="box verm" style="margin-top:0"><span class="lab">この三問で起きること</span>
+    <strong>16の最頻出ミスは totally rejected</strong>｜<u>第1段落の否定を引きずって「全部ウソ」と読む</u>。<em>第2段落は though で折り返している</em>。<br>
+    <strong>17は、筆者が否定している側を答える問題</strong>｜<u>According to popular understanding と前置きされている</u>。<em>抵抗があっても、設問が指定した側を取る</em>。<br>
+    <strong>18は左右の取り違えに注意</strong>｜<u>右＝空間、左＝言語と問題解決</u>。<em>読みながら左右を書き分けておく</em>。</div>
+  <div class="qidx" id="qidxCD"></div>
+  <div id="qWrapCD"></div>
+  <div class="pnav"><button class="btns" data-go="3">← 設問13〜15</button><span class="sp"></span><button class="btnp" data-go="5">設問19〜23へ →</button></div>
+</section><section class="panel" id="p5">
+  <div class="eyebrow">Solutions</div>
+  <h1 class="head">設問19〜23 ― 第3段落と主題<span class="sub">信じられる理由が二つ、バーナム効果の条件、実験の前提、そして全体の主題。<b>正答率が最も落ちる21</b>がここに含まれます。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">第3段落の地図</span>
+    <strong>第1文</strong>｜why do so many people believe it?（<u>問いを立てる</u>）<br>
+    <strong>第2文 Perhaps ...</strong>｜理由①　手足や目の利き側からの類推 → <u>設問19</u><br>
+    <strong>第3文 It may also ...</strong>｜理由②　タイプに分けたがる癖 → <u>設問20</u><br>
+    <strong>第4文</strong>｜バーナム効果の定義。<b>末尾の especially if 以下</b> → <u>設問21</u><br>
+    <strong>第5文</strong>｜偽テストの実験 → <u>設問22</u><br><br>
+    <em>一文ずつ役割が決まっているので、どの設問がどこかを取り違えなければ確実に拾えます</em>。</div>
+  <div class="qidx" id="qidxEF"></div>
+  <div id="qWrapEF"></div>
+  <div class="pnav"><button class="btns" data-go="4">← 設問16〜18</button><span class="sp"></span><button class="btnp" data-go="6">全訳＋咀嚼訳へ →</button></div>
+</section><section class="panel" id="p6">
+  <div class="eyebrow">Reading Map</div>
+  <h1 class="head">全訳＋咀嚼訳 ― 段落ごとの日本語訳と読解ポイント<span class="sub">THINKINGオリジナル訳（全4段落・21文）。番号①②③…は各段落内の文の順番。<b>太字・下線</b>が設問に直結する箇所。</span></h1>
+  <div class="rule"></div>
+  <div class="box gold" style="margin-top:0"><span class="lab">咀嚼訳とは</span>
+    <strong>和訳のすぐ下に、もう一段やさしくした訳を置きました</strong>。<u>俗説・優勢・妥当性・類推といった硬い言葉を一度すべて捨てて、中学生に話す言葉まで落としたもの</u>です。<br>
+    <em>和訳は書けたのに「で、どういうこと？」が残る</em>――その状態を潰すためのものです。<b>使う順番は、①英文だけで「つまり」を言ってみる　②和訳で内容を確認する　③咀嚼訳と比べて、自分の言葉が硬すぎないか見る</b>。<u>和訳を先に見ると、訳語をなぞるだけになります</u>。</div><div class="tr-sec"><b>第1段落</b>｜右脳型・左脳型は俗説である　<span class="utag">設問13・14・15・23</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><b>右脳型の人間と左脳型の人間がいるという考えは、俗説である。</b></div></div><div class="jpline"><div class="n">②</div><div class="s">私たちに異なる性格や才能があるのは明らかだが、<u>そうした違いは、脳の一方の部分が他方より優勢であることによっては説明できない</u>。</div></div><div class="jpline"><div class="n">③</div><div class="s"><b>脳画像技術を用いた近年の研究は、右半球あるいは左半球が優勢であるという証拠を、何一つ見つけていない。</b></div></div><div class="jpline"><div class="n">④</div><div class="s"><em>この俗説の致命的な問題の一つは、説明しようとしている能力について、曖昧な考えに頼っていることである。</em></div></div><div class="jpline"><div class="n">⑤</div><div class="s"><b>例えば数学は論理的思考を必要とし、したがって、芸術的な右脳の能力からは遠く離れた左脳に宿ると一般に言われている。</b></div></div><div class="jpline"><div class="n">⑥</div><div class="s"><u>しかし数学は、論理的な学問であるのに加えて、きわめて創造的な学問でもある。</u></div></div><div class="jpline"><div class="n">⑦</div><div class="s"><em>では、才能ある数学者は右脳型の人間なのか、それとも左脳型の人間なのか。</em></div></div><div class="jpline"><div class="n">⑧</div><div class="s">同様に、芸術的な創造性も、制御されない感情だけではない。</div></div><div class="jpline"><div class="n">⑨</div><div class="s"><u>最も偉大な芸術作品の多くは、徹底した精密な思考の産物である。</u></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>「右脳人間」「左脳人間」がいるという話は、<b>作り話だ</b>。人によって性格も得意なことも違うのは確かだが、それを脳の右か左かで説明することはできない。<u>脳を画像で見る技術が進んだ今も、どちらかが優勢だという証拠は一つも見つかっていない</u>。この説のどこがダメかというと、<em>説明しようとしている「能力」の中身が曖昧なこと</em>だ。たとえば数学。論理が要るから左脳、芸術は右脳、とよく言われる。<b>でも数学は、論理的であると同時に、ものすごく創造的でもある</b>。では、すごい数学者は右脳人間なのか、左脳人間なのか。芸術のほうも同じで、ただ感情のままに作っているわけではない。<u>名作と呼ばれる作品の多くは、徹底して緻密に考え抜かれた結果できている</u>。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第1段落</div><ul><li>第1文が<b>設問13と設問23の根拠</b>。<u>myth＝「広く信じられているが誤りである話」</u>。<em>「あまり知られていない話」でも「神話」でもない</em>。</li><li>第3文が<b>設問14の根拠</b>。<u>hasn&apos;t found any evidence of <b>the right or left half dominating</b></u>。<em>見つからなかったのは「優勢であること」の証拠</em>。<b>brain imaging technology は手段であって、否定された対象ではない</b>。</li><li>第5文が<b>設問15の根拠</b>。<u>is generally said to＝一般に言われている</u>。<em>これは俗説の紹介であって、筆者の主張ではない</em>。</li><li><b>第5〜9文の運び</b>｜<u>俗説を一度述べ（第5文）、But で崩し（第6文）、問いを投げ（第7文）、同じ型を芸術でも繰り返す（第8〜9文）</u>。<em>「論理＝左、創造＝右」という切り分けが成り立たないことを、二つの例で示している</em>。</li></ul></div><div class="tr-sec"><b>第2段落</b>｜ただし、元になった科学はある　<span class="utag">設問16・17・18</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><b>もっとも、多くの現代の俗説と同じく、右脳型・左脳型の俗説も、わずかながら本物の科学に基づいている。</b></div></div><div class="jpline"><div class="n">②</div><div class="s"><b>科学者たちは、脳の右側と左側が実際に異なる種類の作業を専門としていることを知っている。ただし実際の役割分担は、多くの人が考える「右が創造性、左が論理」よりも、はるかに複雑である。</b></div></div><div class="jpline"><div class="n">③</div><div class="s"><em>一般に、右半球は空間的な作業――自分の周りで物がどこにあるかを把握することに関わる作業――が得意であることが分かっており、一方で左側は言語と問題解決の中枢であることが分かっている。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>とはいえ、今どきの作り話の多くがそうであるように、<b>この話にもわずかに本物の科学が混ざっている</b>。脳の右と左で、得意な仕事が違うのは本当だ。<u>ただし実際の分担は、「右が創造、左が論理」などという単純なものではなく、もっと複雑</u>だ。分かっているのはこういうことだ。<em>右側は空間を扱うのが得意</em>。自分の周りで物がどこにあるかをつかむ働きだ。<em>左側は言葉と問題解決の中心になっている</em>。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第2段落</div><ul><li><b>この段落が文章の折り返し</b>｜<u>第1文の though（もっとも）で、全否定から部分肯定へ転じる</u>。<em>第1段落だけ読んで「全部ウソ」と決めると、設問16で落ちる</em>。</li><li>第1文が<b>設問16の根拠</b>。<u>based on a bit of real science → some scientifically proven truth</u>。<em>a bit of＝わずかながら。だがゼロではない</em>。</li><li>第2文が<b>設問17の根拠</b>。<u>creativity on the right and logic on the left, <b>as many think</b></u> の部分。<em>この一文の中に「俗説」と「筆者の見解」が同居している</em>。<b>設問は According to popular understanding と限定しているので、as many think のほうを取る</b>。</li><li>第3文が<b>設問18の根拠</b>。<u>左＝language and problem-solving、右＝spatial tasks</u>。<em>problem-solving を finding answers と言い換えられるかが鍵</em>。</li><li><b>本当と嘘の線引き</b>｜<u>本当＝左右で役割分担がある／嘘＝「右が創造、左が論理」という単純な図式</u>。<em>この線をまたいで三問作られている</em>。</li></ul></div><div class="tr-sec"><b>第3段落</b>｜なぜ信じられるのか ― 二つの理由　<span class="utag">設問19・20・21・22</span></div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s"><u>右脳型・左脳型の俗説に証拠がないのなら、なぜこれほど多くの人がそれを信じているのだろうか。</u></div></div><div class="jpline"><div class="n">②</div><div class="s"><b>おそらく、手や足や目と同じように、脳にもどちらか一方に利き側があるというのは、単純に筋が通るように思えるのだろう。</b></div></div><div class="jpline"><div class="n">③</div><div class="s"><b>また、感情面や知的な面の特徴をもとに、自分や友人を「タイプ」に分類したがる私たちの傾向も、関係しているのかもしれない。</b></div></div><div class="jpline"><div class="n">④</div><div class="s"><em>そうした分類のほとんどは、星座占いと同じ程度の科学的妥当性しか持たないが、バーナム効果として知られる心理現象に支えられている。すなわち、誰にでも当てはまる一般的な記述を、自分の性格についての個別の説明として提示されると、人はそれを意味のある真実だと受け入れやすい。</em><b>とりわけ、その記述が肯定的なものであるときにはそうである。</b></div></div><div class="jpline"><div class="n">⑤</div><div class="s"><b>ある臨床実験で、バーナム効果を研究していた心理学者たちは偽の性格テストを配り、人々がそのでっち上げの評価を、おおむね正確だと判定することを見いだした。</b></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>証拠がないのに、なぜこれだけ多くの人が信じているのか。<b>たぶん、手や足や目に利き側があるのだから、脳にもあるだろう、と思えてしまうからだ</b>。もう一つ、<b>私たちには自分や友達を「◯◯タイプ」と分類したがる癖がある</b>。これも関係していそうだ。そうした分類は、科学的な根拠という点では星座占いとたいして変わらない。それでも成り立つのは、<u>バーナム効果</u>という心理の働きがあるからだ。<u>誰にでも当てはまるようなことを「これはあなたの性格です」と言われると、人は「当たっている」と思ってしまう</u>。<b>しかも、いいことを言われたときはなおさらだ</b>。実際、心理学者が偽の性格テストを配って試したところ、<em>ほとんどの人が、でっち上げの診断結果を「当たっている」と答えた</em>。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第3段落</div><ul><li><b>第1文が段落の設計図</b>｜<u>why do so many people believe it? という問いを立て、以下で理由を二つ挙げる</u>。<em>Perhaps（第2文）と It may also（第3文）が、その二つの目印</em>。</li><li>第2文が<b>設問19の根拠</b>。<u>hands, feet, or eyes → parts of their body</u>。<em>比べているのは一人の体の中の左右であって、人と人ではない</em>。</li><li>第3文が<b>設問20の根拠</b>。<u>sort ... into &quot;types&quot; → place people into different categories</u>。<em>分類であって、優劣の判定ではない</em>。</li><li>第4文の<b>最後の especially if 以下が設問21の根拠</b>。<u>positive → say good things about them</u>。<em>長い一文の、コロンの後ろのさらに末尾に答えがある</em>。<b>読み疲れたところが狙われている</b>。</li><li>第5文が<b>設問22の根拠</b>。<u>false personality tests／invented feedback</u>。<em>「偽だと伝えなかった」とは書かれていないが、伝えていたら accurate と判定されるはずがない</em>。<b>本文から必然的に導ける推論</b>。</li><li><b>star signs の役割</b>｜<u>第4文に出てくるが、これは「科学的妥当性の比較対象」として置かれているだけ</u>。<em>信じる理由として挙げられているのではない</em>。<b>設問19で引っかけに使われている</b>。</li></ul></div><div class="tr-sec"><b>第4段落</b>｜結局、話題は自分自身</div>
+      <div class="jpbox"><div class="jpline"><div class="n">①</div><div class="s">右脳・左脳の俗説も、これと同じように働く。</div></div><div class="jpline"><div class="n">②</div><div class="s"><b>この俗説が生み出す「見解」は、当てはめるのが簡単であると同時に、人を気分よくさせる。</b></div></div><div class="jpline"><div class="n">③</div><div class="s"><u>結局のところ、自分のことを「自発的」だとか「論理的」だとか言われて、それを拒む人がいるだろうか。</u></div></div><div class="jpline"><div class="n">④</div><div class="s"><em>この俗説が人気なのは、要するに、私たちが大好きな話題――つまり自分自身――について語るための「科学的な」手立てを与えてくれるからである。</em></div></div></div>
+      <div class="chew"><span class="cl">咀嚼訳<i>つまり、どういうことか</i></span><p>右脳・左脳の話も、<b>まったく同じ仕組みで広まっている</b>。この説が出してくる「診断」は、<u>当てはめるのが簡単で、しかも言われて気分がいい</u>。自分は「ひらめき型だ」「論理型だ」と言われて、嫌がる人はいないだろう。つまり<b>この説が人気なのは、私たちが何よりも好きな話題——自分のこと——を、科学っぽい言葉で語らせてくれるから</b>だ。</p></div>
+      <div class="tr-points"><div class="pl">設問の根拠・急所｜第4段落</div><ul><li><b>第1文の in a similar way</b>｜<u>前段落のバーナム効果と同じ仕組みだ、と受けている</u>。<em>第3段落と第4段落は切り離さずに読む</em>。</li><li><b>引用符の使い方</b>｜<u>&quot;ideas&quot; と &quot;scientific&quot; が引用符つき</u>。<em>筆者は「見解と呼べるようなものではない」「科学的とは名ばかりだ」と含みを持たせている</em>。<b>引用符は距離の合図</b>。</li><li><b>締めの一語 ourselves</b>｜<u>ダッシュの後ろに置いて、最後に落としている</u>。<em>この俗説が売っているのは脳科学ではなく、自分語りの道具だ、という皮肉</em>。</li></ul></div><div class="pnav"><button class="btns" data-go="5">← 設問19〜23</button><span class="sp"></span><button class="btnp" data-go="7">総まとめへ →</button></div></section><section class="panel" id="p7">
+  <div class="eyebrow">Review</div>
+  <h1 class="head">総まとめ ― 次に同じ形式が出たときのために<span class="sub">言い換え型の空所補充から、持ち帰るべきものを五つに絞りました。</span></h1>
+  <div class="rule"></div>
+
+  <h2 class="sec">解答一覧</h2>
+  <table class="mtx">
+    <thead><tr><th style="width:12%">設問</th><th style="width:12%">解答</th><th>決め手</th></tr></thead>
+    <tbody>
+      <tr><td class="cond">13</td><td><b>B</b></td><td>第1段落第1文｜<u>a myth → misunderstanding</u></td></tr>
+      <tr><td class="cond">14</td><td><b>A</b></td><td>第1段落第3文｜<u>the right or left half dominating → brain hemisphere dominance</u></td></tr>
+      <tr><td class="cond">15</td><td><b>B</b></td><td>第1段落第5文｜<u>is generally said to reside in the left brain</u></td></tr>
+      <tr><td class="cond">16</td><td><b>B</b></td><td>第2段落第1文｜<u>a bit of real science → some scientifically proven truth</u></td></tr>
+      <tr><td class="cond">17</td><td><b>A</b></td><td>第2段落第2文｜<u>creativity on the right, as many think</u></td></tr>
+      <tr><td class="cond">18</td><td><b>C</b></td><td>第2段落第3文｜<u>problem-solving → finding answers</u></td></tr>
+      <tr><td class="cond">19</td><td><b>B</b></td><td>第3段落第2文｜<u>hands, feet, or eyes → parts of their body</u></td></tr>
+      <tr><td class="cond">20</td><td><b>D</b></td><td>第3段落第3文｜<u>sort into &quot;types&quot; → place into different categories</u></td></tr>
+      <tr><td class="cond">21</td><td><b>D</b></td><td>第3段落第4文 末尾｜<u>especially if the statements are positive</u></td></tr>
+      <tr><td class="cond">22</td><td><b>A</b></td><td>第3段落第5文｜<u>false / invented から逆算する</u></td></tr>
+      <tr><td class="cond">23</td><td><b>B</b></td><td>第1段落第1文・全体｜<u>話題も問いの形も一致する</u></td></tr>
+    </tbody>
+  </table>
+
+  <h2 class="sec" style="margin-top:26px;">持ち帰る五つ</h2>
+  <div class="box navy"><span class="lab">1 ― 言い換え問題は、語ではなく意味を照合する</span>
+    <strong>本文の語が選択肢にそのまま出ることは、まずありません</strong>。<u>品詞を変える／具体を上位概念でくくる／硬い語をやさしい語にする</u>。<em>この三つの型を知っていれば、選択肢を読んだ瞬間に本文のどこかが見える</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">2 ― 設問の前置きが、答えの範囲を決める</span>
+    <strong>Some people think / According to popular understanding / Research has shown</strong>。<u>どれも「どの声を答えるか」の指定です</u>。<em>筆者が否定している内容でも、設問が指定すればそれが答えになる</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">3 ― 段落頭の though で、主張の向きが変わる</span>
+    <strong>否定のあとに though が来たら、そこから部分肯定が始まります</strong>。<u>「全部ウソ」で読み止めない</u>。<em>この文章の二層構造は、たった一語で作られている</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">4 ― 長い一文は、最後まで読み切る</span>
+    <strong>第3段落第4文は、譲歩・コロン・when 節・especially if 節が重なった最長の文</strong>。<u>答えはその末尾にありました</u>。<em>途中で意味が取れたと思った時点が、いちばん危ない</em>。</div>
+  <div class="box navy" style="margin-top:12px;"><span class="lab">5 ― 本文にある語でも、その主張の根拠とは限らない</span>
+    <strong>star signs も friends も、確かに本文にあります</strong>。<u>だが設問19の根拠ではない</u>。<em>その語が、どの主張のために置かれているかまで見る</em>。</div>
+
+  <h2 class="sec" style="margin-top:26px;">この文章を一言で</h2>
+  <div class="box gold"><span class="lab">THINKING の答案</span>
+    <strong>右脳型・左脳型という分け方は俗説であり、どちらかが優勢だという証拠はない</strong>。<u>ただし左右の脳で得意な作業が違うこと自体は事実で、俗説はそのわずかな科学を土台にしている</u>。<em>それでも信じられるのは、手足の利き側からの類推が自然に思えることと、人を型に分けたがる癖があるからだ</em>。<b>そして分類が受け入れられるのは、それが自分について良いことを言ってくれるから</b>。<u>この俗説が売っているのは脳科学ではなく、自分について語るための「科学的な」言葉である</u>。</div>
+
+  <div class="pnav"><button class="btns" data-go="6">← 全訳＋咀嚼訳</button><span class="sp"></span><button class="btnp" data-go="0">攻略に戻る ↑</button></div>
+</section></div>
+<footer class="foot">
+  <div class="brand">THINKING</div>
+  <div class="fmeta">学部別・逆転合格設計塾 THINKING ／ 受験は根性じゃなく、設計。<br>
+  本資料は東京女子大学2025年度英語（大問2）の学習用教材です。英文・設問の著作権は出題者・原著者に帰属します。訳・解説はTHINKINGによるオリジナルです。</div>
+</footer>
+<button class="jump" id="jumpTop">▲</button>
+
+<script>
+const Q=[
+
+/* ========== 第1段落 13・14・15 ========== */
+{
+id:"13", grp:"AB", type:"言い換え・語義", rate:78,
+lbl:"myth を文脈で決める", en:"myth＝広く信じられているが誤りである話。神話でも秘話でもない",
+ask:'<span class="aen">The notion that there are right-brained and left-brained people is a ______.</span><span class="ajp">右脳型・左脳型の人間がいるという考えは、□□である。</span>',
+kind:"choice", answer:"B",
+choices:[
+ {t:'historical record<span class="cjp">歴史的な記録</span>'},
+ {t:'misunderstanding<span class="cjp">誤解・思い違い</span>', ok:true},
+ {t:'poorly known fact<span class="cjp">あまり知られていない事実</span>'},
+ {t:'scientific finding<span class="cjp">科学的な発見</span>'}],
+steps:[
+ {t:"設問文が本文のどこの言い換えかを見つける", d:"<b>The notion that there are right-brained and left-brained people</b> は、第1段落第1文 <u>The idea that there are right-brained and left-brained people</u> をそのまま言い換えたもの。<em>notion＝idea</em>。<b>答えは is a のうしろの一語</b>。", cite:"第1段落 第1文"},
+ {t:"本文の該当語を取る", d:"本文は <b>is a myth</b>。<u>myth は「広く信じられているが事実ではない話」</u>。<em>第2段落第1文でも many modern myths（現代の俗説）という形で使われている</em>。", cite:"第1段落 第1文／第2段落 第1文"},
+ {t:"言い換えられる語を選ぶ", d:"<b>誤りである</b>という中身を持つのは misunderstanding だけ。<u>残り三つはいずれも「本当のこと」を指す語</u>。"}],
+ev:{q:"The idea that there are right-brained and left-brained people is <b>a myth</b>.",
+ jp:"右脳型の人間と左脳型の人間がいるという考えは、<b>俗説である</b>。"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">myth の訳し方</span>historical record<span class="cj">歴史的な記録</span>myth を「神話」と訳して歴史と結びつけた読み。<u>だが本文は第2段落第1文で <b>many modern myths</b>（現代の俗説）と言っており、昔話の意味では使っていない</u>。<em>そもそも「記録」なら事実になってしまう</em>。'},
+ {m:"o", n:"B", t:'<span class="tag g">正解</span>misunderstanding<span class="cj">誤解・思い違い</span>myth の中身は「広く信じられているが事実ではない」。<u>第2文以降で「脳の優勢では説明できない」「証拠は見つかっていない」と続くので、誤りであることが裏づけられる</u>。'},
+ {m:"x", n:"C", t:'<span class="tag v">真偽が逆</span>poorly known fact<span class="cj">あまり知られていない事実</span>myth を「知る人ぞ知る話」と取っている。<u>この俗説はむしろ広く知られている</u>（第3段落第1文 why do so many people believe it?）。<em>しかも fact なので、本文と真偽が正反対</em>。'},
+ {m:"x", n:"D", t:'<span class="tag v">語に引かれた</span>scientific finding<span class="cj">科学的な発見</span>第1段落第3文に research、第2段落第1文に real science が出てくるので引かれる。<u>だが研究が見つけたのは「証拠がないこと」</u>。<em>この考え自体が科学的発見なのではない</em>。'}],
+co:[
+ {c:"verm", l:"〈3を選びがちな人〉myth を曖昧なイメージで覚えている人", h:"<b>myth の芯は「事実ではない」こと</b>。<u>有名か無名かは関係ない</u>。<em>むしろ「多くの人が信じている」ことのほうが myth の典型</em>。この一語を取り違えると、文章全体を「あまり知られていない脳の話」として読んでしまいます。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>この大問の形式を理解しているか</b>。<u>設問文は本文の文を別の言葉で言い換えたもので、空所に入るのは本文の語そのものではなく、その言い換え</u>。<em>myth という語を探しても選択肢にはありません</em>。<b>語を探すのではなく、意味を対応させる</b>。これが11問すべてに共通する作法です。"}]
+},
+
+{
+id:"14", grp:"AB", type:"言い換え・手段と対象", rate:57,
+lbl:"否定されたのは何か", en:"using ... は手段。見つからなかったのは「優勢であること」の証拠",
+ask:'<span class="aen">Even though research using the latest technology is advanced, scientists have not found any truth in ______.</span><span class="ajp">最新技術を用いた研究は進んでいるが、科学者たちは□□について、いかなる真実も見つけていない。</span>',
+kind:"choice", answer:"A",
+choices:[
+ {t:'brain hemisphere dominance<span class="cjp">脳半球の優勢</span>', ok:true},
+ {t:'how logic works<span class="cjp">論理がどのように働くか</span>'},
+ {t:'imagining the truth<span class="cjp">真実を想像すること</span>'},
+ {t:'looking at the brain<span class="cjp">脳を見ること</span>'}],
+steps:[
+ {t:"対応する本文の文を押さえる", d:"<b>Recent research using brain imaging technology hasn&apos;t found any evidence of the right or left half dominating.</b> 設問文の <u>research using the latest technology</u> が research using brain imaging technology、<u>have not found any truth in</u> が hasn&apos;t found any evidence of に対応する。", cite:"第1段落 第3文"},
+ {t:"文の骨格を分ける", d:"<b>主語＝Recent research</b>／<b>修飾＝using brain imaging technology（手段）</b>／<b>動詞＝hasn&apos;t found</b>／<b>目的語＝any evidence of the right or left half dominating</b>。<u>見つからなかったのは、目的語のほう</u>。<em>手段を答えにしてはいけない</em>。"},
+ {t:"目的語を名詞句に言い換える", d:"<b>the right or left half dominating</b>（右半球または左半球が優勢であること）<br>→ <b>brain hemisphere dominance</b>（脳半球の優勢）。<u>half→hemisphere、dominating→dominance</u>。<em>動名詞を名詞に変えただけ</em>。", cite:"第1段落 第3文"}],
+ev:{q:"Recent research <u>using brain imaging technology</u> hasn&apos;t found any evidence of <b>the right or left half dominating</b>.",
+ jp:"<u>脳画像技術を用いた</u>近年の研究は、<b>右半球あるいは左半球が優勢であるという</b>証拠を、何一つ見つけていない。"},
+sol:[
+ {m:"o", n:"A", t:'<span class="tag g">正解</span>brain hemisphere dominance<span class="cj">脳半球の優勢</span><b>the right or left half dominating</b> の名詞化。<u>half が hemisphere に、dominating が dominance に置き換わっただけ</u>。<em>第1段落第2文の one part of the brain being more dominant than the other とも揃う</em>。'},
+ {m:"x", n:"B", t:'<span class="tag v">別の語に引かれた</span>how logic works<span class="cj">論理がどのように働くか</span>第1段落第5文に logical thought が出てくるので拾ってしまう。<u>だが研究が否定したのは「左右どちらかが優勢だ」という点であって、論理の仕組みではない</u>。<em>論理の働きについて、本文は何も否定していない</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">見間違い</span>imagining the truth<span class="cj">真実を想像すること</span><b>imaging（画像化）</b>を <b>imagining（想像）</b>と読み違えている。<u>brain imaging technology は脳の画像を撮る技術</u>。<em>字面が一字違いの罠</em>。'},
+ {m:"x", n:"D", t:'<span class="tag v">手段と対象の取り違え</span>looking at the brain<span class="cj">脳を見ること</span><b>最も多い誤答</b>。brain imaging technology を「脳を見ること」と訳し、それが見つからなかったと読んでいる。<u>だが using ... は手段を示す修飾で、動詞 found の目的語ではない</u>。<em>脳を見る技術はすでにあり、現にそれを使って研究している</em>。'}],
+co:[
+ {c:"verm", l:"〈4を選びがちな人〉前から順に目についた名詞を拾う人", h:"<b>research using brain imaging technology</b> まで読んだところで brain が目に入り、そこで答えを決めてしまう。<u>not found の目的語は、もっと後ろの of 以下</u>。<em>否定文では「何が否定されたのか」を最後まで確認する</em>。"},
+ {c:"teal", l:"動名詞を名詞に変える練習", h:"<b>the right or left half dominating → brain hemisphere dominance</b><br><u>この形の言い換えは、この大問で何度も使われます</u>。<em>dominating（動名詞）↔ dominance（名詞）、sort into types（動詞句）↔ categorization（名詞）</em>。<b>品詞が変わっても中身は同じ、という感覚を持つこと</b>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>修飾と骨格を切り分けられるか</b>。<u>using で始まる分詞句を一度外して、S・V・O だけを取る</u>。<em>Recent research hasn&apos;t found any evidence of X. これだけ見えれば、答えは X だと即決できる</em>。"}]
+},
+
+{
+id:"15", grp:"AB", type:"誰の声か", rate:44,
+lbl:"俗説側の発言", en:"Some people think の枠内で答える。筆者の立場で答えると落ちる",
+ask:'<span class="aen">Some people think that the left brain ______ in a brilliant mathematician.</span><span class="ajp">優れた数学者においては、左脳が□□と考える人たちがいる。</span>',
+kind:"choice", answer:"B",
+choices:[
+ {t:'believes<span class="cjp">信じる</span>'},
+ {t:'dominates<span class="cjp">優勢である・支配的である</span>', ok:true},
+ {t:'fails<span class="cjp">うまくいかない・失敗する</span>'},
+ {t:'types in a brilliant<span class="cjp">（意味をなさない選択肢）</span>'}],
+steps:[
+ {t:"設問の前置きを見る", d:"<b>Some people think that ...</b>。<u>これは「そう考える人がいる」という紹介</u>。<em>筆者がそう考えているのではない</em>。<b>本文で対応するのは is generally said to（一般に言われている）という形</b>。"},
+ {t:"該当文を特定する", d:"<b>Math ... is generally said to reside in the left brain, far away from all those artistic right-brain abilities.</b> <u>数学は左脳に宿ると一般に言われている</u>。これが「ある人たちの考え」。", cite:"第1段落 第5文"},
+ {t:"reside in を言い換える", d:"<b>数学の能力が左脳に宿る</b>＝<u>優れた数学者では左脳が優勢である</u>。<em>第1段落第2文の more dominant、第3文の dominating と同じ語族</em>。<b>dominates が入る</b>。"},
+ {t:"筆者の立場に引きずられないか確認する", d:"第6〜7文で筆者はこの見方を崩すが、<u>設問が聞いているのは Some people think の中身</u>。<em>崩されるかどうかは、この設問には関係ない</em>。", cite:"第1段落 第6〜7文"}],
+ev:{q:"Math, for example, requires logical thought and, thus, <b>is generally said to reside in the left brain</b>, far away from all those artistic right-brain abilities.",
+ jp:"例えば数学は論理的思考を必要とし、したがって、芸術的な右脳の能力からは遠く離れた<b>左脳に宿ると一般に言われている</b>。"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">主語が合わない</span>believes<span class="cj">信じる</span>主語は <b>the left brain</b>（左脳）。<u>脳が何かを信じる、という構図は本文にない</u>。<em>信じているのは人（Some people）のほう</em>。'},
+ {m:"o", n:"B", t:'<span class="tag g">正解</span>dominates<span class="cj">優勢である・支配的である</span>第1段落第5文 <b>is generally said to reside in the left brain</b> の言い換え。<u>第2文の more dominant、第3文の dominating と同じ語で、文章全体がこの語をめぐって動いている</u>。'},
+ {m:"x", n:"C", t:'<span class="tag v">筆者の立場で答えている</span>fails<span class="cj">うまくいかない・失敗する</span><b>最も多い誤答</b>。第6〜7文で「でも数学は創造的でもある。優れた数学者は右脳型か左脳型か」と俗説が崩されるので、<u>「左脳説は破綻する」と読んでしまう</u>。<em>だが設問は Some people think と限定している</em>。<b>崩す前の、俗説そのものを答える問題</b>。'},
+ {m:"x", n:"D", t:'<span class="tag v">文として成立しない</span>types in a brilliant<span class="cj">（意味をなさない選択肢）</span>入れても英文にならない。<u>四択の数を揃えるために置かれたもの</u>。<em>読んで意味が取れない選択肢は、まず外してよい</em>。'}],
+co:[
+ {c:"verm", l:"〈3を選びがちな人〉文章の結論で設問に答える人", h:"この文章の結論は「右脳型・左脳型は誤り」です。<u>その結論を知っているぶん、どの設問にも「誤りだ」と答えたくなる</u>。<b>ですが設問15が聞いているのは、誤りとされている中身そのもの</b>。<em>Some people think / According to popular understanding といった前置きがあったら、筆者の声を一度脇に置く</em>。"},
+ {c:"teal", l:"この文章に出てくる三つの声", h:"<b>俗説</b>｜is generally said to（第1段落第5文）、as many think（第2段落第2文）<br><b>研究で分かったこと</b>｜hasn&apos;t found（第1段落第3文）、was found to be（第2段落第3文）<br><b>筆者の判断</b>｜is a myth（第1段落第1文）、But / Likewise（第6・8文）<br><u>設問の前置きが、どの声を聞いているかを指定しています</u>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>設問文の前置きを読んでいるか</b>。<u>この大問では、前置きが答えの範囲を決めます</u>。<em>Some people think（15）、According to popular understanding（17）、Research has shown（18）</em>。<b>同じ第2段落から、俗説と研究結果の両方が問われている設問もあります</b>。"}]
+},
+
+/* ========== 第2段落 16・17・18 ========== */
+{
+id:"16", grp:"CD", type:"譲歩の処理", rate:51,
+lbl:"全否定ではない", en:"though で折り返す。元になった科学はある、が第2段落の主張",
+ask:'<span class="aen">There is some ______ truth in the belief that different sides of the brain do different tasks.</span><span class="ajp">脳の異なる側が異なる作業を行うという考えの中には、□□真実もいくらかある。</span>',
+kind:"choice", answer:"B",
+choices:[
+ {t:'accidentally recorded<span class="cjp">偶然記録された</span>'},
+ {t:'scientifically proven<span class="cjp">科学的に証明された</span>', ok:true},
+ {t:'secretly communicated<span class="cjp">ひそかに伝えられた</span>'},
+ {t:'totally rejected<span class="cjp">完全に否定された</span>'}],
+steps:[
+ {t:"段落の切り替わりに気づく", d:"第2段落第1文は <b>Like many modern myths, <u>though</u>, ...</b> で始まる。<u>though（もっとも）は、前段落の全否定をここで和らげる合図</u>。<em>第1段落＝「俗説だ」、第2段落＝「ただし元になった科学はある」</em>。", cite:"第2段落 第1文"},
+ {t:"該当部分を取る", d:"<b>the myth ... is based on <u>a bit of real science</u></b>。<u>わずかながら、本物の科学に基づいている</u>。<em>a bit of は量を限定するが、存在を否定しない</em>。", cite:"第2段落 第1文"},
+ {t:"言い換える", d:"<b>a bit of real science</b> → <b>some scientifically proven truth</b>。<u>real science（本物の科学）が scientifically proven（科学的に証明された）に対応</u>。<em>設問文の some も a bit of に対応している</em>。"},
+ {t:"裏づけを確認する", d:"第2文 <b>Scientists know the right and left sides of the brain actually do specialize in different kinds of tasks</b>。<u>actually do という強調つきで、役割分担が事実であると述べている</u>。<em>設問文の「異なる側が異なる作業を行う」はこの文の言い換え</em>。", cite:"第2段落 第2文"}],
+ev:{q:"Like many modern myths, <b>though</b>, the myth of right-brained and left-brained people is <b>based on a bit of real science</b>. Scientists know the right and left sides of the brain <b>actually do specialize in different kinds of tasks</b> ...",
+ jp:"<b>もっとも</b>、多くの現代の俗説と同じく、右脳型・左脳型の俗説も、<b>わずかながら本物の科学に基づいている</b>。科学者たちは、脳の右側と左側が<b>実際に異なる種類の作業を専門としている</b>ことを知っている……"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">本文にない</span>accidentally recorded<span class="cj">偶然記録された</span>some truth を「たまたま当たっていた」と読む。<u>だが本文は real science（本物の科学）と書いており、偶然ではない</u>。<em>第3文では was found to be という研究の成果として述べられている</em>。'},
+ {m:"o", n:"B", t:'<span class="tag g">正解</span>scientifically proven<span class="cj">科学的に証明された</span>第2段落第1文 <b>a bit of real science</b> の言い換え。<u>第2文の Scientists know ... actually do specialize、第3文の was found to be が、それが証明済みであることを示す</u>。'},
+ {m:"x", n:"C", t:'<span class="tag v">本文にない</span>secretly communicated<span class="cj">ひそかに伝えられた</span>隠されていたという話は本文のどこにもない。<u>むしろ科学者が知っている（Scientists know）と明記されている</u>。'},
+ {m:"x", n:"D", t:'<span class="tag v">第2段落を読み落としている</span>totally rejected<span class="cj">完全に否定された</span><b>最も多い誤答</b>。第1段落の「俗説だ」という印象のまま、<u>何もかも否定されたと思い込んでいる</u>。<em>だが第2段落第1文は though で折り返し、「わずかに本物の科学がある」と認めている</em>。<b>しかも totally rejected を入れると、設問文が「完全に否定された真実がいくらかある」という矛盾した文になる</b>。'}],
+co:[
+ {c:"verm", l:"〈4を選びがちな人〉第1段落で判断を固める人", h:"<b>第1段落が強く否定しているので、そこで結論を作ってしまう</b>。<u>この文章は「全部ウソ」ではなく「ウソだが、元ネタの科学はある」という二層の構造</u>。<em>第2段落第1文の though を見た瞬間に、話が折り返したと気づけるかどうか</em>。"},
+ {c:"teal", l:"設問16・17・18は同じ段落から作られている", h:"<b>16＝本当の部分</b>（左右で役割分担はある）<br><b>17＝俗説の部分</b>（右が創造、左が論理）<br><b>18＝本当の部分</b>（左＝言語と問題解決）<br><u>第2段落の中で「本当」と「俗説」の線がどこに引かれているかを掴めば、三問まとめて取れます</u>。<em>線はこうです。役割分担がある＝本当／右が創造・左が論理＝単純すぎる俗説</em>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>譲歩の though を処理できるか</b>。<u>though, however, that said などが入った瞬間に、主張の向きが変わる</u>。<em>段落の先頭にある though は、前の段落全体を受けていることが多い</em>。"}]
+},
+
+{
+id:"17", grp:"CD", type:"誰の声か", rate:39,
+lbl:"as many think を取り出す", en:"一文の中に俗説と筆者の見解が同居している。前置きが指定した側を取る",
+ask:'<span class="aen">According to popular understanding, the right brain ______ creative tasks.</span><span class="ajp">通俗的な理解によれば、右脳が創造的な作業を□□。</span>',
+kind:"choice", answer:"A",
+choices:[
+ {t:'deals with<span class="cjp">扱う・処理する</span>', ok:true},
+ {t:'finds out<span class="cjp">見つけ出す</span>'},
+ {t:'removes<span class="cjp">取り除く</span>'},
+ {t:'separates<span class="cjp">分離する</span>'}],
+steps:[
+ {t:"設問の前置きが指す範囲を決める", d:"<b>According to popular understanding</b>（通俗的な理解によれば）。<u>本文で対応するのは as many think（多くの人が考えるように）</u>。<em>筆者の見解ではなく、世間一般の理解を答える</em>。"},
+ {t:"該当文の中で、俗説の部分だけを取り出す", d:"<b>the real division of labor is much more complex than <u>creativity on the right and logic on the left</u>, as many think</b>。<u>下線部が「多くの人が考えている図式」</u>。<em>筆者はそれより複雑だと言っているが、図式そのものの中身はここに書かれている</em>。", cite:"第2段落 第2文"},
+ {t:"名詞句を動詞句にほどく", d:"<b>creativity on the right</b>（右に創造性がある）<br>→ <b>the right brain deals with creative tasks</b>（右脳が創造的な作業を扱う）。<u>どこに何があるか、という言い方を、何が何を扱うか、に変えただけ</u>。"},
+ {t:"ほかの三つが成立しないことを確認する", d:"<u>find out / remove / separate のいずれも、本文の creativity on the right とは結びつかない</u>。<em>「右脳に創造性がある」を言い換えられるのは deals with だけ</em>。"}],
+ev:{q:"Scientists know the right and left sides of the brain actually do specialize in different kinds of tasks, although the real division of labor is much more complex than <b>creativity on the right and logic on the left, as many think</b>.",
+ jp:"科学者たちは、脳の右側と左側が実際に異なる種類の作業を専門としていることを知っている。ただし実際の役割分担は、<b>多くの人が考える「右が創造性、左が論理」</b>よりも、はるかに複雑である。"},
+sol:[
+ {m:"o", n:"A", t:'<span class="tag g">正解</span>deals with<span class="cj">扱う・処理する</span><b>creativity on the right</b>（右に創造性がある）を、動詞句に開いたもの。<u>as many think が付いているので、これが通俗的理解の中身だと確定する</u>。<em>設問の前置き According to popular understanding と正確に対応している</em>。'},
+ {m:"x", n:"B", t:'<span class="tag v">左脳の記述と混同</span>finds out<span class="cj">見つけ出す</span>第2段落第3文の <b>problem-solving</b>（問題解決）を右脳の話だと取り違えている。<u>problem-solving は左脳のほうで、しかも研究で分かった事実であって通俗的理解ではない</u>。<em>設問18の答えがこちら</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">本文にない</span>removes<span class="cj">取り除く</span>右脳が創造的作業を取り除く、という記述はどこにもない。<u>意味としても逆方向</u>。'},
+ {m:"x", n:"D", t:'<span class="tag v">語の連想</span>separates<span class="cj">分離する</span>同じ文にある <b>division of labor</b>（役割分担）から「分ける」を連想している。<u>だが分かれているのは脳の仕事であって、右脳が創造的作業を分離するのではない</u>。<em>主語と動詞の関係が成り立たない</em>。'}],
+co:[
+ {c:"verm", l:"〈答えが出せず止まる人〉筆者が否定しているものを答えたくない人", h:"この一文は <b>筆者の見解（はるかに複雑だ）と俗説（右が創造、左が論理）が同居</b>しています。<u>筆者が否定しているほうを答えるのに抵抗が出る</u>。<em>ですが設問は According to popular understanding と明示している</em>。<b>設問が聞いている側を、ためらわず取る</b>。"},
+ {c:"verm", l:"〈2を選びがちな人〉右と左を取り違える人", h:"<b>右＝空間、左＝言語と問題解決</b>（第2段落第3文、研究で分かったこと）<br><b>右＝創造、左＝論理</b>（第2段落第2文、通俗的理解）<br><u>この四つが同じ段落に並んでいるので、混ざります</u>。<em>読みながら右と左を書き分けておくと、設問17と18を取り違えません</em>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>than や as で挟まれた部分を取り出せるか</b>。<u>A is much more complex than B という形では、B のほうに「世間の理解」が入っていることが多い</u>。<em>比較の後ろは、筆者が退けている側</em>。<b>その「退けられた側の中身」が問われています</b>。"}]
+},
+
+{
+id:"18", grp:"CD", type:"言い換え・複合語", rate:66,
+lbl:"problem-solving をほどく", en:"複合名詞を動詞句に開く。左右の対応を取り違えない",
+ask:'<span class="aen">Research has shown that the left hemisphere of the brain is good at tasks that involve ______.</span><span class="ajp">研究が示してきたのは、脳の左半球が□□を伴う作業を得意とすることである。</span>',
+kind:"choice", answer:"C",
+choices:[
+ {t:'artistic inspiration<span class="cjp">芸術的なひらめき</span>'},
+ {t:'creative designs<span class="cjp">創造的な設計</span>'},
+ {t:'finding answers<span class="cjp">答えを見つけること</span>', ok:true},
+ {t:'physical exercise<span class="cjp">身体的な運動</span>'}],
+steps:[
+ {t:"前置きで範囲を決める", d:"<b>Research has shown</b>（研究が示してきた）。<u>通俗的理解ではなく、研究で分かったこと</u>。<em>本文では was found to be という形で書かれている箇所</em>。"},
+ {t:"左半球の記述を取る", d:"<b>the left side of the brain <u>was found to be</u> the center of <u>language and problem-solving</u></b>。<u>左＝言語と問題解決</u>。", cite:"第2段落 第3文"},
+ {t:"複合名詞を開く", d:"<b>problem-solving</b>（問題解決）→ <b>finding answers</b>（答えを見つけること）。<u>problem を solve する＝答えを見つける</u>。<em>同じ中身を、別の語で言い直しただけ</em>。"},
+ {t:"右半球と混ざっていないか確認する", d:"同じ文の前半に <b>the right hemisphere ... better at spatial tasks</b>（右＝空間的作業）。<u>こちらを選ばないよう、左右を指で押さえながら読む</u>。", cite:"第2段落 第3文"}],
+ev:{q:"Generally, the right hemisphere of the brain was found to be better at spatial tasks, ... while <b>the left side of the brain was found to be the center of language and problem-solving</b>.",
+ jp:"一般に、右半球は空間的な作業が得意であることが分かっており、一方で<b>左側は言語と問題解決の中枢であることが分かっている</b>。"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">俗説の側を答えている</span>artistic inspiration<span class="cj">芸術的なひらめき</span>「右＝創造、左＝論理」という図式を思い出し、<u>左右を取り違えたうえ、俗説のほうを答えている</u>。<em>設問は Research has shown と限定しており、研究結果のほうを聞いている</em>。'},
+ {m:"x", n:"B", t:'<span class="tag v">俗説の側を答えている</span>creative designs<span class="cj">創造的な設計</span>同じく創造性は、第2段落第2文で「多くの人が右脳に結びつける」とされているもの。<u>研究で左脳に結びつけられているのは言語と問題解決</u>。'},
+ {m:"o", n:"C", t:'<span class="tag g">正解</span>finding answers<span class="cj">答えを見つけること</span>第2段落第3文 <b>problem-solving</b> の言い換え。<u>複合名詞を動名詞句に開いただけで、中身は同じ</u>。<em>同じ文に language もあるが、選択肢には言語に当たるものがないので、problem-solving に絞られる</em>。'},
+ {m:"x", n:"D", t:'<span class="tag v">左右の取り違え＋誤訳</span>physical exercise<span class="cj">身体的な運動</span><b>spatial tasks</b>（空間的作業）を「身体を動かすこと」と読んでいる。<u>spatial は「自分の周りで物がどこにあるかを把握する」ことで、運動ではない</u>（本文に説明あり）。<em>しかもそれは右半球の話</em>。'}],
+co:[
+ {c:"verm", l:"〈1・2を選びがちな人〉覚えている図式で答える人", h:"<b>「右脳＝芸術、左脳＝論理」は、この文章が否定している図式です</b>。<u>知識として持っているぶん、設問を読まずにそれで答えてしまう</u>。<em>Research has shown という前置きがあれば、本文の was found to be の箇所を探す</em>。"},
+ {c:"teal", l:"複合名詞をほどく練習", h:"<b>problem-solving → finding answers</b><br><u>この大問には同じ型の言い換えがいくつもあります</u>。<em>brain imaging → looking at the brain（設問14の誤答）、division of labor → different sides do different tasks（設問16）</em>。<b>名詞のかたまりを、主語と動詞の形に開き直す</b>。これができると選択肢が速く読めます。"}]
+},
+
+/* ========== 第3段落・第4段落 19〜23 ========== */
+{
+id:"19", grp:"EF", type:"言い換え・根拠の対応", rate:48,
+lbl:"star signs の罠", en:"本文にある語でも、その主張の根拠とは限らない",
+ask:'<span class="aen">People tend to distinguish between left-brained and right-brained people partly because they think that some ______.</span><span class="ajp">人々が左脳型と右脳型を区別したがる理由の一つは、□□と考えるからである。</span>',
+kind:"choice", answer:"B",
+choices:[
+ {t:'friends are taller than others<span class="cjp">友人の中には他より背が高い人がいる</span>'},
+ {t:'parts of their body are stronger than others<span class="cjp">体の一部は他の部分より強い</span>', ok:true},
+ {t:'people are weaker than others<span class="cjp">他の人より弱い人がいる</span>'},
+ {t:'star signs are better than others<span class="cjp">他より優れた星座がある</span>'}],
+steps:[
+ {t:"段落の設計を確認する", d:"第3段落第1文が <b>why do so many people believe it?</b> と問いを立て、<u>第2文（Perhaps）と第3文（It may also）で理由を二つ挙げる</u>。<em>設問19は一つめ、設問20は二つめ</em>。", cite:"第3段落 第1〜3文"},
+ {t:"一つめの理由を取る", d:"<b>people&apos;s brains would be dominant on one side or the other <u>in the same way as their hands, feet, or eyes are</u></b>。<u>手・足・目と同じように、脳にも利き側があると思える</u>。", cite:"第3段落 第2文"},
+ {t:"具体語を上位概念にまとめる", d:"<b>hands, feet, or eyes</b> → <b>parts of their body</b>（体の一部）。<u>dominant on one side → stronger than others</u>。<em>利き手・利き足・利き目という発想</em>。"},
+ {t:"比べている対象を確認する", d:"<b>比べているのは、一人の体の中の左と右</b>。<u>人と人を比べているのではない</u>。<em>ここを取り違えると選択肢3に流れる</em>。"}],
+ev:{q:"Perhaps it just makes sense that people&apos;s brains would be <b>dominant on one side or the other in the same way as their hands, feet, or eyes are</b>.",
+ jp:"おそらく、<b>手や足や目と同じように、脳にもどちらか一方に利き側がある</b>というのは、単純に筋が通るように思えるのだろう。"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">語はあるが話が違う</span>friends are taller than others<span class="cj">友人の中には他より背が高い人がいる</span>friends は第3段落第3文（our friends into &quot;types&quot;）に確かに出てくる。<u>だが身長の話は本文のどこにもない</u>。<em>語が本文にあることと、その内容が本文にあることは別</em>。'},
+ {m:"o", n:"B", t:'<span class="tag g">正解</span>parts of their body are stronger than others<span class="cj">体の一部は他の部分より強い</span>第3段落第2文 <b>hands, feet, or eyes</b> を上位概念 parts of their body でまとめ、<u>dominant on one side を stronger than others と言い換えている</u>。<em>利き手があるのだから脳にも利き側があるだろう、という類推</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">比較の対象が違う</span>people are weaker than others<span class="cj">他の人より弱い人がいる</span>主語が people で、<u>人と人を比べている</u>。<em>本文が言っているのは、一人の体の中での左右の差</em>。<b>in the same way as their hands, feet, or eyes are の are の主語が hands, feet, eyes であることを押さえる</b>。'},
+ {m:"x", n:"D", t:'<span class="tag v">語の役割を取り違え</span>star signs are better than others<span class="cj">他より優れた星座がある</span>star signs は第3段落第4文に出てくる。<u>だがそれは「科学的妥当性がその程度しかない」という比較のために持ち出された語</u>。<em>人々が右脳左脳を信じる理由として挙げられているのではない</em>。<b>しかも「星座に優劣がある」とは本文は一言も言っていない</b>。'}],
+co:[
+ {c:"verm", l:"〈4を選びがちな人〉本文にある語を見ると安心する人", h:"<b>star signs は確かに本文にあります</b>。<u>だから本文を見返しても「書いてある」と感じてしまう</u>。<em>見るべきは、その語がどの主張のために置かれているか</em>。<b>星座は「科学的妥当性の低さ」を示す比較対象であって、信じる理由ではありません</b>。"},
+ {c:"teal", l:"第3段落の二つの理由", h:"<b>理由①（第2文）</b>｜手足や目に利き側があるのだから、脳にもあるだろう → <u>設問19</u><br><b>理由②（第3文）</b>｜自分や友人をタイプに分けたがる癖 → <u>設問20</u><br><em>Perhaps と It may also が目印</em>。<b>二つを混ぜなければ、19と20は続けて取れます</b>。"}]
+},
+
+{
+id:"20", grp:"EF", type:"言い換え・上位概念", rate:62,
+lbl:"分類であって評価ではない", en:"sort into types → place into categories。余計な意味を足さない",
+ask:'<span class="aen">Another reason that people like to think about left-brained and right-brained people is because they think about emotional and intellectual characteristics in order to ______.</span><span class="ajp">左脳型・右脳型について考えたがるもう一つの理由は、感情面と知的な面の特徴について考えることで□□ためである。</span>',
+kind:"choice", answer:"D",
+choices:[
+ {t:'evaluate people and their family or jobs<span class="cjp">人やその家族、職業を評価する</span>'},
+ {t:'find out where their problems come from<span class="cjp">自分の問題がどこから来るのかを突き止める</span>'},
+ {t:'make a judgment about good and bad people<span class="cjp">良い人と悪い人を判断する</span>'},
+ {t:'place people into different categories<span class="cjp">人々を異なる分類に振り分ける</span>', ok:true}],
+steps:[
+ {t:"Another reason が指すものを確認する", d:"設問文の <b>Another reason</b> は、本文の <b>It may <u>also</u> have something to do with ...</b>（第3段落第3文）に対応する。<u>二つめの理由</u>。", cite:"第3段落 第3文"},
+ {t:"該当部分を取る", d:"<b>our tendency to <u>sort ourselves and our friends into &quot;types&quot;</u> based on our emotional and intellectual characteristics</b>。<u>感情面・知的な面の特徴をもとに、自分や友人をタイプに分ける傾向</u>。", cite:"第3段落 第3文"},
+ {t:"言い換える", d:"<b>sort ... into &quot;types&quot;</b> → <b>place people into different categories</b>。<u>sort into＝place into、types＝categories</u>。<em>ほぼ一対一の対応</em>。"},
+ {t:"意味を足していないか点検する", d:"<u>本文が言っているのは「分ける」ことだけ</u>。<em>優劣をつける、評価する、原因を探る、といった要素は入っていない</em>。<b>選択肢に余計な動詞が入っていないか確認する</b>。"}],
+ev:{q:"It may also have something to do with our tendency to <b>sort ourselves and our friends into &quot;types&quot; based on our emotional and intellectual characteristics</b>.",
+ jp:"また、<b>感情面や知的な面の特徴をもとに、自分や友人を「タイプ」に分類したがる</b>私たちの傾向も、関係しているのかもしれない。"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">本文にない要素</span>evaluate people and their family or jobs<span class="cj">人やその家族、職業を評価する</span>家族や職業の話は本文のどこにもない。<u>また evaluate（評価する）は、sort（分類する）より踏み込んだ語</u>。'},
+ {m:"x", n:"B", t:'<span class="tag v">別の段落の語に引かれた</span>find out where their problems come from<span class="cj">自分の問題がどこから来るのかを突き止める</span>第2段落第3文の <b>problem-solving</b> につられている。<u>だが第3段落は、分類したがる心理の話</u>。<em>問題の原因を探るという記述はない</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">分類に優劣を足している</span>make a judgment about good and bad people<span class="cj">良い人と悪い人を判断する</span><b>最も惜しい誤答</b>。分類＝優劣をつけること、と拡大して読んでいる。<u>だが本文の sort into &quot;types&quot; に善悪の含みはない</u>。<em>むしろ第4文以降は、肯定的な記述を受け入れる話で、悪い判断の話ではない</em>。'},
+ {m:"o", n:"D", t:'<span class="tag g">正解</span>place people into different categories<span class="cj">人々を異なる分類に振り分ける</span>第3段落第3文 <b>sort ourselves and our friends into &quot;types&quot;</b> の言い換え。<u>sort into が place into に、types が categories に置き換わっただけ</u>。<em>余計な意味が足されていない</em>。'}],
+co:[
+ {c:"verm", l:"〈3を選びがちな人〉言い換えに意味を足してしまう人", h:"<b>分類する</b>と<b>優劣をつける</b>は別の行為です。<u>日本語で考えると「タイプ分け＝レッテル貼り＝評価」と連想が伸びてしまう</u>。<em>言い換え問題では、本文にない動作が入った選択肢は外す</em>。<b>足りないより、足しすぎのほうが見つけにくい誤りです</b>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>言い換えの幅を守れるか</b>。<u>sort into types は、ちょうど place into categories の幅</u>。<em>狭すぎても（分類の基準を特定する）、広すぎても（評価・判断まで含める）外れる</em>。"}]
+},
+
+{
+id:"21", grp:"EF", type:"長文一文の末尾", rate:36,
+lbl:"especially if 以下", en:"長い一文の、コロンの後ろのさらに末尾に答えがある",
+ask:'<span class="aen">When people are given statements about themselves, they often agree when the statements ______.</span><span class="ajp">自分についての記述を与えられたとき、人がよく同意するのは、その記述が□□ときである。</span>',
+kind:"choice", answer:"D",
+choices:[
+ {t:'are scientific and believable<span class="cjp">科学的で信じられるものである</span>'},
+ {t:'make them question themselves<span class="cjp">自分自身を疑わせる</span>'},
+ {t:'offer some kind of advice<span class="cjp">何らかの助言を与える</span>'},
+ {t:'say good things about them<span class="cjp">自分について良いことを言っている</span>', ok:true}],
+steps:[
+ {t:"バーナム効果の定義文を探す", d:"第3段落第4文のコロンの後ろ。<b>when people are offered general statements ... they are likely to accept them as meaningful and true</b>。<u>設問文の they often agree がこの accept ... as true に対応</u>。", cite:"第3段落 第4文"},
+ {t:"設問が聞いている条件を確認する", d:"設問は <b>they often agree <u>when the statements ___</u></b>。<u>同意しやすくなる条件</u>を聞いている。<em>定義そのものではなく、そこに付け足された条件のほう</em>。"},
+ {t:"文の末尾まで読み切る", d:"<b>..., <u>especially if the statements are positive</u>.</b> <u>とりわけ、その記述が肯定的であるとき</u>。<em>ここが答え</em>。<b>長い一文の、いちばん最後に置かれている</b>。", cite:"第3段落 第4文"},
+ {t:"第4段落でも裏を取る", d:"<b>who would reject a description of themselves as &quot;spontaneous&quot; or &quot;logical&quot;?</b> <u>良く言われて拒む人はいない、と同じことを繰り返している</u>。<em>答えの確認になる</em>。", cite:"第4段落 第3文"}],
+ev:{q:"... they are likely to accept them as meaningful and true, <b>especially if the statements are positive</b>.",
+ jp:"……人はそれを意味のある真実だと受け入れやすい。<b>とりわけ、その記述が肯定的なものであるときにはそうである。</b>"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">近くの語に引かれた</span>are scientific and believable<span class="cj">科学的で信じられるものである</span><b>最も多い誤答</b>。同じ第4文に scientific validity、第4段落に &quot;scientific&quot; way があるので拾ってしまう。<u>だが scientific validity は「そんなものはほとんどない」という文脈で出てくる語</u>。<em>本文が挙げている条件は positive であること</em>。<b>科学的に見えるから信じる、とは書かれていない</b>。'},
+ {m:"x", n:"B", t:'<span class="tag v">向きが逆</span>make them question themselves<span class="cj">自分自身を疑わせる</span>疑わせるなら、同意は起きない。<u>設問文は they often agree（よく同意する）という文脈</u>。<em>論理が反対方向</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">本文にない</span>offer some kind of advice<span class="cj">何らかの助言を与える</span>助言という話は本文のどこにもない。<u>本文に出てくるのは descriptions of their own personalities（自分の性格についての記述）</u>。<em>記述と助言は別物</em>。'},
+ {m:"o", n:"D", t:'<span class="tag g">正解</span>say good things about them<span class="cj">自分について良いことを言っている</span>第3段落第4文の末尾 <b>especially if the statements are positive</b> の言い換え。<u>positive → good things</u>。<em>第4段落第3文（「自発的」「論理的」と言われて拒む人はいない）でも同じことが繰り返されている</em>。'}],
+co:[
+ {c:"verm", l:"〈1を選びがちな人〉同じ文の前半で止まる人", h:"第3段落第4文は<b>この文章でいちばん長い一文</b>です。<u>Most of these have about as much scientific validity as star signs, but ... : when ... , they are likely to ... , especially if ...</u><br><em>前半に scientific validity があるので、そこで答えを作ってしまう</em>。<b>答えは、コロンの後ろのさらに末尾にあります</b>。<u>長い文ほど、最後まで読み切る</u>。"},
+ {c:"teal", l:"especially if は「条件の追加」", h:"<b>especially if ... は、直前の内容が特に強く当てはまる場合を示します</b>。<u>設問が「どんなときに同意するか」と条件を聞いているなら、まずこの表現を探す</u>。<em>同じ働きをするのは particularly when、above all when など</em>。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>長文一文を最後まで保持できるか</b>。<u>この一文には、譲歩（but）、コロンによる定義、when 節、especially if 節が重なっている</u>。<em>途中で意味を取り終えたと判断すると、末尾の条件を落とす</em>。<b>この大問で正答率がいちばん下がるのがこの設問です</b>。"}]
+},
+
+{
+id:"22", grp:"EF", type:"必然の推論", rate:46,
+lbl:"書いていないが確定する", en:"偽と知らせていたら accurate と判定されるはずがない",
+ask:'<span class="aen">The scholars who studied the Barnum Effect did not tell the research participants that the ______.</span><span class="ajp">バーナム効果を研究した学者たちが被験者に伝えなかったのは、□□ということである。</span>',
+kind:"choice", answer:"A",
+choices:[
+ {t:'feedback was false<span class="cjp">その評価は偽物だった</span>', ok:true},
+ {t:'feedback was true<span class="cjp">その評価は本物だった</span>'},
+ {t:'people who took the test lied<span class="cjp">テストを受けた人々が嘘をついた</span>'},
+ {t:'people who took the test told the truth<span class="cjp">テストを受けた人々が本当のことを言った</span>'}],
+steps:[
+ {t:"実験の記述を取る", d:"<b>psychologists ... gave out <u>false personality tests</u> and found that people generally rated <u>the invented feedback</u> as accurate</b>。<u>偽の性格テストを配り、でっち上げの評価を人々が正確だと判定した</u>。", cite:"第3段落 第5文"},
+ {t:"設問が聞いていることを確認する", d:"<b>did not tell</b>（伝えなかった）。<u>本文には「伝えなかった」とは一言も書かれていない</u>。<em>そこを埋める問題</em>。"},
+ {t:"必然的に決まることを考える", d:"<b>もし「これは偽物です」と伝えていたら、被験者が accurate（当たっている）と答えるはずがない</b>。<u>accurate と判定されたという事実そのものが、偽物だと知らされていなかったことを示す</u>。<em>これは本文から確実に導ける推論</em>。"},
+ {t:"選択肢を絞る", d:"<u>伏せられていたのは、評価が false であること</u>。<em>被験者の正直さは、この実験の論点ではない</em>。"}],
+ev:{q:"In a clinical trial, psychologists who studied the Barnum Effect gave out <b>false personality tests</b> and found that people generally rated <b>the invented feedback as accurate</b>.",
+ jp:"ある臨床実験で、バーナム効果を研究していた心理学者たちは<b>偽の性格テスト</b>を配り、人々がその<b>でっち上げの評価を、おおむね正確だと判定する</b>ことを見いだした。"},
+sol:[
+ {m:"o", n:"A", t:'<span class="tag g">正解</span>feedback was false<span class="cj">その評価は偽物だった</span>本文は <b>false personality tests</b>、<b>invented feedback</b> と二度にわたって偽物であることを示す。<u>それでも被験者が accurate と答えたのだから、偽物だとは知らされていなかった</u>。<em>明示されていないが、本文から必然的に決まる</em>。'},
+ {m:"x", n:"B", t:'<span class="tag v">真偽が逆</span>feedback was true<span class="cj">その評価は本物だった</span>「本物だとは言わなかった」と読んでいる。<u>だが本文は false・invented と明記しており、そもそも本物ではない</u>。<em>伏せられたのは、偽物であるという事実のほう</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">論点がずれている</span>people who took the test lied<span class="cj">テストを受けた人々が嘘をついた</span>被験者が嘘をついたかどうかは、本文の関心事ではない。<u>この実験が示したのは、人が「当たっている」と感じてしまうこと</u>。<em>被験者は正直に答えたうえで、それでも騙されている</em>。'},
+ {m:"x", n:"D", t:'<span class="tag v">論点がずれている</span>people who took the test told the truth<span class="cj">テストを受けた人々が本当のことを言った</span>3と同じく、被験者の誠実さの話にすり替えている。<u>伏せられていたのは実験の仕掛けであって、被験者の発言内容ではない</u>。'}],
+co:[
+ {c:"verm", l:"〈2を選びがちな人〉did not tell を機械的に反転させる人", h:"<b>「伝えなかった」と聞くと、反対の内容を入れたくなる</b>。<u>だが反転させるのは「伝えたかどうか」であって、内容の真偽ではない</u>。<em>伏せられた内容そのものは、本文の記述（false・invented）どおり</em>。"},
+ {c:"teal", l:"許される推論と、許されない推論", h:"<b>許される</b>｜<u>accurate と判定された → 偽物だと知らされていなかった</u>。<em>知らされていたら、その判定は起こりえない</em>。<br><b>許されない</b>｜<u>被験者が嘘をついた、正直だった</u>。<em>本文に手がかりがなく、どちらとも決まらない</em>。<br><b>本文の記述から一通りに決まるかどうか</b>が、線引きです。"},
+ {c:"nav", l:"出題者が測っているもの", h:"<b>書かれていないことを、書かれていることから埋められるか</b>。<u>この大問で唯一、本文に直接の対応表現がない設問</u>。<em>実験が成立する条件を考えれば、答えは一つに決まります</em>。"}]
+},
+
+{
+id:"23", grp:"EF", type:"主題・タイトル", rate:72,
+lbl:"問いの立て方まで合わせる", en:"話題は「型の人がいるか」。使用の話でも判定法の話でもない",
+ask:'<span class="aen">The most appropriate title for this passage is ______.</span><span class="ajp">この文章に最もふさわしい題を選ぶ。話題が合うだけでなく、問いの立て方まで合うものを選ぶこと。</span>',
+kind:"choice", answer:"B",
+choices:[
+ {t:'Are There Any People Who Use Only the Right Brain?<span class="cjp">右脳だけを使う人はいるのか</span>'},
+ {t:'Are There Really Right-brained and Left-brained People?<span class="cjp">右脳型・左脳型の人間は本当にいるのか</span>', ok:true},
+ {t:'Is It Possible to Know If People Have Creative Brains?<span class="cjp">創造的な脳を持つ人かどうかを知ることはできるか</span>'},
+ {t:'Is It Possible to Use Only One Part of the Brain?<span class="cjp">脳の一部分だけを使うことは可能か</span>'}],
+steps:[
+ {t:"文章が立てている問いを確認する", d:"第1段落第1文 <b>The idea that there are right-brained and left-brained people is a myth.</b> <u>論点は「そういう型の人がいるかどうか」</u>。", cite:"第1段落 第1文"},
+ {t:"文章全体の運びを確認する", d:"<u>①そういう人はいない（第1段落）→②ただし元になった科学はある（第2段落）→③ではなぜ信じられるのか（第3段落）→④自分語りの道具だから（第4段落）</u>。<em>最初に立てた問いに答え、その後で「なぜ広まったか」まで説明する形</em>。"},
+ {t:"問いの形が合うものを選ぶ", d:"<b>Are There Really ...?</b> という形が、第1段落の主張をそのまま疑問形にしたもの。<u>Really が入っていることで、「いると言われているが本当か」という含みまで一致する</u>。"}],
+ev:{q:"<b>The idea that there are right-brained and left-brained people is a myth.</b> ... <b>If there&apos;s no evidence for the myth of right-brained and left-brained people, why do so many people believe it?</b>",
+ jp:"<b>右脳型の人間と左脳型の人間がいるという考えは、俗説である。</b>……<b>右脳型・左脳型の俗説に証拠がないのなら、なぜこれほど多くの人がそれを信じているのだろうか。</b>"},
+sol:[
+ {m:"x", n:"A", t:'<span class="tag v">極端にしている</span>Are There Any People Who Use Only the Right Brain?<span class="cj">右脳だけを使う人はいるのか</span><b>only</b> が入っている点が本文とずれる。<u>俗説が言っているのは「どちらかが優勢」であって「片方しか使わない」ではない</u>（第1段落第2文 more dominant than the other）。<em>本文が扱っていない極端な主張に話をすり替えている</em>。'},
+ {m:"o", n:"B", t:'<span class="tag g">正解</span>Are There Really Right-brained and Left-brained People?<span class="cj">右脳型・左脳型の人間は本当にいるのか</span>第1段落第1文の主張を疑問形にしたもの。<u>話題（そういう型の人がいるか）も、問いの形（本当にいるのか、という疑い）も一致する</u>。<em>第3段落第1文でも同じ問いが言い直されている</em>。'},
+ {m:"x", n:"C", t:'<span class="tag v">話題がずれている</span>Is It Possible to Know If People Have Creative Brains?<span class="cj">創造的な脳を持つ人かどうかを知ることはできるか</span>創造性をどう判定するか、という方法の話は本文にない。<u>本文が論じているのは、右脳型・左脳型という分け方が成り立つかどうか</u>。<em>creative という語が本文にあるだけで選んでいる</em>。'},
+ {m:"x", n:"D", t:'<span class="tag v">使用と類型の混同</span>Is It Possible to Use Only One Part of the Brain?<span class="cj">脳の一部分だけを使うことは可能か</span>1と同じく only の問題。<u>「脳の使い方」の話にしてしまっている</u>。<em>本文は「人を二つの型に分けられるか」という分類の話</em>。<b>使用の可否と、人の類型は別の問い</b>。'}],
+co:[
+ {c:"verm", l:"〈1・4を選びがちな人〉俗説を極端な形で覚えている人", h:"<b>「右脳人間は右脳しか使わない」は、本文の俗説よりさらに極端な主張です</b>。<u>本文が否定しているのは「どちらかが優勢だ」という、もう少し穏やかな考え</u>（第1段落第2文）。<em>only という限定語が入った選択肢は、本文と幅が合っているか確認する</em>。"},
+ {c:"gold", l:"タイトル問題の二つの条件", h:"<b>①話題が合っているか</b>｜<u>この文章の話題は、右脳型・左脳型という人の分け方</u>。<em>脳の使い方でも、創造性の判定法でもない</em>。<br><b>②問いの形が合っているか</b>｜<u>Are There Really ...? という疑いの形</u>。<em>文章は「いると言われているが、いない」と答えて進む</em>。<br><b>両方そろうのは2だけです</b>。"}]
+}
+
+];
+
+function esc(id){ var s=String(id); var out='q'; for(var i=0;i<s.length;i++){ var c=s.charCodeAt(i); if((c>=48&&c<=57)||(c>=65&&c<=90)||(c>=97&&c<=122)) out+=s[i]; else out+='_'+c; } return out; }
+function rateCls(r){ return r<=40?'low':(r<=55?'mid':'hi'); }
+function rateBadge(r){
+  if(!r) return '';
+  const c=rateCls(r);
+  const lab = c==='low'?'最難関':(c==='mid'?'差がつく':'取りたい');
+  return `<span class="rate ${c}">正答率 ${r}%・${lab}</span>`;
+}
+function buildEV(ev){ return ev?`<div class="ev"><div class="ev-hd">根拠｜本文の該当箇所</div><div class="ev-bd"><div class="ev-q">${ev.q}</div>${ev.jp}</div></div>`:''; }
+function buildCO(list){ return (list||[]).map(o=>`<div class="co ${o.c}"><div class="co-lbl">${o.l}</div>${o.h}</div>`).join(''); }
+function buildCA(rows){ return (rows||[]).map(r=>`<div class="ca-row"><div class="ca-mark ${r.m==='o'?'ok':'ng'}">${r.m==='o'?'✓':'✗'}</div><div class="ca-bd"><span class="k ${r.m==='o'?'o':'x'}">${r.n}.</span> ${r.t}</div></div>`).join(''); }
+function buildSteps(steps){
+  if(!steps) return '';
+  return '<div class="chy-h">解答プロセス</div><div class="dsteps">'+steps.map((s,i)=>`<div class="dstep"><div class="dn">${i+1}</div><div class="db"><b>${s.t}</b><p>${s.d}</p>${s.cite?`<div class="cite">${s.cite}</div>`:''}</div></div>`).join('')+'</div>';
+}
+function buildRubric(q){
+  if(!q.rubric) return '';
+  const rid='rb'+esc(q.id);
+  return `<div class="chy-h">採点基準（自己採点）</div><div class="rub" id="${rid}">
+    <div class="rub-hd"><span>自分の答案に入っていた要素にチェック</span><span class="sc"><b class="now">0</b> / ${q.total} 点</span></div>
+    ${q.rubric.map(r=>`<div class="rub-row" data-rid="${rid}" data-pt="${r.p}"><div class="rub-cb"></div><div class="rub-el">${r.t}${r.must?'<span class="must">必須</span>':'<span class="plus">加点</span>'}</div><div class="rub-pt">${r.p}点</div></div>`).join('')}
+    <div class="rub-foot">※ 配点は非公表のため、要素配分は学習用の目安（10点換算）。</div></div>`;
+}
+function buildNG(list,title){
+  if(!list) return '';
+  return `<div class="ng"><div class="nlab">✗ ${title||'NG解答例 ― この書き方で落とす'}</div>${
+    list.map(n=>`<div class="ng-row"><span class="x">✗</span><div class="nb"><span class="bad">${n.bad}</span><span class="why">${n.why}</span></div></div>`).join('')}</div>`;
+}
+
+function buildBody(q){
+  let b='';
+  if(q.kind==='choice'){
+    b+=`<div class="choices">${q.choices.map((c,i)=>`<button class="ch" data-ok="${c.ok?1:0}"><span class="num">${'ABCDEFGH'[i]||(i+1)}</span><span>${c.t}</span><span class="mk"></span></button>`).join('')}</div>`;
+  } else if(q.kind==='multi'){
+    b+=`<div class="box navy" style="margin:0 0 8px"><span class="lab">${q.mlab||'8択から3つ'}</span>各文をタップすると○×と根拠が開きます。${q.mhint||'まず自分で3つ選んでから確認しよう。'}</div>`;
+    b+=q.items.map(it=>`<div class="mi" data-ok="${it.ok?1:0}"><div class="mi-h"><span class="num">${it.n}</span><span class="st">${it.t}</span><span class="mk"></span></div>
+      <div class="mi-d"><div class="src">根拠｜${it.ev}</div><div class="jd">${it.why}</div></div></div>`).join('');
+  } else if(q.kind==='order'){
+    b+=`<div class="box teal" style="margin:0 0 8px"><span class="lab">まず自分で並べる</span>選択肢は7語。<strong>使わない語が3つ</strong>含まれています。答えを見る前に紙で完成させること。</div>
+      <div class="pool">${q.pool.map(w=>`<span class="pw">${w}</span>`).join('')}</div>`;
+  } else if(q.kind==='desc'){
+    b+=`<div class="box teal" style="margin:0 0 4px"><span class="lab">まず自分で書く</span>解説を開く前に、必ず<strong>自分の訳を紙に書いてから</strong>「答え・根拠を表示」を押すこと。</div>`;
+  }
+  return b;
+}
+function buildSol(q){
+  let s='';
+  if(q.kind==='choice'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+(q.steps?buildSteps(q.steps):'')+buildEV(q.ev)+`<div class="chy-h">全選択肢の照合</div>`+buildCA(q.sol)+buildCO(q.co);
+  } else if(q.kind==='multi'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`+buildCO(q.co)+`<div class="box gold"><span class="lab">確認</span>上の各文をタップすると、○×・根拠段落・判定理由がすべて開きます。</div>`;
+  } else if(q.kind==='order'){
+    s+=`<div class="ans-badge">正解 <span class="c">${q.answer}</span></div>`;
+    s+=`<div class="slots">${q.slots.map(x=>`<div class="slot ${x.hit?'hit':''}"><div class="k">( ${x.k} )</div><div class="v">${x.v}</div></div>`).join('')}</div>`;
+    s+=`<div class="full">${q.full}<span class="jp">${q.fullJp}</span></div>`;
+    s+=`<div class="chy-h">使う語・使わない語</div><div class="pool">${q.pool.map(w=>{
+      const used=q.slots.some(x=>x.v===w);
+      return `<span class="pw ${used?'used':'unused'}">${w}</span>`;}).join('')}</div>`;
+    s+=buildSteps(q.steps)+buildNG(q.traps,'✗ 落とし穴 ― ここで25%まで落ちる')+buildRubric(q);
+  } else if(q.kind==='desc'){
+    s+=buildSteps(q.steps);
+    s+=`<div class="model"><div class="mlab">模範解答</div>${q.model.map(m=>`<div class="mtext">${m}</div>`).join('')}${q.mnote?`<div class="mnote">▶ ${q.mnote}</div>`:''}</div>`;
+    s+=buildRubric(q)+buildNG(q.ng);
+  }
+  return s;
+}
+function buildQ(q){
+  const el=document.createElement('div'); el.className='q'; el.id=esc(q.id);
+  el.innerHTML=`<div class="q-head"><div class="q-no">${q.id}</div>
+    <div class="q-focus"><span class="lbl">${q.lbl}</span><span class="en">${q.en}</span>${q.rate?`<div class="ratebar"><i class="${rateCls(q.rate)}" style="width:${q.rate}%"></i></div>`:''}</div>
+    <span class="q-type">${q.type}</span>${rateBadge(q.rate)}</div>
+    <div class="q-body"><div class="askjp">${q.ask}</div>${buildBody(q)}
+    <button class="reveal-btn">答え・根拠を表示 ▼</button>
+    <div class="solution">${buildSol(q)}</div></div>`;
+  return el;
+}
+
+[['AB','qWrapAB','qidxAB'],['CD','qWrapCD','qidxCD'],['EF','qWrapEF','qidxEF'],['GH','qWrapGH','qidxGH'],['IJ','qWrapIJ','qidxIJ']].forEach(([g,w,ix])=>{
+  const wrap=document.getElementById(w), idx=document.getElementById(ix);
+  if(!wrap) return;
+  Q.filter(q=>q.grp===g).forEach(q=>{
+    wrap.appendChild(buildQ(q));
+    const j=document.createElement('button'); j.className='qjump'; j.textContent=q.id; j.style.width='auto'; j.style.padding='0 9px';
+    j.addEventListener('click',()=>document.getElementById(esc(q.id)).scrollIntoView({behavior:'smooth'}));
+    idx.appendChild(j);
+  });
+});
+
+/* interactions */
+document.querySelectorAll('.q').forEach(card=>{
+  const chs=card.querySelectorAll('.choices .ch');
+  chs.forEach(b=>b.addEventListener('click',()=>{
+    chs.forEach(x=>x.classList.remove('picked'));
+    b.classList.add('picked','reveal');
+    b.classList.add(b.dataset.ok==='1'?'correct':'wrong');
+    b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';
+  }));
+  card.querySelectorAll('.mi').forEach(mi=>{
+    mi.querySelector('.mi-h').addEventListener('click',()=>{
+      mi.classList.toggle('on');
+      mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');
+      mi.querySelector('.mk').textContent = mi.dataset.ok==='1'?'○':'×';
+    });
+  });
+  const rb=card.querySelector('.reveal-btn'), sol=card.querySelector('.solution');
+  rb.addEventListener('click',()=>{
+    const open=sol.classList.toggle('show');
+    rb.textContent=open?'解説を閉じる ▲':'答え・根拠を表示 ▼';
+    if(open){
+      chs.forEach(b=>{b.classList.add('reveal');b.classList.add(b.dataset.ok==='1'?'correct':'wrong');b.querySelector('.mk').textContent=b.dataset.ok==='1'?'○':'×';});
+      card.querySelectorAll('.mi').forEach(mi=>{mi.classList.add('on');mi.classList.add(mi.dataset.ok==='1'?'ok':'ng');mi.querySelector('.mk').textContent=mi.dataset.ok==='1'?'○':'×';});
+    }
+  });
+});
+document.querySelectorAll('.rub-row').forEach(row=>{
+  row.addEventListener('click',()=>{
+    row.classList.toggle('on');
+    const rub=document.getElementById(row.dataset.rid);
+    let s=0; rub.querySelectorAll('.rub-row.on').forEach(r=>s+=parseInt(r.dataset.pt,10));
+    rub.querySelector('.sc .now').textContent=s;
+  });
+});
+const tabs=document.querySelectorAll('.tab'), panels=document.querySelectorAll('.panel');
+function goTo(i){
+  tabs.forEach(x=>x.classList.remove('on')); panels.forEach(x=>x.classList.remove('on'));
+  const t=document.querySelector('.tab[data-p="'+i+'"]'); t.classList.add('on','done');
+  document.getElementById('p'+i).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'}); t.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+tabs.forEach(t=>t.addEventListener('click',()=>goTo(t.dataset.p)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>goTo(b.dataset.go)));
+document.querySelector('.tab[data-p="0"]').classList.add('done');
+const jt=document.getElementById('jumpTop');
+window.addEventListener('scroll',()=>jt.classList.toggle('show',window.scrollY>500));
+jt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
