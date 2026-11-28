@@ -1,0 +1,515 @@
+{
+ "version": 1,
+ "updated": "2026-11-28",
+ "exams": {
+  "tottori-2025-q1": {
+   "sheet": "鳥取2025大問1",
+   "title": "鳥取大学 2025 ／ 英語 大問1",
+   "source": "AIと自然淘汰（Dan Hendrycks, \"Survival of the Fittest\"）",
+   "lesson": "tottori-university-2025-english-q1-full.html",
+   "form": "tottori-university-2025-english-q1-form.html",
+   "board": "tottori-university-2025-english-q1-board.html",
+   "kind": "mixed",
+   "cols": {
+    "ts": 1,
+    "sid": 2,
+    "sname": 3,
+    "q1": 4,
+    "q1ok": 5,
+    "q5": 6,
+    "q5ok": 7,
+    "objective": 8,
+    "q2a": 9,
+    "q2b": 10,
+    "q2c": 11,
+    "q3": 12,
+    "q4": 13,
+    "summary": 14,
+    "q2pt": 15,
+    "q2el": 16,
+    "q3pt": 17,
+    "q3el": 18,
+    "q4pt": 19,
+    "q4el": 20,
+    "descPt": 21,
+    "total": 22,
+    "q2cm": 23,
+    "q3cm": 24,
+    "q4cm": 25,
+    "overall": 26,
+    "status": 27,
+    "publish": 28,
+    "anon": 29,
+    "ua": 30
+   },
+   "headers": [
+    "送信日時",
+    "識別番号",
+    "氏名",
+    "問1",
+    "問1正誤",
+    "問5",
+    "問5正誤",
+    "選択得点",
+    "問2①",
+    "問2②",
+    "問2③",
+    "問3",
+    "問4",
+    "言語化（任意）",
+    "問2得点",
+    "問2要素",
+    "問3得点",
+    "問3要素",
+    "問4得点",
+    "問4要素",
+    "記述得点",
+    "合計",
+    "問2講評",
+    "問3講評",
+    "問4講評",
+    "総評",
+    "採点ステータス",
+    "講評に出す",
+    "匿名ラベル",
+    "UA"
+   ],
+   "key": {
+    "q1": {
+     "answer": "4",
+     "label": "what",
+     "points": 5
+    },
+    "q5": {
+     "answer": [
+      "1",
+      "5"
+     ],
+     "points": 10
+    }
+   },
+   "choices": {
+    "q1": [
+     "when",
+     "whether",
+     "that",
+     "what",
+     "why"
+    ],
+    "q5": [
+     "AIが進化すると、CEOや他の従業員よりも重要な役割を果たす可能性がある。",
+     "自然淘汰はあくまで生物学的な現象であり、その原理を経済に当てはめるのは難しい。",
+     "進化生物学者のRichard Lewontinは、個体間に違いがあることを自然淘汰が成立する唯一の条件として挙げた。",
+     "AIは人間よりも速く進化できるが、ミバエほど速く進化できるわけではない。",
+     "インターネットなどに組み込まれているAIを止めるのは、コストがかかりすぎて難しいこともある。",
+     "効率を求めることがAIの進化を推し進めるわけではない。",
+     "AI業界の著しい規制不足に対処するため、政府だけでなく民間企業も財政支援をすべきである。"
+    ]
+   },
+   "whyWrong": {
+    "q1": {
+     "1": "when 節の中は欠けのない文でなければならない。like の目的語が空いたままになる。",
+     "2": "whether も完全文を要求する。「決める」から「〜かどうか」を連想した誤り。",
+     "3": "最も多い誤答。decide + that 節の形自体は正しいが、that 節も中が完全でなければならない。",
+     "5": "like を前置詞ではなく「〜のように」と読んでいる。"
+    },
+    "q5": {
+     "2": "第3段落第3文と逆。本文は「その原理は経済からテクノロジーにまで及ぶ」。",
+     "3": "条件は三つ。「唯一の」という限定語だけが本文にない。",
+     "4": "第4段落第4文と逆。AIはミバエよりさらに速く進化しうる。",
+     "6": "第2段落第1文と逆。効率の名のもとに監督が減っている。",
+     "7": "第9段落第3文。資金を出すべきなのは政府。民間が動かないことがその理由。"
+    }
+   },
+   "rubric": {
+    "q2": {
+     "title": "問2　下線部(1) \"three reasons\" が表す三点",
+     "points": 10,
+     "model": "第一に、淘汰の効果が働くことによって、AIを制御することが難しくなるから。\n第二に、進化は利己的なふるまいを生み出しやすく、安全性を犠牲にしてでも影響力や利益を得るAIが優位に立つから。\n第三に、進化の圧力によってAIが自己防衛的なふるまいを身につけ、停止させにくくなるから。",
+     "elements": [
+      {
+       "key": "e1",
+       "pt": 3,
+       "label": "第一の理由",
+       "desc": "淘汰・自然淘汰の働きによってAIの制御が困難になる、と書けている"
+      },
+      {
+       "key": "e2",
+       "pt": 3,
+       "label": "第二の理由",
+       "desc": "進化が利己的なふるまいを生み、望ましくない性質のAIが優位に立つ、と書けている"
+      },
+      {
+       "key": "e3",
+       "pt": 3,
+       "label": "第三の理由",
+       "desc": "進化の圧力でAIが自己防衛的になり、停止させにくくなる、と書けている"
+      },
+      {
+       "key": "e4",
+       "pt": 1,
+       "label": "文末の揃え",
+       "desc": "三点とも「〜から」「〜ため」など、理由を答える文末で揃っている"
+      }
+     ],
+     "ng": [
+      {
+       "bad": "研究者が「設計する」ではなく「操縦する」と言うようになったから。",
+       "why": "第5段落第3文は傍証であって理由そのものではない。"
+      },
+      {
+       "bad": "企業秘密を盗む企業が、法律を守る企業に勝ってしまうから。",
+       "why": "第6段落第4文は人間社会を使った類比。AIの話に戻していない。"
+      },
+      {
+       "bad": "AIをインフラに組み込むと、停止のコストが高くなって止められなくなるから。",
+       "why": "第7段落第4〜6文は practical challenges であって、第三の理由の本体ではない。"
+      },
+      {
+       "bad": "AIが人間より賢くなり、人間を超えてしまうから。",
+       "why": "本文のどこにも書かれていない。主張は「自然淘汰が働くから危ない」。"
+      },
+      {
+       "bad": "AIが制御不能になり、利己的になり、自分を守るようになるから。",
+       "why": "結果だけを並べていて、原因である進化・淘汰が出てこない。"
+      }
+     ]
+    },
+    "q3": {
+     "title": "問3　下線部(2) \"a more fundamental barrier\" が表す内容",
+     "points": 10,
+     "model": "私たちが、停止させやすいAIのほうを淘汰していき、停止させにくいAIに依存するようになってしまうということ。",
+     "elements": [
+      {
+       "key": "e1",
+       "pt": 3,
+       "label": "淘汰される側",
+       "desc": "停止させやすいAIが淘汰される／選ばれなくなる、と書けている"
+      },
+      {
+       "key": "e2",
+       "pt": 4,
+       "label": "依存する側",
+       "desc": "停止させにくいAIに依存するようになる、と書けている"
+      },
+      {
+       "key": "e3",
+       "pt": 2,
+       "label": "主体は人間",
+       "desc": "淘汰し依存する主体が私たち（人間）であることが示されている"
+      },
+      {
+       "key": "e4",
+       "pt": 1,
+       "label": "文末の形",
+       "desc": "文末が「〜ということ」「〜こと」など、内容説明の形になっている"
+      }
+     ],
+     "ng": [
+      {
+       "bad": "AIをインフラに組み込むと、停止させるコストが高くなりすぎること。",
+       "why": "最も多い誤答。これは practical challenges で、比較されている相手のほう。"
+      },
+      {
+       "bad": "進化の圧力によって、AIが自分を守るようにふるまうようになること。",
+       "why": "第7段落第1文、つまり第三の理由そのもの。階層がずれている。"
+      },
+      {
+       "bad": "AIが止められなくなってしまうこと。",
+       "why": "結果だけで、私たちが選んだ結果そうなるという中身が抜けている。"
+      },
+      {
+       "bad": "停止させにくいAIが生き残り、停止させやすいAIが淘汰されていくということ。",
+       "why": "主語がAIになっている。本文は人間を主語にしている。"
+      }
+     ]
+    },
+    "q4": {
+     "title": "問4　和訳　We need research on AI safety to progress as quickly as ...",
+     "points": 10,
+     "model": "AIの安全性についての研究が、AIの能力を高める研究と同じ速さで進展する必要がある。",
+     "elements": [
+      {
+       "key": "e1",
+       "pt": 3,
+       "label": "安全性の研究",
+       "desc": "research on AI safety を「AIの安全性に関する研究」と訳せている"
+      },
+      {
+       "key": "e2",
+       "pt": 3,
+       "label": "能力の研究",
+       "desc": "research on improving AI abilities を「AIの能力を高める研究」と訳せている"
+      },
+      {
+       "key": "e3",
+       "pt": 2,
+       "label": "同等比較",
+       "desc": "as quickly as を「同じ速さで」など同等比較として訳せている"
+      },
+      {
+       "key": "e4",
+       "pt": 1,
+       "label": "progress",
+       "desc": "progress を「進む」「進展する」と動詞で訳せている"
+      },
+      {
+       "key": "e5",
+       "pt": 1,
+       "label": "骨格",
+       "desc": "need O to do の構造が崩れず、進むのが「研究」だと分かる訳になっている"
+      }
+     ],
+     "ng": [
+      {
+       "bad": "私たちは…を必要とし、…と同じくらい速く進歩しなければならない。",
+       "why": "to progress の主語を we にしている。進むのは research。"
+      },
+      {
+       "bad": "…の研究よりも速く進む必要がある。",
+       "why": "as quickly as は同等比較。「よりも速く」は比較級の訳。"
+      },
+      {
+       "bad": "AIの安全のために、…急いで研究する必要がある。",
+       "why": "research on の on を「〜のために」と読んでいる。"
+      },
+      {
+       "bad": "向上しつつあるAIの能力と同じ速さで…。",
+       "why": "improving を現在分詞で取っており、比較対象が研究でなくなる。"
+      }
+     ]
+    }
+   }
+  },
+  "tjo-2025-q2": {
+   "sheet": "東女2025大問2",
+   "title": "東京女子大学 2025 ／ 英語 大問2",
+   "source": "右脳・左脳の俗説とバーナム効果（Britannica より）",
+   "lesson": "tokyo-womans-christian-university-2025-english-q2-full.html",
+   "form": "tokyo-womans-christian-university-2025-english-q2-form.html",
+   "kind": "choice",
+   "cols": {
+    "ts": 1,
+    "sid": 2,
+    "sname": 3,
+    "nCorrect": 4,
+    "rate": 5,
+    "ansBase": 6,
+    "okBase": 17,
+    "summary": 28,
+    "status": 29,
+    "ua": 30
+   },
+   "headers": [
+    "送信日時",
+    "識別番号",
+    "氏名",
+    "正答数",
+    "正答率",
+    "回答13",
+    "回答14",
+    "回答15",
+    "回答16",
+    "回答17",
+    "回答18",
+    "回答19",
+    "回答20",
+    "回答21",
+    "回答22",
+    "回答23",
+    "正誤13",
+    "正誤14",
+    "正誤15",
+    "正誤16",
+    "正誤17",
+    "正誤18",
+    "正誤19",
+    "正誤20",
+    "正誤21",
+    "正誤22",
+    "正誤23",
+    "言語化（任意）",
+    "採点ステータス",
+    "UA"
+   ],
+   "questions": [
+    {
+     "id": "13",
+     "answer": "B",
+     "ask": "The notion that there are right-brained and left-brained people is a ______.",
+     "choices": [
+      "historical record",
+      "misunderstanding",
+      "poorly known fact",
+      "scientific finding"
+     ],
+     "why": {
+      "A": "myth を「神話」と訳して歴史と結びつけている。本文は modern myths（現代の俗説）。",
+      "C": "myth を「知る人ぞ知る話」と取っている。しかも fact なので真偽が逆。",
+      "D": "research や real science の語に引かれている。研究が見つけたのは「証拠がないこと」。"
+     }
+    },
+    {
+     "id": "14",
+     "answer": "A",
+     "ask": "... scientists have not found any truth in ______.",
+     "choices": [
+      "brain hemisphere dominance",
+      "how logic works",
+      "imagining the truth",
+      "looking at the brain"
+     ],
+     "why": {
+      "B": "第1段落第5文の logical thought に引かれている。否定されたのは論理の仕組みではない。",
+      "C": "imaging（画像化）を imagining（想像）と読み違えている。",
+      "D": "最も多い誤答。brain imaging technology は手段で、not found の目的語ではない。"
+     }
+    },
+    {
+     "id": "15",
+     "answer": "B",
+     "ask": "Some people think that the left brain ______ in a brilliant mathematician.",
+     "choices": [
+      "believes",
+      "dominates",
+      "fails",
+      "types in a brilliant"
+     ],
+     "why": {
+      "A": "主語が the left brain。脳が何かを信じる構図は本文にない。",
+      "C": "最も多い誤答。第6〜7文で俗説が崩されるので「失敗する」と読む。設問は Some people think と限定している。",
+      "D": "入れても英文として成立しない。"
+     }
+    },
+    {
+     "id": "16",
+     "answer": "B",
+     "ask": "There is some ______ truth in the belief that different sides of the brain do different tasks.",
+     "choices": [
+      "accidentally recorded",
+      "scientifically proven",
+      "secretly communicated",
+      "totally rejected"
+     ],
+     "why": {
+      "A": "本文は real science と書いており、偶然ではない。",
+      "C": "隠されていたという話は本文にない。Scientists know と明記されている。",
+      "D": "最も多い誤答。第1段落の否定を引きずっている。第2段落は though で折り返している。"
+     }
+    },
+    {
+     "id": "17",
+     "answer": "A",
+     "ask": "According to popular understanding, the right brain ______ creative tasks.",
+     "choices": [
+      "deals with",
+      "finds out",
+      "removes",
+      "separates"
+     ],
+     "why": {
+      "B": "problem-solving を右脳の話と取り違えている。それは左脳で、しかも研究結果のほう。",
+      "C": "右脳が創造的作業を取り除くという記述はない。",
+      "D": "同じ文の division of labor から「分ける」を連想している。"
+     }
+    },
+    {
+     "id": "18",
+     "answer": "C",
+     "ask": "Research has shown that the left hemisphere ... is good at tasks that involve ______.",
+     "choices": [
+      "artistic inspiration",
+      "creative designs",
+      "finding answers",
+      "physical exercise"
+     ],
+     "why": {
+      "A": "左右を取り違えたうえ、俗説のほうを答えている。設問は Research has shown と限定。",
+      "B": "創造性は第2段落第2文で「多くの人が右脳に結びつける」とされているもの。",
+      "D": "spatial tasks を「身体を動かすこと」と読んでいる。しかもそれは右半球の話。"
+     }
+    },
+    {
+     "id": "19",
+     "answer": "B",
+     "ask": "People tend to distinguish ... partly because they think that some ______.",
+     "choices": [
+      "friends are taller than others",
+      "parts of their body are stronger than others",
+      "people are weaker than others",
+      "star signs are better than others"
+     ],
+     "why": {
+      "A": "friends は本文にあるが、身長の話はどこにもない。",
+      "C": "人と人を比べている。本文は一人の体の中での左右の差。",
+      "D": "star signs は「科学的妥当性の比較対象」として出てくるだけで、信じる理由ではない。"
+     }
+    },
+    {
+     "id": "20",
+     "answer": "D",
+     "ask": "... they think about emotional and intellectual characteristics in order to ______.",
+     "choices": [
+      "evaluate people and their family or jobs",
+      "find out where their problems come from",
+      "make a judgment about good and bad people",
+      "place people into different categories"
+     ],
+     "why": {
+      "A": "家族や職業の話は本文にない。evaluate は sort より踏み込んだ語。",
+      "B": "第2段落の problem-solving につられている。",
+      "C": "最も惜しい誤答。分類＝優劣と拡大している。sort into \"types\" に善悪の含みはない。"
+     }
+    },
+    {
+     "id": "21",
+     "answer": "D",
+     "ask": "... they often agree when the statements ______.",
+     "choices": [
+      "are scientific and believable",
+      "make them question themselves",
+      "offer some kind of advice",
+      "say good things about them"
+     ],
+     "why": {
+      "A": "最も多い誤答。同じ文の scientific validity に引かれている。本文の条件は positive であること。",
+      "B": "疑わせるなら同意は起きない。論理が逆。",
+      "C": "助言の話は本文にない。本文にあるのは descriptions of their own personalities。"
+     }
+    },
+    {
+     "id": "22",
+     "answer": "A",
+     "ask": "The scholars ... did not tell the research participants that the ______.",
+     "choices": [
+      "feedback was false",
+      "feedback was true",
+      "people who took the test lied",
+      "people who took the test told the truth"
+     ],
+     "why": {
+      "B": "本文は false・invented と明記しており、そもそも本物ではない。",
+      "C": "被験者が嘘をついたかは本文の関心事ではない。",
+      "D": "同じく、被験者の誠実さの話にすり替えている。"
+     }
+    },
+    {
+     "id": "23",
+     "answer": "B",
+     "ask": "The most appropriate title for this passage is ______.",
+     "choices": [
+      "Are There Any People Who Use Only the Right Brain?",
+      "Are There Really Right-brained and Left-brained People?",
+      "Is It Possible to Know If People Have Creative Brains?",
+      "Is It Possible to Use Only One Part of the Brain?"
+     ],
+     "why": {
+      "A": "only が本文とずれる。俗説は「どちらかが優勢」で「片方しか使わない」ではない。",
+      "C": "創造性の判定方法という話は本文にない。",
+      "D": "「脳の使い方」の話にしている。本文は人の類型の話。"
+     }
+    }
+   ]
+  }
+ }
+}

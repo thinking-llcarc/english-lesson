@@ -161,16 +161,13 @@ td.o{color:var(--teal-d) !important;} td.x{color:var(--verm-d) !important;opacit
       <select class="exam" id="examSel"></select>
       <button class="btn" id="csv">CSV</button>
       <button class="btn" id="reload">更新</button>
-      <button class="btn" id="logout">合言葉を消す</button>
     </div>
   </div>
 </header>
 
 <div class="gate" id="gate" style="display:none;">
-  <h1>合言葉を入力してください</h1>
-  <p>GASのスクリプト プロパティに登録した <b>STAFF_TOKEN</b> を入れてください。一度入れるとこの端末に保存されます。</p>
-  <input type="password" id="tk" autocomplete="off" placeholder="STAFF_TOKEN">
-  <button id="enter">開く</button>
+  <h1>読み込めませんでした</h1>
+  <p>通信に失敗したか、GAS側の設定が未完了の可能性があります。ページを再読み込みしてみてください。</p>
   <p class="msg" id="gmsg"></p>
 </div>
 
@@ -202,7 +199,6 @@ td.o{color:var(--teal-d) !important;} td.x{color:var(--verm-d) !important;opacit
 <script>
 /* ================= 設定 ================= */
 const GAS_URL = "https://script.google.com/macros/s/AKfycbz6LpHxluZ4GTz9WVlEb0ePy_0yYFRRUmkShOGim8dynSBrLQcjDV8u0ehv_UpwNxHX4g/exec";
-const TK_KEY = 'thinking-staff-token';
 const EX_KEY = 'thinking-staff-exam';
 
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -211,18 +207,7 @@ const pct = v => Math.round((v||0)*100);
 
 let DATA = null, EXAMS = [], EXAM = '', rowsView = [], sortKey = 'total', sortAsc = false;
 
-/* ================= 合言葉 ================= */
-function token(){ try{ return localStorage.getItem(TK_KEY) || ''; }catch(e){ return ''; } }
-$('enter').addEventListener('click', ()=>{
-  const v = $('tk').value.trim(); if(!v) return;
-  try{ localStorage.setItem(TK_KEY, v); }catch(e){}
-  boot();
-});
-$('tk').addEventListener('keydown', e=>{ if(e.key === 'Enter') $('enter').click(); });
-$('logout').addEventListener('click', ()=>{
-  try{ localStorage.removeItem(TK_KEY); }catch(e){}
-  location.reload();
-});
+/* ================= 操作 ================= */
 $('reload').addEventListener('click', ()=> load());
 $('examSel').addEventListener('change', ()=>{
   EXAM = $('examSel').value;
@@ -237,7 +222,6 @@ function gate(msg){
 
 /* ================= 読み込み ================= */
 async function boot(){
-  if(!token()) return gate('');
   if(!GAS_URL || GAS_URL.indexOf('http') !== 0)
     return gate('送信先（GAS_URL）がこのページに設定されていません。');
   try{
@@ -256,8 +240,7 @@ async function boot(){
 
 async function load(){
   try{
-    const url = GAS_URL + '?view=staff&exam=' + encodeURIComponent(EXAM) +
-                '&token=' + encodeURIComponent(token());
+    const url = GAS_URL + '?view=staff&exam=' + encodeURIComponent(EXAM);
     const res = await fetch(url);
     const d = await res.json();
     if(!d || d.ok !== true) throw new Error(d && d.error ? d.error : 'unknown');
