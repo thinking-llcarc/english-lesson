@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="color-scheme" content="light">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>解答送信フォーム｜東京女子大学 2025 英語 大問2｜THINKING</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Noto+Serif+JP:wght@400;600;700;900&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#16263f; --navy-ink:#1d3557; --gold:#b8954a; --gold-d:#8e6f2e;
+  --verm:#c8431f; --verm-d:#a63515; --teal:#1f6b5c; --teal-d:#17544a;
+  --paper:#faf7f0; --surface:#ffffff; --surface2:#f5f1e8;
+  --ink:#232830; --muted:#6b7280; --line:#e6dfce; --line2:#efe9db;
+  --teal-soft:#e6f2ee; --verm-soft:#fbe9e3; --gold-soft:#f7efdd;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --navy:#8fb3dd; --navy-ink:#a9c6e8; --gold:#d9b96f; --gold-d:#e0c484;
+    --verm:#e8785a; --verm-d:#f08f74; --teal:#5fc0a8; --teal-d:#79d2bb;
+    --paper:#14161a; --surface:#1c1f25; --surface2:#23272e;
+    --ink:#e8e6e1; --muted:#9aa2ae; --line:#333842; --line2:#2b3038;
+    --teal-soft:#1b3a34; --verm-soft:#3a241e; --gold-soft:#332a18;
+  }
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans JP",system-ui,sans-serif;font-size:15px;line-height:1.9;}
+
+.top{background:var(--navy);color:#fff;padding:18px 0 16px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .top{background:#10131a;}}
+.top-in{max-width:760px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:13px;}
+.mark{width:40px;height:40px;flex:0 0 40px;border-radius:9px;background:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Noto Serif JP",serif;font-weight:900;font-size:19px;color:#16263f;}
+.ttl b{display:block;font-family:"Noto Serif JP",serif;font-size:16px;font-weight:700;color:#fff;}
+.ttl span{display:block;font-size:11.5px;color:#c7d3e2;letter-spacing:.06em;margin-top:2px;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ttl span{color:#8d9bad;}}
+
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 60px;}
+
+.lead{background:var(--surface2);border-left:4px solid var(--gold);border-radius:0 11px 11px 0;
+  padding:15px 17px;margin:22px 0 0;font-size:13.5px;line-height:1.95;color:var(--ink);}
+.lead b{color:var(--navy-ink);}
+.lead u{text-decoration:none;border-bottom:2px solid var(--gold);padding-bottom:1px;}
+
+.prog{position:sticky;top:0;z-index:30;background:var(--paper);padding:12px 0 10px;margin:20px 0 0;}
+.prog-bar{height:7px;border-radius:99px;background:var(--line2);overflow:hidden;}
+.prog-fill{height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--teal));transition:width .3s;}
+.prog-t{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);margin-top:6px;letter-spacing:.04em;}
+.prog-t b{font-family:"Zilla Slab",serif;color:var(--navy-ink);font-size:13px;}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;
+  padding:17px 18px 18px;margin:14px 0 0;}
+.card.bad{border-color:var(--verm);}
+.qh{display:flex;align-items:flex-start;gap:11px;margin:0 0 11px;}
+.qn{flex:0 0 auto;min-width:42px;height:28px;padding:0 9px;border-radius:7px;background:var(--navy);color:#fff;
+  font-family:"Zilla Slab",serif;font-weight:700;font-size:14px;
+  display:flex;align-items:center;justify-content:center;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .qn{background:#2d3a4e;color:var(--navy-ink);}}
+.qn.opt{background:var(--surface2);color:var(--muted);border:1px solid var(--line);
+  font-family:"Noto Sans JP",sans-serif;font-size:12px;}
+.qt{flex:1;}
+.qt b{display:block;font-family:"Zilla Slab",Georgia,serif;font-size:14.5px;font-weight:600;
+  color:var(--ink);line-height:1.75;}
+.qt span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.75;}
+
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;}
+@media (max-width:520px){.opts{grid-template-columns:1fr;}}
+label.op{display:flex;align-items:flex-start;gap:9px;padding:10px 12px;
+  border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  cursor:pointer;transition:border-color .15s,background .15s;font-size:13.8px;line-height:1.7;}
+label.op:hover{border-color:var(--gold);}
+label.op.on{border-color:var(--gold);background:var(--gold-soft);}
+label.op input{position:absolute;opacity:0;width:0;height:0;}
+label.op .ln{flex:0 0 auto;width:22px;height:22px;border-radius:6px;border:1.5px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Zilla Slab",serif;font-weight:700;font-size:12.5px;color:var(--muted);background:var(--surface2);}
+label.op.on .ln{background:var(--gold);border-color:var(--gold);color:#16263f;}
+label.op .lt{flex:1;font-family:"Zilla Slab",Georgia,serif;}
+
+.idrow{display:flex;gap:11px;flex-wrap:wrap;}
+.idrow > div{flex:1 1 220px;}
+.sub-l{font-size:12.5px;color:var(--muted);margin:0 0 5px;font-weight:500;}
+.sub-l em{font-style:normal;font-family:"Zilla Slab",serif;color:var(--navy-ink);font-weight:700;}
+input[type=text]{width:100%;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;padding:11px 13px;}
+input[type=text].num{font-family:"Zilla Slab",serif;letter-spacing:.06em;}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,149,74,.16);}
+textarea{width:100%;border:1.5px solid var(--line);border-radius:9px;background:var(--surface);
+  color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:14.5px;line-height:1.95;
+  padding:11px 13px;resize:vertical;min-height:80px;}
+textarea::placeholder{color:#b5b0a6;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) textarea::placeholder{color:#5e6671;}}
+.cnt{text-align:right;font-family:"Zilla Slab",serif;font-size:11.5px;color:var(--muted);margin:4px 0 0;}
+
+.err{display:none;background:var(--verm-soft);border-left:4px solid var(--verm);border-radius:0 9px 9px 0;
+  padding:12px 15px;margin:16px 0 0;font-size:13.5px;line-height:1.85;color:var(--ink);}
+.err.show{display:block;}
+.err b{color:var(--verm-d);}
+
+.send{margin:26px 0 0;text-align:center;}
+button.go{width:100%;max-width:420px;border:0;border-radius:11px;background:var(--navy);color:#fff;
+  font-family:"Noto Serif JP",serif;font-size:16px;font-weight:700;letter-spacing:.06em;
+  padding:16px 20px;cursor:pointer;transition:opacity .15s,transform .1s;}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) button.go{background:#2d4a73;color:#eaf1fa;}}
+button.go:hover{opacity:.88;}
+button.go:active{transform:translateY(1px);}
+button.go[disabled]{opacity:.45;cursor:default;transform:none;}
+.save-n{font-size:12px;color:var(--muted);margin:11px 0 0;}
+
+.result{display:none;margin:24px 0 0;}
+.result.show{display:block;}
+.rbox{background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:20px 19px;}
+.done-mk{width:46px;height:46px;border-radius:50%;background:var(--teal-soft);color:var(--teal-d);
+  display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;margin:0 0 13px;}
+.rbox h2{font-family:"Noto Serif JP",serif;font-size:19px;margin:0 0 4px;color:var(--navy-ink);}
+.rbox .rsub{font-size:12.5px;color:var(--muted);margin:0;line-height:1.8;}
+
+.foot{text-align:center;padding:34px 18px 18px;color:var(--muted);font-size:11.5px;line-height:1.9;}
+.foot b{display:block;font-family:"Noto Serif JP",serif;font-size:14px;color:var(--navy-ink);
+  letter-spacing:.14em;margin-bottom:5px;}
+.spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.35);
+  border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:-2px;margin-right:8px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="mark">女</div>
+    <div class="ttl"><b>解答送信フォーム</b><span>東京女子大学 2025 ／ 英語 大問2</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="lead">
+    右脳・左脳の俗説とバーナム効果についての文章です。設問13〜23の11問。<br>
+    <b>本文を読んで解いてから、答えをここに書き写してください。</b>
+    このフォームでは点数は表示されません。<u>採点結果と、設問ごとの正答率は授業でまとめて返します。</u>
+    迷った問題も空欄にせず、必ずどれかを選んで出してください。
+  </div>
+
+  <div class="prog">
+    <div class="prog-bar"><div class="prog-fill" id="pf"></div></div>
+    <div class="prog-t"><span>入力の進み具合</span><span><b id="pc">0</b> / 13 項目</span></div>
+  </div>
+
+  <div class="card" id="c-id">
+    <div class="qh">
+      <div class="qn opt">受験者</div>
+      <div class="qt"><b style="font-family:'Noto Serif JP',serif;">識別番号と氏名</b><span>識別番号は塾から配付されたものを、半角で入力してください。</span></div>
+    </div>
+    <div class="idrow">
+      <div>
+        <p class="sub-l">識別番号 <em>必須</em></p>
+        <input type="text" id="sid" class="num" inputmode="latin" autocomplete="off" placeholder="例）263796083">
+      </div>
+      <div>
+        <p class="sub-l">氏名 <em>必須</em></p>
+        <input type="text" id="sname" autocomplete="name" placeholder="例）朝倉 徹大">
+      </div>
+    </div>
+  </div>
+
+  <div id="qs"></div>
+
+  <div class="card" id="c-sum">
+    <div class="qh">
+      <div class="qn opt">任意</div>
+      <div class="qt"><b style="font-family:'Noto Serif JP',serif;">この文章は、つまりどういう話か</b><span>設問とは別に、文章全体を自分の言葉で一言にしてみてください。ここが書けるかどうかで、読めているかが分かります。</span></div>
+    </div>
+    <textarea id="sum" data-max="200" placeholder="例）右脳型・左脳型という分け方は◯◯で、それでも信じられるのは……"></textarea>
+    <div class="cnt" data-for="sum">0 字</div>
+  </div>
+
+  <div class="err" id="err"></div>
+
+  <div class="send">
+    <button class="go" id="go">解答を送信する</button>
+    <p class="save-n" id="saven">入力内容はこの端末に自動保存されます。途中で閉じても大丈夫です。</p>
+  </div>
+
+  <div class="result" id="result">
+    <div class="rbox">
+      <div class="done-mk">✓</div>
+      <h2>送信が完了しました</h2>
+      <p class="rsub" id="rwho"></p>
+    </div>
+  </div>
+
+</div>
+
+<footer class="foot">
+  <b>THINKING</b>
+  学部別・逆転合格設計塾 THINKING ／ 受験は根性じゃなく、設計。<br>
+  本フォームは東京女子大学2025年度英語（大問2）の学習用です。英文・設問の著作権は出題者・原著者に帰属します。
+</footer>
+
+<script>
+/* ===== 設定 ===== */
+const GAS_URL = "https://script.google.com/macros/s/AKfycbz6LpHxluZ4GTz9WVlEb0ePy_0yYFRRUmkShOGim8dynSBrLQcjDV8u0ehv_UpwNxHX4g/exec";
+const EXAM = "tjo-2025-q2";
+const DRAFT_KEY = "thinking-" + EXAM + "-draft";
+
+const QS = [
+ {id:"13", ask:"The notion that there are right-brained and left-brained people is a ______.",
+  ops:["historical record","misunderstanding","poorly known fact","scientific finding"]},
+ {id:"14", ask:"Even though research using the latest technology is advanced, scientists have not found any truth in ______.",
+  ops:["brain hemisphere dominance","how logic works","imagining the truth","looking at the brain"]},
+ {id:"15", ask:"Some people think that the left brain ______ in a brilliant mathematician.",
+  ops:["believes","dominates","fails","types in a brilliant"]},
+ {id:"16", ask:"There is some ______ truth in the belief that different sides of the brain do different tasks.",
+  ops:["accidentally recorded","scientifically proven","secretly communicated","totally rejected"]},
+ {id:"17", ask:"According to popular understanding, the right brain ______ creative tasks.",
+  ops:["deals with","finds out","removes","separates"]},
+ {id:"18", ask:"Research has shown that the left hemisphere of the brain is good at tasks that involve ______.",
+  ops:["artistic inspiration","creative designs","finding answers","physical exercise"]},
+ {id:"19", ask:"People tend to distinguish between left-brained and right-brained people partly because they think that some ______.",
+  ops:["friends are taller than others","parts of their body are stronger than others",
+       "people are weaker than others","star signs are better than others"]},
+ {id:"20", ask:"Another reason that people like to think about left-brained and right-brained people is because they think about emotional and intellectual characteristics in order to ______.",
+  ops:["evaluate people and their family or jobs","find out where their problems come from",
+       "make a judgment about good and bad people","place people into different categories"]},
+ {id:"21", ask:"When people are given statements about themselves, they often agree when the statements ______.",
+  ops:["are scientific and believable","make them question themselves",
+       "offer some kind of advice","say good things about them"]},
+ {id:"22", ask:"The scholars who studied the Barnum Effect did not tell the research participants that the ______.",
+  ops:["feedback was false","feedback was true",
+       "people who took the test lied","people who took the test told the truth"]},
+ {id:"23", ask:"The most appropriate title for this passage is ______.",
+  ops:["Are There Any People Who Use Only the Right Brain?",
+       "Are There Really Right-brained and Left-brained People?",
+       "Is It Possible to Know If People Have Creative Brains?",
+       "Is It Possible to Use Only One Part of the Brain?"]}
+];
+const L = ["A","B","C","D"];
+
+const esc = s => String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const $ = id => document.getElementById(id);
+
+/* ===== 設問を描画 ===== */
+$("qs").innerHTML = QS.map(q=>
+ `<div class="card" id="c-${q.id}">
+    <div class="qh"><div class="qn">${q.id}</div><div class="qt"><b>${esc(q.ask)}</b></div></div>
+    <div class="opts">` +
+    q.ops.map((t,i)=>
+      `<label class="op"><input type="radio" name="q${q.id}" value="${L[i]}">` +
+      `<span class="ln">${L[i]}</span><span class="lt">${esc(t)}</span></label>`).join("") +
+   `</div>
+  </div>`).join("");
+
+/* ===== 選択の見た目 ===== */
+function syncOpts(){
+  document.querySelectorAll('label.op').forEach(l=>
+    l.classList.toggle('on', l.querySelector('input').checked));
+}
+document.addEventListener('change', e=>{
+  if(e.target.type === 'radio'){ syncOpts(); save(); prog(); }
+});
+
+/* ===== 文字数と進捗 ===== */
+function counts(){
+  const ta = $("sum"), c = document.querySelector('.cnt[data-for="sum"]');
+  const n = ta.value.trim().length, max = +ta.dataset.max;
+  c.textContent = n > max ? (n + " 字（目安 " + max + " 字をこえています）") : (n + " 字");
+}
+function prog(){
+  let n = 0;
+  if($("sid").value.trim()) n++;
+  if($("sname").value.trim()) n++;
+  QS.forEach(q=>{ if(document.querySelector(`input[name=q${q.id}]:checked`)) n++; });
+  $("pc").textContent = n;
+  $("pf").style.width = (n / 13 * 100) + "%";
+}
+
+/* ===== 下書き保存 ===== */
+let saveTimer = null;
+function save(){
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    try{
+      const d = { sid:$("sid").value, sname:$("sname").value, sum:$("sum").value, a:{} };
+      QS.forEach(q=>{
+        const r = document.querySelector(`input[name=q${q.id}]:checked`);
+        if(r) d.a[q.id] = r.value;
+      });
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+    }catch(e){ $("saven").textContent = "（この端末では下書きの自動保存が使えません）"; }
+  }, 350);
+}
+function load(){
+  try{
+    const raw = localStorage.getItem(DRAFT_KEY); if(!raw) return;
+    const d = JSON.parse(raw);
+    if(d.sid) $("sid").value = d.sid;
+    if(d.sname) $("sname").value = d.sname;
+    if(d.sum) $("sum").value = d.sum;
+    Object.keys(d.a||{}).forEach(k=>{
+      const r = document.querySelector(`input[name=q${k}][value="${d.a[k]}"]`);
+      if(r) r.checked = true;
+    });
+  }catch(e){}
+}
+["sid","sname","sum"].forEach(k=>
+  $(k).addEventListener('input', ()=>{ counts(); prog(); save(); }));
+
+/* ===== 検証 ===== */
+function validate(){
+  const miss = [];
+  document.querySelectorAll('.card').forEach(c=>c.classList.remove('bad'));
+  if(!$("sid").value.trim() || !$("sname").value.trim()){
+    $("c-id").classList.add('bad');
+    miss.push(!$("sid").value.trim() ? "識別番号" : "氏名");
+  }
+  const blank = [];
+  QS.forEach(q=>{
+    if(!document.querySelector(`input[name=q${q.id}]:checked`)){
+      $("c-" + q.id).classList.add('bad'); blank.push(q.id);
+    }
+  });
+  if(blank.length) miss.push("設問 " + blank.join("・"));
+  return miss;
+}
+
+/* ===== 送信 ===== */
+let sending = false;
+$("go").addEventListener('click', async ()=>{
+  if(sending) return;
+  const err = $("err");
+  const miss = validate();
+  if(miss.length){
+    err.innerHTML = "<b>未入力の項目があります。</b><br>" + miss.join(" ／ ") + " を確認してください。";
+    err.classList.add('show');
+    document.querySelector('.card.bad').scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+  err.classList.remove('show');
+
+  if(!GAS_URL || GAS_URL.indexOf("http") !== 0){
+    err.innerHTML = "<b>送信先が設定されていません。</b><br>管理者にご連絡ください。";
+    err.classList.add('show');
+    return;
+  }
+
+  const answers = {};
+  QS.forEach(q=>{ answers[q.id] = document.querySelector(`input[name=q${q.id}]:checked`).value; });
+  const payload = {
+    exam: EXAM,
+    sid: $("sid").value.trim(),
+    sname: $("sname").value.trim(),
+    answers: answers,
+    summary: $("sum").value.trim(),
+    ua: navigator.userAgent.slice(0,180)
+  };
+
+  sending = true;
+  const go = $("go");
+  go.disabled = true;
+  go.innerHTML = '<span class="spin"></span>送信しています…';
+
+  try{
+    const res = await fetch(GAS_URL, { method:'POST', body: JSON.stringify(payload) });
+    const data = await res.json();
+    if(!data || data.ok !== true) throw new Error(data && data.error ? data.error : 'unknown');
+    try{ localStorage.removeItem(DRAFT_KEY); }catch(e){}
+    showResult(payload, data);
+  }catch(e){
+    sending = false;
+    go.disabled = false;
+    go.textContent = "解答を送信する";
+    err.innerHTML = "<b>送信に失敗しました。</b><br>通信状況を確認して、もう一度お試しください。" +
+      "何度試しても送れない場合は、入力内容をそのままにして塾までご連絡ください。";
+    err.classList.add('show');
+  }
+});
+
+function showResult(p, d){
+  document.querySelectorAll('.card, .send, .lead, .prog').forEach(el=> el.style.display='none');
+  const no = (d && d.receipt) ? "　／　受付番号 " + d.receipt : "";
+  $("rwho").textContent = p.sname + "さん（" + p.sid + "）／ 東京女子大学 2025 英語 大問2" + no;
+  $("result").classList.add('show');
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+load(); syncOpts(); counts(); prog();
+</script>
+</body>
+</html>

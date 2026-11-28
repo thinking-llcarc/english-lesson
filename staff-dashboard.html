@@ -30,22 +30,24 @@
 body{margin:0;background:var(--paper);color:var(--ink);
   font-family:"Noto Sans JP",system-ui,sans-serif;font-size:14px;line-height:1.85;}
 
-.top{background:var(--navy);color:#fff;padding:14px 0;}
+.top{background:var(--navy);color:#fff;padding:13px 0;}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .top{background:#10131a;}}
-.top-in{max-width:1180px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:13px;flex-wrap:wrap;}
+.top-in{max-width:1240px;margin:0 auto;padding:0 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
 .mark{width:36px;height:36px;flex:0 0 36px;border-radius:8px;background:var(--gold);
   display:flex;align-items:center;justify-content:center;
-  font-family:"Noto Serif JP",serif;font-weight:900;font-size:15px;color:#16263f;letter-spacing:-.04em;}
-.ttl b{display:block;font-family:"Noto Serif JP",serif;font-size:15px;color:#fff;}
-.ttl span{display:block;font-size:11px;color:#c7d3e2;letter-spacing:.05em;}
+  font-family:"Noto Serif JP",serif;font-weight:900;font-size:14px;color:#16263f;letter-spacing:-.04em;}
+.ttl b{display:block;font-family:"Noto Serif JP",serif;font-size:15px;color:#fff;line-height:1.4;}
+.ttl span{display:block;font-size:11px;color:#c7d3e2;}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ttl span{color:#8d9bad;}}
-.top .right{margin-left:auto;display:flex;gap:8px;align-items:center;}
+.top .right{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
 .btn{border:0;border-radius:8px;padding:8px 14px;font-size:12.5px;font-weight:700;cursor:pointer;
   font-family:"Noto Sans JP",sans-serif;background:rgba(255,255,255,.14);color:#fff;}
 .btn:hover{background:rgba(255,255,255,.24);}
-.btn.ghost{background:var(--surface);color:var(--navy-ink);border:1px solid var(--line);}
+select.exam{border:0;border-radius:8px;padding:8px 12px;font-size:12.5px;font-weight:700;cursor:pointer;
+  font-family:"Noto Sans JP",sans-serif;background:rgba(255,255,255,.14);color:#fff;max-width:260px;}
+select.exam option{background:#16263f;color:#fff;}
 
-.wrap{max-width:1180px;margin:0 auto;padding:18px 18px 70px;}
+.wrap{max-width:1240px;margin:0 auto;padding:18px 18px 70px;}
 
 .gate{max-width:440px;margin:60px auto;background:var(--surface);border:1px solid var(--line);
   border-radius:14px;padding:26px 24px;}
@@ -61,7 +63,7 @@ body{margin:0;background:var(--paper);color:var(--ink);
 .gate .msg.show{display:block;}
 
 .bar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:0 0 14px;}
-.bar input.search{flex:1 1 220px;max-width:320px;border:1.5px solid var(--line);border-radius:9px;
+.bar input.search{flex:1 1 200px;max-width:300px;border:1.5px solid var(--line);border-radius:9px;
   background:var(--surface);color:var(--ink);font-size:14px;padding:9px 12px;}
 .bar input.search:focus{outline:none;border-color:var(--gold);}
 .seg{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:var(--surface);}
@@ -77,17 +79,19 @@ body{margin:0;background:var(--paper);color:var(--ink);
 .stat span{display:block;font-size:11px;color:var(--muted);margin-top:2px;}
 
 .tbl-wrap{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:auto;}
-table{width:100%;border-collapse:collapse;font-size:13px;min-width:860px;}
-th{background:var(--navy);color:#fff;font-family:"Noto Serif JP",serif;font-size:12px;padding:9px 10px;
+table{width:100%;border-collapse:collapse;font-size:13px;}
+th{background:var(--navy);color:#f2eee2;font-family:"Noto Serif JP",serif;font-size:11.5px;padding:8px 9px;
   text-align:left;font-weight:700;white-space:nowrap;cursor:pointer;position:sticky;top:0;z-index:2;}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) th{background:#2d3a4e;color:var(--navy-ink);}}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) th{background:#2d3a4e;color:#f2eee2;}}
 th .ar{opacity:.45;font-size:10px;margin-left:3px;}
 th.sorted .ar{opacity:1;}
-td{border-top:1px solid var(--line2);padding:9px 10px;background:var(--surface) !important;color:var(--ink) !important;
+td{border-top:1px solid var(--line2);padding:8px 9px;background:var(--surface) !important;color:var(--ink) !important;
   vertical-align:middle;white-space:nowrap;}
 tr.r:hover td{background:var(--surface2) !important;cursor:pointer;}
 td.num{font-family:"Zilla Slab",serif;font-weight:700;text-align:right;}
+td.ctr{text-align:center;font-family:"Zilla Slab",serif;font-weight:700;}
 td.nm{font-weight:700;color:var(--navy-ink) !important;}
+td.o{color:var(--teal-d) !important;} td.x{color:var(--verm-d) !important;opacity:.75;}
 .pill{display:inline-block;font-size:11px;font-weight:700;border-radius:99px;padding:1px 9px;}
 .pill.ok{background:var(--teal-soft);color:var(--teal-d);}
 .pill.part{background:var(--gold-soft);color:var(--gold-d);}
@@ -96,21 +100,25 @@ td.nm{font-weight:700;color:var(--navy-ink) !important;}
 
 .meter{margin:8px 0 0;}
 .meter-r{display:flex;align-items:center;gap:11px;padding:6px 0;font-size:13px;}
-.meter-r .ml{flex:0 0 34%;max-width:260px;line-height:1.5;}
-.meter-r .ml em{font-style:normal;font-family:"Zilla Slab",serif;color:var(--gold-d);font-weight:700;margin-right:6px;}
-.meter-r .mb{flex:1;height:10px;border-radius:99px;background:var(--line2);overflow:hidden;min-width:60px;}
+.meter-r .ml{flex:0 0 38%;max-width:420px;line-height:1.55;}
+.meter-r .ml em{font-style:normal;font-family:"Zilla Slab",serif;color:var(--gold-d);font-weight:700;margin-right:7px;}
+.meter-r .ml .ok{color:var(--teal-d);font-weight:700;}
+.meter-r .mb{flex:1;height:10px;border-radius:99px;background:var(--line2);overflow:hidden;min-width:50px;}
 .meter-r .mf{height:100%;border-radius:99px;background:var(--teal);}
 .meter-r .mf.low{background:var(--verm);} .meter-r .mf.mid{background:var(--gold);}
-.meter-r .mv{flex:0 0 46px;text-align:right;font-family:"Zilla Slab",serif;font-weight:700;font-size:12.5px;color:var(--muted);}
+.meter-r .mv{flex:0 0 62px;text-align:right;font-family:"Zilla Slab",serif;font-weight:700;font-size:12.5px;color:var(--muted);}
+.whyline{font-size:12px;color:var(--muted);margin:0 0 6px;padding-left:calc(38% + 11px);line-height:1.7;}
+@media (max-width:700px){.meter-r .ml{flex:0 0 46%;}.whyline{padding-left:0;}}
 
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 14px;}
-.card h3{font-family:"Noto Serif JP",serif;font-size:15px;margin:0 0 10px;color:var(--navy-ink);
+.card h3{font-family:"Noto Serif JP",serif;font-size:15px;margin:0 0 4px;color:var(--navy-ink);
   padding-left:10px;border-left:4px solid var(--gold);line-height:1.5;}
+.card .ask{font-family:"Zilla Slab",Georgia,serif;font-size:13px;color:var(--muted);
+  margin:0 0 10px;padding-left:14px;line-height:1.7;}
 
-/* 生徒カルテ */
 .ov{position:fixed;inset:0;background:rgba(10,14,20,.55);z-index:90;display:none;}
 .ov.show{display:block;}
-.dw{position:fixed;top:0;right:0;bottom:0;width:min(620px,100%);background:var(--paper);z-index:91;
+.dw{position:fixed;top:0;right:0;bottom:0;width:min(640px,100%);background:var(--paper);z-index:91;
   overflow-y:auto;transform:translateX(100%);transition:transform .25s;box-shadow:-10px 0 40px rgba(0,0,0,.18);}
 .dw.show{transform:none;}
 .dw-h{position:sticky;top:0;background:var(--navy);color:#fff;padding:15px 20px;display:flex;
@@ -120,22 +128,20 @@ td.nm{font-weight:700;color:var(--navy-ink) !important;}
 .dw-h span{display:block;font-size:11.5px;color:#c7d3e2;line-height:1.5;margin-top:1px;}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .dw-h span{color:#8d9bad;}}
 .dw-h .x{margin-left:auto;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:8px;
-  width:32px;height:32px;font-size:16px;cursor:pointer;}
+  width:32px;height:32px;font-size:16px;cursor:pointer;flex:0 0 32px;}
 .dw-b{padding:18px 20px 60px;}
-.qb{background:var(--surface);border:1px solid var(--line);border-radius:11px;margin:0 0 13px;overflow:hidden;}
-.qb-h{display:flex;align-items:center;gap:9px;padding:10px 14px;background:var(--surface2);
+.qb{background:var(--surface);border:1px solid var(--line);border-radius:11px;margin:0 0 11px;overflow:hidden;}
+.qb-h{display:flex;align-items:center;gap:9px;padding:9px 13px;background:var(--surface2);
   border-bottom:1px solid var(--line2);flex-wrap:wrap;}
-.qb-h b{font-family:"Noto Serif JP",serif;font-size:13.5px;color:var(--navy-ink);}
-.qb-h .sc{font-family:"Zilla Slab",serif;font-weight:700;font-size:12.5px;border-radius:99px;padding:1px 10px;}
+.qb-h b{font-family:"Zilla Slab",serif;font-size:14px;color:var(--navy-ink);}
 .qb-h .bar2{display:flex;gap:4px;margin-left:auto;flex-wrap:wrap;}
 .eb{font-family:"Zilla Slab",serif;font-size:10.5px;font-weight:700;border-radius:4px;padding:2px 7px;white-space:nowrap;}
 .eb.o{background:var(--teal-soft);color:var(--teal-d);}
 .eb.x{background:var(--verm-soft);color:var(--verm-d);}
-.qb-b{padding:13px 14px;}
+.qb-b{padding:12px 13px;}
 .at{font-size:13.5px;line-height:1.9;white-space:pre-wrap;background:var(--surface2);border-radius:8px;padding:10px 12px;}
-.at + .at{margin-top:6px;}
-.at .n{font-family:"Zilla Slab",serif;font-weight:700;color:var(--gold-d);font-size:11.5px;margin-right:7px;}
 .ac{font-size:12.8px;line-height:1.85;margin:10px 0 0;padding-left:11px;border-left:3px solid var(--gold);color:var(--ink);}
+.mini{font-family:"Zilla Slab",Georgia,serif;font-size:12.5px;color:var(--muted);margin:0 0 7px;line-height:1.65;}
 
 .nodata{background:var(--surface2);border:1px dashed var(--line);border-radius:11px;padding:22px;
   text-align:center;color:var(--muted);font-size:13px;line-height:1.9;}
@@ -150,16 +156,16 @@ td.nm{font-weight:700;color:var(--navy-ink) !important;}
 <header class="top">
   <div class="top-in">
     <div class="mark">THK</div>
-    <div class="ttl"><b>スタッフ用ダッシュボード</b><span id="examName">—</span></div>
+    <div class="ttl"><b>スタッフ用ダッシュボード</b><span id="examSub">—</span></div>
     <div class="right">
-      <button class="btn" id="csv">CSVで書き出す</button>
+      <select class="exam" id="examSel"></select>
+      <button class="btn" id="csv">CSV</button>
       <button class="btn" id="reload">更新</button>
       <button class="btn" id="logout">合言葉を消す</button>
     </div>
   </div>
 </header>
 
-<!-- 合言葉 -->
 <div class="gate" id="gate" style="display:none;">
   <h1>合言葉を入力してください</h1>
   <p>GASのスクリプト プロパティに登録した <b>STAFF_TOKEN</b> を入れてください。一度入れるとこの端末に保存されます。</p>
@@ -169,11 +175,10 @@ td.nm{font-weight:700;color:var(--navy-ink) !important;}
 </div>
 
 <div class="wrap" id="main" style="display:none;">
-
   <div class="bar">
     <div class="seg">
       <button class="on" data-v="list">提出一覧</button>
-      <button data-v="stats">設問別の結果</button>
+      <button data-v="stats">設問別の正答率</button>
     </div>
     <input class="search" id="q" placeholder="氏名・識別番号で絞り込む">
     <span style="font-size:12.5px;color:var(--muted);" id="count"></span>
@@ -182,7 +187,7 @@ td.nm{font-weight:700;color:var(--navy-ink) !important;}
   <div class="view on" id="v-list">
     <div class="stat-row" id="cards"></div>
     <div class="tbl-wrap"><table id="tbl"></table></div>
-    <p style="font-size:12.5px;color:var(--muted);margin:11px 0 0;">行をクリックすると、その生徒の答案と講評が開きます。見出しをクリックすると並べ替えできます。</p>
+    <p style="font-size:12.5px;color:var(--muted);margin:11px 0 0;">行をクリックすると、その生徒の解答が開きます。見出しをクリックすると並べ替えできます。</p>
   </div>
 
   <div class="view" id="v-stats"></div>
@@ -197,24 +202,21 @@ td.nm{font-weight:700;color:var(--navy-ink) !important;}
 <script>
 /* ================= 設定 ================= */
 const GAS_URL = "https://script.google.com/macros/s/AKfycbz6LpHxluZ4GTz9WVlEb0ePy_0yYFRRUmkShOGim8dynSBrLQcjDV8u0ehv_UpwNxHX4g/exec";
-const EXAM = new URLSearchParams(location.search).get('exam') || 'tottori-2025-q1';
 const TK_KEY = 'thinking-staff-token';
+const EX_KEY = 'thinking-staff-exam';
 
-const QN = { q2:'問2', q3:'問3', q4:'問4' };
 const esc = s => String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const $ = id => document.getElementById(id);
-const pct = v => Math.round(v*100);
+const pct = v => Math.round((v||0)*100);
 
-let DATA = null, rowsView = [], sortKey = 'total', sortAsc = false;
+let DATA = null, EXAMS = [], EXAM = '', rowsView = [], sortKey = 'total', sortAsc = false;
 
 /* ================= 合言葉 ================= */
 function token(){ try{ return localStorage.getItem(TK_KEY) || ''; }catch(e){ return ''; } }
-function setToken(v){ try{ localStorage.setItem(TK_KEY, v); }catch(e){} }
-
 $('enter').addEventListener('click', ()=>{
-  const v = $('tk').value.trim();
-  if(!v) return;
-  setToken(v); load();
+  const v = $('tk').value.trim(); if(!v) return;
+  try{ localStorage.setItem(TK_KEY, v); }catch(e){}
+  boot();
 });
 $('tk').addEventListener('keydown', e=>{ if(e.key === 'Enter') $('enter').click(); });
 $('logout').addEventListener('click', ()=>{
@@ -222,102 +224,131 @@ $('logout').addEventListener('click', ()=>{
   location.reload();
 });
 $('reload').addEventListener('click', ()=> load());
+$('examSel').addEventListener('change', ()=>{
+  EXAM = $('examSel').value;
+  try{ localStorage.setItem(EX_KEY, EXAM); }catch(e){}
+  load();
+});
+
+function gate(msg){
+  $('gate').style.display='block'; $('main').style.display='none';
+  if(msg){ $('gmsg').textContent = msg; $('gmsg').classList.add('show'); }
+}
 
 /* ================= 読み込み ================= */
-async function load(){
-  const tk = token();
-  if(!tk){ $('gate').style.display='block'; $('main').style.display='none'; return; }
-  if(!GAS_URL || GAS_URL.indexOf('http') !== 0){
-    $('gate').style.display='block';
-    $('gmsg').textContent = '送信先（GAS_URL）がこのページに設定されていません。';
-    $('gmsg').classList.add('show');
-    return;
-  }
+async function boot(){
+  if(!token()) return gate('');
+  if(!GAS_URL || GAS_URL.indexOf('http') !== 0)
+    return gate('送信先（GAS_URL）がこのページに設定されていません。');
   try{
-    const url = GAS_URL + '?view=staff&exam=' + encodeURIComponent(EXAM) + '&token=' + encodeURIComponent(tk);
+    const r = await fetch(GAS_URL + '?view=exams');
+    const d = await r.json();
+    if(!d || d.ok !== true) throw new Error(d && d.error ? d.error : 'unknown');
+    EXAMS = d.exams || [];
+    const saved = (()=>{ try{ return localStorage.getItem(EX_KEY) || ''; }catch(e){ return ''; } })();
+    const url = new URLSearchParams(location.search).get('exam');
+    EXAM = url || (EXAMS.some(e=>e.id===saved) ? saved : (EXAMS[0] && EXAMS[0].id) || '');
+    $('examSel').innerHTML = EXAMS.map(e=>
+      `<option value="${esc(e.id)}"${e.id===EXAM?' selected':''}>${esc(e.title)}</option>`).join('');
+    load();
+  }catch(e){ gate('大問の一覧を取得できませんでした：' + e.message); }
+}
+
+async function load(){
+  try{
+    const url = GAS_URL + '?view=staff&exam=' + encodeURIComponent(EXAM) +
+                '&token=' + encodeURIComponent(token());
     const res = await fetch(url);
     const d = await res.json();
     if(!d || d.ok !== true) throw new Error(d && d.error ? d.error : 'unknown');
     DATA = d;
-    $('gate').style.display='none';
-    $('main').style.display='block';
-    $('examName').textContent = d.exam.title;
+    $('gate').style.display='none'; $('main').style.display='block';
+    $('examSub').textContent = d.exam.source || d.exam.title;
+    sortKey = 'total'; sortAsc = false;
     render();
-  }catch(e){
-    $('gate').style.display='block';
-    $('main').style.display='none';
-    $('gmsg').textContent = '開けませんでした：' + e.message;
-    $('gmsg').classList.add('show');
-  }
+  }catch(e){ gate('開けませんでした：' + e.message); }
 }
 
 /* ================= 一覧 ================= */
-const COLS = [
-  {k:'ts',    t:'提出',    cls:''},
-  {k:'sid',   t:'識別番号', cls:''},
-  {k:'sname', t:'氏名',    cls:'nm'},
-  {k:'q1',    t:'問1',     cls:'', fmt:s=> s.q1ok ? '<span class="pill ok">'+esc(s.q1)+'</span>' : '<span class="pill no">'+esc(s.q1)+'</span>'},
-  {k:'q5',    t:'問5',     cls:'', fmt:s=>{
-      const c = s.q5ok === '○' ? 'ok' : (s.q5ok === '△' ? 'part' : 'no');
-      return '<span class="pill '+c+'">'+esc(s.q5.join('・'))+'</span>'; }},
-  {k:'objective', t:'選択', cls:'num'},
-  {k:'q2pt',  t:'問2',     cls:'num'},
-  {k:'q3pt',  t:'問3',     cls:'num'},
-  {k:'q4pt',  t:'問4',     cls:'num'},
-  {k:'descPt',t:'記述',    cls:'num'},
-  {k:'total', t:'合計',    cls:'num'},
-  {k:'status',t:'状態',    cls:'', fmt:s=>{
-      const c = s.status === '採点済' ? 'ok' : (s.status === 'エラー' ? 'no' : 'wait');
-      return '<span class="pill '+c+'">'+esc(s.status)+'</span>'; }},
-  {k:'publish', t:'講評', cls:'', fmt:s=> s.publish ? '<span class="pill ok">出す</span>' : ''}
-];
+function unit(){ return DATA.exam.kind === 'choice' ? '問正解' : '点'; }
 
 function render(){
   const s = DATA.stats, m = DATA.exam.max;
-  $('cards').innerHTML =
-    `<div class="stat"><b>${s.n}</b><span>提出</span></div>
-     <div class="stat"><b>${s.graded}</b><span>採点済み</span></div>
-     <div class="stat"><b>${s.n - s.graded}</b><span>未採点</span></div>
-     <div class="stat"><b>${s.totalAvg.toFixed(1)}</b><span>平均 / ${m.total}</span></div>
-     <div class="stat"><b>${pct(s.q1.rate)}%</b><span>問1 正答率</span></div>
-     <div class="stat"><b>${pct(s.q5.rate)}%</b><span>問5 完答率</span></div>`;
-  renderTable();
-  renderStats();
+  const cards = [
+    ['提出', s.n], ['採点済み', s.graded], ['未採点', s.n - s.graded],
+    ['平均 / ' + m + (DATA.exam.kind==='choice'?'問':'点'), s.totalAvg.toFixed(1)]
+  ];
+  const hardest = s.perQ.filter(q=>q.rate!=null).sort((a,b)=>a.rate-b.rate)[0];
+  if(hardest) cards.push(['最低正答率（設問' + hardest.id + '）', pct(hardest.rate) + '%']);
+  $('cards').innerHTML = cards.map(c=>
+    `<div class="stat"><b>${c[1]}</b><span>${esc(c[0])}</span></div>`).join('');
+  renderTable(); renderStats();
+}
+
+function cols(){
+  const c = [
+    {k:'ts', t:'提出'}, {k:'sid', t:'識別番号'}, {k:'sname', t:'氏名', cls:'nm'}
+  ];
+  DATA.questions.forEach(q=>{
+    c.push({k:'Q'+q.id, t:q.id, q:q, cls:'ctr'});
+  });
+  c.push({k:'total', t: DATA.exam.kind==='choice' ? '正答数' : '合計', cls:'num'});
+  if(DATA.exam.kind !== 'choice') c.push({k:'status', t:'状態'});
+  return c;
+}
+
+function cellFor(s, col){
+  if(!col.q) return esc(s[col.k]);
+  const q = col.q;
+  if(q.type === 'desc'){
+    const p = s.pts[q.id];
+    return `<span class="pill ${p===q.points?'ok':(p>0?'part':'no')}">${p==null?'—':p}</span>`;
+  }
+  const ok = s.ok[q.id], a = s.ans[q.id];
+  return `<span class="${ok?'o':'x'}" style="font-family:'Zilla Slab',serif;font-weight:700;">${esc(a||'—')}</span>`;
 }
 
 function renderTable(){
   const q = $('q').value.trim().toLowerCase();
   rowsView = DATA.students.filter(s =>
-    !q || s.sname.toLowerCase().includes(q) || s.sid.toLowerCase().includes(q));
+    !q || String(s.sname).toLowerCase().includes(q) || String(s.sid).toLowerCase().includes(q));
   rowsView.sort((a,b)=>{
     const x = a[sortKey], y = b[sortKey];
-    const r = (typeof x === 'number' && typeof y === 'number') ? x - y : String(x).localeCompare(String(y),'ja');
+    if(typeof x === 'number' && typeof y === 'number') return sortAsc ? x-y : y-x;
+    const r = String(x==null?'':x).localeCompare(String(y==null?'':y),'ja');
     return sortAsc ? r : -r;
   });
   $('count').textContent = rowsView.length + ' 件';
 
-  const head = '<thead><tr>' + COLS.map(c=>
-    `<th data-k="${c.k}" class="${sortKey===c.k?'sorted':''}">${c.t}<span class="ar">${sortKey===c.k?(sortAsc?'▲':'▼'):'↕'}</span></th>`
+  const C = cols();
+  const head = '<thead><tr>' + C.map(c=>
+    `<th data-k="${c.k}" class="${sortKey===c.k?'sorted':''}">${esc(c.t)}<span class="ar">${sortKey===c.k?(sortAsc?'▲':'▼'):'↕'}</span></th>`
   ).join('') + '</tr></thead>';
-
   const body = '<tbody>' + rowsView.map((s,i)=>
-    '<tr class="r" data-i="'+i+'">' + COLS.map(c=>
-      `<td class="${c.cls}">${c.fmt ? c.fmt(s) : esc(s[c.k])}</td>`).join('') + '</tr>'
-  ).join('') + '</tbody>';
+    '<tr class="r" data-i="'+i+'">' + C.map(c=>
+      `<td class="${c.cls||''}">${c.k==='status'
+        ? `<span class="pill ${s.status==='採点済'?'ok':(s.status==='エラー'?'no':'wait')}">${esc(s.status)}</span>`
+        : cellFor(s, c)}</td>`).join('') + '</tr>').join('') + '</tbody>';
 
   $('tbl').innerHTML = head + (rowsView.length ? body :
-    '<tbody><tr><td colspan="'+COLS.length+'" style="text-align:center;color:var(--muted);padding:26px;">該当する提出がありません</td></tr></tbody>');
+    '<tbody><tr><td colspan="'+C.length+'" style="text-align:center;color:var(--muted);padding:26px;">該当する提出がありません</td></tr></tbody>');
 
   $('tbl').querySelectorAll('th').forEach(th=>{
     th.addEventListener('click', ()=>{
       const k = th.dataset.k;
+      if(k.indexOf('Q') === 0){
+        const qid = k.slice(1);
+        DATA.students.forEach(s=>{
+          const q2 = DATA.questions.filter(x=>x.id===qid)[0];
+          s[k] = q2 && q2.type === 'desc' ? (s.pts[qid]||0) : (s.ok[qid] ? 1 : 0);
+        });
+      }
       if(sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = false; }
       renderTable();
     });
   });
-  $('tbl').querySelectorAll('tr.r').forEach(tr=>{
-    tr.addEventListener('click', ()=> openCard(rowsView[Number(tr.dataset.i)]));
-  });
+  $('tbl').querySelectorAll('tr.r').forEach(tr=>
+    tr.addEventListener('click', ()=> openCard(rowsView[Number(tr.dataset.i)])));
 }
 $('q').addEventListener('input', renderTable);
 
@@ -325,45 +356,59 @@ document.querySelectorAll('.seg button').forEach(b=>{
   b.addEventListener('click', ()=>{
     document.querySelectorAll('.seg button').forEach(x=>x.classList.remove('on'));
     document.querySelectorAll('.view').forEach(x=>x.classList.remove('on'));
-    b.classList.add('on');
-    $('v-' + b.dataset.v).classList.add('on');
+    b.classList.add('on'); $('v-' + b.dataset.v).classList.add('on');
   });
 });
 
-/* ================= 設問別 ================= */
+/* ================= 設問別の正答率 ================= */
 function renderStats(){
-  const s = DATA.stats, R = DATA.rubric, ch = DATA.choices, why = DATA.whyWrong, key = DATA.key;
+  const s = DATA.stats;
+  const byId = {}; DATA.questions.forEach(q=> byId[q.id] = q);
   const h = [];
 
-  ['q2','q3','q4'].forEach(k=>{
-    const d = s.desc[k];
-    h.push(`<div class="card"><h3>${QN[k]}　平均 ${d.avg.toFixed(1)} / ${R[k].points}点　（満点 ${d.full}人 ／ 0点 ${d.zero}人）</h3>
-      <div class="meter">` + R[k].elements.map(e=>{
-        const v = d.elemRate[e.key] || 0;
-        const cls = v < 0.35 ? 'low' : (v < 0.7 ? 'mid' : '');
-        return `<div class="meter-r"><div class="ml"><em>${e.key}</em>${esc(e.label)}（${e.pt}点）</div>
+  const ranked = s.perQ.filter(q=>q.rate!=null).slice().sort((a,b)=>a.rate-b.rate);
+  if(ranked.length){
+    h.push(`<div class="card"><h3>正答率の低い順</h3>
+      <p class="ask">ここが授業で扱うべき設問です。</p><div class="meter">` +
+      ranked.map(q=>{
+        const v = q.rate, cls = v<0.4?'low':(v<0.7?'mid':'');
+        return `<div class="meter-r"><div class="ml"><em>設問${esc(q.id)}</em>正解 ${esc([].concat(q.answer).join('・'))}</div>
           <div class="mb"><div class="mf ${cls}" style="width:${pct(v)}%"></div></div>
           <div class="mv">${pct(v)}%</div></div>`;
-      }).join('') + `</div>
-      <p style="font-size:12.5px;color:var(--muted);margin:10px 0 0;">取得率の低い要素が、授業で扱うべきところです。</p></div>`);
-  });
+      }).join('') + `</div></div>`);
+  }
 
-  const dist = (qk, label)=>{
-    const opts = ch[qk], ans = key[qk].answer;
-    const isAns = i => Array.isArray(ans) ? ans.indexOf(String(i))>=0 : String(i)===ans;
-    const D = s[qk].dist, tot = s.n || 1;
-    return `<div class="card"><h3>${label}</h3><div class="meter">` +
-      opts.map((t,i)=>{
-        const n = i+1, c = D[String(n)]||0, v = c/tot;
+  s.perQ.forEach(p=>{
+    const q = byId[p.id] || {};
+    if(p.type === 'desc'){
+      h.push(`<div class="card"><h3>設問${esc(p.id)}　平均 ${(p.avg||0).toFixed(1)} / ${p.points}点　（満点 ${p.full||0}人 ／ 0点 ${p.zero||0}人）</h3>
+        <div class="meter">` + (q.elements||[]).map(e=>{
+          const v = (p.elemRate||{})[e.key] || 0, cls = v<0.35?'low':(v<0.7?'mid':'');
+          return `<div class="meter-r"><div class="ml"><em>${e.key}</em>${esc(e.label)}（${e.pt}点）</div>
+            <div class="mb"><div class="mf ${cls}" style="width:${pct(v)}%"></div></div>
+            <div class="mv">${pct(v)}%</div></div>`;
+        }).join('') + `</div></div>`);
+      return;
+    }
+    const ans = [].concat(p.answer || []);
+    const isAns = L => ans.indexOf(L) >= 0;
+    const labels = DATA.exam.kind === 'choice'
+      ? ['A','B','C','D','E','F','G','H'] : ['1','2','3','4','5','6','7','8'];
+    const tot = s.n || 1;
+    h.push(`<div class="card">
+      <h3>設問${esc(p.id)}　正答率 ${pct(p.rate)}%　（正解 ${esc(ans.join('・'))}）</h3>
+      ${q.ask ? `<p class="ask">${esc(q.ask)}</p>` : ''}
+      <div class="meter">` +
+      (q.choices||[]).map((t,i)=>{
+        const L = labels[i], c = (p.dist||{})[L] || 0, v = c/tot;
+        const why = (q.why||{})[L];
         return `<div class="meter-r">
-          <div class="ml"><em>${n}</em>${isAns(n)?'<b style="color:var(--teal-d);">正解</b> ':''}${esc(String(t).slice(0,30))}</div>
-          <div class="mb"><div class="mf ${isAns(n)?'':'low'}" style="width:${pct(v)}%"></div></div>
-          <div class="mv">${c}人</div></div>` +
-          (!isAns(n) && why[qk][String(n)] ? `<p style="font-size:12px;color:var(--muted);margin:0 0 6px;padding-left:4px;">${esc(why[qk][String(n)])}</p>` : '');
-      }).join('') + `</div></div>`;
-  };
-  h.push(dist('q1','問1 ― 選択の分布'));
-  h.push(dist('q5','問5 ― 選択の分布（延べ）'));
+            <div class="ml"><em>${L}</em>${isAns(L)?'<span class="ok">正解</span> ':''}${esc(String(t).slice(0,46))}</div>
+            <div class="mb"><div class="mf ${isAns(L)?'':'low'}" style="width:${pct(v)}%"></div></div>
+            <div class="mv">${c}人 ${pct(v)}%</div></div>` +
+          (!isAns(L) && c > 0 && why ? `<p class="whyline">${esc(why)}</p>` : '');
+      }).join('') + `</div></div>`);
+  });
 
   $('v-stats').innerHTML = h.join('');
 }
@@ -371,33 +416,37 @@ function renderStats(){
 /* ================= 生徒カルテ ================= */
 function openCard(s){
   if(!s) return;
-  const R = DATA.rubric, m = DATA.exam.max;
-  $('dwName').textContent = s.sname;
-  $('dwSub').textContent = s.sid + '　／　' + s.ts + '　／　合計 ' + s.total + ' / ' + m.total + '点';
+  $('dwName').textContent = s.sname || '（氏名なし）';
+  $('dwSub').textContent = [s.sid, s.ts,
+    (DATA.exam.kind==='choice' ? s.total + ' / ' + DATA.exam.max + '問正解'
+                               : '合計 ' + s.total + ' / ' + DATA.exam.max + '点')]
+    .filter(Boolean).join('　／　');
 
+  const byId = {}; DATA.questions.forEach(q=> byId[q.id] = q);
   const h = [];
-  h.push(`<div class="card"><h3>選択問題</h3>
-    <p style="margin:0;">問1：<b>${esc(s.q1)}</b>　${s.q1ok?'<span class="pill ok">正解</span>':'<span class="pill no">誤答</span>'}
-    　／　正解 ${esc(DATA.key.q1.answer)}（${esc(DATA.key.q1.label)}）</p>
-    <p style="margin:6px 0 0;">問5：<b>${esc(s.q5.join('・'))}</b>　<span class="pill ${s.q5ok==='○'?'ok':(s.q5ok==='△'?'part':'no')}">${esc(s.q5ok)}</span>
-    　／　正解 ${esc(DATA.key.q5.answer.join('・'))}</p>
-    <p style="margin:6px 0 0;color:var(--muted);font-size:12.5px;">選択得点 ${s.objective} / ${m.q1 + m.q5}点</p></div>`);
-
-  ['q2','q3','q4'].forEach(k=>{
-    const pt = s[k+'pt'], el = s[k+'el'], cm = s[k+'cm'];
-    const text = k==='q2' ? s.q2 : [s[k]];
-    const cls = pt === R[k].points ? 'ok' : (pt > 0 ? 'part' : 'no');
-    const badges = R[k].elements.map(e=>
-      `<span class="eb ${el[e.key]?'o':'x'}">${e.key} ${el[e.key]?'○':'×'}</span>`).join('');
-    h.push(`<div class="qb">
-      <div class="qb-h"><b>${QN[k]}</b><span class="pill ${cls}">${pt} / ${R[k].points}点</span>
+  DATA.questions.forEach(q=>{
+    if(q.type === 'desc'){
+      const p = s.pts[q.id], el = s.el[q.id] || {}, cm = s.cm[q.id] || '';
+      const badges = (q.elements||[]).map(e=>
+        `<span class="eb ${el[e.key]?'o':'x'}">${e.key} ${el[e.key]?'○':'×'}</span>`).join('');
+      h.push(`<div class="qb"><div class="qb-h"><b>設問${esc(q.id)}</b>
+        <span class="pill ${p===q.points?'ok':(p>0?'part':'no')}">${p==null?'—':p} / ${q.points}点</span>
         <span class="bar2">${badges}</span></div>
-      <div class="qb-b">` +
-      text.filter(t=>String(t).trim()).map((t,i)=>
-        `<div class="at">${text.length>1?`<span class="n">${i+1}つめ</span>`:''}${esc(t)}</div>`).join('') +
-      (text.filter(t=>String(t).trim()).length ? '' : '<div class="at">（無回答）</div>') +
-      (cm ? `<div class="ac">${esc(cm)}</div>` : '') +
-      `</div></div>`);
+        <div class="qb-b"><div class="at">${esc(s.ans[q.id] || '（無回答）')}</div>
+        ${cm ? `<div class="ac">${esc(cm)}</div>` : ''}</div></div>`);
+      return;
+    }
+    const a = s.ans[q.id], ok = s.ok[q.id], ans = [].concat(q.answer||[]);
+    const labels = DATA.exam.kind === 'choice' ? ['A','B','C','D'] : ['1','2','3','4','5','6','7','8'];
+    const picked = (q.choices||[])[labels.indexOf(String(a))] || '';
+    h.push(`<div class="qb"><div class="qb-h"><b>設問${esc(q.id)}</b>
+      <span class="pill ${ok?'ok':'no'}">${esc(a||'—')}　${ok?'正解':'誤答'}</span>
+      <span class="bar2"><span class="eb o">正解 ${esc(ans.join('・'))}</span></span></div>
+      <div class="qb-b">
+        ${q.ask ? `<p class="mini">${esc(q.ask)}</p>` : ''}
+        ${picked ? `<div class="at">選んだ選択肢：${esc(picked)}</div>` : ''}
+        ${!ok && (q.why||{})[String(a)] ? `<div class="ac">${esc(q.why[String(a)])}</div>` : ''}
+      </div></div>`);
   });
 
   if(s.summary) h.push(`<div class="card"><h3>この文章は、つまりどういう話か</h3><div class="at">${esc(s.summary)}</div></div>`);
@@ -414,26 +463,28 @@ document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeCard(); })
 /* ================= CSV ================= */
 $('csv').addEventListener('click', ()=>{
   if(!DATA) return;
-  const R = DATA.rubric;
-  const head = ['提出','識別番号','氏名','問1','問1正誤','問5','問5正誤','選択得点',
-    '問2①','問2②','問2③','問2得点','問3','問3得点','問4','問4得点','記述得点','合計',
-    '問2講評','問3講評','問4講評','総評','言語化','状態'];
+  const head = ['提出','識別番号','氏名'];
+  DATA.questions.forEach(q=> head.push('設問' + q.id, '設問' + q.id + (q.type==='desc'?'得点':'正誤')));
+  head.push(DATA.exam.kind==='choice' ? '正答数' : '合計', '言語化', '状態');
   const esq = v => '"' + String(v==null?'':v).replace(/"/g,'""') + '"';
   const lines = [head.map(esq).join(',')];
   rowsView.forEach(s=>{
-    lines.push([s.ts,s.sid,s.sname,s.q1,s.q1ok?'○':'×',s.q5.join('・'),s.q5ok,s.objective,
-      s.q2[0],s.q2[1],s.q2[2],s.q2pt,s.q3,s.q3pt,s.q4,s.q4pt,s.descPt,s.total,
-      s.q2cm,s.q3cm,s.q4cm,s.overall,s.summary,s.status].map(esq).join(','));
+    const r = [s.ts, s.sid, s.sname];
+    DATA.questions.forEach(q=>{
+      r.push(s.ans[q.id] || '');
+      r.push(q.type==='desc' ? (s.pts[q.id]==null?'':s.pts[q.id]) : (s.ok[q.id]?'○':'×'));
+    });
+    r.push(s.total, s.summary || '', s.status || '');
+    lines.push(r.map(esq).join(','));
   });
   const blob = new Blob(['﻿' + lines.join('\r\n')], {type:'text/csv;charset=utf-8;'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
   a.download = EXAM + '-results.csv';
-  a.click();
-  URL.revokeObjectURL(a.href);
+  a.click(); URL.revokeObjectURL(a.href);
 });
 
-load();
+boot();
 </script>
 </body>
 </html>
